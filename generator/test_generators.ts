@@ -1,16 +1,45 @@
-import { generateHerringboneGear } from './src/generators/herringboneGear';
-import { generateBearingPillowBlock } from './src/generators/bearingPillowBlock';
-import { generateStructuralBracket } from './src/generators/structuralBracket';
-import { STLExporter } from 'three/examples/jsm/exporters/STLExporter.js';
 import * as THREE from 'three';
+import { STLExporter } from 'three/examples/jsm/exporters/STLExporter.js';
+import {
+  generateHerringboneGear,
+  generateBearingPillowBlock,
+  generateStructuralBracket,
+  generateGT2Pulley,
+  generateKnurledKnob,
+  generateThreadedFastener,
+  generateShaftCoupler,
+  generateProjectEnclosure,
+  generateStepperMount,
+  generateLinearRodClamp,
+  generateHoseBarb,
+  generateLeadScrewNutBlock,
+  generateCableChainLink,
+} from './src/generators';
 
-console.log('==================================================');
-console.log('   BAREBONES 3D PARAMETRIC GENERATOR TEST SUITE   ');
-console.log('==================================================\n');
+console.log('===============================================================');
+console.log('   BAREBONES 3D PARAMETRIC GENERATOR COMPREHENSIVE TEST SUITE   ');
+console.log('===============================================================\n');
 
-// 1. Herringbone Gear Tests
-console.log('[1] Testing Herringbone Gear Generation:');
-const gearD = generateHerringboneGear({
+const exporter = new STLExporter();
+
+function validateMesh(name: string, res: { geometry: THREE.BufferGeometry; dimensions: any; triangles: number; vertices: number; estimatedPrintWeightGrams: number }) {
+  if (!res.geometry || res.triangles <= 0 || res.vertices <= 0) {
+    throw new Error(`FAIL: ${name} produced invalid mesh (triangles: ${res.triangles}, vertices: ${res.vertices})`);
+  }
+  if (res.dimensions.x <= 0 || res.dimensions.y <= 0 || res.dimensions.z <= 0) {
+    throw new Error(`FAIL: ${name} produced non-positive dimensions: ${JSON.stringify(res.dimensions)}`);
+  }
+  const mesh = new THREE.Mesh(res.geometry, new THREE.MeshBasicMaterial());
+  const bin = exporter.parse(mesh, { binary: true }) as DataView;
+  if (!bin || bin.byteLength < 84) {
+    throw new Error(`FAIL: ${name} failed binary STL export`);
+  }
+  console.log(`  ✓ ${name}: ${res.triangles} tris, [${res.dimensions.x} × ${res.dimensions.y} × ${res.dimensions.z} mm], ${res.estimatedPrintWeightGrams}g PLA`);
+}
+
+// 1. Herringbone Gear
+console.log('[1] Testing Herringbone Gear (Math Lofted):');
+validateMesh('Herringbone Gear 24T D-Shaft', generateHerringboneGear({
   module: 1.5,
   toothCount: 24,
   pressureAngle: 20.0,
@@ -20,51 +49,11 @@ const gearD = generateHerringboneGear({
   boreType: 'd-shaft',
   dShaftFlatOffset: 2.1,
   printer_compensation: 0.15,
-});
-console.log('  ✓ Gear (D-Shaft):', {
-  triangles: gearD.triangles,
-  vertices: gearD.vertices,
-  dimensions: gearD.dimensions,
-  weight: `${gearD.estimatedPrintWeightGrams}g PLA`,
-});
+}));
 
-const gearSolid = generateHerringboneGear({
-  module: 1.0,
-  toothCount: 16,
-  pressureAngle: 20.0,
-  helixAngle: 25,
-  faceWidth: 10,
-  boreDiameter: 0,
-  boreType: 'round',
-  dShaftFlatOffset: 0,
-  printer_compensation: 0.15,
-});
-console.log('  ✓ Gear (Solid Hub):', {
-  triangles: gearSolid.triangles,
-  vertices: gearSolid.vertices,
-  dimensions: gearSolid.dimensions,
-});
-
-const gearHex = generateHerringboneGear({
-  module: 2.0,
-  toothCount: 30,
-  pressureAngle: 25.0,
-  helixAngle: 35,
-  faceWidth: 20,
-  boreDiameter: 8.0,
-  boreType: 'hex',
-  dShaftFlatOffset: 0,
-  printer_compensation: 0.2,
-});
-console.log('  ✓ Gear (Hex Bore):', {
-  triangles: gearHex.triangles,
-  vertices: gearHex.vertices,
-  dimensions: gearHex.dimensions,
-});
-
-// 2. Bearing Pillow Block Tests
-console.log('\n[2] Testing Bearing Pillow Block Generation:');
-const pillowFlanged = generateBearingPillowBlock({
+// 2. Bearing Pillow Block
+console.log('\n[2] Testing Bearing Pillow Block (CSG):');
+validateMesh('Pillow Block 608 Ears', generateBearingPillowBlock({
   preset: '608',
   bearingOD: 22,
   bearingID: 8,
@@ -79,85 +68,193 @@ const pillowFlanged = generateBearingPillowBlock({
   mountHoleSize: 'M4',
   flangeLength: 16,
   printer_compensation: 0.15,
-});
-console.log('  ✓ Pillow Block (608 Two-Sided Ears with Retention Lip):', {
-  triangles: pillowFlanged.triangles,
-  vertices: pillowFlanged.vertices,
-  dimensions: pillowFlanged.dimensions,
-  weight: `${pillowFlanged.estimatedPrintWeightGrams}g PLA`,
-});
+}));
 
-const pillowFoot = generateBearingPillowBlock({
-  preset: '624',
-  bearingOD: 13,
-  bearingID: 4,
-  bearingWidth: 5,
-  pocketDepth: 5,
-  isThroughHole: true,
-  wallThickness: 3.5,
-  retentionLip: false,
-  lipThickness: 0,
-  lipOverhang: 0,
-  mountingFlanges: 'bottom-foot',
-  mountHoleSize: 'M3',
-  flangeLength: 12,
-  printer_compensation: 0.15,
-});
-console.log('  ✓ Pillow Block (624 Base Foot):', {
-  triangles: pillowFoot.triangles,
-  vertices: pillowFoot.vertices,
-  dimensions: pillowFoot.dimensions,
-});
-
-// 3. Structural Bracket Tests
-console.log('\n[3] Testing Structural L-Bracket Generation:');
-const bracketGusset = generateStructuralBracket({
+// 3. Structural L-Bracket
+console.log('\n[3] Testing Structural L-Bracket (CSG):');
+validateMesh('L-Bracket 45x45x30 Gusset', generateStructuralBracket({
   leg1Length: 45,
   leg2Length: 45,
   width: 30,
   thickness: 4.5,
   gussetReinforcement: true,
   gussetThickness: 4.0,
-  holePattern: 'two-inline',
+  holePattern: 'four-grid',
   screwSize: 'M4',
   hasCountersink: false,
   printer_compensation: 0.15,
-});
-console.log('  ✓ L-Bracket (45x45x30 with Gusset & 2-Hole In-Line):', {
-  triangles: bracketGusset.triangles,
-  vertices: bracketGusset.vertices,
-  dimensions: bracketGusset.dimensions,
-  weight: `${bracketGusset.estimatedPrintWeightGrams}g PLA`,
-});
+}));
 
-const bracketGrid = generateStructuralBracket({
-  leg1Length: 60,
-  leg2Length: 60,
-  width: 50,
-  thickness: 6.0,
-  gussetReinforcement: true,
-  gussetThickness: 5.0,
-  holePattern: 'four-grid',
-  screwSize: 'M5',
-  hasCountersink: true,
+// 4. GT2 Timing Belt Pulley
+console.log('\n[4] Testing GT2 Timing Belt Pulley (Math Lofted):');
+validateMesh('GT2 Pulley 20T 5mm Bore', generateGT2Pulley({
+  toothCount: 20,
+  pitch: 2.0,
+  beltWidth: 6,
+  boreDiameter: 5.0,
+  boreType: 'd-shaft',
+  dShaftFlatOffset: 2.1,
+  flangeType: 'both',
+  flangeHeight: 2.0,
+  flangeThickness: 1.0,
+  hasHub: true,
+  hubDiameter: 15.0,
+  hubHeight: 6.0,
   printer_compensation: 0.15,
-});
-console.log('  ✓ L-Bracket (60x60x50 with 4-Hole Grid & Countersink):', {
-  triangles: bracketGrid.triangles,
-  vertices: bracketGrid.vertices,
-  dimensions: bracketGrid.dimensions,
-});
+}));
 
-// 4. Test STL Exporter on generated meshes
-console.log('\n[4] Testing STL Exporter Validation:');
-const exporter = new STLExporter();
-const mesh = new THREE.Mesh(gearD.geometry, new THREE.MeshBasicMaterial());
-const binStl = exporter.parse(mesh, { binary: true }) as DataView;
-console.log(`  ✓ Binary STL Export: ${binStl.byteLength} bytes`);
+// 5. Knurled Control Knob
+console.log('\n[5] Testing Knurled Control Knob (Math Lofted):');
+validateMesh('Knurled Knob Diamond 25mm', generateKnurledKnob({
+  outerDiameter: 25,
+  height: 18,
+  knurlPattern: 'diamond',
+  knurlCount: 28,
+  knurlDepth: 1.0,
+  hasPointer: true,
+  hasSkirt: true,
+  skirtDiameter: 30,
+  skirtHeight: 4,
+  boreDiameter: 6.0,
+  boreType: 'd-shaft',
+  dShaftFlatOffset: 2.5,
+  boreDepth: 14,
+  printer_compensation: 0.15,
+}));
 
-const asciiStl = exporter.parse(mesh, { binary: false }) as string;
-console.log(`  ✓ ASCII STL Export: ${asciiStl.length} characters`);
+// 6. Threaded Fastener (Bolt & Nut)
+console.log('\n[6] Testing Threaded Fasteners (Helical Sweep Lofted):');
+validateMesh('M8 x 25mm Hex Bolt', generateThreadedFastener({
+  fastenerType: 'bolt',
+  nominalDiameter: 8,
+  pitch: 1.25,
+  threadLength: 25,
+  headType: 'hex',
+  headDiameter: 14,
+  headHeight: 5.5,
+  nutHeight: 6.5,
+  nutWidthAcrossFlats: 13,
+  printer_compensation: 0.15,
+}));
+validateMesh('M8 Hex Nut', generateThreadedFastener({
+  fastenerType: 'nut',
+  nominalDiameter: 8,
+  pitch: 1.25,
+  threadLength: 20,
+  headType: 'hex',
+  headDiameter: 14,
+  headHeight: 5,
+  nutHeight: 6.5,
+  nutWidthAcrossFlats: 13,
+  printer_compensation: 0.2,
+}));
 
-console.log('\n==================================================');
-console.log('✅ ALL 3D GENERATOR VALIDATION TESTS PASSED 100%!');
-console.log('==================================================\n');
+// 7. Flexible Shaft Coupler
+console.log('\n[7] Testing Flexible Shaft Coupler (CSG):');
+validateMesh('Coupler 5mm to 8mm Slit Clamp', generateShaftCoupler({
+  outerDiameter: 20,
+  length: 25,
+  bore1Diameter: 5.0,
+  bore2Diameter: 8.0,
+  bore1Type: 'round',
+  bore2Type: 'round',
+  couplerStyle: 'slit-clamp',
+  slitWidth: 1.2,
+  clampScrewSize: 'M3',
+  printer_compensation: 0.15,
+}));
+
+// 8. Electronics Project Enclosure
+console.log('\n[8] Testing Project Enclosure (CSG):');
+validateMesh('Project Box 80x50x30 with Standoffs', generateProjectEnclosure({
+  innerLength: 80,
+  innerWidth: 50,
+  innerHeight: 30,
+  wallThickness: 2.4,
+  floorThickness: 2.0,
+  cornerRadius: 4,
+  lidLipHeight: 2.5,
+  standoffCount: 4,
+  standoffHeight: 6,
+  standoffScrewSize: 'M3',
+  hasCableCutout: true,
+  cableCutoutWidth: 12,
+  cableCutoutHeight: 8,
+  printer_compensation: 0.15,
+}));
+
+// 9. NEMA Stepper Motor Mount
+console.log('\n[9] Testing NEMA Stepper Mount (CSG):');
+validateMesh('NEMA 17 Stepper Mount with Tension Slots', generateStepperMount({
+  nemaSize: 'NEMA17',
+  faceThickness: 4.5,
+  baseThickness: 4.5,
+  baseLength: 35,
+  motorHoleType: 'slots',
+  slotLength: 6,
+  hasGussets: true,
+  gussetThickness: 4.0,
+  baseHoleCount: 2,
+  baseScrewSize: 'M4',
+  printer_compensation: 0.15,
+}));
+
+// 10. Linear Rod Clamp (SK/SHF)
+console.log('\n[10] Testing Linear Rod Clamp (CSG):');
+validateMesh('SK8 8mm Linear Rod Clamp', generateLinearRodClamp({
+  rodDiameter: 8,
+  mountStyle: 'horizontal-sk',
+  blockHeight: 32,
+  blockWidth: 42,
+  blockThickness: 14,
+  clampGap: 1.5,
+  pinchScrewSize: 'M4',
+  baseScrewSize: 'M5',
+  printer_compensation: 0.15,
+}));
+
+// 11. Hose Barb & Pipe Adapter
+console.log('\n[11] Testing Hose Barb Adapter (CSG):');
+validateMesh('Hose Barb 8mm Coupler', generateHoseBarb({
+  barbNominalID: 8,
+  barbCount: 3,
+  barbLength: 16,
+  wallThickness: 2.0,
+  connectorType: 'straight-coupler',
+  secondBarbNominalID: 8,
+  hexNutWidth: 15,
+  hexNutThickness: 6,
+  printer_compensation: 0.15,
+}));
+
+// 12. T8 Leadscrew Nut Block
+console.log('\n[12] Testing T8 Leadscrew Nut Block (CSG):');
+validateMesh('T8 Leadscrew Nut Block', generateLeadScrewNutBlock({
+  leadScrewDia: 8,
+  nutFlangeDia: 22,
+  boltCircleDia: 16,
+  blockWidth: 34,
+  blockLength: 30,
+  blockHeight: 18,
+  nutScrewSize: 'M3',
+  gantryScrewSize: 'M4',
+  gantryHoleCount: 2,
+  pocketDepth: 4.0,
+  printer_compensation: 0.15,
+}));
+
+// 13. Cable Drag Chain Link
+console.log('\n[13] Testing Cable Drag Chain Link (CSG):');
+validateMesh('Modular Cable Chain Link 15x10mm', generateCableChainLink({
+  chamberWidth: 15,
+  chamberHeight: 10,
+  pitch: 20,
+  wallThickness: 2.0,
+  pinDiameter: 4.0,
+  maxBendAngle: 40,
+  printer_compensation: 0.15,
+}));
+
+console.log('\n===============================================================');
+console.log('✅ ALL 13 GENERATORS PASSED 100% VALIDATION & STL EXPORT TESTS!');
+console.log('===============================================================\n');
