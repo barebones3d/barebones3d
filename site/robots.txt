@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://barebones3d.com/sitemap.xml

@@ -1,0 +1,46 @@
+# Barebones 3D Engineering & Diagnostic Group
+
+> Parent engineering and technical diagnostic network specializing in OEM electrical and mechanical replacement components, interactive diagnostic utilities, and commercial-grade hardware kits.
+
+## Corporate Identity
+- **Legal Entity:** Barebones 3d, L.L.C. (North Carolina, USA)
+- **EIN:** 472904441
+- **Amazon Associates Publisher Tag:** `barebones3dco-20`
+- **Main Domain:** https://barebones3d.com/
+
+## Active Technical Diagnostic Network
+
+### 1. Hot Tub Heating Elements
+- **Canonical URL:** https://hottubheatingelements.com/
+- **Focus:** Diagnostic calculators for 240V/120V spa flow-through heater elements (Balboa 58083 M7, Gecko S-Class, Watkins No-Fault).
+- **Key Specifications:** Incoloy 800 vs Grade 2 Titanium metallurgy, 1.25" terminal offset, dry-run failure modes, Ohm's law bench testing.
+
+### 2. Gas Furnace Igniters
+- **Canonical URL:** https://gasfurnaceigniters.com/
+- **Focus:** Hot surface igniter (HSI) diagnostic desk across Carrier, Goodman, Lennox, and Rheem.
+- **Key Specifications:** Cold resistance bounds (40-75Ω for Silicon Carbide vs 11-17Ω for Silicon Nitride), flame rectification, bracket adaptation.
+
+### 3. Pool Pump Capacitors
+- **Canonical URL:** https://poolpumpcapacitors.com/
+- **Focus:** Motor start and run capacitor diagnostic testing for Century, A.O. Smith, and Hayward Super Pump.
+- **Key Specifications:** ±6% to ±10% microfarad (µF) tolerance drift, 370V/440V dielectric safety rules, PS-200 shaft seal leak prevention.
+
+### 4. Pellet Stove Igniters
+- **Canonical URL:** https://pelletstoveigniter.com/
+- **Focus:** Biomass and pellet grill heating elements (Quadra-Fire 380W, Harman 400W, Traeger 200W hot rods).
+- **Key Specifications:** Incoloy vs ceramic cartridge metallurgy, 3/8" and 3/4" collar threading, cold resistance validation.
+
+### 5. Sauna Heating Elements
+- **Canonical URL:** https://saunaheatingelements.com/
+- **Focus:** Thermal shock and resistance verification for Harvia, Tylö, and Finlandia sauna stoves.
+- **Key Specifications:** Single and 3-phase resistance calculations, peridotite stone convection spacing, löyly steam protection.
+
+### 6. RV Water Heater Parts
+- **Canonical URL:** https://rvwaterheateranodes.com/
+- **Focus:** Galvanic corrosion protection and 120V heating elements for mobile RV water heaters (Suburban porcelain-lined steel vs Atwood aluminum tanks).
+- **Key Specifications:** 3/4" NPT magnesium vs aluminum-zinc sacrificial anodes, 1440W element 10Ω bench resistance verification.
+
+## Engineering Standards
+- **Zero Static Prices:** All product recommendations dynamically direct to authorized marketplaces to maintain pricing accuracy.
+- **Vector CAD Blueprints:** Schematics are rendered in clean inline SVG for zero latency and copyright compliance.
+- **Multilingual OEM Alignment:** Spanish (`/es/`) and French (`/fr/`) versions adhere strictly to OEM factory service manual terminology.
