@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 
 export type PrimitiveType =
+  // Original 13 primitives
   | 'herringbone_gear'
   | 'bearing_pillow_block'
   | 'structural_bracket'
@@ -13,9 +14,35 @@ export type PrimitiveType =
   | 'linear_rod_clamp'
   | 'hose_barb'
   | 'lead_screw_nut_block'
-  | 'cable_chain_link';
+  | 'cable_chain_link'
+  // 20 New Hobbyist & Maker primitives
+  | 'bevel_gear'
+  | 'timing_belt_idler'
+  | 'v_slot_wheel'
+  | 'flexible_beam_coupler'
+  | 'worm_gear'
+  | 'thumb_screw_wheel'
+  | 'velocity_stack'
+  | 'centrifugal_impeller'
+  | 'extrusion_end_cap'
+  | 't_nut_slot'
+  | 'corner_cube_bracket'
+  | 'ball_joint_rod_end'
+  | 'servo_horn'
+  | 'cable_guide_anchor'
+  | 'stepper_damper_plate'
+  | 'pcb_standoff_clip'
+  | 'endstop_mount'
+  | 'fan_duct_shroud'
+  | 'spool_holder_hub'
+  | 'dial_indicator_mount';
 
-export type PrimitiveCategory = 'Motion & Power' | 'Structural & Mounts' | 'Fluid & Hardware';
+export type PrimitiveCategory =
+  | 'Motion & Power'
+  | 'Structural & Mounts'
+  | 'Fluid & Hardware'
+  | 'Electronics & Sensors'
+  | 'Tools & Shop';
 
 export interface PrimitiveMeta {
   id: PrimitiveType;
@@ -26,6 +53,7 @@ export interface PrimitiveMeta {
 }
 
 export const PRIMITIVE_CATALOG: PrimitiveMeta[] = [
+  // --- Motion & Power ---
   {
     id: 'gt2_pulley',
     name: 'GT2 Timing Pulley',
@@ -41,11 +69,46 @@ export const PRIMITIVE_CATALOG: PrimitiveMeta[] = [
     isMathLofted: true,
   },
   {
+    id: 'bevel_gear',
+    name: 'Miter / Bevel Gear',
+    category: 'Motion & Power',
+    shortDesc: 'Conical pitch 90° transmission gear with tapered involute teeth',
+    isMathLofted: true,
+  },
+  {
+    id: 'timing_belt_idler',
+    name: 'Belt Idler Pulley',
+    category: 'Motion & Power',
+    shortDesc: 'Crowned or smooth belt idler with dual bearing pockets',
+    isMathLofted: true,
+  },
+  {
+    id: 'v_slot_wheel',
+    name: 'V-Slot Rail Wheel',
+    category: 'Motion & Power',
+    shortDesc: 'Precision 45° dual V-roller for 2020 extrusion linear motion',
+    isMathLofted: true,
+  },
+  {
+    id: 'worm_gear',
+    name: 'Helical Worm Screw',
+    category: 'Motion & Power',
+    shortDesc: 'High-reduction worm screw drive with continuous helical sweep',
+    isMathLofted: true,
+  },
+  {
     id: 'shaft_coupler',
     name: 'Flexible Shaft Coupler',
     category: 'Motion & Power',
     shortDesc: 'Motor-to-leadscrew coupler with clamping flex slits',
     isMathLofted: false,
+  },
+  {
+    id: 'flexible_beam_coupler',
+    name: 'Helical Beam Coupler',
+    category: 'Motion & Power',
+    shortDesc: 'Continuous helical spring cut body accommodating axial/angular runout',
+    isMathLofted: true,
   },
   {
     id: 'knurled_knob',
@@ -55,12 +118,35 @@ export const PRIMITIVE_CATALOG: PrimitiveMeta[] = [
     isMathLofted: true,
   },
   {
+    id: 'thumb_screw_wheel',
+    name: 'Scalloped Thumb Wheel',
+    category: 'Motion & Power',
+    shortDesc: 'Ergonomic high-torque thumb wheel with embedded hex nut pocket',
+    isMathLofted: true,
+  },
+  {
+    id: 'servo_horn',
+    name: 'Micro / RC Servo Horn',
+    category: 'Motion & Power',
+    shortDesc: 'Splined hub arm with linkage pin holes and retention screw recess',
+    isMathLofted: false,
+  },
+  {
     id: 'lead_screw_nut_block',
     name: 'T8 Leadscrew Nut Block',
     category: 'Motion & Power',
     shortDesc: 'Z-axis anti-backlash nut housing with gantry mounts',
     isMathLofted: false,
   },
+  {
+    id: 'stepper_damper_plate',
+    name: 'Stepper Damper Mount',
+    category: 'Motion & Power',
+    shortDesc: 'NEMA motor acoustic decoupler with flexural serpentine isolators',
+    isMathLofted: false,
+  },
+
+  // --- Structural & Mounts ---
   {
     id: 'bearing_pillow_block',
     name: 'Bearing Pillow Block',
@@ -90,6 +176,34 @@ export const PRIMITIVE_CATALOG: PrimitiveMeta[] = [
     isMathLofted: false,
   },
   {
+    id: 'corner_cube_bracket',
+    name: '3-Way Corner Cube',
+    category: 'Structural & Mounts',
+    shortDesc: 'Rigid 3-way orthogonal 90° junction block for aluminum profiles',
+    isMathLofted: false,
+  },
+  {
+    id: 't_nut_slot',
+    name: 'Drop-In Slot T-Nut',
+    category: 'Structural & Mounts',
+    shortDesc: 'Cam-locking roll-in nut for 2020/3030 extrusion slot channels',
+    isMathLofted: false,
+  },
+  {
+    id: 'extrusion_end_cap',
+    name: 'Extrusion Profile End Cap',
+    category: 'Structural & Mounts',
+    shortDesc: 'Flush snap-fit protective bezel cap for 2020/3030/4040 rails',
+    isMathLofted: false,
+  },
+  {
+    id: 'ball_joint_rod_end',
+    name: 'Ball Joint Rod End',
+    category: 'Structural & Mounts',
+    shortDesc: 'Articulating ball socket link with pinch clamp and threaded shank',
+    isMathLofted: false,
+  },
+  {
     id: 'cable_chain_link',
     name: 'Cable Drag Chain Link',
     category: 'Structural & Mounts',
@@ -97,17 +211,33 @@ export const PRIMITIVE_CATALOG: PrimitiveMeta[] = [
     isMathLofted: false,
   },
   {
-    id: 'project_enclosure',
-    name: 'Project Enclosure',
-    category: 'Fluid & Hardware',
-    shortDesc: 'Electronics box with PCB standoffs and wire ports',
+    id: 'cable_guide_anchor',
+    name: 'Cable Guide Anchor',
+    category: 'Structural & Mounts',
+    shortDesc: 'Drag chain and wire harness terminating bracket with tie slots',
     isMathLofted: false,
   },
+
+  // --- Fluid & Hardware ---
   {
     id: 'threaded_fastener',
     name: 'Threaded Bolt & Nut',
     category: 'Fluid & Hardware',
     shortDesc: 'ISO 60° metric thread generator with hex drive',
+    isMathLofted: true,
+  },
+  {
+    id: 'velocity_stack',
+    name: 'Velocity Stack Air Horn',
+    category: 'Fluid & Hardware',
+    shortDesc: 'Aerodynamic exponential flare intake horn with mounting flange',
+    isMathLofted: true,
+  },
+  {
+    id: 'centrifugal_impeller',
+    name: 'Centrifugal Impeller',
+    category: 'Fluid & Hardware',
+    shortDesc: 'Curved backward-inclined pump/fan rotor with shaft bore',
     isMathLofted: true,
   },
   {
@@ -117,13 +247,63 @@ export const PRIMITIVE_CATALOG: PrimitiveMeta[] = [
     shortDesc: 'Tubing connector with conical retention barbs & hex nut',
     isMathLofted: false,
   },
+  {
+    id: 'fan_duct_shroud',
+    name: 'Radial Blower Fan Duct',
+    category: 'Fluid & Hardware',
+    shortDesc: '5015/4010 directional cooling nozzle targeting the hotend print tip',
+    isMathLofted: false,
+  },
+
+  // --- Electronics & Sensors ---
+  {
+    id: 'project_enclosure',
+    name: 'Project Enclosure',
+    category: 'Electronics & Sensors',
+    shortDesc: 'Electronics box with PCB standoffs and wire ports',
+    isMathLofted: false,
+  },
+  {
+    id: 'pcb_standoff_clip',
+    name: 'PCB Edge Standoff Clip',
+    category: 'Electronics & Sensors',
+    shortDesc: 'Snap-latch retaining clip for 1.6mm FR4 circuit boards',
+    isMathLofted: false,
+  },
+  {
+    id: 'endstop_mount',
+    name: 'Optical/Micro Endstop Mount',
+    category: 'Electronics & Sensors',
+    shortDesc: 'Slotted microswitch bracket for calibration and homing triggers',
+    isMathLofted: false,
+  },
+
+  // --- Tools & Shop ---
+  {
+    id: 'spool_holder_hub',
+    name: 'Universal Spool Hub',
+    category: 'Tools & Shop',
+    shortDesc: 'Conical centering hub adapter for 50-75mm filament spools with 608 bearing',
+    isMathLofted: false,
+  },
+  {
+    id: 'dial_indicator_mount',
+    name: 'Dial Indicator Clamp',
+    category: 'Tools & Shop',
+    shortDesc: 'Precision 8mm / 3/8" gauge stem clamp with fine-tuning arm',
+    isMathLofted: false,
+  },
 ];
 
 export type BoreType = 'round' | 'd-shaft' | 'hex';
 export type MountingFlangeType = 'none' | 'two-sided' | 'bottom-foot';
 export type HolePatternType = 'none' | 'single' | 'two-inline' | 'four-grid';
 export type ScrewSizeType = 'M2' | 'M2.5' | 'M3' | 'M4' | 'M5' | 'M6' | 'M8';
-export type BearingPresetType = '608' | '624' | '688' | 'custom';
+export type BearingPresetType = '608' | '624' | '625' | '688' | 'custom';
+
+// =========================================================================
+// Parameter Interfaces: Original 13 Components
+// =========================================================================
 
 // --- 1. Herringbone Gear Params ---
 export interface HerringboneGearParams {
@@ -320,6 +500,260 @@ export interface CableChainLinkParams {
   printer_compensation: number;
 }
 
+// =========================================================================
+// Parameter Interfaces: 20 New Hobbyist Components
+// =========================================================================
+
+// --- 14. Bevel Gear Params ---
+export interface BevelGearParams {
+  module: number;           // 0.8 to 4.0 mm
+  toothCount: number;       // 12 to 60 teeth
+  coneAngleDeg: number;     // 30 to 60 deg (45 deg = 1:1 miter gear)
+  faceWidth: number;        // 6 to 25 mm
+  boreDiameter: number;     // 0 to 20 mm
+  boreType: BoreType;
+  dShaftFlatOffset: number;
+  hasHub: boolean;
+  hubDiameter: number;      // 10 to 35 mm
+  hubLength: number;        // 4 to 20 mm
+  printer_compensation: number;
+}
+
+// --- 15. Timing Belt Idler Pulley Params ---
+export interface TimingBeltIdlerParams {
+  profileType: 'smooth' | 'crowned';
+  pulleyDiameter: number;   // 10 to 35 mm
+  beltWidth: number;        // 6 to 15 mm
+  flangeHeight: number;     // 1.0 to 3.5 mm
+  flangeThickness: number;  // 0.8 to 2.0 mm
+  bearingPreset: BearingPresetType;
+  bearingPocketDepth: number; // 4 to 8 mm
+  centerRidgeThickness: number; // 1.0 to 3.0 mm
+  printer_compensation: number;
+}
+
+// --- 16. V-Slot Extrusion Wheel Roller Params ---
+export interface VSlotWheelParams {
+  outerDiameter: number;    // 20 to 35 mm (standard 24mm)
+  wheelWidth: number;       // 8 to 15 mm (standard 11mm)
+  vAngleDeg: number;        // 70 to 110 deg (standard 90 deg V-groove)
+  vDepth: number;           // 2.0 to 6.0 mm
+  bearingPocketOD: number;  // 16 mm (625 bearing)
+  bearingPocketDepth: number; // 5.0 mm standard
+  centerRidgeWidth: number; // 1.0 to 2.5 mm
+  printer_compensation: number;
+}
+
+// --- 17. Helical Beam Coupler Params ---
+export interface FlexibleBeamCouplerParams {
+  outerDiameter: number;    // 16 to 30 mm
+  length: number;           // 20 to 45 mm
+  bore1Diameter: number;    // 4 to 12 mm
+  bore2Diameter: number;    // 4 to 14 mm
+  spiralPitch: number;      // 2.5 to 6.0 mm
+  spiralTurns: number;      // 2 to 5 turns
+  spiralSlotWidth: number;  // 1.2 to 2.5 mm
+  clampScrewSize: ScrewSizeType;
+  printer_compensation: number;
+}
+
+// --- 18. Helical Worm Screw Gear Params ---
+export interface WormGearParams {
+  module: number;           // 0.8 to 3.0 mm
+  starts: 1 | 2;            // single or double start helical thread
+  length: number;           // 15 to 50 mm
+  pitchDiameter: number;    // 10 to 30 mm
+  boreDiameter: number;     // 3 to 12 mm
+  boreType: BoreType;
+  dShaftFlatOffset: number;
+  printer_compensation: number;
+}
+
+// --- 19. Thumb Screw / Finger Nut Wheel Params ---
+export interface ThumbScrewWheelParams {
+  outerDiameter: number;    // 20 to 60 mm
+  thickness: number;        // 6 to 20 mm
+  lobeCount: number;        // 4 to 12 lobes
+  lobeDepth: number;        // 1.0 to 5.0 mm
+  nutSize: ScrewSizeType;   // M3, M4, M5, M6, M8
+  pocketType: 'hex-nut' | 'socket-head';
+  pocketDepth: number;      // 2.5 to 10 mm
+  throughHoleDia: number;   // 3.4 to 9.0 mm
+  printer_compensation: number;
+}
+
+// --- 20. Velocity Stack Air Horn Params ---
+export interface VelocityStackParams {
+  throatDiameter: number;   // 15 to 80 mm
+  flareDiameter: number;    // 30 to 130 mm
+  height: number;           // 25 to 100 mm
+  wallThickness: number;    // 1.6 to 4.5 mm
+  flangeType: 'round-ring' | 'oval-2bolt' | 'press-fit';
+  flangeBoltSize: ScrewSizeType;
+  boltCircleDia: number;
+  printer_compensation: number;
+}
+
+// --- 21. Centrifugal Impeller Params ---
+export interface CentrifugalImpellerParams {
+  outerDiameter: number;    // 30 to 120 mm
+  hubDiameter: number;      // 12 to 35 mm
+  height: number;           // 8 to 35 mm
+  bladeCount: number;       // 4 to 16 blades
+  bladeThickness: number;   // 1.2 to 3.5 mm
+  bladeAngleDeg: number;    // 20 to 60 deg backward curve
+  boreDiameter: number;     // 3 to 12 mm
+  boreType: BoreType;
+  dShaftFlatOffset: number;
+  hasBackPlate: boolean;
+  backPlateThickness: number;
+  printer_compensation: number;
+}
+
+// --- 22. Extrusion End Cap Params ---
+export interface ExtrusionEndCapParams {
+  profileSize: '2020' | '3030' | '4040' | '2040';
+  capThickness: number;     // 2.0 to 6.0 mm
+  prongLength: number;      // 5.0 to 15.0 mm
+  bezelChamfer: number;     // 0.5 to 3.0 mm
+  centerHole: boolean;
+  centerHoleDiameter: number; // 4.0 to 8.0 mm
+  printer_compensation: number;
+}
+
+// --- 23. Drop-In Slot T-Nut Params ---
+export interface TNutSlotParams {
+  slotSize: 'slot-6' | 'slot-8';
+  threadSize: ScrewSizeType; // M3, M4, M5, M6
+  nutLength: number;        // 10 to 25 mm
+  nutWidth: number;         // 6 to 12 mm
+  headHeight: number;       // 3 to 8 mm
+  hasAntiRotationRidge: boolean;
+  printer_compensation: number;
+}
+
+// --- 24. 3-Way Corner Cube Bracket Params ---
+export interface CornerCubeBracketParams {
+  cubeSize: number;         // 20 to 45 mm (e.g. 20mm for 2020)
+  holeDiameter: number;     // 4.5 to 6.5 mm (M5 clearance)
+  counterboreDia: number;   // 8.0 to 12.0 mm
+  counterboreDepth: number; // 4.0 to 10.0 mm
+  chamferRadius: number;    // 0.5 to 3.0 mm
+  faceCount: 2 | 3;         // 2-way L or 3-way XYZ cube
+  printer_compensation: number;
+}
+
+// --- 25. Ball Joint Rod End Params ---
+export interface BallJointRodEndParams {
+  ballDiameter: number;     // 8 to 22 mm
+  neckDiameter: number;     // 5 to 14 mm
+  shankDiameter: number;    // 8 to 18 mm
+  shankLength: number;      // 12 to 40 mm
+  shankThreadSize: ScrewSizeType;
+  hasClampSlit: boolean;
+  pinchScrewSize: ScrewSizeType;
+  printer_compensation: number;
+}
+
+// --- 26. Micro / RC Servo Horn Params ---
+export interface ServoHornParams {
+  splineDiameter: number;   // 4.5 to 8.0 mm (25T 5.9mm standard)
+  hornStyle: 'single-arm' | 'dual-arm' | 'four-star' | 'round-wheel';
+  armLength: number;        // 12 to 45 mm
+  armThickness: number;     // 2.0 to 5.0 mm
+  hubDiameter: number;      // 8 to 16 mm
+  hubHeight: number;        // 4 to 10 mm
+  holeSpacing: number;      // 3 to 6 mm
+  linkageHoleDia: number;   // 1.2 to 2.5 mm
+  centerScrewPocketDia: number; // 4.0 to 7.0 mm
+  printer_compensation: number;
+}
+
+// --- 27. Cable Guide Anchor Bracket Params ---
+export interface CableGuideAnchorParams {
+  anchorWidth: number;      // 16 to 45 mm
+  anchorLength: number;     // 20 to 55 mm
+  anchorHeight: number;     // 10 to 30 mm
+  slotStyle: 'zip-tie' | 'clamp-bar' | 'chain-bracket';
+  tieSlotWidth: number;     // 2.5 to 5.0 mm
+  mountHoleSpacing: number; // 12 to 35 mm
+  mountScrewSize: ScrewSizeType;
+  hasExtrusionSlotLug: boolean;
+  printer_compensation: number;
+}
+
+// --- 28. Stepper Motor Damper Mount Params ---
+export interface StepperDamperPlateParams {
+  nemaSize: 'NEMA17' | 'NEMA23';
+  plateThickness: number;   // 6 to 14 mm
+  flexureSlitWidth: number; // 1.2 to 2.5 mm
+  flexureStyle: 'serpentine' | 'concentric-ring';
+  motorScrewSize: ScrewSizeType;
+  frameScrewSize: ScrewSizeType;
+  centerBoreDia: number;    // 22 to 40 mm
+  printer_compensation: number;
+}
+
+// --- 29. PCB Edge Standoff Clip Params ---
+export interface PCBStandoffClipParams {
+  pcbThickness: number;     // 1.0 to 2.4 mm (standard 1.6mm)
+  standoffHeight: number;   // 5 to 30 mm
+  clipType: 'edge-clip' | 'corner-clip' | 'through-hole-snap';
+  baseDiameter: number;     // 10 to 25 mm
+  baseMountType: 'm3-screw' | 'adhesive-flat';
+  barbOverhang: number;     // 0.8 to 2.0 mm
+  printer_compensation: number;
+}
+
+// --- 30. Optical / Mechanical Endstop Mount Params ---
+export interface EndstopMountParams {
+  switchType: 'omron-micro' | 'kw11-mini' | 'optical-slotted';
+  mountBodyLength: number;  // 20 to 45 mm
+  mountBodyWidth: number;   // 14 to 30 mm
+  bodyThickness: number;    // 3.0 to 8.0 mm
+  slotAdjustLength: number; // 6 to 25 mm
+  extrusionMountScrew: ScrewSizeType;
+  switchScrewSize: ScrewSizeType;
+  hasSlotLug: boolean;
+  printer_compensation: number;
+}
+
+// --- 31. Radial Blower Fan Cooling Duct Params ---
+export interface FanDuctShroudParams {
+  fanType: '5015-blower' | '4010-blower' | '4010-axial';
+  ductLength: number;       // 25 to 65 mm
+  ductAngleDeg: number;     // 25 to 60 deg down-tilt
+  nozzleWidth: number;      // 10 to 30 mm
+  nozzleHeight: number;     // 3 to 8 mm
+  wallThickness: number;    // 1.2 to 2.5 mm
+  mountTabDistance: number; // 20 to 45 mm
+  mountScrewSize: ScrewSizeType;
+  printer_compensation: number;
+}
+
+// --- 32. Universal Spool Hub Centering Adapter Params ---
+export interface SpoolHolderHubParams {
+  spoolBoreMin: number;     // 48 to 56 mm
+  spoolBoreMax: number;     // 58 to 78 mm
+  coneLength: number;       // 25 to 60 mm
+  flangeDiameter: number;   // 65 to 90 mm
+  bearingType: '608' | '624' | 'none-solid';
+  axleRodDiameter: number;  // 8.0 to 16.0 mm
+  printer_compensation: number;
+}
+
+// --- 33. Dial Test Indicator Clamp Params ---
+export interface DialIndicatorMountParams {
+  stemDiameter: number;     // 8.0 mm metric / 9.525 mm 3/8" imperial
+  clampThickness: number;   // 10 to 22 mm
+  clampWidth: number;       // 18 to 35 mm
+  clampSlitGap: number;     // 1.2 to 2.5 mm
+  pinchBoltSize: ScrewSizeType;
+  mountStyle: '2020-rail-lug' | 'magnetic-base-m5' | 'rod-clamp-10mm';
+  armLength: number;        // 15 to 50 mm
+  printer_compensation: number;
+}
+
 export interface GeneratedMeshResult {
   geometry: THREE.BufferGeometry;
   dimensions: { x: number; y: number; z: number };
@@ -351,5 +785,6 @@ export const SCREW_COUNTERSINK_HEAD_DIAMETERS: Record<ScrewSizeType, number> = {
 export const BEARING_PRESET_DATA: Record<Exclude<BearingPresetType, 'custom'>, { od: number; id: number; width: number; name: string }> = {
   '608': { od: 22, id: 8, width: 7, name: '608 (22mm OD × 8mm ID × 7mm W) - Skateboard / V-wheel' },
   '624': { od: 13, id: 4, width: 5, name: '624 (13mm OD × 4mm ID × 5mm W) - 3D Printer Idler' },
+  '625': { od: 16, id: 5, width: 5, name: '625 (16mm OD × 5mm ID × 5mm W) - V-Slot Roller' },
   '688': { od: 16, id: 8, width: 5, name: '688 (16mm OD × 8mm ID × 5mm W) - Slim Spindle / Stepper' },
 };

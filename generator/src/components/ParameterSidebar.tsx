@@ -24,8 +24,9 @@ import {
   Download,
   ChevronRight,
 } from 'lucide-react';
+import { NewParamControls, NewParamControlsProps } from './NewParamControls';
 
-interface ParameterSidebarProps {
+export interface ParameterSidebarProps extends NewParamControlsProps {
   activeModel: PrimitiveType;
   gearParams: HerringboneGearParams;
   pillowParams: BearingPillowBlockParams;
@@ -127,36 +128,37 @@ const NumericField: React.FC<NumericFieldProps> = ({
   );
 };
 
-export const ParameterSidebar: React.FC<ParameterSidebarProps> = ({
-  activeModel,
-  gearParams,
-  pillowParams,
-  bracketParams,
-  gt2Params,
-  knobParams,
-  fastenerParams,
-  couplerParams,
-  enclosureParams,
-  stepperParams,
-  clampParams,
-  barbParams,
-  nutBlockParams,
-  chainParams,
-  onUpdateGearParams,
-  onUpdatePillowParams,
-  onUpdateBracketParams,
-  onUpdateGT2Params,
-  onUpdateKnobParams,
-  onUpdateFastenerParams,
-  onUpdateCouplerParams,
-  onUpdateEnclosureParams,
-  onUpdateStepperParams,
-  onUpdateClampParams,
-  onUpdateBarbParams,
-  onUpdateNutBlockParams,
-  onUpdateChainParams,
-  onExportSTL,
-}) => {
+export const ParameterSidebar: React.FC<ParameterSidebarProps> = (props) => {
+  const {
+    activeModel,
+    gearParams,
+    pillowParams,
+    bracketParams,
+    gt2Params,
+    knobParams,
+    fastenerParams,
+    couplerParams,
+    enclosureParams,
+    stepperParams,
+    clampParams,
+    barbParams,
+    nutBlockParams,
+    chainParams,
+    onUpdateGearParams,
+    onUpdatePillowParams,
+    onUpdateBracketParams,
+    onUpdateGT2Params,
+    onUpdateKnobParams,
+    onUpdateFastenerParams,
+    onUpdateCouplerParams,
+    onUpdateEnclosureParams,
+    onUpdateStepperParams,
+    onUpdateClampParams,
+    onUpdateBarbParams,
+    onUpdateNutBlockParams,
+    onUpdateChainParams,
+    onExportSTL,
+  } = props;
   return (
     <aside className="w-full md:w-[380px] h-full bg-[#0b1120] border-r border-slate-800 flex flex-col shrink-0 overflow-hidden select-none">
       {/* Sidebar Header */}
@@ -1408,6 +1410,9 @@ export const ParameterSidebar: React.FC<ParameterSidebarProps> = ({
             </div>
           </div>
         )}
+
+        {/* 20 New Component Parameter Controls */}
+        <NewParamControls {...props} />
       </div>
 
       {/* Footer Quick Export Action */}

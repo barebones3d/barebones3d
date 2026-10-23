@@ -1,4 +1,5 @@
 export * from './types';
+// Original 13 generators
 export * from './herringboneGear';
 export * from './bearingPillowBlock';
 export * from './structuralBracket';
@@ -12,3 +13,25 @@ export * from './linearRodClamp';
 export * from './hoseBarb';
 export * from './leadScrewNutBlock';
 export * from './cableChainLink';
+
+// 20 New Hobbyist generators
+export * from './bevelGear';
+export * from './timingBeltIdler';
+export * from './vSlotWheel';
+export * from './flexibleBeamCoupler';
+export * from './wormGear';
+export * from './thumbScrewWheel';
+export * from './velocityStack';
+export * from './centrifugalImpeller';
+export * from './extrusionEndCap';
+export * from './tNutSlot';
+export * from './cornerCubeBracket';
+export * from './ballJointRodEnd';
+export * from './servoHorn';
+export * from './cableGuideAnchor';
+export * from './stepperDamperPlate';
+export * from './pcbStandoffClip';
+export * from './endstopMount';
+export * from './fanDuctShroud';
+export * from './spoolHolderHub';
+export * from './dialIndicatorMount';

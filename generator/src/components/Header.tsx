@@ -16,6 +16,16 @@ import {
   Zap,
   Droplet,
   FolderOpen,
+  Wind,
+  Gauge,
+  Compass,
+  Fan,
+  RotateCw,
+  SlidersHorizontal,
+  Crosshair,
+  Anchor,
+  Activity,
+  Maximize2,
 } from 'lucide-react';
 
 interface HeaderProps {
@@ -50,37 +60,73 @@ export const Header: React.FC<HeaderProps> = ({
   const getModelIcon = (id: PrimitiveType, className: string = 'w-4 h-4') => {
     switch (id) {
       case 'gt2_pulley':
+      case 'timing_belt_idler':
         return <Disc className={className} />;
       case 'herringbone_gear':
-        return <Cog className={`${className} ${activeModel === 'herringbone_gear' ? 'animate-spin-slow' : ''}`} />;
+      case 'bevel_gear':
+      case 'worm_gear':
+        return <Cog className={`${className} ${activeModel === id ? 'animate-spin-slow' : ''}`} />;
+      case 'v_slot_wheel':
+        return <RotateCw className={className} />;
       case 'shaft_coupler':
+      case 'flexible_beam_coupler':
+      case 'cable_chain_link':
+      case 'ball_joint_rod_end':
         return <Link className={className} />;
       case 'knurled_knob':
+      case 'thumb_screw_wheel':
         return <Sliders className={className} />;
+      case 'servo_horn':
+        return <Compass className={className} />;
       case 'lead_screw_nut_block':
         return <Zap className={className} />;
+      case 'stepper_damper_plate':
+        return <Activity className={className} />;
       case 'bearing_pillow_block':
         return <CircleDot className={className} />;
       case 'structural_bracket':
+      case 'corner_cube_bracket':
         return <CornerDownRight className={className} />;
       case 'stepper_mount':
         return <Layers className={className} />;
       case 'linear_rod_clamp':
-        return <Wrench className={className} />;
-      case 'cable_chain_link':
-        return <Link className={className} />;
+        return <Maximize2 className={className} />;
+      case 'extrusion_end_cap':
+      case 't_nut_slot':
+        return <Box className={className} />;
+      case 'cable_guide_anchor':
+        return <Anchor className={className} />;
       case 'project_enclosure':
         return <Box className={className} />;
       case 'threaded_fastener':
         return <Wrench className={className} />;
       case 'hose_barb':
         return <Droplet className={className} />;
+      case 'velocity_stack':
+        return <Wind className={className} />;
+      case 'centrifugal_impeller':
+      case 'fan_duct_shroud':
+        return <Fan className={className} />;
+      case 'pcb_standoff_clip':
+        return <SlidersHorizontal className={className} />;
+      case 'endstop_mount':
+        return <Crosshair className={className} />;
+      case 'spool_holder_hub':
+        return <Disc className={className} />;
+      case 'dial_indicator_mount':
+        return <Gauge className={className} />;
       default:
         return <Cog className={className} />;
     }
   };
 
-  const categories: PrimitiveCategory[] = ['Motion & Power', 'Structural & Mounts', 'Fluid & Hardware'];
+  const categories: PrimitiveCategory[] = [
+    'Motion & Power',
+    'Structural & Mounts',
+    'Fluid & Hardware',
+    'Electronics & Sensors',
+    'Tools & Shop',
+  ];
 
   return (
     <header className="h-14 border-b border-slate-800 bg-[#0b1120] px-4 flex items-center justify-between z-30 shrink-0 relative">
@@ -99,7 +145,7 @@ export const Header: React.FC<HeaderProps> = ({
               Barebones<span className="text-sky-400">3D</span>
             </span>
             <span className="text-[10px] uppercase font-mono bg-sky-950/80 text-sky-300 border border-sky-800 px-1.5 py-0.5 rounded hidden sm:inline-block">
-              Parametric CAD
+              Parametric CAD ({PRIMITIVE_CATALOG.length} Parts)
             </span>
           </div>
           <p className="text-[11px] text-slate-400 hidden md:block font-mono">
@@ -130,7 +176,7 @@ export const Header: React.FC<HeaderProps> = ({
 
         {/* Dropdown Menu Modal */}
         {menuOpen && (
-          <div className="absolute top-12 left-1/2 -translate-x-1/2 sm:left-0 sm:translate-x-0 w-[340px] sm:w-[480px] max-h-[82vh] overflow-y-auto bg-[#090e1a] border border-slate-700/80 rounded-xl shadow-2xl shadow-black/80 z-50 p-3.5 font-mono backdrop-blur-md">
+          <div className="absolute top-12 left-1/2 -translate-x-1/2 sm:left-0 sm:translate-x-0 w-[340px] sm:w-[520px] max-h-[82vh] overflow-y-auto bg-[#090e1a] border border-slate-700/80 rounded-xl shadow-2xl shadow-black/80 z-50 p-3.5 font-mono backdrop-blur-md">
             <div className="flex items-center justify-between pb-2 mb-3 border-b border-slate-800 text-[11px] text-slate-400 uppercase tracking-wider">
               <span className="flex items-center gap-1.5 text-sky-400 font-semibold">
                 <FolderOpen className="w-3.5 h-3.5" />
@@ -142,6 +188,7 @@ export const Header: React.FC<HeaderProps> = ({
             <div className="space-y-4">
               {categories.map((cat) => {
                 const items = PRIMITIVE_CATALOG.filter((m) => m.category === cat);
+                if (items.length === 0) return null;
                 return (
                   <div key={cat}>
                     <div className="text-[10px] uppercase font-bold text-slate-400 tracking-wider mb-1.5 px-1 flex items-center justify-between">

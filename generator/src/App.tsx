@@ -14,6 +14,26 @@ import {
   HoseBarbParams,
   LeadScrewNutBlockParams,
   CableChainLinkParams,
+  BevelGearParams,
+  TimingBeltIdlerParams,
+  VSlotWheelParams,
+  FlexibleBeamCouplerParams,
+  WormGearParams,
+  ThumbScrewWheelParams,
+  VelocityStackParams,
+  CentrifugalImpellerParams,
+  ExtrusionEndCapParams,
+  TNutSlotParams,
+  CornerCubeBracketParams,
+  BallJointRodEndParams,
+  ServoHornParams,
+  CableGuideAnchorParams,
+  StepperDamperPlateParams,
+  PCBStandoffClipParams,
+  EndstopMountParams,
+  FanDuctShroudParams,
+  SpoolHolderHubParams,
+  DialIndicatorMountParams,
   GeneratedMeshResult,
   BearingPresetType,
   BEARING_PRESET_DATA,
@@ -32,6 +52,26 @@ import {
   generateHoseBarb,
   generateLeadScrewNutBlock,
   generateCableChainLink,
+  generateBevelGear,
+  generateTimingBeltIdler,
+  generateVSlotWheel,
+  generateFlexibleBeamCoupler,
+  generateWormGear,
+  generateThumbScrewWheel,
+  generateVelocityStack,
+  generateCentrifugalImpeller,
+  generateExtrusionEndCap,
+  generateTNutSlot,
+  generateCornerCubeBracket,
+  generateBallJointRodEnd,
+  generateServoHorn,
+  generateCableGuideAnchor,
+  generateStepperDamperPlate,
+  generatePCBStandoffClip,
+  generateEndstopMount,
+  generateFanDuctShroud,
+  generateSpoolHolderHub,
+  generateDialIndicatorMount,
 } from './generators';
 import { exportSTL } from './utils/stlExport';
 import { Header } from './components/Header';
@@ -43,7 +83,7 @@ export const App: React.FC = () => {
   // Current active primitive model (defaults to GT2 Pulley)
   const [activeModel, setActiveModel] = useState<PrimitiveType>('gt2_pulley');
 
-  // --- Initial Parameters for All Models ---
+  // --- Initial Parameters: Original 13 Models ---
   const [gt2Params, setGt2Params] = useState<GT2PulleyParams>({
     toothCount: 20,
     pitch: 2.0,
@@ -103,15 +143,15 @@ export const App: React.FC = () => {
   });
 
   const [knobParams, setKnobParams] = useState<KnurledKnobParams>({
-    outerDiameter: 25,
+    outerDiameter: 26,
     height: 18,
     knurlPattern: 'diamond',
-    knurlCount: 28,
+    knurlCount: 32,
     knurlDepth: 1.0,
     hasPointer: true,
     hasSkirt: true,
-    skirtDiameter: 30,
-    skirtHeight: 4,
+    skirtDiameter: 32,
+    skirtHeight: 3.5,
     boreDiameter: 6.0,
     boreType: 'd-shaft',
     dShaftFlatOffset: 2.5,
@@ -124,40 +164,40 @@ export const App: React.FC = () => {
     nominalDiameter: 8,
     pitch: 1.25,
     threadLength: 25,
-    headType: 'hex',
-    headDiameter: 14,
-    headHeight: 5.5,
-    nutHeight: 6.5,
+    headType: 'socket-cap',
+    headDiameter: 13,
+    headHeight: 8,
+    nutHeight: 6.8,
     nutWidthAcrossFlats: 13,
     printer_compensation: 0.15,
   });
 
   const [couplerParams, setCouplerParams] = useState<ShaftCouplerParams>({
-    outerDiameter: 20,
+    outerDiameter: 19,
     length: 25,
     bore1Diameter: 5.0,
     bore2Diameter: 8.0,
-    bore1Type: 'round',
+    bore1Type: 'd-shaft',
     bore2Type: 'round',
     couplerStyle: 'slit-clamp',
-    slitWidth: 1.2,
+    slitWidth: 1.5,
     clampScrewSize: 'M3',
     printer_compensation: 0.15,
   });
 
   const [enclosureParams, setEnclosureParams] = useState<ProjectEnclosureParams>({
-    innerLength: 80,
-    innerWidth: 50,
+    innerLength: 85,
+    innerWidth: 55,
     innerHeight: 30,
-    wallThickness: 2.4,
+    wallThickness: 2.5,
     floorThickness: 2.0,
-    cornerRadius: 4,
+    cornerRadius: 4.0,
     lidLipHeight: 2.5,
     standoffCount: 4,
-    standoffHeight: 6,
+    standoffHeight: 5.0,
     standoffScrewSize: 'M3',
     hasCableCutout: true,
-    cableCutoutWidth: 12,
+    cableCutoutWidth: 14,
     cableCutoutHeight: 8,
     printer_compensation: 0.15,
   });
@@ -195,7 +235,7 @@ export const App: React.FC = () => {
     wallThickness: 2.0,
     connectorType: 'straight-coupler',
     secondBarbNominalID: 8,
-    hexNutWidth: 15,
+    hexNutWidth: 14,
     hexNutThickness: 6,
     printer_compensation: 0.15,
   });
@@ -224,58 +264,273 @@ export const App: React.FC = () => {
     printer_compensation: 0.15,
   });
 
+  // --- Initial Parameters: 20 New Hobbyist Models ---
+  const [bevelParams, setBevelParams] = useState<BevelGearParams>({
+    module: 1.5,
+    toothCount: 20,
+    coneAngleDeg: 45,
+    faceWidth: 12,
+    boreDiameter: 5.0,
+    boreType: 'd-shaft',
+    dShaftFlatOffset: 2.1,
+    hasHub: true,
+    hubDiameter: 16,
+    hubLength: 8,
+    printer_compensation: 0.15,
+  });
+
+  const [idlerParams, setIdlerParams] = useState<TimingBeltIdlerParams>({
+    profileType: 'smooth',
+    pulleyDiameter: 18,
+    beltWidth: 6,
+    flangeHeight: 2.0,
+    flangeThickness: 1.0,
+    bearingPreset: '608',
+    bearingPocketDepth: 7.0,
+    centerRidgeThickness: 1.5,
+    printer_compensation: 0.15,
+  });
+
+  const [vWheelParams, setVWheelParams] = useState<VSlotWheelParams>({
+    outerDiameter: 24.0,
+    wheelWidth: 11.0,
+    vAngleDeg: 90.0,
+    vDepth: 3.5,
+    bearingPocketOD: 16.0,
+    bearingPocketDepth: 5.0,
+    centerRidgeWidth: 1.0,
+    printer_compensation: 0.15,
+  });
+
+  const [beamParams, setBeamParams] = useState<FlexibleBeamCouplerParams>({
+    outerDiameter: 19.0,
+    length: 25.0,
+    bore1Diameter: 5.0,
+    bore2Diameter: 8.0,
+    spiralPitch: 3.5,
+    spiralTurns: 3.5,
+    spiralSlotWidth: 1.6,
+    clampScrewSize: 'M3',
+    printer_compensation: 0.15,
+  });
+
+  const [wormParams, setWormParams] = useState<WormGearParams>({
+    module: 1.0,
+    starts: 1,
+    length: 28.0,
+    pitchDiameter: 16.0,
+    boreDiameter: 5.0,
+    boreType: 'd-shaft',
+    dShaftFlatOffset: 2.1,
+    printer_compensation: 0.15,
+  });
+
+  const [thumbParams, setThumbParams] = useState<ThumbScrewWheelParams>({
+    outerDiameter: 32.0,
+    thickness: 10.0,
+    lobeCount: 6,
+    lobeDepth: 2.5,
+    nutSize: 'M4',
+    pocketType: 'hex-nut',
+    pocketDepth: 4.5,
+    throughHoleDia: 4.5,
+    printer_compensation: 0.15,
+  });
+
+  const [stackParams, setStackParams] = useState<VelocityStackParams>({
+    throatDiameter: 28.0,
+    flareDiameter: 55.0,
+    height: 45.0,
+    wallThickness: 2.0,
+    flangeType: 'round-ring',
+    flangeBoltSize: 'M4',
+    boltCircleDia: 42.0,
+    printer_compensation: 0.15,
+  });
+
+  const [impellerParams, setImpellerParams] = useState<CentrifugalImpellerParams>({
+    outerDiameter: 50.0,
+    hubDiameter: 16.0,
+    height: 14.0,
+    bladeCount: 6,
+    bladeThickness: 1.8,
+    bladeAngleDeg: 35.0,
+    boreDiameter: 5.0,
+    boreType: 'd-shaft',
+    dShaftFlatOffset: 2.1,
+    hasBackPlate: true,
+    backPlateThickness: 2.0,
+    printer_compensation: 0.15,
+  });
+
+  const [endCapParams, setEndCapParams] = useState<ExtrusionEndCapParams>({
+    profileSize: '2020',
+    capThickness: 3.0,
+    prongLength: 8.0,
+    bezelChamfer: 1.2,
+    centerHole: true,
+    centerHoleDiameter: 5.0,
+    printer_compensation: 0.15,
+  });
+
+  const [tNutParams, setTNutParams] = useState<TNutSlotParams>({
+    slotSize: 'slot-6',
+    threadSize: 'M4',
+    nutLength: 12.0,
+    nutWidth: 6.0,
+    headHeight: 4.5,
+    hasAntiRotationRidge: true,
+    printer_compensation: 0.15,
+  });
+
+  const [cornerCubeParams, setCornerCubeParams] = useState<CornerCubeBracketParams>({
+    cubeSize: 20.0,
+    holeDiameter: 5.2,
+    counterboreDia: 9.5,
+    counterboreDepth: 6.0,
+    chamferRadius: 1.0,
+    faceCount: 3,
+    printer_compensation: 0.15,
+  });
+
+  const [ballJointParams, setBallJointParams] = useState<BallJointRodEndParams>({
+    ballDiameter: 10.0,
+    neckDiameter: 7.0,
+    shankDiameter: 10.0,
+    shankLength: 18.0,
+    shankThreadSize: 'M4',
+    hasClampSlit: true,
+    pinchScrewSize: 'M3',
+    printer_compensation: 0.15,
+  });
+
+  const [servoHornParams, setServoHornParams] = useState<ServoHornParams>({
+    splineDiameter: 5.9,
+    hornStyle: 'single-arm',
+    armLength: 22.0,
+    armThickness: 3.0,
+    hubDiameter: 11.0,
+    hubHeight: 6.0,
+    holeSpacing: 4.0,
+    linkageHoleDia: 1.6,
+    centerScrewPocketDia: 5.2,
+    printer_compensation: 0.15,
+  });
+
+  const [anchorParams, setAnchorParams] = useState<CableGuideAnchorParams>({
+    anchorWidth: 24.0,
+    anchorLength: 32.0,
+    anchorHeight: 16.0,
+    slotStyle: 'zip-tie',
+    tieSlotWidth: 3.2,
+    mountHoleSpacing: 20.0,
+    mountScrewSize: 'M4',
+    hasExtrusionSlotLug: true,
+    printer_compensation: 0.15,
+  });
+
+  const [damperParams, setDamperParams] = useState<StepperDamperPlateParams>({
+    nemaSize: 'NEMA17',
+    plateThickness: 8.0,
+    flexureSlitWidth: 1.6,
+    flexureStyle: 'serpentine',
+    motorScrewSize: 'M3',
+    frameScrewSize: 'M4',
+    centerBoreDia: 22.0,
+    printer_compensation: 0.15,
+  });
+
+  const [standoffParams, setStandoffParams] = useState<PCBStandoffClipParams>({
+    pcbThickness: 1.6,
+    standoffHeight: 12.0,
+    clipType: 'edge-clip',
+    baseDiameter: 16.0,
+    baseMountType: 'm3-screw',
+    barbOverhang: 1.2,
+    printer_compensation: 0.15,
+  });
+
+  const [endstopParams, setEndstopParams] = useState<EndstopMountParams>({
+    switchType: 'omron-micro',
+    mountBodyLength: 32.0,
+    mountBodyWidth: 20.0,
+    bodyThickness: 5.0,
+    slotAdjustLength: 14.0,
+    extrusionMountScrew: 'M4',
+    switchScrewSize: 'M2.5',
+    hasSlotLug: true,
+    printer_compensation: 0.15,
+  });
+
+  const [ductParams, setDuctParams] = useState<FanDuctShroudParams>({
+    fanType: '5015-blower',
+    ductLength: 38.0,
+    ductAngleDeg: 40.0,
+    nozzleWidth: 18.0,
+    nozzleHeight: 4.5,
+    wallThickness: 1.6,
+    mountTabDistance: 24.0,
+    mountScrewSize: 'M3',
+    printer_compensation: 0.15,
+  });
+
+  const [spoolHubParams, setSpoolHubParams] = useState<SpoolHolderHubParams>({
+    spoolBoreMin: 52.0,
+    spoolBoreMax: 72.0,
+    coneLength: 35.0,
+    flangeDiameter: 80.0,
+    bearingType: '608',
+    axleRodDiameter: 8.0,
+    printer_compensation: 0.15,
+  });
+
+  const [dialMountParams, setDialMountParams] = useState<DialIndicatorMountParams>({
+    stemDiameter: 8.0,
+    clampThickness: 14.0,
+    clampWidth: 22.0,
+    clampSlitGap: 1.4,
+    pinchBoltSize: 'M3',
+    mountStyle: '2020-rail-lug',
+    armLength: 25.0,
+    printer_compensation: 0.15,
+  });
+
   // State update handlers
-  const handleUpdateGT2Params = useCallback((updates: Partial<GT2PulleyParams>) => {
-    setGt2Params((prev) => ({ ...prev, ...updates }));
-  }, []);
+  const handleUpdateGT2Params = useCallback((u: Partial<GT2PulleyParams>) => setGt2Params((p) => ({ ...p, ...u })), []);
+  const handleUpdateGearParams = useCallback((u: Partial<HerringboneGearParams>) => setGearParams((p) => ({ ...p, ...u })), []);
+  const handleUpdatePillowParams = useCallback((u: Partial<BearingPillowBlockParams>) => setPillowParams((p) => ({ ...p, ...u })), []);
+  const handleUpdateBracketParams = useCallback((u: Partial<StructuralBracketParams>) => setBracketParams((p) => ({ ...p, ...u })), []);
+  const handleUpdateKnobParams = useCallback((u: Partial<KnurledKnobParams>) => setKnobParams((p) => ({ ...p, ...u })), []);
+  const handleUpdateFastenerParams = useCallback((u: Partial<ThreadedFastenerParams>) => setFastenerParams((p) => ({ ...p, ...u })), []);
+  const handleUpdateCouplerParams = useCallback((u: Partial<ShaftCouplerParams>) => setCouplerParams((p) => ({ ...p, ...u })), []);
+  const handleUpdateEnclosureParams = useCallback((u: Partial<ProjectEnclosureParams>) => setEnclosureParams((p) => ({ ...p, ...u })), []);
+  const handleUpdateStepperParams = useCallback((u: Partial<StepperMountParams>) => setStepperParams((p) => ({ ...p, ...u })), []);
+  const handleUpdateClampParams = useCallback((u: Partial<LinearRodClampParams>) => setClampParams((p) => ({ ...p, ...u })), []);
+  const handleUpdateBarbParams = useCallback((u: Partial<HoseBarbParams>) => setBarbParams((p) => ({ ...p, ...u })), []);
+  const handleUpdateNutBlockParams = useCallback((u: Partial<LeadScrewNutBlockParams>) => setNutBlockParams((p) => ({ ...p, ...u })), []);
+  const handleUpdateChainParams = useCallback((u: Partial<CableChainLinkParams>) => setChainParams((p) => ({ ...p, ...u })), []);
 
-  const handleUpdateGearParams = useCallback((updates: Partial<HerringboneGearParams>) => {
-    setGearParams((prev) => ({ ...prev, ...updates }));
-  }, []);
-
-  const handleUpdatePillowParams = useCallback((updates: Partial<BearingPillowBlockParams>) => {
-    setPillowParams((prev) => ({ ...prev, ...updates }));
-  }, []);
-
-  const handleUpdateBracketParams = useCallback((updates: Partial<StructuralBracketParams>) => {
-    setBracketParams((prev) => ({ ...prev, ...updates }));
-  }, []);
-
-  const handleUpdateKnobParams = useCallback((updates: Partial<KnurledKnobParams>) => {
-    setKnobParams((prev) => ({ ...prev, ...updates }));
-  }, []);
-
-  const handleUpdateFastenerParams = useCallback((updates: Partial<ThreadedFastenerParams>) => {
-    setFastenerParams((prev) => ({ ...prev, ...updates }));
-  }, []);
-
-  const handleUpdateCouplerParams = useCallback((updates: Partial<ShaftCouplerParams>) => {
-    setCouplerParams((prev) => ({ ...prev, ...updates }));
-  }, []);
-
-  const handleUpdateEnclosureParams = useCallback((updates: Partial<ProjectEnclosureParams>) => {
-    setEnclosureParams((prev) => ({ ...prev, ...updates }));
-  }, []);
-
-  const handleUpdateStepperParams = useCallback((updates: Partial<StepperMountParams>) => {
-    setStepperParams((prev) => ({ ...prev, ...updates }));
-  }, []);
-
-  const handleUpdateClampParams = useCallback((updates: Partial<LinearRodClampParams>) => {
-    setClampParams((prev) => ({ ...prev, ...updates }));
-  }, []);
-
-  const handleUpdateBarbParams = useCallback((updates: Partial<HoseBarbParams>) => {
-    setBarbParams((prev) => ({ ...prev, ...updates }));
-  }, []);
-
-  const handleUpdateNutBlockParams = useCallback((updates: Partial<LeadScrewNutBlockParams>) => {
-    setNutBlockParams((prev) => ({ ...prev, ...updates }));
-  }, []);
-
-  const handleUpdateChainParams = useCallback((updates: Partial<CableChainLinkParams>) => {
-    setChainParams((prev) => ({ ...prev, ...updates }));
-  }, []);
+  // 20 New Handlers
+  const handleUpdateBevelParams = useCallback((u: Partial<BevelGearParams>) => setBevelParams((p) => ({ ...p, ...u })), []);
+  const handleUpdateIdlerParams = useCallback((u: Partial<TimingBeltIdlerParams>) => setIdlerParams((p) => ({ ...p, ...u })), []);
+  const handleUpdateVWheelParams = useCallback((u: Partial<VSlotWheelParams>) => setVWheelParams((p) => ({ ...p, ...u })), []);
+  const handleUpdateBeamParams = useCallback((u: Partial<FlexibleBeamCouplerParams>) => setBeamParams((p) => ({ ...p, ...u })), []);
+  const handleUpdateWormParams = useCallback((u: Partial<WormGearParams>) => setWormParams((p) => ({ ...p, ...u })), []);
+  const handleUpdateThumbParams = useCallback((u: Partial<ThumbScrewWheelParams>) => setThumbParams((p) => ({ ...p, ...u })), []);
+  const handleUpdateStackParams = useCallback((u: Partial<VelocityStackParams>) => setStackParams((p) => ({ ...p, ...u })), []);
+  const handleUpdateImpellerParams = useCallback((u: Partial<CentrifugalImpellerParams>) => setImpellerParams((p) => ({ ...p, ...u })), []);
+  const handleUpdateEndCapParams = useCallback((u: Partial<ExtrusionEndCapParams>) => setEndCapParams((p) => ({ ...p, ...u })), []);
+  const handleUpdateTNutParams = useCallback((u: Partial<TNutSlotParams>) => setTNutParams((p) => ({ ...p, ...u })), []);
+  const handleUpdateCornerCubeParams = useCallback((u: Partial<CornerCubeBracketParams>) => setCornerCubeParams((p) => ({ ...p, ...u })), []);
+  const handleUpdateBallJointParams = useCallback((u: Partial<BallJointRodEndParams>) => setBallJointParams((p) => ({ ...p, ...u })), []);
+  const handleUpdateServoHornParams = useCallback((u: Partial<ServoHornParams>) => setServoHornParams((p) => ({ ...p, ...u })), []);
+  const handleUpdateAnchorParams = useCallback((u: Partial<CableGuideAnchorParams>) => setAnchorParams((p) => ({ ...p, ...u })), []);
+  const handleUpdateDamperParams = useCallback((u: Partial<StepperDamperPlateParams>) => setDamperParams((p) => ({ ...p, ...u })), []);
+  const handleUpdateStandoffParams = useCallback((u: Partial<PCBStandoffClipParams>) => setStandoffParams((p) => ({ ...p, ...u })), []);
+  const handleUpdateEndstopParams = useCallback((u: Partial<EndstopMountParams>) => setEndstopParams((p) => ({ ...p, ...u })), []);
+  const handleUpdateDuctParams = useCallback((u: Partial<FanDuctShroudParams>) => setDuctParams((p) => ({ ...p, ...u })), []);
+  const handleUpdateSpoolHubParams = useCallback((u: Partial<SpoolHolderHubParams>) => setSpoolHubParams((p) => ({ ...p, ...u })), []);
+  const handleUpdateDialMountParams = useCallback((u: Partial<DialIndicatorMountParams>) => setDialMountParams((p) => ({ ...p, ...u })), []);
 
   // Preset Handlers
   const handleApplyBearingPreset = useCallback((preset: BearingPresetType) => {
@@ -295,556 +550,246 @@ export const App: React.FC = () => {
     switch (presetId) {
       // GT2 Presets
       case 'gt2_16t_5mm':
-        setGt2Params({
-          toothCount: 16,
-          pitch: 2.0,
-          beltWidth: 6,
-          boreDiameter: 5.0,
-          boreType: 'round',
-          dShaftFlatOffset: 0,
-          flangeType: 'both',
-          flangeHeight: 2.0,
-          flangeThickness: 1.0,
-          hasHub: false,
-          hubDiameter: 0,
-          hubHeight: 0,
-          printer_compensation: 0.15,
-        });
+        setGt2Params((p) => ({ ...p, toothCount: 16, pitch: 2.0, beltWidth: 6, boreDiameter: 5.0, boreType: 'round', hasHub: false }));
         break;
       case 'gt2_20t_dshaft':
-        setGt2Params({
-          toothCount: 20,
-          pitch: 2.0,
-          beltWidth: 6,
-          boreDiameter: 5.0,
-          boreType: 'd-shaft',
-          dShaftFlatOffset: 2.1,
-          flangeType: 'both',
-          flangeHeight: 2.0,
-          flangeThickness: 1.0,
-          hasHub: true,
-          hubDiameter: 15.0,
-          hubHeight: 6.0,
-          printer_compensation: 0.15,
-        });
+        setGt2Params((p) => ({ ...p, toothCount: 20, pitch: 2.0, beltWidth: 6, boreDiameter: 5.0, boreType: 'd-shaft', dShaftFlatOffset: 2.1, hasHub: true, hubDiameter: 15.0, hubHeight: 6.0 }));
         break;
       case 'gt2_36t_8mm':
-        setGt2Params({
-          toothCount: 36,
-          pitch: 2.0,
-          beltWidth: 9,
-          boreDiameter: 8.0,
-          boreType: 'round',
-          dShaftFlatOffset: 0,
-          flangeType: 'both',
-          flangeHeight: 2.0,
-          flangeThickness: 1.2,
-          hasHub: true,
-          hubDiameter: 20.0,
-          hubHeight: 8.0,
-          printer_compensation: 0.15,
-        });
+        setGt2Params((p) => ({ ...p, toothCount: 36, pitch: 2.0, beltWidth: 9, boreDiameter: 8.0, boreType: 'round', hasHub: true, hubDiameter: 20.0, hubHeight: 8.0 }));
         break;
       case 'gt2_60t_bull':
-        setGt2Params({
-          toothCount: 60,
-          pitch: 2.0,
-          beltWidth: 9,
-          boreDiameter: 8.0,
-          boreType: 'hex',
-          dShaftFlatOffset: 0,
-          flangeType: 'both',
-          flangeHeight: 2.5,
-          flangeThickness: 1.5,
-          hasHub: false,
-          hubDiameter: 0,
-          hubHeight: 0,
-          printer_compensation: 0.15,
-        });
+        setGt2Params((p) => ({ ...p, toothCount: 60, pitch: 2.0, beltWidth: 9, boreDiameter: 8.0, boreType: 'hex', hasHub: true, hubDiameter: 25.0, hubHeight: 10.0 }));
         break;
 
-      // Gear Presets
+      // Herringbone Presets
       case 'stepper_drive':
-        setGearParams({
-          module: 1.0,
-          toothCount: 20,
-          pressureAngle: 20.0,
-          helixAngle: 30,
-          faceWidth: 15,
-          boreDiameter: 5.0,
-          boreType: 'd-shaft',
-          dShaftFlatOffset: 2.1,
-          printer_compensation: 0.15,
-        });
+        setGearParams((p) => ({ ...p, module: 1.0, toothCount: 20, faceWidth: 15, boreDiameter: 5.0, boreType: 'd-shaft', dShaftFlatOffset: 2.1 }));
         break;
       case 'compact_pinion':
-        setGearParams({
-          module: 0.8,
-          toothCount: 14,
-          pressureAngle: 20.0,
-          helixAngle: 25,
-          faceWidth: 12,
-          boreDiameter: 4.0,
-          boreType: 'round',
-          dShaftFlatOffset: 1.5,
-          printer_compensation: 0.15,
-        });
+        setGearParams((p) => ({ ...p, module: 0.8, toothCount: 14, faceWidth: 10, boreDiameter: 4.0, boreType: 'round' }));
         break;
       case 'heavy_bull_gear':
-        setGearParams({
-          module: 2.0,
-          toothCount: 36,
-          pressureAngle: 20.0,
-          helixAngle: 30,
-          faceWidth: 25,
-          boreDiameter: 10.0,
-          boreType: 'hex',
-          dShaftFlatOffset: 4.0,
-          printer_compensation: 0.15,
-        });
+        setGearParams((p) => ({ ...p, module: 2.0, toothCount: 36, faceWidth: 24, boreDiameter: 8.0, boreType: 'hex' }));
         break;
 
       // Knurled Knob Presets
       case 'knob_pot_fluted':
-        setKnobParams({
-          outerDiameter: 20,
-          height: 15,
-          knurlPattern: 'straight',
-          knurlCount: 24,
-          knurlDepth: 0.8,
-          hasPointer: true,
-          hasSkirt: false,
-          skirtDiameter: 24,
-          skirtHeight: 3,
-          boreDiameter: 6.0,
-          boreType: 'd-shaft',
-          dShaftFlatOffset: 2.5,
-          boreDepth: 12,
-          printer_compensation: 0.15,
-        });
+        setKnobParams((p) => ({ ...p, outerDiameter: 24, height: 16, knurlPattern: 'straight', knurlCount: 24, hasPointer: true }));
         break;
-      case 'knob_diamond_pointer':
-        setKnobParams({
-          outerDiameter: 26,
-          height: 18,
-          knurlPattern: 'diamond',
-          knurlCount: 32,
-          knurlDepth: 1.2,
-          hasPointer: true,
-          hasSkirt: true,
-          skirtDiameter: 32,
-          skirtHeight: 4,
-          boreDiameter: 6.0,
-          boreType: 'd-shaft',
-          dShaftFlatOffset: 2.5,
-          boreDepth: 14,
-          printer_compensation: 0.15,
-        });
+      case 'knob_bed_level_m4':
+        setKnobParams((p) => ({ ...p, outerDiameter: 34, height: 12, knurlPattern: 'diamond', knurlCount: 36, hasSkirt: false }));
         break;
-      case 'knob_bed_level':
-        setKnobParams({
-          outerDiameter: 45,
-          height: 12,
-          knurlPattern: 'ribbed',
-          knurlCount: 24,
-          knurlDepth: 1.8,
-          hasPointer: false,
-          hasSkirt: false,
-          skirtDiameter: 48,
-          skirtHeight: 3,
-          boreDiameter: 4.2,
-          boreType: 'round',
-          dShaftFlatOffset: 0,
-          boreDepth: 0,
-          printer_compensation: 0.15,
-        });
+      case 'knob_audio_ribbed':
+        setKnobParams((p) => ({ ...p, outerDiameter: 28, height: 20, knurlPattern: 'ribbed', knurlCount: 28, hasSkirt: true }));
         break;
 
-      // Fastener Presets
-      case 'bolt_m4_16':
-        setFastenerParams({
-          fastenerType: 'bolt',
-          nominalDiameter: 4,
-          pitch: 0.7,
-          threadLength: 16,
-          headType: 'socket-cap',
-          headDiameter: 7,
-          headHeight: 4,
-          nutHeight: 3.2,
-          nutWidthAcrossFlats: 7,
-          printer_compensation: 0.15,
-        });
+      // Bevel Gear Presets
+      case 'bevel_1to1_m15':
+        setBevelParams((p) => ({ ...p, module: 1.5, toothCount: 20, coneAngleDeg: 45, faceWidth: 12, boreDiameter: 5.0, boreType: 'd-shaft', dShaftFlatOffset: 2.1, hasHub: true, hubDiameter: 16, hubLength: 8 }));
         break;
-      case 'bolt_m6_25':
-        setFastenerParams({
-          fastenerType: 'bolt',
-          nominalDiameter: 6,
-          pitch: 1.0,
-          threadLength: 25,
-          headType: 'hex',
-          headDiameter: 11,
-          headHeight: 4.5,
-          nutHeight: 5.0,
-          nutWidthAcrossFlats: 10,
-          printer_compensation: 0.15,
-        });
+      case 'bevel_nema17_m10':
+        setBevelParams((p) => ({ ...p, module: 1.0, toothCount: 24, coneAngleDeg: 45, faceWidth: 10, boreDiameter: 5.0, boreType: 'd-shaft', dShaftFlatOffset: 2.1, hasHub: true, hubDiameter: 15, hubLength: 7 }));
         break;
-      case 'bolt_m8_thumb':
-        setFastenerParams({
-          fastenerType: 'bolt',
-          nominalDiameter: 8,
-          pitch: 1.25,
-          threadLength: 30,
-          headType: 'knurled-thumb',
-          headDiameter: 20,
-          headHeight: 8,
-          nutHeight: 6.5,
-          nutWidthAcrossFlats: 13,
-          printer_compensation: 0.15,
-        });
-        break;
-      case 'nut_m8':
-        setFastenerParams({
-          fastenerType: 'nut',
-          nominalDiameter: 8,
-          pitch: 1.25,
-          threadLength: 20,
-          headType: 'hex',
-          headDiameter: 14,
-          headHeight: 5,
-          nutHeight: 6.5,
-          nutWidthAcrossFlats: 13,
-          printer_compensation: 0.2,
-        });
+      case 'bevel_heavyduty_m20':
+        setBevelParams((p) => ({ ...p, module: 2.0, toothCount: 30, coneAngleDeg: 45, faceWidth: 18, boreDiameter: 8.0, boreType: 'hex', hasHub: true, hubDiameter: 24, hubLength: 12 }));
         break;
 
-      // Shaft Coupler Presets
-      case 'coupler_5_to_8':
-        setCouplerParams({
-          outerDiameter: 20,
-          length: 25,
-          bore1Diameter: 5.0,
-          bore2Diameter: 8.0,
-          bore1Type: 'round',
-          bore2Type: 'round',
-          couplerStyle: 'slit-clamp',
-          slitWidth: 1.2,
-          clampScrewSize: 'M3',
-          printer_compensation: 0.15,
-        });
+      // Timing Belt Idler Presets
+      case 'idler_gt2_608':
+        setIdlerParams((p) => ({ ...p, profileType: 'smooth', pulleyDiameter: 22, beltWidth: 6, flangeHeight: 2.0, flangeThickness: 1.0, bearingPreset: '608', bearingPocketDepth: 7.0 }));
         break;
-      case 'coupler_5_to_5':
-        setCouplerParams({
-          outerDiameter: 19,
-          length: 25,
-          bore1Diameter: 5.0,
-          bore2Diameter: 5.0,
-          bore1Type: 'round',
-          bore2Type: 'round',
-          couplerStyle: 'spiral-beam',
-          slitWidth: 1.2,
-          clampScrewSize: 'M3',
-          printer_compensation: 0.15,
-        });
+      case 'idler_mini_624':
+        setIdlerParams((p) => ({ ...p, profileType: 'smooth', pulleyDiameter: 14, beltWidth: 6, flangeHeight: 1.8, flangeThickness: 0.9, bearingPreset: '624', bearingPocketDepth: 5.0 }));
         break;
-      case 'coupler_8_to_10':
-        setCouplerParams({
-          outerDiameter: 25,
-          length: 30,
-          bore1Diameter: 8.0,
-          bore2Diameter: 10.0,
-          bore1Type: 'round',
-          bore2Type: 'round',
-          couplerStyle: 'slit-clamp',
-          slitWidth: 1.4,
-          clampScrewSize: 'M4',
-          printer_compensation: 0.15,
-        });
+      case 'idler_crowned_625':
+        setIdlerParams((p) => ({ ...p, profileType: 'crowned', pulleyDiameter: 18, beltWidth: 9, flangeHeight: 2.0, flangeThickness: 1.2, bearingPreset: '625', bearingPocketDepth: 5.0 }));
         break;
 
-      // Project Enclosure Presets
-      case 'enc_arduino':
-        setEnclosureParams({
-          innerLength: 75,
-          innerWidth: 55,
-          innerHeight: 25,
-          wallThickness: 2.2,
-          floorThickness: 2.0,
-          cornerRadius: 4,
-          lidLipHeight: 2.5,
-          standoffCount: 4,
-          standoffHeight: 6,
-          standoffScrewSize: 'M3',
-          hasCableCutout: true,
-          cableCutoutWidth: 14,
-          cableCutoutHeight: 10,
-          printer_compensation: 0.15,
-        });
+      // V-Slot Wheel Presets
+      case 'vwheel_openbuilds_std':
+        setVWheelParams((p) => ({ ...p, outerDiameter: 24.0, wheelWidth: 11.0, vAngleDeg: 90.0, vDepth: 3.5, bearingPocketOD: 16.0, bearingPocketDepth: 5.0 }));
         break;
-      case 'enc_raspberry_pi':
-        setEnclosureParams({
-          innerLength: 92,
-          innerWidth: 62,
-          innerHeight: 30,
-          wallThickness: 2.4,
-          floorThickness: 2.0,
-          cornerRadius: 4,
-          lidLipHeight: 2.5,
-          standoffCount: 4,
-          standoffHeight: 5,
-          standoffScrewSize: 'M2.5',
-          hasCableCutout: true,
-          cableCutoutWidth: 16,
-          cableCutoutHeight: 12,
-          printer_compensation: 0.15,
-        });
+      case 'vwheel_mini_15':
+        setVWheelParams((p) => ({ ...p, outerDiameter: 15.5, wheelWidth: 8.5, vAngleDeg: 90.0, vDepth: 2.5, bearingPocketOD: 13.0, bearingPocketDepth: 4.0 }));
         break;
-      case 'enc_esp32':
-        setEnclosureParams({
-          innerLength: 60,
-          innerWidth: 35,
-          innerHeight: 20,
-          wallThickness: 2.0,
-          floorThickness: 1.8,
-          cornerRadius: 3,
-          lidLipHeight: 2.0,
-          standoffCount: 0,
-          standoffHeight: 0,
-          standoffScrewSize: 'M2',
-          hasCableCutout: true,
-          cableCutoutWidth: 10,
-          cableCutoutHeight: 6,
-          printer_compensation: 0.15,
-        });
+      case 'vwheel_heavy_30':
+        setVWheelParams((p) => ({ ...p, outerDiameter: 30.0, wheelWidth: 14.0, vAngleDeg: 90.0, vDepth: 4.5, bearingPocketOD: 16.0, bearingPocketDepth: 5.0 }));
         break;
 
-      // Stepper Mount Presets
-      case 'stepper_nema17':
-        setStepperParams({
-          nemaSize: 'NEMA17',
-          faceThickness: 4.5,
-          baseThickness: 4.5,
-          baseLength: 35,
-          motorHoleType: 'slots',
-          slotLength: 6,
-          hasGussets: true,
-          gussetThickness: 4.0,
-          baseHoleCount: 2,
-          baseScrewSize: 'M4',
-          printer_compensation: 0.15,
-        });
+      // Flexible Beam Coupler Presets
+      case 'beam_5to8_nema17':
+        setBeamParams((p) => ({ ...p, outerDiameter: 19.0, length: 25.0, bore1Diameter: 5.0, bore2Diameter: 8.0, spiralPitch: 3.5, spiralTurns: 3.5 }));
         break;
-      case 'stepper_nema23':
-        setStepperParams({
-          nemaSize: 'NEMA23',
-          faceThickness: 6.0,
-          baseThickness: 6.0,
-          baseLength: 45,
-          motorHoleType: 'slots',
-          slotLength: 8,
-          hasGussets: true,
-          gussetThickness: 5.5,
-          baseHoleCount: 4,
-          baseScrewSize: 'M5',
-          printer_compensation: 0.15,
-        });
+      case 'beam_5to5_direct':
+        setBeamParams((p) => ({ ...p, outerDiameter: 19.0, length: 22.0, bore1Diameter: 5.0, bore2Diameter: 5.0, spiralPitch: 3.2, spiralTurns: 3.0 }));
         break;
-      case 'stepper_nema14':
-        setStepperParams({
-          nemaSize: 'NEMA14',
-          faceThickness: 3.5,
-          baseThickness: 3.5,
-          baseLength: 28,
-          motorHoleType: 'round',
-          slotLength: 0,
-          hasGussets: true,
-          gussetThickness: 3.0,
-          baseHoleCount: 2,
-          baseScrewSize: 'M3',
-          printer_compensation: 0.15,
-        });
+      case 'beam_8to10_cnc':
+        setBeamParams((p) => ({ ...p, outerDiameter: 25.0, length: 30.0, bore1Diameter: 8.0, bore2Diameter: 10.0, spiralPitch: 4.0, spiralTurns: 4.0 }));
         break;
 
-      // Linear Clamp Presets
-      case 'clamp_sk8':
-        setClampParams({
-          rodDiameter: 8,
-          mountStyle: 'horizontal-sk',
-          blockHeight: 32,
-          blockWidth: 42,
-          blockThickness: 14,
-          clampGap: 1.5,
-          pinchScrewSize: 'M4',
-          baseScrewSize: 'M5',
-          printer_compensation: 0.15,
-        });
+      // Worm Gear Presets
+      case 'worm_single_m10':
+        setWormParams((p) => ({ ...p, module: 1.0, starts: 1, length: 28.0, pitchDiameter: 16.0, boreDiameter: 5.0, boreType: 'd-shaft', dShaftFlatOffset: 2.1 }));
         break;
-      case 'clamp_sk10':
-        setClampParams({
-          rodDiameter: 10,
-          mountStyle: 'horizontal-sk',
-          blockHeight: 36,
-          blockWidth: 48,
-          blockThickness: 16,
-          clampGap: 1.5,
-          pinchScrewSize: 'M4',
-          baseScrewSize: 'M5',
-          printer_compensation: 0.15,
-        });
+      case 'worm_double_m15':
+        setWormParams((p) => ({ ...p, module: 1.5, starts: 2, length: 35.0, pitchDiameter: 22.0, boreDiameter: 8.0, boreType: 'round' }));
         break;
-      case 'clamp_sk12':
-        setClampParams({
-          rodDiameter: 12,
-          mountStyle: 'horizontal-sk',
-          blockHeight: 40,
-          blockWidth: 54,
-          blockThickness: 18,
-          clampGap: 1.8,
-          pinchScrewSize: 'M5',
-          baseScrewSize: 'M6',
-          printer_compensation: 0.15,
-        });
+      case 'worm_micro_m08':
+        setWormParams((p) => ({ ...p, module: 0.8, starts: 1, length: 18.0, pitchDiameter: 11.0, boreDiameter: 3.0, boreType: 'round' }));
         break;
 
-      // Hose Barb Presets
-      case 'barb_6mm':
-        setBarbParams({
-          barbNominalID: 6,
-          barbCount: 3,
-          barbLength: 15,
-          wallThickness: 1.8,
-          connectorType: 'straight-coupler',
-          secondBarbNominalID: 6,
-          hexNutWidth: 12,
-          hexNutThickness: 5,
-          printer_compensation: 0.15,
-        });
+      // Thumb Screw Wheel Presets
+      case 'thumb_m3_bed':
+        setThumbParams((p) => ({ ...p, outerDiameter: 30.0, thickness: 9.0, lobeCount: 6, lobeDepth: 2.5, nutSize: 'M3', pocketType: 'hex-nut', pocketDepth: 4.0 }));
         break;
-      case 'barb_reducer_8_6':
-        setBarbParams({
-          barbNominalID: 8,
-          barbCount: 3,
-          barbLength: 16,
-          wallThickness: 2.0,
-          connectorType: 'reducer',
-          secondBarbNominalID: 6,
-          hexNutWidth: 14,
-          hexNutThickness: 6,
-          printer_compensation: 0.15,
-        });
+      case 'thumb_m4_knob':
+        setThumbParams((p) => ({ ...p, outerDiameter: 36.0, thickness: 11.0, lobeCount: 8, lobeDepth: 2.8, nutSize: 'M4', pocketType: 'hex-nut', pocketDepth: 5.0 }));
         break;
-      case 'barb_12mm':
-        setBarbParams({
-          barbNominalID: 12,
-          barbCount: 4,
-          barbLength: 22,
-          wallThickness: 2.4,
-          connectorType: 'straight-coupler',
-          secondBarbNominalID: 12,
-          hexNutWidth: 20,
-          hexNutThickness: 7,
-          printer_compensation: 0.15,
-        });
+      case 'thumb_m5_jig':
+        setThumbParams((p) => ({ ...p, outerDiameter: 45.0, thickness: 13.0, lobeCount: 7, lobeDepth: 3.5, nutSize: 'M5', pocketType: 'hex-nut', pocketDepth: 6.0 }));
+        break;
+      case 'thumb_m8_heavy':
+        setThumbParams((p) => ({ ...p, outerDiameter: 55.0, thickness: 16.0, lobeCount: 6, lobeDepth: 4.5, nutSize: 'M8', pocketType: 'hex-nut', pocketDepth: 8.0 }));
         break;
 
-      // T8 Leadscrew Nut Presets
-      case 'nut_block_t8_std':
-        setNutBlockParams({
-          leadScrewDia: 8,
-          nutFlangeDia: 22,
-          boltCircleDia: 16,
-          blockWidth: 34,
-          blockLength: 30,
-          blockHeight: 18,
-          nutScrewSize: 'M3',
-          gantryScrewSize: 'M4',
-          gantryHoleCount: 2,
-          pocketDepth: 4.0,
-          printer_compensation: 0.15,
-        });
+      // Velocity Stack Presets
+      case 'stack_carb_28':
+        setStackParams((p) => ({ ...p, throatDiameter: 28.0, flareDiameter: 55.0, height: 45.0, flangeType: 'round-ring', boltCircleDia: 42.0 }));
         break;
-      case 'nut_block_t8_antibacklash':
-        setNutBlockParams({
-          leadScrewDia: 8,
-          nutFlangeDia: 22,
-          boltCircleDia: 16,
-          blockWidth: 36,
-          blockLength: 34,
-          blockHeight: 24,
-          nutScrewSize: 'M3',
-          gantryScrewSize: 'M4',
-          gantryHoleCount: 4,
-          pocketDepth: 6.5,
-          printer_compensation: 0.15,
-        });
+      case 'stack_itb_40':
+        setStackParams((p) => ({ ...p, throatDiameter: 40.0, flareDiameter: 75.0, height: 60.0, flangeType: 'oval-2bolt', boltCircleDia: 60.0 }));
+        break;
+      case 'stack_turbo_60':
+        setStackParams((p) => ({ ...p, throatDiameter: 60.0, flareDiameter: 110.0, height: 80.0, flangeType: 'round-ring', boltCircleDia: 85.0 }));
         break;
 
-      // Cable Chain Link Presets
-      case 'chain_10x11':
-        setChainParams({
-          chamberWidth: 10,
-          chamberHeight: 11,
-          pitch: 16,
-          wallThickness: 1.8,
-          pinDiameter: 3.5,
-          maxBendAngle: 40,
-          printer_compensation: 0.15,
-        });
+      // Centrifugal Impeller Presets
+      case 'impeller_water_50':
+        setImpellerParams((p) => ({ ...p, outerDiameter: 50.0, hubDiameter: 16.0, height: 14.0, bladeCount: 6, bladeAngleDeg: 35.0, boreDiameter: 5.0, boreType: 'd-shaft', dShaftFlatOffset: 2.1 }));
         break;
-      case 'chain_15x20':
-        setChainParams({
-          chamberWidth: 20,
-          chamberHeight: 15,
-          pitch: 24,
-          wallThickness: 2.2,
-          pinDiameter: 4.5,
-          maxBendAngle: 45,
-          printer_compensation: 0.15,
-        });
+      case 'impeller_blower_75':
+        setImpellerParams((p) => ({ ...p, outerDiameter: 75.0, hubDiameter: 22.0, height: 20.0, bladeCount: 10, bladeAngleDeg: 40.0, boreDiameter: 8.0, boreType: 'round' }));
+        break;
+      case 'impeller_mini_35':
+        setImpellerParams((p) => ({ ...p, outerDiameter: 35.0, hubDiameter: 12.0, height: 10.0, bladeCount: 8, bladeAngleDeg: 30.0, boreDiameter: 3.0, boreType: 'round' }));
         break;
 
-      // Structural Bracket Presets
-      case 'compact_corner':
-        setBracketParams({
-          leg1Length: 25,
-          leg2Length: 25,
-          width: 20,
-          thickness: 3.5,
-          gussetReinforcement: false,
-          gussetThickness: 3.0,
-          holePattern: 'single',
-          screwSize: 'M3',
-          hasCountersink: true,
-          printer_compensation: 0.15,
-        });
+      // Extrusion End Cap Presets
+      case 'endcap_2020':
+        setEndCapParams((p) => ({ ...p, profileSize: '2020', capThickness: 3.0, prongLength: 8.0, centerHole: true }));
         break;
-      case 'frame_gusset_m4':
-        setBracketParams({
-          leg1Length: 45,
-          leg2Length: 45,
-          width: 30,
-          thickness: 4.5,
-          gussetReinforcement: true,
-          gussetThickness: 4.0,
-          holePattern: 'four-grid',
-          screwSize: 'M4',
-          hasCountersink: false,
-          printer_compensation: 0.15,
-        });
+      case 'endcap_2040':
+        setEndCapParams((p) => ({ ...p, profileSize: '2040', capThickness: 3.0, prongLength: 8.0, centerHole: false }));
         break;
-      case 'heavy_duty_m5':
-        setBracketParams({
-          leg1Length: 75,
-          leg2Length: 75,
-          width: 40,
-          thickness: 6.0,
-          gussetReinforcement: true,
-          gussetThickness: 5.5,
-          holePattern: 'four-grid',
-          screwSize: 'M5',
-          hasCountersink: false,
-          printer_compensation: 0.15,
-        });
+      case 'endcap_3030':
+        setEndCapParams((p) => ({ ...p, profileSize: '3030', capThickness: 4.0, prongLength: 10.0, centerHole: true }));
+        break;
+
+      // Drop-In T-Nut Presets
+      case 'tnut_2020_m4':
+        setTNutParams((p) => ({ ...p, slotSize: 'slot-6', threadSize: 'M4', nutLength: 12.0, nutWidth: 6.0, headHeight: 4.5 }));
+        break;
+      case 'tnut_2020_m5':
+        setTNutParams((p) => ({ ...p, slotSize: 'slot-6', threadSize: 'M5', nutLength: 14.0, nutWidth: 6.0, headHeight: 4.5 }));
+        break;
+      case 'tnut_3030_m6':
+        setTNutParams((p) => ({ ...p, slotSize: 'slot-8', threadSize: 'M6', nutLength: 16.0, nutWidth: 8.0, headHeight: 5.5 }));
+        break;
+
+      // Corner Cube Presets
+      case 'corner_cube_2020_3way':
+        setCornerCubeParams((p) => ({ ...p, cubeSize: 20.0, holeDiameter: 5.2, counterboreDia: 9.5, counterboreDepth: 6.0, faceCount: 3 }));
+        break;
+      case 'corner_cube_2020_2way':
+        setCornerCubeParams((p) => ({ ...p, cubeSize: 20.0, holeDiameter: 5.2, counterboreDia: 9.5, counterboreDepth: 6.0, faceCount: 2 }));
+        break;
+      case 'corner_cube_3030_3way':
+        setCornerCubeParams((p) => ({ ...p, cubeSize: 30.0, holeDiameter: 6.5, counterboreDia: 11.5, counterboreDepth: 8.0, faceCount: 3 }));
+        break;
+
+      // Ball Joint Rod End Presets
+      case 'ball_kossel_m4':
+        setBallJointParams((p) => ({ ...p, ballDiameter: 10.0, neckDiameter: 7.0, shankDiameter: 10.0, shankLength: 18.0, shankThreadSize: 'M4', hasClampSlit: true }));
+        break;
+      case 'ball_rc_m3':
+        setBallJointParams((p) => ({ ...p, ballDiameter: 8.0, neckDiameter: 5.5, shankDiameter: 8.0, shankLength: 14.0, shankThreadSize: 'M3', hasClampSlit: true }));
+        break;
+      case 'ball_cnc_m6':
+        setBallJointParams((p) => ({ ...p, ballDiameter: 16.0, neckDiameter: 10.0, shankDiameter: 14.0, shankLength: 25.0, shankThreadSize: 'M6', hasClampSlit: true }));
+        break;
+
+      // Servo Horn Presets
+      case 'servo_single_25t':
+        setServoHornParams((p) => ({ ...p, splineDiameter: 5.9, hornStyle: 'single-arm', armLength: 25.0, armThickness: 3.0, linkageHoleDia: 1.6 }));
+        break;
+      case 'servo_dual_25t':
+        setServoHornParams((p) => ({ ...p, splineDiameter: 5.9, hornStyle: 'dual-arm', armLength: 35.0, armThickness: 3.2, linkageHoleDia: 1.6 }));
+        break;
+      case 'servo_micro_21t':
+        setServoHornParams((p) => ({ ...p, splineDiameter: 4.8, hornStyle: 'single-arm', armLength: 16.0, armThickness: 2.2, linkageHoleDia: 1.2 }));
+        break;
+
+      // Cable Guide Anchor Presets
+      case 'anchor_2020_m4':
+        setAnchorParams((p) => ({ ...p, anchorWidth: 24.0, anchorLength: 32.0, anchorHeight: 16.0, mountHoleSpacing: 20.0, mountScrewSize: 'M4', hasExtrusionSlotLug: true }));
+        break;
+      case 'anchor_dragchain_m5':
+        setAnchorParams((p) => ({ ...p, anchorWidth: 32.0, anchorLength: 42.0, anchorHeight: 20.0, mountHoleSpacing: 28.0, mountScrewSize: 'M5', hasExtrusionSlotLug: true }));
+        break;
+
+      // Stepper Damper Presets
+      case 'damper_nema17_serpentine':
+        setDamperParams((p) => ({ ...p, nemaSize: 'NEMA17', plateThickness: 8.0, flexureSlitWidth: 1.6 }));
+        break;
+      case 'damper_nema23_heavy':
+        setDamperParams((p) => ({ ...p, nemaSize: 'NEMA23', plateThickness: 10.0, flexureSlitWidth: 2.0 }));
+        break;
+
+      // PCB Standoff Presets
+      case 'standoff_10mm_m3':
+        setStandoffParams((p) => ({ ...p, pcbThickness: 1.6, standoffHeight: 10.0, baseMountType: 'm3-screw' }));
+        break;
+      case 'standoff_15mm_high':
+        setStandoffParams((p) => ({ ...p, pcbThickness: 1.6, standoffHeight: 15.0, baseMountType: 'm3-screw' }));
+        break;
+
+      // Endstop Mount Presets
+      case 'endstop_omron_2020':
+        setEndstopParams((p) => ({ ...p, switchType: 'omron-micro', mountBodyLength: 32.0, slotAdjustLength: 14.0, extrusionMountScrew: 'M4' }));
+        break;
+      case 'endstop_kw11':
+        setEndstopParams((p) => ({ ...p, switchType: 'kw11-mini', mountBodyLength: 30.0, slotAdjustLength: 12.0, extrusionMountScrew: 'M4' }));
+        break;
+      case 'endstop_optical':
+        setEndstopParams((p) => ({ ...p, switchType: 'optical-slotted', mountBodyLength: 38.0, slotAdjustLength: 16.0, extrusionMountScrew: 'M4' }));
+        break;
+
+      // Fan Duct Presets
+      case 'duct_5015_standard':
+        setDuctParams((p) => ({ ...p, fanType: '5015-blower', ductLength: 38.0, ductAngleDeg: 40.0, nozzleWidth: 18.0, nozzleHeight: 4.5 }));
+        break;
+      case 'duct_4010_mini':
+        setDuctParams((p) => ({ ...p, fanType: '4010-blower', ductLength: 30.0, ductAngleDeg: 35.0, nozzleWidth: 14.0, nozzleHeight: 4.0 }));
+        break;
+
+      // Spool Hub Presets
+      case 'spool_std_1kg':
+        setSpoolHubParams((p) => ({ ...p, spoolBoreMin: 52.0, spoolBoreMax: 72.0, coneLength: 35.0, bearingType: '608' }));
+        break;
+      case 'spool_mini_250g':
+        setSpoolHubParams((p) => ({ ...p, spoolBoreMin: 45.0, spoolBoreMax: 60.0, coneLength: 28.0, bearingType: '608' }));
+        break;
+
+      // Dial Indicator Presets
+      case 'dial_8mm_2020':
+        setDialMountParams((p) => ({ ...p, stemDiameter: 8.0, mountStyle: '2020-rail-lug', armLength: 25.0 }));
+        break;
+      case 'dial_38inch_2020':
+        setDialMountParams((p) => ({ ...p, stemDiameter: 9.525, mountStyle: '2020-rail-lug', armLength: 25.0 }));
+        break;
+      case 'dial_rod_10mm':
+        setDialMountParams((p) => ({ ...p, stemDiameter: 8.0, mountStyle: 'rod-clamp-10mm', armLength: 28.0 }));
         break;
     }
   }, []);
@@ -852,6 +797,7 @@ export const App: React.FC = () => {
   // Compute 3D Mesh in real-time
   const meshResult: GeneratedMeshResult = useMemo(() => {
     switch (activeModel) {
+      // Original 13
       case 'gt2_pulley':
         return generateGT2Pulley(gt2Params);
       case 'herringbone_gear':
@@ -878,6 +824,49 @@ export const App: React.FC = () => {
         return generateLeadScrewNutBlock(nutBlockParams);
       case 'cable_chain_link':
         return generateCableChainLink(chainParams);
+
+      // 20 New Models
+      case 'bevel_gear':
+        return generateBevelGear(bevelParams);
+      case 'timing_belt_idler':
+        return generateTimingBeltIdler(idlerParams);
+      case 'v_slot_wheel':
+        return generateVSlotWheel(vWheelParams);
+      case 'flexible_beam_coupler':
+        return generateFlexibleBeamCoupler(beamParams);
+      case 'worm_gear':
+        return generateWormGear(wormParams);
+      case 'thumb_screw_wheel':
+        return generateThumbScrewWheel(thumbParams);
+      case 'velocity_stack':
+        return generateVelocityStack(stackParams);
+      case 'centrifugal_impeller':
+        return generateCentrifugalImpeller(impellerParams);
+      case 'extrusion_end_cap':
+        return generateExtrusionEndCap(endCapParams);
+      case 't_nut_slot':
+        return generateTNutSlot(tNutParams);
+      case 'corner_cube_bracket':
+        return generateCornerCubeBracket(cornerCubeParams);
+      case 'ball_joint_rod_end':
+        return generateBallJointRodEnd(ballJointParams);
+      case 'servo_horn':
+        return generateServoHorn(servoHornParams);
+      case 'cable_guide_anchor':
+        return generateCableGuideAnchor(anchorParams);
+      case 'stepper_damper_plate':
+        return generateStepperDamperPlate(damperParams);
+      case 'pcb_standoff_clip':
+        return generatePCBStandoffClip(standoffParams);
+      case 'endstop_mount':
+        return generateEndstopMount(endstopParams);
+      case 'fan_duct_shroud':
+        return generateFanDuctShroud(ductParams);
+      case 'spool_holder_hub':
+        return generateSpoolHolderHub(spoolHubParams);
+      case 'dial_indicator_mount':
+        return generateDialIndicatorMount(dialMountParams);
+
       default:
         return generateGT2Pulley(gt2Params);
     }
@@ -896,6 +885,26 @@ export const App: React.FC = () => {
     barbParams,
     nutBlockParams,
     chainParams,
+    bevelParams,
+    idlerParams,
+    vWheelParams,
+    beamParams,
+    wormParams,
+    thumbParams,
+    stackParams,
+    impellerParams,
+    endCapParams,
+    tNutParams,
+    cornerCubeParams,
+    ballJointParams,
+    servoHornParams,
+    anchorParams,
+    damperParams,
+    standoffParams,
+    endstopParams,
+    ductParams,
+    spoolHubParams,
+    dialMountParams,
   ]);
 
   // Export STL handler
@@ -943,6 +952,66 @@ export const App: React.FC = () => {
       case 'cable_chain_link':
         filename = `cable_chain_link_${chainParams.chamberWidth}x${chainParams.chamberHeight}mm.stl`;
         break;
+      case 'bevel_gear':
+        filename = `bevel_gear_m${bevelParams.module}_z${bevelParams.toothCount}_cone${bevelParams.coneAngleDeg}deg.stl`;
+        break;
+      case 'timing_belt_idler':
+        filename = `timing_belt_idler_${idlerParams.pulleyDiameter}mm_${idlerParams.bearingPreset}.stl`;
+        break;
+      case 'v_slot_wheel':
+        filename = `v_slot_wheel_${vWheelParams.outerDiameter}mm_625bearing.stl`;
+        break;
+      case 'flexible_beam_coupler':
+        filename = `flexible_beam_coupler_${beamParams.bore1Diameter}to${beamParams.bore2Diameter}mm.stl`;
+        break;
+      case 'worm_gear':
+        filename = `worm_gear_m${wormParams.module}_starts${wormParams.starts}.stl`;
+        break;
+      case 'thumb_screw_wheel':
+        filename = `thumb_screw_wheel_${thumbParams.outerDiameter}mm_${thumbParams.nutSize}.stl`;
+        break;
+      case 'velocity_stack':
+        filename = `velocity_stack_${stackParams.throatDiameter}to${stackParams.flareDiameter}mm.stl`;
+        break;
+      case 'centrifugal_impeller':
+        filename = `centrifugal_impeller_${impellerParams.outerDiameter}mm_${impellerParams.bladeCount}blades.stl`;
+        break;
+      case 'extrusion_end_cap':
+        filename = `extrusion_end_cap_${endCapParams.profileSize}.stl`;
+        break;
+      case 't_nut_slot':
+        filename = `t_nut_${tNutParams.slotSize}_${tNutParams.threadSize}.stl`;
+        break;
+      case 'corner_cube_bracket':
+        filename = `corner_cube_${cornerCubeParams.cubeSize}mm_${cornerCubeParams.faceCount}way.stl`;
+        break;
+      case 'ball_joint_rod_end':
+        filename = `ball_joint_rod_end_${ballJointParams.ballDiameter}mm_${ballJointParams.shankThreadSize}.stl`;
+        break;
+      case 'servo_horn':
+        filename = `servo_horn_${servoHornParams.splineDiameter}mm_${servoHornParams.hornStyle}.stl`;
+        break;
+      case 'cable_guide_anchor':
+        filename = `cable_guide_anchor_${anchorParams.anchorWidth}x${anchorParams.anchorLength}mm.stl`;
+        break;
+      case 'stepper_damper_plate':
+        filename = `stepper_damper_${damperParams.nemaSize}.stl`;
+        break;
+      case 'pcb_standoff_clip':
+        filename = `pcb_standoff_clip_${standoffParams.standoffHeight}mm.stl`;
+        break;
+      case 'endstop_mount':
+        filename = `endstop_mount_${endstopParams.switchType}.stl`;
+        break;
+      case 'fan_duct_shroud':
+        filename = `fan_duct_shroud_${ductParams.fanType}.stl`;
+        break;
+      case 'spool_holder_hub':
+        filename = `spool_holder_hub_${spoolHubParams.spoolBoreMin}to${spoolHubParams.spoolBoreMax}mm.stl`;
+        break;
+      case 'dial_indicator_mount':
+        filename = `dial_indicator_mount_${dialMountParams.stemDiameter}mm.stl`;
+        break;
     }
 
     exportSTL(meshResult.geometry, { filename, binary });
@@ -962,6 +1031,26 @@ export const App: React.FC = () => {
     barbParams,
     nutBlockParams,
     chainParams,
+    bevelParams,
+    idlerParams,
+    vWheelParams,
+    beamParams,
+    wormParams,
+    thumbParams,
+    stackParams,
+    impellerParams,
+    endCapParams,
+    tNutParams,
+    cornerCubeParams,
+    ballJointParams,
+    servoHornParams,
+    anchorParams,
+    damperParams,
+    standoffParams,
+    endstopParams,
+    ductParams,
+    spoolHubParams,
+    dialMountParams,
   ]);
 
   return (
@@ -998,6 +1087,26 @@ export const App: React.FC = () => {
           barbParams={barbParams}
           nutBlockParams={nutBlockParams}
           chainParams={chainParams}
+          bevelParams={bevelParams}
+          idlerParams={idlerParams}
+          vWheelParams={vWheelParams}
+          beamParams={beamParams}
+          wormParams={wormParams}
+          thumbParams={thumbParams}
+          stackParams={stackParams}
+          impellerParams={impellerParams}
+          endCapParams={endCapParams}
+          tNutParams={tNutParams}
+          cornerCubeParams={cornerCubeParams}
+          ballJointParams={ballJointParams}
+          servoHornParams={servoHornParams}
+          anchorParams={anchorParams}
+          damperParams={damperParams}
+          standoffParams={standoffParams}
+          endstopParams={endstopParams}
+          ductParams={ductParams}
+          spoolHubParams={spoolHubParams}
+          dialMountParams={dialMountParams}
           onUpdateGearParams={handleUpdateGearParams}
           onUpdatePillowParams={handleUpdatePillowParams}
           onUpdateBracketParams={handleUpdateBracketParams}
@@ -1011,6 +1120,26 @@ export const App: React.FC = () => {
           onUpdateBarbParams={handleUpdateBarbParams}
           onUpdateNutBlockParams={handleUpdateNutBlockParams}
           onUpdateChainParams={handleUpdateChainParams}
+          onUpdateBevelParams={handleUpdateBevelParams}
+          onUpdateIdlerParams={handleUpdateIdlerParams}
+          onUpdateVWheelParams={handleUpdateVWheelParams}
+          onUpdateBeamParams={handleUpdateBeamParams}
+          onUpdateWormParams={handleUpdateWormParams}
+          onUpdateThumbParams={handleUpdateThumbParams}
+          onUpdateStackParams={handleUpdateStackParams}
+          onUpdateImpellerParams={handleUpdateImpellerParams}
+          onUpdateEndCapParams={handleUpdateEndCapParams}
+          onUpdateTNutParams={handleUpdateTNutParams}
+          onUpdateCornerCubeParams={handleUpdateCornerCubeParams}
+          onUpdateBallJointParams={handleUpdateBallJointParams}
+          onUpdateServoHornParams={handleUpdateServoHornParams}
+          onUpdateAnchorParams={handleUpdateAnchorParams}
+          onUpdateDamperParams={handleUpdateDamperParams}
+          onUpdateStandoffParams={handleUpdateStandoffParams}
+          onUpdateEndstopParams={handleUpdateEndstopParams}
+          onUpdateDuctParams={handleUpdateDuctParams}
+          onUpdateSpoolHubParams={handleUpdateSpoolHubParams}
+          onUpdateDialMountParams={handleUpdateDialMountParams}
           onExportSTL={handleExportSTL}
         />
 

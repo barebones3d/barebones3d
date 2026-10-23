@@ -106,12 +106,8 @@ export function generateBore2D(
   const compensatedDia = Math.max(0.5, diameter + printerCompensation);
   const radius = compensatedDia / 2;
 
-  if (boreType === 'round') {
-    for (let i = 0; i < segments; i++) {
-      const angle = (i / segments) * Math.PI * 2;
-      points.push(new THREE.Vector2(radius * Math.cos(angle), radius * Math.sin(angle)));
-    }
-  } else if (boreType === 'd-shaft') {
+  const bType = boreType || 'round';
+  if (bType === 'd-shaft') {
     // D-shaft has a flat chord at y = dShaftFlatOffset - printerCompensation/2
     const flatY = Math.min(radius * 0.9, Math.max(-radius * 0.9, dShaftFlatOffset - printerCompensation / 2));
     const flatHalfWidth = Math.sqrt(Math.max(0, radius * radius - flatY * flatY));
@@ -129,10 +125,16 @@ export function generateBore2D(
       const angle = angleEnd + (Math.PI * 2 - (angleEnd - angleStart)) * frac;
       points.push(new THREE.Vector2(radius * Math.cos(angle), radius * Math.sin(angle)));
     }
-  } else if (boreType === 'hex') {
+  } else if (bType === 'hex') {
     // Hexagonal bore: 6 equal vertices
     for (let i = 0; i < 6; i++) {
       const angle = (i / 6) * Math.PI * 2;
+      points.push(new THREE.Vector2(radius * Math.cos(angle), radius * Math.sin(angle)));
+    }
+  } else {
+    // Default: 'round' bore
+    for (let i = 0; i < segments; i++) {
+      const angle = (i / segments) * Math.PI * 2;
       points.push(new THREE.Vector2(radius * Math.cos(angle), radius * Math.sin(angle)));
     }
   }
@@ -187,4 +189,40 @@ export function estimateWeightGrams(volumeMm3: number, infillRatio: number = 0.2
   const effectiveDensityMultiplier = shellRatio * 1.0 + (1 - shellRatio) * infillRatio;
   const plaDensityGPerCm3 = 1.24;
   return Number((volumeCm3 * effectiveDensityMultiplier * plaDensityGPerCm3).toFixed(1));
+}
+
+/**
+ * Generates 2D points for a regular hexagon sized by width-across-flats (metric hex nut socket).
+ * Ordered CCW.
+ */
+export function generateHexNut2D(
+  widthAcrossFlats: number,
+  printerCompensation: number = 0.15
+): THREE.Vector2[] {
+  const w = widthAcrossFlats + printerCompensation;
+  const r = w / Math.sqrt(3); // circumscribed radius
+  const points: THREE.Vector2[] = [];
+  for (let i = 0; i < 6; i++) {
+    const angle = (i * Math.PI) / 3;
+    points.push(new THREE.Vector2(r * Math.cos(angle), r * Math.sin(angle)));
+  }
+  return points;
+}
+
+/**
+ * Generates 2D points for an ergonomic scalloped wavy perimeter (CCW).
+ */
+export function generateScallopedPerimeter2D(
+  baseRadius: number,
+  lobeCount: number,
+  lobeDepth: number,
+  samples: number = 72
+): THREE.Vector2[] {
+  const points: THREE.Vector2[] = [];
+  for (let i = 0; i < samples; i++) {
+    const angle = (i / samples) * Math.PI * 2;
+    const r = Math.max(1.0, baseRadius + lobeDepth * Math.cos(lobeCount * angle));
+    points.push(new THREE.Vector2(r * Math.cos(angle), r * Math.sin(angle)));
+  }
+  return points;
 }
