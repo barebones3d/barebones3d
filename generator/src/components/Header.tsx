@@ -179,29 +179,44 @@ export const Header: React.FC<HeaderProps> = ({
         </div>
       </div>
 
-      {/* Model Selector Menu Button (Triggers Dialog Modal) */}
-      <div>
+      {/* Model Selector Dropdown & Catalog Button at Top Center */}
+      <div className="flex items-center gap-2">
+        <div className="relative flex items-center">
+          <div className="absolute left-2.5 pointer-events-none text-sky-400">
+            {getModelIcon(activeModel, 'w-4 h-4')}
+          </div>
+          <select
+            value={activeModel}
+            onChange={(e) => onSelectModel(e.target.value as PrimitiveType)}
+            className="bg-[#0e172a] hover:bg-[#16223d] border border-sky-500/50 hover:border-sky-400 text-slate-100 font-mono text-xs rounded-lg pl-8 pr-8 py-1.5 appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-sky-500/40 transition-all font-bold shadow-md shadow-sky-950/40"
+            title="Select parametric 3D model (33 parts)"
+          >
+            {categories.map((cat) => (
+              <optgroup key={cat} label={`── ${cat.toUpperCase()} ──`} className="bg-[#0b1120] text-sky-400 font-bold">
+                {PRIMITIVE_CATALOG.filter((m) => m.category === cat).map((item) => (
+                  <option key={item.id} value={item.id} className="bg-[#0e172a] text-slate-200 font-medium py-1">
+                    {item.name} ({item.isMathLofted ? 'Math Loft' : 'CSG'})
+                  </option>
+                ))}
+              </optgroup>
+            ))}
+          </select>
+          <ChevronDown className="w-3.5 h-3.5 text-sky-400 absolute right-2.5 pointer-events-none" />
+        </div>
+
+        {/* Visual Catalog / Search Modal Trigger */}
         <button
           onClick={() => setMenuOpen(true)}
-          className="flex items-center gap-2.5 px-3 py-1.5 rounded-lg bg-[#0e172a] hover:bg-[#16223d] border border-sky-500/50 hover:border-sky-400 text-slate-100 font-mono text-xs transition-all shadow-md shadow-sky-950/40 group cursor-pointer"
-          title="Browse all 33 parametric parts across 5 mechanical categories"
+          className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-[#0e172a] hover:bg-[#16223d] border border-slate-700 hover:border-sky-500/60 text-slate-300 hover:text-sky-300 font-mono text-xs transition-all cursor-pointer shadow-sm"
+          title="Browse visual catalog of all 33 parts with search and filtering"
         >
-          <span className="text-sky-400 group-hover:scale-110 transition-transform">
-            {getModelIcon(activeModel, 'w-4 h-4 text-sky-400')}
+          <FolderOpen className="w-3.5 h-3.5 text-sky-400" />
+          <span className="hidden sm:inline">Catalog</span>
+          <span className="text-[10px] px-1 py-0.2 rounded bg-sky-950 border border-sky-800 text-sky-300 font-mono font-bold">
+            33
           </span>
-          <div className="flex flex-col text-left">
-            <div className="flex items-center gap-1.5">
-              <span className="font-bold text-slate-100 leading-tight">{activeMeta.name}</span>
-              <span className="text-[9px] uppercase px-1 py-0.2 rounded bg-sky-950 border border-sky-800 text-sky-300 font-mono hidden md:inline-block">
-                Part Menu (33)
-              </span>
-            </div>
-            <span className="text-[9px] text-sky-400 font-normal leading-none hidden sm:block">
-              {activeMeta.category}
-            </span>
-          </div>
-          <ChevronDown className="w-3.5 h-3.5 text-sky-400 transition-transform duration-200 ml-1 group-hover:translate-y-0.5" />
         </button>
+      </div>
 
         {/* Full-Screen Backdrop Modal Dialog for All 33 Components */}
         {menuOpen && (
@@ -376,7 +391,6 @@ export const Header: React.FC<HeaderProps> = ({
             </div>
           </div>
         )}
-      </div>
 
       {/* Export Action */}
       <div className="flex items-center gap-2">

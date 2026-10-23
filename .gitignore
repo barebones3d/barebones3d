@@ -6,6 +6,7 @@ yarn-error.log*
 
 # Build artifacts
 generator/dist/
+.wrangler/
 .test.cjs
 
 # OS / Editor
