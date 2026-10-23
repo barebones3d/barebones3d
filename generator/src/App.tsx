@@ -1074,6 +1074,7 @@ export const App: React.FC = () => {
         {/* Left Sidebar: Parametric Sliders & Number Inputs */}
         <ParameterSidebar
           activeModel={activeModel}
+          onSelectModel={setActiveModel}
           gearParams={gearParams}
           pillowParams={pillowParams}
           bracketParams={bracketParams}

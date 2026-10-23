@@ -42,18 +42,30 @@ export const Header: React.FC<HeaderProps> = ({
   isExporting = false,
 }) => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const menuRef = useRef<HTMLDivElement>(null);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState<PrimitiveCategory | 'All'>('All');
+  const searchInputRef = useRef<HTMLInputElement>(null);
 
-  // Close dropdown on outside click
+  // Focus search input when modal opens
   useEffect(() => {
-    const handleClickOutside = (e: MouseEvent) => {
-      if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
+    if (menuOpen) {
+      setTimeout(() => searchInputRef.current?.focus(), 50);
+    } else {
+      setSearchQuery('');
+      setSelectedCategory('All');
+    }
+  }, [menuOpen]);
+
+  // Close modal on Escape key
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && menuOpen) {
         setMenuOpen(false);
       }
     };
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [menuOpen]);
 
   const activeMeta = PRIMITIVE_CATALOG.find((m) => m.id === activeModel) || PRIMITIVE_CATALOG[0];
 
@@ -128,6 +140,19 @@ export const Header: React.FC<HeaderProps> = ({
     'Tools & Shop',
   ];
 
+  // Filter components by active category and search text
+  const filteredComponents = PRIMITIVE_CATALOG.filter((item) => {
+    const matchesCategory = selectedCategory === 'All' || item.category === selectedCategory;
+    const query = searchQuery.trim().toLowerCase();
+    const matchesSearch =
+      query === '' ||
+      item.name.toLowerCase().includes(query) ||
+      item.category.toLowerCase().includes(query) ||
+      item.shortDesc.toLowerCase().includes(query) ||
+      (item.isMathLofted ? 'math lofted' : 'csg solid').includes(query);
+    return matchesCategory && matchesSearch;
+  });
+
   return (
     <header className="h-14 border-b border-slate-800 bg-[#0b1120] px-4 flex items-center justify-between z-30 shrink-0 relative">
       {/* Brand & Title */}
@@ -154,98 +179,200 @@ export const Header: React.FC<HeaderProps> = ({
         </div>
       </div>
 
-      {/* Model Selector Menu Dropdown */}
-      <div className="relative" ref={menuRef}>
+      {/* Model Selector Menu Button (Triggers Dialog Modal) */}
+      <div>
         <button
-          onClick={() => setMenuOpen((prev) => !prev)}
-          className="flex items-center gap-2.5 px-3 py-1.5 rounded-lg bg-[#0e172a] hover:bg-[#16223d] border border-sky-500/40 text-slate-100 font-mono text-xs transition-all shadow-md shadow-sky-950/40"
+          onClick={() => setMenuOpen(true)}
+          className="flex items-center gap-2.5 px-3 py-1.5 rounded-lg bg-[#0e172a] hover:bg-[#16223d] border border-sky-500/50 hover:border-sky-400 text-slate-100 font-mono text-xs transition-all shadow-md shadow-sky-950/40 group cursor-pointer"
+          title="Browse all 33 parametric parts across 5 mechanical categories"
         >
-          <span className="text-sky-400">{getModelIcon(activeModel, 'w-4 h-4 text-sky-400')}</span>
+          <span className="text-sky-400 group-hover:scale-110 transition-transform">
+            {getModelIcon(activeModel, 'w-4 h-4 text-sky-400')}
+          </span>
           <div className="flex flex-col text-left">
-            <span className="font-bold text-slate-100 leading-tight">{activeMeta.name}</span>
+            <div className="flex items-center gap-1.5">
+              <span className="font-bold text-slate-100 leading-tight">{activeMeta.name}</span>
+              <span className="text-[9px] uppercase px-1 py-0.2 rounded bg-sky-950 border border-sky-800 text-sky-300 font-mono hidden md:inline-block">
+                Part Menu (33)
+              </span>
+            </div>
             <span className="text-[9px] text-sky-400 font-normal leading-none hidden sm:block">
               {activeMeta.category}
             </span>
           </div>
-          <ChevronDown
-            className={`w-3.5 h-3.5 text-slate-400 transition-transform duration-200 ml-1 ${
-              menuOpen ? 'rotate-180 text-sky-400' : ''
-            }`}
-          />
+          <ChevronDown className="w-3.5 h-3.5 text-sky-400 transition-transform duration-200 ml-1 group-hover:translate-y-0.5" />
         </button>
 
-        {/* Dropdown Menu Modal */}
+        {/* Full-Screen Backdrop Modal Dialog for All 33 Components */}
         {menuOpen && (
-          <div className="absolute top-12 left-1/2 -translate-x-1/2 sm:left-0 sm:translate-x-0 w-[340px] sm:w-[520px] max-h-[82vh] overflow-y-auto bg-[#090e1a] border border-slate-700/80 rounded-xl shadow-2xl shadow-black/80 z-50 p-3.5 font-mono backdrop-blur-md">
-            <div className="flex items-center justify-between pb-2 mb-3 border-b border-slate-800 text-[11px] text-slate-400 uppercase tracking-wider">
-              <span className="flex items-center gap-1.5 text-sky-400 font-semibold">
-                <FolderOpen className="w-3.5 h-3.5" />
-                Select Parametric Component ({PRIMITIVE_CATALOG.length})
-              </span>
-              <span className="text-[10px] text-slate-500">Watertight STLs</span>
-            </div>
+          <div
+            className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/80 backdrop-blur-md animate-in fade-in duration-150"
+            onClick={() => setMenuOpen(false)}
+          >
+            <div
+              className="w-full max-w-4xl max-h-[90vh] bg-[#090e1a] border border-slate-700/80 rounded-2xl shadow-2xl shadow-black p-4 sm:p-6 font-mono flex flex-col overflow-hidden"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Modal Header */}
+              <div className="flex items-center justify-between pb-3 mb-3 border-b border-slate-800 shrink-0">
+                <div className="flex items-center gap-2 text-sky-400 font-bold text-sm tracking-wide">
+                  <FolderOpen className="w-4 h-4" />
+                  <span>Parametric Component Catalog ({PRIMITIVE_CATALOG.length} Parts)</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-[10px] text-slate-500 uppercase font-mono hidden sm:inline-block">
+                    Press ESC to close
+                  </span>
+                  <button
+                    onClick={() => setMenuOpen(false)}
+                    className="p-1 rounded-md text-slate-400 hover:text-slate-100 hover:bg-slate-800 transition-colors"
+                  >
+                    ✕
+                  </button>
+                </div>
+              </div>
 
-            <div className="space-y-4">
-              {categories.map((cat) => {
-                const items = PRIMITIVE_CATALOG.filter((m) => m.category === cat);
-                if (items.length === 0) return null;
-                return (
-                  <div key={cat}>
-                    <div className="text-[10px] uppercase font-bold text-slate-400 tracking-wider mb-1.5 px-1 flex items-center justify-between">
-                      <span>{cat}</span>
-                      <span className="text-[9px] text-slate-500">({items.length})</span>
-                    </div>
-                    <div className="grid grid-cols-1 gap-1">
-                      {items.map((item) => {
-                        const isSelected = item.id === activeModel;
-                        return (
-                          <button
-                            key={item.id}
-                            onClick={() => {
-                              onSelectModel(item.id);
-                              setMenuOpen(false);
-                            }}
-                            className={`flex items-start gap-2.5 p-2 rounded-lg text-left transition-all ${
-                              isSelected
-                                ? 'bg-sky-500/15 border border-sky-500/50 text-sky-200'
-                                : 'hover:bg-slate-800/60 border border-transparent text-slate-300'
-                            }`}
-                          >
-                            <div
-                              className={`p-1.5 rounded-md mt-0.5 ${
-                                isSelected
-                                  ? 'bg-sky-500 text-slate-950 font-bold'
-                                  : 'bg-slate-800 text-slate-400'
-                              }`}
-                            >
-                              {getModelIcon(item.id, 'w-3.5 h-3.5')}
-                            </div>
-                            <div className="flex-1 min-w-0">
-                              <div className="flex items-center justify-between gap-1">
-                                <span className="font-bold text-xs truncate text-slate-100">
-                                  {item.name}
-                                </span>
-                                <span
-                                  className={`text-[9px] px-1 py-0.2 rounded border uppercase font-mono ${
-                                    item.isMathLofted
-                                      ? 'bg-emerald-950/60 border-emerald-800/80 text-emerald-300'
-                                      : 'bg-indigo-950/60 border-indigo-800/80 text-indigo-300'
+              {/* Search & Category Filter Controls */}
+              <div className="space-y-3 pb-3 border-b border-slate-800/80 shrink-0">
+                {/* Search Input */}
+                <div className="relative">
+                  <input
+                    ref={searchInputRef}
+                    type="text"
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    placeholder="Search 33 parts by name, category, or spec (e.g. gear, t-nut, blower, 2020)..."
+                    className="w-full bg-[#0e172a] border border-slate-700 focus:border-sky-500 rounded-lg px-3.5 py-2 text-xs text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-1 focus:ring-sky-500 transition-all font-mono"
+                  />
+                  {searchQuery && (
+                    <button
+                      onClick={() => setSearchQuery('')}
+                      className="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-slate-400 hover:text-slate-200"
+                    >
+                      Clear
+                    </button>
+                  )}
+                </div>
+
+                {/* Category Filter Pills */}
+                <div className="flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-none text-xs">
+                  <button
+                    onClick={() => setSelectedCategory('All')}
+                    className={`px-2.5 py-1 rounded-full text-[11px] font-semibold whitespace-nowrap transition-all ${
+                      selectedCategory === 'All'
+                        ? 'bg-sky-500 text-slate-950 shadow-sm shadow-sky-500/20'
+                        : 'bg-slate-800/80 text-slate-400 hover:bg-slate-700 hover:text-slate-200'
+                    }`}
+                  >
+                    All Parts ({PRIMITIVE_CATALOG.length})
+                  </button>
+                  {categories.map((cat) => {
+                    const count = PRIMITIVE_CATALOG.filter((m) => m.category === cat).length;
+                    const isSelected = selectedCategory === cat;
+                    return (
+                      <button
+                        key={cat}
+                        onClick={() => setSelectedCategory(cat)}
+                        className={`px-2.5 py-1 rounded-full text-[11px] font-semibold whitespace-nowrap transition-all ${
+                          isSelected
+                            ? 'bg-sky-500 text-slate-950 shadow-sm shadow-sky-500/20'
+                            : 'bg-slate-800/80 text-slate-400 hover:bg-slate-700 hover:text-slate-200'
+                        }`}
+                      >
+                        {cat} ({count})
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* Scrollable 2-Column Component Cards Grid */}
+              <div className="flex-1 overflow-y-auto py-3 space-y-4 pr-1">
+                {filteredComponents.length === 0 ? (
+                  <div className="text-center py-12 text-slate-500 text-xs">
+                    No components found matching "{searchQuery}". Try searching for "gear", "screw", "bearing", or "bracket".
+                  </div>
+                ) : (
+                  categories.map((cat) => {
+                    const items = filteredComponents.filter((m) => m.category === cat);
+                    if (items.length === 0) return null;
+                    return (
+                      <div key={cat} className="space-y-2">
+                        <div className="text-[11px] uppercase font-bold text-sky-400/90 tracking-wider px-1 flex items-center justify-between border-b border-slate-800 pb-1">
+                          <span>{cat}</span>
+                          <span className="text-[10px] text-slate-500 font-normal">
+                            {items.length} {items.length === 1 ? 'part' : 'parts'}
+                          </span>
+                        </div>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                          {items.map((item) => {
+                            const isSelected = item.id === activeModel;
+                            return (
+                              <button
+                                key={item.id}
+                                onClick={() => {
+                                  onSelectModel(item.id);
+                                  setMenuOpen(false);
+                                }}
+                                className={`flex items-start gap-3 p-2.5 rounded-xl text-left transition-all border cursor-pointer ${
+                                  isSelected
+                                    ? 'bg-sky-500/20 border-sky-500 text-sky-200 shadow-md shadow-sky-950/50'
+                                    : 'bg-[#0e1628]/80 hover:bg-[#16223d] border-slate-800/80 hover:border-sky-500/40 text-slate-300'
+                                }`}
+                              >
+                                <div
+                                  className={`p-2 rounded-lg mt-0.5 shrink-0 ${
+                                    isSelected
+                                      ? 'bg-sky-500 text-slate-950 font-bold'
+                                      : 'bg-slate-800 text-slate-400 group-hover:text-sky-400'
                                   }`}
                                 >
-                                  {item.isMathLofted ? 'Math Lofted' : 'CSG Solid'}
-                                </span>
-                              </div>
-                              <p className="text-[10px] text-slate-400 line-clamp-1 mt-0.5">
-                                {item.shortDesc}
-                              </p>
-                            </div>
-                          </button>
-                        );
-                      })}
-                    </div>
-                  </div>
-                );
-              })}
+                                  {getModelIcon(item.id, 'w-4 h-4')}
+                                </div>
+                                <div className="flex-1 min-w-0">
+                                  <div className="flex items-center justify-between gap-1 mb-0.5">
+                                    <span
+                                      className={`font-bold text-xs truncate ${
+                                        isSelected ? 'text-sky-300' : 'text-slate-100'
+                                      }`}
+                                    >
+                                      {item.name}
+                                    </span>
+                                    <span
+                                      className={`text-[8px] px-1 py-0.2 rounded border uppercase font-mono shrink-0 ${
+                                        item.isMathLofted
+                                          ? 'bg-emerald-950/60 border-emerald-800/80 text-emerald-300'
+                                          : 'bg-indigo-950/60 border-indigo-800/80 text-indigo-300'
+                                      }`}
+                                    >
+                                      {item.isMathLofted ? 'Math Lofted' : 'CSG Solid'}
+                                    </span>
+                                  </div>
+                                  <p className="text-[10px] text-slate-400 line-clamp-2 leading-relaxed">
+                                    {item.shortDesc}
+                                  </p>
+                                </div>
+                              </button>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    );
+                  })
+                )}
+              </div>
+
+              {/* Modal Footer with Active Model Status */}
+              <div className="pt-3 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400 shrink-0">
+                <div className="flex items-center gap-1.5 text-[11px]">
+                  <span>Currently Loaded:</span>
+                  <span className="font-bold text-sky-400">{activeMeta.name}</span>
+                  <span className="text-[10px] text-slate-500">({activeMeta.category})</span>
+                </div>
+                <div className="text-[10px] text-slate-500">
+                  Showing {filteredComponents.length} of {PRIMITIVE_CATALOG.length} models
+                </div>
+              </div>
             </div>
           </div>
         )}

@@ -17,17 +17,22 @@ import {
   BoreType,
   MountingFlangeType,
   ScrewSizeType,
+  PRIMITIVE_CATALOG,
+  PrimitiveCategory,
 } from '../generators/types';
 import {
   Sliders,
   HelpCircle,
   Download,
   ChevronRight,
+  ChevronDown,
+  Box,
 } from 'lucide-react';
 import { NewParamControls, NewParamControlsProps } from './NewParamControls';
 
 export interface ParameterSidebarProps extends NewParamControlsProps {
   activeModel: PrimitiveType;
+  onSelectModel: (model: PrimitiveType) => void;
   gearParams: HerringboneGearParams;
   pillowParams: BearingPillowBlockParams;
   bracketParams: StructuralBracketParams;
@@ -131,6 +136,7 @@ const NumericField: React.FC<NumericFieldProps> = ({
 export const ParameterSidebar: React.FC<ParameterSidebarProps> = (props) => {
   const {
     activeModel,
+    onSelectModel,
     gearParams,
     pillowParams,
     bracketParams,
@@ -159,6 +165,17 @@ export const ParameterSidebar: React.FC<ParameterSidebarProps> = (props) => {
     onUpdateChainParams,
     onExportSTL,
   } = props;
+
+  const activeMeta = PRIMITIVE_CATALOG.find((m) => m.id === activeModel) || PRIMITIVE_CATALOG[0];
+
+  const categories: PrimitiveCategory[] = [
+    'Motion & Power',
+    'Structural & Mounts',
+    'Fluid & Hardware',
+    'Electronics & Sensors',
+    'Tools & Shop',
+  ];
+
   return (
     <aside className="w-full md:w-[380px] h-full bg-[#0b1120] border-r border-slate-800 flex flex-col shrink-0 overflow-hidden select-none">
       {/* Sidebar Header */}
@@ -170,6 +187,39 @@ export const ParameterSidebar: React.FC<ParameterSidebarProps> = (props) => {
         <span className="text-[10px] font-mono text-emerald-400 bg-emerald-950/60 border border-emerald-800/80 px-2 py-0.5 rounded-full">
           Live Realtime
         </span>
+      </div>
+
+      {/* Component Selector Header Dropdown (All 33 Parts) */}
+      <div className="p-3.5 border-b border-slate-800 bg-[#0c1427] shrink-0">
+        <div className="flex items-center justify-between mb-1.5">
+          <span className="text-[10px] font-mono uppercase font-bold text-slate-400 tracking-wider flex items-center gap-1.5">
+            <Box className="w-3.5 h-3.5 text-sky-400" />
+            <span>Select Component ({PRIMITIVE_CATALOG.length} Parts)</span>
+          </span>
+          <span className="text-[9px] font-mono text-sky-400 bg-sky-950/70 border border-sky-800/80 px-1.5 py-0.5 rounded">
+            {activeMeta.category}
+          </span>
+        </div>
+
+        {/* Native High-Visibility Dropdown with Categorized Optgroups */}
+        <div className="relative">
+          <select
+            value={activeModel}
+            onChange={(e) => onSelectModel(e.target.value as PrimitiveType)}
+            className="w-full bg-[#131d35] hover:bg-[#182542] border border-sky-500/50 hover:border-sky-400 text-slate-100 font-mono text-xs rounded-lg px-3 py-2.5 appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-sky-500/40 transition-all font-bold pr-8"
+          >
+            {categories.map((cat) => (
+              <optgroup key={cat} label={`── ${cat.toUpperCase()} ──`} className="bg-[#0b1120] text-sky-400 font-bold">
+                {PRIMITIVE_CATALOG.filter((m) => m.category === cat).map((item) => (
+                  <option key={item.id} value={item.id} className="bg-[#0e172a] text-slate-200 font-medium py-1">
+                    {item.name} {item.isMathLofted ? '⚡ Math Lofted' : '🧱 CSG Solid'}
+                  </option>
+                ))}
+              </optgroup>
+            ))}
+          </select>
+          <ChevronDown className="w-4 h-4 text-sky-400 absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+        </div>
       </div>
 
       {/* Scrollable Parameters List */}
