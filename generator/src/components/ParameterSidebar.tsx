@@ -29,8 +29,9 @@ import {
   Box,
 } from 'lucide-react';
 import { NewParamControls, NewParamControlsProps } from './NewParamControls';
+import { NewParamControls20, NewParamControls20Props } from './NewParamControls20';
 
-export interface ParameterSidebarProps extends NewParamControlsProps {
+export interface ParameterSidebarProps extends NewParamControlsProps, NewParamControls20Props {
   activeModel: PrimitiveType;
   onSelectModel: (model: PrimitiveType) => void;
   gearParams: HerringboneGearParams;
@@ -1461,8 +1462,11 @@ export const ParameterSidebar: React.FC<ParameterSidebarProps> = (props) => {
           </div>
         )}
 
-        {/* 20 New Component Parameter Controls */}
+        {/* 20 Previous New Component Parameter Controls */}
         <NewParamControls {...props} />
+
+        {/* 20 Maker & Machine Component Parameter Controls (34-53) */}
+        <NewParamControls20 {...props} />
       </div>
 
       {/* Footer Quick Export Action */}

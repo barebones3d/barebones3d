@@ -34,6 +34,26 @@ import {
   FanDuctShroudParams,
   SpoolHolderHubParams,
   DialIndicatorMountParams,
+  CycloidalGearParams,
+  GenevaMechanismParams,
+  PlanetaryCarrierParams,
+  RackAndPinionParams,
+  ScotchYokeParams,
+  DinRailClipParams,
+  HingeLeafParams,
+  SpindleMountParams,
+  VibrationIsolatorParams,
+  CrossSlideBracketParams,
+  VenturiNozzleParams,
+  PipeFlangeParams,
+  PeristalticPumpHeadParams,
+  CableGlandParams,
+  StrainReliefBootParams,
+  FilamentRunoutSensorParams,
+  SlipRingCapsuleParams,
+  PiezoMountParams,
+  DrillGuideBlockParams,
+  ChamferToolHolderParams,
   GeneratedMeshResult,
   BearingPresetType,
   BEARING_PRESET_DATA,
@@ -72,6 +92,26 @@ import {
   generateFanDuctShroud,
   generateSpoolHolderHub,
   generateDialIndicatorMount,
+  generateCycloidalGear,
+  generateGenevaMechanism,
+  generatePlanetaryCarrier,
+  generateRackAndPinion,
+  generateScotchYoke,
+  generateDinRailClip,
+  generateHingeLeaf,
+  generateSpindleMount,
+  generateVibrationIsolator,
+  generateCrossSlideBracket,
+  generateVenturiNozzle,
+  generatePipeFlange,
+  generatePeristalticPumpHead,
+  generateCableGland,
+  generateStrainReliefBoot,
+  generateFilamentRunoutSensor,
+  generateSlipRingCapsule,
+  generatePiezoMount,
+  generateDrillGuideBlock,
+  generateChamferToolHolder,
 } from './generators';
 import { exportSTL } from './utils/stlExport';
 import { Header } from './components/Header';
@@ -495,6 +535,223 @@ export const App: React.FC = () => {
     printer_compensation: 0.15,
   });
 
+  // --- 20 Maker & Machine Components State (34-53) ---
+  const [cycloidalParams, setCycloidalParams] = useState<CycloidalGearParams>({
+    rotorLobes: 10,
+    pinCircleDiameter: 70.0,
+    rollerDiameter: 5.0,
+    eccentricity: 1.5,
+    thickness: 8.0,
+    boreDiameter: 12.0,
+    driveHoleCount: 6,
+    driveHoleDiameter: 10.0,
+    printer_compensation: 0.15,
+  });
+
+  const [genevaParams, setGenevaParams] = useState<GenevaMechanismParams>({
+    slotCount: 4,
+    wheelRadius: 35.0,
+    pinDiameter: 6.0,
+    slotWidth: 6.5,
+    thickness: 6.0,
+    centerBoreDiameter: 5.0,
+    lockingRadius: 18.0,
+    printer_compensation: 0.15,
+  });
+
+  const [planetaryParams, setPlanetaryParams] = useState<PlanetaryCarrierParams>({
+    planetCount: 3,
+    carrierDiameter: 55.0,
+    plateThickness: 5.0,
+    pinPitchDiameter: 40.0,
+    pinHoleDiameter: 5.0,
+    sunShaftBore: 8.0,
+    postHeight: 14.0,
+    printer_compensation: 0.15,
+  });
+
+  const [rackParams, setRackParams] = useState<RackAndPinionParams>({
+    module: 1.0,
+    rackLength: 150.0,
+    rackWidth: 12.0,
+    rackHeight: 15.0,
+    pressureAngleDeg: 20.0,
+    mountHoleSpacing: 30.0,
+    mountHoleDiameter: 4.5,
+    printer_compensation: 0.15,
+  });
+
+  const [scotchParams, setScotchParams] = useState<ScotchYokeParams>({
+    yokeStroke: 30.0,
+    slotWidth: 8.0,
+    blockLength: 60.0,
+    blockHeight: 32.0,
+    blockThickness: 10.0,
+    rodDiameter: 8.0,
+    printer_compensation: 0.15,
+  });
+
+  const [dinRailParams, setDinRailParams] = useState<DinRailClipParams>({
+    railWidth: 35.0,
+    clipThickness: 14.0,
+    equipmentPlateWidth: 45.0,
+    equipmentPlateHeight: 55.0,
+    mountHoleSpacing: 25.0,
+    mountScrewSize: 'M3',
+    printer_compensation: 0.15,
+  });
+
+  const [hingeParams, setHingeParams] = useState<HingeLeafParams>({
+    knuckleCount: 3,
+    leafWidth: 30.0,
+    leafLength: 50.0,
+    leafThickness: 3.5,
+    pinDiameter: 3.5,
+    screwHoleCount: 3,
+    screwSize: 'M3',
+    knuckleClearance: 0.4,
+    printer_compensation: 0.15,
+  });
+
+  const [spindleParams, setSpindleParams] = useState<SpindleMountParams>({
+    spindleDiameter: 65.0,
+    clampHeight: 30.0,
+    wallThickness: 12.0,
+    pinchBoltSize: 'M5',
+    baseMountWidth: 95.0,
+    baseMountHoleSpacingX: 80.0,
+    baseMountHoleSpacingY: 25.0,
+    printer_compensation: 0.15,
+  });
+
+  const [isolatorParams, setIsolatorParams] = useState<VibrationIsolatorParams>({
+    baseDiameter: 36.0,
+    waistDiameter: 22.0,
+    height: 28.0,
+    topStudHoleDiameter: 4.5,
+    bottomNutTrapSize: 'M4',
+    cavityDepth: 8.0,
+    printer_compensation: 0.15,
+  });
+
+  const [crossSlideParams, setCrossSlideParams] = useState<CrossSlideBracketParams>({
+    rodDiameterA: 10.0,
+    rodDiameterB: 10.0,
+    offsetZ: 18.0,
+    blockWidth: 32.0,
+    blockLength: 32.0,
+    pinchBoltSize: 'M3',
+    printer_compensation: 0.15,
+  });
+
+  const [venturiParams, setVenturiParams] = useState<VenturiNozzleParams>({
+    inletDiameter: 28.0,
+    throatDiameter: 10.0,
+    outletDiameter: 24.0,
+    nozzleLength: 65.0,
+    wallThickness: 2.5,
+    suctionPortDiameter: 7.0,
+    flangeMount: true,
+    printer_compensation: 0.15,
+  });
+
+  const [flangeParams, setFlangeParams] = useState<PipeFlangeParams>({
+    pipeNominalDiameter: 33.4,
+    flangeOuterDiameter: 75.0,
+    flangeThickness: 8.0,
+    boltHoleCount: 4,
+    boltPitchCircleDiameter: 58.0,
+    boltHoleDiameter: 5.5,
+    hasORingGroove: true,
+    oRingWidth: 3.0,
+    printer_compensation: 0.15,
+  });
+
+  const [pumpParams, setPumpParams] = useState<PeristalticPumpHeadParams>({
+    rollerCount: 3,
+    rotorOuterDiameter: 52.0,
+    rollerBearingType: '624',
+    tubeChannelWidth: 10.0,
+    motorShaftDiameter: 5.0,
+    rotorThickness: 12.0,
+    printer_compensation: 0.15,
+  });
+
+  const [glandParams, setGlandParams] = useState<CableGlandParams>({
+    cableDiameterMin: 4.0,
+    cableDiameterMax: 8.0,
+    hexNutSize: 22.0,
+    threadLength: 12.0,
+    glandHeight: 26.0,
+    fingerCount: 6,
+    printer_compensation: 0.15,
+  });
+
+  const [bootParams, setBootParams] = useState<StrainReliefBootParams>({
+    cableDiameter: 6.0,
+    flangeDiameter: 18.0,
+    bootLength: 45.0,
+    spiralPitch: 7.0,
+    taperFactor: 0.65,
+    slotWidth: 1.6,
+    printer_compensation: 0.15,
+  });
+
+  const [runoutParams, setRunoutParams] = useState<FilamentRunoutSensorParams>({
+    filamentDiameter: 1.75,
+    microswitchType: 'kw11',
+    bodyLength: 36.0,
+    bodyWidth: 24.0,
+    bodyHeight: 16.0,
+    couplerThread: 'M6',
+    mountHoleSpacing: 20.0,
+    mountScrewSize: 'M3',
+    printer_compensation: 0.15,
+  });
+
+  const [slipRingParams, setSlipRingCapsuleParams] = useState<SlipRingCapsuleParams>({
+    capsuleOuterDiameter: 22.0,
+    capsuleLength: 28.0,
+    flangeDiameter: 34.0,
+    rotorBoreDiameter: 8.0,
+    mountBoltCount: 3,
+    mountBoltPCD: 26.0,
+    cableExitSlotWidth: 4.0,
+    printer_compensation: 0.15,
+  });
+
+  const [piezoParams, setPiezoParams] = useState<PiezoMountParams>({
+    piezoDiscDiameter: 20,
+    mountRingOD: 28.0,
+    diaphragmClearance: 1.2,
+    bodyThickness: 6.0,
+    contactPinDiameter: 4.0,
+    mountScrewSize: 'M3',
+    mountHoleCount: 3,
+    printer_compensation: 0.15,
+  });
+
+  const [drillGuideParams, setDrillGuideParams] = useState<DrillGuideBlockParams>({
+    blockLength: 80.0,
+    blockWidth: 35.0,
+    blockHeight: 25.0,
+    vGrooveDepth: 6.0,
+    hasCenterlineAlignment: true,
+    printer_compensation: 0.15,
+  });
+
+  const [chamferParams, setChamferParams] = useState<ChamferToolHolderParams>({
+    handleDiameter: 22.0,
+    handleLength: 90.0,
+    fluteCount: 8,
+    fluteDepth: 1.5,
+    colletBoreDiameter: 3.2,
+    colletDepth: 22.0,
+    setScrewSize: 'M3',
+    ergonomicPalmGrip: true,
+    printer_compensation: 0.15,
+  });
+
   // State update handlers
   const handleUpdateGT2Params = useCallback((u: Partial<GT2PulleyParams>) => setGt2Params((p) => ({ ...p, ...u })), []);
   const handleUpdateGearParams = useCallback((u: Partial<HerringboneGearParams>) => setGearParams((p) => ({ ...p, ...u })), []);
@@ -510,7 +767,7 @@ export const App: React.FC = () => {
   const handleUpdateNutBlockParams = useCallback((u: Partial<LeadScrewNutBlockParams>) => setNutBlockParams((p) => ({ ...p, ...u })), []);
   const handleUpdateChainParams = useCallback((u: Partial<CableChainLinkParams>) => setChainParams((p) => ({ ...p, ...u })), []);
 
-  // 20 New Handlers
+  // 20 Previous New Handlers
   const handleUpdateBevelParams = useCallback((u: Partial<BevelGearParams>) => setBevelParams((p) => ({ ...p, ...u })), []);
   const handleUpdateIdlerParams = useCallback((u: Partial<TimingBeltIdlerParams>) => setIdlerParams((p) => ({ ...p, ...u })), []);
   const handleUpdateVWheelParams = useCallback((u: Partial<VSlotWheelParams>) => setVWheelParams((p) => ({ ...p, ...u })), []);
@@ -531,6 +788,28 @@ export const App: React.FC = () => {
   const handleUpdateDuctParams = useCallback((u: Partial<FanDuctShroudParams>) => setDuctParams((p) => ({ ...p, ...u })), []);
   const handleUpdateSpoolHubParams = useCallback((u: Partial<SpoolHolderHubParams>) => setSpoolHubParams((p) => ({ ...p, ...u })), []);
   const handleUpdateDialMountParams = useCallback((u: Partial<DialIndicatorMountParams>) => setDialMountParams((p) => ({ ...p, ...u })), []);
+
+  // 20 Maker & Machine Component Handlers (34-53)
+  const handleUpdateCycloidalParams = useCallback((u: Partial<CycloidalGearParams>) => setCycloidalParams((p) => ({ ...p, ...u })), []);
+  const handleUpdateGenevaParams = useCallback((u: Partial<GenevaMechanismParams>) => setGenevaParams((p) => ({ ...p, ...u })), []);
+  const handleUpdatePlanetaryParams = useCallback((u: Partial<PlanetaryCarrierParams>) => setPlanetaryParams((p) => ({ ...p, ...u })), []);
+  const handleUpdateRackParams = useCallback((u: Partial<RackAndPinionParams>) => setRackParams((p) => ({ ...p, ...u })), []);
+  const handleUpdateScotchParams = useCallback((u: Partial<ScotchYokeParams>) => setScotchParams((p) => ({ ...p, ...u })), []);
+  const handleUpdateDinRailParams = useCallback((u: Partial<DinRailClipParams>) => setDinRailParams((p) => ({ ...p, ...u })), []);
+  const handleUpdateHingeParams = useCallback((u: Partial<HingeLeafParams>) => setHingeParams((p) => ({ ...p, ...u })), []);
+  const handleUpdateSpindleParams = useCallback((u: Partial<SpindleMountParams>) => setSpindleParams((p) => ({ ...p, ...u })), []);
+  const handleUpdateIsolatorParams = useCallback((u: Partial<VibrationIsolatorParams>) => setIsolatorParams((p) => ({ ...p, ...u })), []);
+  const handleUpdateCrossSlideParams = useCallback((u: Partial<CrossSlideBracketParams>) => setCrossSlideParams((p) => ({ ...p, ...u })), []);
+  const handleUpdateVenturiParams = useCallback((u: Partial<VenturiNozzleParams>) => setVenturiParams((p) => ({ ...p, ...u })), []);
+  const handleUpdateFlangeParams = useCallback((u: Partial<PipeFlangeParams>) => setFlangeParams((p) => ({ ...p, ...u })), []);
+  const handleUpdatePumpParams = useCallback((u: Partial<PeristalticPumpHeadParams>) => setPumpParams((p) => ({ ...p, ...u })), []);
+  const handleUpdateGlandParams = useCallback((u: Partial<CableGlandParams>) => setGlandParams((p) => ({ ...p, ...u })), []);
+  const handleUpdateBootParams = useCallback((u: Partial<StrainReliefBootParams>) => setBootParams((p) => ({ ...p, ...u })), []);
+  const handleUpdateRunoutParams = useCallback((u: Partial<FilamentRunoutSensorParams>) => setRunoutParams((p) => ({ ...p, ...u })), []);
+  const handleUpdateSlipRingParams = useCallback((u: Partial<SlipRingCapsuleParams>) => setSlipRingCapsuleParams((p) => ({ ...p, ...u })), []);
+  const handleUpdatePiezoParams = useCallback((u: Partial<PiezoMountParams>) => setPiezoParams((p) => ({ ...p, ...u })), []);
+  const handleUpdateDrillGuideParams = useCallback((u: Partial<DrillGuideBlockParams>) => setDrillGuideParams((p) => ({ ...p, ...u })), []);
+  const handleUpdateChamferParams = useCallback((u: Partial<ChamferToolHolderParams>) => setChamferParams((p) => ({ ...p, ...u })), []);
 
   // Preset Handlers
   const handleApplyBearingPreset = useCallback((preset: BearingPresetType) => {
@@ -791,6 +1070,150 @@ export const App: React.FC = () => {
       case 'dial_rod_10mm':
         setDialMountParams((p) => ({ ...p, stemDiameter: 8.0, mountStyle: 'rod-clamp-10mm', armLength: 28.0 }));
         break;
+
+      // 20 Maker & Machine Components Presets (34-53)
+      case 'cycloidal_10to1':
+        setCycloidalParams((p) => ({ ...p, rotorLobes: 10, pinCircleDiameter: 70.0, rollerDiameter: 5.0, eccentricity: 1.5 }));
+        break;
+      case 'cycloidal_20to1_heavy':
+        setCycloidalParams((p) => ({ ...p, rotorLobes: 20, pinCircleDiameter: 100.0, rollerDiameter: 6.0, eccentricity: 2.0 }));
+        break;
+
+      case 'geneva_4slot_90deg':
+        setGenevaParams((p) => ({ ...p, slotCount: 4, wheelRadius: 35.0, pinDiameter: 6.0 }));
+        break;
+      case 'geneva_6slot_60deg':
+        setGenevaParams((p) => ({ ...p, slotCount: 6, wheelRadius: 45.0, pinDiameter: 6.0 }));
+        break;
+
+      case 'planetary_3planet_nema17':
+        setPlanetaryParams((p) => ({ ...p, planetCount: 3, carrierDiameter: 55.0, pinPitchDiameter: 40.0, pinHoleDiameter: 5.0 }));
+        break;
+      case 'planetary_4planet_heavy':
+        setPlanetaryParams((p) => ({ ...p, planetCount: 4, carrierDiameter: 70.0, pinPitchDiameter: 55.0, pinHoleDiameter: 6.0 }));
+        break;
+
+      case 'rack_m10_150mm':
+        setRackParams((p) => ({ ...p, module: 1.0, rackLength: 150.0, rackWidth: 12.0, mountHoleDiameter: 4.5 }));
+        break;
+      case 'rack_m15_200mm_heavy':
+        setRackParams((p) => ({ ...p, module: 1.5, rackLength: 200.0, rackWidth: 18.0, mountHoleDiameter: 5.5 }));
+        break;
+
+      case 'scotch_30mm_stroke':
+        setScotchParams((p) => ({ ...p, yokeStroke: 30.0, slotWidth: 8.0, rodDiameter: 8.0 }));
+        break;
+      case 'scotch_50mm_stroke':
+        setScotchParams((p) => ({ ...p, yokeStroke: 50.0, slotWidth: 10.0, rodDiameter: 10.0 }));
+        break;
+
+      case 'din_std_20mm_m3':
+        setDinRailParams((p) => ({ ...p, railWidth: 35.0, clipThickness: 14.0, mountScrewSize: 'M3' }));
+        break;
+      case 'din_wide_35mm_m4':
+        setDinRailParams((p) => ({ ...p, railWidth: 35.0, clipThickness: 18.0, mountScrewSize: 'M4' }));
+        break;
+
+      case 'hinge_3barrel_m3':
+        setHingeParams((p) => ({ ...p, knuckleCount: 3, leafWidth: 30.0, leafLength: 50.0, screwSize: 'M3' }));
+        break;
+      case 'hinge_5barrel_m4':
+        setHingeParams((p) => ({ ...p, knuckleCount: 5, leafWidth: 40.0, leafLength: 80.0, screwSize: 'M4' }));
+        break;
+
+      case 'spindle_52mm_300w':
+        setSpindleParams((p) => ({ ...p, spindleDiameter: 52.0, clampHeight: 25.0, baseMountWidth: 80.0, baseMountHoleSpacingX: 70.0 }));
+        break;
+      case 'spindle_65mm_makita':
+        setSpindleParams((p) => ({ ...p, spindleDiameter: 65.0, clampHeight: 30.0, baseMountWidth: 95.0, baseMountHoleSpacingX: 80.0 }));
+        break;
+      case 'spindle_80mm_vfd':
+        setSpindleParams((p) => ({ ...p, spindleDiameter: 80.0, clampHeight: 35.0, baseMountWidth: 110.0, baseMountHoleSpacingX: 95.0 }));
+        break;
+
+      case 'isolator_d35_m4':
+        setIsolatorParams((p) => ({ ...p, baseDiameter: 35.0, waistDiameter: 22.0, height: 28.0, bottomNutTrapSize: 'M4' }));
+        break;
+      case 'isolator_d50_m6':
+        setIsolatorParams((p) => ({ ...p, baseDiameter: 50.0, waistDiameter: 30.0, height: 38.0, bottomNutTrapSize: 'M6' }));
+        break;
+
+      case 'cross_8mm_linear':
+        setCrossSlideParams((p) => ({ ...p, rodDiameterA: 8.0, rodDiameterB: 8.0, blockWidth: 28.0 }));
+        break;
+      case 'cross_10mm_linear':
+        setCrossSlideParams((p) => ({ ...p, rodDiameterA: 10.0, rodDiameterB: 10.0, blockWidth: 32.0 }));
+        break;
+
+      case 'venturi_suction_d24':
+        setVenturiParams((p) => ({ ...p, inletDiameter: 24.0, throatDiameter: 8.0, outletDiameter: 20.0, suctionPortDiameter: 6.0 }));
+        break;
+      case 'venturi_mixer_d32':
+        setVenturiParams((p) => ({ ...p, inletDiameter: 32.0, throatDiameter: 12.0, outletDiameter: 28.0, suctionPortDiameter: 8.0 }));
+        break;
+
+      case 'flange_1inch_4bolt':
+        setFlangeParams((p) => ({ ...p, pipeNominalDiameter: 33.4, flangeOuterDiameter: 75.0, boltHoleCount: 4, boltPitchCircleDiameter: 58.0 }));
+        break;
+      case 'flange_2inch_6bolt':
+        setFlangeParams((p) => ({ ...p, pipeNominalDiameter: 60.3, flangeOuterDiameter: 110.0, boltHoleCount: 6, boltPitchCircleDiameter: 90.0 }));
+        break;
+
+      case 'pump_3roller_608':
+        setPumpParams((p) => ({ ...p, rollerCount: 3, rotorOuterDiameter: 52.0, rollerBearingType: '608', motorShaftDiameter: 5.0 }));
+        break;
+      case 'pump_4roller_624':
+        setPumpParams((p) => ({ ...p, rollerCount: 4, rotorOuterDiameter: 44.0, rollerBearingType: '624', motorShaftDiameter: 5.0 }));
+        break;
+
+      case 'gland_pg7_4to7mm':
+        setGlandParams((p) => ({ ...p, cableDiameterMin: 4.0, cableDiameterMax: 7.0, hexNutSize: 18.0, threadLength: 10.0 }));
+        break;
+      case 'gland_m20_8to12mm':
+        setGlandParams((p) => ({ ...p, cableDiameterMin: 8.0, cableDiameterMax: 12.0, hexNutSize: 27.0, threadLength: 14.0 }));
+        break;
+
+      case 'boot_usb_4mm':
+        setBootParams((p) => ({ ...p, cableDiameter: 4.5, bootLength: 35.0, spiralPitch: 6.0 }));
+        break;
+      case 'boot_power_8mm':
+        setBootParams((p) => ({ ...p, cableDiameter: 8.0, bootLength: 50.0, spiralPitch: 8.0 }));
+        break;
+
+      case 'runout_175_kw11':
+        setRunoutParams((p) => ({ ...p, filamentDiameter: 1.75, microswitchType: 'kw11', couplerThread: 'M6' }));
+        break;
+      case 'runout_285_optical':
+        setRunoutParams((p) => ({ ...p, filamentDiameter: 2.85, microswitchType: 'omron-ss5', couplerThread: 'M10' }));
+        break;
+
+      case 'slipring_22mm_flange':
+        setSlipRingCapsuleParams((p) => ({ ...p, capsuleOuterDiameter: 22.0, flangeDiameter: 34.0, mountBoltCount: 3 }));
+        break;
+      case 'slipring_30mm_heavy':
+        setSlipRingCapsuleParams((p) => ({ ...p, capsuleOuterDiameter: 30.0, flangeDiameter: 45.0, mountBoltCount: 4 }));
+        break;
+
+      case 'piezo_20mm_probe':
+        setPiezoParams((p) => ({ ...p, piezoDiscDiameter: 20, mountRingOD: 28.0, diaphragmClearance: 1.0 }));
+        break;
+      case 'piezo_27mm_bed':
+        setPiezoParams((p) => ({ ...p, piezoDiscDiameter: 27, mountRingOD: 36.0, diaphragmClearance: 1.2 }));
+        break;
+
+      case 'drill_guide_metric_3to10':
+        setDrillGuideParams((p) => ({ ...p, blockLength: 80.0, blockWidth: 35.0, vGrooveDepth: 6.0 }));
+        break;
+      case 'drill_guide_compact_4to8':
+        setDrillGuideParams((p) => ({ ...p, blockLength: 60.0, blockWidth: 30.0, vGrooveDepth: 5.0 }));
+        break;
+
+      case 'chamfer_handle_32mm':
+        setChamferParams((p) => ({ ...p, colletBoreDiameter: 3.2, handleDiameter: 22.0, handleLength: 90.0, fluteCount: 8 }));
+        break;
+      case 'chamfer_heavy_grip':
+        setChamferParams((p) => ({ ...p, colletBoreDiameter: 3.2, handleDiameter: 28.0, handleLength: 110.0, fluteCount: 6 }));
+        break;
     }
   }, []);
 
@@ -867,6 +1290,48 @@ export const App: React.FC = () => {
       case 'dial_indicator_mount':
         return generateDialIndicatorMount(dialMountParams);
 
+      // 20 Maker & Machine Models (34-53)
+      case 'cycloidal_gear':
+        return generateCycloidalGear(cycloidalParams);
+      case 'geneva_mechanism':
+        return generateGenevaMechanism(genevaParams);
+      case 'planetary_carrier':
+        return generatePlanetaryCarrier(planetaryParams);
+      case 'rack_and_pinion':
+        return generateRackAndPinion(rackParams);
+      case 'scotch_yoke':
+        return generateScotchYoke(scotchParams);
+      case 'din_rail_clip':
+        return generateDinRailClip(dinRailParams);
+      case 'hinge_leaf':
+        return generateHingeLeaf(hingeParams);
+      case 'spindle_mount':
+        return generateSpindleMount(spindleParams);
+      case 'vibration_isolator':
+        return generateVibrationIsolator(isolatorParams);
+      case 'cross_slide_bracket':
+        return generateCrossSlideBracket(crossSlideParams);
+      case 'venturi_nozzle':
+        return generateVenturiNozzle(venturiParams);
+      case 'pipe_flange':
+        return generatePipeFlange(flangeParams);
+      case 'peristaltic_pump_head':
+        return generatePeristalticPumpHead(pumpParams);
+      case 'cable_gland':
+        return generateCableGland(glandParams);
+      case 'strain_relief_boot':
+        return generateStrainReliefBoot(bootParams);
+      case 'filament_runout_sensor':
+        return generateFilamentRunoutSensor(runoutParams);
+      case 'slip_ring_capsule':
+        return generateSlipRingCapsule(slipRingParams);
+      case 'piezo_mount':
+        return generatePiezoMount(piezoParams);
+      case 'drill_guide_block':
+        return generateDrillGuideBlock(drillGuideParams);
+      case 'chamfer_tool_holder':
+        return generateChamferToolHolder(chamferParams);
+
       default:
         return generateGT2Pulley(gt2Params);
     }
@@ -905,6 +1370,26 @@ export const App: React.FC = () => {
     ductParams,
     spoolHubParams,
     dialMountParams,
+    cycloidalParams,
+    genevaParams,
+    planetaryParams,
+    rackParams,
+    scotchParams,
+    dinRailParams,
+    hingeParams,
+    spindleParams,
+    isolatorParams,
+    crossSlideParams,
+    venturiParams,
+    flangeParams,
+    pumpParams,
+    glandParams,
+    bootParams,
+    runoutParams,
+    slipRingParams,
+    piezoParams,
+    drillGuideParams,
+    chamferParams,
   ]);
 
   // Export STL handler
@@ -1012,6 +1497,66 @@ export const App: React.FC = () => {
       case 'dial_indicator_mount':
         filename = `dial_indicator_mount_${dialMountParams.stemDiameter}mm.stl`;
         break;
+      case 'cycloidal_gear':
+        filename = `cycloidal_gear_${cycloidalParams.rotorLobes}lobes_e${cycloidalParams.eccentricity}mm.stl`;
+        break;
+      case 'geneva_mechanism':
+        filename = `geneva_wheel_${genevaParams.slotCount}slots_${genevaParams.wheelRadius}mm.stl`;
+        break;
+      case 'planetary_carrier':
+        filename = `planetary_carrier_${planetaryParams.planetCount}planet_${planetaryParams.pinPitchDiameter}mmPCD.stl`;
+        break;
+      case 'rack_and_pinion':
+        filename = `gear_rack_m${rackParams.module}_${rackParams.rackLength}mm.stl`;
+        break;
+      case 'scotch_yoke':
+        filename = `scotch_yoke_${scotchParams.yokeStroke}mm_stroke.stl`;
+        break;
+      case 'din_rail_clip':
+        filename = `din_rail_clip_${dinRailParams.railWidth}mm_${dinRailParams.mountScrewSize}.stl`;
+        break;
+      case 'hinge_leaf':
+        filename = `hinge_leaf_${hingeParams.knuckleCount}barrel_${hingeParams.leafLength}mm.stl`;
+        break;
+      case 'spindle_mount':
+        filename = `spindle_mount_${spindleParams.spindleDiameter}mm.stl`;
+        break;
+      case 'vibration_isolator':
+        filename = `vibration_isolator_${isolatorParams.baseDiameter}mm_${isolatorParams.bottomNutTrapSize}.stl`;
+        break;
+      case 'cross_slide_bracket':
+        filename = `cross_slide_bracket_${crossSlideParams.rodDiameterA}x${crossSlideParams.rodDiameterB}mm.stl`;
+        break;
+      case 'venturi_nozzle':
+        filename = `venturi_nozzle_${venturiParams.inletDiameter}to${venturiParams.throatDiameter}mm.stl`;
+        break;
+      case 'pipe_flange':
+        filename = `pipe_flange_${flangeParams.pipeNominalDiameter}mm_${flangeParams.boltHoleCount}bolt.stl`;
+        break;
+      case 'peristaltic_pump_head':
+        filename = `peristaltic_pump_rotor_${pumpParams.rollerCount}rollers_${pumpParams.rotorOuterDiameter}mm.stl`;
+        break;
+      case 'cable_gland':
+        filename = `cable_gland_${glandParams.hexNutSize}mm_${glandParams.cableDiameterMin}to${glandParams.cableDiameterMax}mm.stl`;
+        break;
+      case 'strain_relief_boot':
+        filename = `strain_relief_boot_${bootParams.cableDiameter}mm_${bootParams.bootLength}mm.stl`;
+        break;
+      case 'filament_runout_sensor':
+        filename = `filament_runout_sensor_${runoutParams.filamentDiameter}mm_${runoutParams.microswitchType}.stl`;
+        break;
+      case 'slip_ring_capsule':
+        filename = `slip_ring_capsule_${slipRingParams.capsuleOuterDiameter}mm.stl`;
+        break;
+      case 'piezo_mount':
+        filename = `piezo_mount_${piezoParams.piezoDiscDiameter}mm.stl`;
+        break;
+      case 'drill_guide_block':
+        filename = `drill_guide_block_${drillGuideParams.blockLength}mm.stl`;
+        break;
+      case 'chamfer_tool_holder':
+        filename = `chamfer_tool_holder_${chamferParams.handleDiameter}mm_${chamferParams.handleLength}mm.stl`;
+        break;
     }
 
     exportSTL(meshResult.geometry, { filename, binary });
@@ -1051,6 +1596,26 @@ export const App: React.FC = () => {
     ductParams,
     spoolHubParams,
     dialMountParams,
+    cycloidalParams,
+    genevaParams,
+    planetaryParams,
+    rackParams,
+    scotchParams,
+    dinRailParams,
+    hingeParams,
+    spindleParams,
+    isolatorParams,
+    crossSlideParams,
+    venturiParams,
+    flangeParams,
+    pumpParams,
+    glandParams,
+    bootParams,
+    runoutParams,
+    slipRingParams,
+    piezoParams,
+    drillGuideParams,
+    chamferParams,
   ]);
 
   return (
@@ -1108,6 +1673,26 @@ export const App: React.FC = () => {
           ductParams={ductParams}
           spoolHubParams={spoolHubParams}
           dialMountParams={dialMountParams}
+          cycloidalParams={cycloidalParams}
+          genevaParams={genevaParams}
+          planetaryParams={planetaryParams}
+          rackParams={rackParams}
+          scotchParams={scotchParams}
+          dinRailParams={dinRailParams}
+          hingeParams={hingeParams}
+          spindleParams={spindleParams}
+          isolatorParams={isolatorParams}
+          crossSlideParams={crossSlideParams}
+          venturiParams={venturiParams}
+          flangeParams={flangeParams}
+          pumpParams={pumpParams}
+          glandParams={glandParams}
+          bootParams={bootParams}
+          runoutParams={runoutParams}
+          slipRingParams={slipRingParams}
+          piezoParams={piezoParams}
+          drillGuideParams={drillGuideParams}
+          chamferParams={chamferParams}
           onUpdateGearParams={handleUpdateGearParams}
           onUpdatePillowParams={handleUpdatePillowParams}
           onUpdateBracketParams={handleUpdateBracketParams}
@@ -1141,6 +1726,26 @@ export const App: React.FC = () => {
           onUpdateDuctParams={handleUpdateDuctParams}
           onUpdateSpoolHubParams={handleUpdateSpoolHubParams}
           onUpdateDialMountParams={handleUpdateDialMountParams}
+          onUpdateCycloidalParams={handleUpdateCycloidalParams}
+          onUpdateGenevaParams={handleUpdateGenevaParams}
+          onUpdatePlanetaryParams={handleUpdatePlanetaryParams}
+          onUpdateRackParams={handleUpdateRackParams}
+          onUpdateScotchParams={handleUpdateScotchParams}
+          onUpdateDinRailParams={handleUpdateDinRailParams}
+          onUpdateHingeParams={handleUpdateHingeParams}
+          onUpdateSpindleParams={handleUpdateSpindleParams}
+          onUpdateIsolatorParams={handleUpdateIsolatorParams}
+          onUpdateCrossSlideParams={handleUpdateCrossSlideParams}
+          onUpdateVenturiParams={handleUpdateVenturiParams}
+          onUpdateFlangeParams={handleUpdateFlangeParams}
+          onUpdatePumpParams={handleUpdatePumpParams}
+          onUpdateGlandParams={handleUpdateGlandParams}
+          onUpdateBootParams={handleUpdateBootParams}
+          onUpdateRunoutParams={handleUpdateRunoutParams}
+          onUpdateSlipRingParams={handleUpdateSlipRingParams}
+          onUpdatePiezoParams={handleUpdatePiezoParams}
+          onUpdateDrillGuideParams={handleUpdateDrillGuideParams}
+          onUpdateChamferParams={handleUpdateChamferParams}
           onExportSTL={handleExportSTL}
         />
 

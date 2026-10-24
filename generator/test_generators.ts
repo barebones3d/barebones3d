@@ -34,6 +34,26 @@ import {
   generateFanDuctShroud,
   generateSpoolHolderHub,
   generateDialIndicatorMount,
+  generateCycloidalGear,
+  generateGenevaMechanism,
+  generatePlanetaryCarrier,
+  generateRackAndPinion,
+  generateScotchYoke,
+  generateDinRailClip,
+  generateHingeLeaf,
+  generateSpindleMount,
+  generateVibrationIsolator,
+  generateCrossSlideBracket,
+  generateVenturiNozzle,
+  generatePipeFlange,
+  generatePeristalticPumpHead,
+  generateCableGland,
+  generateStrainReliefBoot,
+  generateFilamentRunoutSensor,
+  generateSlipRingCapsule,
+  generatePiezoMount,
+  generateDrillGuideBlock,
+  generateChamferToolHolder,
 } from './src/generators';
 
 console.log('===============================================================');
@@ -545,7 +565,263 @@ validateMesh('Dial Indicator 8mm Stem Clamp', generateDialIndicatorMount({
   printer_compensation: 0.15,
 }));
 
+// 34. Cycloidal Reduction Disc
+console.log('\n[34] Testing Cycloidal Reduction Disc (Math Lofting):');
+validateMesh('Cycloidal Disc 10-Lobe R35', generateCycloidalGear({
+  rotorLobes: 10,
+  pinCircleDiameter: 50,
+  rollerDiameter: 6,
+  eccentricity: 1.5,
+  thickness: 8,
+  boreDiameter: 12,
+  driveHoleCount: 6,
+  driveHoleDiameter: 8,
+  printer_compensation: 0.15,
+}));
+
+// 35. Geneva Mechanism
+console.log('\n[35] Testing Geneva Mechanism (Math Lofting):');
+validateMesh('Geneva 4-Slot Cross R35', generateGenevaMechanism({
+  slotCount: 4,
+  wheelRadius: 35,
+  pinDiameter: 4,
+  slotWidth: 4.4,
+  thickness: 6,
+  centerBoreDiameter: 6,
+  lockingRadius: 18,
+  printer_compensation: 0.15,
+}));
+
+// 36. Planetary Gearbox Carrier
+console.log('\n[36] Testing Planetary Gearbox Carrier (CSG):');
+validateMesh('Planetary 3-Planet Carrier D50', generatePlanetaryCarrier({
+  planetCount: 3,
+  carrierDiameter: 50,
+  plateThickness: 5,
+  pinPitchDiameter: 32,
+  pinHoleDiameter: 4,
+  sunShaftBore: 8,
+  postHeight: 16,
+  printer_compensation: 0.15,
+}));
+
+// 37. Linear Involute Gear Rack
+console.log('\n[37] Testing Linear Involute Gear Rack (Math + CSG):');
+validateMesh('Gear Rack M1.5 L100', generateRackAndPinion({
+  module: 1.5,
+  rackLength: 100,
+  rackWidth: 15,
+  rackHeight: 15,
+  pressureAngleDeg: 20,
+  mountHoleSpacing: 30,
+  mountHoleDiameter: 4.5,
+  printer_compensation: 0.15,
+}));
+
+// 38. Scotch Yoke Carriage
+console.log('\n[38] Testing Scotch Yoke Carriage (CSG):');
+validateMesh('Scotch Yoke Stroke 40mm', generateScotchYoke({
+  yokeStroke: 40,
+  slotWidth: 8,
+  blockLength: 70,
+  blockHeight: 36,
+  blockThickness: 12,
+  rodDiameter: 8,
+  printer_compensation: 0.15,
+}));
+
+// 39. DIN Rail 35mm Mount
+console.log('\n[39] Testing DIN Rail 35mm Mount (CSG):');
+validateMesh('DIN Rail 35mm Snap Clip', generateDinRailClip({
+  railWidth: 35,
+  clipThickness: 12,
+  equipmentPlateWidth: 45,
+  equipmentPlateHeight: 55,
+  mountHoleSpacing: 30,
+  mountScrewSize: 'M3',
+  printer_compensation: 0.15,
+}));
+
+// 40. Interlocking Knuckle Hinge
+console.log('\n[40] Testing Interlocking Knuckle Hinge (CSG):');
+validateMesh('Knuckle Hinge Leaf 3-Barrel', generateHingeLeaf({
+  knuckleCount: 3,
+  leafWidth: 30,
+  leafLength: 50,
+  leafThickness: 3.5,
+  pinDiameter: 3.5,
+  screwHoleCount: 3,
+  screwSize: 'M3',
+  knuckleClearance: 0.4,
+  printer_compensation: 0.15,
+}));
+
+// 41. CNC Spindle Mount
+console.log('\n[41] Testing CNC Spindle Mount (CSG):');
+validateMesh('Spindle 65mm Split Collar', generateSpindleMount({
+  spindleDiameter: 65,
+  clampHeight: 30,
+  wallThickness: 12,
+  pinchBoltSize: 'M5',
+  baseMountWidth: 90,
+  baseMountHoleSpacingX: 60,
+  baseMountHoleSpacingY: 20,
+  printer_compensation: 0.15,
+}));
+
+// 42. Anti-Vibration Isolator Foot
+console.log('\n[42] Testing Anti-Vibration Isolator Foot (Math Lofting):');
+validateMesh('Hourglass Isolator Foot D36 H28', generateVibrationIsolator({
+  baseDiameter: 36,
+  waistDiameter: 20,
+  height: 28,
+  topStudHoleDiameter: 4.5,
+  bottomNutTrapSize: 'M4',
+  cavityDepth: 7,
+  printer_compensation: 0.15,
+}));
+
+// 43. Orthogonal Cross-Slide Joiner
+console.log('\n[43] Testing Orthogonal Cross-Slide Joiner (CSG):');
+validateMesh('Cross-Slide 10mm Rod Joiner', generateCrossSlideBracket({
+  rodDiameterA: 10,
+  rodDiameterB: 10,
+  offsetZ: 18,
+  blockWidth: 32,
+  blockLength: 32,
+  pinchBoltSize: 'M4',
+  printer_compensation: 0.15,
+}));
+
+// 44. Venturi Eductor Nozzle
+console.log('\n[44] Testing Venturi Eductor Nozzle (Math Lofting + CSG):');
+validateMesh('Venturi Mixer 28-10-24mm', generateVenturiNozzle({
+  inletDiameter: 28,
+  throatDiameter: 10,
+  outletDiameter: 24,
+  nozzleLength: 65,
+  wallThickness: 2.5,
+  suctionPortDiameter: 7,
+  flangeMount: true,
+  printer_compensation: 0.15,
+}));
+
+// 45. 4-Bolt Pipe Flange
+console.log('\n[45] Testing 4-Bolt Pipe Flange (CSG):');
+validateMesh('Raised Face Flange 25mm Socket', generatePipeFlange({
+  pipeNominalDiameter: 25,
+  flangeOuterDiameter: 70,
+  flangeThickness: 10,
+  boltHoleCount: 4,
+  boltPitchCircleDiameter: 50,
+  boltHoleDiameter: 5.5,
+  hasORingGroove: true,
+  oRingWidth: 3.0,
+  printer_compensation: 0.15,
+}));
+
+// 46. Peristaltic Pump Rotor Head
+console.log('\n[46] Testing Peristaltic Pump Head (CSG):');
+validateMesh('Peristaltic 3-Roller Rotor 624', generatePeristalticPumpHead({
+  rollerCount: 3,
+  rotorOuterDiameter: 52,
+  rollerBearingType: '624',
+  tubeChannelWidth: 10,
+  motorShaftDiameter: 5,
+  rotorThickness: 12,
+  printer_compensation: 0.15,
+}));
+
+// 47. Waterproof Cable Gland Nut
+console.log('\n[47] Testing Waterproof Cable Gland (CSG):');
+validateMesh('Cable Gland Nut Hex22', generateCableGland({
+  cableDiameterMin: 4,
+  cableDiameterMax: 8,
+  hexNutSize: 22,
+  threadLength: 10,
+  glandHeight: 24,
+  fingerCount: 6,
+  printer_compensation: 0.15,
+}));
+
+// 48. Spiral Flex Strain Relief Boot
+console.log('\n[48] Testing Strain Relief Boot (Math + CSG):');
+validateMesh('Spiral Strain Relief Boot 6mm', generateStrainReliefBoot({
+  cableDiameter: 6,
+  flangeDiameter: 18,
+  bootLength: 45,
+  spiralPitch: 7,
+  taperFactor: 0.65,
+  slotWidth: 1.6,
+  printer_compensation: 0.15,
+}));
+
+// 49. Filament Runout Sensor Body
+console.log('\n[49] Testing Filament Runout Sensor (CSG):');
+validateMesh('Runout Sensor KW11 1.75mm', generateFilamentRunoutSensor({
+  filamentDiameter: 1.75,
+  microswitchType: 'kw11',
+  bodyLength: 36,
+  bodyWidth: 24,
+  bodyHeight: 16,
+  couplerThread: 'M6',
+  mountHoleSpacing: 20,
+  mountScrewSize: 'M3',
+  printer_compensation: 0.15,
+}));
+
+// 50. Miniature Slip Ring Housing
+console.log('\n[50] Testing Slip Ring Housing (CSG):');
+validateMesh('Slip Ring Capsule 22mm', generateSlipRingCapsule({
+  capsuleOuterDiameter: 22,
+  capsuleLength: 28,
+  flangeDiameter: 34,
+  rotorBoreDiameter: 7,
+  mountBoltCount: 3,
+  mountBoltPCD: 28,
+  cableExitSlotWidth: 4.5,
+  printer_compensation: 0.15,
+}));
+
+// 51. Piezo Bed Sensor Mount
+console.log('\n[51] Testing Piezo Sensor Mount (CSG):');
+validateMesh('Piezo 20mm Bed Contact Ring', generatePiezoMount({
+  piezoDiscDiameter: 20,
+  mountRingOD: 32,
+  diaphragmClearance: 1.2,
+  bodyThickness: 6,
+  contactPinDiameter: 3.5,
+  mountScrewSize: 'M3',
+  mountHoleCount: 3,
+  printer_compensation: 0.15,
+}));
+
+// 52. Multi-Bore Drill Guide Block
+console.log('\n[52] Testing Drill Guide Block (CSG):');
+validateMesh('Drill Guide Block V-Groove 80mm', generateDrillGuideBlock({
+  blockLength: 80,
+  blockWidth: 35,
+  blockHeight: 25,
+  vGrooveDepth: 6,
+  hasCenterlineAlignment: true,
+  printer_compensation: 0.15,
+}));
+
+// 53. Deburring Tool Handle
+console.log('\n[53] Testing Deburring Tool Handle (Math + CSG):');
+validateMesh('Fluted Deburring Handle 3.2mm', generateChamferToolHolder({
+  handleDiameter: 24,
+  handleLength: 90,
+  fluteCount: 8,
+  fluteDepth: 1.6,
+  colletBoreDiameter: 3.2,
+  colletDepth: 24,
+  setScrewSize: 'M3',
+  ergonomicPalmGrip: true,
+  printer_compensation: 0.15,
+}));
+
 console.log('\n===============================================================');
-console.log('✅ ALL 33 GENERATORS PASSED 100% VALIDATION & STL EXPORT TESTS!');
+console.log('✅ ALL 53 GENERATORS PASSED 100% VALIDATION & STL EXPORT TESTS!');
 console.log('===============================================================\n');
 

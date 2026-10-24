@@ -867,6 +867,414 @@ export const PresetsBar: React.FC<PresetsBarProps> = ({
           </button>
         </div>
       )}
+
+      {/* 20 Maker & Machine Components Presets */}
+      {/* 1. Cycloidal Gear */}
+      {activeModel === 'cycloidal_gear' && (
+        <div className="flex items-center gap-1.5 shrink-0">
+          <button
+            onClick={() => onApplyPreset('cycloidal_10to1')}
+            className="px-2.5 py-1 rounded bg-[#1e293b] hover:bg-sky-950 hover:text-sky-300 hover:border-sky-500/50 border border-slate-700 text-slate-300 transition-all text-xs"
+          >
+            <span className="font-bold text-sky-400">10:1 Reducer</span>
+            <span className="text-[10px] text-slate-400 ml-1.5">(10 Lobe, 35mm PCD)</span>
+          </button>
+          <button
+            onClick={() => onApplyPreset('cycloidal_20to1_heavy')}
+            className="px-2.5 py-1 rounded bg-[#1e293b] hover:bg-sky-950 hover:text-sky-300 hover:border-sky-500/50 border border-slate-700 text-slate-300 transition-all text-xs"
+          >
+            <span className="font-bold text-sky-400">20:1 Actuator</span>
+            <span className="text-[10px] text-slate-400 ml-1.5">(20 Lobe, 50mm PCD)</span>
+          </button>
+        </div>
+      )}
+
+      {/* 2. Geneva Mechanism */}
+      {activeModel === 'geneva_mechanism' && (
+        <div className="flex items-center gap-1.5 shrink-0">
+          <button
+            onClick={() => onApplyPreset('geneva_4slot_90deg')}
+            className="px-2.5 py-1 rounded bg-[#1e293b] hover:bg-sky-950 hover:text-sky-300 hover:border-sky-500/50 border border-slate-700 text-slate-300 transition-all text-xs"
+          >
+            <span className="font-bold text-sky-400">4-Station (90°)</span>
+            <span className="text-[10px] text-slate-400 ml-1.5">(4 Slots, 35mm R)</span>
+          </button>
+          <button
+            onClick={() => onApplyPreset('geneva_6slot_60deg')}
+            className="px-2.5 py-1 rounded bg-[#1e293b] hover:bg-sky-950 hover:text-sky-300 hover:border-sky-500/50 border border-slate-700 text-slate-300 transition-all text-xs"
+          >
+            <span className="font-bold text-sky-400">6-Station (60°)</span>
+            <span className="text-[10px] text-slate-400 ml-1.5">(6 Slots, 45mm R)</span>
+          </button>
+        </div>
+      )}
+
+      {/* 3. Planetary Carrier */}
+      {activeModel === 'planetary_carrier' && (
+        <div className="flex items-center gap-1.5 shrink-0">
+          <button
+            onClick={() => onApplyPreset('planetary_3planet_nema17')}
+            className="px-2.5 py-1 rounded bg-[#1e293b] hover:bg-sky-950 hover:text-sky-300 hover:border-sky-500/50 border border-slate-700 text-slate-300 transition-all text-xs"
+          >
+            <span className="font-bold text-sky-400">3-Planet NEMA 17</span>
+            <span className="text-[10px] text-slate-400 ml-1.5">(3-Pin, 40mm PCD)</span>
+          </button>
+          <button
+            onClick={() => onApplyPreset('planetary_4planet_heavy')}
+            className="px-2.5 py-1 rounded bg-[#1e293b] hover:bg-sky-950 hover:text-sky-300 hover:border-sky-500/50 border border-slate-700 text-slate-300 transition-all text-xs"
+          >
+            <span className="font-bold text-sky-400">4-Planet Heavy</span>
+            <span className="text-[10px] text-slate-400 ml-1.5">(4-Pin, 55mm PCD)</span>
+          </button>
+        </div>
+      )}
+
+      {/* 4. Rack and Pinion */}
+      {activeModel === 'rack_and_pinion' && (
+        <div className="flex items-center gap-1.5 shrink-0">
+          <button
+            onClick={() => onApplyPreset('rack_m10_150mm')}
+            className="px-2.5 py-1 rounded bg-[#1e293b] hover:bg-sky-950 hover:text-sky-300 hover:border-sky-500/50 border border-slate-700 text-slate-300 transition-all text-xs"
+          >
+            <span className="font-bold text-sky-400">M1.0 150mm</span>
+            <span className="text-[10px] text-slate-400 ml-1.5">(150mm, 12mm W, M4)</span>
+          </button>
+          <button
+            onClick={() => onApplyPreset('rack_m15_200mm_heavy')}
+            className="px-2.5 py-1 rounded bg-[#1e293b] hover:bg-sky-950 hover:text-sky-300 hover:border-sky-500/50 border border-slate-700 text-slate-300 transition-all text-xs"
+          >
+            <span className="font-bold text-sky-400">M1.5 200mm Heavy</span>
+            <span className="text-[10px] text-slate-400 ml-1.5">(200mm, 18mm W, M5)</span>
+          </button>
+        </div>
+      )}
+
+      {/* 5. Scotch Yoke */}
+      {activeModel === 'scotch_yoke' && (
+        <div className="flex items-center gap-1.5 shrink-0">
+          <button
+            onClick={() => onApplyPreset('scotch_30mm_stroke')}
+            className="px-2.5 py-1 rounded bg-[#1e293b] hover:bg-sky-950 hover:text-sky-300 hover:border-sky-500/50 border border-slate-700 text-slate-300 transition-all text-xs"
+          >
+            <span className="font-bold text-sky-400">30mm Stroke</span>
+            <span className="text-[10px] text-slate-400 ml-1.5">(30mm Travel, 6mm Rod)</span>
+          </button>
+          <button
+            onClick={() => onApplyPreset('scotch_50mm_stroke')}
+            className="px-2.5 py-1 rounded bg-[#1e293b] hover:bg-sky-950 hover:text-sky-300 hover:border-sky-500/50 border border-slate-700 text-slate-300 transition-all text-xs"
+          >
+            <span className="font-bold text-sky-400">50mm Stroke</span>
+            <span className="text-[10px] text-slate-400 ml-1.5">(50mm Travel, 8mm Rod)</span>
+          </button>
+        </div>
+      )}
+
+      {/* 6. DIN Rail Clip */}
+      {activeModel === 'din_rail_clip' && (
+        <div className="flex items-center gap-1.5 shrink-0">
+          <button
+            onClick={() => onApplyPreset('din_std_20mm_m3')}
+            className="px-2.5 py-1 rounded bg-[#1e293b] hover:bg-sky-950 hover:text-sky-300 hover:border-sky-500/50 border border-slate-700 text-slate-300 transition-all text-xs"
+          >
+            <span className="font-bold text-sky-400">35mm Rail (20mm W)</span>
+            <span className="text-[10px] text-slate-400 ml-1.5">(M3 Holes, Tab)</span>
+          </button>
+          <button
+            onClick={() => onApplyPreset('din_wide_35mm_m4')}
+            className="px-2.5 py-1 rounded bg-[#1e293b] hover:bg-sky-950 hover:text-sky-300 hover:border-sky-500/50 border border-slate-700 text-slate-300 transition-all text-xs"
+          >
+            <span className="font-bold text-sky-400">35mm Rail (35mm W)</span>
+            <span className="text-[10px] text-slate-400 ml-1.5">(M4 Holes, Heavy)</span>
+          </button>
+        </div>
+      )}
+
+      {/* 7. Hinge Leaf */}
+      {activeModel === 'hinge_leaf' && (
+        <div className="flex items-center gap-1.5 shrink-0">
+          <button
+            onClick={() => onApplyPreset('hinge_3barrel_m3')}
+            className="px-2.5 py-1 rounded bg-[#1e293b] hover:bg-sky-950 hover:text-sky-300 hover:border-sky-500/50 border border-slate-700 text-slate-300 transition-all text-xs"
+          >
+            <span className="font-bold text-sky-400">3-Knuckle 50mm</span>
+            <span className="text-[10px] text-slate-400 ml-1.5">(3-Barrel, M3 CS)</span>
+          </button>
+          <button
+            onClick={() => onApplyPreset('hinge_5barrel_m4')}
+            className="px-2.5 py-1 rounded bg-[#1e293b] hover:bg-sky-950 hover:text-sky-300 hover:border-sky-500/50 border border-slate-700 text-slate-300 transition-all text-xs"
+          >
+            <span className="font-bold text-sky-400">5-Knuckle 80mm</span>
+            <span className="text-[10px] text-slate-400 ml-1.5">(5-Barrel, M4 CS)</span>
+          </button>
+        </div>
+      )}
+
+      {/* 8. Spindle Mount */}
+      {activeModel === 'spindle_mount' && (
+        <div className="flex items-center gap-1.5 shrink-0">
+          <button
+            onClick={() => onApplyPreset('spindle_52mm_300w')}
+            className="px-2.5 py-1 rounded bg-[#1e293b] hover:bg-sky-950 hover:text-sky-300 hover:border-sky-500/50 border border-slate-700 text-slate-300 transition-all text-xs"
+          >
+            <span className="font-bold text-sky-400">52mm DC Spindle</span>
+            <span className="text-[10px] text-slate-400 ml-1.5">(300W/500W, M5)</span>
+          </button>
+          <button
+            onClick={() => onApplyPreset('spindle_65mm_makita')}
+            className="px-2.5 py-1 rounded bg-[#1e293b] hover:bg-sky-950 hover:text-sky-300 hover:border-sky-500/50 border border-slate-700 text-slate-300 transition-all text-xs"
+          >
+            <span className="font-bold text-sky-400">65mm Makita Router</span>
+            <span className="text-[10px] text-slate-400 ml-1.5">(RT0701C, M5)</span>
+          </button>
+          <button
+            onClick={() => onApplyPreset('spindle_80mm_vfd')}
+            className="px-2.5 py-1 rounded bg-[#1e293b] hover:bg-sky-950 hover:text-sky-300 hover:border-sky-500/50 border border-slate-700 text-slate-300 transition-all text-xs"
+          >
+            <span className="font-bold text-sky-400">80mm Water-Cooled</span>
+            <span className="text-[10px] text-slate-400 ml-1.5">(1.5kW/2.2kW, M6)</span>
+          </button>
+        </div>
+      )}
+
+      {/* 9. Vibration Isolator */}
+      {activeModel === 'vibration_isolator' && (
+        <div className="flex items-center gap-1.5 shrink-0">
+          <button
+            onClick={() => onApplyPreset('isolator_d35_m4')}
+            className="px-2.5 py-1 rounded bg-[#1e293b] hover:bg-sky-950 hover:text-sky-300 hover:border-sky-500/50 border border-slate-700 text-slate-300 transition-all text-xs"
+          >
+            <span className="font-bold text-sky-400">D35 M4 Foot</span>
+            <span className="text-[10px] text-slate-400 ml-1.5">(35mm Base, TPU)</span>
+          </button>
+          <button
+            onClick={() => onApplyPreset('isolator_d50_m6')}
+            className="px-2.5 py-1 rounded bg-[#1e293b] hover:bg-sky-950 hover:text-sky-300 hover:border-sky-500/50 border border-slate-700 text-slate-300 transition-all text-xs"
+          >
+            <span className="font-bold text-sky-400">D50 M6 Heavy</span>
+            <span className="text-[10px] text-slate-400 ml-1.5">(50mm Base, Machine)</span>
+          </button>
+        </div>
+      )}
+
+      {/* 10. Cross Slide Bracket */}
+      {activeModel === 'cross_slide_bracket' && (
+        <div className="flex items-center gap-1.5 shrink-0">
+          <button
+            onClick={() => onApplyPreset('cross_8mm_linear')}
+            className="px-2.5 py-1 rounded bg-[#1e293b] hover:bg-sky-950 hover:text-sky-300 hover:border-sky-500/50 border border-slate-700 text-slate-300 transition-all text-xs"
+          >
+            <span className="font-bold text-sky-400">Dual 8mm Rods</span>
+            <span className="text-[10px] text-slate-400 ml-1.5">(8×8mm Orthogonal)</span>
+          </button>
+          <button
+            onClick={() => onApplyPreset('cross_10mm_linear')}
+            className="px-2.5 py-1 rounded bg-[#1e293b] hover:bg-sky-950 hover:text-sky-300 hover:border-sky-500/50 border border-slate-700 text-slate-300 transition-all text-xs"
+          >
+            <span className="font-bold text-sky-400">Dual 10mm Rods</span>
+            <span className="text-[10px] text-slate-400 ml-1.5">(10×10mm Joiner)</span>
+          </button>
+        </div>
+      )}
+
+      {/* 11. Venturi Nozzle */}
+      {activeModel === 'venturi_nozzle' && (
+        <div className="flex items-center gap-1.5 shrink-0">
+          <button
+            onClick={() => onApplyPreset('venturi_suction_d24')}
+            className="px-2.5 py-1 rounded bg-[#1e293b] hover:bg-sky-950 hover:text-sky-300 hover:border-sky-500/50 border border-slate-700 text-slate-300 transition-all text-xs"
+          >
+            <span className="font-bold text-sky-400">24mm Siphon Eductor</span>
+            <span className="text-[10px] text-slate-400 ml-1.5">(8mm Throat, 6mm Port)</span>
+          </button>
+          <button
+            onClick={() => onApplyPreset('venturi_mixer_d32')}
+            className="px-2.5 py-1 rounded bg-[#1e293b] hover:bg-sky-950 hover:text-sky-300 hover:border-sky-500/50 border border-slate-700 text-slate-300 transition-all text-xs"
+          >
+            <span className="font-bold text-sky-400">32mm Industrial Mixer</span>
+            <span className="text-[10px] text-slate-400 ml-1.5">(12mm Throat, Flange)</span>
+          </button>
+        </div>
+      )}
+
+      {/* 12. Pipe Flange */}
+      {activeModel === 'pipe_flange' && (
+        <div className="flex items-center gap-1.5 shrink-0">
+          <button
+            onClick={() => onApplyPreset('flange_1inch_4bolt')}
+            className="px-2.5 py-1 rounded bg-[#1e293b] hover:bg-sky-950 hover:text-sky-300 hover:border-sky-500/50 border border-slate-700 text-slate-300 transition-all text-xs"
+          >
+            <span className="font-bold text-sky-400">1" Nominal 4-Bolt</span>
+            <span className="text-[10px] text-slate-400 ml-1.5">(33.4mm OD, O-Ring)</span>
+          </button>
+          <button
+            onClick={() => onApplyPreset('flange_2inch_6bolt')}
+            className="px-2.5 py-1 rounded bg-[#1e293b] hover:bg-sky-950 hover:text-sky-300 hover:border-sky-500/50 border border-slate-700 text-slate-300 transition-all text-xs"
+          >
+            <span className="font-bold text-sky-400">2" Nominal 6-Bolt</span>
+            <span className="text-[10px] text-slate-400 ml-1.5">(60.3mm OD, 6 Holes)</span>
+          </button>
+        </div>
+      )}
+
+      {/* 13. Peristaltic Pump Head */}
+      {activeModel === 'peristaltic_pump_head' && (
+        <div className="flex items-center gap-1.5 shrink-0">
+          <button
+            onClick={() => onApplyPreset('pump_3roller_608')}
+            className="px-2.5 py-1 rounded bg-[#1e293b] hover:bg-sky-950 hover:text-sky-300 hover:border-sky-500/50 border border-slate-700 text-slate-300 transition-all text-xs"
+          >
+            <span className="font-bold text-sky-400">3-Roller 608 NEMA 17</span>
+            <span className="text-[10px] text-slate-400 ml-1.5">(8mm Pin, 5mm D)</span>
+          </button>
+          <button
+            onClick={() => onApplyPreset('pump_4roller_624')}
+            className="px-2.5 py-1 rounded bg-[#1e293b] hover:bg-sky-950 hover:text-sky-300 hover:border-sky-500/50 border border-slate-700 text-slate-300 transition-all text-xs"
+          >
+            <span className="font-bold text-sky-400">4-Roller 624 Micro</span>
+            <span className="text-[10px] text-slate-400 ml-1.5">(4mm Pin, 4 Rollers)</span>
+          </button>
+        </div>
+      )}
+
+      {/* 14. Cable Gland */}
+      {activeModel === 'cable_gland' && (
+        <div className="flex items-center gap-1.5 shrink-0">
+          <button
+            onClick={() => onApplyPreset('gland_pg7_4to7mm')}
+            className="px-2.5 py-1 rounded bg-[#1e293b] hover:bg-sky-950 hover:text-sky-300 hover:border-sky-500/50 border border-slate-700 text-slate-300 transition-all text-xs"
+          >
+            <span className="font-bold text-sky-400">PG7 / M12 (4-7mm)</span>
+            <span className="text-[10px] text-slate-400 ml-1.5">(18mm Hex, 6 Collet)</span>
+          </button>
+          <button
+            onClick={() => onApplyPreset('gland_m20_8to12mm')}
+            className="px-2.5 py-1 rounded bg-[#1e293b] hover:bg-sky-950 hover:text-sky-300 hover:border-sky-500/50 border border-slate-700 text-slate-300 transition-all text-xs"
+          >
+            <span className="font-bold text-sky-400">M20 (8-12mm)</span>
+            <span className="text-[10px] text-slate-400 ml-1.5">(27mm Hex, Heavy)</span>
+          </button>
+        </div>
+      )}
+
+      {/* 15. Strain Relief Boot */}
+      {activeModel === 'strain_relief_boot' && (
+        <div className="flex items-center gap-1.5 shrink-0">
+          <button
+            onClick={() => onApplyPreset('boot_usb_4mm')}
+            className="px-2.5 py-1 rounded bg-[#1e293b] hover:bg-sky-950 hover:text-sky-300 hover:border-sky-500/50 border border-slate-700 text-slate-300 transition-all text-xs"
+          >
+            <span className="font-bold text-sky-400">USB Cable (4.5mm)</span>
+            <span className="text-[10px] text-slate-400 ml-1.5">(35mm L, Spiral)</span>
+          </button>
+          <button
+            onClick={() => onApplyPreset('boot_power_8mm')}
+            className="px-2.5 py-1 rounded bg-[#1e293b] hover:bg-sky-950 hover:text-sky-300 hover:border-sky-500/50 border border-slate-700 text-slate-300 transition-all text-xs"
+          >
+            <span className="font-bold text-sky-400">Power Cable (8mm)</span>
+            <span className="text-[10px] text-slate-400 ml-1.5">(50mm L, Heavy)</span>
+          </button>
+        </div>
+      )}
+
+      {/* 16. Filament Runout Sensor */}
+      {activeModel === 'filament_runout_sensor' && (
+        <div className="flex items-center gap-1.5 shrink-0">
+          <button
+            onClick={() => onApplyPreset('runout_175_kw11')}
+            className="px-2.5 py-1 rounded bg-[#1e293b] hover:bg-sky-950 hover:text-sky-300 hover:border-sky-500/50 border border-slate-700 text-slate-300 transition-all text-xs"
+          >
+            <span className="font-bold text-sky-400">1.75mm KW11 Bowden</span>
+            <span className="text-[10px] text-slate-400 ml-1.5">(Microswitch, PC4-M6)</span>
+          </button>
+          <button
+            onClick={() => onApplyPreset('runout_285_optical')}
+            className="px-2.5 py-1 rounded bg-[#1e293b] hover:bg-sky-950 hover:text-sky-300 hover:border-sky-500/50 border border-slate-700 text-slate-300 transition-all text-xs"
+          >
+            <span className="font-bold text-sky-400">2.85mm Optical</span>
+            <span className="text-[10px] text-slate-400 ml-1.5">(Photointerrupter)</span>
+          </button>
+        </div>
+      )}
+
+      {/* 17. Slip Ring Capsule */}
+      {activeModel === 'slip_ring_capsule' && (
+        <div className="flex items-center gap-1.5 shrink-0">
+          <button
+            onClick={() => onApplyPreset('slipring_22mm_flange')}
+            className="px-2.5 py-1 rounded bg-[#1e293b] hover:bg-sky-950 hover:text-sky-300 hover:border-sky-500/50 border border-slate-700 text-slate-300 transition-all text-xs"
+          >
+            <span className="font-bold text-sky-400">22mm Capsule</span>
+            <span className="text-[10px] text-slate-400 ml-1.5">(3-Bolt Flange, Slot)</span>
+          </button>
+          <button
+            onClick={() => onApplyPreset('slipring_30mm_heavy')}
+            className="px-2.5 py-1 rounded bg-[#1e293b] hover:bg-sky-950 hover:text-sky-300 hover:border-sky-500/50 border border-slate-700 text-slate-300 transition-all text-xs"
+          >
+            <span className="font-bold text-sky-400">30mm Heavy Stator</span>
+            <span className="text-[10px] text-slate-400 ml-1.5">(4-Bolt Flange)</span>
+          </button>
+        </div>
+      )}
+
+      {/* 18. Piezo Mount */}
+      {activeModel === 'piezo_mount' && (
+        <div className="flex items-center gap-1.5 shrink-0">
+          <button
+            onClick={() => onApplyPreset('piezo_20mm_probe')}
+            className="px-2.5 py-1 rounded bg-[#1e293b] hover:bg-sky-950 hover:text-sky-300 hover:border-sky-500/50 border border-slate-700 text-slate-300 transition-all text-xs"
+          >
+            <span className="font-bold text-sky-400">20mm Piezo Probe</span>
+            <span className="text-[10px] text-slate-400 ml-1.5">(0.8mm Diaphragm)</span>
+          </button>
+          <button
+            onClick={() => onApplyPreset('piezo_27mm_bed')}
+            className="px-2.5 py-1 rounded bg-[#1e293b] hover:bg-sky-950 hover:text-sky-300 hover:border-sky-500/50 border border-slate-700 text-slate-300 transition-all text-xs"
+          >
+            <span className="font-bold text-sky-400">27mm Bed Sensor</span>
+            <span className="text-[10px] text-slate-400 ml-1.5">(High-Sensitivity)</span>
+          </button>
+        </div>
+      )}
+
+      {/* 19. Drill Guide Block */}
+      {activeModel === 'drill_guide_block' && (
+        <div className="flex items-center gap-1.5 shrink-0">
+          <button
+            onClick={() => onApplyPreset('drill_guide_metric_3to10')}
+            className="px-2.5 py-1 rounded bg-[#1e293b] hover:bg-sky-950 hover:text-sky-300 hover:border-sky-500/50 border border-slate-700 text-slate-300 transition-all text-xs"
+          >
+            <span className="font-bold text-sky-400">Metric 3-10mm (6-Bore)</span>
+            <span className="text-[10px] text-slate-400 ml-1.5">(80mm L, V-Groove)</span>
+          </button>
+          <button
+            onClick={() => onApplyPreset('drill_guide_compact_4to8')}
+            className="px-2.5 py-1 rounded bg-[#1e293b] hover:bg-sky-950 hover:text-sky-300 hover:border-sky-500/50 border border-slate-700 text-slate-300 transition-all text-xs"
+          >
+            <span className="font-bold text-sky-400">Compact 4-8mm (4-Bore)</span>
+            <span className="text-[10px] text-slate-400 ml-1.5">(60mm L)</span>
+          </button>
+        </div>
+      )}
+
+      {/* 20. Chamfer Tool Holder */}
+      {activeModel === 'chamfer_tool_holder' && (
+        <div className="flex items-center gap-1.5 shrink-0">
+          <button
+            onClick={() => onApplyPreset('chamfer_handle_32mm')}
+            className="px-2.5 py-1 rounded bg-[#1e293b] hover:bg-sky-950 hover:text-sky-300 hover:border-sky-500/50 border border-slate-700 text-slate-300 transition-all text-xs"
+          >
+            <span className="font-bold text-sky-400">3.2mm Swivel Blade</span>
+            <span className="text-[10px] text-slate-400 ml-1.5">(90mm L, 8 Flutes)</span>
+          </button>
+          <button
+            onClick={() => onApplyPreset('chamfer_heavy_grip')}
+            className="px-2.5 py-1 rounded bg-[#1e293b] hover:bg-sky-950 hover:text-sky-300 hover:border-sky-500/50 border border-slate-700 text-slate-300 transition-all text-xs"
+          >
+            <span className="font-bold text-sky-400">Ergonomic Palm Handle</span>
+            <span className="text-[10px] text-slate-400 ml-1.5">(110mm L, 6 Flutes)</span>
+          </button>
+        </div>
+      )}
     </div>
   );
 };

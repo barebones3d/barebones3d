@@ -35,3 +35,25 @@ export * from './endstopMount';
 export * from './fanDuctShroud';
 export * from './spoolHolderHub';
 export * from './dialIndicatorMount';
+
+// 20 High-Utility Maker & Engineering generators (Parts 34-53)
+export * from './cycloidalGear';
+export * from './genevaMechanism';
+export * from './planetaryCarrier';
+export * from './rackAndPinion';
+export * from './scotchYoke';
+export * from './dinRailClip';
+export * from './hingeLeaf';
+export * from './spindleMount';
+export * from './vibrationIsolator';
+export * from './crossSlideBracket';
+export * from './venturiNozzle';
+export * from './pipeFlange';
+export * from './peristalticPumpHead';
+export * from './cableGland';
+export * from './strainReliefBoot';
+export * from './filamentRunoutSensor';
+export * from './slipRingCapsule';
+export * from './piezoMount';
+export * from './drillGuideBlock';
+export * from './chamferToolHolder';

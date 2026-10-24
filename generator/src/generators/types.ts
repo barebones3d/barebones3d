@@ -35,7 +35,28 @@ export type PrimitiveType =
   | 'endstop_mount'
   | 'fan_duct_shroud'
   | 'spool_holder_hub'
-  | 'dial_indicator_mount';
+  | 'dial_indicator_mount'
+  // 20 High-Utility Maker & Engineering Primitives (Part 34-53)
+  | 'cycloidal_gear'
+  | 'geneva_mechanism'
+  | 'planetary_carrier'
+  | 'rack_and_pinion'
+  | 'scotch_yoke'
+  | 'din_rail_clip'
+  | 'hinge_leaf'
+  | 'spindle_mount'
+  | 'vibration_isolator'
+  | 'cross_slide_bracket'
+  | 'venturi_nozzle'
+  | 'pipe_flange'
+  | 'peristaltic_pump_head'
+  | 'cable_gland'
+  | 'strain_relief_boot'
+  | 'filament_runout_sensor'
+  | 'slip_ring_capsule'
+  | 'piezo_mount'
+  | 'drill_guide_block'
+  | 'chamfer_tool_holder';
 
 export type PrimitiveCategory =
   | 'Motion & Power'
@@ -292,6 +313,157 @@ export const PRIMITIVE_CATALOG: PrimitiveMeta[] = [
     category: 'Tools & Shop',
     shortDesc: 'Precision 8mm / 3/8" gauge stem clamp with fine-tuning arm',
     isMathLofted: false,
+  },
+
+  // --- 20 New Hobbyist & Engineering Primitives ---
+  // Motion & Power
+  {
+    id: 'cycloidal_gear',
+    name: 'Cycloidal Reduction Disc',
+    category: 'Motion & Power',
+    shortDesc: 'Epicycloid lobe drive disc for zero-backlash high-torque robotic reducers',
+    isMathLofted: true,
+  },
+  {
+    id: 'geneva_mechanism',
+    name: 'Geneva Mechanism Wheel',
+    category: 'Motion & Power',
+    shortDesc: 'Intermittent motion Maltese cross with radial driven slots and locking arc detents',
+    isMathLofted: true,
+  },
+  {
+    id: 'planetary_carrier',
+    name: 'Planetary Gearbox Carrier',
+    category: 'Motion & Power',
+    shortDesc: 'Multi-pin planet gear carrier plate with sun shaft clearance and standoff posts',
+    isMathLofted: false,
+  },
+  {
+    id: 'rack_and_pinion',
+    name: 'Linear Involute Gear Rack',
+    category: 'Motion & Power',
+    shortDesc: 'Precision gear rack bar with mounting counterbores and interlocking ends',
+    isMathLofted: true,
+  },
+  {
+    id: 'scotch_yoke',
+    name: 'Scotch Yoke Slider Carriage',
+    category: 'Motion & Power',
+    shortDesc: 'Slotted reciprocating carriage converting rotary crank rotation to linear motion',
+    isMathLofted: false,
+  },
+
+  // Structural & Mounts
+  {
+    id: 'din_rail_clip',
+    name: 'DIN Rail 35mm Snap-Fit Mount',
+    category: 'Structural & Mounts',
+    shortDesc: 'Industrial 35mm EN 50022 top-hat rail bracket with compliant latch lever',
+    isMathLofted: false,
+  },
+  {
+    id: 'hinge_leaf',
+    name: 'Interlocking Knuckle Hinge',
+    category: 'Structural & Mounts',
+    shortDesc: 'Parametric barrel knuckle hinge leaf with countersunk mounting holes',
+    isMathLofted: false,
+  },
+  {
+    id: 'spindle_mount',
+    name: 'CNC Spindle Split Clamp',
+    category: 'Structural & Mounts',
+    shortDesc: 'Heavy-duty 52/65/80mm split collar clamp with gantry plate mounting flange',
+    isMathLofted: false,
+  },
+  {
+    id: 'vibration_isolator',
+    name: 'Anti-Vibration Isolator Foot',
+    category: 'Structural & Mounts',
+    shortDesc: 'Hourglass dampening damper foot with captive hex nut pocket',
+    isMathLofted: true,
+  },
+  {
+    id: 'cross_slide_bracket',
+    name: 'Orthogonal Cross-Slide Joiner',
+    category: 'Structural & Mounts',
+    shortDesc: 'Perpendicular 90° dual rod clamping block with pinch tensioners',
+    isMathLofted: false,
+  },
+
+  // Fluid & Hardware
+  {
+    id: 'venturi_nozzle',
+    name: 'Venturi Eductor Mixer Nozzle',
+    category: 'Fluid & Hardware',
+    shortDesc: 'Convergent-divergent flow nozzle generating vacuum suction pressure drop',
+    isMathLofted: true,
+  },
+  {
+    id: 'pipe_flange',
+    name: '4-Bolt Raised Face Pipe Flange',
+    category: 'Fluid & Hardware',
+    shortDesc: 'Bolted pipe connection flange with concentric O-ring seal groove',
+    isMathLofted: false,
+  },
+  {
+    id: 'peristaltic_pump_head',
+    name: 'Peristaltic Pump Roller Rotor',
+    category: 'Fluid & Hardware',
+    shortDesc: 'Rotary multi-roller tubing squeezer rotor for precision fluid dosing pumps',
+    isMathLofted: false,
+  },
+  {
+    id: 'cable_gland',
+    name: 'Waterproof Cable Gland Nut',
+    category: 'Fluid & Hardware',
+    shortDesc: 'Hexagonal compression cable gland with conical strain relief collet fingers',
+    isMathLofted: false,
+  },
+
+  // Electronics & Sensors
+  {
+    id: 'strain_relief_boot',
+    name: 'Spiral Flex Strain Relief Boot',
+    category: 'Electronics & Sensors',
+    shortDesc: 'Helical bend restrictor boot preventing cable fatigue and wire pinching',
+    isMathLofted: true,
+  },
+  {
+    id: 'filament_runout_sensor',
+    name: 'Filament Runout Sensor Body',
+    category: 'Electronics & Sensors',
+    shortDesc: 'Microswitch / optical filament detector housing with pneumatic coupler threads',
+    isMathLofted: false,
+  },
+  {
+    id: 'slip_ring_capsule',
+    name: 'Miniature Slip Ring Housing',
+    category: 'Electronics & Sensors',
+    shortDesc: 'Flanged sleeve enclosure for continuous 360° rotating electrical joints',
+    isMathLofted: false,
+  },
+  {
+    id: 'piezo_mount',
+    name: 'Piezo Bed Sensor Mount',
+    category: 'Electronics & Sensors',
+    shortDesc: 'High-sensitivity 20mm/27mm piezoelectric contact probe ring with micro flexure',
+    isMathLofted: false,
+  },
+
+  // Tools & Shop
+  {
+    id: 'drill_guide_block',
+    name: 'Multi-Bore V-Groove Drill Jig',
+    category: 'Tools & Shop',
+    shortDesc: 'Precision multi-diameter drill guide block with 90° pipe centering V-channel',
+    isMathLofted: false,
+  },
+  {
+    id: 'chamfer_tool_holder',
+    name: 'Deburring Tool Ergonomic Handle',
+    category: 'Tools & Shop',
+    shortDesc: 'Fluted ergonomic palm-grip handle with collet chuck for 3.2mm swivel blades',
+    isMathLofted: true,
   },
 ];
 
@@ -751,6 +923,242 @@ export interface DialIndicatorMountParams {
   pinchBoltSize: ScrewSizeType;
   mountStyle: '2020-rail-lug' | 'magnetic-base-m5' | 'rod-clamp-10mm';
   armLength: number;        // 15 to 50 mm
+  printer_compensation: number;
+}
+
+// --- 34. Cycloidal Reduction Disc Params ---
+export interface CycloidalGearParams {
+  rotorLobes: number;           // 8 to 30 lobes (reduction ratio = lobes)
+  pinCircleDiameter: number;    // 35 to 80 mm
+  rollerDiameter: number;       // 4 to 10 mm
+  eccentricity: number;         // 1.0 to 3.0 mm
+  thickness: number;            // 5 to 20 mm
+  boreDiameter: number;         // 8 to 22 mm
+  driveHoleCount: number;       // 4 to 8 output pin holes
+  driveHoleDiameter: number;    // 6 to 14 mm
+  printer_compensation: number;
+}
+
+// --- 35. Geneva Mechanism Maltese Cross Params ---
+export interface GenevaMechanismParams {
+  slotCount: number;            // 4, 5, 6, 8 slots
+  wheelRadius: number;          // 25 to 60 mm
+  pinDiameter: number;          // 3 to 8 mm drive pin
+  slotWidth: number;            // 3.5 to 9 mm
+  thickness: number;            // 4 to 15 mm
+  centerBoreDiameter: number;   // 5 to 15 mm
+  lockingRadius: number;        // 12 to 28 mm circular arc detent
+  printer_compensation: number;
+}
+
+// --- 36. Planetary Gearbox Carrier Params ---
+export interface PlanetaryCarrierParams {
+  planetCount: 3 | 4;
+  carrierDiameter: number;      // 35 to 75 mm
+  plateThickness: number;       // 4 to 10 mm
+  pinPitchDiameter: number;     // 22 to 50 mm
+  pinHoleDiameter: number;      // 3 to 8 mm
+  sunShaftBore: number;         // 5 to 14 mm
+  postHeight: number;           // 10 to 28 mm
+  printer_compensation: number;
+}
+
+// --- 37. Linear Involute Gear Rack Params ---
+export interface RackAndPinionParams {
+  module: number;               // 1.0 to 3.0 mm
+  rackLength: number;           // 60 to 200 mm
+  rackWidth: number;            // 10 to 25 mm
+  rackHeight: number;           // 10 to 25 mm
+  pressureAngleDeg: number;     // 20 deg standard
+  mountHoleSpacing: number;     // 20 to 50 mm
+  mountHoleDiameter: number;    // 3.4 to 6.6 mm
+  printer_compensation: number;
+}
+
+// --- 38. Scotch Yoke Slider Carriage Params ---
+export interface ScotchYokeParams {
+  yokeStroke: number;           // 20 to 60 mm total travel
+  slotWidth: number;            // 6 to 14 mm
+  blockLength: number;          // 40 to 90 mm
+  blockHeight: number;          // 24 to 50 mm
+  blockThickness: number;       // 8 to 18 mm
+  rodDiameter: number;          // 6 to 12 mm
+  printer_compensation: number;
+}
+
+// --- 39. DIN Rail 35mm Snap-Fit Mount Params ---
+export interface DinRailClipParams {
+  railWidth: number;            // 35 mm (standard DIN) or 15 mm (mini)
+  clipThickness: number;        // 10 to 22 mm
+  equipmentPlateWidth: number;  // 35 to 70 mm
+  equipmentPlateHeight: number; // 45 to 85 mm
+  mountHoleSpacing: number;     // 20 to 50 mm
+  mountScrewSize: ScrewSizeType;
+  printer_compensation: number;
+}
+
+// --- 40. Interlocking Knuckle Hinge Params ---
+export interface HingeLeafParams {
+  knuckleCount: number;         // 3 to 6
+  leafWidth: number;            // 20 to 50 mm
+  leafLength: number;           // 30 to 80 mm
+  leafThickness: number;        // 2.5 to 5.0 mm
+  pinDiameter: number;          // 3.0 to 6.0 mm
+  screwHoleCount: number;       // 2 to 4
+  screwSize: ScrewSizeType;
+  knuckleClearance: number;     // 0.3 to 0.8 mm
+  printer_compensation: number;
+}
+
+// --- 41. CNC Spindle Split Clamp Params ---
+export interface SpindleMountParams {
+  spindleDiameter: number;      // 52, 65, 80 mm
+  clampHeight: number;          // 20 to 45 mm
+  wallThickness: number;        // 8 to 16 mm
+  pinchBoltSize: ScrewSizeType;
+  baseMountWidth: number;       // 70 to 110 mm
+  baseMountHoleSpacingX: number;// 40 to 80 mm
+  baseMountHoleSpacingY: number;// 15 to 30 mm
+  printer_compensation: number;
+}
+
+// --- 42. Anti-Vibration Isolator Foot Params ---
+export interface VibrationIsolatorParams {
+  baseDiameter: number;         // 25 to 55 mm
+  waistDiameter: number;        // 14 to 32 mm
+  height: number;               // 18 to 45 mm
+  topStudHoleDiameter: number;  // 3.4 to 6.6 mm
+  bottomNutTrapSize: ScrewSizeType;
+  cavityDepth: number;          // 4 to 12 mm
+  printer_compensation: number;
+}
+
+// --- 43. Orthogonal Cross-Slide Joiner Params ---
+export interface CrossSlideBracketParams {
+  rodDiameterA: number;         // 8 to 16 mm
+  rodDiameterB: number;         // 8 to 16 mm
+  offsetZ: number;              // 14 to 30 mm
+  blockWidth: number;           // 24 to 45 mm
+  blockLength: number;          // 24 to 45 mm
+  pinchBoltSize: ScrewSizeType;
+  printer_compensation: number;
+}
+
+// --- 44. Venturi Eductor Mixer Nozzle Params ---
+export interface VenturiNozzleParams {
+  inletDiameter: number;        // 16 to 40 mm
+  throatDiameter: number;       // 6 to 16 mm
+  outletDiameter: number;       // 16 to 40 mm
+  nozzleLength: number;         // 40 to 90 mm
+  wallThickness: number;        // 2.0 to 4.5 mm
+  suctionPortDiameter: number;  // 5 to 12 mm
+  flangeMount: boolean;
+  printer_compensation: number;
+}
+
+// --- 45. 4-Bolt Raised Face Pipe Flange Params ---
+export interface PipeFlangeParams {
+  pipeNominalDiameter: number;  // 12 to 45 mm
+  flangeOuterDiameter: number;  // 45 to 100 mm
+  flangeThickness: number;      // 6 to 15 mm
+  boltHoleCount: 4 | 6 | 8;
+  boltPitchCircleDiameter: number; // 32 to 80 mm
+  boltHoleDiameter: number;     // 3.5 to 8.5 mm
+  hasORingGroove: boolean;
+  oRingWidth: number;           // 2.0 to 4.0 mm
+  printer_compensation: number;
+}
+
+// --- 46. Peristaltic Pump Roller Rotor Params ---
+export interface PeristalticPumpHeadParams {
+  rollerCount: 3 | 4;
+  rotorOuterDiameter: number;   // 35 to 70 mm
+  rollerBearingType: '608' | '624' | '625';
+  tubeChannelWidth: number;     // 6 to 14 mm
+  motorShaftDiameter: number;   // 5 to 8 mm
+  rotorThickness: number;       // 8 to 16 mm
+  printer_compensation: number;
+}
+
+// --- 47. Waterproof Cable Gland Nut Params ---
+export interface CableGlandParams {
+  cableDiameterMin: number;     // 3 to 10 mm
+  cableDiameterMax: number;     // 6 to 16 mm
+  hexNutSize: number;           // 16 to 30 mm
+  threadLength: number;         // 8 to 16 mm
+  glandHeight: number;          // 18 to 35 mm
+  fingerCount: number;          // 4 to 8
+  printer_compensation: number;
+}
+
+// --- 48. Spiral Flex Strain Relief Boot Params ---
+export interface StrainReliefBootParams {
+  cableDiameter: number;        // 3.5 to 10 mm
+  flangeDiameter: number;       // 12 to 26 mm
+  bootLength: number;           // 25 to 65 mm
+  spiralPitch: number;          // 4 to 10 mm
+  taperFactor: number;          // 0.4 to 0.8
+  slotWidth: number;            // 1.2 to 2.5 mm
+  printer_compensation: number;
+}
+
+// --- 49. Filament Runout Sensor Body Params ---
+export interface FilamentRunoutSensorParams {
+  filamentDiameter: 1.75 | 2.85;
+  microswitchType: 'kw11' | 'omron-ss5';
+  bodyLength: number;           // 28 to 42 mm
+  bodyWidth: number;            // 18 to 30 mm
+  bodyHeight: number;           // 12 to 20 mm
+  couplerThread: 'M6' | 'M10' | 'none-smooth';
+  mountHoleSpacing: number;     // 16 to 28 mm
+  mountScrewSize: ScrewSizeType;
+  printer_compensation: number;
+}
+
+// --- 50. Miniature Slip Ring Housing Params ---
+export interface SlipRingCapsuleParams {
+  capsuleOuterDiameter: number; // 12 to 28 mm
+  capsuleLength: number;        // 18 to 45 mm
+  flangeDiameter: number;       // 22 to 42 mm
+  rotorBoreDiameter: number;    // 4 to 10 mm
+  mountBoltCount: 3 | 4;
+  mountBoltPCD: number;         // 18 to 36 mm
+  cableExitSlotWidth: number;   // 3 to 7 mm
+  printer_compensation: number;
+}
+
+// --- 51. Piezo Bed Sensor Mount Params ---
+export interface PiezoMountParams {
+  piezoDiscDiameter: 20 | 27;
+  mountRingOD: number;          // 28 to 38 mm
+  diaphragmClearance: number;   // 0.8 to 2.2 mm
+  bodyThickness: number;        // 4 to 8 mm
+  contactPinDiameter: number;   // 2.5 to 5.0 mm
+  mountScrewSize: ScrewSizeType;
+  mountHoleCount: 3 | 4;
+  printer_compensation: number;
+}
+
+// --- 52. Multi-Bore V-Groove Drill Jig Params ---
+export interface DrillGuideBlockParams {
+  blockLength: number;          // 50 to 110 mm
+  blockWidth: number;           // 25 to 50 mm
+  blockHeight: number;          // 20 to 40 mm
+  vGrooveDepth: number;         // 4 to 10 mm
+  hasCenterlineAlignment: boolean;
+  printer_compensation: number;
+}
+
+// --- 53. Deburring Tool Ergonomic Handle Params ---
+export interface ChamferToolHolderParams {
+  handleDiameter: number;       // 18 to 30 mm
+  handleLength: number;         // 70 to 110 mm
+  fluteCount: number;           // 6 to 10 flutes
+  fluteDepth: number;           // 1.0 to 2.5 mm
+  colletBoreDiameter: number;   // 3.2 to 6.5 mm
+  colletDepth: number;          // 18 to 30 mm
+  setScrewSize: ScrewSizeType;
+  ergonomicPalmGrip: boolean;
   printer_compensation: number;
 }
 
