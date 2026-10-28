@@ -184,3 +184,192 @@ When adding or refactoring any component generator:
      ```bash
      npx tsc --noEmit && npm run build
      ```
+
+---
+
+## 7. Directives for Creating New Part Generators (Step-by-Step SOP)
+
+Follow this rigorous, standardized 7-step process whenever creating a new parametric CAD generator from scratch:
+
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│                   NEW PART CREATION PIPELINE                           │
+├─────────────────┬──────────────────────┬───────────────────────────────┤
+│ 1. Architecture │ 2. Implementation    │ 3. UI & Catalog Registration  │
+│    Pattern A/B  │    Types & Math      │    Sidebar, Presets, App      │
+├─────────────────┴──────────────────────┴───────────────────────────────┤
+│ 4. Headless Verification: Euler, Watertight, Winding, Volume, STL      │
+├────────────────────────────────────────────────────────────────────────┤
+│ 5. Sync & Production Deployment: Build, Sync Site, Wrangler Pages      │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+### Step 1: Modeling Architecture Selection
+Determine the primary modeling pattern before writing geometry code:
+* **Pattern A: Direct Math Lofting / Quad-Strips (NO CSG):**
+  * **Choose if:** The part has radial, rotational, helical, or continuous cross-sectional symmetry (gears, pulleys, sprockets, knobs, wheels, nozzles, boots, screws).
+  * **Guarantee:** Zero CSG boolean failures, exact analytical control, execution under $3\text{ms}$.
+* **Pattern B: Defensive CSG (`three-bvh-csg`):**
+  * **Choose if:** The part has orthogonal intersecting prismatic features, pockets, cross-drilled channels, or thin rib gussets on flat plates (brackets, pillow blocks, enclosures, mounts).
+  * **Guarantee:** Strict oversized cutters ($+2.0\text{mm}$ axial overshoot) and zero coplanar face clashing.
+
+---
+
+### Step 2: Parameter Interface & Catalog Registration
+1. **Define the Typed Parameter Interface in [`generator/src/generators/types.ts`](file:///Users/brandonpersonal/Documents/Git/barebones3d/generator/src/generators/types.ts):**
+   ```ts
+   export interface MyNewPartParams {
+     // Functional engineering dimensions (in mm or degrees)
+     primaryDiameter: number;
+     totalLength: number;
+     wallThickness: number;
+
+     // Mechanical interface features
+     boreType?: 'round' | 'd-shaft' | 'hex';
+     boreDiameter?: number;
+     dShaftFlatOffset?: number;
+
+     // Fillets, Chamfers & Stress Relief
+     cornerFillet?: number;
+     leadInChamfer?: boolean;
+
+     // Mandatory 3D Print Tolerance Offset
+     printer_compensation: number; // typically 0.15mm
+   }
+   ```
+2. **Register in `PRIMITIVE_CATALOG` in [`generator/src/generators/types.ts`](file:///Users/brandonpersonal/Documents/Git/barebones3d/generator/src/generators/types.ts):**
+   * Assign an immutable snake_case `id`.
+   * Assign one of the five primary categories: `'Structural & Mounts'`, `'Motion & Power'`, `'Sensors & Electromechanical'`, `'Fluid & Hardware'`, or `'Enclosures & Jigs'`.
+   * Set `isMathLofted: true` (Pattern A) or `false` (Pattern B).
+
+---
+
+### Step 3: Implement the Generator Function
+Create [`generator/src/generators/<partName>.ts`](file:///Users/brandonpersonal/Documents/Git/barebones3d/generator/src/generators/) and export:
+```ts
+export function generateMyNewPart(params: MyNewPartParams): GeneratedMeshResult
+```
+
+#### Non-Negotiable Implementation Rules:
+1. **Defensive Parameter Sanitization:**
+   Never assume params are valid numbers. Always clamp and fall back to safe engineering defaults:
+   ```ts
+   const D = Math.max(5.0, params.primaryDiameter || 20.0);
+   const L = Math.max(2.0, params.totalLength || 15.0);
+   const comp = typeof params.printer_compensation === 'number' ? params.printer_compensation : 0.15;
+   ```
+2. **Printer Tolerance Compensation:**
+   * **Internal Bores / Bearing Pockets / Bolt Holes:** Expand radius: $r_{\text{cut}} = \frac{D_{\text{bore}} + \text{comp}}{2}$.
+   * **External Shafts / Locating Bosses / Tenons:** Contract radius: $r_{\text{boss}} = \frac{D_{\text{shaft}} - \text{comp}}{2}$.
+3. **Strict Triangle Winding Invariants (Pattern A Math Lofting):**
+   All triangle vertices must be wound counter-clockwise (CCW) when viewed from the outside of the solid:
+   * **Outer Shell Quads:** Outward normal $+\hat{r}$:
+     ```ts
+     indices.push(p00, p10, p11); // Tri 1: CCW
+     indices.push(p00, p11, p01); // Tri 2: CCW
+     ```
+   * **Internal Bores & Ducts:** Inward normal $-\hat{r}$ (pointing into the void hole):
+     ```ts
+     indices.push(b00, b01, b10);
+     indices.push(b10, b01, b11);
+     ```
+   * **Bottom End Caps & Pocket Floors:** Outward normal $-\hat{z}$ (pointing downward into void).
+   * **Top End Caps:** Outward normal $+\hat{z}$ (pointing upward into ambient space).
+   * **Blind Bore Ceilings:** Must point down into $-\hat{z}$ (into the bore void, never into the solid ceiling).
+   * **Step Shoulders:**
+     * Stepping inward ($r_{\text{curr}} > r_{\text{next}}$): Faces $+\hat{z}$.
+     * Stepping outward ($r_{\text{curr}} < r_{\text{next}}$): Faces $-\hat{z}$.
+4. **Defensive CSG Invariants (Pattern B):**
+   * Cylindrical and slot cutters must extend beyond part boundaries by $\ge 2.0\text{mm}$ along the depth/cutting axis (`cutterLength = partThickness + 4.0`, translated $-2.0\text{mm}$).
+   * Dispose all intermediate geometries and brushes (`geom.dispose()`, `brush.geometry.dispose()`).
+   * Apply `toCreasedNormals(finalGeometry, THREE.MathUtils.degToRad(32))` to preserve crisp planar junctions while smoothing curved bores.
+5. **Standard Metadata Return:**
+   ```ts
+   geometry.computeBoundingBox();
+   geometry.computeBoundingSphere();
+   const bbox = geometry.boundingBox || new THREE.Box3();
+   const dimensions = {
+     x: Number((bbox.max.x - bbox.min.x).toFixed(2)),
+     y: Number((bbox.max.y - bbox.min.y).toFixed(2)),
+     z: Number((bbox.max.z - bbox.min.z).toFixed(2)),
+   };
+   const volume = computeMeshVolume(geometry);
+   const estimatedPrintWeightGrams = estimateWeightGrams(volume, 0.2); // 20% infill PLA
+
+   return {
+     geometry,
+     dimensions,
+     triangles: geometry.index ? geometry.index.count / 3 : geometry.attributes.position.count / 3,
+     vertices: geometry.attributes.position.count,
+     estimatedPrintWeightGrams,
+   };
+   ```
+
+---
+
+### Step 4: Export Generator
+Export the new generator in [`generator/src/generators/index.ts`](file:///Users/brandonpersonal/Documents/Git/barebones3d/generator/src/generators/index.ts).
+
+---
+
+### Step 5: Wire Parameter Sidebar & Presets
+1. **Parameter Sidebar Controls ([`generator/src/components/ParameterSidebar.tsx`](file:///Users/brandonpersonal/Documents/Git/barebones3d/generator/src/components/ParameterSidebar.tsx)):**
+   * Add a control block under `selectedPart === '<part_id>'`.
+   * Group inputs into clear sections (Primary Geometry, Mounting / Interface, Tolerances).
+   * Clamp slider inputs dynamically (`min`, `max`, `step`) to prevent degenerate or self-intersecting geometries.
+2. **Preset Buttons ([`generator/src/components/PresetsBar.tsx`](file:///Users/brandonpersonal/Documents/Git/barebones3d/generator/src/components/PresetsBar.tsx)):**
+   * Add 2 to 4 realistic engineering presets (e.g., standard bolt sizes, common shaft couplings, standard bearing frame dimensions).
+3. **App State Initialization ([`generator/src/App.tsx`](file:///Users/brandonpersonal/Documents/Git/barebones3d/generator/src/App.tsx)):**
+   * Add default parameter state and integrate with URL search param sync (`?part=<part_id>`).
+
+---
+
+### Step 6: Headless Verification & OpenSCAD 2-Manifold Testing
+Add a dedicated test case to [`generator/test_generators.ts`](file:///Users/brandonpersonal/Documents/Git/barebones3d/generator/test_generators.ts):
+
+```ts
+// In test_generators.ts
+validateMesh('My New Part M4 Standard', generateMyNewPart({
+  primaryDiameter: 25,
+  totalLength: 30,
+  wallThickness: 2.5,
+  printer_compensation: 0.15,
+}), isMathLofted); // Pass true for Math Lofted parts to run 2-manifold check
+```
+
+Run the automated test suite:
+```bash
+npm test
+```
+
+#### The Automated 2-Manifold Test Enforces:
+* **$V - E + F = 2 - 2g$:** Evaluates Euler-Poincaré topology ($0$ for genus-1 torus with through-shaft bore).
+* **0 Open Edges:** Every edge shared by $\ge 2$ triangles (zero holes or naked borders).
+* **0 Non-Manifold Multi-Edges:** No edge shared by $> 2$ triangles.
+* **0 Flipped Winding Edges:** Neighboring triangles traverse shared edges in opposite directions.
+* **Positive Signed Divergence Volume ($V > 0$):** Verifies all outward normals point into air/space, guaranteeing flawless OpenSCAD CSG evaluation and slicer compatibility.
+* **Valid Binary STL Export:** Verifies export output byte length $\ge 84$ bytes.
+
+---
+
+### Step 7: Build, Sync, & Deploy
+1. **Production Build:**
+   ```bash
+   npm --prefix generator run build
+   ```
+2. **Synchronize Distribution Files to Landing Site:**
+   ```bash
+   npm run sync:site
+   ```
+3. **Update Catalog Headers & Static Pages:**
+   * Ensure `PRIMITIVE_CATALOG.length` is dynamically reflected in [`generator/src/components/Header.tsx`](file:///Users/brandonpersonal/Documents/Git/barebones3d/generator/src/components/Header.tsx).
+   * Update [`site/index.html`](file:///Users/brandonpersonal/Documents/Git/barebones3d/site/index.html) directory cards if needed.
+4. **Deploy to Cloudflare Pages:**
+   ```bash
+   CLOUDFLARE_ACCOUNT_ID=2bbe914ca4d82460c51d668407bb3dbd npx wrangler pages deploy site --project-name barebones3d --branch main
+   ```
+5. **Git Commit & Push:**
+   Commit clean changes and push to `origin/main`.
+
