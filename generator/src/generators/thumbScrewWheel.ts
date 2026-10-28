@@ -37,20 +37,21 @@ export function generateThumbScrewWheel(params: ThumbScrewWheelParams): Generate
   const {
     outerDiameter,
     thickness,
-    lobeCount,
-    lobeDepth,
     nutSize,
-    pocketType,
-    pocketDepth,
     printer_compensation = 0.15,
   } = params;
 
-  const baseRadius = outerDiameter / 2 - lobeDepth;
+  const actualLobeCount = params.lobeCount || (params as any).scallopCount || 6;
+  const actualLobeDepth = params.lobeDepth || (params as any).scallopDepth || 2.0;
+  const actualPocketDepth = Math.min(params.pocketDepth || (params as any).nutTrapDepth || 4.0, (params.thickness || 8) - 2.0);
+  const actualPocketType = params.pocketType || 'hex-nut';
+
+  const baseRadius = outerDiameter / 2 - actualLobeDepth;
   const T = thickness;
   const numOuter = 72;
 
   // Outer scalloped perimeter
-  const outerProfile = generateScallopedPerimeter2D(baseRadius, lobeCount, lobeDepth, numOuter);
+  const outerProfile = generateScallopedPerimeter2D(baseRadius, actualLobeCount, actualLobeDepth, numOuter);
 
   // Fastener pocket geometry
   const nutFlat = (NUT_FLAT_WIDTHS[nutSize] || 8.0) + printer_compensation;
@@ -59,7 +60,6 @@ export function generateThumbScrewWheel(params: ThumbScrewWheelParams): Generate
 
   // Hex nut pocket profile or round socket pocket profile (both sampled to 48 points)
   const numBore = 48;
-  const actualPocketDepth = Math.min(pocketDepth, T - 2.0);
 
   const getPocketPoints = (radiusOrNut: number, isHex: boolean): THREE.Vector2[] => {
     const pts: THREE.Vector2[] = [];
@@ -91,7 +91,7 @@ export function generateThumbScrewWheel(params: ThumbScrewWheelParams): Generate
   }
 
   const socketHeadRadius = (nutFlat * 1.1) / 2;
-  const hexNutProfile = getPocketPoints(socketHeadRadius, pocketType === 'hex-nut');
+  const hexNutProfile = getPocketPoints(socketHeadRadius, actualPocketType === 'hex-nut');
 
   const positions: number[] = [];
   const indices: number[] = [];
@@ -109,25 +109,25 @@ export function generateThumbScrewWheel(params: ThumbScrewWheelParams): Generate
   const getBoreIdx = (slice: number, pt: number) => slice * (numOuter + numBore) + numOuter + pt;
 
   const loftSlices = (sA: number, sB: number) => {
-    // Outer shell
+    // Outer shell (outward normal +r)
     for (let i = 0; i < numOuter; i++) {
       const next = (i + 1) % numOuter;
       const a0 = getOuterIdx(sA, i);
       const a1 = getOuterIdx(sA, next);
       const b0 = getOuterIdx(sB, i);
       const b1 = getOuterIdx(sB, next);
-      indices.push(a0, b0, a1);
-      indices.push(a1, b0, b1);
+      indices.push(a0, a1, b0);
+      indices.push(a1, b1, b0);
     }
-    // Inner bore shell
+    // Inner bore shell (inward normal -r into bore void)
     for (let i = 0; i < numBore; i++) {
       const next = (i + 1) % numBore;
       const a0 = getBoreIdx(sA, i);
       const a1 = getBoreIdx(sA, next);
       const b0 = getBoreIdx(sB, i);
       const b1 = getBoreIdx(sB, next);
-      indices.push(a0, a1, b0);
-      indices.push(a1, b1, b0);
+      indices.push(a0, b0, a1);
+      indices.push(a1, b0, b1);
     }
   };
 

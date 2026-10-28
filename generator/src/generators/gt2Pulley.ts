@@ -214,8 +214,8 @@ export function generateGT2Pulley(params: GT2PulleyParams): GeneratedMeshResult 
           indices.push(p00, p11, p01);
         } else {
           // Stepping outward: bottom-facing shoulder (normal points -Z)
-          indices.push(p00, p01, p11);
-          indices.push(p00, p11, p10);
+          indices.push(p00, p10, p01);
+          indices.push(p10, p11, p01);
         }
       } else {
         // Standard vertical cylinder/tooth flank wall

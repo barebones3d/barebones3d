@@ -114,8 +114,11 @@ export function generateBore2D(
 
   const bType = boreType || 'round';
   if (bType === 'd-shaft') {
-    // D-shaft has a flat chord at y = dShaftFlatOffset - printerCompensation/2
-    const flatY = Math.min(radius * 0.9, Math.max(-radius * 0.9, dShaftFlatOffset - printerCompensation / 2));
+    // D-shaft has a flat chord at y = offset - printerCompensation/2
+    const safeOffset = (typeof dShaftFlatOffset === 'number' && !isNaN(dShaftFlatOffset) && dShaftFlatOffset !== 0)
+      ? dShaftFlatOffset
+      : radius * 0.7;
+    const flatY = Math.min(radius * 0.9, Math.max(-radius * 0.9, safeOffset - printerCompensation / 2));
     const flatHalfWidth = Math.sqrt(Math.max(0, radius * radius - flatY * flatY));
 
     const angleStart = Math.atan2(flatY, flatHalfWidth);

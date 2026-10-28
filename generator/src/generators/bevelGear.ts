@@ -68,28 +68,27 @@ export function generateBevelGear(params: BevelGearParams): GeneratedMeshResult 
   const getOuterIdx = (slice: number, pt: number) => slice * (numOuter + numBore) + pt;
   const getBoreIdx = (slice: number, pt: number) => slice * (numOuter + numBore) + numOuter + pt;
 
-  const loftSlices = (sA: number, sB: number) => {
-    // Outer surface
+  const loftSlices = (sA: number, sB: number, loftBore: boolean = true) => {
+    // Outer surface (outward normal +r)
     for (let i = 0; i < numOuter; i++) {
       const next = (i + 1) % numOuter;
       const a0 = getOuterIdx(sA, i);
       const a1 = getOuterIdx(sA, next);
       const b0 = getOuterIdx(sB, i);
       const b1 = getOuterIdx(sB, next);
-      indices.push(a0, b0, a1);
-      indices.push(a1, b0, b1);
+      indices.push(a0, a1, b0);
+      indices.push(a1, b1, b0);
     }
-    // Bore surface
-    if (hasBore) {
+    // Bore surface (inward normal -r into bore void)
+    if (hasBore && loftBore) {
       for (let i = 0; i < numBore; i++) {
         const next = (i + 1) % numBore;
         const a0 = getBoreIdx(sA, i);
         const a1 = getBoreIdx(sA, next);
         const b0 = getBoreIdx(sB, i);
         const b1 = getBoreIdx(sB, next);
-        // Inward facing: reverse winding
-        indices.push(a0, a1, b0);
-        indices.push(a1, b1, b0);
+        indices.push(a0, b0, a1);
+        indices.push(a1, b0, b1);
       }
     }
   };
@@ -136,9 +135,9 @@ export function generateBevelGear(params: BevelGearParams): GeneratedMeshResult 
     }
   }
 
-  // If hub existed, loft hub top to gear base (or cap transition)
+  // If hub existed, loft hub top to gear base (outer shelf only; bore is continuous at same Z)
   if (hasHub && actualHubLen > 0) {
-    loftSlices(1, coneStartSlice);
+    loftSlices(1, coneStartSlice, false);
   }
 
   // 3. Bottom Cap (at slice 0)

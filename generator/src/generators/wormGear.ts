@@ -108,10 +108,11 @@ export function generateWormGear(params: WormGearParams): GeneratedMeshResult {
         const a1 = getOuterIdx(sPrev, next);
         const b0 = getOuterIdx(sCurr, i);
         const b1 = getOuterIdx(sCurr, next);
-        indices.push(a0, b0, a1);
-        indices.push(a1, b0, b1);
+        // Outer helical flank (outward normal +r)
+        indices.push(a0, a1, b0);
+        indices.push(a1, b1, b0);
       }
-      // Loft inner bore
+      // Loft inner bore (inward normal -r into bore void)
       if (hasBore) {
         for (let i = 0; i < numBore; i++) {
           const next = (i + 1) % numBore;
@@ -119,8 +120,8 @@ export function generateWormGear(params: WormGearParams): GeneratedMeshResult {
           const a1 = getBoreIdx(sPrev, next);
           const b0 = getBoreIdx(sCurr, i);
           const b1 = getBoreIdx(sCurr, next);
-          indices.push(a0, a1, b0);
-          indices.push(a1, b1, b0);
+          indices.push(a0, b0, a1);
+          indices.push(a1, b0, b1);
         }
       }
     }

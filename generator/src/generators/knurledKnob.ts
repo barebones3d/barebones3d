@@ -249,10 +249,10 @@ export function generateKnurledKnob(params: KnurledKnobParams): GeneratedMeshRes
         indices.push(p00, p01, p11);
       }
     } else if (b0 !== -1 && b1 === -1) {
-      // Blind bore bottom shelf cap (facing +Z into the knob interior)
+      // Blind bore ceiling cap (facing -Z into bore void)
       const shelfTris = THREE.ShapeUtils.triangulateShape(boreProfile2D, []);
       for (const tri of shelfTris) {
-        indices.push(b0 + tri[0], b0 + tri[1], b0 + tri[2]);
+        indices.push(b0 + tri[0], b0 + tri[2], b0 + tri[1]);
       }
     }
   }

@@ -109,21 +109,21 @@ export function generateTimingBeltIdler(params: TimingBeltIdlerParams): Generate
   for (let s = 0; s < numSlices - 1; s++) {
     for (let i = 0; i < segments; i++) {
       const next = (i + 1) % segments;
-      // Outer hull
+      // Outer hull (outward normal +r)
       const o0 = getOutIdx(s, i);
       const o1 = getOutIdx(s, next);
       const o2 = getOutIdx(s + 1, i);
       const o3 = getOutIdx(s + 1, next);
-      indices.push(o0, o2, o1);
-      indices.push(o1, o2, o3);
+      indices.push(o0, o1, o2);
+      indices.push(o1, o3, o2);
 
-      // Inner bore hull (inward-facing normals)
+      // Inner bore hull (inward-facing normal -r into bore void)
       const b0 = getInIdx(s, i);
       const b1 = getInIdx(s, next);
       const b2 = getInIdx(s + 1, i);
       const b3 = getInIdx(s + 1, next);
-      indices.push(b0, b1, b2);
-      indices.push(b1, b3, b2);
+      indices.push(b0, b2, b1);
+      indices.push(b1, b2, b3);
     }
   }
 

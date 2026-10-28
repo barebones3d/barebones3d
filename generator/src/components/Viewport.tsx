@@ -109,11 +109,13 @@ export const Viewport: React.FC<ViewportProps> = ({
     scene.add(grid);
     gridHelperRef.current = grid;
 
-    // Material (High quality technical matte engineering polymer)
+    // Material (High quality technical matte engineering polymer - fully solid double-sided)
     const material = new THREE.MeshStandardMaterial({
       color: 0x38bdf8,
-      metalness: 0.25,
-      roughness: 0.35,
+      metalness: 0.12,
+      roughness: 0.45,
+      side: THREE.DoubleSide,
+      shadowSide: THREE.DoubleSide,
       flatShading: false,
     });
 

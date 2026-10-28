@@ -62,7 +62,87 @@ console.log('===============================================================\n')
 
 const exporter = new STLExporter();
 
-function validateMesh(name: string, res: { geometry: THREE.BufferGeometry; dimensions: any; triangles: number; vertices: number; estimatedPrintWeightGrams: number }) {
+function check2ManifoldTopology(name: string, geometry: THREE.BufferGeometry) {
+  const pos = geometry.attributes.position;
+  const idx = geometry.index;
+  const numTris = idx ? idx.count / 3 : pos.count / 3;
+
+  const vMap = new Map<string, number>();
+  const vList: THREE.Vector3[] = [];
+
+  function getVertexId(x: number, y: number, z: number): number {
+    const k = `${Math.round(x * 1000)},${Math.round(y * 1000)},${Math.round(z * 1000)}`;
+    const existing = vMap.get(k);
+    if (existing !== undefined) return existing;
+    const newId = vList.length;
+    vList.push(new THREE.Vector3(x, y, z));
+    vMap.set(k, newId);
+    return newId;
+  }
+
+  const triangles: [number, number, number][] = [];
+  for (let i = 0; i < numTris; i++) {
+    const i0 = idx ? idx.getX(i * 3) : i * 3;
+    const i1 = idx ? idx.getX(i * 3 + 1) : i * 3 + 1;
+    const i2 = idx ? idx.getX(i * 3 + 2) : i * 3 + 2;
+
+    const v0 = getVertexId(pos.getX(i0), pos.getY(i0), pos.getZ(i0));
+    const v1 = getVertexId(pos.getX(i1), pos.getY(i1), pos.getZ(i1));
+    const v2 = getVertexId(pos.getX(i2), pos.getY(i2), pos.getZ(i2));
+
+    if (v0 !== v1 && v1 !== v2 && v2 !== v0) {
+      triangles.push([v0, v1, v2]);
+    }
+  }
+
+  const edgeMap = new Map<string, [number, number][]>();
+  for (const [v0, v1, v2] of triangles) {
+    const triEdges: [number, number][] = [[v0, v1], [v1, v2], [v2, v0]];
+    for (const [a, b] of triEdges) {
+      const key = a < b ? `${a}_${b}` : `${b}_${a}`;
+      let list = edgeMap.get(key);
+      if (!list) {
+        list = [];
+        edgeMap.set(key, list);
+      }
+      list.push([a, b]);
+    }
+  }
+
+  let openEdges = 0;
+  let multiEdges = 0;
+  let flippedEdges = 0;
+
+  for (const [, dirs] of edgeMap.entries()) {
+    if (dirs.length === 1) {
+      openEdges++;
+    } else if (dirs.length > 2) {
+      multiEdges++;
+    } else if (dirs.length === 2) {
+      if (dirs[0][0] === dirs[1][0] && dirs[0][1] === dirs[1][1]) {
+        flippedEdges++;
+      }
+    }
+  }
+
+  let signedVol = 0;
+  for (const [v0, v1, v2] of triangles) {
+    const p0 = vList[v0];
+    const p1 = vList[v1];
+    const p2 = vList[v2];
+    signedVol += p0.dot(p1.clone().cross(p2)) / 6.0;
+  }
+
+  if (openEdges > 0 || multiEdges > 0 || flippedEdges > 0 || signedVol <= 0) {
+    throw new Error(`FAIL: ${name} is not a solid 2-manifold for OpenSCAD (openEdges: ${openEdges}, multiEdges: ${multiEdges}, flippedEdges: ${flippedEdges}, signedVol: ${signedVol.toFixed(2)} mm³)`);
+  }
+}
+
+function validateMesh(
+  name: string,
+  res: { geometry: THREE.BufferGeometry; dimensions: any; triangles: number; vertices: number; estimatedPrintWeightGrams: number },
+  check2Manifold: boolean = false
+) {
   if (!res.geometry || res.triangles <= 0 || res.vertices <= 0) {
     throw new Error(`FAIL: ${name} produced invalid mesh (triangles: ${res.triangles}, vertices: ${res.vertices})`);
   }
@@ -74,7 +154,10 @@ function validateMesh(name: string, res: { geometry: THREE.BufferGeometry; dimen
   if (!bin || bin.byteLength < 84) {
     throw new Error(`FAIL: ${name} failed binary STL export`);
   }
-  console.log(`  ✓ ${name}: ${res.triangles} tris, [${res.dimensions.x} × ${res.dimensions.y} × ${res.dimensions.z} mm], ${res.estimatedPrintWeightGrams}g PLA`);
+  if (check2Manifold) {
+    check2ManifoldTopology(name, res.geometry);
+  }
+  console.log(`  ✓ ${name}: ${res.triangles} tris, [${res.dimensions.x} × ${res.dimensions.y} × ${res.dimensions.z} mm], ${res.estimatedPrintWeightGrams}g PLA${check2Manifold ? ' [OpenSCAD 2-Manifold OK]' : ''}`);
 }
 
 // 1. Herringbone Gear
@@ -89,7 +172,7 @@ validateMesh('Herringbone Gear 24T D-Shaft', generateHerringboneGear({
   boreType: 'd-shaft',
   dShaftFlatOffset: 2.1,
   printer_compensation: 0.15,
-}));
+}), true);
 
 // 2. Bearing Pillow Block
 console.log('\n[2] Testing Bearing Pillow Block (CSG):');
@@ -159,7 +242,7 @@ validateMesh('GT2 Pulley 20T 5mm Bore', generateGT2Pulley({
   hubDiameter: 15.0,
   hubHeight: 6.0,
   printer_compensation: 0.15,
-}));
+}), true);
 
 // 5. Knurled Control Knob
 console.log('\n[5] Testing Knurled Control Knob (Math Lofted):');
@@ -178,7 +261,7 @@ validateMesh('Knurled Knob Diamond 25mm', generateKnurledKnob({
   dShaftFlatOffset: 2.5,
   boreDepth: 14,
   printer_compensation: 0.15,
-}));
+}), true);
 
 // 6. Threaded Fastener (Bolt & Nut)
 console.log('\n[6] Testing Threaded Fasteners (Helical Sweep Lofted):');
@@ -327,7 +410,7 @@ validateMesh('Bevel Gear 20T M1.5', generateBevelGear({
   hubDiameter: 18,
   hubLength: 8,
   printer_compensation: 0.15,
-}));
+}), true);
 
 // 15. Timing Belt Idler
 console.log('\n[15] Testing Timing Belt Idler (Math Lofted):');
@@ -341,7 +424,7 @@ validateMesh('Timing Belt Idler 608 Crowned', generateTimingBeltIdler({
   bearingPocketDepth: 7,
   centerRidgeThickness: 1.5,
   printer_compensation: 0.15,
-}));
+}), true);
 
 // 16. V-Slot Dual Angle Wheel
 console.log('\n[16] Testing V-Slot Wheel (Math Lofted):');
@@ -354,7 +437,7 @@ validateMesh('V-Slot Wheel 24mm 625 Bearings', generateVSlotWheel({
   bearingPocketDepth: 5.0,
   centerRidgeWidth: 1.0,
   printer_compensation: 0.15,
-}));
+}), true);
 
 // 17. Flexible Beam Coupler
 console.log('\n[17] Testing Flexible Beam Coupler (CSG / Helical):');
@@ -381,7 +464,7 @@ validateMesh('Archimedean Worm Screw M1.5', generateWormGear({
   boreType: 'round',
   dShaftFlatOffset: 0,
   printer_compensation: 0.15,
-}));
+}), true);
 
 // 19. Thumb Screw Knob Wheel
 console.log('\n[19] Testing Thumb Screw Wheel (Math Lofted):');
@@ -395,7 +478,7 @@ validateMesh('Ergonomic Thumb Screw M4', generateThumbScrewWheel({
   pocketDepth: 4.0,
   throughHoleDia: 4.2,
   printer_compensation: 0.15,
-}));
+}), true);
 
 // 20. Velocity Stack
 console.log('\n[20] Testing Velocity Stack (Math Lofted):');
@@ -408,7 +491,7 @@ validateMesh('Bellmouth Velocity Stack 30mm', generateVelocityStack({
   flangeBoltSize: 'M3',
   boltCircleDia: 32,
   printer_compensation: 0.15,
-}));
+}), true);
 
 // 21. Centrifugal Impeller
 console.log('\n[21] Testing Centrifugal Impeller (CSG):');
