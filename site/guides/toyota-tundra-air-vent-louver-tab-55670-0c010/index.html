@@ -29,7 +29,7 @@
   "estimatedCost": {
     "@type": "MonetaryAmount",
     "currency": "USD",
-    "value": "14.00"
+    "value": "15.00"
   },
   "image": [
     {
@@ -118,6 +118,7 @@
   ]
 }
   </script>
+  
   <script type="application/ld+json">
   {
   "@context": "https://schema.org",
@@ -161,7 +162,7 @@
     "@type": "Offer",
     "url": "https://barebones3d.com/guides/toyota-tundra-air-vent-louver-tab-55670-0c010",
     "priceCurrency": "USD",
-    "price": "14.00",
+    "price": "15.00",
     "priceValidUntil": "2028-12-31",
     "itemCondition": "https://schema.org/NewCondition",
     "availability": "https://schema.org/InStock",
@@ -477,9 +478,31 @@
       </div>
       <h3 class="action-title">Order Reproduction Part</h3>
       <div class="action-price-row">
-        <span class="action-price">$14.00</span>
+        <span class="action-price" id="action-price-val">$15.00</span>
         <span class="action-currency">USD</span>
       </div>
+      
+      <div class="bundle-selector" style="margin: 0.85rem 0; padding: 0.75rem; background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 8px;">
+        <div style="font-size: 0.75rem; text-transform: uppercase; font-weight: 700; color: #94a3b8; margin-bottom: 0.5rem; letter-spacing: 0.05em;">Select Quantity Option</div>
+        <label style="display: flex; align-items: center; justify-content: space-between; padding: 0.4rem 0.5rem; cursor: pointer; border-radius: 6px; font-size: 0.9rem; color: #f8fafc;">
+          <span style="display: flex; align-items: center; gap: 0.5rem;">
+            <input type="radio" name="variant-option" value="single" checked style="accent-color: #06b6d4;">
+            <span>Single Tab</span>
+          </span>
+          <span style="font-weight: 700; color: #38bdf8;">$15.00</span>
+        </label>
+        <label style="display: flex; align-items: center; justify-content: space-between; padding: 0.4rem 0.5rem; cursor: pointer; border-radius: 6px; font-size: 0.9rem; color: #f8fafc; background: rgba(56, 189, 248, 0.06); margin-top: 0.25rem;">
+          <span style="display: flex; align-items: center; gap: 0.5rem;">
+            <input type="radio" name="variant-option" value="2-pack" style="accent-color: #06b6d4;">
+            <span>2-Pack Driver &amp; Passenger Bundle</span>
+          </span>
+          <span style="font-weight: 700; color: #34d399;">$24.00 <span style="font-size: 0.75rem; color: #10b981; font-weight: 800;">(SAVE $6)</span></span>
+        </label>
+      </div>
+      <div class="bundle-callout" style="margin-bottom: 0.75rem; font-size: 0.8rem; color: #38bdf8; display: flex; align-items: center; gap: 0.4rem;">
+        <span>✨</span> <em>Includes 2-pack bundle option at checkout</em>
+      </div>
+      
       <ul class="action-features">
         <li><strong>Material:</strong> Industrial Automotive ASA (100% Solid)</li>
         <li><strong>Fulfillment:</strong> Slant 3D Automated POD Manufacturing</li>
@@ -487,7 +510,7 @@
         <li><strong>Taxes & Shipping:</strong> Calculated securely at Stripe checkout</li>
       </ul>
       <button id="buy-button" class="btn-primary buy-btn" data-part-id="part_toyota_vent_clip_55670">
-        <span>Order Reproduction Part &bull; $14.00</span>
+        <span id="buy-button-text">Order Reproduction Part &bull; $15.00</span>
         <span class="btn-arrow">&rarr;</span>
       </button>
       <div id="buy-error" class="action-error" style="display: none;"></div>
@@ -502,11 +525,31 @@
   </main>
 
   <!-- Interactive Checkout Client Script -->
+  
   <script>
     (function() {
       const buyBtn = document.getElementById('buy-button');
       const errBox = document.getElementById('buy-error');
+      const priceVal = document.getElementById('action-price-val');
+      const btnText = document.getElementById('buy-button-text');
       if (!buyBtn) return;
+
+      let selectedBundle = 'single';
+      const variantRadios = document.querySelectorAll('input[name="variant-option"]');
+      variantRadios.forEach(function(radio) {
+        radio.addEventListener('change', function() {
+          if (radio.checked) {
+            selectedBundle = radio.value;
+            if (selectedBundle === '2-pack') {
+              if (priceVal) priceVal.textContent = '$24.00';
+              if (btnText) btnText.innerHTML = 'Order 2-Pack Bundle &bull; $24.00';
+            } else {
+              if (priceVal) priceVal.textContent = '$15.00';
+              if (btnText) btnText.innerHTML = 'Order Reproduction Part &bull; $15.00';
+            }
+          }
+        });
+      });
 
       buyBtn.addEventListener('click', async function() {
         const partId = buyBtn.getAttribute('data-part-id');
@@ -519,7 +562,7 @@
           const res = await fetch('/api/checkout', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ partId: partId, quantity: 1 })
+            body: JSON.stringify({ partId: partId, quantity: 1, bundle: selectedBundle })
           });
 
           const data = await res.json();
@@ -539,6 +582,7 @@
       });
     })();
   </script>
+  
 
 </body>
 </html>

@@ -24,7 +24,8 @@ async function build() {
 
   const migrationFiles = [
     path.join(MIGRATIONS_DIR, '0001_initial_schema.sql'),
-    path.join(MIGRATIONS_DIR, '0002_seed_parts.sql')
+    path.join(MIGRATIONS_DIR, '0002_seed_parts.sql'),
+    path.join(MIGRATIONS_DIR, '0003_update_pricing_and_monetization.sql')
   ];
 
   for (const file of migrationFiles) {

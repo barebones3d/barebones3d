@@ -87,21 +87,36 @@ async function runPlatformTests() {
     assert.ok(tableNames.includes('fulfillments'), 'Missing fulfillments table');
   });
 
-  await it('Applies 0002_seed_parts.sql and populates catalog', async () => {
+  await it('Applies 0002_seed_parts.sql and 0003_update_pricing_and_monetization.sql and populates catalog', async () => {
     const seedSql = fs.readFileSync(path.join(ROOT_DIR, 'migrations', '0002_seed_parts.sql'), 'utf8');
     await db.execScript(seedSql);
+    const updateSql = fs.readFileSync(path.join(ROOT_DIR, 'migrations', '0003_update_pricing_and_monetization.sql'), 'utf8');
+    await db.execScript(updateSql);
 
     const parts = await getAllActiveParts(db);
     assert.strictEqual(parts.length >= 5, true, 'Expected at least 5 seed parts');
   });
 
-  await it('Resolves commercial and non-commercial parts by slug', async () => {
+  await it('Resolves commercial and non-commercial parts by slug with updated pricing', async () => {
     const subaru = await getPartBySlug(db, 'subaru-blend-door-actuator-gear-72131-fg000');
     assert.ok(subaru, 'Subaru part not found');
     assert.strictEqual(subaru!.oem_part_number, '72131-FG000');
     assert.strictEqual(subaru!.is_commercial_allowed, true);
-    assert.strictEqual(subaru!.retail_price_cents, 1699);
+    assert.strictEqual(subaru!.retail_price_cents, 2600); // Updated to $26.00
     assert.strictEqual(subaru!.material_spec, 'Nylon PA12');
+
+    const bosch = await getPartBySlug(db, 'bosch-washing-machine-drain-filter-handle-00605010');
+    assert.ok(bosch, 'Bosch part not found');
+    assert.strictEqual(bosch!.retail_price_cents, 1650); // Updated to $16.50
+
+    const toyota = await getPartBySlug(db, 'toyota-tundra-air-vent-louver-tab-55670-0c010');
+    assert.ok(toyota, 'Toyota part not found');
+    assert.strictEqual(toyota!.retail_price_cents, 1500); // Updated to $15.00
+
+    const whirlpool = await getPartBySlug(db, 'whirlpool-dishwasher-rack-wheel-w10195416');
+    assert.ok(whirlpool, 'Whirlpool part not found');
+    assert.strictEqual(whirlpool!.is_commercial_allowed, false); // Pivoted to Free STL Only
+    assert.strictEqual(whirlpool!.retail_price_cents, 0);
 
     const pioneer = await getPartBySlug(db, 'pioneer-turntable-anti-skate-arm-wa-104');
     assert.ok(pioneer, 'Pioneer non-commercial part not found');
@@ -148,7 +163,7 @@ async function runPlatformTests() {
 
     assert.strictEqual(product['@type'], 'Product');
     assert.strictEqual(product.mpn, '72131-FG000');
-    assert.strictEqual(product.offers.price, '16.99');
+    assert.strictEqual(product.offers.price, '26.00'); // Validated $26.00
     assert.strictEqual(product.offers.priceCurrency, 'USD');
     assert.strictEqual(product.offers.availability, 'https://schema.org/InStock');
 
@@ -393,8 +408,17 @@ async function runPlatformTests() {
     const guide = (await getGuideByPartId(db, pioneer.id))!;
     const html = renderGuideHtml(pioneer, guide, 'https://barebones3d.com');
 
-    assert.ok(html.includes('Digital STL Only (Non-Commercial)'), 'Missing Non-Commercial badge');
+    assert.ok(html.includes('Digital STL Download Only'), 'Missing Non-Commercial badge');
     assert.ok(!html.includes('Order Reproduction Part &bull;'), 'Buy button should NOT be present on non-commercial part');
+    assert.ok(!html.includes('"@type": "Product"'), 'Should omit Product schema for non-commercial part');
+
+    const whirlpool = (await getPartBySlug(db, 'whirlpool-dishwasher-rack-wheel-w10195416'))!;
+    const wGuide = (await getGuideByPartId(db, whirlpool.id))!;
+    const wHtml = renderGuideHtml(whirlpool, wGuide, 'https://barebones3d.com');
+
+    assert.ok(wHtml.includes('Digital STL Download Only'), 'Whirlpool must render Digital STL Download Only');
+    assert.ok(!wHtml.includes('Order Reproduction Part &bull;'), 'Whirlpool should NOT have buy button');
+    assert.ok(!wHtml.includes('"@type": "Product"'), 'Whirlpool should omit Product schema');
   });
 
   await it('Renders catalog index HTML with search bar and filter tabs', async () => {
@@ -428,7 +452,7 @@ async function runPlatformTests() {
     assert.ok(llmsTxt.includes('72131-FG000'), 'Missing OEM part number');
     assert.ok(llmsTxt.includes('Subaru Impreza'), 'Missing compatible make/model');
     assert.ok(llmsTxt.includes('Nylon PA12'), 'Missing material specification');
-    assert.ok(llmsTxt.includes('$16.99'), 'Missing price display');
+    assert.ok(llmsTxt.includes('$26.00'), 'Missing price display');
     assert.ok(llmsTxt.includes('https://barebones3d.com/guides/subaru-blend-door-actuator-gear-72131-fg000'), 'Missing guide link');
     assert.ok(llmsTxt.includes('## Developer & Agent Interfaces'), 'Missing Developer & Agent Interfaces section');
     assert.ok(llmsTxt.includes('https://barebones3d.com/api/openapi.json'), 'Missing OpenAPI link');
@@ -463,7 +487,7 @@ async function runPlatformTests() {
     assert.ok(md.includes(`title: "${subaru.title}"`), 'Missing frontmatter title');
     assert.ok(md.includes('oem_part_number: "72131-FG000"'), 'Missing frontmatter oem');
     assert.ok(md.includes('material: "Nylon PA12"'), 'Missing frontmatter material');
-    assert.ok(md.includes('price_cents: 1699'), 'Missing frontmatter price');
+    assert.ok(md.includes('price_cents: 2600'), 'Missing frontmatter price');
     assert.ok(md.includes('download_stl_url: "https://barebones3d.com/assets/stl/subaru-blend-door-actuator-gear-72131-fg000.stl"'), 'Missing frontmatter download url');
     assert.ok(md.includes('checkout_api_url: "https://barebones3d.com/api/checkout/create"'), 'Missing frontmatter checkout api url');
     assert.ok(md.includes('## Required Tools & Supplies'), 'Missing Required Tools in markdown');

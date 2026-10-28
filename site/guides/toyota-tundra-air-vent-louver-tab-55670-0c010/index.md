@@ -16,8 +16,8 @@ compatible_vehicles_and_appliances:
     year_start: 2001
     year_end: 2007
 material: "Automotive ASA"
-price_cents: 1400
-price_formatted: "$14.00 USD"
+price_cents: 1500
+price_formatted: "$15.00 USD"
 is_commercial_allowed: true
 license: "CC BY 4.0"
 download_stl_url: "https://barebones3d.com/assets/stl/toyota-tundra-air-vent-louver-tab-55670-0c010.stl"
@@ -32,7 +32,7 @@ canonical_guide_url: "https://barebones3d.com/guides/toyota-tundra-air-vent-louv
 - **Engineering Material:** Automotive ASA (100% solid infill, calibrated printer compensation)
 - **Repair Difficulty:** Easy
 - **Estimated Repair Time:** 15 mins
-- **Commercial Purchase:** $14.00 USD (Printed on-demand in 48h via Slant 3D)
+- **Commercial Purchase:** $15.00 USD (Printed on-demand in 48h via Slant 3D)
 - **Direct STL Download:** [55670-0C010.stl](https://barebones3d.com/assets/stl/toyota-tundra-air-vent-louver-tab-55670-0c010.stl)
 
 ## Required Tools & Supplies

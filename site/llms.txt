@@ -6,11 +6,11 @@ Barebones 3D provides precision diagnostic guides and commercial-grade replaceme
 
 ## Obsolete Replacement Parts Catalog
 
-- [Bosch / Siemens Washing Machine Drain Pump Filter Repair Grip](https://barebones3d.com/guides/bosch-washing-machine-drain-filter-handle-00605010): OEM #00605010 | Fitment: Bosch Serie 4 / 6 / 8 / Maxx (2008-2024), Siemens iQ300 / iQ500 / iQ700 (2009-2024) | Material: PETG Heavy Duty | Price: $13.50 USD
-- [Subaru HVAC Blend Door Actuator Split Gear](https://barebones3d.com/guides/subaru-blend-door-actuator-gear-72131-fg000): OEM #72131-FG000 | Fitment: Subaru Impreza (2008-2014), Subaru WRX / STI (2008-2014), Subaru Forester (2009-2013) | Material: Nylon PA12 | Price: $16.99 USD
-- [Toyota Tundra / Sequoia Dash AC Air Vent Louver Tab](https://barebones3d.com/guides/toyota-tundra-air-vent-louver-tab-55670-0c010): OEM #55670-0C010 | Fitment: Toyota Tundra (2000-2006), Toyota Sequoia (2001-2007) | Material: Automotive ASA | Price: $14.00 USD
-- [Vintage Pioneer PL-12D Tonearm Anti-Skate Weight Guide Arm](https://barebones3d.com/guides/pioneer-turntable-anti-skate-arm-wa-104): OEM #WA-104 | Fitment: Pioneer PL-12D (1974-1977), Pioneer PL-15D (1974-1977), Pioneer PL-112D (1976-1979) | Material: PETG | Price: Free STL Only (Non-Commercial)
-- [Whirlpool / KitchenAid Dishwasher Lower Rack Wheel & Axle Assembly](https://barebones3d.com/guides/whirlpool-dishwasher-rack-wheel-w10195416): OEM #W10195416 | Fitment: Whirlpool Gold Series / Quiet Partner (2005-2023), KitchenAid Architect / KUDE / KDTE Series (2006-2024), Maytag MDB / Jetclean Series (2007-2022) | Material: Food-Safe PETG | Price: $12.50 USD
+- [Bosch / Siemens Washing Machine Drain Pump Filter Repair Grip](https://barebones3d.com/guides/bosch-washing-machine-drain-filter-handle-00605010): OEM #00605010 | Fitment: Bosch Serie 4 / 6 / 8 / Maxx (2008-2024), Siemens iQ300 / iQ500 / iQ700 (2009-2024) | Material: PETG Heavy Duty | Price: $16.50 USD
+- [Subaru HVAC Blend Door Actuator Split Gear](https://barebones3d.com/guides/subaru-blend-door-actuator-gear-72131-fg000): OEM #72131-FG000 | Fitment: Subaru Impreza (2008-2014), Subaru WRX / STI (2008-2014), Subaru Forester (2009-2013) | Material: Nylon PA12 | Price: $26.00 USD
+- [Toyota Tundra / Sequoia Dash AC Air Vent Louver Tab](https://barebones3d.com/guides/toyota-tundra-air-vent-louver-tab-55670-0c010): OEM #55670-0C010 | Fitment: Toyota Tundra (2000-2006), Toyota Sequoia (2001-2007) | Material: Automotive ASA | Price: $15.00 USD (Includes 2-pack bundle option at checkout)
+- [Vintage Pioneer PL-12D Tonearm Anti-Skate Weight Guide Arm](https://barebones3d.com/guides/pioneer-turntable-anti-skate-arm-wa-104): OEM #WA-104 | Fitment: Pioneer PL-12D (1974-1977), Pioneer PL-15D (1974-1977), Pioneer PL-112D (1976-1979) | Material: PETG | Price: Free STL Only
+- [Whirlpool / KitchenAid Dishwasher Lower Rack Wheel & Axle Assembly](https://barebones3d.com/guides/whirlpool-dishwasher-rack-wheel-w10195416): OEM #W10195416 | Fitment: Whirlpool Gold Series / Quiet Partner (2005-2023), KitchenAid Architect / KUDE / KDTE Series (2006-2024), Maytag MDB / Jetclean Series (2007-2022) | Material: Food-Safe PETG | Price: Free STL Only
 
 ## Developer & Agent Interfaces
 

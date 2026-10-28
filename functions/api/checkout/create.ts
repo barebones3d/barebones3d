@@ -72,13 +72,18 @@ export async function onRequestPost(context: PagesContext): Promise<Response> {
 
     const siteUrl = env.SITE_URL || 'https://barebones3d.com';
     const isMock = env.MOCK_SERVICES === 'true';
+    const bundle = body?.bundle;
+    const isToyota2Pack = (bundle === '2-pack' || bundle === '2pack') && 
+                          (part.oem_part_number === '55670-0C010' || part.slug.includes('toyota-tundra-air-vent-louver'));
+    const effectivePriceCents = isToyota2Pack ? 2400 : part.retail_price_cents;
 
     const session = await createCheckoutSession({
       part,
       quantity,
       siteUrl,
       stripeSecretKey: env.STRIPE_SECRET_KEY,
-      isMock
+      isMock,
+      bundle
     });
 
     return new Response(JSON.stringify({
@@ -86,7 +91,7 @@ export async function onRequestPost(context: PagesContext): Promise<Response> {
       checkout_url: session.url,
       session_id: session.sessionId,
       part_id: part.id,
-      retail_price_cents: part.retail_price_cents
+      retail_price_cents: effectivePriceCents
     }), {
       status: 200,
       headers: corsHeaders

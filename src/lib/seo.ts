@@ -113,7 +113,7 @@ export function generateHowToSchema(part: Part, guide: Guide, siteUrl: string): 
 export function generateProductSchema(part: Part, siteUrl: string): Record<string, any> {
   const cleanSiteUrl = siteUrl.replace(/\/$/, '');
   const guideUrl = `${cleanSiteUrl}/guides/${part.slug}`;
-  const priceDollars = (part.retail_price_cents / 100).toFixed(2);
+  const priceDollars = part.is_commercial_allowed ? (part.retail_price_cents / 100).toFixed(2) : '0.00';
   const primaryMake = part.compatible_makes_models[0]?.make || 'Aftermarket';
   const images = getStandardPartImages(part, siteUrl);
 

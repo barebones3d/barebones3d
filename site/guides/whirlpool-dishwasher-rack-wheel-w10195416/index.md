@@ -26,12 +26,12 @@ compatible_vehicles_and_appliances:
     year_start: 2004
     year_end: 2021
 material: "Food-Safe PETG"
-price_cents: 1250
-price_formatted: "$12.50 USD"
-is_commercial_allowed: true
+price_cents: null
+price_formatted: "Free STL Only"
+is_commercial_allowed: false
 license: "CC BY 4.0"
 download_stl_url: "https://barebones3d.com/assets/stl/whirlpool-dishwasher-rack-wheel-w10195416.stl"
-checkout_api_url: "https://barebones3d.com/api/checkout/create"
+checkout_api_url: null
 canonical_guide_url: "https://barebones3d.com/guides/whirlpool-dishwasher-rack-wheel-w10195416"
 ---
 
@@ -42,7 +42,7 @@ canonical_guide_url: "https://barebones3d.com/guides/whirlpool-dishwasher-rack-w
 - **Engineering Material:** Food-Safe PETG (100% solid infill, calibrated printer compensation)
 - **Repair Difficulty:** Beginner
 - **Estimated Repair Time:** 10 mins
-- **Commercial Purchase:** $12.50 USD (Printed on-demand in 48h via Slant 3D)
+- **Commercial Purchase:** Digital STL Only (Commercial reproduction restricted by author license)
 - **Direct STL Download:** [W10195416.stl](https://barebones3d.com/assets/stl/whirlpool-dishwasher-rack-wheel-w10195416.stl)
 
 ## Required Tools & Supplies

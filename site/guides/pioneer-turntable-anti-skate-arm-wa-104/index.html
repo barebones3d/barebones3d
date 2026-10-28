@@ -118,73 +118,7 @@
   ]
 }
   </script>
-  <script type="application/ld+json">
-  {
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "@id": "https://barebones3d.com/guides/pioneer-turntable-anti-skate-arm-wa-104#product",
-  "name": "Vintage Pioneer PL-12D Tonearm Anti-Skate Weight Guide Arm - Aftermarket OEM #WA-104",
-  "description": "Commercial-grade 3D printed replacement for discontinued OEM #WA-104. Manufactured in high-performance PETG with precision printer compensation.",
-  "sku": "BB3D-WA-104",
-  "mpn": "WA-104",
-  "brand": {
-    "@type": "Brand",
-    "name": "Barebones 3D"
-  },
-  "category": "Hardware > Replacement Parts & Diagnostic Components",
-  "material": "PETG",
-  "url": "https://barebones3d.com/guides/pioneer-turntable-anti-skate-arm-wa-104",
-  "image": [
-    {
-      "@type": "ImageObject",
-      "url": "https://barebones3d.com/assets/parts/wa-104-pioneer-turntable-anti-skate-arm-wa-104-reproduction.webp",
-      "width": 1920,
-      "height": 1080,
-      "caption": "Original broken plastic Vintage Pioneer PL-12D Tonearm Anti-Skate Weight Guide Arm (OEM #WA-104) shown side-by-side with reinforced 3D printed PETG reproduction."
-    },
-    {
-      "@type": "ImageObject",
-      "url": "https://barebones3d.com/assets/parts/wa-104-pioneer-turntable-anti-skate-arm-wa-104-broken.webp",
-      "width": 1920,
-      "height": 1080,
-      "caption": "Failed OEM #WA-104 component with typical stress fatigue cracking."
-    },
-    {
-      "@type": "ImageObject",
-      "url": "https://barebones3d.com/assets/parts/wa-104-pioneer-turntable-anti-skate-arm-wa-104-installed.webp",
-      "width": 1920,
-      "height": 1080,
-      "caption": "Reproduction PETG component fully installed in Pioneer assembly."
-    }
-  ],
-  "offers": {
-    "@type": "Offer",
-    "url": "https://barebones3d.com/guides/pioneer-turntable-anti-skate-arm-wa-104",
-    "priceCurrency": "USD",
-    "price": "0.00",
-    "priceValidUntil": "2028-12-31",
-    "itemCondition": "https://schema.org/NewCondition",
-    "availability": "https://schema.org/OutOfStock",
-    "seller": {
-      "@type": "Organization",
-      "name": "Barebones 3D, L.L.C.",
-      "url": "https://barebones3d.com"
-    }
-  },
-  "additionalProperty": [
-    {
-      "@type": "PropertyValue",
-      "name": "Superseded OEM Numbers",
-      "value": "WA-104A, PLA-12-ANTISKATE"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "Primary OEM Fitment",
-      "value": "Pioneer"
-    }
-  ]
-}
-  </script>
+  
 </head>
 <body>
 
@@ -467,17 +401,19 @@
           
     <div class="action-card action-non-commercial">
       <div class="action-badge-row">
-        <span class="action-pill-nc">NON-COMMERCIAL LICENSE</span>
+        <span class="action-pill-nc">FREE STL ONLY</span>
+        <span class="action-pill-lead">⚡ Open Source</span>
       </div>
-      <h3 class="action-title">Digital STL Only (Non-Commercial)</h3>
+      <h3 class="action-title">Digital STL Download Only</h3>
       <p class="nc-explanation">
-        The original author shared this 3D design under a <strong>CC BY-NC 4.0</strong> non-commercial license.
-        In strict compliance with open-source licenses, Barebones 3D does not offer paid commercial reproductions for this item.
+        The original author shared this 3D design under a <strong>CC BY-NC 4.0</strong> non-commercial license. In strict compliance with open-source creator rights, Barebones 3D does not offer paid commercial reproductions for this item.
       </p>
       <div class="nc-callout">
-        <span>⚠️ Commercial manufacturing disabled by license.</span>
-        <span>Download the verified STL file to 3D print yourself for personal repair.</span>
+        <span>📥 Download the verified, pre-calibrated STL file to 3D print yourself on Bambu, Prusa, or any FDM printer.</span>
       </div>
+      <a href="/api/parts/part_pioneer_turntable_wa104/download" class="btn-primary buy-btn" style="text-align: center; justify-content: center; margin-top: 1rem; text-decoration: none;">
+        <span>📥 Download Free STL (.stl)</span>
+      </a>
     </div>
   
 
@@ -488,43 +424,7 @@
   </main>
 
   <!-- Interactive Checkout Client Script -->
-  <script>
-    (function() {
-      const buyBtn = document.getElementById('buy-button');
-      const errBox = document.getElementById('buy-error');
-      if (!buyBtn) return;
-
-      buyBtn.addEventListener('click', async function() {
-        const partId = buyBtn.getAttribute('data-part-id');
-        const origText = buyBtn.innerHTML;
-        buyBtn.disabled = true;
-        buyBtn.innerHTML = '<span>⚡ Preparing Stripe Checkout...</span>';
-        if (errBox) errBox.style.display = 'none';
-
-        try {
-          const res = await fetch('/api/checkout', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ partId: partId, quantity: 1 })
-          });
-
-          const data = await res.json();
-          if (!res.ok || !data.url) {
-            throw new Error(data.error || 'Failed to initiate checkout');
-          }
-
-          window.location.href = data.url;
-        } catch (err) {
-          buyBtn.disabled = false;
-          buyBtn.innerHTML = origText;
-          if (errBox) {
-            errBox.textContent = err.message || 'Checkout failed. Please try again.';
-            errBox.style.display = 'block';
-          }
-        }
-      });
-    })();
-  </script>
+  
 
 </body>
 </html>

@@ -28,7 +28,7 @@ export async function onRequestPost(context: PagesContext): Promise<Response> {
       });
     }
 
-    const { partId, quantity = 1 } = body || {};
+    const { partId, quantity = 1, bundle } = body || {};
     if (!partId || typeof partId !== 'string') {
       return new Response(JSON.stringify({ error: 'Missing or invalid partId' }), {
         status: 400,
@@ -73,7 +73,8 @@ export async function onRequestPost(context: PagesContext): Promise<Response> {
       quantity: Math.max(1, Math.min(Number(quantity) || 1, 50)),
       siteUrl,
       stripeSecretKey: env.STRIPE_SECRET_KEY,
-      isMock
+      isMock,
+      bundle
     });
 
     return new Response(JSON.stringify({

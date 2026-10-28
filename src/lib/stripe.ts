@@ -6,6 +6,7 @@ export interface CreateCheckoutSessionOptions {
   siteUrl: string;
   stripeSecretKey?: string;
   isMock?: boolean;
+  bundle?: string;
 }
 
 export interface CheckoutSessionResult {
@@ -20,7 +21,7 @@ export interface CheckoutSessionResult {
 export async function createCheckoutSession(
   options: CreateCheckoutSessionOptions
 ): Promise<CheckoutSessionResult> {
-  const { part, quantity = 1, siteUrl, stripeSecretKey, isMock } = options;
+  const { part, quantity = 1, siteUrl, stripeSecretKey, isMock, bundle } = options;
 
   if (!part.is_commercial_allowed) {
     throw new Error('Commercial reproduction is not permitted under this part\'s license.');
@@ -37,6 +38,17 @@ export async function createCheckoutSession(
     };
   }
 
+  // Handle Toyota 2-pack bundle special ($24.00 vs $15.00 single)
+  const isToyota2Pack = (bundle === '2-pack' || bundle === '2pack') && 
+                        (part.oem_part_number === '55670-0C010' || part.slug.includes('toyota-tundra-air-vent-louver'));
+  const effectivePriceCents = isToyota2Pack ? 2400 : part.retail_price_cents;
+  const productName = isToyota2Pack
+    ? `${part.title} (2-Pack Driver & Passenger Bundle)`
+    : `${part.title} (OEM #${part.oem_part_number})`;
+  const productDescription = isToyota2Pack
+    ? `Set of 2 3D Printed Commercial Reproductions in ${part.material_spec}`
+    : `3D Printed Reproduction in ${part.material_spec}`;
+
   // Live Stripe API call using standard fetch and URLSearchParams
   const params = new URLSearchParams();
   params.append('mode', 'payment');
@@ -45,11 +57,14 @@ export async function createCheckoutSession(
   
   // Line items
   params.append('line_items[0][price_data][currency]', 'usd');
-  params.append('line_items[0][price_data][unit_amount]', String(part.retail_price_cents));
-  params.append('line_items[0][price_data][product_data][name]', `${part.title} (OEM #${part.oem_part_number})`);
-  params.append('line_items[0][price_data][product_data][description]', `3D Printed Reproduction in ${part.material_spec}`);
+  params.append('line_items[0][price_data][unit_amount]', String(effectivePriceCents));
+  params.append('line_items[0][price_data][product_data][name]', productName);
+  params.append('line_items[0][price_data][product_data][description]', productDescription);
   params.append('line_items[0][price_data][product_data][metadata][part_id]', part.id);
   params.append('line_items[0][price_data][product_data][metadata][oem_part_number]', part.oem_part_number);
+  if (isToyota2Pack) {
+    params.append('line_items[0][price_data][product_data][metadata][bundle]', '2-pack');
+  }
   params.append('line_items[0][quantity]', String(quantity));
 
   // Automatic Tax
@@ -63,6 +78,9 @@ export async function createCheckoutSession(
   params.append('metadata[part_id]', part.id);
   params.append('metadata[material_spec]', part.material_spec);
   params.append('metadata[slug]', part.slug);
+  if (isToyota2Pack) {
+    params.append('metadata[bundle]', '2-pack');
+  }
 
   const response = await fetch('https://api.stripe.com/v1/checkout/sessions', {
     method: 'POST',

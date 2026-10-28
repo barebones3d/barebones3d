@@ -83,6 +83,8 @@ export function renderGuideHtml(part: Part, guide: Guide, siteUrl: string): stri
     </details>
   `).join('');
 
+  const isToyotaTab = part.oem_part_number === '55670-0C010';
+
   // Commercial license enforcer block
   const commercialActionBoxHtml = part.is_commercial_allowed ? `
     <div class="action-card action-commercial">
@@ -92,9 +94,31 @@ export function renderGuideHtml(part: Part, guide: Guide, siteUrl: string): stri
       </div>
       <h3 class="action-title">Order Reproduction Part</h3>
       <div class="action-price-row">
-        <span class="action-price">$${priceDollars}</span>
+        <span class="action-price" id="action-price-val">$${priceDollars}</span>
         <span class="action-currency">USD</span>
       </div>
+      ${isToyotaTab ? `
+      <div class="bundle-selector" style="margin: 0.85rem 0; padding: 0.75rem; background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 8px;">
+        <div style="font-size: 0.75rem; text-transform: uppercase; font-weight: 700; color: #94a3b8; margin-bottom: 0.5rem; letter-spacing: 0.05em;">Select Quantity Option</div>
+        <label style="display: flex; align-items: center; justify-content: space-between; padding: 0.4rem 0.5rem; cursor: pointer; border-radius: 6px; font-size: 0.9rem; color: #f8fafc;">
+          <span style="display: flex; align-items: center; gap: 0.5rem;">
+            <input type="radio" name="variant-option" value="single" checked style="accent-color: #06b6d4;">
+            <span>Single Tab</span>
+          </span>
+          <span style="font-weight: 700; color: #38bdf8;">$15.00</span>
+        </label>
+        <label style="display: flex; align-items: center; justify-content: space-between; padding: 0.4rem 0.5rem; cursor: pointer; border-radius: 6px; font-size: 0.9rem; color: #f8fafc; background: rgba(56, 189, 248, 0.06); margin-top: 0.25rem;">
+          <span style="display: flex; align-items: center; gap: 0.5rem;">
+            <input type="radio" name="variant-option" value="2-pack" style="accent-color: #06b6d4;">
+            <span>2-Pack Driver &amp; Passenger Bundle</span>
+          </span>
+          <span style="font-weight: 700; color: #34d399;">$24.00 <span style="font-size: 0.75rem; color: #10b981; font-weight: 800;">(SAVE $6)</span></span>
+        </label>
+      </div>
+      <div class="bundle-callout" style="margin-bottom: 0.75rem; font-size: 0.8rem; color: #38bdf8; display: flex; align-items: center; gap: 0.4rem;">
+        <span>✨</span> <em>Includes 2-pack bundle option at checkout</em>
+      </div>
+      ` : ''}
       <ul class="action-features">
         <li><strong>Material:</strong> Industrial ${part.material_spec} (100% Solid)</li>
         <li><strong>Fulfillment:</strong> Slant 3D Automated POD Manufacturing</li>
@@ -102,7 +126,7 @@ export function renderGuideHtml(part: Part, guide: Guide, siteUrl: string): stri
         <li><strong>Taxes & Shipping:</strong> Calculated securely at Stripe checkout</li>
       </ul>
       <button id="buy-button" class="btn-primary buy-btn" data-part-id="${part.id}">
-        <span>Order Reproduction Part &bull; $${priceDollars}</span>
+        <span id="buy-button-text">Order Reproduction Part &bull; $${priceDollars}</span>
         <span class="btn-arrow">&rarr;</span>
       </button>
       <div id="buy-error" class="action-error" style="display: none;"></div>
@@ -111,17 +135,21 @@ export function renderGuideHtml(part: Part, guide: Guide, siteUrl: string): stri
   ` : `
     <div class="action-card action-non-commercial">
       <div class="action-badge-row">
-        <span class="action-pill-nc">NON-COMMERCIAL LICENSE</span>
+        <span class="action-pill-nc">FREE STL ONLY</span>
+        <span class="action-pill-lead">⚡ Open Source</span>
       </div>
-      <h3 class="action-title">Digital STL Only (Non-Commercial)</h3>
+      <h3 class="action-title">Digital STL Download Only</h3>
       <p class="nc-explanation">
-        The original author shared this 3D design under a <strong>${part.license_type}</strong> non-commercial license.
-        In strict compliance with open-source licenses, Barebones 3D does not offer paid commercial reproductions for this item.
+        ${part.id === 'part_whirlpool_wheel_w10195416' 
+          ? 'Due to mass-market injection-molded commodity multi-packs, this part is provided strictly as a verified, free open-source 3D printable STL for personal DIY repair.' 
+          : `The original author shared this 3D design under a <strong>${part.license_type}</strong> non-commercial license. In strict compliance with open-source creator rights, Barebones 3D does not offer paid commercial reproductions for this item.`}
       </p>
       <div class="nc-callout">
-        <span>⚠️ Commercial manufacturing disabled by license.</span>
-        <span>Download the verified STL file to 3D print yourself for personal repair.</span>
+        <span>📥 Download the verified, pre-calibrated STL file to 3D print yourself on Bambu, Prusa, or any FDM printer.</span>
       </div>
+      <a href="/api/parts/${part.id}/download" class="btn-primary buy-btn" style="text-align: center; justify-content: center; margin-top: 1rem; text-decoration: none;">
+        <span>📥 Download Free STL (.stl)</span>
+      </a>
     </div>
   `;
 
@@ -148,9 +176,10 @@ export function renderGuideHtml(part: Part, guide: Guide, siteUrl: string): stri
   <script type="application/ld+json">
   ${JSON.stringify(howToSchema, null, 2)}
   </script>
+  ${part.is_commercial_allowed ? `
   <script type="application/ld+json">
   ${JSON.stringify(productSchema, null, 2)}
-  </script>
+  </script>` : ''}
 </head>
 <body>
 
@@ -319,11 +348,31 @@ export function renderGuideHtml(part: Part, guide: Guide, siteUrl: string): stri
   </main>
 
   <!-- Interactive Checkout Client Script -->
+  ${part.is_commercial_allowed ? `
   <script>
     (function() {
       const buyBtn = document.getElementById('buy-button');
       const errBox = document.getElementById('buy-error');
+      const priceVal = document.getElementById('action-price-val');
+      const btnText = document.getElementById('buy-button-text');
       if (!buyBtn) return;
+
+      let selectedBundle = 'single';
+      const variantRadios = document.querySelectorAll('input[name="variant-option"]');
+      variantRadios.forEach(function(radio) {
+        radio.addEventListener('change', function() {
+          if (radio.checked) {
+            selectedBundle = radio.value;
+            if (selectedBundle === '2-pack') {
+              if (priceVal) priceVal.textContent = '$24.00';
+              if (btnText) btnText.innerHTML = 'Order 2-Pack Bundle &bull; $24.00';
+            } else {
+              if (priceVal) priceVal.textContent = '$${priceDollars}';
+              if (btnText) btnText.innerHTML = 'Order Reproduction Part &bull; $${priceDollars}';
+            }
+          }
+        });
+      });
 
       buyBtn.addEventListener('click', async function() {
         const partId = buyBtn.getAttribute('data-part-id');
@@ -336,7 +385,7 @@ export function renderGuideHtml(part: Part, guide: Guide, siteUrl: string): stri
           const res = await fetch('/api/checkout', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ partId: partId, quantity: 1 })
+            body: JSON.stringify({ partId: partId, quantity: 1, bundle: selectedBundle })
           });
 
           const data = await res.json();
@@ -356,6 +405,7 @@ export function renderGuideHtml(part: Part, guide: Guide, siteUrl: string): stri
       });
     })();
   </script>
+  ` : ''}
 
 </body>
 </html>`;

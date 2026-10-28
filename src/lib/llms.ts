@@ -7,9 +7,12 @@ export function generateLlmsTxt(parts: Part[], siteUrl: string): string {
   const cleanSiteUrl = siteUrl.replace(/\/$/, '');
 
   const catalogLines = parts.map(part => {
-    const priceStr = part.is_commercial_allowed 
+    let priceStr = part.is_commercial_allowed 
       ? `$${(part.retail_price_cents / 100).toFixed(2)} USD` 
-      : 'Free STL Only (Non-Commercial)';
+      : 'Free STL Only';
+    if (part.oem_part_number === '55670-0C010') {
+      priceStr += ' (Includes 2-pack bundle option at checkout)';
+    }
 
     const makes = part.compatible_makes_models
       .map(c => `${c.make} ${c.model}${c.year_start ? ` (${c.year_start}-${c.year_end || 'Present'})` : ''}`)

@@ -14,7 +14,7 @@ INSERT OR REPLACE INTO parts (
   '["72131-FG001", "72131-FG002", "72131-FG003"]',
   '[{"make":"Subaru","model":"Impreza","year_start":2008,"year_end":2014},{"make":"Subaru","model":"WRX / STI","year_start":2008,"year_end":2014},{"make":"Subaru","model":"Forester","year_start":2009,"year_end":2013},{"make":"Subaru","model":"XV Crosstrek","year_start":2013,"year_end":2017}]',
   'Nylon PA12',
-  1699,
+  2600,
   'parts/subaru-blend-door-gear-72131-fg000.stl',
   'https://www.printables.com/model/subaru-blend-door-gear',
   'CC BY 4.0',
@@ -58,12 +58,12 @@ INSERT OR REPLACE INTO parts (
   '["W10195417", "1872128", "AH3407039", "EA3407039", "PS3407039"]',
   '[{"make":"Whirlpool","model":"Gold Series / Quiet Partner","year_start":2005,"year_end":2023},{"make":"KitchenAid","model":"Architect / KUDE / KDTE Series","year_start":2006,"year_end":2024},{"make":"Maytag","model":"MDB / Jetclean Series","year_start":2007,"year_end":2022},{"make":"Kenmore","model":"665 Series Ultra Wash","year_start":2004,"year_end":2021}]',
   'Food-Safe PETG',
-  1250,
+  0,
   'parts/whirlpool-dishwasher-rack-wheel-w10195416.stl',
   'https://www.printables.com/model/dishwasher-wheel-heavy-duty',
   'CC BY 4.0',
   'Engineered by ApplianceRepairLab, distributed under CC BY 4.0.',
-  1,
+  0, -- Free STL Only (Monetization Pivot: uncompetitive against commodity injection-molded 8-packs)
   1
 );
 
@@ -100,7 +100,7 @@ INSERT OR REPLACE INTO parts (
   '["55670-0C020", "55680-0C010", "55660-0C010"]',
   '[{"make":"Toyota","model":"Tundra","year_start":2000,"year_end":2006},{"make":"Toyota","model":"Sequoia","year_start":2001,"year_end":2007}]',
   'Automotive ASA',
-  1400,
+  1500,
   'parts/toyota-vent-clip-55670-0c010.stl',
   'https://www.printables.com/model/toyota-tundra-vent-tab-repair',
   'CC BY 4.0',
@@ -141,7 +141,7 @@ INSERT OR REPLACE INTO parts (
   '["605010", "00647920", "647920", "00602008"]',
   '[{"make":"Bosch","model":"Serie 4 / 6 / 8 / Maxx","year_start":2008,"year_end":2024},{"make":"Siemens","model":"iQ300 / iQ500 / iQ700","year_start":2009,"year_end":2024}]',
   'PETG Heavy Duty',
-  1350,
+  1650,
   'parts/bosch-drain-filter-handle-00605010.stl',
   'https://www.printables.com/model/bosch-drain-filter-knob-repair',
   'CC BY 4.0',

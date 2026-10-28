@@ -17,8 +17,8 @@ compatible_vehicles_and_appliances:
     year_start: 2009
     year_end: 2024
 material: "PETG Heavy Duty"
-price_cents: 1350
-price_formatted: "$13.50 USD"
+price_cents: 1650
+price_formatted: "$16.50 USD"
 is_commercial_allowed: true
 license: "CC BY 4.0"
 download_stl_url: "https://barebones3d.com/assets/stl/bosch-washing-machine-drain-filter-handle-00605010.stl"
@@ -33,7 +33,7 @@ canonical_guide_url: "https://barebones3d.com/guides/bosch-washing-machine-drain
 - **Engineering Material:** PETG Heavy Duty (100% solid infill, calibrated printer compensation)
 - **Repair Difficulty:** Easy
 - **Estimated Repair Time:** 20 mins
-- **Commercial Purchase:** $13.50 USD (Printed on-demand in 48h via Slant 3D)
+- **Commercial Purchase:** $16.50 USD (Printed on-demand in 48h via Slant 3D)
 - **Direct STL Download:** [00605010.stl](https://barebones3d.com/assets/stl/bosch-washing-machine-drain-filter-handle-00605010.stl)
 
 ## Required Tools & Supplies

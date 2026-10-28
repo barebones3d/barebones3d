@@ -24,8 +24,8 @@ compatible_vehicles_and_appliances:
     year_start: 2013
     year_end: 2017
 material: "Nylon PA12"
-price_cents: 1699
-price_formatted: "$16.99 USD"
+price_cents: 2600
+price_formatted: "$26.00 USD"
 is_commercial_allowed: true
 license: "CC BY 4.0"
 download_stl_url: "https://barebones3d.com/assets/stl/subaru-blend-door-actuator-gear-72131-fg000.stl"
@@ -40,7 +40,7 @@ canonical_guide_url: "https://barebones3d.com/guides/subaru-blend-door-actuator-
 - **Engineering Material:** Nylon PA12 (100% solid infill, calibrated printer compensation)
 - **Repair Difficulty:** Moderate
 - **Estimated Repair Time:** 45 mins
-- **Commercial Purchase:** $16.99 USD (Printed on-demand in 48h via Slant 3D)
+- **Commercial Purchase:** $26.00 USD (Printed on-demand in 48h via Slant 3D)
 - **Direct STL Download:** [72131-FG000.stl](https://barebones3d.com/assets/stl/subaru-blend-door-actuator-gear-72131-fg000.stl)
 
 ## Required Tools & Supplies

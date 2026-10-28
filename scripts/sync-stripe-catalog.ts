@@ -45,7 +45,8 @@ async function run() {
   const migrationsDir = path.join(process.cwd(), 'migrations');
   const migrationFiles = [
     '0001_initial_schema.sql',
-    '0002_seed_parts.sql'
+    '0002_seed_parts.sql',
+    '0003_update_pricing_and_monetization.sql'
   ];
 
   for (const file of migrationFiles) {
@@ -71,6 +72,33 @@ async function run() {
       successCount++;
     } catch (err: any) {
       console.log(`  -> ❌ FAILED: ${err.message}`);
+    }
+  }
+
+  // Deactivate any previously commercial products that have pivoted to Free STL Only
+  for (const part of nonCommercialParts) {
+    try {
+      const listRes = await fetch(`https://api.stripe.com/v1/products?limit=100`, {
+        headers: { 'Authorization': `Bearer ${stripeSecretKey}` }
+      });
+      if (listRes.ok) {
+        const listData: any = await listRes.json();
+        const existing = (listData.data || []).find((p: any) => p.metadata?.part_id === part.id || p.metadata?.slug === part.slug);
+        if (existing && existing.active) {
+          console.log(`Deactivating non-commercial/commodity product in Stripe: ${part.title} (${existing.id})...`);
+          await fetch(`https://api.stripe.com/v1/products/${existing.id}`, {
+            method: 'POST',
+            headers: {
+              'Authorization': `Bearer ${stripeSecretKey}`,
+              'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: new URLSearchParams({ active: 'false' }).toString()
+          });
+          console.log(`  -> ✅ [DEACTIVATED] Product archived: ${existing.id}`);
+        }
+      }
+    } catch (err: any) {
+      console.log(`  -> ⚠️ Archive note: ${err.message}`);
     }
   }
 
