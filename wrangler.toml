@@ -27,7 +27,8 @@ APP_ENV = "production"
 SITE_URL = "https://barebones3d.com"
 PUBLIC_BUCKET_URL = "https://assets.barebones3d.com"
 FULFILLMENT_PROVIDER = "slant3d"
-SLANT3D_API_URL = "https://api.slant3d.com/v1"
+SLANT3D_API_URL = "https://slant3dapi.com/v2/api"
+SLANT3D_PLATFORM_ID = "ced31d72-901f-4e75-8db4-964169ff34dc"
 MOCK_SERVICES = "false"
 
 # Note: Secret tokens (STRIPE_SECRET_KEY, STRIPE_WEBHOOK_SECRET, SLANT3D_API_KEY)

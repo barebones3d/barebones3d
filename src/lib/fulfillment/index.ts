@@ -27,6 +27,7 @@ export function getFulfillmentProvider(env: EnvBindings): FulfillmentProvider {
 
   return new Slant3DFulfillmentProvider({
     apiKey: env.SLANT3D_API_KEY!,
-    apiUrl: env.SLANT3D_API_URL
+    apiUrl: env.SLANT3D_API_URL,
+    platformId: env.SLANT3D_PLATFORM_ID
   });
 }

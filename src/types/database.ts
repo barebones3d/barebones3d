@@ -127,6 +127,7 @@ export interface EnvBindings {
   STRIPE_WEBHOOK_ENDPOINT_ID?: string;
   SLANT3D_API_KEY?: string;
   SLANT3D_API_URL?: string;
+  SLANT3D_PLATFORM_ID?: string;
   FULFILLMENT_PROVIDER?: string;
   MOCK_SERVICES?: string;
 }

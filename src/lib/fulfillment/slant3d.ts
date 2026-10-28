@@ -8,6 +8,7 @@ import type {
 export interface Slant3DConfig {
   apiKey: string;
   apiUrl?: string;
+  platformId?: string;
 }
 
 /**
@@ -30,10 +31,12 @@ export class Slant3DFulfillmentProvider implements FulfillmentProvider {
   public readonly name = 'slant3d';
   private apiKey: string;
   private apiUrl: string;
+  private platformId: string;
 
   constructor(config: Slant3DConfig) {
     this.apiKey = config.apiKey;
-    this.apiUrl = (config.apiUrl || 'https://api.slant3d.com/v1').replace(/\/$/, '');
+    this.apiUrl = (config.apiUrl || 'https://slant3dapi.com/v2/api').replace(/\/$/, '');
+    this.platformId = config.platformId || 'ced31d72-901f-4e75-8db4-964169ff34dc';
   }
 
   public async submitOrder(request: FulfillmentOrderRequest): Promise<FulfillmentOrderResult> {
@@ -71,7 +74,8 @@ export class Slant3DFulfillmentProvider implements FulfillmentProvider {
       headers: {
         'Content-Type': 'application/json',
         'api-key': this.apiKey,
-        'Authorization': `Bearer ${this.apiKey}`
+        'Authorization': `Bearer ${this.apiKey}`,
+        'X-Slant-Platform-Id': this.platformId
       },
       body: JSON.stringify(payload)
     });
@@ -103,7 +107,8 @@ export class Slant3DFulfillmentProvider implements FulfillmentProvider {
       method: 'GET',
       headers: {
         'api-key': this.apiKey,
-        'Authorization': `Bearer ${this.apiKey}`
+        'Authorization': `Bearer ${this.apiKey}`,
+        'X-Slant-Platform-Id': this.platformId
       }
     });
 
