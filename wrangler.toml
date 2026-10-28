@@ -1,0 +1,34 @@
+name = "barebones3d"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+pages_build_output_dir = "site"
+
+# -------------------------------------------------------------
+# Cloudflare D1 Database Binding
+# -------------------------------------------------------------
+[[d1_databases]]
+binding = "DB"
+database_name = "barebones3d-db"
+database_id = "704b8810-4e45-4b2c-b657-18f4c8105ce6"
+migrations_dir = "migrations"
+
+# -------------------------------------------------------------
+# Cloudflare R2 Object Storage Binding (STLs & Photography)
+# -------------------------------------------------------------
+# [[r2_buckets]]
+# binding = "BUCKET_ASSETS"
+# bucket_name = "barebones3d-assets"
+
+# -------------------------------------------------------------
+# Environment Variables & Application Configuration
+# -------------------------------------------------------------
+[vars]
+APP_ENV = "production"
+SITE_URL = "https://barebones3d.com"
+PUBLIC_BUCKET_URL = "https://assets.barebones3d.com"
+FULFILLMENT_PROVIDER = "slant3d"
+SLANT3D_API_URL = "https://api.slant3d.com/v1"
+MOCK_SERVICES = "false"
+
+# Note: Secret tokens (STRIPE_SECRET_KEY, STRIPE_WEBHOOK_SECRET, SLANT3D_API_KEY)
+# must be provisioned via `npx wrangler secret put <NAME>` or the Cloudflare Dashboard.

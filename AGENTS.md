@@ -368,7 +368,7 @@ npm test
    * Update [`site/index.html`](file:///Users/brandonpersonal/Documents/Git/barebones3d/site/index.html) directory cards if needed.
 4. **Deploy to Cloudflare Pages:**
    ```bash
-   CLOUDFLARE_ACCOUNT_ID=2bbe914ca4d82460c51d668407bb3dbd npx wrangler pages deploy site --project-name barebones3d --branch main
+   CLOUDFLARE_ACCOUNT_ID=c7f49bafead82d5c6d15477b5cdeb10e npx wrangler pages deploy site --project-name barebones3d --branch main
    ```
 5. **Git Commit & Push:**
    Commit clean changes and push to `origin/main`.

@@ -1,15 +1,22 @@
 {
   "name": "barebones3d",
   "version": "1.0.0",
-  "description": "Barebones 3D - Engineering Diagnostic Hubs & Client-Side Parametric 3D CAD Generator",
+  "description": "Barebones 3D - Engineering Diagnostic Hubs, Parametric CAD & Obsolete OEM Repair Platform",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "npm --prefix generator run dev",
     "build:generator": "npm --prefix generator run build",
     "sync:site": "rm -rf site/generator/* && cp -r generator/dist/* site/generator/ && sed 's|\\./assets/|/generator/assets/|g' generator/dist/index.html > site/generator.html",
-    "build": "npm run build:generator && npm run sync:site",
-    "deploy": "npm run build && wrangler pages deploy site --project-name barebones3d --branch main",
-    "test": "npm --prefix generator test"
+    "build:guides": "node scripts/build-guides.ts",
+    "build": "npm run build:generator && npm run sync:site && npm run build:guides",
+    "test:generator": "npm --prefix generator test",
+    "test:platform": "node tests/platform.test.ts",
+    "test": "npm run test:generator && npm run test:platform",
+    "ingest": "node scripts/ingest.ts",
+    "discover": "node scripts/discover.ts",
+    "typecheck": "./generator/node_modules/typescript/bin/tsc --project tsconfig.json",
+    "deploy": "npm run build && wrangler pages deploy site --project-name barebones3d --branch main"
   },
   "devDependencies": {},
   "dependencies": {}

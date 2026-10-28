@@ -1,0 +1,470 @@
+# barebones3d.com
+
+> Open-source repair tutorials, downloadable 3D CAD files, and reproduction engineering prints for obsolete OEM hardware.
+
+Barebones 3D provides precision diagnostic guides and commercial-grade replacement components for discontinued automotive, appliance, and electromechanical assemblies. All designs feature pre-calibrated printer tolerance compensation (+0.15mm) and are verified 100% watertight 2-manifold solids.
+
+## Obsolete Replacement Parts Catalog
+
+- [Bosch / Siemens Washing Machine Drain Pump Filter Repair Grip](https://barebones3d.com/guides/bosch-washing-machine-drain-filter-handle-00605010): OEM #00605010 | Fitment: Bosch Serie 4 / 6 / 8 / Maxx (2008-2024), Siemens iQ300 / iQ500 / iQ700 (2009-2024) | Material: PETG Heavy Duty | Price: $13.50 USD
+- [Subaru HVAC Blend Door Actuator Split Gear](https://barebones3d.com/guides/subaru-blend-door-actuator-gear-72131-fg000): OEM #72131-FG000 | Fitment: Subaru Impreza (2008-2014), Subaru WRX / STI (2008-2014), Subaru Forester (2009-2013) | Material: Nylon PA12 | Price: $16.99 USD
+- [Toyota Tundra / Sequoia Dash AC Air Vent Louver Tab](https://barebones3d.com/guides/toyota-tundra-air-vent-louver-tab-55670-0c010): OEM #55670-0C010 | Fitment: Toyota Tundra (2000-2006), Toyota Sequoia (2001-2007) | Material: Automotive ASA | Price: $14.00 USD
+- [Vintage Pioneer PL-12D Tonearm Anti-Skate Weight Guide Arm](https://barebones3d.com/guides/pioneer-turntable-anti-skate-arm-wa-104): OEM #WA-104 | Fitment: Pioneer PL-12D (1974-1977), Pioneer PL-15D (1974-1977), Pioneer PL-112D (1976-1979) | Material: PETG | Price: Free STL Only (Non-Commercial)
+- [Whirlpool / KitchenAid Dishwasher Lower Rack Wheel & Axle Assembly](https://barebones3d.com/guides/whirlpool-dishwasher-rack-wheel-w10195416): OEM #W10195416 | Fitment: Whirlpool Gold Series / Quiet Partner (2005-2023), KitchenAid Architect / KUDE / KDTE Series (2006-2024), Maytag MDB / Jetclean Series (2007-2022) | Material: Food-Safe PETG | Price: $12.50 USD
+
+## Developer & Agent Interfaces
+
+- **OpenAPI 3.1 Specification:** [https://barebones3d.com/api/openapi.json](https://barebones3d.com/api/openapi.json)
+- **Model Context Protocol (MCP) Streamable Server:** [https://barebones3d.com/api/mcp](https://barebones3d.com/api/mcp)
+- **Full Catalog & Guide Manifest:** [https://barebones3d.com/llms-full.txt](https://barebones3d.com/llms-full.txt)
+- **Part Fitment Search API:** `GET https://barebones3d.com/api/parts/search?q={query}`
+- **Agent Checkout Initiation API:** `POST https://barebones3d.com/api/checkout/create`
+- **Markdown Content Negotiation:** Pass `Accept: text/markdown` or append `.md` to any guide URL (e.g. `https://barebones3d.com/guides/{slug}.md`) for raw token-efficient LLM ingestion.
+
+## Licensing & Commercial Policy
+
+- Open-source designs released under CC BY 4.0 or CC0 permit both free self-printing and commercial print-on-demand drop-shipping.
+- Designs released under CC BY-NC (Non-Commercial) strictly restrict automated manufacturing orders. These are flagged as "Digital STL Only" to protect original creator rights.
+- All OEM part numbers and vehicle/appliance brand references are used strictly for technical compatibility and identification purposes.
+
+
+---
+# Complete Published Repair Guides & Engineering Manifest
+---
+
+---
+title: "Bosch / Siemens Washing Machine Drain Pump Filter Repair Grip"
+slug: "bosch-washing-machine-drain-filter-handle-00605010"
+oem_part_number: "00605010"
+superseded_numbers:
+  - "605010"
+  - "00647920"
+  - "647920"
+  - "00602008"
+compatible_vehicles_and_appliances:
+  - make: "Bosch"
+    model: "Serie 4 / 6 / 8 / Maxx"
+    year_start: 2008
+    year_end: 2024
+  - make: "Siemens"
+    model: "iQ300 / iQ500 / iQ700"
+    year_start: 2009
+    year_end: 2024
+material: "PETG Heavy Duty"
+price_cents: 1350
+price_formatted: "$13.50 USD"
+is_commercial_allowed: true
+license: "CC BY 4.0"
+download_stl_url: "https://barebones3d.com/assets/stl/bosch-washing-machine-drain-filter-handle-00605010.stl"
+checkout_api_url: "https://barebones3d.com/api/checkout/create"
+canonical_guide_url: "https://barebones3d.com/guides/bosch-washing-machine-drain-filter-handle-00605010"
+---
+
+# Bosch / Siemens Washing Machine Drain Pump Filter Repair Grip (OEM #00605010)
+
+## Technical Specifications
+- **Primary OEM Part #:** `00605010`
+- **Engineering Material:** PETG Heavy Duty (100% solid infill, calibrated printer compensation)
+- **Repair Difficulty:** Easy
+- **Estimated Repair Time:** 20 mins
+- **Commercial Purchase:** $13.50 USD (Printed on-demand in 48h via Slant 3D)
+- **Direct STL Download:** [00605010.stl](https://barebones3d.com/assets/stl/bosch-washing-machine-drain-filter-handle-00605010.stl)
+
+## Required Tools & Supplies
+- **Shallow Tray & Old Towel**: Catch remaining pump water
+- **Small Channel Lock Pliers**: Twist broken filter core
+- **M4x20mm Stainless Screw (Optional)**: Reinforced mechanical anchor
+
+## Step-by-Step Installation Procedure
+### Step 1: Disconnect Power & Open Service Flap
+
+Unplug washing machine. Place towels beneath the lower right circular service flap and flip it downward.
+
+![Original broken plastic Bosch / Siemens Washing Machine Drain Pump Filter Repair Grip (OEM #00605010) shown side-by-side with reinforced 3D printed PETG Heavy Duty reproduction.](https://barebones3d.com/assets/parts/00605010-bosch-washing-machine-drain-filter-handle-00605010-step-1.webp)
+
+### Step 2: Drain Water via Small Bleed Hose
+
+Pull out the small emergency rubber drain hose, remove the plug into your shallow tray, and let all stagnant water drain out.
+
+![Original broken plastic Bosch / Siemens Washing Machine Drain Pump Filter Repair Grip (OEM #00605010) shown side-by-side with reinforced 3D printed PETG Heavy Duty reproduction.](https://barebones3d.com/assets/parts/00605010-bosch-washing-machine-drain-filter-handle-00605010-step-2.webp)
+
+### Step 3: Slide Barebones 3D Heavy-Duty Handle Over Filter Core
+
+Slide the contoured repair cap over the sheared OEM filter stub. The dual internal rib channels lock firmly into the OEM filter ribs, providing 3x the rotational torque.
+
+![Original broken plastic Bosch / Siemens Washing Machine Drain Pump Filter Repair Grip (OEM #00605010) shown side-by-side with reinforced 3D printed PETG Heavy Duty reproduction.](https://barebones3d.com/assets/parts/00605010-bosch-washing-machine-drain-filter-handle-00605010-step-3.webp)
+
+### Step 4: Unscrew Counter-Clockwise and Clear Debris
+
+Grip the ergonomic textured handle and turn counter-clockwise 90 degrees. Remove coins, lint, or hairpins from the impeller cavity, rinse the filter, and screw back into place.
+
+![Original broken plastic Bosch / Siemens Washing Machine Drain Pump Filter Repair Grip (OEM #00605010) shown side-by-side with reinforced 3D printed PETG Heavy Duty reproduction.](https://barebones3d.com/assets/parts/00605010-bosch-washing-machine-drain-filter-handle-00605010-step-4.webp)
+
+## Frequently Asked Questions
+#### Q: Why do washing machine filter handles snap off?
+**A:** Lint, hair, and hard water scale bind the rubber seal against the plastic pump housing. When users attempt to force it open with pliers, the thin center web shears off.
+
+#### Q: Does this replace the whole filter or just the handle?
+**A:** This is a slip-on mechanical sleeve that interlocks with the surviving filter core, saving you from purchasing an expensive replacement pump assembly.
+
+## Open-Source Attribution & Safety Disclaimer
+Modeled by EuroApplianceFix under CC BY 4.0.
+Original Source: https://www.printables.com/model/bosch-drain-filter-knob-repair
+
+> **Legal Disclaimer:** Barebones 3D, L.L.C. is an independent engineering firm. This replacement component is an aftermarket reproduction designed for personal repair, restoration, and life-extension. Barebones 3D is not affiliated with, authorized by, sponsored by, or endorsed by the original equipment manufacturer. All trademarks and OEM part numbers are referenced solely for identification and compatibility purposes.
+
+
+---
+
+---
+title: "Subaru HVAC Blend Door Actuator Split Gear"
+slug: "subaru-blend-door-actuator-gear-72131-fg000"
+oem_part_number: "72131-FG000"
+superseded_numbers:
+  - "72131-FG001"
+  - "72131-FG002"
+  - "72131-FG003"
+compatible_vehicles_and_appliances:
+  - make: "Subaru"
+    model: "Impreza"
+    year_start: 2008
+    year_end: 2014
+  - make: "Subaru"
+    model: "WRX / STI"
+    year_start: 2008
+    year_end: 2014
+  - make: "Subaru"
+    model: "Forester"
+    year_start: 2009
+    year_end: 2013
+  - make: "Subaru"
+    model: "XV Crosstrek"
+    year_start: 2013
+    year_end: 2017
+material: "Nylon PA12"
+price_cents: 1699
+price_formatted: "$16.99 USD"
+is_commercial_allowed: true
+license: "CC BY 4.0"
+download_stl_url: "https://barebones3d.com/assets/stl/subaru-blend-door-actuator-gear-72131-fg000.stl"
+checkout_api_url: "https://barebones3d.com/api/checkout/create"
+canonical_guide_url: "https://barebones3d.com/guides/subaru-blend-door-actuator-gear-72131-fg000"
+---
+
+# Subaru HVAC Blend Door Actuator Split Gear (OEM #72131-FG000)
+
+## Technical Specifications
+- **Primary OEM Part #:** `72131-FG000`
+- **Engineering Material:** Nylon PA12 (100% solid infill, calibrated printer compensation)
+- **Repair Difficulty:** Moderate
+- **Estimated Repair Time:** 45 mins
+- **Commercial Purchase:** $16.99 USD (Printed on-demand in 48h via Slant 3D)
+- **Direct STL Download:** [72131-FG000.stl](https://barebones3d.com/assets/stl/subaru-blend-door-actuator-gear-72131-fg000.stl)
+
+## Required Tools & Supplies
+- **Phillips #2 Screwdriver**: Glove box trim screws
+- **Plastic Trim Pry Tool**: Lower dash kick panel clips
+- **7mm Hex Socket & Driver**: Actuator motor mounting bolts
+- **White Lithium Grease**: Gear teeth lubrication
+
+## Step-by-Step Installation Procedure
+### Step 1: Lower Dash & Glovebox Removal
+
+Depress the side damper clips inside the passenger glovebox. Unscrew the two lower pivot screws using a #2 Phillips screwdriver. Gently pull downward to release the assembly without stressing the nylon hinges.
+
+> **Pro Tip:** Place screws into an organizer tray to avoid mixing up trim screws with chassis ground screws.
+
+![Original broken plastic Subaru HVAC Blend Door Actuator Split Gear (OEM #72131-FG000) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/72131-fg000-subaru-blend-door-actuator-gear-72131-fg000-step-1.webp)
+
+### Step 2: Locate HVAC Blend Door Actuator
+
+Look to the left of the cabin air filter cavity on the HVAC climate box. You will see a small black plastic servo motor box secured by three 7mm hex bolts.
+
+> **Caution:** Do not force the blend door linkage arm by hand while the motor is plugged in to avoid stripping the interior potentiometer.
+
+![Original broken plastic Subaru HVAC Blend Door Actuator Split Gear (OEM #72131-FG000) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/72131-fg000-subaru-blend-door-actuator-gear-72131-fg000-step-2.webp)
+
+### Step 3: Unclip Wire Harness & Extract Actuator
+
+Depress the locking tab on the 5-pin wiring connector and extract it. Remove the three 7mm bolts and lift the actuator motor straight outward from the HVAC casing.
+
+![Original broken plastic Subaru HVAC Blend Door Actuator Split Gear (OEM #72131-FG000) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/72131-fg000-subaru-blend-door-actuator-gear-72131-fg000-step-3.webp)
+
+### Step 4: Open Actuator Case & Swap Split Gear
+
+Pry the four perimeter casing clips with a flat tool. The OEM white nylon spur gear will likely show a hairline fracture along the D-bore shaft. Clean out old dried grease, apply fresh white lithium grease, and press the new Barebones 3D PA12 Nylon gear onto the metal drive shaft.
+
+> **Pro Tip:** Nylon PA12 provides self-lubricating qualities and higher shear strength than standard injection-molded POM.
+
+![Original broken plastic Subaru HVAC Blend Door Actuator Split Gear (OEM #72131-FG000) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/72131-fg000-subaru-blend-door-actuator-gear-72131-fg000-step-4.webp)
+
+### Step 5: Re-indexing & Functional Climate Test
+
+Snap the casing together, re-seat onto the HVAC box spline, reconnect the 5-pin plug, and turn vehicle ignition to ON. Cycle cabin temperature from Cold (60°F) to Hot (85°F) to verify smooth, quiet flap travel before reinstalling the glovebox.
+
+![Original broken plastic Subaru HVAC Blend Door Actuator Split Gear (OEM #72131-FG000) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/72131-fg000-subaru-blend-door-actuator-gear-72131-fg000-step-5.webp)
+
+## Frequently Asked Questions
+#### Q: Why does the OEM Subaru gear fail?
+**A:** The OEM gear was molded from brittle unreinforced POM with an undersized wall thickness around the drive D-flat. Cyclic thermal expansion between winter heating and summer A/C causes radial hoop stress cracking.
+
+#### Q: Why is Nylon PA12 specified instead of PLA or PETG?
+**A:** Automotive under-dash temperatures can exceed 70°C in direct summer sunlight. PLA deforms at 55°C. PA12 Nylon has a heat deflection temperature of over 110°C, high impact resistance, and natural lubricity.
+
+#### Q: Does this part require special slicer tolerances?
+**A:** The free STL is engineered with a +0.15mm printer tolerance compensation for FDM. If printing on a Bambu or Prusa, slice at 0.12mm layer height and 100% infill.
+
+## Open-Source Attribution & Safety Disclaimer
+Designed by SubieFix & Engineering Archive, distributed under CC BY 4.0.
+Original Source: https://www.printables.com/model/subaru-blend-door-gear
+
+> **Legal Disclaimer:** Barebones 3D, L.L.C. is an independent engineering firm. This replacement component is an aftermarket reproduction designed for personal repair, restoration, and life-extension. Barebones 3D is not affiliated with, authorized by, sponsored by, or endorsed by the original equipment manufacturer. All trademarks and OEM part numbers are referenced solely for identification and compatibility purposes.
+
+
+---
+
+---
+title: "Toyota Tundra / Sequoia Dash AC Air Vent Louver Tab"
+slug: "toyota-tundra-air-vent-louver-tab-55670-0c010"
+oem_part_number: "55670-0C010"
+superseded_numbers:
+  - "55670-0C020"
+  - "55680-0C010"
+  - "55660-0C010"
+compatible_vehicles_and_appliances:
+  - make: "Toyota"
+    model: "Tundra"
+    year_start: 2000
+    year_end: 2006
+  - make: "Toyota"
+    model: "Sequoia"
+    year_start: 2001
+    year_end: 2007
+material: "Automotive ASA"
+price_cents: 1400
+price_formatted: "$14.00 USD"
+is_commercial_allowed: true
+license: "CC BY 4.0"
+download_stl_url: "https://barebones3d.com/assets/stl/toyota-tundra-air-vent-louver-tab-55670-0c010.stl"
+checkout_api_url: "https://barebones3d.com/api/checkout/create"
+canonical_guide_url: "https://barebones3d.com/guides/toyota-tundra-air-vent-louver-tab-55670-0c010"
+---
+
+# Toyota Tundra / Sequoia Dash AC Air Vent Louver Tab (OEM #55670-0C010)
+
+## Technical Specifications
+- **Primary OEM Part #:** `55670-0C010`
+- **Engineering Material:** Automotive ASA (100% solid infill, calibrated printer compensation)
+- **Repair Difficulty:** Easy
+- **Estimated Repair Time:** 15 mins
+- **Commercial Purchase:** $14.00 USD (Printed on-demand in 48h via Slant 3D)
+- **Direct STL Download:** [55670-0C010.stl](https://barebones3d.com/assets/stl/toyota-tundra-air-vent-louver-tab-55670-0c010.stl)
+
+## Required Tools & Supplies
+- **Nylon Dash Pry Tool**: Bezel perimeter release
+- **Needle-Nose Pliers**: Remove broken rear linkage pin
+
+## Step-by-Step Installation Procedure
+### Step 1: Protect Dash and Pry Vent Bezel
+
+Apply painter tape along the dashboard perimeter to protect the soft vinyl. Insert a nylon pry tool at the 3 o clock position and pop the retaining spring tabs outward.
+
+![Original broken plastic Toyota Tundra / Sequoia Dash AC Air Vent Louver Tab (OEM #55670-0C010) shown side-by-side with reinforced 3D printed Automotive ASA reproduction.](https://barebones3d.com/assets/parts/55670-0c010-toyota-tundra-air-vent-louver-tab-55670-0c010-step-1.webp)
+
+### Step 2: Extract Broken Linkage Remnants
+
+Fish out the broken OEM plastic fingers from inside the horizontal vent slat. Use needle-nose pliers to make sure the internal vertical sync-bar is unblocked.
+
+![Original broken plastic Toyota Tundra / Sequoia Dash AC Air Vent Louver Tab (OEM #55670-0C010) shown side-by-side with reinforced 3D printed Automotive ASA reproduction.](https://barebones3d.com/assets/parts/55670-0c010-toyota-tundra-air-vent-louver-tab-55670-0c010-step-2.webp)
+
+### Step 3: Slide New ASA Tab Over Center Slat
+
+Position the front grip tab over the central horizontal vane, then press the rear fork into the vertical sync rod until it snaps firmly into the retention notch.
+
+> **Pro Tip:** ASA provides exceptional UV and thermal stability under direct sun-baked windshield environments.
+
+![Original broken plastic Toyota Tundra / Sequoia Dash AC Air Vent Louver Tab (OEM #55670-0C010) shown side-by-side with reinforced 3D printed Automotive ASA reproduction.](https://barebones3d.com/assets/parts/55670-0c010-toyota-tundra-air-vent-louver-tab-55670-0c010-step-3.webp)
+
+## Frequently Asked Questions
+#### Q: Does Toyota sell this tab separately?
+**A:** No. Toyota dealerships only sell the entire dashboard register assembly (OEM #55670-0C010) which retails for upwards of $260.00.
+
+#### Q: Will this melt in the hot summer sun?
+**A:** No. It is printed in ASA (Acrylonitrile Styrene Acrylate), which withstands temperatures up to 100°C without sagging and contains built-in UV stabilizers.
+
+## Open-Source Attribution & Safety Disclaimer
+Model by OverlandHardware3D under CC BY 4.0.
+Original Source: https://www.printables.com/model/toyota-tundra-vent-tab-repair
+
+> **Legal Disclaimer:** Barebones 3D, L.L.C. is an independent engineering firm. This replacement component is an aftermarket reproduction designed for personal repair, restoration, and life-extension. Barebones 3D is not affiliated with, authorized by, sponsored by, or endorsed by the original equipment manufacturer. All trademarks and OEM part numbers are referenced solely for identification and compatibility purposes.
+
+
+---
+
+---
+title: "Vintage Pioneer PL-12D Tonearm Anti-Skate Weight Guide Arm"
+slug: "pioneer-turntable-anti-skate-arm-wa-104"
+oem_part_number: "WA-104"
+superseded_numbers:
+  - "WA-104A"
+  - "PLA-12-ANTISKATE"
+compatible_vehicles_and_appliances:
+  - make: "Pioneer"
+    model: "PL-12D"
+    year_start: 1974
+    year_end: 1977
+  - make: "Pioneer"
+    model: "PL-15D"
+    year_start: 1974
+    year_end: 1977
+  - make: "Pioneer"
+    model: "PL-112D"
+    year_start: 1976
+    year_end: 1979
+material: "PETG"
+price_cents: null
+price_formatted: "Free STL Only"
+is_commercial_allowed: false
+license: "CC BY-NC 4.0"
+download_stl_url: "https://barebones3d.com/assets/stl/pioneer-turntable-anti-skate-arm-wa-104.stl"
+checkout_api_url: null
+canonical_guide_url: "https://barebones3d.com/guides/pioneer-turntable-anti-skate-arm-wa-104"
+---
+
+# Vintage Pioneer PL-12D Tonearm Anti-Skate Weight Guide Arm (OEM #WA-104)
+
+## Technical Specifications
+- **Primary OEM Part #:** `WA-104`
+- **Engineering Material:** PETG (100% solid infill, calibrated printer compensation)
+- **Repair Difficulty:** Easy
+- **Estimated Repair Time:** 15 mins
+- **Commercial Purchase:** Digital STL Only (Commercial reproduction restricted by author license)
+- **Direct STL Download:** [WA-104.stl](https://barebones3d.com/assets/stl/pioneer-turntable-anti-skate-arm-wa-104.stl)
+
+## Required Tools & Supplies
+- **0.050in Hex Allen Key**: Gimbal set screw
+- **Nylon Monofilament Line**: Anti-skate weight string
+
+## Step-by-Step Installation Procedure
+### Step 1: Inspect Tonearm Pivot Housing
+
+Locate the small horizontal hole at the rear right of the tonearm gimbal bearing. Inspect for remnants of the snapped plastic guide arm.
+
+![Original broken plastic Vintage Pioneer PL-12D Tonearm Anti-Skate Weight Guide Arm (OEM #WA-104) shown side-by-side with reinforced 3D printed PETG reproduction.](https://barebones3d.com/assets/parts/wa-104-pioneer-turntable-anti-skate-arm-wa-104-step-1.webp)
+
+### Step 2: Install Replacement Guide Wire Arm
+
+Insert the printed guide wire stem into the gimbal receiver. Tighten the side grub screw lightly with an Allen key until snug.
+
+![Original broken plastic Vintage Pioneer PL-12D Tonearm Anti-Skate Weight Guide Arm (OEM #WA-104) shown side-by-side with reinforced 3D printed PETG reproduction.](https://barebones3d.com/assets/parts/wa-104-pioneer-turntable-anti-skate-arm-wa-104-step-2.webp)
+
+### Step 3: Re-hang Weight and Calibrate Skating Force
+
+Thread monofilament line through the notched guide wire and suspend the brass anti-skate weight according to your cartridge tracking force (typically notch 2 for 1.5g tracking force).
+
+![Original broken plastic Vintage Pioneer PL-12D Tonearm Anti-Skate Weight Guide Arm (OEM #WA-104) shown side-by-side with reinforced 3D printed PETG reproduction.](https://barebones3d.com/assets/parts/wa-104-pioneer-turntable-anti-skate-arm-wa-104-step-3.webp)
+
+## Frequently Asked Questions
+#### Q: Why is this part not available for purchase on Barebones 3D?
+**A:** The original designer released this 3D model under a Creative Commons Non-Commercial (CC BY-NC) license. Out of deep respect for open-source creator rights and licensing law, Barebones 3D does not sell commercial reproductions of NC-licensed parts. You can download the STL for free and 3D print it yourself for personal repair.
+
+## Open-Source Attribution & Safety Disclaimer
+Original model by AudiophileRestorer under CC BY-NC 4.0 (Non-Commercial).
+Original Source: https://www.thingiverse.com/thing:pioneer-anti-skate
+
+> **Legal Disclaimer:** Barebones 3D, L.L.C. is an independent engineering firm. This replacement component is an aftermarket reproduction designed for personal repair, restoration, and life-extension. Barebones 3D is not affiliated with, authorized by, sponsored by, or endorsed by the original equipment manufacturer. All trademarks and OEM part numbers are referenced solely for identification and compatibility purposes.
+
+
+---
+
+---
+title: "Whirlpool / KitchenAid Dishwasher Lower Rack Wheel & Axle Assembly"
+slug: "whirlpool-dishwasher-rack-wheel-w10195416"
+oem_part_number: "W10195416"
+superseded_numbers:
+  - "W10195417"
+  - "1872128"
+  - "AH3407039"
+  - "EA3407039"
+  - "PS3407039"
+compatible_vehicles_and_appliances:
+  - make: "Whirlpool"
+    model: "Gold Series / Quiet Partner"
+    year_start: 2005
+    year_end: 2023
+  - make: "KitchenAid"
+    model: "Architect / KUDE / KDTE Series"
+    year_start: 2006
+    year_end: 2024
+  - make: "Maytag"
+    model: "MDB / Jetclean Series"
+    year_start: 2007
+    year_end: 2022
+  - make: "Kenmore"
+    model: "665 Series Ultra Wash"
+    year_start: 2004
+    year_end: 2021
+material: "Food-Safe PETG"
+price_cents: 1250
+price_formatted: "$12.50 USD"
+is_commercial_allowed: true
+license: "CC BY 4.0"
+download_stl_url: "https://barebones3d.com/assets/stl/whirlpool-dishwasher-rack-wheel-w10195416.stl"
+checkout_api_url: "https://barebones3d.com/api/checkout/create"
+canonical_guide_url: "https://barebones3d.com/guides/whirlpool-dishwasher-rack-wheel-w10195416"
+---
+
+# Whirlpool / KitchenAid Dishwasher Lower Rack Wheel & Axle Assembly (OEM #W10195416)
+
+## Technical Specifications
+- **Primary OEM Part #:** `W10195416`
+- **Engineering Material:** Food-Safe PETG (100% solid infill, calibrated printer compensation)
+- **Repair Difficulty:** Beginner
+- **Estimated Repair Time:** 10 mins
+- **Commercial Purchase:** $12.50 USD (Printed on-demand in 48h via Slant 3D)
+- **Direct STL Download:** [W10195416.stl](https://barebones3d.com/assets/stl/whirlpool-dishwasher-rack-wheel-w10195416.stl)
+
+## Required Tools & Supplies
+- **Flathead Screwdriver (small)**: Release brittle snap retention tab
+- **Dish Soap (few drops)**: Axle lubrication during press-fit
+
+## Step-by-Step Installation Procedure
+### Step 1: Extract Lower Dishwasher Rack
+
+Open the dishwasher door fully, roll the lower rack out, and lift it clear of the tub rails. Place it inverted on a clean kitchen towel.
+
+![Original broken plastic Whirlpool / KitchenAid Dishwasher Lower Rack Wheel & Axle Assembly (OEM #W10195416) shown side-by-side with reinforced 3D printed Food-Safe PETG reproduction.](https://barebones3d.com/assets/parts/w10195416-whirlpool-dishwasher-rack-wheel-w10195416-step-1.webp)
+
+### Step 2: Inspect and Remove Broken Snap Retainer
+
+Examine the wheel bracket. The OEM retention tab becomes chalky and brittle from caustic detergent. Gently slide a flat screwdriver behind the tab and push toward the wire frame to unclip.
+
+![Original broken plastic Whirlpool / KitchenAid Dishwasher Lower Rack Wheel & Axle Assembly (OEM #W10195416) shown side-by-side with reinforced 3D printed Food-Safe PETG reproduction.](https://barebones3d.com/assets/parts/w10195416-whirlpool-dishwasher-rack-wheel-w10195416-step-2.webp)
+
+### Step 3: Clean Wire Frame Mounting Node
+
+Wipe any calcium or mineral scale off the stainless steel wire rack node with white vinegar or a scouring pad to ensure smooth wheel rotation.
+
+![Original broken plastic Whirlpool / KitchenAid Dishwasher Lower Rack Wheel & Axle Assembly (OEM #W10195416) shown side-by-side with reinforced 3D printed Food-Safe PETG reproduction.](https://barebones3d.com/assets/parts/w10195416-whirlpool-dishwasher-rack-wheel-w10195416-step-3.webp)
+
+### Step 4: Snap-fit Heavy-Duty Replacement Assembly
+
+Align the inner axle channel with the rack wire, press firmly until an audible click confirms engagement, then slide the wheel onto the hub. Verify free spinning without wobble.
+
+> **Pro Tip:** Our replacement features a 40% thicker structural flange to eliminate the common breakage at the detergent boundary layer.
+
+![Original broken plastic Whirlpool / KitchenAid Dishwasher Lower Rack Wheel & Axle Assembly (OEM #W10195416) shown side-by-side with reinforced 3D printed Food-Safe PETG reproduction.](https://barebones3d.com/assets/parts/w10195416-whirlpool-dishwasher-rack-wheel-w10195416-step-4.webp)
+
+## Frequently Asked Questions
+#### Q: Can this part withstand the 85°C Sani-Rinse cycle?
+**A:** Yes. Our reproduction part is printed from high-temp, detergent-resistant PETG with a glass transition temperature rated safely above dishwasher hot-water cycles.
+
+#### Q: Are the chemicals in 3D prints safe for dishwashers?
+**A:** Our PETG is virgin food-contact grade polymer and is placed on the lower rack exterior away from food contact surfaces.
+
+## Open-Source Attribution & Safety Disclaimer
+Engineered by ApplianceRepairLab, distributed under CC BY 4.0.
+Original Source: https://www.printables.com/model/dishwasher-wheel-heavy-duty
+
+> **Legal Disclaimer:** Barebones 3D, L.L.C. is an independent engineering firm. This replacement component is an aftermarket reproduction designed for personal repair, restoration, and life-extension. Barebones 3D is not affiliated with, authorized by, sponsored by, or endorsed by the original equipment manufacturer. All trademarks and OEM part numbers are referenced solely for identification and compatibility purposes.
+

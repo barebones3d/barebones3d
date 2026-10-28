@@ -1,0 +1,317 @@
+import type { Part, Guide } from '../types/database.ts';
+
+export function renderCatalogHtml(items: Array<{ part: Part; guide?: Guide | null }>, siteUrl: string): string {
+  const cardsHtml = items.map(({ part, guide }) => {
+    const priceDollars = (part.retail_price_cents / 100).toFixed(2);
+    const primaryMake = part.compatible_makes_models[0]?.make || 'OEM Fitment';
+    const modelsText = part.compatible_makes_models.map(c => `${c.make} ${c.model}`).slice(0, 3).join(', ');
+
+    return `
+      <article class="guide-catalog-card" data-oem="${part.oem_part_number.toLowerCase()}" data-make="${primaryMake.toLowerCase()}" data-commercial="${part.is_commercial_allowed ? '1' : '0'}">
+        <div class="card-badge-row">
+          <span class="catalog-badge">${primaryMake}</span>
+          <span class="catalog-material">${part.material_spec}</span>
+          ${part.is_commercial_allowed 
+            ? `<span class="badge-price">$${priceDollars}</span>` 
+            : `<span class="badge-nc-pill">Free STL Only</span>`}
+        </div>
+
+        <h2 class="card-title">
+          <a href="/guides/${part.slug}/">${part.title}</a>
+        </h2>
+
+        <div class="card-oem-row">
+          <span class="card-oem-label">OEM Part #:</span>
+          <span class="card-oem-val font-mono">${part.oem_part_number}</span>
+        </div>
+
+        <p class="card-compat-text">
+          <strong>Compatible with:</strong> ${modelsText || 'Universal / Multi-model'}
+        </p>
+
+        <div class="card-meta-bar">
+          ${guide ? `<span>⏱️ ${guide.time_estimate}</span> &bull; <span>🛠️ ${guide.difficulty}</span>` : '<span>DIY Repair Tutorial</span>'}
+        </div>
+
+        <div class="card-action-bar">
+          <a href="/guides/${part.slug}/" class="btn-primary" style="padding: 0.6rem 1rem; font-size: 0.85rem;">
+            <span>View Repair Guide</span>
+            <span>&rarr;</span>
+          </a>
+          <a href="/api/parts/${part.id}/download" class="btn-secondary" style="padding: 0.6rem 0.85rem; font-size: 0.85rem;" title="Download Free STL">
+            <span>📥 STL</span>
+          </a>
+        </div>
+      </article>
+    `;
+  }).join('');
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Obsolete OEM Replacement Parts &amp; Free Repair Guides | Barebones 3D</title>
+  <meta name="description" content="Free DIY repair guides, open-source 3D printable STL files, and automated print-on-demand dropshipping for obsolete and discontinued OEM automotive and appliance parts.">
+  <link rel="canonical" href="${siteUrl.replace(/\/$/, '')}/guides/">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/guides.css">
+
+  <style>
+    .catalog-hero {
+      background: linear-gradient(180deg, rgba(6, 182, 212, 0.08) 0%, transparent 100%);
+      padding: 3rem 1.5rem 2rem 1.5rem;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .catalog-hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .catalog-title {
+      font-size: 2.25rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.02em;
+    }
+    .catalog-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-dim);
+      max-width: 800px;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      background: var(--bg-card);
+      padding: 1rem 1.25rem;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-subtle);
+    }
+    .search-input {
+      flex: 1;
+      min-width: 260px;
+      background: rgba(10, 15, 29, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 0.65rem 1rem;
+      color: #fff;
+      border-radius: var(--radius-sm);
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+    }
+    .search-input:focus {
+      outline: none;
+      border-color: var(--accent-cyan);
+    }
+    .filter-btn {
+      background: rgba(30, 41, 59, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--text-dim);
+      padding: 0.55rem 0.9rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .filter-btn.active, .filter-btn:hover {
+      background: rgba(6, 182, 212, 0.15);
+      border-color: var(--accent-cyan);
+      color: #fff;
+    }
+    .catalog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 1.75rem;
+      margin-top: 2rem;
+    }
+    .guide-catalog-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow-card);
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .guide-catalog-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(6, 182, 212, 0.4);
+    }
+    .card-badge-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.75rem;
+    }
+    .catalog-badge {
+      background: rgba(56, 189, 248, 0.12);
+      color: var(--accent-blue);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      padding: 0.2rem 0.5rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+    .catalog-material {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-dim);
+    }
+    .badge-price {
+      font-family: var(--font-mono);
+      font-weight: 800;
+      color: #4ade80;
+      font-size: 0.95rem;
+    }
+    .badge-nc-pill {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: #fb923c;
+      background: rgba(249, 115, 22, 0.12);
+      border: 1px solid rgba(249, 115, 22, 0.3);
+      padding: 0.15rem 0.4rem;
+      border-radius: var(--radius-sm);
+    }
+    .card-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.35;
+      margin-bottom: 0.75rem;
+    }
+    .card-title a {
+      color: #fff;
+    }
+    .card-title a:hover {
+      color: var(--accent-cyan);
+    }
+    .card-oem-row {
+      font-size: 0.85rem;
+      margin-bottom: 0.5rem;
+    }
+    .card-oem-label {
+      color: var(--text-muted);
+    }
+    .card-oem-val {
+      color: var(--accent-blue);
+      font-weight: 700;
+      margin-left: 0.35rem;
+    }
+    .card-compat-text {
+      font-size: 0.85rem;
+      color: var(--text-dim);
+      margin-bottom: 1rem;
+      flex-grow: 1;
+      line-height: 1.45;
+    }
+    .card-meta-bar {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      padding-top: 0.75rem;
+      margin-bottom: 1rem;
+    }
+    .card-action-bar {
+      display: flex;
+      gap: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header class="header-nav">
+    <div class="nav-container">
+      <a href="/" class="brand-logo">
+        <span class="logo-badge">BB-3D</span>
+        <span>BAREBONES 3D</span>
+      </a>
+      <nav class="nav-links" aria-label="Main Navigation">
+        <a href="/guides/" style="color: #38bdf8; font-weight: 700; background: rgba(56, 189, 248, 0.12); border: 1px solid rgba(56, 189, 248, 0.35); padding: 0.35rem 0.75rem; border-radius: 6px;">Repair Guides &amp; Parts</a>
+        <a href="/generator/">⚡ 3D CAD Generator</a>
+        <a href="/#network">Diagnostic Network</a>
+        <a href="/contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="catalog-hero">
+    <div class="catalog-hero-inner">
+      <h1 class="catalog-title">Obsolete OEM Replacement Parts &amp; Repair Guides</h1>
+      <p class="catalog-subtitle">
+        High-precision aftermarket CAD models and comprehensive step-by-step repair guides for discontinued automotive, appliance, and audio components. Download free watertight STLs for personal 3D printing, or order 100% solid commercial-grade reproductions drop-shipped via Slant 3D.
+      </p>
+
+      <div class="filter-bar">
+        <input type="text" id="filter-search" class="search-input" placeholder="Search by OEM part #, make, model (e.g. 72131-FG000, Subaru, Tundra)..." />
+        <button class="filter-btn active" data-filter="all">All Parts (${items.length})</button>
+        <button class="filter-btn" data-filter="commercial">Commercial POD</button>
+        <button class="filter-btn" data-filter="stl-only">STL Only (Non-Commercial)</button>
+      </div>
+    </div>
+  </div>
+
+  <main class="guide-main" style="margin-top: 0;">
+    <div class="catalog-grid" id="catalog-grid">
+      ${cardsHtml}
+    </div>
+  </main>
+
+  <script>
+    (function() {
+      const search = document.getElementById('filter-search');
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const cards = document.querySelectorAll('.guide-catalog-card');
+      let currentFilter = 'all';
+
+      function applyFilter() {
+        const query = (search.value || '').toLowerCase().trim();
+
+        cards.forEach(card => {
+          const oem = card.getAttribute('data-oem') || '';
+          const make = card.getAttribute('data-make') || '';
+          const title = card.querySelector('.card-title').textContent.toLowerCase();
+          const compat = card.querySelector('.card-compat-text').textContent.toLowerCase();
+          const isComm = card.getAttribute('data-commercial') === '1';
+
+          const matchesSearch = !query || oem.includes(query) || make.includes(query) || title.includes(query) || compat.includes(query);
+          
+          let matchesTab = true;
+          if (currentFilter === 'commercial') matchesTab = isComm;
+          if (currentFilter === 'stl-only') matchesTab = !isComm;
+
+          if (matchesSearch && matchesTab) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      }
+
+      search.addEventListener('input', applyFilter);
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          currentFilter = btn.getAttribute('data-filter');
+          applyFilter();
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>`;
+}
