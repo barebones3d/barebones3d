@@ -49,14 +49,10 @@ async function run() {
   ];
 
   for (const file of migrationFiles) {
-    const sql = fs.readFileSync(path.join(migrationsDir, file), 'utf8');
-    const statements = sql
-      .split(';')
-      .map(s => s.trim())
-      .filter(s => s.length > 0 && !s.startsWith('--'));
-
-    for (const stmt of statements) {
-      sqlite.prepare(stmt).run();
+    const filePath = path.join(migrationsDir, file);
+    if (fs.existsSync(filePath)) {
+      const sql = fs.readFileSync(filePath, 'utf8');
+      await db.execScript(sql);
     }
   }
 
