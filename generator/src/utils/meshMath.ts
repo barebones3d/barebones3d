@@ -78,9 +78,15 @@ export function computeInvoluteGear2D(
       points.push(new THREE.Vector2(rootRadius * Math.cos(phiRoot), rootRadius * Math.sin(phiRoot)));
     }
 
-    // Root bottom fillet / valley
-    const valleyMidAngle = toothCenterAngle + toothPitchAngle / 2;
-    points.push(new THREE.Vector2(rootRadius * Math.cos(valleyMidAngle), rootRadius * Math.sin(valleyMidAngle)));
+    // Root bottom fillet curve between left flank and next right flank
+    const leftFlankRootAngle = toothCenterAngle + (halfToothThicknessAngleAtPitch + invAlpha);
+    const nextToothRightAngle = toothCenterAngle + toothPitchAngle - (halfToothThicknessAngleAtPitch + invAlpha);
+    const valleySpan = nextToothRightAngle - leftFlankRootAngle;
+    const filletSamples = 3;
+    for (let f = 1; f <= filletSamples; f++) {
+      const fAngle = leftFlankRootAngle + (valleySpan * f) / (filletSamples + 1);
+      points.push(new THREE.Vector2(rootRadius * Math.cos(fAngle), rootRadius * Math.sin(fAngle)));
+    }
   }
 
   return {

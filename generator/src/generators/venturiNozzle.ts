@@ -197,7 +197,7 @@ export function generateVenturiNozzle(params: VenturiNozzleParams): GeneratedMes
 
   return {
     geometry: finalGeom,
-    dimensions: { x: sz.x, y: sz.y, z: sz.z },
+    dimensions: { x: Number(sz.x.toFixed(2)), y: Number(sz.y.toFixed(2)), z: Number(sz.z.toFixed(2)) },
     triangles: finalGeom.index ? finalGeom.index.count / 3 : finalGeom.attributes.position.count / 3,
     vertices: finalGeom.attributes.position.count,
     estimatedPrintWeightGrams: weight,

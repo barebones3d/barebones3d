@@ -7,20 +7,27 @@ import {
   SCREW_CLEARANCE_DIAMETERS,
 } from './types';
 import { computeMeshVolume, estimateWeightGrams } from '../utils/meshMath';
+import { createRoundedRectShape, createInternalFilletWedge } from '../utils/filletMath';
 
 /**
- * Generates a Bearing Pillow Block using Constructive Solid Geometry (CSG):
- * 1. Center cylinder boss sized to house the specified bearing OD + wall thickness.
- * 2. Mounting options:
+ * Generates a Bearing Pillow Block using Defensive Constructive Solid Geometry (CSG):
+ * 1. Base Housing Block: Center cylinder boss sized to house the bearing OD + wall thickness.
+ * 2. Mounting Flange Additions:
  *    - 'two-sided': Cylindrical ear bosses at +/- earCenterDist with true mathematical
  *      external tangent solids bridging seamlessly into the center cylinder.
- *    - 'bottom-foot': Pedestal rectangular base foot with smooth tangent web flanks.
+ *    - 'bottom-foot': Pedestal base foot with 4 pre-rounded corners (createRoundedRectShape)
+ *      and positive transition fillet wedges (createInternalFilletWedge) reinforcing the joint seam.
  *    - 'none': Compact cylindrical cartridge housing.
- * 3. CSG subtractions:
- *    - Bearing pocket bore (exact depth).
- *    - Shaft clearance bore / retention lip shoulder.
- *    - Clean cylindrical mounting screw holes.
- * 4. Creased normals (35°) ensure razor-flat planar faces with silky smooth cylindrical bores.
+ * 3. Defensive CSG Subtractions:
+ *    - Bearing Pocket Cutter: Cylindrical brush extending beyond front face (pocketDepth + 2.0)
+ *      to strictly eliminate coplanar face artifacts.
+ *    - Bearing Pocket Entry Chamfer: Shallow 45 deg entry cone (0.8mm depth, radius + 0.5mm)
+ *      oversized beyond front face to ease bearing insertion without tool catching.
+ *    - Retention Lip: Concentric stepped cylinder / lip ledge on rear face.
+ *    - Shaft Clearance Hole: Pass-through cylindrical cutter with diameter (bearingID + printer_compensation)
+ *      oversized along extrusion axis (totalDepth * 4) penetrating completely through.
+ *    - Mounting Holes: Screw clearance holes (screwDia + printer_compensation) passing completely through flanges.
+ * 4. Creased Normals (30°) preserve crisp planar mounting flats while smoothing cylindrical bores.
  */
 export function generateBearingPillowBlock(params: BearingPillowBlockParams): GeneratedMeshResult {
   const {
@@ -36,7 +43,7 @@ export function generateBearingPillowBlock(params: BearingPillowBlockParams): Ge
     printer_compensation,
   } = params;
 
-  // 1. Core Dimensions
+  // 1. Core Diameters and Radii
   const pocketDia = bearingOD + printer_compensation;
   const pocketRadius = Math.max(1.0, pocketDia / 2);
   const outerRadius = pocketRadius + Math.max(1.5, wallThickness);
@@ -46,13 +53,20 @@ export function generateBearingPillowBlock(params: BearingPillowBlockParams): Ge
   const actualLipThick = retentionLip ? Math.max(0.8, lipThickness) : 0;
   const totalDepth = pocketDepth + actualLipThick;
 
-  // Shaft clearance radius (behind bearing retention ledge)
-  const shaftClearanceRadius = retentionLip
-    ? Math.max((bearingID + printer_compensation + 0.8) / 2, pocketRadius - Math.max(0.4, lipOverhang))
-    : (params.isThroughHole ? pocketRadius : 0);
+  // Fillet & Chamfer options
+  const cornerFillet = Math.max(0, Math.min(params.cornerFillet ?? 2.0, 8.0));
+  const hasLeadInChamfer = params.leadInChamfer !== false;
 
+  // Shaft clearance hole diameter & radius (boreID + printer_compensation)
+  const shaftDia = bearingID + printer_compensation;
+  const minShaftRadius = Math.max(0.5, shaftDia / 2);
+  const shaftClearanceRadius = retentionLip
+    ? Math.max(minShaftRadius, pocketRadius - Math.max(0.4, lipOverhang))
+    : minShaftRadius;
+
+  // Screw clearance hole diameter & radius (screwDia + printer_compensation)
   const mountHoleDia = SCREW_CLEARANCE_DIAMETERS[mountHoleSize] + printer_compensation;
-  const mountHoleRadius = mountHoleDia / 2;
+  const mountHoleRadius = Math.max(0.5, mountHoleDia / 2);
 
   // Initialize CSG Evaluator
   const evaluator = new Evaluator();
@@ -63,10 +77,10 @@ export function generateBearingPillowBlock(params: BearingPillowBlockParams): Ge
     : 0;
 
   // ========================================================
-  // STEP 1: Center Cylinder Boss
+  // STEP 1: Base Housing Block (Center Cylinder Boss)
   // ========================================================
   // Cylinder oriented along Z axis, centered at Z = 0 (from -totalDepth/2 to +totalDepth/2)
-  const centerGeom = new THREE.CylinderGeometry(outerRadius, outerRadius, totalDepth, 64);
+  const centerGeom = new THREE.CylinderGeometry(outerRadius, outerRadius, totalDepth, 32);
   centerGeom.rotateX(Math.PI / 2);
 
   let body = new Brush(centerGeom);
@@ -83,14 +97,14 @@ export function generateBearingPillowBlock(params: BearingPillowBlockParams): Ge
     earCenterDist = outerRadius + Math.max(6.0, flangeLength * 0.75);
     const d = earCenterDist;
 
-    // External Tangent Angle between center circle (R_c) and ear circle (R_e)
+    // External Tangent Angle between center cylinder (R_c) and ear cylinder (R_e)
     const diffR = outerRadius - earRadius;
     const alpha = Math.min(0.999, Math.max(0.0, diffR / d));
     const cosPhi = alpha;
     const sinPhi = Math.sqrt(Math.max(0.001, 1 - cosPhi * cosPhi));
 
     // A. Right Ear Cylinder
-    const rightEarGeom = new THREE.CylinderGeometry(earRadius, earRadius, totalDepth, 48);
+    const rightEarGeom = new THREE.CylinderGeometry(earRadius, earRadius, totalDepth, 24);
     rightEarGeom.rotateX(Math.PI / 2);
     const rightEarBrush = new Brush(rightEarGeom);
     rightEarBrush.position.set(d, 0, 0);
@@ -99,7 +113,7 @@ export function generateBearingPillowBlock(params: BearingPillowBlockParams): Ge
     body.updateMatrixWorld();
 
     // B. Left Ear Cylinder
-    const leftEarGeom = new THREE.CylinderGeometry(earRadius, earRadius, totalDepth, 48);
+    const leftEarGeom = new THREE.CylinderGeometry(earRadius, earRadius, totalDepth, 24);
     leftEarGeom.rotateX(Math.PI / 2);
     const leftEarBrush = new Brush(leftEarGeom);
     leftEarBrush.position.set(-d, 0, 0);
@@ -151,8 +165,15 @@ export function generateBearingPillowBlock(params: BearingPillowBlockParams): Ge
     const footHalfWidth = outerRadius + Math.max(8.0, flangeLength);
     const footHeight = Math.max(5.0, wallThickness * 1.2);
 
-    // A. Rectangular Base Foot Plate
-    const footGeom = new THREE.BoxGeometry(footHalfWidth * 2, footHeight, totalDepth);
+    // A. Base Foot Plate with 4 Pre-Rounded Corners (Method 1)
+    const footShape = createRoundedRectShape(footHalfWidth * 2, totalDepth, cornerFillet);
+    const footGeom = new THREE.ExtrudeGeometry(footShape, {
+      depth: footHeight,
+      bevelEnabled: false,
+      curveSegments: 16,
+    });
+    // Extruded along Z in 2D shape coords; rotate to orient along Y axis
+    footGeom.rotateX(Math.PI / 2);
     const footBrush = new Brush(footGeom);
     footBrush.position.set(0, footHeight / 2, 0);
     footBrush.updateMatrixWorld();
@@ -209,24 +230,84 @@ export function generateBearingPillowBlock(params: BearingPillowBlockParams): Ge
       lFootBrush.updateMatrixWorld();
       body = evaluator.evaluate(body, lFootBrush, ADDITION);
       body.updateMatrixWorld();
+    } else {
+      // C. Housing-to-Base Transition Fillet (Method 3: Positive Filler Wedges)
+      // When gussets are not active, reinforce the cylinder-to-foot joint seam with internal fillet wedges
+      const wedgeRadius = Math.max(1.0, Math.min(3.0, wallThickness * 0.5));
+      const rightWedgeGeom = createInternalFilletWedge(wedgeRadius, totalDepth);
+      const rightWedgeBrush = new Brush(rightWedgeGeom);
+      rightWedgeBrush.position.set(outerRadius * 0.9, footHeight, 0);
+      rightWedgeBrush.updateMatrixWorld();
+      body = evaluator.evaluate(body, rightWedgeBrush, ADDITION);
+      body.updateMatrixWorld();
+
+      const leftWedgeGeom = createInternalFilletWedge(wedgeRadius, totalDepth);
+      leftWedgeGeom.scale(-1, 1, 1);
+      const leftWedgeBrush = new Brush(leftWedgeGeom);
+      leftWedgeBrush.position.set(-outerRadius * 0.9, footHeight, 0);
+      leftWedgeBrush.updateMatrixWorld();
+      body = evaluator.evaluate(body, leftWedgeBrush, ADDITION);
+      body.updateMatrixWorld();
     }
   }
 
   // ========================================================
-  // STEP 3: Subtractions (Bearing Pocket, Shaft Bore & Screw Holes)
+  // STEP 3: Defensive Subtractions (Bearing Pocket, Shaft Hole, Mounting Screws)
   // ========================================================
-  // A. Bearing Pocket Bore: cut from front face (Z = +totalDepth/2) inward to depth pocketDepth
-  const pocketCylGeom = new THREE.CylinderGeometry(pocketRadius, pocketRadius, pocketDepth * 2, 64);
-  pocketCylGeom.rotateX(Math.PI / 2);
-  const pocketBrush = new Brush(pocketCylGeom);
-  pocketBrush.position.set(0, centerOffsetY, totalDepth / 2);
-  pocketBrush.updateMatrixWorld();
-  body = evaluator.evaluate(body, pocketBrush, SUBTRACTION);
-  body.updateMatrixWorld();
 
-  // B. Center Shaft Clearance Hole (through entire body)
-  if (shaftClearanceRadius > 0) {
-    const shaftCylGeom = new THREE.CylinderGeometry(shaftClearanceRadius, shaftClearanceRadius, totalDepth * 4, 64);
+  // A. Bearing Pocket Cutter:
+  // Front face of body sits at Z = +totalDepth/2.
+  // Pocket floor sits at Z = +totalDepth/2 - pocketDepth.
+  // To avoid coplanar face artifacts, extend cutter height 2.0 mm beyond the front face.
+  if (params.isThroughHole && !retentionLip && pocketDepth >= totalDepth) {
+    // Full pass-through bearing pocket bore
+    const throughPocketGeom = new THREE.CylinderGeometry(pocketRadius, pocketRadius, totalDepth * 4, 32);
+    throughPocketGeom.rotateX(Math.PI / 2);
+    const throughPocketBrush = new Brush(throughPocketGeom);
+    throughPocketBrush.position.set(0, centerOffsetY, 0);
+    throughPocketBrush.updateMatrixWorld();
+    body = evaluator.evaluate(body, throughPocketBrush, SUBTRACTION);
+    body.updateMatrixWorld();
+  } else {
+    // Stepped pocket: extends 2.0mm beyond front face to avoid coplanar face artifacts
+    const pocketCutterHeight = pocketDepth + 2.0;
+    const pocketCylGeom = new THREE.CylinderGeometry(pocketRadius, pocketRadius, pocketCutterHeight, 32);
+    pocketCylGeom.rotateX(Math.PI / 2);
+    const pocketBrush = new Brush(pocketCylGeom);
+    const pocketCenterZ = (totalDepth / 2 - pocketDepth) + pocketCutterHeight / 2;
+    pocketBrush.position.set(0, centerOffsetY, pocketCenterZ);
+    pocketBrush.updateMatrixWorld();
+    body = evaluator.evaluate(body, pocketBrush, SUBTRACTION);
+    body.updateMatrixWorld();
+  }
+
+  // B. Bearing Pocket Entry Chamfer (Method 2: Lead-in entry chamfer to ease bearing press-fit)
+  if (hasLeadInChamfer) {
+    const chamferDepth = 0.8;
+    const chamferOuterRadius = pocketRadius + 0.5;
+    const overshoot = 0.5;
+    const slope = 0.5 / 0.8;
+    const coneH = chamferDepth + overshoot;
+    const coneGeom = new THREE.CylinderGeometry(
+      chamferOuterRadius + overshoot * slope,
+      pocketRadius,
+      coneH,
+      32
+    );
+    coneGeom.rotateX(Math.PI / 2);
+    const chamferBrush = new Brush(coneGeom);
+    const chamferCenterZ = (totalDepth / 2 - chamferDepth) + coneH / 2;
+    chamferBrush.position.set(0, centerOffsetY, chamferCenterZ);
+    chamferBrush.updateMatrixWorld();
+    body = evaluator.evaluate(body, chamferBrush, SUBTRACTION);
+    body.updateMatrixWorld();
+  }
+
+  // C. Center Shaft Clearance Hole:
+  // If retentionLip is active OR through-hole is requested, subtract inner cylinder with diameter (boreID + printer_compensation)
+  // extending completely through both sides (oversized totalDepth * 4)
+  if (retentionLip || params.isThroughHole) {
+    const shaftCylGeom = new THREE.CylinderGeometry(shaftClearanceRadius, shaftClearanceRadius, totalDepth * 4, 32);
     shaftCylGeom.rotateX(Math.PI / 2);
     const shaftBrush = new Brush(shaftCylGeom);
     shaftBrush.position.set(0, centerOffsetY, 0);
@@ -235,19 +316,20 @@ export function generateBearingPillowBlock(params: BearingPillowBlockParams): Ge
     body.updateMatrixWorld();
   }
 
-  // C. Mounting Screw Holes
+  // D. Mounting Holes & Ears:
+  // Screw clearance holes (screwDia + printer_compensation) passing completely through the flanges
   if (mountingFlanges === 'two-sided') {
-    // Left ear screw clearance hole
-    const holeGeom = new THREE.CylinderGeometry(mountHoleRadius, mountHoleRadius, totalDepth * 4, 32);
+    const holeGeom = new THREE.CylinderGeometry(mountHoleRadius, mountHoleRadius, totalDepth * 4, 24);
     holeGeom.rotateX(Math.PI / 2);
 
+    // Left ear clearance hole
     const leftHoleBrush = new Brush(holeGeom);
     leftHoleBrush.position.set(-earCenterDist, 0, 0);
     leftHoleBrush.updateMatrixWorld();
     body = evaluator.evaluate(body, leftHoleBrush, SUBTRACTION);
     body.updateMatrixWorld();
 
-    // Right ear screw clearance hole
+    // Right ear clearance hole
     const rightHoleBrush = new Brush(holeGeom);
     rightHoleBrush.position.set(earCenterDist, 0, 0);
     rightHoleBrush.updateMatrixWorld();
@@ -259,8 +341,8 @@ export function generateBearingPillowBlock(params: BearingPillowBlockParams): Ge
     const footHeight = Math.max(5.0, wallThickness * 1.2);
     const footHoleX = outerRadius + (footHalfWidth - outerRadius) * 0.5;
 
-    // Screw holes drilled vertically through foot along Y axis
-    const footHoleGeom = new THREE.CylinderGeometry(mountHoleRadius, mountHoleRadius, footHeight * 4, 32);
+    // Screw clearance holes drilled vertically through foot along Y axis
+    const footHoleGeom = new THREE.CylinderGeometry(mountHoleRadius, mountHoleRadius, footHeight * 4, 24);
 
     const leftFootHole = new Brush(footHoleGeom);
     leftFootHole.position.set(-footHoleX, footHeight / 2, 0);
@@ -276,9 +358,9 @@ export function generateBearingPillowBlock(params: BearingPillowBlockParams): Ge
   }
 
   // ========================================================
-  // STEP 4: Calculate Creased Normals
+  // STEP 4: Creased Normals (30°)
   // ========================================================
-  const finalGeometry = toCreasedNormals(body.geometry, THREE.MathUtils.degToRad(35));
+  const finalGeometry = toCreasedNormals(body.geometry, THREE.MathUtils.degToRad(30));
   finalGeometry.computeBoundingBox();
 
   const bbox = finalGeometry.boundingBox || new THREE.Box3();

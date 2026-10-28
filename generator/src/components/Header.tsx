@@ -126,7 +126,40 @@ export const Header: React.FC<HeaderProps> = ({
       case 'spool_holder_hub':
         return <Disc className={className} />;
       case 'dial_indicator_mount':
+      case 'piezo_mount':
         return <Gauge className={className} />;
+      case 'cycloidal_gear':
+        return <Cog className={`${className} ${activeModel === id ? 'animate-spin-slow' : ''}`} />;
+      case 'geneva_mechanism':
+      case 'peristaltic_pump_head':
+        return <RotateCw className={className} />;
+      case 'planetary_carrier':
+      case 'slip_ring_capsule':
+        return <Disc className={className} />;
+      case 'rack_and_pinion':
+        return <SlidersHorizontal className={className} />;
+      case 'scotch_yoke':
+      case 'vibration_isolator':
+        return <Activity className={className} />;
+      case 'din_rail_clip':
+        return <Anchor className={className} />;
+      case 'hinge_leaf':
+      case 'strain_relief_boot':
+        return <Link className={className} />;
+      case 'spindle_mount':
+      case 'pipe_flange':
+        return <CircleDot className={className} />;
+      case 'cross_slide_bracket':
+        return <Maximize2 className={className} />;
+      case 'venturi_nozzle':
+        return <Wind className={className} />;
+      case 'cable_gland':
+      case 'chamfer_tool_holder':
+        return <Wrench className={className} />;
+      case 'filament_runout_sensor':
+        return <Crosshair className={className} />;
+      case 'drill_guide_block':
+        return <Box className={className} />;
       default:
         return <Cog className={className} />;
     }
@@ -189,7 +222,7 @@ export const Header: React.FC<HeaderProps> = ({
             value={activeModel}
             onChange={(e) => onSelectModel(e.target.value as PrimitiveType)}
             className="bg-[#0e172a] hover:bg-[#16223d] border border-sky-500/50 hover:border-sky-400 text-slate-100 font-mono text-xs rounded-lg pl-8 pr-8 py-1.5 appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-sky-500/40 transition-all font-bold shadow-md shadow-sky-950/40"
-            title="Select parametric 3D model (33 parts)"
+            title={`Select parametric 3D model (${PRIMITIVE_CATALOG.length} parts)`}
           >
             {categories.map((cat) => (
               <optgroup key={cat} label={`── ${cat.toUpperCase()} ──`} className="bg-[#0b1120] text-sky-400 font-bold">
@@ -208,17 +241,17 @@ export const Header: React.FC<HeaderProps> = ({
         <button
           onClick={() => setMenuOpen(true)}
           className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-[#0e172a] hover:bg-[#16223d] border border-slate-700 hover:border-sky-500/60 text-slate-300 hover:text-sky-300 font-mono text-xs transition-all cursor-pointer shadow-sm"
-          title="Browse visual catalog of all 33 parts with search and filtering"
+          title={`Browse visual catalog of all ${PRIMITIVE_CATALOG.length} parts with search and filtering`}
         >
           <FolderOpen className="w-3.5 h-3.5 text-sky-400" />
           <span className="hidden sm:inline">Catalog</span>
           <span className="text-[10px] px-1 py-0.2 rounded bg-sky-950 border border-sky-800 text-sky-300 font-mono font-bold">
-            33
+            {PRIMITIVE_CATALOG.length}
           </span>
         </button>
       </div>
 
-        {/* Full-Screen Backdrop Modal Dialog for All 33 Components */}
+        {/* Full-Screen Backdrop Modal Dialog for All Components */}
         {menuOpen && (
           <div
             className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/80 backdrop-blur-md animate-in fade-in duration-150"
@@ -256,7 +289,7 @@ export const Header: React.FC<HeaderProps> = ({
                     type="text"
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    placeholder="Search 33 parts by name, category, or spec (e.g. gear, t-nut, blower, 2020)..."
+                    placeholder={`Search ${PRIMITIVE_CATALOG.length} parts by name, category, or spec (e.g. gear, t-nut, blower, 2020)...`}
                     className="w-full bg-[#0e172a] border border-slate-700 focus:border-sky-500 rounded-lg px-3.5 py-2 text-xs text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-1 focus:ring-sky-500 transition-all font-mono"
                   />
                   {searchQuery && (

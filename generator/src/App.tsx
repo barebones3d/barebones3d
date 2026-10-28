@@ -57,6 +57,7 @@ import {
   GeneratedMeshResult,
   BearingPresetType,
   BEARING_PRESET_DATA,
+  PRIMITIVE_CATALOG,
 } from './generators/types';
 import {
   generateHerringboneGear,
@@ -120,8 +121,30 @@ import { ParameterSidebar } from './components/ParameterSidebar';
 import { Viewport } from './components/Viewport';
 
 export const App: React.FC = () => {
-  // Current active primitive model (defaults to GT2 Pulley)
-  const [activeModel, setActiveModel] = useState<PrimitiveType>('gt2_pulley');
+  // Current active primitive model (defaults to GT2 Pulley or URL ?part= query)
+  const [activeModel, setActiveModel] = useState<PrimitiveType>(() => {
+    try {
+      const params = new URLSearchParams(window.location.search);
+      const partParam = params.get('part') || window.location.hash.replace('#', '');
+      if (partParam && PRIMITIVE_CATALOG.some((p) => p.id === partParam)) {
+        return partParam as PrimitiveType;
+      }
+    } catch {
+      // fallback
+    }
+    return 'gt2_pulley';
+  });
+
+  const handleSelectModel = useCallback((model: PrimitiveType) => {
+    setActiveModel(model);
+    try {
+      const url = new URL(window.location.href);
+      url.searchParams.set('part', model);
+      window.history.replaceState({}, '', url.toString());
+    } catch {
+      // ignore
+    }
+  }, []);
 
   // --- Initial Parameters: Original 13 Models ---
   const [gt2Params, setGt2Params] = useState<GT2PulleyParams>({
@@ -163,6 +186,8 @@ export const App: React.FC = () => {
     retentionLip: true,
     lipThickness: 1.5,
     lipOverhang: 1.0,
+    cornerFillet: 2.0,
+    leadInChamfer: true,
     mountingFlanges: 'two-sided',
     mountHoleSize: 'M4',
     flangeLength: 16,
@@ -174,6 +199,8 @@ export const App: React.FC = () => {
     leg2Length: 45,
     width: 30,
     thickness: 4.5,
+    innerFillet: 3.0,
+    outerFillet: 1.5,
     gussetReinforcement: true,
     gussetThickness: 4.0,
     holePattern: 'four-grid',
@@ -850,6 +877,17 @@ export const App: React.FC = () => {
         break;
       case 'heavy_bull_gear':
         setGearParams((p) => ({ ...p, module: 2.0, toothCount: 36, faceWidth: 24, boreDiameter: 8.0, boreType: 'hex' }));
+        break;
+
+      // Structural Bracket Presets
+      case 'compact_corner':
+        setBracketParams((p) => ({ ...p, leg1Length: 25, leg2Length: 25, width: 20, thickness: 3.0, innerFillet: 2.0, outerFillet: 1.0, gussetReinforcement: false, screwSize: 'M3' }));
+        break;
+      case 'frame_gusset_m4':
+        setBracketParams((p) => ({ ...p, leg1Length: 45, leg2Length: 45, width: 30, thickness: 4.5, innerFillet: 3.0, outerFillet: 1.5, gussetReinforcement: true, gussetThickness: 4.0, screwSize: 'M4' }));
+        break;
+      case 'heavy_duty_m5':
+        setBracketParams((p) => ({ ...p, leg1Length: 75, leg2Length: 75, width: 40, thickness: 6.0, innerFillet: 5.0, outerFillet: 2.5, gussetReinforcement: true, gussetThickness: 5.5, screwSize: 'M5' }));
         break;
 
       // Knurled Knob Presets
@@ -1623,7 +1661,7 @@ export const App: React.FC = () => {
       {/* Top Header */}
       <Header
         activeModel={activeModel}
-        onSelectModel={setActiveModel}
+        onSelectModel={handleSelectModel}
         onExportSTL={handleExportSTL}
       />
 
@@ -1639,7 +1677,7 @@ export const App: React.FC = () => {
         {/* Left Sidebar: Parametric Sliders & Number Inputs */}
         <ParameterSidebar
           activeModel={activeModel}
-          onSelectModel={setActiveModel}
+          onSelectModel={handleSelectModel}
           gearParams={gearParams}
           pillowParams={pillowParams}
           bracketParams={bracketParams}

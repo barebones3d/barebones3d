@@ -1384,6 +1384,24 @@ export const ParameterSidebar: React.FC<ParameterSidebarProps> = (props) => {
                 ))}
               </div>
               <NumericField
+                label="Corner Fillet"
+                value={pillowParams.cornerFillet ?? 2.0}
+                min={0}
+                max={6}
+                step={0.5}
+                unit="mm"
+                onChange={(val) => onUpdatePillowParams({ cornerFillet: val })}
+              />
+              <div className="flex items-center justify-between">
+                <label className="text-xs text-slate-300 font-medium">Entry Lead-in Chamfer</label>
+                <input
+                  type="checkbox"
+                  checked={pillowParams.leadInChamfer !== false}
+                  onChange={(e) => onUpdatePillowParams({ leadInChamfer: e.target.checked })}
+                  className="w-4 h-4 accent-sky-500 cursor-pointer"
+                />
+              </div>
+              <NumericField
                 label="Printer Tolerance"
                 value={pillowParams.printer_compensation}
                 min={-0.1}
@@ -1439,6 +1457,24 @@ export const ParameterSidebar: React.FC<ParameterSidebarProps> = (props) => {
                 step={0.5}
                 unit="mm"
                 onChange={(val) => onUpdateBracketParams({ thickness: val })}
+              />
+              <NumericField
+                label="Inner Crook Fillet"
+                value={bracketParams.innerFillet ?? 3.0}
+                min={0.5}
+                max={Math.max(1.0, Math.min(bracketParams.leg1Length - bracketParams.thickness, bracketParams.leg2Length - bracketParams.thickness) * 0.4)}
+                step={0.25}
+                unit="mm"
+                onChange={(val) => onUpdateBracketParams({ innerFillet: val })}
+              />
+              <NumericField
+                label="Outer Corner Fillet"
+                value={bracketParams.outerFillet ?? 1.5}
+                min={0}
+                max={bracketParams.thickness}
+                step={0.25}
+                unit="mm"
+                onChange={(val) => onUpdateBracketParams({ outerFillet: val })}
               />
               <div className="flex items-center justify-between">
                 <label className="text-xs text-slate-300 font-medium">Corner Gusset Rib</label>

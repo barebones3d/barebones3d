@@ -505,6 +505,8 @@ export interface BearingPillowBlockParams {
   mountingFlanges: MountingFlangeType; // 'none' | 'two-sided' | 'bottom-foot'
   mountHoleSize: ScrewSizeType;
   flangeLength: number;     // 10 to 40 mm
+  cornerFillet?: number;    // 0 to 10 mm (outer corner rounding on flanges)
+  leadInChamfer?: boolean;  // 45 deg bearing lead-in entry chamfer
   printer_compensation: number; // -0.2 to +0.4 mm
 }
 
@@ -516,6 +518,8 @@ export interface StructuralBracketParams {
   thickness: number;        // 2 to 15 mm (overall or default)
   leg1Thickness?: number;   // optional independent base leg thickness
   leg2Thickness?: number;   // optional independent upright leg thickness
+  innerFillet?: number;     // 0.5 to 15 mm (smooth crook arc radius)
+  outerFillet?: number;     // 0 to 10 mm (outer corner fillet radius)
   gussetReinforcement: boolean;
   gussetThickness: number;  // 2 to 12 mm
   holePattern: HolePatternType; // 'none' | 'single' | 'two-inline' | 'four-grid'

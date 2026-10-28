@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "npm --prefix generator run dev",
     "build:generator": "npm --prefix generator run build",
-    "sync:site": "rm -rf site/generator/* && cp -r generator/dist/* site/generator/",
+    "sync:site": "rm -rf site/generator/* && cp -r generator/dist/* site/generator/ && sed 's|\\./assets/|/generator/assets/|g' generator/dist/index.html > site/generator.html",
     "build": "npm run build:generator && npm run sync:site",
     "deploy": "npm run build && wrangler pages deploy site --project-name barebones3d --branch main",
     "test": "npm --prefix generator test"

@@ -109,6 +109,24 @@ validateMesh('Pillow Block 608 Ears', generateBearingPillowBlock({
   flangeLength: 16,
   printer_compensation: 0.15,
 }));
+validateMesh('Pillow Block 608 Bottom Foot', generateBearingPillowBlock({
+  preset: '608',
+  bearingOD: 22,
+  bearingID: 8,
+  bearingWidth: 7,
+  pocketDepth: 7,
+  isThroughHole: false,
+  wallThickness: 4.5,
+  retentionLip: true,
+  lipThickness: 1.5,
+  lipOverhang: 1.0,
+  mountingFlanges: 'bottom-foot',
+  mountHoleSize: 'M4',
+  flangeLength: 16,
+  cornerFillet: 2.5,
+  leadInChamfer: true,
+  printer_compensation: 0.15,
+}));
 
 // 3. Structural L-Bracket
 console.log('\n[3] Testing Structural L-Bracket (CSG):');

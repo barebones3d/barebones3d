@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import { toCreasedNormals } from 'three/examples/jsm/utils/BufferGeometryUtils.js';
 import { HerringboneGearParams, GeneratedMeshResult } from './types';
 import {
   computeInvoluteGear2D,
@@ -8,12 +9,24 @@ import {
 } from '../utils/meshMath';
 
 /**
+ * Defensive contour winding check:
+ * - Outer boundary contour MUST be Counter-Clockwise (CCW).
+ * - Inner hole contour (bore) MUST be Clockwise (CW).
+ */
+function ensureWinding(points: THREE.Vector2[], clockwise: boolean): THREE.Vector2[] {
+  const isCW = THREE.ShapeUtils.isClockWise(points);
+  return isCW === clockwise ? points : [...points].reverse();
+}
+
+/**
  * Generates a watertight, mathematically precise Herringbone (Double-Helical) Gear.
  * Features:
- * - True involute tooth profile with smooth flanks and root fillets
+ * - True involute tooth profile with smooth flanks and multi-point root fillets
  * - Opposing helix angles on top/bottom halves forming a chevron apex at the center plane
  * - Configurable bore: Round, D-Shaft, or Hexagonal with 3D-printer tolerance offset
+ * - 45 deg lead-in entry chamfers on top and bottom bore openings for smooth shaft insertion
  * - 100% closed 2-manifold mesh with outward-facing normals
+ * - Viewport shading fixed with toCreasedNormals (30 deg)
  */
 export function generateHerringboneGear(params: HerringboneGearParams): GeneratedMeshResult {
   const {
@@ -26,9 +39,9 @@ export function generateHerringboneGear(params: HerringboneGearParams): Generate
     printer_compensation,
   } = params;
 
-  // 1. Compute 2D gear profile
+  // 1. Compute 2D gear profile (outer boundary contour MUST be CCW)
   const gearMath = computeInvoluteGear2D(module, toothCount, pressureAngle, 4);
-  const outerProfile2D = gearMath.profilePoints;
+  const outerProfile2D = ensureWinding(gearMath.profilePoints, false);
   const numOuterPoints = outerProfile2D.length;
 
   // Max safe bore radius is rootRadius minus rim margin (at least 1.5 * module)
@@ -36,24 +49,54 @@ export function generateHerringboneGear(params: HerringboneGearParams): Generate
   const actualBoreDia = Math.min(params.boreDiameter, maxSafeBoreDia);
   const hasBore = actualBoreDia > 1.0;
 
-  // 2. Compute 2D bore profile (if bore is active)
+  // 2. Compute 2D bore profile (inner hole contour MUST be CW)
   let boreProfile2D: THREE.Vector2[] = [];
+  let chamferBoreProfile2D: THREE.Vector2[] = [];
   let numBorePoints = 0;
+  const chamferSize = hasBore
+    ? Math.max(0.4, Math.min(0.8, actualBoreDia * 0.12, faceWidth * 0.08))
+    : 0;
+
   if (hasBore) {
-    boreProfile2D = generateBore2D(
+    const rawBore = generateBore2D(
       boreType,
       actualBoreDia,
       params.dShaftFlatOffset,
       printer_compensation,
       32
     );
+    boreProfile2D = ensureWinding(rawBore, true);
     numBorePoints = boreProfile2D.length;
+
+    // 45 deg lead-in entry chamfer bore profile (scaled outward by chamferSize)
+    chamferBoreProfile2D = boreProfile2D.map((p) => {
+      const len = p.length();
+      return len > 0.001
+        ? p.clone().multiplyScalar((len + chamferSize) / len)
+        : p.clone();
+    });
   }
 
   // 3. Slices along Z axis
+  // Ensure slice count is an odd integer (slicesPerHalf * 2 + 1) so that a slice lands exactly at z = 0
   const halfWidth = faceWidth / 2;
   const slicesPerHalf = 12; // 24 slices total across gear height
-  const numSlices = slicesPerHalf * 2 + 1; // includes bottom, center (0), and top
+  const numSlices = slicesPerHalf * 2 + 1; // 25 slices: includes bottom, center (0), and top
+
+  // Pre-calculate z values with dedicated 45 deg chamfer planes at (-halfWidth + chamferSize) and (+halfWidth - chamferSize)
+  const zVals: number[] = [];
+  zVals.push(-halfWidth);
+  zVals.push(-halfWidth + chamferSize);
+  for (let i = 2; i <= slicesPerHalf; i++) {
+    const frac = (i - 1) / (slicesPerHalf - 1);
+    zVals.push((-halfWidth + chamferSize) + frac * (0 - (-halfWidth + chamferSize)));
+  }
+  for (let i = 1; i <= slicesPerHalf - 2; i++) {
+    const frac = i / (slicesPerHalf - 1);
+    zVals.push(0 + frac * (halfWidth - chamferSize));
+  }
+  zVals.push(halfWidth - chamferSize);
+  zVals.push(halfWidth);
 
   // Helix twist calculation: twist rate = tan(helixAngle) / pitchRadius
   const helixAngleRad = (helixAngle * Math.PI) / 180;
@@ -67,14 +110,12 @@ export function generateHerringboneGear(params: HerringboneGearParams): Generate
   const vertsPerSlice = numOuterPoints + (hasBore ? numBorePoints : 0);
 
   for (let s = 0; s < numSlices; s++) {
-    // z ranges from -halfWidth to +halfWidth
-    const frac = s / (numSlices - 1);
-    const z = -halfWidth + frac * faceWidth;
+    const z = zVals[s];
 
     // Herringbone chevron twist:
     // Bottom half (z < 0): twist = z * twistRate
     // Top half (z >= 0): twist = -z * twistRate
-    // At z = 0, twist is 0, forming the chevron V apex
+    // At z = 0, twist is exactly 0, forming the sharp chevron V apex
     const twistAngle = z < 0 ? z * twistRate : -z * twistRate;
 
     const cosT = Math.cos(twistAngle);
@@ -88,10 +129,12 @@ export function generateHerringboneGear(params: HerringboneGearParams): Generate
       positions.push(rx, ry, z);
     }
 
-    // Bore vertices for this slice (straight drive shaft, un-twisted)
+    // Bore vertices for this slice (with 45 deg entry chamfer at top & bottom caps)
     if (hasBore) {
+      const isCapSlice = s === 0 || s === numSlices - 1;
+      const activeBore = isCapSlice ? chamferBoreProfile2D : boreProfile2D;
       for (let i = 0; i < numBorePoints; i++) {
-        const bp = boreProfile2D[i];
+        const bp = activeBore[i];
         positions.push(bp.x, bp.y, z);
       }
     }
@@ -132,25 +175,27 @@ export function generateHerringboneGear(params: HerringboneGearParams): Generate
         const b11 = getBoreIdx(s + 1, nextI);
         const b01 = getBoreIdx(s + 1, i);
 
-        // Facing inward toward bore center: (b00, b11, b10) and (b00, b01, b11)
-        indices.push(b00, b11, b10);
-        indices.push(b00, b01, b11);
+        // With CW bore contour, facing inward toward shaft center:
+        indices.push(b00, b10, b11);
+        indices.push(b00, b11, b01);
       }
     }
   }
 
   // 6. Triangulate Bottom Cap (slice 0, z = -halfWidth)
-  // Outer profile is rotated by bottom twist angle
   const bottomTwist = -halfWidth * twistRate;
   const cosBot = Math.cos(bottomTwist);
   const sinBot = Math.sin(bottomTwist);
-  const botOuter2D = outerProfile2D.map(
-    (p) => new THREE.Vector2(p.x * cosBot - p.y * sinBot, p.x * sinBot + p.y * cosBot)
+  const botOuter2D = ensureWinding(
+    outerProfile2D.map(
+      (p) => new THREE.Vector2(p.x * cosBot - p.y * sinBot, p.x * sinBot + p.y * cosBot)
+    ),
+    false
   );
 
   let bottomHoles: THREE.Vector2[][] = [];
   if (hasBore) {
-    bottomHoles = [boreProfile2D];
+    bottomHoles = [ensureWinding(chamferBoreProfile2D, true)];
   }
 
   const bottomTriangles = THREE.ShapeUtils.triangulateShape(botOuter2D, bottomHoles);
@@ -167,13 +212,16 @@ export function generateHerringboneGear(params: HerringboneGearParams): Generate
   const topTwist = -halfWidth * twistRate; // (-z * twistRate at z = +halfWidth)
   const cosTop = Math.cos(topTwist);
   const sinTop = Math.sin(topTwist);
-  const topOuter2D = outerProfile2D.map(
-    (p) => new THREE.Vector2(p.x * cosTop - p.y * sinTop, p.x * sinTop + p.y * cosTop)
+  const topOuter2D = ensureWinding(
+    outerProfile2D.map(
+      (p) => new THREE.Vector2(p.x * cosTop - p.y * sinTop, p.x * sinTop + p.y * cosTop)
+    ),
+    false
   );
 
   let topHoles: THREE.Vector2[][] = [];
   if (hasBore) {
-    topHoles = [boreProfile2D];
+    topHoles = [ensureWinding(chamferBoreProfile2D, true)];
   }
 
   const topSliceIdx = numSlices - 1;
@@ -188,27 +236,34 @@ export function generateHerringboneGear(params: HerringboneGearParams): Generate
   }
 
   // 8. Build Three.js BufferGeometry
-  const geometry = new THREE.BufferGeometry();
-  geometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
-  geometry.setIndex(indices);
-  geometry.computeVertexNormals();
-  geometry.computeBoundingBox();
+  const rawGeometry = new THREE.BufferGeometry();
+  rawGeometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
+  rawGeometry.setIndex(indices);
+  rawGeometry.computeVertexNormals();
 
-  const bbox = geometry.boundingBox || new THREE.Box3();
+  // Apply toCreasedNormals (30 deg) to preserve sharp transitions at tooth flanks and caps
+  const finalGeometry = toCreasedNormals(rawGeometry, THREE.MathUtils.degToRad(30));
+  finalGeometry.computeBoundingBox();
+
+  const bbox = finalGeometry.boundingBox || new THREE.Box3();
   const dimensions = {
     x: Number((bbox.max.x - bbox.min.x).toFixed(2)),
     y: Number((bbox.max.y - bbox.min.y).toFixed(2)),
     z: Number((bbox.max.z - bbox.min.z).toFixed(2)),
   };
 
-  const volume = computeMeshVolume(geometry);
+  const volume = computeMeshVolume(finalGeometry);
   const estimatedPrintWeightGrams = estimateWeightGrams(volume, 0.2);
 
+  const posAttr = finalGeometry.attributes.position;
+  const index = finalGeometry.index;
+  const triangleCount = index ? index.count / 3 : posAttr.count / 3;
+
   return {
-    geometry,
+    geometry: finalGeometry,
     dimensions,
-    triangles: indices.length / 3,
-    vertices: positions.length / 3,
+    triangles: triangleCount,
+    vertices: posAttr.count,
     estimatedPrintWeightGrams,
   };
 }

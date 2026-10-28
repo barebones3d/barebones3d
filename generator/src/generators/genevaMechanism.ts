@@ -174,7 +174,7 @@ export function generateGenevaMechanism(params: GenevaMechanismParams): Generate
 
   return {
     geometry: geom,
-    dimensions: { x: sz.x, y: sz.y, z: sz.z },
+    dimensions: { x: Number(sz.x.toFixed(2)), y: Number(sz.y.toFixed(2)), z: Number(sz.z.toFixed(2)) },
     triangles: indices.length / 3,
     vertices: positions.length / 3,
     estimatedPrintWeightGrams: weight,
