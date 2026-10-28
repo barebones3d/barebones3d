@@ -124,6 +124,7 @@ export interface EnvBindings {
   STRIPE_SECRET_KEY?: string;
   STRIPE_PUBLISHABLE_KEY?: string;
   STRIPE_WEBHOOK_SECRET?: string;
+  STRIPE_WEBHOOK_ENDPOINT_ID?: string;
   SLANT3D_API_KEY?: string;
   SLANT3D_API_URL?: string;
   FULFILLMENT_PROVIDER?: string;
