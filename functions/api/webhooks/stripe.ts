@@ -1,6 +1,6 @@
 import type { EnvBindings, ShippingAddress } from '../../../src/types/database.ts';
 import {
-  createD1Adapter,
+  getDbAdapter,
   getPartById,
   createOrder,
   updateOrderStatus,
@@ -64,7 +64,7 @@ export async function onRequestPost(context: PagesContext): Promise<Response> {
       });
     }
 
-    const db = createD1Adapter(env.DB);
+    const db = getDbAdapter(env.DB);
     const part = await getPartById(db, partId);
 
     if (!part) {

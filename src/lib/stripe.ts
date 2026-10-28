@@ -188,3 +188,127 @@ export async function generateStripeSignatureHeader(
 
   return `t=${ts},v1=${hex}`;
 }
+
+export interface StripeSyncResult {
+  productId: string;
+  priceId: string;
+  action: 'created' | 'updated' | 'unchanged';
+}
+
+/**
+ * Synchronizes a Barebones 3D commercial replacement part with Stripe Products and Prices.
+ */
+export async function syncStripeProduct(
+  stripeSecretKey: string,
+  part: Part,
+  siteUrl: string = 'https://barebones3d.com'
+): Promise<StripeSyncResult> {
+  if (!part.is_commercial_allowed) {
+    throw new Error(`Part ${part.id} is non-commercial and cannot be synchronized to Stripe.`);
+  }
+
+  const authHeader = {
+    'Authorization': `Bearer ${stripeSecretKey}`,
+    'Content-Type': 'application/x-www-form-urlencoded'
+  };
+
+  // 1. Search for existing product with matching part_id in metadata
+  const listRes = await fetch(`https://api.stripe.com/v1/products?limit=100`, {
+    headers: { 'Authorization': `Bearer ${stripeSecretKey}` }
+  });
+  if (!listRes.ok) {
+    const errText = await listRes.text();
+    throw new Error(`Failed to list Stripe products: ${errText}`);
+  }
+  const listData: any = await listRes.json();
+  const existingProduct = (listData.data || []).find((p: any) => p.metadata?.part_id === part.id || p.metadata?.slug === part.slug);
+
+  let productId = existingProduct?.id;
+  let action: 'created' | 'updated' | 'unchanged' = 'unchanged';
+
+  const productParams = new URLSearchParams();
+  productParams.append('name', `${part.title} (OEM #${part.oem_part_number})`);
+  productParams.append('description', `3D Printed Commercial Reproduction in ${part.material_spec}. Compatible with ${part.oem_part_number}.`);
+  productParams.append('metadata[part_id]', part.id);
+  productParams.append('metadata[oem_part_number]', part.oem_part_number);
+  productParams.append('metadata[slug]', part.slug);
+  productParams.append('metadata[material_spec]', part.material_spec);
+  productParams.append('active', String(Boolean(part.is_active)));
+  productParams.append('tax_code', 'txcd_99999999'); // Tangible personal property
+
+  if (productId) {
+    // Update existing product
+    const updateRes = await fetch(`https://api.stripe.com/v1/products/${productId}`, {
+      method: 'POST',
+      headers: authHeader,
+      body: productParams.toString()
+    });
+    if (!updateRes.ok) {
+      const err = await updateRes.text();
+      throw new Error(`Failed to update Stripe product ${productId}: ${err}`);
+    }
+  } else {
+    // Create new product
+    action = 'created';
+    const createRes = await fetch(`https://api.stripe.com/v1/products`, {
+      method: 'POST',
+      headers: authHeader,
+      body: productParams.toString()
+    });
+    if (!createRes.ok) {
+      const err = await createRes.text();
+      throw new Error(`Failed to create Stripe product: ${err}`);
+    }
+    const created: any = await createRes.json();
+    productId = created.id;
+  }
+
+  // 2. Check and sync active price
+  const priceListRes = await fetch(`https://api.stripe.com/v1/prices?product=${productId}&active=true`, {
+    headers: { 'Authorization': `Bearer ${stripeSecretKey}` }
+  });
+  if (!priceListRes.ok) {
+    const errText = await priceListRes.text();
+    throw new Error(`Failed to list Stripe prices: ${errText}`);
+  }
+  const priceData: any = await priceListRes.json();
+  const activePrices = priceData.data || [];
+  const matchingPrice = activePrices.find((pr: any) => pr.unit_amount === part.retail_price_cents && pr.currency === 'usd');
+
+  let priceId = matchingPrice?.id;
+
+  if (!priceId) {
+    if (existingProduct) action = 'updated';
+    // Archive old active prices if amount changed
+    for (const oldPrice of activePrices) {
+      await fetch(`https://api.stripe.com/v1/prices/${oldPrice.id}`, {
+        method: 'POST',
+        headers: authHeader,
+        body: new URLSearchParams({ active: 'false' }).toString()
+      });
+    }
+
+    // Create new price
+    const newPriceParams = new URLSearchParams();
+    newPriceParams.append('product', productId);
+    newPriceParams.append('currency', 'usd');
+    newPriceParams.append('unit_amount', String(part.retail_price_cents));
+    newPriceParams.append('tax_behavior', 'exclusive');
+    newPriceParams.append('metadata[part_id]', part.id);
+
+    const createPriceRes = await fetch(`https://api.stripe.com/v1/prices`, {
+      method: 'POST',
+      headers: authHeader,
+      body: newPriceParams.toString()
+    });
+    if (!createPriceRes.ok) {
+      const err = await createPriceRes.text();
+      throw new Error(`Failed to create Stripe price: ${err}`);
+    }
+    const createdPrice: any = await createPriceRes.json();
+    priceId = createdPrice.id;
+  }
+
+  return { productId, priceId, action };
+}
+

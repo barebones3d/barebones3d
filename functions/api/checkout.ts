@@ -1,5 +1,5 @@
 import type { EnvBindings } from '../../src/types/database.ts';
-import { createD1Adapter, getPartById } from '../../src/lib/db.ts';
+import { getDbAdapter, getPartById } from '../../src/lib/db.ts';
 import { createCheckoutSession } from '../../src/lib/stripe.ts';
 
 interface PagesContext {
@@ -43,7 +43,7 @@ export async function onRequestPost(context: PagesContext): Promise<Response> {
       });
     }
 
-    const db = createD1Adapter(env.DB);
+    const db = getDbAdapter(env.DB);
     const part = await getPartById(db, partId);
 
     if (!part) {

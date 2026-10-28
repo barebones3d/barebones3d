@@ -16,6 +16,7 @@
     "ingest": "node scripts/ingest.ts",
     "discover": "node scripts/discover.ts",
     "typecheck": "./generator/node_modules/typescript/bin/tsc --project tsconfig.json",
+    "sync:stripe": "node scripts/sync-stripe-catalog.ts",
     "deploy": "npm run build && wrangler pages deploy site --project-name barebones3d --branch main"
   },
   "devDependencies": {},
