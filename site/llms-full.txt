@@ -11,17 +11,23 @@ Barebones 3D provides precision diagnostic guides and commercial-grade replaceme
 - [Black & Decker String Trimmer Replacement Spool Cap Cover](https://barebones3d.com/guides/black-decker-trimmer-replacement-spool-cap-90530948): OEM #90530948 | Fitment: Black & Decker GH400 / GH500 / GH600 / LST120 / LST220 / NST2018 String Trimmers | Material: PETG Heavy Duty | Price: Free STL Only
 - [Bosch / Siemens Washing Machine Drain Pump Filter Repair Grip](https://barebones3d.com/guides/bosch-washing-machine-drain-filter-handle-00605010): OEM #00605010 | Fitment: Bosch Serie 4 / 6 / 8 / Maxx (2008-2024), Siemens iQ300 / iQ500 / iQ700 (2009-2024) | Material: PETG Heavy Duty | Price: Free STL Only
 - [Bosch GTS1031 / 4100 Table Saw Riving Knife Quick-Release Clamping Cam Lever](https://barebones3d.com/guides/bosch-table-saw-riving-knife-lever-1609202428): OEM #1609202428 | Fitment: Bosch GTS1031 Table Saw, Bosch 4100 Table Saw, Bosch 4000 Table Saw | Material: Nylon PA12 | Price: Free STL Only
+- [Bose QuietComfort 35 (QC35 I & II) Swivel Hinge Repair Bracket](https://barebones3d.com/guides/bose-qc35-swivel-hinge-bracket-qc35-hinge-assy): OEM #QC35-HINGE-ASSY | Fitment: Bose QuietComfort 35 (Series I), Bose QuietComfort 35 II (Series II) | Material: Nylon PA12 | Price: $19.00 USD
 - [Bose QuietComfort 35 / 45 Headband Swivel Hinge Joint Replacement](https://barebones3d.com/guides/bose-quietcomfort-35-45-headband-swivel-hinge-joint-replacement-759944-0010): OEM #759944-0010 | Fitment: Bose QuietComfort 35 Series I (QC35 I), Bose QuietComfort 35 Series II (QC35 II), Bose QuietComfort 45 (QC45) | Material: Nylon PA12 | Price: $20.00 USD
 - [DeWalt 20V MAX Lithium-Ion Battery Pack Spring Latch Release Button](https://barebones3d.com/guides/dewalt-20v-battery-release-latch-button-310712-04): OEM #310712-04 | Fitment: DeWalt 20V MAX DCB200 / DCB201 / DCB203 / DCB204 / DCB205 Battery Packs | Material: Nylon PA12 | Price: Free STL Only
 - [DeWalt DWE7491 / DWE7480 Table Saw Rack & Pinion Fence Slide Glide](https://barebones3d.com/guides/dewalt-table-saw-fence-slide-glide-640510-00): OEM #640510-00 | Fitment: DeWalt DWE7491RS Table Saw, DeWalt DWE7480 Table Saw, DeWalt DW745 Table Saw | Material: Self-Lubricating Nylon PA12 | Price: Free STL Only
 - [DeWalt DWS779 / DWS780 12-Inch Miter Saw High-Flow Dust Extraction Chute](https://barebones3d.com/guides/dewalt-dws779-dws780-12-inch-miter-saw-high-flow-dust-extraction-chute-n087403): OEM #N087403 | Fitment: DeWalt DWS779 12-Inch Sliding Compound Miter Saw, DeWalt DWS780 12-Inch Double Bevel Sliding Compound Miter Saw, DeWalt DWS782 12-Inch Sliding Miter Saw | Material: PETG Heavy Duty | Price: $25.00 USD
+- [DeWalt DWS779 / DWS780 Miter Saw High-Efficiency Dust Extraction Chute](https://barebones3d.com/guides/dewalt-dws779-dws780-dust-extraction-chute-n447388): OEM #N447388 | Fitment: DeWalt DWS779, DeWalt DWS780, DeWalt DWS782 | Material: PETG Heavy Duty | Price: $28.00 USD
 - [Dodge Ram 1500 / 2500 HVAC Heater Blend Door Sub-Assembly Gear](https://barebones3d.com/guides/dodge-ram-hvac-blend-door-gear-68064949aa): OEM #68064949AA | Fitment: Ram 1500 / 2500 / 3500 (2009-2018), Ram 1500 Classic (2019-2023) | Material: Nylon PA12 | Price: Free STL Only
 - [Dyson V10 / V11 Cordless Vacuum Reinforced Heavy-Duty Trigger Switch Lever](https://barebones3d.com/guides/dyson-v10-v11-cordless-vacuum-reinforced-heavy-duty-trigger-switch-lever-969830-01): OEM #969830-01 | Fitment: Dyson V10 Absolute / Animal / Motorhead (SV12), Dyson V11 Torque Drive / Animal / Outsize (SV14 / SV15) | Material: Nylon PA12 | Price: $19.00 USD
+- [Dyson V10 / V11 Cordless Vacuum Reinforced Trigger Switch Assembly](https://barebones3d.com/guides/dyson-v10-v11-cordless-vacuum-reinforced-trigger-switch-970050-01): OEM #970050-01 | Fitment: Dyson V10 (SV12), Dyson V11 (SV14), Dyson V11 Outsize | Material: PETG Heavy Duty | Price: Free STL Only
+- [Ford F-150 / Expedition HVAC Blend Door Actuator Reduction Gear](https://barebones3d.com/guides/ford-f-150-expedition-blend-door-actuator-gear-dl3z-19e616-a): OEM #DL3Z-19E616-A | Fitment: Ford F-150 (2009-2014), Ford Expedition (2007-2017), Lincoln Navigator (2007-2017) | Material: Nylon PA12 | Price: $22.00 USD
 - [Ford F-150 / Super Duty Sunroof Track Slider Lift Arm Repair Kit](https://barebones3d.com/guides/ford-f-150-super-duty-sunroof-track-slider-lift-arm-repair-kit-fl3z-1651071-a): OEM #FL3Z-1651071-A | Fitment: Ford F-150 (2015-2020), Ford F-250 / F-350 / F-450 Super Duty (2017-2022), Ford Expedition (2018-2021) | Material: Nylon PA12 | Price: Free STL Only
+- [Ford F-150 / Super Duty Vista Sunroof Track Slider Lift Arm](https://barebones3d.com/guides/ford-f-150-super-duty-vista-sunroof-track-slider-lift-arm-fl3z-16502c22-e): OEM #FL3Z-16502C22-E | Fitment: Ford F-150 (2015-2020), Ford F-250 Super Duty (2017-2022), Ford F-350 Super Duty (2017-2022) | Material: Nylon PA12 | Price: Free STL Only
 - [GE / Hotpoint Clothes Dryer Front Drum Slide Bearing Glides](https://barebones3d.com/guides/ge-hotpoint-clothes-dryer-front-drum-slide-bearing-glides-we1m1067): OEM #WE1M1067 | Fitment: GE Profile Front Load / Top Load Dryers, Hotpoint Electric and Gas Dryers, Kenmore 362/363 Series Dryers | Material: PETG Heavy Duty | Price: Free STL Only
+- [GM GMT900 HVAC Recirculation & Defrost Blend Door Actuator Cam Lever](https://barebones3d.com/guides/gm-gmt900-hvac-recirculation-defrost-blend-door-actuator-cam-lever-20826188): OEM #20826188 | Fitment: Chevrolet Silverado 1500/2500 (2007-2014), GMC Sierra (2007-2014), Chevrolet Tahoe / Suburban (2007-2014) | Material: Nylon PA12 | Price: Free STL Only
 - [GM Silverado / Tahoe / Suburban HVAC Blend Door Actuator Cam Lever](https://barebones3d.com/guides/chevrolet-gm-silverado-tahoe-suburban-hvac-blend-door-actuator-cam-lever-89018365): OEM #89018365 | Fitment: Chevrolet Silverado 1500 / 2500 / 3500 (1999-2013), Chevrolet Tahoe / Suburban (2000-2014), GMC Sierra / Yukon (1999-2013) | Material: Nylon PA12 | Price: Free STL Only
 - [Jeep Grand Cherokee / Dodge Durango Sun Visor Pivot Support Bracket](https://barebones3d.com/guides/jeep-grand-cherokee-dodge-durango-sun-visor-pivot-support-bracket-5fs40dx9aa): OEM #5FS40DX9AA | Fitment: Jeep Grand Cherokee WK2 (2011-2022), Dodge Durango (2011-2023) | Material: Automotive ASA | Price: $19.50 USD
-- [Jeep Grand Cherokee WJ Dual-Zone HVAC Blend Door Actuator Split Gear](https://barebones3d.com/guides/jeep-wj-grand-cherokee-blend-door-gear-5012710aa): OEM #5012710AA | Fitment: Jeep Grand Cherokee WJ (1999-2004) | Material: Nylon PA12 | Price: $24.00 USD
+- [Jeep Grand Cherokee WJ Dual-Zone HVAC Blend Door Actuator Gear](https://barebones3d.com/guides/jeep-wj-grand-cherokee-blend-door-gear-5012710aa): OEM #5012710AA | Fitment: Jeep Grand Cherokee WJ (1999-2004) | Material: Nylon PA12 | Price: $24.00 USD
 - [KitchenAid Stand Mixer Sacrificial Nylon Worm Follower Gear](https://barebones3d.com/guides/kitchenaid-stand-mixer-sacrificial-nylon-worm-follower-gear-wp9709231): OEM #WP9709231 | Fitment: KitchenAid Artisan 5-Quart (KSM150), KitchenAid Classic 4.5-Quart (K45SS), KitchenAid Ultra Power Series (KSM90) | Material: PETG Heavy Duty | Price: Free STL Only
 - [Makita 18V LXT Lithium-Ion Battery Terminal Protector Cover](https://barebones3d.com/guides/makita-18v-battery-terminal-protector-cover-122049-9): OEM #122049-9 | Fitment: Makita 18V LXT BL1815 / BL1830 / BL1840 / BL1850 / BL1860 | Material: PETG Heavy Duty | Price: $14.00 USD
 - [Makita 1900B / KP0800K Power Hand Planer Drive Belt Tensioner Retainer](https://barebones3d.com/guides/makita-hand-planer-belt-tensioner-retainer-341071-7): OEM #341071-7 | Fitment: Makita 1900B Hand Planer, Makita 1902, Makita KP0800K | Material: High-Temp Nylon PA12 | Price: Free STL Only
@@ -30,13 +36,16 @@ Barebones 3D provides precision diagnostic guides and commercial-grade replaceme
 - [Milwaukee M18 REDLITHIUM Battery Pack Locking Latch & Release Claws](https://barebones3d.com/guides/milwaukee-m18-redlithium-battery-pack-locking-latch-release-claws-48-11-1850): OEM #48-11-1850 | Fitment: Milwaukee M18 Compact 2.0Ah / 3.0Ah, Milwaukee M18 XC 4.0Ah / 5.0Ah / 6.0Ah, Milwaukee M18 High Output 6.0Ah / 8.0Ah / 12.0Ah | Material: Nylon PA12 | Price: Free STL Only
 - [Sony MDR-7506 / MDR-V6 Professional Headphone Swivel Yoke Hanger Bracket](https://barebones3d.com/guides/sony-mdr-7506-headphone-swivel-yoke-hanger-3-255-731-01): OEM #3-255-731-01 | Fitment: Sony MDR-7506 Professional, Sony MDR-V6 Studio Monitor, Sony MDR-7504 | Material: Nylon PA12 | Price: $19.00 USD
 - [Subaru HVAC Blend Door Actuator Split Gear](https://barebones3d.com/guides/subaru-blend-door-actuator-gear-72131-fg000): OEM #72131-FG000 | Fitment: Subaru Impreza (2008-2014), Subaru WRX / STI (2008-2014), Subaru Forester (2009-2013) | Material: Nylon PA12 | Price: Free STL Only
+- [Subaru Impreza / Forester / Crosstrek Sun Visor Pivot Clip Bracket](https://barebones3d.com/guides/subaru-impreza-forester-crosstrek-sun-visor-clip-92011sc022lo): OEM #92011SC022LO | Fitment: Subaru Impreza (2008-2014), Subaru Forester (2009-2018), Subaru Crosstrek (2013-2017) | Material: Automotive ASA | Price: $18.00 USD
 - [Technics SL-1200 / SL-1210 MK2 DJ Turntable Pitch Fader Dust Shutter Plate](https://barebones3d.com/guides/technics-sl1200-pitch-fader-dust-shutter-plate-r-653): OEM #R-653 | Fitment: Technics SL-1200MK2, Technics SL-1210MK2, Technics SL-1200M3D | Material: PETG Heavy Duty | Price: Free STL Only
+- [Technics SL-1200 / SL-1210 MK2 Turntable Dust Cover Hinge Repair Bracket](https://barebones3d.com/guides/technics-sl-1200-sl-1210-mk2-dust-cover-hinge-bracket-sfumm02n04): OEM #SFUMM02N04 | Fitment: Technics SL-1200MK2, Technics SL-1210MK2, Technics SL-1300MK2 | Material: Automotive ASA | Price: $26.00 USD
 - [Toyota Tacoma Heater Control Valve Arm](https://barebones3d.com/guides/toyota-toyota-tacoma-heater-control-valve-arm-87240-04020): OEM #87240-04020 | Fitment: Toyota Tacoma (1995-2004), Toyota 4Runner (1996-2002) | Material: High-Temp Nylon PA12 | Price: Free STL Only
 - [Toyota Tundra / Sequoia Dash AC Air Vent Louver Tab](https://barebones3d.com/guides/toyota-tundra-air-vent-louver-tab-55670-0c010): OEM #55670-0C010 | Fitment: Toyota Tundra (2000-2006), Toyota Sequoia (2001-2007) | Material: Automotive ASA | Price: $15.00 USD (Includes 2-pack bundle option at checkout)
 - [Vintage Pioneer PL-12D Tonearm Anti-Skate Weight Guide Arm](https://barebones3d.com/guides/pioneer-turntable-anti-skate-arm-wa-104): OEM #WA-104 | Fitment: Pioneer PL-12D (1974-1977), Pioneer PL-15D (1974-1977), Pioneer PL-112D (1976-1979) | Material: PETG | Price: Free STL Only
 - [Volvo S60 / V60 / XC60 Fuel Filler Door Flap Hinge Bracket](https://barebones3d.com/guides/volvo-fuel-filler-door-hinge-bracket-39886277): OEM #39886277 | Fitment: Volvo S60 / V60 (2011-2018), Volvo XC60 (2010-2017) | Material: Automotive ASA | Price: Free STL Only
 - [Whirlpool / KitchenAid Dishwasher Lower Rack Wheel & Axle Assembly](https://barebones3d.com/guides/whirlpool-dishwasher-rack-wheel-w10195416): OEM #W10195416 | Fitment: Whirlpool Gold Series / Quiet Partner (2005-2023), KitchenAid Architect / KUDE / KDTE Series (2006-2024), Maytag MDB / Jetclean Series (2007-2022) | Material: Food-Safe PETG | Price: Free STL Only
 - [Whirlpool / Maytag Refrigerator Deli Meat Pan Drawer Slide Roller Wheel](https://barebones3d.com/guides/whirlpool-refrigerator-deli-drawer-slide-roller-w10436250): OEM #W10436250 | Fitment: Whirlpool French Door / Side-by-Side Refrigerators, Maytag MFI / MFD Series | Material: Food-Safe PETG | Price: Free STL Only
+- [Whirlpool Dishwasher Lower Dishrack Roller Wheel & Axle Clip](https://barebones3d.com/guides/whirlpool-dishwasher-lower-dishrack-roller-wheel-axle-clip-wpw10195417): OEM #WPW10195417 | Fitment: Whirlpool Quiet Partner series, KitchenAid KDFE / KDTE dishwashers, Kenmore Elite 665 series | Material: PETG Heavy Duty | Price: Free STL Only
 
 ## Developer & Agent Interfaces
 
@@ -419,6 +428,86 @@ Original Source: https://barebones3d.com/guides/bosch-table-saw-riving-knife-lev
 ---
 
 ---
+title: "Bose QuietComfort 35 (QC35 I & II) Swivel Hinge Repair Bracket"
+slug: "bose-qc35-swivel-hinge-bracket-qc35-hinge-assy"
+oem_part_number: "QC35-HINGE-ASSY"
+superseded_numbers:
+  - "759944-0010"
+  - "QC35-SWIVEL-L"
+  - "QC35-SWIVEL-R"
+compatible_vehicles_and_appliances:
+  - make: "Bose"
+    model: "QuietComfort 35 (Series I)"
+  - make: "Bose"
+    model: "QuietComfort 35 II (Series II)"
+material: "Nylon PA12"
+price_cents: 1900
+price_formatted: "$19.00 USD"
+is_commercial_allowed: true
+license: "CC BY 4.0"
+download_stl_url: "https://barebones3d.com/assets/stl/bose-qc35-swivel-hinge-bracket-qc35-hinge-assy.stl"
+checkout_api_url: "https://barebones3d.com/api/checkout/create"
+canonical_guide_url: "https://barebones3d.com/guides/bose-qc35-swivel-hinge-bracket-qc35-hinge-assy"
+---
+
+# Bose QuietComfort 35 (QC35 I & II) Swivel Hinge Repair Bracket (OEM #QC35-HINGE-ASSY)
+
+## Technical Specifications
+- **Primary OEM Part #:** `QC35-HINGE-ASSY`
+- **Engineering Material:** Nylon PA12 (100% solid infill, calibrated printer compensation)
+- **Repair Difficulty:** Easy
+- **Estimated Repair Time:** 25 mins
+- **Commercial Purchase:** $19.00 USD (Printed on-demand in 48h via Slant 3D)
+- **Direct STL Download:** [QC35-HINGE-ASSY.stl](https://barebones3d.com/assets/stl/bose-qc35-swivel-hinge-bracket-qc35-hinge-assy.stl)
+- **Amazon OEM & Hardware Search:** [Check Price & Availability on Amazon](https://www.amazon.com/s?k=Bose%20QC35%20replacement%20hinge%20swivel%20bracket&tag=barebones3dco-20)
+
+## Required Tools & Supplies
+- **[PH00 Precision Phillips Screwdriver](https://www.amazon.com/s?k=PH00%20Precision%20Phillips%20Screwdriver&tag=barebones3dco-20)**: Back out internal micro-screws securing inner headphone pivot covers *(Search on Amazon)*
+- **[Nylon Spudger Pry Tool](https://www.amazon.com/s?k=Nylon%20Spudger%20Pry%20Tool&tag=barebones3dco-20)**: Unsnap headband trim rings without marring the finish *(Search on Amazon)*
+- **[Fine Curved Tweezers](https://www.amazon.com/s?k=Fine%20Curved%20Tweezers&tag=barebones3dco-20)**: Route ultra-thin audio wires through the replacement hinge tunnel *(Search on Amazon)*
+
+## Step-by-Step Installation Procedure
+### Step 1: Ear Pad and Inner Dust Scrim Removal
+
+Grip the edge of the leatherette ear cushion and pull firmly inward to disengage the eight perimeter plastic locking tabs. Peel back the foam inner scrim to inspect the swivel joint wiring channel.
+
+![Original broken plastic Bose QuietComfort 35 (QC35 I & II) Swivel Hinge Repair Bracket (OEM #QC35-HINGE-ASSY) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/qc35-hinge-assy-bose-qc35-swivel-hinge-bracket-qc35-hinge-assy-step-1.webp)
+
+### Step 2: Headband Swivel Bracket Screws Extraction
+
+Locate the two PH00 screws securing the plastic interior hinge cover plate. Back them out with your precision driver and set them on a magnetic mat. Pry the cosmetic outer shell free with a spudger.
+
+![Original broken plastic Bose QuietComfort 35 (QC35 I & II) Swivel Hinge Repair Bracket (OEM #QC35-HINGE-ASSY) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/qc35-hinge-assy-bose-qc35-swivel-hinge-bracket-qc35-hinge-assy-step-2.webp)
+
+### Step 3: Broken Swivel Arm Demounting and Wiring Clearance
+
+Carefully tilt the cracked hinge collar off the steel headband slider pin. Slide the delicate audio cable through the hinge slot with tweezers. Take care not to pinch the braided shield or pull solder joints loose from the ear-cup driver board.
+
+![Original broken plastic Bose QuietComfort 35 (QC35 I & II) Swivel Hinge Repair Bracket (OEM #QC35-HINGE-ASSY) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/qc35-hinge-assy-bose-qc35-swivel-hinge-bracket-qc35-hinge-assy-step-3.webp)
+
+### Step 4: PA12 Replacement Hinge Seat and Mechanical Closure
+
+Thread the audio harness through the open slot of the Barebones 3D PA12 replacement swivel arm. Snap the arm over the metal pivot pin, align the cosmetic backplate, and torque the two PH00 screws until snug. Re-clip the ear cushions until you hear the eight distinct clicks.
+
+![Original broken plastic Bose QuietComfort 35 (QC35 I & II) Swivel Hinge Repair Bracket (OEM #QC35-HINGE-ASSY) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/qc35-hinge-assy-bose-qc35-swivel-hinge-bracket-qc35-hinge-assy-step-4.webp)
+
+## Frequently Asked Questions
+#### Q: Will Bose repair just the plastic hinge collar?
+**A:** No. Bose considers the hinge non-serviceable and will only offer an out-of-warranty replacement unit for $150 to $200+, rendering this $19 repair an 88% cost savings.
+
+#### Q: Why is Nylon PA12 necessary instead of PLA or resin?
+**A:** The swivel hinge undergoes continuous torsional twisting and tension every time the headphones are flexed onto the listener's head. PLA creeps and fractures along layer lines, while SLS Nylon PA12 provides isotropic mechanical strength.
+
+## Open-Source Attribution & Safety Disclaimer
+Designed by ZeroKnowledgeYT on Thingiverse under CC BY
+Original Source: https://www.thingiverse.com/thing:4583532
+
+> **Legal Disclaimer:** Barebones 3D, L.L.C. is an independent engineering firm. This replacement component is an aftermarket reproduction designed for personal repair, restoration, and life-extension. Barebones 3D is not affiliated with, authorized by, sponsored by, or endorsed by the original equipment manufacturer. All trademarks and OEM part numbers are referenced solely for identification and compatibility purposes.
+
+
+---
+
+---
 title: "Bose QuietComfort 35 / 45 Headband Swivel Hinge Joint Replacement"
 slug: "bose-quietcomfort-35-45-headband-swivel-hinge-joint-replacement-759944-0010"
 oem_part_number: "759944-0010"
@@ -697,6 +786,88 @@ Original Source: https://www.printables.com/model/845129-dewalt-dws780-miter-saw
 ---
 
 ---
+title: "DeWalt DWS779 / DWS780 Miter Saw High-Efficiency Dust Extraction Chute"
+slug: "dewalt-dws779-dws780-dust-extraction-chute-n447388"
+oem_part_number: "N447388"
+superseded_numbers:
+  - "N057963"
+  - "N142121"
+compatible_vehicles_and_appliances:
+  - make: "DeWalt"
+    model: "DWS779"
+  - make: "DeWalt"
+    model: "DWS780"
+  - make: "DeWalt"
+    model: "DWS782"
+  - make: "DeWalt"
+    model: "DHS790"
+material: "PETG Heavy Duty"
+price_cents: 2800
+price_formatted: "$28.00 USD"
+is_commercial_allowed: true
+license: "CC BY 4.0"
+download_stl_url: "https://barebones3d.com/assets/stl/dewalt-dws779-dws780-dust-extraction-chute-n447388.stl"
+checkout_api_url: "https://barebones3d.com/api/checkout/create"
+canonical_guide_url: "https://barebones3d.com/guides/dewalt-dws779-dws780-dust-extraction-chute-n447388"
+---
+
+# DeWalt DWS779 / DWS780 Miter Saw High-Efficiency Dust Extraction Chute (OEM #N447388)
+
+## Technical Specifications
+- **Primary OEM Part #:** `N447388`
+- **Engineering Material:** PETG Heavy Duty (100% solid infill, calibrated printer compensation)
+- **Repair Difficulty:** Easy
+- **Estimated Repair Time:** 15 mins
+- **Commercial Purchase:** $28.00 USD (Printed on-demand in 48h via Slant 3D)
+- **Direct STL Download:** [N447388.stl](https://barebones3d.com/assets/stl/dewalt-dws779-dws780-dust-extraction-chute-n447388.stl)
+- **Amazon OEM & Hardware Search:** [Check Price & Availability on Amazon](https://www.amazon.com/s?k=DeWalt%20DWS779%20DWS780%20miter%20saw%20dust%20chute%20deflector&tag=barebones3dco-20)
+
+## Required Tools & Supplies
+- **[T25 Torx Driver](https://www.amazon.com/s?k=T25%20Torx%20Driver&tag=barebones3dco-20)**: Remove the OEM rubber chute retaining screws on saw blade casting *(Search on Amazon)*
+- **[Shop Vacuum with Utility Brush](https://www.amazon.com/s?k=Shop%20Vacuum%20with%20Utility%20Brush&tag=barebones3dco-20)**: Clean out packed wood chips and resin from aluminum blade housing channel *(Search on Amazon)*
+
+## Step-by-Step Installation Procedure
+### Step 1: Blade Guard Retraction and OEM Rubber Flap Removal
+
+Disconnect power to the miter saw. Raise the saw head to maximum height and lock the bevel angle at 0°. Locate the two T25 Torx screws securing the factory stock black rubber dust funnel behind the blade guard casting and extract them.
+
+![Original broken plastic DeWalt DWS779 / DWS780 Miter Saw High-Efficiency Dust Extraction Chute (OEM #N447388) shown side-by-side with reinforced 3D printed PETG Heavy Duty reproduction.](https://barebones3d.com/assets/parts/n447388-dewalt-dws779-dws780-dust-extraction-chute-n447388-step-1.webp)
+
+### Step 2: Casting Channel Debris Clearance
+
+Vacuum out all packed sawdust and sticky pitch buildup along the miter saw intake manifold. Ensure the seating face of the aluminum casting is flat so the replacement chute seals flush against negative vacuum pressure.
+
+![Original broken plastic DeWalt DWS779 / DWS780 Miter Saw High-Efficiency Dust Extraction Chute (OEM #N447388) shown side-by-side with reinforced 3D printed PETG Heavy Duty reproduction.](https://barebones3d.com/assets/parts/n447388-dewalt-dws779-dws780-dust-extraction-chute-n447388-step-2.webp)
+
+### Step 3: Aerodynamic PETG Deflector Chute Positioning
+
+Slide the Barebones 3D PETG chute down over the saw arm neck. The dual contoured intake scoops must drop directly behind the kerf line of the 12-inch blade without making contact with the moving blade guard linkage.
+
+![Original broken plastic DeWalt DWS779 / DWS780 Miter Saw High-Efficiency Dust Extraction Chute (OEM #N447388) shown side-by-side with reinforced 3D printed PETG Heavy Duty reproduction.](https://barebones3d.com/assets/parts/n447388-dewalt-dws779-dws780-dust-extraction-chute-n447388-step-3.webp)
+
+### Step 4: Fastener Re-Torque and Bevel Clearance Validation
+
+Re-install the two factory T25 Torx screws through the chute's reinforced mounting eyelets. Hand tighten securely without stripping into the aluminum threads. Slowly pivot the saw through its entire 47° left and right bevel sweep to confirm zero collision.
+
+![Original broken plastic DeWalt DWS779 / DWS780 Miter Saw High-Efficiency Dust Extraction Chute (OEM #N447388) shown side-by-side with reinforced 3D printed PETG Heavy Duty reproduction.](https://barebones3d.com/assets/parts/n447388-dewalt-dws779-dws780-dust-extraction-chute-n447388-step-4.webp)
+
+## Frequently Asked Questions
+#### Q: Why does the factory DeWalt dust chute perform so poorly?
+**A:** The stock rubber chute sits over 3 inches back from the blade kerf and flexes away under suction, catching less than 40% of waste stream particles. This rigid, contoured scoop captures upward of 90%.
+
+#### Q: Will this part melt from blade friction or hot carbide teeth?
+**A:** No. The chute is printed in industrial PETG with a 75°C+ heat deflection temperature and is engineered with clearance to maintain an intentional 8mm air gap away from high-speed carbide tooth orbit.
+
+## Open-Source Attribution & Safety Disclaimer
+Designed by BradyZ on Thingiverse under CC BY
+Original Source: https://www.thingiverse.com/thing:4587103
+
+> **Legal Disclaimer:** Barebones 3D, L.L.C. is an independent engineering firm. This replacement component is an aftermarket reproduction designed for personal repair, restoration, and life-extension. Barebones 3D is not affiliated with, authorized by, sponsored by, or endorsed by the original equipment manufacturer. All trademarks and OEM part numbers are referenced solely for identification and compatibility purposes.
+
+
+---
+
+---
 title: "Dodge Ram 1500 / 2500 HVAC Heater Blend Door Sub-Assembly Gear"
 slug: "dodge-ram-hvac-blend-door-gear-68064949aa"
 oem_part_number: "68064949AA"
@@ -848,6 +1019,175 @@ Original Source: https://www.printables.com/model/1199500-dyson-v10-v11-power-bu
 ---
 
 ---
+title: "Dyson V10 / V11 Cordless Vacuum Reinforced Trigger Switch Assembly"
+slug: "dyson-v10-v11-cordless-vacuum-reinforced-trigger-switch-970050-01"
+oem_part_number: "970050-01"
+superseded_numbers:
+  - "970142-01"
+  - "965660-01"
+compatible_vehicles_and_appliances:
+  - make: "Dyson"
+    model: "V10 (SV12)"
+  - make: "Dyson"
+    model: "V11 (SV14)"
+  - make: "Dyson"
+    model: "V11 Outsize"
+material: "PETG Heavy Duty"
+price_cents: null
+price_formatted: "Free STL Only"
+is_commercial_allowed: false
+license: "CC BY 4.0"
+download_stl_url: "https://barebones3d.com/assets/stl/dyson-v10-v11-cordless-vacuum-reinforced-trigger-switch-970050-01.stl"
+checkout_api_url: null
+canonical_guide_url: "https://barebones3d.com/guides/dyson-v10-v11-cordless-vacuum-reinforced-trigger-switch-970050-01"
+---
+
+# Dyson V10 / V11 Cordless Vacuum Reinforced Trigger Switch Assembly (OEM #970050-01)
+
+## Technical Specifications
+- **Primary OEM Part #:** `970050-01`
+- **Engineering Material:** PETG Heavy Duty (100% solid infill, calibrated printer compensation)
+- **Repair Difficulty:** Moderate
+- **Estimated Repair Time:** 40 mins
+- **Commercial Purchase:** Digital STL Only / Commodity Multi-Pack on Amazon: [Search Amazon Catalog](https://www.amazon.com/s?k=Dyson%20V10%20V11%20replacement%20heavy%20duty%20trigger%20switch%20with%20T8%20screwdriver&tag=barebones3dco-20) (Cheaper than custom 3D printing)
+- **Direct STL Download:** [970050-01.stl](https://barebones3d.com/assets/stl/dyson-v10-v11-cordless-vacuum-reinforced-trigger-switch-970050-01.stl)
+- **Amazon OEM & Hardware Search:** [Check Price & Availability on Amazon](https://www.amazon.com/s?k=Dyson%20V10%20V11%20replacement%20heavy%20duty%20trigger%20switch%20with%20T8%20screwdriver&tag=barebones3dco-20)
+
+## Required Tools & Supplies
+- **[T8 Torx Screwdriver (100mm+ Long Shaft)](https://www.amazon.com/s?k=T8%20Torx%20Screwdriver%20100mm%20Long%20Shaft&tag=barebones3dco-20)**: Reach deep recessed screws in Dyson handle and cyclone motor assembly *(Search on Amazon)*
+- **[PH0 Precision Screwdriver](https://www.amazon.com/s?k=PH0%20Precision%20Screwdriver&tag=barebones3dco-20)**: Remove battery interface terminal screws *(Search on Amazon)*
+- **[Plastic Spudger](https://www.amazon.com/s?k=Plastic%20Spudger&tag=barebones3dco-20)**: Separate the handle clamshell without marring outer paint *(Search on Amazon)*
+
+## Step-by-Step Installation Procedure
+### Step 1: Battery and Bin Release
+
+Press the red lever to release and slide off the clear dust bin. Unscrew the three Torx/Phillips screws securing the battery pack (one on the rear handle spine, two on the base) and drop the battery out.
+
+![Original broken plastic Dyson V10 / V11 Cordless Vacuum Reinforced Trigger Switch Assembly (OEM #970050-01) shown side-by-side with reinforced 3D printed PETG Heavy Duty reproduction.](https://barebones3d.com/assets/parts/970050-01-dyson-v10-v11-cordless-vacuum-reinforced-trigger-switch-970050-01-step-1.webp)
+
+### Step 2: Motor Body Clamshell Separation
+
+Using a long-shank T8 Torx driver, extract the five perimeter screws securing the main handle halves. Disconnect the electrical wire harness leading to the LCD/trigger microswitch board and separate the housing.
+
+![Original broken plastic Dyson V10 / V11 Cordless Vacuum Reinforced Trigger Switch Assembly (OEM #970050-01) shown side-by-side with reinforced 3D printed PETG Heavy Duty reproduction.](https://barebones3d.com/assets/parts/970050-01-dyson-v10-v11-cordless-vacuum-reinforced-trigger-switch-970050-01-step-2.webp)
+
+### Step 3: Broken Trigger Lever Extraction
+
+Locate the red trigger mechanism. The common failure point is the microscopic internal plastic structural rib that contacts the electronic microswitch. Slide the broken trigger out of its retention track along with the small coil spring.
+
+![Original broken plastic Dyson V10 / V11 Cordless Vacuum Reinforced Trigger Switch Assembly (OEM #970050-01) shown side-by-side with reinforced 3D printed PETG Heavy Duty reproduction.](https://barebones3d.com/assets/parts/970050-01-dyson-v10-v11-cordless-vacuum-reinforced-trigger-switch-970050-01-step-3.webp)
+
+### Step 4: Reinforced Trigger Installation and Clamshell Assembly
+
+Position the heavy-duty reinforced trigger into the guide slot, making sure the return coil spring is seated over the guide pin. Re-align the handle clamshell, route the wiring away from pinch points, and re-torque the five T8 screws. Slide the battery pack into place and verify immediate motor response.
+
+![Original broken plastic Dyson V10 / V11 Cordless Vacuum Reinforced Trigger Switch Assembly (OEM #970050-01) shown side-by-side with reinforced 3D printed PETG Heavy Duty reproduction.](https://barebones3d.com/assets/parts/970050-01-dyson-v10-v11-cordless-vacuum-reinforced-trigger-switch-970050-01-step-4.webp)
+
+## Frequently Asked Questions
+#### Q: What is the OEM hostage gouge on Dyson triggers?
+**A:** Dyson refuses to sell the 2-gram plastic trigger switch by itself. Dyson service centers require purchasing the entire Main Body & Cyclone motor assembly for $99 to $149.
+
+#### Q: Why monetize this part via affiliate link rather than print-on-demand?
+**A:** Mass-produced injection-molded polycarbonate triggers bundled with the required deep-reach T8 Torx screwdriver sell on Amazon for under $10 with next-day shipping. Routing non-printer users to an affiliate link captures broader 24-hour cart cookies, while makers can print the open-source STL on demand.
+
+## Open-Source Attribution & Safety Disclaimer
+Designed by Steresis on Thingiverse under CC BY
+Original Source: https://www.thingiverse.com/thing:4600031
+
+> **Legal Disclaimer:** Barebones 3D, L.L.C. is an independent engineering firm. This replacement component is an aftermarket reproduction designed for personal repair, restoration, and life-extension. Barebones 3D is not affiliated with, authorized by, sponsored by, or endorsed by the original equipment manufacturer. All trademarks and OEM part numbers are referenced solely for identification and compatibility purposes.
+
+
+---
+
+---
+title: "Ford F-150 / Expedition HVAC Blend Door Actuator Reduction Gear"
+slug: "ford-f-150-expedition-blend-door-actuator-gear-dl3z-19e616-a"
+oem_part_number: "DL3Z-19E616-A"
+superseded_numbers:
+  - "YH-1933"
+  - "604-252"
+  - "AL3Z-19E616-A"
+compatible_vehicles_and_appliances:
+  - make: "Ford"
+    model: "F-150"
+    year_start: 2009
+    year_end: 2014
+  - make: "Ford"
+    model: "Expedition"
+    year_start: 2007
+    year_end: 2017
+  - make: "Lincoln"
+    model: "Navigator"
+    year_start: 2007
+    year_end: 2017
+material: "Nylon PA12"
+price_cents: 2200
+price_formatted: "$22.00 USD"
+is_commercial_allowed: true
+license: "CC0 1.0"
+download_stl_url: "https://barebones3d.com/assets/stl/ford-f-150-expedition-blend-door-actuator-gear-dl3z-19e616-a.stl"
+checkout_api_url: "https://barebones3d.com/api/checkout/create"
+canonical_guide_url: "https://barebones3d.com/guides/ford-f-150-expedition-blend-door-actuator-gear-dl3z-19e616-a"
+---
+
+# Ford F-150 / Expedition HVAC Blend Door Actuator Reduction Gear (OEM #DL3Z-19E616-A)
+
+## Technical Specifications
+- **Primary OEM Part #:** `DL3Z-19E616-A`
+- **Engineering Material:** Nylon PA12 (100% solid infill, calibrated printer compensation)
+- **Repair Difficulty:** Moderate
+- **Estimated Repair Time:** 50 mins
+- **Commercial Purchase:** $22.00 USD (Printed on-demand in 48h via Slant 3D)
+- **Direct STL Download:** [DL3Z-19E616-A.stl](https://barebones3d.com/assets/stl/ford-f-150-expedition-blend-door-actuator-gear-dl3z-19e616-a.stl)
+- **Amazon OEM & Hardware Search:** [Check Price & Availability on Amazon](https://www.amazon.com/s?k=Ford%20F150%20blend%20door%20actuator%20gear%20DL3Z-19E616-A&tag=barebones3dco-20)
+
+## Required Tools & Supplies
+- **[5.5mm (7/32") Nut Driver & Flex Socket](https://www.amazon.com/s?k=5.5mm%207%2F32%20Nut%20Driver%20Flex%20Socket&tag=barebones3dco-20)**: Remove the microscopic factory Ford actuator mounting screws behind dash cavity *(Search on Amazon)*
+- **[Non-Marring Trim Tool](https://www.amazon.com/s?k=Non-Marring%20Trim%20Tool&tag=barebones3dco-20)**: Pry dash decorative trim panels without marring vinyl grain *(Search on Amazon)*
+- **[8mm Magnetic Socket](https://www.amazon.com/s?k=8mm%20Magnetic%20Socket&tag=barebones3dco-20)**: Remove center console side bracket anchor bolts *(Search on Amazon)*
+
+## Step-by-Step Installation Procedure
+### Step 1: Center Stack Side Trim Release
+
+Insert a non-marring pry bar into the lower seam of the center console trim panel on the passenger side. Pop the metal spring clips outward to reveal the lower HVAC plenum casing. Disconnect the auxiliary 12V socket harness.
+
+![Original broken plastic Ford F-150 / Expedition HVAC Blend Door Actuator Reduction Gear (OEM #DL3Z-19E616-A) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/dl3z-19e616-a-ford-f-150-expedition-blend-door-actuator-gear-dl3z-19e616-a-step-1.webp)
+
+### Step 2: Actuator Extraction (5.5mm Fasteners)
+
+Use a 5.5mm (7/32") flex socket to remove the two rear-facing screws holding the blend door actuator to the air distribution box. Clear the wiring loom clip from the actuator housing, unplug the electrical connector, and draw the unit down.
+
+![Original broken plastic Ford F-150 / Expedition HVAC Blend Door Actuator Reduction Gear (OEM #DL3Z-19E616-A) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/dl3z-19e616-a-ford-f-150-expedition-blend-door-actuator-gear-dl3z-19e616-a-step-2.webp)
+
+### Step 3: Housing Tab Release and Stripped Gear Removal
+
+Disengage the five perimeter locking tabs of the black plastic housing using a small flathead tool. Pry open the case. Pull the large output reduction gear off its metal axle pin. Observe the missing or sheared teeth that caused the classic Ford dashboard clicking sound.
+
+![Original broken plastic Ford F-150 / Expedition HVAC Blend Door Actuator Reduction Gear (OEM #DL3Z-19E616-A) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/dl3z-19e616-a-ford-f-150-expedition-blend-door-actuator-gear-dl3z-19e616-a-step-3.webp)
+
+### Step 4: PA12 Splined Gear Drop-In and HVAC Relearn
+
+Seat the Barebones 3D PA12 replacement reduction gear onto the center steel axle. Re-mesh with the intermediate worm pinion, verifying clean concentric rotation. Snap the top case shut, rebolt with the 5.5mm fasteners, pull the HVAC fuse in the passenger kick panel for 60 seconds, and cycle ignition ON to initiate auto-calibration.
+
+![Original broken plastic Ford F-150 / Expedition HVAC Blend Door Actuator Reduction Gear (OEM #DL3Z-19E616-A) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/dl3z-19e616-a-ford-f-150-expedition-blend-door-actuator-gear-dl3z-19e616-a-step-4.webp)
+
+## Frequently Asked Questions
+#### Q: What causes the rapid clicking sound behind my F-150 radio?
+**A:** When the HVAC door reaches physical travel limits, the motor continues to supply torque. The weak factory POM gear teeth shear off, causing the worm gear to skip rapidly across the stripped void.
+
+#### Q: Do I have to remove the entire dash to fix this?
+**A:** No. Dealership flat rate pays for complete dashboard drop, but with a 5.5mm flex-head ratchet, this sub-gear replacement can be completed through the passenger glovebox cavity in under an hour.
+
+## Open-Source Attribution & Safety Disclaimer
+Designed by Goose on Printables under CC0
+Original Source: https://www.printables.com/model/1226517-ford-blend-door-actuator-gears
+
+> **Legal Disclaimer:** Barebones 3D, L.L.C. is an independent engineering firm. This replacement component is an aftermarket reproduction designed for personal repair, restoration, and life-extension. Barebones 3D is not affiliated with, authorized by, sponsored by, or endorsed by the original equipment manufacturer. All trademarks and OEM part numbers are referenced solely for identification and compatibility purposes.
+
+
+---
+
+---
 title: "Ford F-150 / Super Duty Sunroof Track Slider Lift Arm Repair Kit"
 slug: "ford-f-150-super-duty-sunroof-track-slider-lift-arm-repair-kit-fl3z-1651071-a"
 oem_part_number: "FL3Z-1651071-A"
@@ -950,6 +1290,98 @@ Original Source: https://barebones3d.com/guides/ford-f-150-super-duty-sunroof-tr
 ---
 
 ---
+title: "Ford F-150 / Super Duty Vista Sunroof Track Slider Lift Arm"
+slug: "ford-f-150-super-duty-vista-sunroof-track-slider-lift-arm-fl3z-16502c22-e"
+oem_part_number: "FL3Z-16502C22-E"
+superseded_numbers:
+  - "FL3Z-1651070-A"
+  - "FL3Z-1651071-A"
+  - "AL3Z-1651070-A"
+compatible_vehicles_and_appliances:
+  - make: "Ford"
+    model: "F-150"
+    year_start: 2015
+    year_end: 2020
+  - make: "Ford"
+    model: "F-250 Super Duty"
+    year_start: 2017
+    year_end: 2022
+  - make: "Ford"
+    model: "F-350 Super Duty"
+    year_start: 2017
+    year_end: 2022
+  - make: "Ford"
+    model: "Expedition"
+    year_start: 2018
+    year_end: 2021
+material: "Nylon PA12"
+price_cents: null
+price_formatted: "Free STL Only"
+is_commercial_allowed: false
+license: "Proprietary"
+download_stl_url: "https://barebones3d.com/assets/stl/ford-f-150-super-duty-vista-sunroof-track-slider-lift-arm-fl3z-16502c22-e.stl"
+checkout_api_url: null
+canonical_guide_url: "https://barebones3d.com/guides/ford-f-150-super-duty-vista-sunroof-track-slider-lift-arm-fl3z-16502c22-e"
+---
+
+# Ford F-150 / Super Duty Vista Sunroof Track Slider Lift Arm (OEM #FL3Z-16502C22-E)
+
+## Technical Specifications
+- **Primary OEM Part #:** `FL3Z-16502C22-E`
+- **Engineering Material:** Nylon PA12 (100% solid infill, calibrated printer compensation)
+- **Repair Difficulty:** Advanced
+- **Estimated Repair Time:** 90 mins
+- **Commercial Purchase:** Digital STL Only (Commercial reproduction restricted by author license)
+- **Direct STL Download:** [FL3Z-16502C22-E.stl](https://barebones3d.com/assets/stl/ford-f-150-super-duty-vista-sunroof-track-slider-lift-arm-fl3z-16502c22-e.stl)
+- **Amazon OEM & Hardware Search:** [Check Price & Availability on Amazon](https://www.amazon.com/s?k=Ford%20F150%20sunroof%20track%20repair%20kit%20lift%20arms%20FL3Z-16502C22-E&tag=barebones3dco-20)
+
+## Required Tools & Supplies
+- **[T25 Torx Driver](https://www.amazon.com/s?k=T25%20Torx%20Driver&tag=barebones3dco-20)**: Extract the six glass sunroof panel retaining shoulder bolts *(Search on Amazon)*
+- **[Plastic Trim Bone Tool](https://www.amazon.com/s?k=Plastic%20Trim%20Bone%20Tool&tag=barebones3dco-20)**: Unclip flexible rubber accordion debris bellows *(Search on Amazon)*
+- **[Krytox GPL 205 Fluorinated Synthetic Grease](https://www.amazon.com/s?k=Krytox%20GPL%20205%20Fluorinated%20Synthetic%20Grease&tag=barebones3dco-20)**: Lubricate sliding guide channels with OEM specified grease *(Search on Amazon)*
+
+## Step-by-Step Installation Procedure
+### Step 1: Bellows Detachment and Moving Glass Removal
+
+Place the sunroof in the vent position. From inside the cabin, gently pull the rubber side accordion bellows inward to release them from the lower track channel. Use a T25 Torx driver to remove the three retaining bolts on each side of the glass panel. Carefully lift the sunroof glass up and out of the vehicle.
+
+![Original broken plastic Ford F-150 / Super Duty Vista Sunroof Track Slider Lift Arm (OEM #FL3Z-16502C22-E) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/fl3z-16502c22-e-ford-f-150-super-duty-vista-sunroof-track-slider-lift-arm-fl3z-16502c22-e-step-1.webp)
+
+### Step 2: Broken Lift Arm Fragment Extraction
+
+Locate the fractured glass lift arm inside the aluminum extrusion rail. Cycle the sunroof motor slightly if necessary to draw the drive cable slider into view. Extract the broken rear cam slider fragments and vacuum the aluminum channel clean of plastic debris.
+
+![Original broken plastic Ford F-150 / Super Duty Vista Sunroof Track Slider Lift Arm (OEM #FL3Z-16502C22-E) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/fl3z-16502c22-e-ford-f-150-super-duty-vista-sunroof-track-slider-lift-arm-fl3z-16502c22-e-step-2.webp)
+
+### Step 3: PA12 Billet Slider Seating and Cable Pin Engagement
+
+Coat the track slides with Krytox grease. Align the Barebones 3D reinforced Nylon PA12 lift arm into the track slot. Guide the drive cable steel drive lug directly into the slider's reinforced pivot pocket until fully engaged.
+
+![Original broken plastic Ford F-150 / Super Duty Vista Sunroof Track Slider Lift Arm (OEM #FL3Z-16502C22-E) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/fl3z-16502c22-e-ford-f-150-super-duty-vista-sunroof-track-slider-lift-arm-fl3z-16502c22-e-step-3.webp)
+
+### Step 4: Glass Re-Installation and Sunroof Module Initialization
+
+Carefully lower the glass back into place and finger-tighten the six T25 Torx screws. Align glass gaps flush with roof sheet metal, then torque to 4.5 Nm. Perform the Ford sunroof initialization: press and hold the TILT button until the sunroof completes a full down-tilt-slide cycle.
+
+![Original broken plastic Ford F-150 / Super Duty Vista Sunroof Track Slider Lift Arm (OEM #FL3Z-16502C22-E) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/fl3z-16502c22-e-ford-f-150-super-duty-vista-sunroof-track-slider-lift-arm-fl3z-16502c22-e-step-4.webp)
+
+## Frequently Asked Questions
+#### Q: What is the dealer gouge on this sunroof failure?
+**A:** Ford refuses to sell individual replacement plastic track arms. Dealerships require purchasing the entire panoramic frame cassette (OEM FL3Z-16502C22-E) for $1,800 to $2,400, plus 6 to 8 hours of labor dropping the headliner.
+
+#### Q: How does Barebones 3D prevent this from snapping again?
+**A:** The factory parts are molded from brittle unfilled PBT with thin wall cross-sections. Our replacement is engineered from solid Nylon PA12 with increased gusset thickness at the high-shear cable guide pin pocket.
+
+## Open-Source Attribution & Safety Disclaimer
+Designed by Barebones 3D Engineering Lab
+Original Source: https://barebones3d.com/guides/ford-f-150-super-duty-vista-sunroof-track-slider-lift-arm-fl3z-16502c22-e/#cad-waitlist
+
+> **Legal Disclaimer:** Barebones 3D, L.L.C. is an independent engineering firm. This replacement component is an aftermarket reproduction designed for personal repair, restoration, and life-extension. Barebones 3D is not affiliated with, authorized by, sponsored by, or endorsed by the original equipment manufacturer. All trademarks and OEM part numbers are referenced solely for identification and compatibility purposes.
+
+
+---
+
+---
 title: "GE / Hotpoint Clothes Dryer Front Drum Slide Bearing Glides"
 slug: "ge-hotpoint-clothes-dryer-front-drum-slide-bearing-glides-we1m1067"
 oem_part_number: "WE1M1067"
@@ -1030,6 +1462,98 @@ Remount front panel, reconnect door sensor, lower top lid, and spin drum by hand
 ## Open-Source Attribution & Safety Disclaimer
 OEM replacement specification. Multi-pack recommended.
 Original Source: https://barebones3d.com/guides/ge-hotpoint-clothes-dryer-front-drum-slide-bearing-glides-we1m1067/
+
+> **Legal Disclaimer:** Barebones 3D, L.L.C. is an independent engineering firm. This replacement component is an aftermarket reproduction designed for personal repair, restoration, and life-extension. Barebones 3D is not affiliated with, authorized by, sponsored by, or endorsed by the original equipment manufacturer. All trademarks and OEM part numbers are referenced solely for identification and compatibility purposes.
+
+
+---
+
+---
+title: "GM GMT900 HVAC Recirculation & Defrost Blend Door Actuator Cam Lever"
+slug: "gm-gmt900-hvac-recirculation-defrost-blend-door-actuator-cam-lever-20826188"
+oem_part_number: "20826188"
+superseded_numbers:
+  - "15-73952"
+  - "15844066"
+  - "25884454"
+compatible_vehicles_and_appliances:
+  - make: "Chevrolet"
+    model: "Silverado 1500/2500"
+    year_start: 2007
+    year_end: 2014
+  - make: "GMC"
+    model: "Sierra"
+    year_start: 2007
+    year_end: 2014
+  - make: "Chevrolet"
+    model: "Tahoe / Suburban"
+    year_start: 2007
+    year_end: 2014
+  - make: "GMC"
+    model: "Yukon"
+    year_start: 2007
+    year_end: 2014
+material: "Nylon PA12"
+price_cents: null
+price_formatted: "Free STL Only"
+is_commercial_allowed: false
+license: "Proprietary"
+download_stl_url: "https://barebones3d.com/assets/stl/gm-gmt900-hvac-recirculation-defrost-blend-door-actuator-cam-lever-20826188.stl"
+checkout_api_url: null
+canonical_guide_url: "https://barebones3d.com/guides/gm-gmt900-hvac-recirculation-defrost-blend-door-actuator-cam-lever-20826188"
+---
+
+# GM GMT900 HVAC Recirculation & Defrost Blend Door Actuator Cam Lever (OEM #20826188)
+
+## Technical Specifications
+- **Primary OEM Part #:** `20826188`
+- **Engineering Material:** Nylon PA12 (100% solid infill, calibrated printer compensation)
+- **Repair Difficulty:** Moderate
+- **Estimated Repair Time:** 60 mins
+- **Commercial Purchase:** Digital STL Only (Commercial reproduction restricted by author license)
+- **Direct STL Download:** [20826188.stl](https://barebones3d.com/assets/stl/gm-gmt900-hvac-recirculation-defrost-blend-door-actuator-cam-lever-20826188.stl)
+- **Amazon OEM & Hardware Search:** [Check Price & Availability on Amazon](https://www.amazon.com/s?k=GMT900%20blend%20door%20actuator%20cam%20lever%2020826188%20Silverado%20Tahoe&tag=barebones3dco-20)
+
+## Required Tools & Supplies
+- **[5.5mm (7/32") Flex-Head Micro-Ratchet](https://www.amazon.com/s?k=5.5mm%207%2F32%20Flex-Head%20Micro-Ratchet&tag=barebones3dco-20)**: Access the recessed blind mounting screws securing the actuator above the gas pedal *(Search on Amazon)*
+- **[7mm Nut Driver](https://www.amazon.com/s?k=7mm%20Nut%20Driver&tag=barebones3dco-20)**: Drop the lower dashboard knee bolster and steering column trim *(Search on Amazon)*
+- **[Straight Mechanic Pick](https://www.amazon.com/s?k=Straight%20Mechanic%20Pick&tag=barebones3dco-20)**: Manipulate flapper door pivot to verify smooth free-hang rotation *(Search on Amazon)*
+
+## Step-by-Step Installation Procedure
+### Step 1: Knee Bolster Drop and Duct Clearance
+
+Remove the four 7mm hex screws securing the driver-side lower dash knee bolster trim panel. Pop the metal spring clips free and set the bolster aside. Unhook the lower footwell floor air discharge duct to reveal the HVAC case side.
+
+![Original broken plastic GM GMT900 HVAC Recirculation & Defrost Blend Door Actuator Cam Lever (OEM #20826188) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/20826188-gm-gmt900-hvac-recirculation-defrost-blend-door-actuator-cam-lever-20826188-step-1.webp)
+
+### Step 2: Actuator Extraction and Blind Fastener Access
+
+Unplug the electrical connector from the defrost/mode actuator. Using a 5.5mm flex micro-ratchet, remove the two mounting screws. Pull the actuator straight off the airbox flapper shaft.
+
+![Original broken plastic GM GMT900 HVAC Recirculation & Defrost Blend Door Actuator Cam Lever (OEM #20826188) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/20826188-gm-gmt900-hvac-recirculation-defrost-blend-door-actuator-cam-lever-20826188-step-2.webp)
+
+### Step 3: Sheared Cam Lever Extraction
+
+Inspect the output drive. The original white POM cam lever cracks across the splined hub keyway, spinning freely on the shaft. Pull the broken cam off the airbox flapper door shaft with pliers and clean the splined pin.
+
+![Original broken plastic GM GMT900 HVAC Recirculation & Defrost Blend Door Actuator Cam Lever (OEM #20826188) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/20826188-gm-gmt900-hvac-recirculation-defrost-blend-door-actuator-cam-lever-20826188-step-3.webp)
+
+### Step 4: PA12 Cam Installation and GM Auto-Calibration
+
+Press the Barebones 3D PA12 splined cam lever onto the flapper shaft until seated against the shoulder stop. Align the cam track pin with the actuator guide slot. Bolt the actuator down, reconnect the harness, pull the HVAC/ECU B fuse for 1 minute, and turn the key ON for a 90-second automated recalibration sweep.
+
+![Original broken plastic GM GMT900 HVAC Recirculation & Defrost Blend Door Actuator Cam Lever (OEM #20826188) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/20826188-gm-gmt900-hvac-recirculation-defrost-blend-door-actuator-cam-lever-20826188-step-4.webp)
+
+## Frequently Asked Questions
+#### Q: Why does air stay stuck blowing only out of the dashboard defrost vents?
+**A:** GM's default safety fail-position for the GMT900 HVAC distribution case is full windshield defrost. When the plastic cam lever snaps, spring tension defaults the air door to the windshield.
+
+#### Q: What is the dealer quote for this repair?
+**A:** GM dealer technicians frequently claim the entire air distribution case must be replaced when the internal cam shears, quoting $1,200 to $1,600 involving complete instrument panel removal.
+
+## Open-Source Attribution & Safety Disclaimer
+Designed by Barebones 3D Engineering Lab
+Original Source: https://barebones3d.com/guides/gm-gmt900-hvac-recirculation-defrost-blend-door-actuator-cam-lever-20826188/#cad-waitlist
 
 > **Legal Disclaimer:** Barebones 3D, L.L.C. is an independent engineering firm. This replacement component is an aftermarket reproduction designed for personal repair, restoration, and life-extension. Barebones 3D is not affiliated with, authorized by, sponsored by, or endorsed by the original equipment manufacturer. All trademarks and OEM part numbers are referenced solely for identification and compatibility purposes.
 
@@ -1216,13 +1740,13 @@ Original Source: https://www.thingiverse.com/thing:3111425
 ---
 
 ---
-title: "Jeep Grand Cherokee WJ Dual-Zone HVAC Blend Door Actuator Split Gear"
+title: "Jeep Grand Cherokee WJ Dual-Zone HVAC Blend Door Actuator Gear"
 slug: "jeep-wj-grand-cherokee-blend-door-gear-5012710aa"
 oem_part_number: "5012710AA"
 superseded_numbers:
-  - "5012710AB"
   - "5012710"
-  - "68072190AA"
+  - "05012710AA"
+  - "5012710AB"
 compatible_vehicles_and_appliances:
   - make: "Jeep"
     model: "Grand Cherokee WJ"
@@ -1238,7 +1762,7 @@ checkout_api_url: "https://barebones3d.com/api/checkout/create"
 canonical_guide_url: "https://barebones3d.com/guides/jeep-wj-grand-cherokee-blend-door-gear-5012710aa"
 ---
 
-# Jeep Grand Cherokee WJ Dual-Zone HVAC Blend Door Actuator Split Gear (OEM #5012710AA)
+# Jeep Grand Cherokee WJ Dual-Zone HVAC Blend Door Actuator Gear (OEM #5012710AA)
 
 ## Technical Specifications
 - **Primary OEM Part #:** `5012710AA`
@@ -1247,53 +1771,47 @@ canonical_guide_url: "https://barebones3d.com/guides/jeep-wj-grand-cherokee-blen
 - **Estimated Repair Time:** 45 mins
 - **Commercial Purchase:** $24.00 USD (Printed on-demand in 48h via Slant 3D)
 - **Direct STL Download:** [5012710AA.stl](https://barebones3d.com/assets/stl/jeep-wj-grand-cherokee-blend-door-gear-5012710aa.stl)
-- **Amazon OEM & Hardware Search:** [Check Price & Availability on Amazon](https://www.amazon.com/s?k=Jeep%20Grand%20Cherokee%20WJ%20blend%20door%20repair%20kit%20metal%205012710AA&tag=barebones3dco-20)
+- **Amazon OEM & Hardware Search:** [Check Price & Availability on Amazon](https://www.amazon.com/s?k=Jeep%20Grand%20Cherokee%20WJ%20blend%20door%20actuator%20gear%205012710AA&tag=barebones3dco-20)
 
 ## Required Tools & Supplies
-- **[Torx T20 Driver](https://www.amazon.com/s?k=Torx%20T20%20Driver&tag=barebones3dco-20)**: Lower dash kick panel fasteners *(Search on Amazon)*
-- **[8mm Socket & Ratchet](https://www.amazon.com/s?k=8mm%20Socket%20Ratchet&tag=barebones3dco-20)**: HVAC blend door actuator motor bolts *(Search on Amazon)*
-- **[White Lithium Grease](https://www.amazon.com/s?k=White%20Lithium%20Grease&tag=barebones3dco-20)**: Actuator drive gear lubrication *(Search on Amazon)*
+- **[8mm Low-Profile Ratchet Wrench](https://www.amazon.com/s?k=8mm%20Low-Profile%20Ratchet%20Wrench&tag=barebones3dco-20)**: Extract blind rear actuator mounting fasteners behind dashboard sub-frame *(Search on Amazon)*
+- **[T15 Torx Screwdriver](https://www.amazon.com/s?k=T15%20Torx%20Screwdriver&tag=barebones3dco-20)**: Remove glove box damper hinge and lower trim screws *(Search on Amazon)*
+- **[Automotive Synthetic Silicone Grease](https://www.amazon.com/s?k=Automotive%20Synthetic%20Silicone%20Grease&tag=barebones3dco-20)**: Lubricate internal drive gear teeth and housing pivot post *(Search on Amazon)*
 
 ## Step-by-Step Installation Procedure
-### Step 1: Passenger Lower Glovebox Removal
+### Step 1: Glove Box Drop and Airbox Visual Access
 
-Drop the passenger glovebox compartment by releasing the side retaining tether and pivoting downward off the lower hinge hooks.
+Open the glove compartment door, press inward on the plastic stops on both left and right sides to disengage the travel limiters, and rotate the door completely downward. Locate the passenger-side blend door actuator mounted directly to the HVAC housing sub-frame.
 
-![Original broken plastic Jeep Grand Cherokee WJ Dual-Zone HVAC Blend Door Actuator Split Gear (OEM #5012710AA) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/5012710aa-jeep-wj-grand-cherokee-blend-door-gear-5012710aa-step-1.webp)
+![Original broken plastic Jeep Grand Cherokee WJ Dual-Zone HVAC Blend Door Actuator Gear (OEM #5012710AA) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/5012710aa-jeep-wj-grand-cherokee-blend-door-gear-5012710aa-step-1.webp)
 
-### Step 2: Extract Blend Door Actuator Motor
+### Step 2: Actuator Fastener Removal and Harness Disconnect
 
-Locate the black actuator housing on the bottom-right HVAC box. Remove the two 8mm hex bolts and disconnect the wire harness connector.
+Disconnect the 2-pin electrical connector by depressing the central tab. Use an 8mm low-profile ratchet wrench to back out the two retaining hex head bolts securing the actuator bracket to the airbox. Carefully lower the assembly straight down to clear the D-shaped door drive shaft.
 
-![Original broken plastic Jeep Grand Cherokee WJ Dual-Zone HVAC Blend Door Actuator Split Gear (OEM #5012710AA) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/5012710aa-jeep-wj-grand-cherokee-blend-door-gear-5012710aa-step-2.webp)
+![Original broken plastic Jeep Grand Cherokee WJ Dual-Zone HVAC Blend Door Actuator Gear (OEM #5012710AA) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/5012710aa-jeep-wj-grand-cherokee-blend-door-gear-5012710aa-step-2.webp)
 
-### Step 3: Inspect Cracked OEM Drive Gear
+### Step 3: Clamshell Separation and Cracked POM Gear Extraction
 
-Pry the actuator clamshell cover open. Remove the cracked OEM drive spur gear from the D-shaft output pin.
+Insert a precision flat blade into the four perimeter plastic locking clips along the seam of the actuator housing. Separate the top case to expose the reduction gear train. Extract the large split drive gear from the metal motor worm gear spindle, noting the internal shaft key orientation.
 
-![Original broken plastic Jeep Grand Cherokee WJ Dual-Zone HVAC Blend Door Actuator Split Gear (OEM #5012710AA) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/5012710aa-jeep-wj-grand-cherokee-blend-door-gear-5012710aa-step-3.webp)
+![Original broken plastic Jeep Grand Cherokee WJ Dual-Zone HVAC Blend Door Actuator Gear (OEM #5012710AA) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/5012710aa-jeep-wj-grand-cherokee-blend-door-gear-5012710aa-step-3.webp)
 
-### Step 4: Install Calibrated Nylon PA12 Reproduction
+### Step 4: PA12 Replacement Gear Press-Fit and Re-indexing
 
-Clean old grease, apply fresh white lithium grease, and press the reinforced Nylon PA12 replacement gear onto the drive spline.
+Apply synthetic gear grease to the gear teeth. Align the Barebones 3D PA12 replacement gear bore onto the center metal drive post. Press the gear firmly into mesh with the intermediate drive pinions. Snap the clamshell cover shut until all tabs click, reinstall the actuator with the 8mm bolts, and perform the WJ dual-zone climate calibration sequence.
 
-![Original broken plastic Jeep Grand Cherokee WJ Dual-Zone HVAC Blend Door Actuator Split Gear (OEM #5012710AA) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/5012710aa-jeep-wj-grand-cherokee-blend-door-gear-5012710aa-step-4.webp)
-
-### Step 5: Re-indexing and Climate Sweep Test
-
-Reconnect wiring harness, key ignition to ON, and cycle temperature from Cold to Full Hot to verify full 90-degree flap stroke.
-
-![Original broken plastic Jeep Grand Cherokee WJ Dual-Zone HVAC Blend Door Actuator Split Gear (OEM #5012710AA) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/5012710aa-jeep-wj-grand-cherokee-blend-door-gear-5012710aa-step-5.webp)
+![Original broken plastic Jeep Grand Cherokee WJ Dual-Zone HVAC Blend Door Actuator Gear (OEM #5012710AA) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/5012710aa-jeep-wj-grand-cherokee-blend-door-gear-5012710aa-step-4.webp)
 
 ## Frequently Asked Questions
-#### Q: Why does the OEM Jeep WJ gear crack?
-**A:** The factory injection-molded nylon gear uses thin web walls adjacent to the D-flat shaft interface. Motor stall torque at end-stops combined with summer dashboard heat cycles causes catastrophic hoop stress cracking.
+#### Q: Why did the original gear split in half?
+**A:** The factory Chrysler gear is molded from unfilled polyoxymethylene (POM). Constant engine bay thermal cycling embrittles the plastic, while motor stall-torque at travel endpoints induces hoop-stress fractures at the hub.
 
-#### Q: How does the +0.15mm tolerance compensation help?
-**A:** The D-bore is pre-widened by exactly +0.15mm to guarantee a snug hand press-fit over the motor steel shaft without binding.
+#### Q: How do I run the HVAC diagnostic calibration on the WJ?
+**A:** Turn the ignition ON. Set both driver and passenger temp knobs to 75°F. Simultaneously press and hold the 'A/C' and 'Recirc' buttons while turning the left temperature control knob one click clockwise. Release both buttons.
 
 ## Open-Source Attribution & Safety Disclaimer
-Modeled by Vojata, dedicated to the Public Domain under CC0 1.0.
+Designed by Vojata on Printables under CC0
 Original Source: https://www.printables.com/model/838965-grand-cherokee-blend-door-actuator-gear
 
 > **Legal Disclaimer:** Barebones 3D, L.L.C. is an independent engineering firm. This replacement component is an aftermarket reproduction designed for personal repair, restoration, and life-extension. Barebones 3D is not affiliated with, authorized by, sponsored by, or endorsed by the original equipment manufacturer. All trademarks and OEM part numbers are referenced solely for identification and compatibility purposes.
@@ -1892,6 +2410,92 @@ Original Source: https://barebones3d.com/guides/subaru-blend-door-actuator-gear-
 ---
 
 ---
+title: "Subaru Impreza / Forester / Crosstrek Sun Visor Pivot Clip Bracket"
+slug: "subaru-impreza-forester-crosstrek-sun-visor-clip-92011sc022lo"
+oem_part_number: "92011SC022LO"
+superseded_numbers:
+  - "92011SC033LO"
+  - "92011FG032ME"
+compatible_vehicles_and_appliances:
+  - make: "Subaru"
+    model: "Impreza"
+    year_start: 2008
+    year_end: 2014
+  - make: "Subaru"
+    model: "Forester"
+    year_start: 2009
+    year_end: 2018
+  - make: "Subaru"
+    model: "Crosstrek"
+    year_start: 2013
+    year_end: 2017
+material: "Automotive ASA"
+price_cents: 1800
+price_formatted: "$18.00 USD"
+is_commercial_allowed: true
+license: "CC BY 4.0"
+download_stl_url: "https://barebones3d.com/assets/stl/subaru-impreza-forester-crosstrek-sun-visor-clip-92011sc022lo.stl"
+checkout_api_url: "https://barebones3d.com/api/checkout/create"
+canonical_guide_url: "https://barebones3d.com/guides/subaru-impreza-forester-crosstrek-sun-visor-clip-92011sc022lo"
+---
+
+# Subaru Impreza / Forester / Crosstrek Sun Visor Pivot Clip Bracket (OEM #92011SC022LO)
+
+## Technical Specifications
+- **Primary OEM Part #:** `92011SC022LO`
+- **Engineering Material:** Automotive ASA (100% solid infill, calibrated printer compensation)
+- **Repair Difficulty:** Beginner
+- **Estimated Repair Time:** 10 mins
+- **Commercial Purchase:** $18.00 USD (Printed on-demand in 48h via Slant 3D)
+- **Direct STL Download:** [92011SC022LO.stl](https://barebones3d.com/assets/stl/subaru-impreza-forester-crosstrek-sun-visor-clip-92011sc022lo.stl)
+- **Amazon OEM & Hardware Search:** [Check Price & Availability on Amazon](https://www.amazon.com/s?k=Subaru%20Forester%20Impreza%20sun%20visor%20clip%20bracket%2092011SC022LO&tag=barebones3dco-20)
+
+## Required Tools & Supplies
+- **[Flathead Pocket Screwdriver](https://www.amazon.com/s?k=Flathead%20Pocket%20Screwdriver&tag=barebones3dco-20)**: Pop open the cosmetic screw concealment cap *(Search on Amazon)*
+- **[T20 Torx Bit Driver](https://www.amazon.com/s?k=T20%20Torx%20Bit%20Driver&tag=barebones3dco-20)**: Remove the factory anchor screw into headliner sheet metal *(Search on Amazon)*
+
+## Step-by-Step Installation Procedure
+### Step 1: Cosmetic Hinge Cap Pry
+
+Insert a thin flathead screwdriver into the small notch on the underside of the visor pivot base. Pop open the plastic hinged cover to expose the mounting screw.
+
+![Original broken plastic Subaru Impreza / Forester / Crosstrek Sun Visor Pivot Clip Bracket (OEM #92011SC022LO) shown side-by-side with reinforced 3D printed Automotive ASA reproduction.](https://barebones3d.com/assets/parts/92011sc022lo-subaru-impreza-forester-crosstrek-sun-visor-clip-92011sc022lo-step-1.webp)
+
+### Step 2: T20 Fastener Extraction and Clip Drop
+
+Back out the single T20 Torx screw securing the bracket to the roof crossmember. Rotate the broken visor clip 90 degrees counter-clockwise to release the internal retention ears from the sheet metal slot.
+
+![Original broken plastic Subaru Impreza / Forester / Crosstrek Sun Visor Pivot Clip Bracket (OEM #92011SC022LO) shown side-by-side with reinforced 3D printed Automotive ASA reproduction.](https://barebones3d.com/assets/parts/92011sc022lo-subaru-impreza-forester-crosstrek-sun-visor-clip-92011sc022lo-step-2.webp)
+
+### Step 3: ASA High-Temp Replacement Block Insertion
+
+Slide the Barebones 3D ASA visor anchor block into the keyed roof opening. Rotate 90 degrees clockwise until the retention shoulders lock behind the sheet metal backing.
+
+![Original broken plastic Subaru Impreza / Forester / Crosstrek Sun Visor Pivot Clip Bracket (OEM #92011SC022LO) shown side-by-side with reinforced 3D printed Automotive ASA reproduction.](https://barebones3d.com/assets/parts/92011sc022lo-subaru-impreza-forester-crosstrek-sun-visor-clip-92011sc022lo-step-3.webp)
+
+### Step 4: Torque Fastener and Snap Engagement Test
+
+Thread the factory T20 screw through the counterbore hole and tighten securely. Fold the visor stalk in and out of the clip jaw to verify positive mechanical retention without binding.
+
+![Original broken plastic Subaru Impreza / Forester / Crosstrek Sun Visor Pivot Clip Bracket (OEM #92011SC022LO) shown side-by-side with reinforced 3D printed Automotive ASA reproduction.](https://barebones3d.com/assets/parts/92011sc022lo-subaru-impreza-forester-crosstrek-sun-visor-clip-92011sc022lo-step-4.webp)
+
+## Frequently Asked Questions
+#### Q: Why do Subaru visor clips snap constantly?
+**A:** Subaru's OEM plastic contains zero UV stabilizers. Sitting directly behind the windshield greenhouse generates interior cabin soak temperatures above 65°C, causing the plastic jaw tabs to snap on simple visor pulls.
+
+#### Q: Can this be printed in PLA?
+**A:** Never use PLA inside an automobile cabin. PLA softens at 55°C (131°F) and will deform within 48 hours of summer parking. Automotive ASA maintains dimensional stability past 95°C.
+
+## Open-Source Attribution & Safety Disclaimer
+Designed by mk3Designs on Printables under CC BY
+Original Source: https://www.printables.com/model/689179-subaru-visor-piece
+
+> **Legal Disclaimer:** Barebones 3D, L.L.C. is an independent engineering firm. This replacement component is an aftermarket reproduction designed for personal repair, restoration, and life-extension. Barebones 3D is not affiliated with, authorized by, sponsored by, or endorsed by the original equipment manufacturer. All trademarks and OEM part numbers are referenced solely for identification and compatibility purposes.
+
+
+---
+
+---
 title: "Technics SL-1200 / SL-1210 MK2 DJ Turntable Pitch Fader Dust Shutter Plate"
 slug: "technics-sl1200-pitch-fader-dust-shutter-plate-r-653"
 oem_part_number: "R-653"
@@ -1946,6 +2550,88 @@ Lift the aluminum platter off the center spindle, unbolt the outer chassis cover
 ## Open-Source Attribution & Safety Disclaimer
 Barebones 3D Engineering Lab CAD under development.
 Original Source: https://barebones3d.com/guides/technics-sl1200-pitch-fader-dust-shutter-plate-r-653/#cad-waitlist
+
+> **Legal Disclaimer:** Barebones 3D, L.L.C. is an independent engineering firm. This replacement component is an aftermarket reproduction designed for personal repair, restoration, and life-extension. Barebones 3D is not affiliated with, authorized by, sponsored by, or endorsed by the original equipment manufacturer. All trademarks and OEM part numbers are referenced solely for identification and compatibility purposes.
+
+
+---
+
+---
+title: "Technics SL-1200 / SL-1210 MK2 Turntable Dust Cover Hinge Repair Bracket"
+slug: "technics-sl-1200-sl-1210-mk2-dust-cover-hinge-bracket-sfumm02n04"
+oem_part_number: "SFUMM02N04"
+superseded_numbers:
+  - "SFAD122-01A"
+  - "TTFA0457"
+compatible_vehicles_and_appliances:
+  - make: "Technics"
+    model: "SL-1200MK2"
+  - make: "Technics"
+    model: "SL-1210MK2"
+  - make: "Technics"
+    model: "SL-1300MK2"
+  - make: "Technics"
+    model: "SL-1500MK2"
+material: "Automotive ASA"
+price_cents: 2600
+price_formatted: "$26.00 USD"
+is_commercial_allowed: true
+license: "CC BY 4.0"
+download_stl_url: "https://barebones3d.com/assets/stl/technics-sl-1200-sl-1210-mk2-dust-cover-hinge-bracket-sfumm02n04.stl"
+checkout_api_url: "https://barebones3d.com/api/checkout/create"
+canonical_guide_url: "https://barebones3d.com/guides/technics-sl-1200-sl-1210-mk2-dust-cover-hinge-bracket-sfumm02n04"
+---
+
+# Technics SL-1200 / SL-1210 MK2 Turntable Dust Cover Hinge Repair Bracket (OEM #SFUMM02N04)
+
+## Technical Specifications
+- **Primary OEM Part #:** `SFUMM02N04`
+- **Engineering Material:** Automotive ASA (100% solid infill, calibrated printer compensation)
+- **Repair Difficulty:** Easy
+- **Estimated Repair Time:** 20 mins
+- **Commercial Purchase:** $26.00 USD (Printed on-demand in 48h via Slant 3D)
+- **Direct STL Download:** [SFUMM02N04.stl](https://barebones3d.com/assets/stl/technics-sl-1200-sl-1210-mk2-dust-cover-hinge-bracket-sfumm02n04.stl)
+- **Amazon OEM & Hardware Search:** [Check Price & Availability on Amazon](https://www.amazon.com/s?k=Technics%20SL-1200%20SL-1210%20dust%20cover%20hinge%20bracket%20SFUMM02N04&tag=barebones3dco-20)
+
+## Required Tools & Supplies
+- **[JIS #2 Screwdriver (or PH2)](https://www.amazon.com/s?k=JIS%20%232%20Screwdriver%20or%20PH2&tag=barebones3dco-20)**: Back out chassis hinge pocket screws without stripping Japanese Industrial Standard heads *(Search on Amazon)*
+- **[Needle-Nose Pliers](https://www.amazon.com/s?k=Needle-Nose%20Pliers&tag=barebones3dco-20)**: Retain and seat the heavy internal steel hinge torsion spring *(Search on Amazon)*
+
+## Step-by-Step Installation Procedure
+### Step 1: Dust Cover Separation and Remnant Removal
+
+Lift the acrylic dust cover vertically off the chassis. Back out the two JIS #2 screws securing the broken die-cast/plastic lower hinge receiver bracket from the rear aluminum plinth.
+
+![Original broken plastic Technics SL-1200 / SL-1210 MK2 Turntable Dust Cover Hinge Repair Bracket (OEM #SFUMM02N04) shown side-by-side with reinforced 3D printed Automotive ASA reproduction.](https://barebones3d.com/assets/parts/sfumm02n04-technics-sl-1200-sl-1210-mk2-dust-cover-hinge-bracket-sfumm02n04-step-1.webp)
+
+### Step 2: Torsion Spring Pin Transfer
+
+Use needle-nose pliers to extract the internal steel pivot pin and spring from the damaged original housing. Inspect the spring tangs for corrosion or fatigue bending, and wipe clean.
+
+![Original broken plastic Technics SL-1200 / SL-1210 MK2 Turntable Dust Cover Hinge Repair Bracket (OEM #SFUMM02N04) shown side-by-side with reinforced 3D printed Automotive ASA reproduction.](https://barebones3d.com/assets/parts/sfumm02n04-technics-sl-1200-sl-1210-mk2-dust-cover-hinge-bracket-sfumm02n04-step-2.webp)
+
+### Step 3: ASA Bracket Base Installation
+
+Position the Barebones 3D UV-resistant ASA replacement hinge bracket into the rear plinth recess. Secure the base using the factory metric M3/M4 JIS screws, making sure the mount is seated squarely against the plinth.
+
+![Original broken plastic Technics SL-1200 / SL-1210 MK2 Turntable Dust Cover Hinge Repair Bracket (OEM #SFUMM02N04) shown side-by-side with reinforced 3D printed Automotive ASA reproduction.](https://barebones3d.com/assets/parts/sfumm02n04-technics-sl-1200-sl-1210-mk2-dust-cover-hinge-bracket-sfumm02n04-step-3.webp)
+
+### Step 4: Acrylic Cover Insertion and Hinge Tension Check
+
+Load the steel torsion spring into the ASA bracket socket and insert the hinge slide tab. Slide the acrylic dust cover tongue straight down into the receiver until it seats. Test open/close holding tension at a 45-degree angle.
+
+![Original broken plastic Technics SL-1200 / SL-1210 MK2 Turntable Dust Cover Hinge Repair Bracket (OEM #SFUMM02N04) shown side-by-side with reinforced 3D printed Automotive ASA reproduction.](https://barebones3d.com/assets/parts/sfumm02n04-technics-sl-1200-sl-1210-mk2-dust-cover-hinge-bracket-sfumm02n04-step-4.webp)
+
+## Frequently Asked Questions
+#### Q: Why did Panasonic discontinue this part?
+**A:** Panasonic phased out legacy SL-1200MK2 component spares in the early 2010s. OEM new-old-stock pairs now trade on vintage Hi-Fi marketplaces for over $100.
+
+#### Q: Why is ASA used instead of standard black ABS?
+**A:** Automotive ASA delivers the high impact strength of ABS but contains an acrylate elastomer that provides total immunity to UV yellowing and solar degradation from room sunlight.
+
+## Open-Source Attribution & Safety Disclaimer
+Designed by Lot_Makes on Thingiverse under CC BY
+Original Source: https://www.thingiverse.com/thing:4796480
 
 > **Legal Disclaimer:** Barebones 3D, L.L.C. is an independent engineering firm. This replacement component is an aftermarket reproduction designed for personal repair, restoration, and life-extension. Barebones 3D is not affiliated with, authorized by, sponsored by, or endorsed by the original equipment manufacturer. All trademarks and OEM part numbers are referenced solely for identification and compatibility purposes.
 
@@ -2420,6 +3106,89 @@ Press the replacement roller wheel over the axle pin and push into the mounting 
 ## Open-Source Attribution & Safety Disclaimer
 OEM replacement specification. Multi-pack commodity sourcing recommended.
 Original Source: https://barebones3d.com/guides/whirlpool-refrigerator-deli-drawer-slide-roller-w10436250/
+
+> **Legal Disclaimer:** Barebones 3D, L.L.C. is an independent engineering firm. This replacement component is an aftermarket reproduction designed for personal repair, restoration, and life-extension. Barebones 3D is not affiliated with, authorized by, sponsored by, or endorsed by the original equipment manufacturer. All trademarks and OEM part numbers are referenced solely for identification and compatibility purposes.
+
+
+---
+
+---
+title: "Whirlpool Dishwasher Lower Dishrack Roller Wheel & Axle Clip"
+slug: "whirlpool-dishwasher-lower-dishrack-roller-wheel-axle-clip-wpw10195417"
+oem_part_number: "WPW10195417"
+superseded_numbers:
+  - "W10195417"
+  - "8539324"
+  - "W10195416V"
+  - "1548679"
+compatible_vehicles_and_appliances:
+  - make: "Whirlpool"
+    model: "Quiet Partner series"
+  - make: "KitchenAid"
+    model: "KDFE / KDTE dishwashers"
+  - make: "Kenmore"
+    model: "Elite 665 series"
+  - make: "Maytag"
+    model: "MDB series"
+material: "PETG Heavy Duty"
+price_cents: null
+price_formatted: "Free STL Only"
+is_commercial_allowed: false
+license: "CC BY 4.0"
+download_stl_url: "https://barebones3d.com/assets/stl/whirlpool-dishwasher-lower-dishrack-roller-wheel-axle-clip-wpw10195417.stl"
+checkout_api_url: null
+canonical_guide_url: "https://barebones3d.com/guides/whirlpool-dishwasher-lower-dishrack-roller-wheel-axle-clip-wpw10195417"
+---
+
+# Whirlpool Dishwasher Lower Dishrack Roller Wheel & Axle Clip (OEM #WPW10195417)
+
+## Technical Specifications
+- **Primary OEM Part #:** `WPW10195417`
+- **Engineering Material:** PETG Heavy Duty (100% solid infill, calibrated printer compensation)
+- **Repair Difficulty:** Beginner
+- **Estimated Repair Time:** 5 mins
+- **Commercial Purchase:** Digital STL Only / Commodity Multi-Pack on Amazon: [Search Amazon Catalog](https://www.amazon.com/s?k=Whirlpool%20dishwasher%20lower%20dishrack%20wheels%208%20pack%20WPW10195417&tag=barebones3dco-20) (Cheaper than custom 3D printing)
+- **Direct STL Download:** [WPW10195417.stl](https://barebones3d.com/assets/stl/whirlpool-dishwasher-lower-dishrack-roller-wheel-axle-clip-wpw10195417.stl)
+- **Amazon OEM & Hardware Search:** [Check Price & Availability on Amazon](https://www.amazon.com/s?k=Whirlpool%20dishwasher%20lower%20dishrack%20wheels%208%20pack%20WPW10195417&tag=barebones3dco-20)
+
+## Required Tools & Supplies
+- **[Flat Blade Pocket Screwdriver](https://www.amazon.com/s?k=Flat%20Blade%20Pocket%20Screwdriver&tag=barebones3dco-20)**: Depress the center snap barb on the brittle wire retention clip *(Search on Amazon)*
+
+## Step-by-Step Installation Procedure
+### Step 1: Dishtray Extraction and Wheel Inspection
+
+Pull the lower dishrack completely out of the wash tub and place it inverted on a clean counter. Inspect the eight roller positions to locate melted, flat-spotted, or missing wheels.
+
+![Original broken plastic Whirlpool Dishwasher Lower Dishrack Roller Wheel & Axle Clip (OEM #WPW10195417) shown side-by-side with reinforced 3D printed PETG Heavy Duty reproduction.](https://barebones3d.com/assets/parts/wpw10195417-whirlpool-dishwasher-lower-dishrack-roller-wheel-axle-clip-wpw10195417-step-1.webp)
+
+### Step 2: Damaged Wheel Clip Separation
+
+Insert the flathead screwdriver blade beneath the central locking tang of the plastic wheel axle bracket. Pry slightly outward while pushing the wheel assembly off the steel wire frame.
+
+![Original broken plastic Whirlpool Dishwasher Lower Dishrack Roller Wheel & Axle Clip (OEM #WPW10195417) shown side-by-side with reinforced 3D printed PETG Heavy Duty reproduction.](https://barebones3d.com/assets/parts/wpw10195417-whirlpool-dishwasher-lower-dishrack-roller-wheel-axle-clip-wpw10195417-step-2.webp)
+
+### Step 3: New Roller Alignment over Wire Frame
+
+Align the replacement wheel assembly with the dual wire rungs. The axle notch must straddle the lower wire while the upper locking clip hooks over the top stabilizing rail.
+
+![Original broken plastic Whirlpool Dishwasher Lower Dishrack Roller Wheel & Axle Clip (OEM #WPW10195417) shown side-by-side with reinforced 3D printed PETG Heavy Duty reproduction.](https://barebones3d.com/assets/parts/wpw10195417-whirlpool-dishwasher-lower-dishrack-roller-wheel-axle-clip-wpw10195417-step-3.webp)
+
+### Step 4: Snap-Lock Engagement and Tub Glide Test
+
+Press inward firmly with your thumb on the wheel axle until the retention barb clicks over the wire. Return the rack to the dishwasher tub and roll it in and out to ensure smooth, unhindered tracking over the tub door bridge.
+
+![Original broken plastic Whirlpool Dishwasher Lower Dishrack Roller Wheel & Axle Clip (OEM #WPW10195417) shown side-by-side with reinforced 3D printed PETG Heavy Duty reproduction.](https://barebones3d.com/assets/parts/wpw10195417-whirlpool-dishwasher-lower-dishrack-roller-wheel-axle-clip-wpw10195417-step-4.webp)
+
+## Frequently Asked Questions
+#### Q: Why is this part listed as affiliate-only instead of print-on-demand?
+**A:** OEM appliance counters charge $35 per single roller wheel. However, high-grade injection-molded 8-packs are widely available on Amazon for under $12. Print-on-demand unit economics cannot compete with $1.50/wheel pricing, so we direct owners to mass-market multipacks via affiliate routing while providing free STL files for DIY makers.
+
+#### Q: Can I print this part on my home printer?
+**A:** Yes, but you must use PETG, ABS, or Nylon. PLA will soften, warp, and release micro-plastics during the dishwasher's 65°C (150°F) heated wash and sanitize dry cycles.
+
+## Open-Source Attribution & Safety Disclaimer
+Designed by Bill on Printables under CC BY
+Original Source: https://www.printables.com/model/526757-dishwasher-rack-roller
 
 > **Legal Disclaimer:** Barebones 3D, L.L.C. is an independent engineering firm. This replacement component is an aftermarket reproduction designed for personal repair, restoration, and life-extension. Barebones 3D is not affiliated with, authorized by, sponsored by, or endorsed by the original equipment manufacturer. All trademarks and OEM part numbers are referenced solely for identification and compatibility purposes.
 

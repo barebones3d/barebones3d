@@ -8,15 +8,13 @@ async function runAudit() {
   const sqlite = new DatabaseSync(':memory:');
   const db = createNodeSqliteAdapter(sqlite);
 
-  const migrationFiles = [
-    '0001_initial_schema.sql',
-    '0002_seed_parts.sql',
-    '0003_update_pricing_and_monetization.sql',
-    '0004_catalog_status_and_licensing.sql'
-  ];
+  const migrationsDir = path.join(ROOT_DIR, 'migrations');
+  const migrationFiles = fs.readdirSync(migrationsDir)
+    .filter(f => f.endsWith('.sql'))
+    .sort();
 
   for (const m of migrationFiles) {
-    const sql = fs.readFileSync(path.join(ROOT_DIR, 'migrations', m), 'utf8');
+    const sql = fs.readFileSync(path.join(migrationsDir, m), 'utf8');
     await db.execScript(sql);
   }
 
@@ -43,7 +41,10 @@ async function runAudit() {
     const url = p.original_source_url;
     let isSynthetic = false;
 
-    if (url.includes('printables.com') || url.includes('thingiverse.com')) {
+    if (!url) {
+      isSynthetic = true;
+      syntheticUrlCount++;
+    } else if (url.includes('printables.com') || url.includes('thingiverse.com')) {
       const hasNumericId = /\/(model\/\d+|thing:\d+)/.test(url);
       if (!hasNumericId) {
         isSynthetic = true;

@@ -21,7 +21,11 @@ export function buildAmazonSearchUrl(query: string, tag: string = AMAZON_AFFILIA
  * than custom on-demand 3D printing (e.g., commodity mass injection-molded multi-packs).
  */
 export function isCheaperOnAmazon(partId: string, oemPartNumber: string, status?: string): boolean {
-  return status === 'affiliate_only' || partId === 'part_whirlpool_wheel_w10195416' || oemPartNumber === 'W10195416';
+  return status === 'affiliate_only' ||
+    partId === 'part_whirlpool_wheel_w10195416' ||
+    oemPartNumber === 'W10195416' ||
+    oemPartNumber === 'WPW10195417' ||
+    oemPartNumber === '970050-01';
 }
 
 const OEM_AFFILIATE_SEARCH_QUERIES: Record<string, string> = {
@@ -39,7 +43,16 @@ const OEM_AFFILIATE_SEARCH_QUERIES: Record<string, string> = {
   '00605010': 'Bosch washing machine drain pump filter replacement 00605010 605010',
   '90530948': 'Black Decker string trimmer spool cap replacement 90530948',
   'W10436250': 'Whirlpool refrigerator deli drawer roller wheel W10436250',
-  '5012710AA': 'Jeep Grand Cherokee WJ blend door repair kit metal 5012710AA',
+  '5012710AA': 'Jeep Grand Cherokee WJ blend door actuator gear 5012710AA',
+  'DL3Z-19E616-A': 'Ford F150 blend door actuator gear DL3Z-19E616-A',
+  'QC35-HINGE-ASSY': 'Bose QC35 replacement hinge swivel bracket',
+  'N447388': 'DeWalt DWS779 DWS780 miter saw dust chute deflector',
+  'SFUMM02N04': 'Technics SL-1200 SL-1210 dust cover hinge bracket SFUMM02N04',
+  '92011SC022LO': 'Subaru Forester Impreza sun visor clip bracket 92011SC022LO',
+  'FL3Z-16502C22-E': 'Ford F150 sunroof track repair kit lift arms FL3Z-16502C22-E',
+  '20826188': 'GMT900 blend door actuator cam lever 20826188 Silverado Tahoe',
+  'WPW10195417': 'Whirlpool dishwasher lower dishrack wheels 8 pack WPW10195417',
+  '970050-01': 'Dyson V10 V11 replacement heavy duty trigger switch with T8 screwdriver',
   '122049-9': 'Makita 18V battery terminal cover protector cap 122049-9',
   '3-255-731-01': 'Sony MDR-7506 replacement slider hanger yoke repair parts'
 };

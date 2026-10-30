@@ -756,6 +756,44 @@ async function runPlatformTests() {
     assert.ok(!html.includes('id="buy-button"'), 'Affiliate part must NOT have commercial checkout button');
   });
 
+  // -------------------------------------------------------------
+  // Test Suite 10: Migration 0005 Catalog Batch Expansion
+  // -------------------------------------------------------------
+  console.log('\n--- Test Suite 10: Migration 0005 Catalog Batch Expansion ---');
+
+  await it('Applies 0005_catalog_batch_expansion.sql and expands catalog to 40 parts', async () => {
+    const migrationSql = fs.readFileSync(path.join(ROOT_DIR, 'migrations', '0005_catalog_batch_expansion.sql'), 'utf8');
+    await db.execScript(migrationSql);
+
+    const parts = await getAllActiveParts(db);
+    assert.strictEqual(parts.length, 40, `Expected 40 total parts, found ${parts.length}`);
+
+    const activeParts = parts.filter(p => p.status === 'active');
+    const affiliateParts = parts.filter(p => p.status === 'affiliate_only');
+    const waitlistParts = parts.filter(p => p.status === 'cad_waitlist');
+
+    assert.strictEqual(activeParts.length, 13, `Expected 13 active parts, found ${activeParts.length}`);
+    assert.strictEqual(affiliateParts.length, 9, `Expected 9 affiliate_only parts, found ${affiliateParts.length}`);
+    assert.strictEqual(waitlistParts.length, 18, `Expected 18 cad_waitlist parts, found ${waitlistParts.length}`);
+  });
+
+  await it('Verifies all 10 ingested parts have valid guides and steps with SVGs', async () => {
+    const oems = [
+      '5012710AA', 'DL3Z-19E616-A', 'QC35-HINGE-ASSY', 'N447388', 'SFUMM02N04',
+      '92011SC022LO', 'FL3Z-16502C22-E', '20826188', 'WPW10195417', '970050-01'
+    ];
+    for (const oem of oems) {
+      const part = (await getAllActiveParts(db)).find(p => p.oem_part_number === oem);
+      assert.ok(part, `Part ${oem} must exist in catalog`);
+      const guide = await getGuideByPartId(db, part!.id);
+      assert.ok(guide, `Guide for ${oem} must exist`);
+      assert.strictEqual(guide!.steps.length, 4, `Guide for ${oem} must have 4 steps`);
+      for (const step of guide!.steps) {
+        assert.ok(step.svg_code && step.svg_code.startsWith('<svg'), `Step ${step.step_number} in ${oem} must have valid SVG`);
+      }
+    }
+  });
+
   console.log(`\n🎉 All ${testCount} Platform & E-Commerce Tests Passed Successfully!\n`);
 }
 
