@@ -434,6 +434,70 @@ async function runPlatformTests() {
     assert.ok(html.includes('All Parts'), 'Missing filter tab');
   });
 
+  await it('Renders compliant Amazon affiliate links for needed tools and cheaper commodity parts', async () => {
+    const whirlpool = (await getPartBySlug(db, 'whirlpool-dishwasher-rack-wheel-w10195416'))!;
+    const wGuide = (await getGuideByPartId(db, whirlpool.id))!;
+    const wHtml = renderGuideHtml(whirlpool, wGuide, 'https://barebones3d.com');
+
+    // 1. Amazon Tag barebones3dco-20 present
+    assert.ok(wHtml.includes('tag=barebones3dco-20'), 'Missing Amazon affiliate tag barebones3dco-20');
+    assert.ok(wHtml.includes('rel="nofollow noopener sponsored"'), 'Missing compliant rel attributes on affiliate links');
+
+    // 2. Needed tools have Amazon search links
+    assert.ok(wHtml.includes('https://www.amazon.com/s?k='), 'Missing Amazon tool search links');
+    assert.ok(wHtml.includes('Flathead%20Screwdriver'), 'Missing tool search link for Flathead Screwdriver');
+
+    // 3. Commodity part cheaper on Amazon renders Amazon Commodity Action Card
+    assert.ok(wHtml.includes('Order Multi-Pack on Amazon'), 'Missing Amazon Multi-Pack Action Card');
+    assert.ok(wHtml.includes('Cheaper than 3D Printing'), 'Missing cheaper than 3D printing notice');
+    assert.ok(wHtml.includes('W10195416'), 'Missing part number in Amazon CTA');
+
+    // 4. Catalog card renders Amazon button for cheaper commodity parts
+    const parts = await getAllActiveParts(db);
+    const items = await Promise.all(parts.map(async part => ({
+      part,
+      guide: await getGuideByPartId(db, part.id)
+    })));
+    const catHtml = renderCatalogHtml(items, 'https://barebones3d.com');
+    assert.ok(catHtml.includes('Amazon Multi-Pack ($7–$12)'), 'Missing Amazon Multi-Pack badge in catalog');
+    assert.ok(catHtml.includes('🛒 Amazon'), 'Missing Amazon button in catalog for Whirlpool');
+  });
+
+  await it('Renders static-first three-view orthographic visual grid and inline blueprint SVGs', async () => {
+    const subaru = (await getPartBySlug(db, 'subaru-blend-door-actuator-gear-72131-fg000'))!;
+    const guide = (await getGuideByPartId(db, subaru.id))!;
+    const html = renderGuideHtml(subaru, guide, 'https://barebones3d.com');
+
+    // 1. Three-view orthographic layout presence
+    assert.ok(html.includes('technical-views-section'), 'Missing technical-views-section container');
+    assert.ok(html.includes('technical-views-grid'), 'Missing technical-views-grid');
+    assert.ok(html.includes('ISO 3D'), 'Missing Isometric view tag');
+    assert.ok(html.includes('PLAN (XY)'), 'Missing Top-Down Plan view tag');
+    assert.ok(html.includes('ELEV (XZ)'), 'Missing Side Profile view tag');
+
+    // 2. Floating inspect 3D button
+    assert.ok(html.includes('open-3d-modal-btn'), 'Missing open-3d-modal-btn trigger');
+    assert.ok(html.includes('Tap to Orbit &amp; Inspect 3D Model'), 'Missing 3D inspect button label');
+
+    // 3. Inline step blueprint SVGs with dark-mode aesthetic
+    assert.ok(html.includes('step-blueprint-svg'), 'Missing inline step blueprint SVG');
+    assert.ok(html.includes('#0a0f1d'), 'Missing dark blueprint background #0a0f1d');
+    assert.ok(html.includes('#1e293b'), 'Missing blueprint grid lines #1e293b');
+    assert.ok(html.includes('#38bdf8'), 'Missing mesh outline color #38bdf8');
+  });
+
+  await it('Renders lazy-loaded model-viewer 3D modal with R2 STL path and cyan lighting', async () => {
+    const subaru = (await getPartBySlug(db, 'subaru-blend-door-actuator-gear-72131-fg000'))!;
+    const guide = (await getGuideByPartId(db, subaru.id))!;
+    const html = renderGuideHtml(subaru, guide, 'https://barebones3d.com');
+
+    assert.ok(html.includes('id="model-3d-dialog"'), 'Missing model-3d-dialog modal element');
+    assert.ok(html.includes('model-viewer/3.3.0/model-viewer.min.js'), 'Missing Google model-viewer lazy-load script URL');
+    assert.ok(html.includes('camera-controls'), 'Missing camera-controls attribute in model-viewer configuration');
+    assert.ok(html.includes('auto-rotate'), 'Missing auto-rotate attribute in model-viewer configuration');
+    assert.ok(html.includes('radial-gradient(circle at center, #0e2a47 0%, #0a0f1d 75%)'), 'Missing dark cyan lighting environment');
+  });
+
   // -------------------------------------------------------------
   // Test Suite 8: LLM-Native Endpoints, Content Negotiation & MCP Tooling
   // -------------------------------------------------------------
@@ -603,6 +667,93 @@ async function runPlatformTests() {
     assert.strictEqual(howTo.image[0].width, 1920);
     assert.strictEqual(howTo.image[0].height, 1080);
     assert.ok(howTo.image[0].caption.includes(subaru.oem_part_number));
+  });
+
+  // -------------------------------------------------------------
+  // Test Suite 9: Migration 0004 Catalog Status & Licensing Enforcement
+  // -------------------------------------------------------------
+  console.log('\n--- Test Suite 9: Migration 0004 Catalog Status & Licensing Enforcement ---');
+
+  await it('Applies 0004_catalog_status_and_licensing.sql and classifies all 31 parts', async () => {
+    const migrationSql = fs.readFileSync(path.join(ROOT_DIR, 'migrations', '0004_catalog_status_and_licensing.sql'), 'utf8');
+    await db.execScript(migrationSql);
+
+    const parts = await getAllActiveParts(db);
+    assert.strictEqual(parts.length, 31, `Expected 31 total parts, found ${parts.length}`);
+
+    const activeParts = parts.filter(p => p.status === 'active');
+    const affiliateParts = parts.filter(p => p.status === 'affiliate_only');
+    const waitlistParts = parts.filter(p => p.status === 'cad_waitlist');
+
+    assert.strictEqual(activeParts.length, 8, `Expected 8 active parts, found ${activeParts.length}`);
+    assert.strictEqual(affiliateParts.length, 7, `Expected 7 affiliate_only parts, found ${affiliateParts.length}`);
+    assert.strictEqual(waitlistParts.length, 16, `Expected 16 cad_waitlist parts, found ${waitlistParts.length}`);
+
+    // Verify all active parts have commercial reproduction enabled
+    for (const p of activeParts) {
+      assert.strictEqual(p.is_commercial_allowed, true, `Active part ${p.oem_part_number} must have is_commercial_allowed = true`);
+      assert.ok(p.retail_price_cents > 0, `Active part ${p.oem_part_number} must have retail price > 0`);
+    }
+
+    // Verify all affiliate_only and cad_waitlist have is_commercial_allowed = false
+    for (const p of [...affiliateParts, ...waitlistParts]) {
+      assert.strictEqual(p.is_commercial_allowed, false, `Part ${p.oem_part_number} must have is_commercial_allowed = false`);
+      assert.strictEqual(p.retail_price_cents, 0, `Part ${p.oem_part_number} must have retail price = 0`);
+    }
+  });
+
+  await it('Verifies zero synthetic URLs without numeric IDs or internal domain routes', async () => {
+    const parts = await getAllActiveParts(db);
+    for (const p of parts) {
+      const url = p.original_source_url;
+      assert.ok(url, `Part ${p.oem_part_number} must have source URL`);
+
+      if (url.includes('printables.com') || url.includes('thingiverse.com')) {
+        // Must contain numeric IDs (e.g. /model/123456 or thing:123456)
+        const hasNumericId = /\/(model\/\d+|thing:\d+)/.test(url);
+        assert.ok(hasNumericId, `External URL must contain real numeric ID: ${url} (Part ${p.oem_part_number})`);
+      } else {
+        // Internal canonical domain route
+        assert.ok(url.startsWith('https://barebones3d.com/guides/'), `Internal URL must start with barebones3d.com/guides/: ${url}`);
+      }
+    }
+  });
+
+  await it('Renders CAD Waitlist page with email waitlist form and disabled STL badge', async () => {
+    const ford = (await getPartBySlug(db, 'ford-f-150-super-duty-sunroof-track-slider-lift-arm-repair-kit-fl3z-1651071-a'))!;
+    const guide = (await getGuideByPartId(db, ford.id))!;
+    const html = renderGuideHtml(ford, guide, 'https://barebones3d.com');
+
+    // 1. Hide Slant 3D checkout button
+    assert.ok(!html.includes('id="buy-button"'), 'Waitlist part must NOT have buy-button');
+    assert.ok(!html.includes('Order Reproduction Part &bull;'), 'Waitlist part must NOT have commercial checkout CTA');
+
+    // 2. Contains Join Production Waitlist email form
+    assert.ok(html.includes('Join Production Waitlist'), 'Missing Join Production Waitlist title');
+    assert.ok(html.includes('High-precision CAD model in engineering validation. Enter your email to be notified when the first SLS Nylon batch ships.'), 'Missing engineering validation copy');
+    assert.ok(html.includes('id="waitlist-email"'), 'Missing email input field');
+    assert.ok(html.includes('id="waitlist-btn"'), 'Missing waitlist button');
+
+    // 3. STL download button replaced with disabled badge
+    assert.ok(html.includes('CAD Under Development'), 'Missing CAD Under Development disabled badge');
+    assert.ok(!html.includes(`<a href="/api/parts/${ford.id}/download"`), 'Direct download link must be disabled for waitlist part');
+  });
+
+  await it('Renders Affiliate Only page with emphasized Amazon multi-pack button and Free STL link', async () => {
+    const spoolCap = (await getPartBySlug(db, 'black-decker-trimmer-replacement-spool-cap-90530948'))!;
+    const guide = (await getGuideByPartId(db, spoolCap.id))!;
+    const html = renderGuideHtml(spoolCap, guide, 'https://barebones3d.com');
+
+    // 1. Emphasize Amazon multi-pack button
+    assert.ok(html.includes('AMAZON COMMODITY PACK'), 'Missing Amazon commodity badge');
+    assert.ok(html.includes('Order Multi-Pack on Amazon'), 'Missing Order Multi-Pack button');
+    assert.ok(html.includes('tag=barebones3dco-20'), 'Missing Amazon affiliate tag');
+
+    // 2. Free STL download link present
+    assert.ok(html.includes(`/api/parts/${spoolCap.id}/download`), 'Missing Free STL download link for affiliate part');
+
+    // 3. No Slant 3D buy button
+    assert.ok(!html.includes('id="buy-button"'), 'Affiliate part must NOT have commercial checkout button');
   });
 
   console.log(`\n🎉 All ${testCount} Platform & E-Commerce Tests Passed Successfully!\n`);

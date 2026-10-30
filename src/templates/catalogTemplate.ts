@@ -1,19 +1,26 @@
 import type { Part, Guide } from '../types/database.ts';
+import { isCheaperOnAmazon, buildAmazonSearchUrl, getPartAmazonSearchQuery } from '../lib/affiliate.ts';
 
 export function renderCatalogHtml(items: Array<{ part: Part; guide?: Guide | null }>, siteUrl: string): string {
   const cardsHtml = items.map(({ part, guide }) => {
+    const primaryMake = part.compatible_makes_models[0]?.make || 'Universal';
     const priceDollars = (part.retail_price_cents / 100).toFixed(2);
-    const primaryMake = part.compatible_makes_models[0]?.make || 'OEM Fitment';
-    const modelsText = part.compatible_makes_models.map(c => `${c.make} ${c.model}`).slice(0, 3).join(', ');
+    const modelsText = part.compatible_makes_models.map(c => (
+      c.model.toLowerCase().startsWith(c.make.toLowerCase()) ? c.model : `${c.make} ${c.model}`
+    )).slice(0, 3).join(', ');
+    const isCommodity = isCheaperOnAmazon(part.id, part.oem_part_number);
+    const partAmazonUrl = buildAmazonSearchUrl(getPartAmazonSearchQuery(part.title, part.oem_part_number));
 
     return `
-      <article class="guide-catalog-card" data-oem="${part.oem_part_number.toLowerCase()}" data-make="${primaryMake.toLowerCase()}" data-commercial="${part.is_commercial_allowed ? '1' : '0'}">
+      <article class="guide-catalog-card" data-oem="${part.oem_part_number.toLowerCase()}" data-make="${primaryMake.toLowerCase()}" data-commercial="${part.is_commercial_allowed ? '1' : '0'}" data-status="${part.status}">
         <div class="card-badge-row">
           <span class="catalog-badge">${primaryMake}</span>
           <span class="catalog-material">${part.material_spec}</span>
-          ${part.is_commercial_allowed 
+          ${part.status === 'active' 
             ? `<span class="badge-price">$${priceDollars}</span>` 
-            : `<span class="badge-nc-pill">Free STL Only</span>`}
+            : part.status === 'affiliate_only' 
+              ? `<span class="badge-nc-pill" style="background: rgba(245, 158, 11, 0.15); color: #f59e0b; border-color: rgba(245, 158, 11, 0.35);">Amazon Multi-Pack ($7–$12)</span>`
+              : `<span class="badge-nc-pill" style="background: rgba(168, 85, 247, 0.15); color: #c084fc; border-color: rgba(168, 85, 247, 0.35);">CAD Waitlist</span>`}
         </div>
 
         <h2 class="card-title">
@@ -38,9 +45,18 @@ export function renderCatalogHtml(items: Array<{ part: Part; guide?: Guide | nul
             <span>View Repair Guide</span>
             <span>&rarr;</span>
           </a>
+          <a href="${partAmazonUrl}" target="_blank" rel="nofollow noopener sponsored" class="btn-amazon" style="padding: 0.6rem 0.85rem; font-size: 0.85rem; background: ${part.status === 'affiliate_only' ? 'rgba(245, 158, 11, 0.2)' : 'rgba(245, 158, 11, 0.12)'}; border: 1px solid rgba(245, 158, 11, 0.4); color: #f59e0b; border-radius: var(--radius-sm); font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 0.35rem;" title="${part.status === 'affiliate_only' ? 'Buy Multi-Pack on Amazon (Cheaper than custom 3D printing)' : `Search OEM #${part.oem_part_number} equivalent on Amazon`}">
+            <span>🛒 Amazon</span>
+          </a>
+          ${part.status === 'cad_waitlist' ? `
+          <a href="/guides/${part.slug}/#cad-waitlist" class="btn-secondary" style="padding: 0.6rem 0.85rem; font-size: 0.85rem; border-color: rgba(168, 85, 247, 0.4); color: #c084fc;" title="CAD Under Development - Join Waitlist">
+            <span>⏳ Waitlist</span>
+          </a>
+          ` : `
           <a href="/api/parts/${part.id}/download" class="btn-secondary" style="padding: 0.6rem 0.85rem; font-size: 0.85rem;" title="Download Free STL">
             <span>📥 STL</span>
           </a>
+          `}
         </div>
       </article>
     `;
@@ -256,8 +272,9 @@ export function renderCatalogHtml(items: Array<{ part: Part; guide?: Guide | nul
       <div class="filter-bar">
         <input type="text" id="filter-search" class="search-input" placeholder="Search by OEM part #, make, model (e.g. 72131-FG000, Subaru, Tundra)..." />
         <button class="filter-btn active" data-filter="all">All Parts (${items.length})</button>
-        <button class="filter-btn" data-filter="commercial">Commercial POD</button>
-        <button class="filter-btn" data-filter="stl-only">STL Only (Non-Commercial)</button>
+        <button class="filter-btn" data-filter="active">Active POD (${items.filter(i => i.part.status === 'active').length})</button>
+        <button class="filter-btn" data-filter="affiliate_only">Affiliate Commodity (${items.filter(i => i.part.status === 'affiliate_only').length})</button>
+        <button class="filter-btn" data-filter="cad_waitlist">CAD Waitlist (${items.filter(i => i.part.status === 'cad_waitlist').length})</button>
       </div>
     </div>
   </div>
@@ -283,13 +300,14 @@ export function renderCatalogHtml(items: Array<{ part: Part; guide?: Guide | nul
           const make = card.getAttribute('data-make') || '';
           const title = card.querySelector('.card-title').textContent.toLowerCase();
           const compat = card.querySelector('.card-compat-text').textContent.toLowerCase();
-          const isComm = card.getAttribute('data-commercial') === '1';
+          const status = card.getAttribute('data-status') || '';
 
           const matchesSearch = !query || oem.includes(query) || make.includes(query) || title.includes(query) || compat.includes(query);
           
           let matchesTab = true;
-          if (currentFilter === 'commercial') matchesTab = isComm;
-          if (currentFilter === 'stl-only') matchesTab = !isComm;
+          if (currentFilter === 'active') matchesTab = status === 'active';
+          if (currentFilter === 'affiliate_only') matchesTab = status === 'affiliate_only';
+          if (currentFilter === 'cad_waitlist') matchesTab = status === 'cad_waitlist';
 
           if (matchesSearch && matchesTab) {
             card.style.display = 'flex';

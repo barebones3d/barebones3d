@@ -34,10 +34,11 @@ canonical_guide_url: "https://barebones3d.com/guides/toyota-tundra-air-vent-louv
 - **Estimated Repair Time:** 15 mins
 - **Commercial Purchase:** $15.00 USD (Printed on-demand in 48h via Slant 3D)
 - **Direct STL Download:** [55670-0C010.stl](https://barebones3d.com/assets/stl/toyota-tundra-air-vent-louver-tab-55670-0c010.stl)
+- **Amazon OEM & Hardware Search:** [Check Price & Availability on Amazon](https://www.amazon.com/s?k=Toyota%20Tundra%20%2F%20Sequoia%20Dash%20AC%20Air%20Vent%20Louver%20Tab%20OEM%2055670-0C010&tag=barebones3dco-20)
 
 ## Required Tools & Supplies
-- **Nylon Dash Pry Tool**: Bezel perimeter release
-- **Needle-Nose Pliers**: Remove broken rear linkage pin
+- **[Nylon Dash Pry Tool](https://www.amazon.com/s?k=Nylon%20Dash%20Pry%20Tool&tag=barebones3dco-20)**: Bezel perimeter release *(Search on Amazon)*
+- **[Needle-Nose Pliers](https://www.amazon.com/s?k=Needle-Nose%20Pliers&tag=barebones3dco-20)**: Remove broken rear linkage pin *(Search on Amazon)*
 
 ## Step-by-Step Installation Procedure
 ### Step 1: Protect Dash and Pry Vent Bezel
@@ -68,7 +69,7 @@ Position the front grip tab over the central horizontal vane, then press the rea
 **A:** No. It is printed in ASA (Acrylonitrile Styrene Acrylate), which withstands temperatures up to 100°C without sagging and contains built-in UV stabilizers.
 
 ## Open-Source Attribution & Safety Disclaimer
-Model by OverlandHardware3D under CC BY 4.0.
-Original Source: https://www.printables.com/model/toyota-tundra-vent-tab-repair
+Model by merk420 on Thingiverse under CC BY 4.0
+Original Source: https://www.thingiverse.com/thing:4218653
 
 > **Legal Disclaimer:** Barebones 3D, L.L.C. is an independent engineering firm. This replacement component is an aftermarket reproduction designed for personal repair, restoration, and life-extension. Barebones 3D is not affiliated with, authorized by, sponsored by, or endorsed by the original equipment manufacturer. All trademarks and OEM part numbers are referenced solely for identification and compatibility purposes.

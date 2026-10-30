@@ -1,4 +1,5 @@
 import type { Part, Guide } from '../types/database.ts';
+import { buildAmazonSearchUrl, isCheaperOnAmazon, getPartAmazonSearchQuery } from './affiliate.ts';
 
 /**
  * Generates the standardized /llms.txt summary document.
@@ -89,9 +90,10 @@ export function generatePartMarkdown(part: Part, guide: Guide, siteUrl: string):
     ? part.superseded_numbers.map(s => `  - "${s}"`).join('\n')
     : '  []';
 
-  const toolsList = guide.tools_needed.map(t => 
-    `- **${t.name}**${t.purpose ? `: ${t.purpose}` : ''}`
-  ).join('\n');
+  const toolsList = guide.tools_needed.map(t => {
+    const toolSearchUrl = buildAmazonSearchUrl(t.name);
+    return `- **[${t.name}](${toolSearchUrl})**${t.purpose ? `: ${t.purpose}` : ''} *(Search on Amazon)*`;
+  }).join('\n');
 
   const stepsList = guide.steps.map(s => {
     let out = `### Step ${s.step_number}: ${s.title}\n\n${s.text}`;
@@ -106,6 +108,9 @@ export function generatePartMarkdown(part: Part, guide: Guide, siteUrl: string):
   const faqList = guide.faq.map(f => 
     `#### Q: ${f.question}\n**A:** ${f.answer}`
   ).join('\n\n');
+
+  const partAmazonSearchUrl = buildAmazonSearchUrl(getPartAmazonSearchQuery(part.title, part.oem_part_number));
+  const isCommodity = isCheaperOnAmazon(part.id, part.oem_part_number);
 
   return `---
 title: "${part.title}"
@@ -132,8 +137,9 @@ canonical_guide_url: "${cleanSiteUrl}/guides/${part.slug}"
 - **Engineering Material:** ${part.material_spec} (100% solid infill, calibrated printer compensation)
 - **Repair Difficulty:** ${guide.difficulty}
 - **Estimated Repair Time:** ${guide.time_estimate}
-- **Commercial Purchase:** ${part.is_commercial_allowed ? `$${priceDollars} USD (Printed on-demand in 48h via Slant 3D)` : 'Digital STL Only (Commercial reproduction restricted by author license)'}
+- **Commercial Purchase:** ${part.is_commercial_allowed ? `$${priceDollars} USD (Printed on-demand in 48h via Slant 3D)` : isCommodity ? `Digital STL Only / Commodity Multi-Pack on Amazon: [Search Amazon Catalog](${partAmazonSearchUrl}) (Cheaper than custom 3D printing)` : 'Digital STL Only (Commercial reproduction restricted by author license)'}
 - **Direct STL Download:** [${part.oem_part_number}.stl](${downloadUrl})
+- **Amazon OEM & Hardware Search:** [Check Price & Availability on Amazon](${partAmazonSearchUrl})
 
 ## Required Tools & Supplies
 ${toolsList}

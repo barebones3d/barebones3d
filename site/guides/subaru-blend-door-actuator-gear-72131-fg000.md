@@ -24,12 +24,12 @@ compatible_vehicles_and_appliances:
     year_start: 2013
     year_end: 2017
 material: "Nylon PA12"
-price_cents: 2600
-price_formatted: "$26.00 USD"
-is_commercial_allowed: true
+price_cents: null
+price_formatted: "Free STL Only"
+is_commercial_allowed: false
 license: "CC BY 4.0"
 download_stl_url: "https://barebones3d.com/assets/stl/subaru-blend-door-actuator-gear-72131-fg000.stl"
-checkout_api_url: "https://barebones3d.com/api/checkout/create"
+checkout_api_url: null
 canonical_guide_url: "https://barebones3d.com/guides/subaru-blend-door-actuator-gear-72131-fg000"
 ---
 
@@ -40,14 +40,15 @@ canonical_guide_url: "https://barebones3d.com/guides/subaru-blend-door-actuator-
 - **Engineering Material:** Nylon PA12 (100% solid infill, calibrated printer compensation)
 - **Repair Difficulty:** Moderate
 - **Estimated Repair Time:** 45 mins
-- **Commercial Purchase:** $26.00 USD (Printed on-demand in 48h via Slant 3D)
+- **Commercial Purchase:** Digital STL Only (Commercial reproduction restricted by author license)
 - **Direct STL Download:** [72131-FG000.stl](https://barebones3d.com/assets/stl/subaru-blend-door-actuator-gear-72131-fg000.stl)
+- **Amazon OEM & Hardware Search:** [Check Price & Availability on Amazon](https://www.amazon.com/s?k=Subaru%20HVAC%20Blend%20Door%20Actuator%20Split%20Gear%20OEM%2072131-FG000&tag=barebones3dco-20)
 
 ## Required Tools & Supplies
-- **Phillips #2 Screwdriver**: Glove box trim screws
-- **Plastic Trim Pry Tool**: Lower dash kick panel clips
-- **7mm Hex Socket & Driver**: Actuator motor mounting bolts
-- **White Lithium Grease**: Gear teeth lubrication
+- **[Phillips #2 Screwdriver](https://www.amazon.com/s?k=Phillips%20%232%20Screwdriver&tag=barebones3dco-20)**: Glove box trim screws *(Search on Amazon)*
+- **[Plastic Trim Pry Tool](https://www.amazon.com/s?k=Plastic%20Trim%20Pry%20Tool&tag=barebones3dco-20)**: Lower dash kick panel clips *(Search on Amazon)*
+- **[7mm Hex Socket & Driver](https://www.amazon.com/s?k=7mm%20Hex%20Socket%20Driver&tag=barebones3dco-20)**: Actuator motor mounting bolts *(Search on Amazon)*
+- **[White Lithium Grease](https://www.amazon.com/s?k=White%20Lithium%20Grease&tag=barebones3dco-20)**: Gear teeth lubrication *(Search on Amazon)*
 
 ## Step-by-Step Installation Procedure
 ### Step 1: Lower Dash & Glovebox Removal
@@ -97,7 +98,7 @@ Snap the casing together, re-seat onto the HVAC box spline, reconnect the 5-pin 
 **A:** The free STL is engineered with a +0.15mm printer tolerance compensation for FDM. If printing on a Bambu or Prusa, slice at 0.12mm layer height and 100% infill.
 
 ## Open-Source Attribution & Safety Disclaimer
-Designed by SubieFix & Engineering Archive, distributed under CC BY 4.0.
-Original Source: https://www.printables.com/model/subaru-blend-door-gear
+Barebones 3D Engineering Lab CAD under development.
+Original Source: https://barebones3d.com/guides/subaru-blend-door-actuator-gear-72131-fg000/#cad-waitlist
 
 > **Legal Disclaimer:** Barebones 3D, L.L.C. is an independent engineering firm. This replacement component is an aftermarket reproduction designed for personal repair, restoration, and life-extension. Barebones 3D is not affiliated with, authorized by, sponsored by, or endorsed by the original equipment manufacturer. All trademarks and OEM part numbers are referenced solely for identification and compatibility purposes.

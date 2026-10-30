@@ -22,7 +22,7 @@ material: "PETG"
 price_cents: null
 price_formatted: "Free STL Only"
 is_commercial_allowed: false
-license: "CC BY-NC 4.0"
+license: "CC BY 4.0"
 download_stl_url: "https://barebones3d.com/assets/stl/pioneer-turntable-anti-skate-arm-wa-104.stl"
 checkout_api_url: null
 canonical_guide_url: "https://barebones3d.com/guides/pioneer-turntable-anti-skate-arm-wa-104"
@@ -37,10 +37,11 @@ canonical_guide_url: "https://barebones3d.com/guides/pioneer-turntable-anti-skat
 - **Estimated Repair Time:** 15 mins
 - **Commercial Purchase:** Digital STL Only (Commercial reproduction restricted by author license)
 - **Direct STL Download:** [WA-104.stl](https://barebones3d.com/assets/stl/pioneer-turntable-anti-skate-arm-wa-104.stl)
+- **Amazon OEM & Hardware Search:** [Check Price & Availability on Amazon](https://www.amazon.com/s?k=Vintage%20Pioneer%20PL-12D%20Tonearm%20Anti-Skate%20Weight%20Guide%20Arm%20OEM%20WA-104&tag=barebones3dco-20)
 
 ## Required Tools & Supplies
-- **0.050in Hex Allen Key**: Gimbal set screw
-- **Nylon Monofilament Line**: Anti-skate weight string
+- **[0.050in Hex Allen Key](https://www.amazon.com/s?k=0.050in%20Hex%20Allen%20Key&tag=barebones3dco-20)**: Gimbal set screw *(Search on Amazon)*
+- **[Nylon Monofilament Line](https://www.amazon.com/s?k=Nylon%20Monofilament%20Line&tag=barebones3dco-20)**: Anti-skate weight string *(Search on Amazon)*
 
 ## Step-by-Step Installation Procedure
 ### Step 1: Inspect Tonearm Pivot Housing
@@ -66,7 +67,7 @@ Thread monofilament line through the notched guide wire and suspend the brass an
 **A:** The original designer released this 3D model under a Creative Commons Non-Commercial (CC BY-NC) license. Out of deep respect for open-source creator rights and licensing law, Barebones 3D does not sell commercial reproductions of NC-licensed parts. You can download the STL for free and 3D print it yourself for personal repair.
 
 ## Open-Source Attribution & Safety Disclaimer
-Original model by AudiophileRestorer under CC BY-NC 4.0 (Non-Commercial).
-Original Source: https://www.thingiverse.com/thing:pioneer-anti-skate
+Modeled by aflockofseacows on Thingiverse under CC BY 4.0
+Original Source: https://www.thingiverse.com/thing:3863488
 
 > **Legal Disclaimer:** Barebones 3D, L.L.C. is an independent engineering firm. This replacement component is an aftermarket reproduction designed for personal repair, restoration, and life-extension. Barebones 3D is not affiliated with, authorized by, sponsored by, or endorsed by the original equipment manufacturer. All trademarks and OEM part numbers are referenced solely for identification and compatibility purposes.

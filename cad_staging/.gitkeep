@@ -1,0 +1,1 @@
+# Keep cad_staging directory in git tracking while ignoring staged STL binaries

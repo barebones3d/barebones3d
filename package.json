@@ -14,9 +14,11 @@
     "test:platform": "node tests/platform.test.ts",
     "test": "npm run test:generator && npm run test:platform",
     "ingest": "node scripts/ingest.ts",
+    "ingest:json": "node scripts/ingest-json.ts",
     "discover": "node scripts/discover.ts",
     "typecheck": "./generator/node_modules/typescript/bin/tsc --project tsconfig.json",
     "sync:stripe": "node scripts/sync-stripe-catalog.ts",
+    "sync:r2": "bash scripts/sync-r2-stls.sh",
     "deploy": "npm run build && wrangler pages deploy site --project-name barebones3d --branch main"
   },
   "devDependencies": {},

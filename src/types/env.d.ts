@@ -9,12 +9,27 @@ declare namespace NodeJS {
 
 declare const process: NodeJS.Process;
 
+declare interface Buffer {
+  write(string: string, offset?: number, length?: number, encoding?: string): number;
+  writeUInt32LE(value: number, offset: number): number;
+  writeUInt16LE(value: number, offset: number): number;
+  writeFloatLE(value: number, offset: number): number;
+  byteLength: number;
+  length: number;
+}
+
+declare const Buffer: {
+  alloc(size: number): Buffer;
+  from(data: any): Buffer;
+};
+
 declare module 'node:fs' {
   export function existsSync(path: string): boolean;
   export function mkdirSync(path: string, options?: { recursive?: boolean }): void;
-  export function readFileSync(path: string, encoding: string): string;
-  export function writeFileSync(path: string, data: string, encoding: string): void;
-  export function appendFileSync(path: string, data: string, encoding: string): void;
+  export function readFileSync(path: string, encoding?: string): string;
+  export function writeFileSync(path: string, data: any, encoding?: string): void;
+  export function appendFileSync(path: string, data: string, encoding?: string): void;
+  export function copyFileSync(src: string, dest: string): void;
   export function readdirSync(path: string): string[];
   const fs: {
     existsSync: typeof existsSync;
@@ -22,6 +37,7 @@ declare module 'node:fs' {
     readFileSync: typeof readFileSync;
     writeFileSync: typeof writeFileSync;
     appendFileSync: typeof appendFileSync;
+    copyFileSync: typeof copyFileSync;
     readdirSync: typeof readdirSync;
   };
   export default fs;
@@ -30,10 +46,12 @@ declare module 'node:fs' {
 declare module 'node:path' {
   export function join(...paths: string[]): string;
   export function basename(p: string): string;
+  export function dirname(p: string): string;
   export function resolve(...paths: string[]): string;
   const path: {
     join: typeof join;
     basename: typeof basename;
+    dirname: typeof dirname;
     resolve: typeof resolve;
   };
   export default path;

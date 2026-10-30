@@ -134,6 +134,34 @@ const NumericField: React.FC<NumericFieldProps> = ({
   );
 };
 
+const getHardwareSearchQuery = (model: PrimitiveType): { label: string; query: string } => {
+  switch (model) {
+    case 'gt2_pulley':
+    case 'timing_belt_idler':
+      return { label: 'GT2 Timing Belt & Pulley Hardware', query: 'GT2 timing belt 6mm open closed loop' };
+    case 'bearing_pillow_block':
+      return { label: '608ZZ / 688ZZ Precision Bearings', query: '608ZZ 688ZZ ball bearings pack' };
+    case 'linear_rod_clamp':
+      return { label: 'Linear Optical Axis Shaft & LM8UU', query: 'linear motion optical axis shaft 8mm 10mm' };
+    case 'lead_screw_nut_block':
+      return { label: 'T8 Lead Screw & Brass Nut', query: 'T8 lead screw 8mm pitch brass nut' };
+    case 'stepper_mount':
+    case 'stepper_damper_plate':
+      return { label: 'NEMA 17 Stepper Motors', query: 'NEMA 17 stepper motor bipolar' };
+    case 'v_slot_wheel':
+      return { label: '625ZZ Bearings & V-Slot Wheels', query: '625ZZ bearings V-slot polycarbonate wheels' };
+    case 'threaded_fastener':
+      return { label: 'M3 / M4 / M5 Socket Cap Screws Kit', query: 'M3 M4 M5 socket head cap screws assortment kit' };
+    case 'drill_guide_block':
+    case 'chamfer_tool_holder':
+      return { label: 'HSS Drill Bits & Deburring Blades', query: 'high speed steel drill bit set metric deburring' };
+    case 'peristaltic_pump_head':
+      return { label: 'Silicone Peristaltic Pump Tubing', query: 'peristaltic pump silicone tubing flexible' };
+    default:
+      return { label: 'Precision Digital Calipers & Allen Keys', query: 'digital caliper 6 inch stainless steel precision' };
+  }
+};
+
 export const ParameterSidebar: React.FC<ParameterSidebarProps> = (props) => {
   const {
     activeModel,
@@ -1503,6 +1531,32 @@ export const ParameterSidebar: React.FC<ParameterSidebarProps> = (props) => {
 
         {/* 20 Maker & Machine Component Parameter Controls (34-53) */}
         <NewParamControls20 {...props} />
+
+        {/* Hardware & Tools Sourcing (Amazon Associates: barebones3dco-20) */}
+        <div className="p-3 rounded-lg bg-[#0e172a] border border-amber-500/20 font-mono text-[11px] mt-4">
+          <div className="flex items-center justify-between text-amber-400 font-bold mb-1">
+            <span className="flex items-center gap-1.5">
+              <span>🛒</span>
+              <span>Hardware &amp; Tools Sourcing</span>
+            </span>
+            <span className="text-[9px] bg-amber-950/70 text-amber-300 border border-amber-800/60 px-1.5 py-0.2 rounded">
+              Prime
+            </span>
+          </div>
+          <p className="text-slate-400 text-[10px] mb-2 leading-tight">
+            Need off-the-shelf mechanical hardware or tools for this component?
+          </p>
+          <a
+            href={`https://www.amazon.com/s?k=${encodeURIComponent(getHardwareSearchQuery(activeModel).query)}&tag=barebones3dco-20`}
+            target="_blank"
+            rel="nofollow noopener sponsored"
+            className="w-full flex items-center justify-between px-2.5 py-1.5 rounded bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/30 text-amber-300 hover:text-amber-200 transition-colors text-[10px] font-semibold"
+            title="Search matching hardware on Amazon"
+          >
+            <span className="truncate">{getHardwareSearchQuery(activeModel).label}</span>
+            <span className="shrink-0 text-amber-400 ml-1">&rarr;</span>
+          </a>
+        </div>
       </div>
 
       {/* Footer Quick Export Action */}

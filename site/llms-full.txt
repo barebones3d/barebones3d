@@ -6,11 +6,37 @@ Barebones 3D provides precision diagnostic guides and commercial-grade replaceme
 
 ## Obsolete Replacement Parts Catalog
 
-- [Bosch / Siemens Washing Machine Drain Pump Filter Repair Grip](https://barebones3d.com/guides/bosch-washing-machine-drain-filter-handle-00605010): OEM #00605010 | Fitment: Bosch Serie 4 / 6 / 8 / Maxx (2008-2024), Siemens iQ300 / iQ500 / iQ700 (2009-2024) | Material: PETG Heavy Duty | Price: $16.50 USD
-- [Subaru HVAC Blend Door Actuator Split Gear](https://barebones3d.com/guides/subaru-blend-door-actuator-gear-72131-fg000): OEM #72131-FG000 | Fitment: Subaru Impreza (2008-2014), Subaru WRX / STI (2008-2014), Subaru Forester (2009-2013) | Material: Nylon PA12 | Price: $26.00 USD
+- [Audi A4 / A5 / Q5 MMI Central Control Volume Knob Internal D-Shaft](https://barebones3d.com/guides/audi-mmi-volume-knob-shaft-8k0898192a): OEM #8K0898192A | Fitment: Audi A4 B8 (2009-2016), Audi A5 / S5 (2008-2017), Audi Q5 (2009-2017) | Material: High-Temp Nylon PA12 | Price: Free STL Only
+- [BMW 3-Series (E90 / E91 / E92) In-Dash Retractable Cup Holder Internal Catch & Pinion](https://barebones3d.com/guides/bmw-3-series-e90-e91-e92-in-dash-retractable-cup-holder-internal-catch-pinion-51459173463): OEM #51459173463 | Fitment: BMW 328i / 335i / M3 Sedan E90 (2006-2011), BMW 328i / 335i / M3 Coupe E92 (2007-2013), BMW 3-Series Touring E91 (2006-2012) | Material: Automotive ASA | Price: Free STL Only
+- [Black & Decker String Trimmer Replacement Spool Cap Cover](https://barebones3d.com/guides/black-decker-trimmer-replacement-spool-cap-90530948): OEM #90530948 | Fitment: Black & Decker GH400 / GH500 / GH600 / LST120 / LST220 / NST2018 String Trimmers | Material: PETG Heavy Duty | Price: Free STL Only
+- [Bosch / Siemens Washing Machine Drain Pump Filter Repair Grip](https://barebones3d.com/guides/bosch-washing-machine-drain-filter-handle-00605010): OEM #00605010 | Fitment: Bosch Serie 4 / 6 / 8 / Maxx (2008-2024), Siemens iQ300 / iQ500 / iQ700 (2009-2024) | Material: PETG Heavy Duty | Price: Free STL Only
+- [Bosch GTS1031 / 4100 Table Saw Riving Knife Quick-Release Clamping Cam Lever](https://barebones3d.com/guides/bosch-table-saw-riving-knife-lever-1609202428): OEM #1609202428 | Fitment: Bosch GTS1031 Table Saw, Bosch 4100 Table Saw, Bosch 4000 Table Saw | Material: Nylon PA12 | Price: Free STL Only
+- [Bose QuietComfort 35 / 45 Headband Swivel Hinge Joint Replacement](https://barebones3d.com/guides/bose-quietcomfort-35-45-headband-swivel-hinge-joint-replacement-759944-0010): OEM #759944-0010 | Fitment: Bose QuietComfort 35 Series I (QC35 I), Bose QuietComfort 35 Series II (QC35 II), Bose QuietComfort 45 (QC45) | Material: Nylon PA12 | Price: $20.00 USD
+- [DeWalt 20V MAX Lithium-Ion Battery Pack Spring Latch Release Button](https://barebones3d.com/guides/dewalt-20v-battery-release-latch-button-310712-04): OEM #310712-04 | Fitment: DeWalt 20V MAX DCB200 / DCB201 / DCB203 / DCB204 / DCB205 Battery Packs | Material: Nylon PA12 | Price: Free STL Only
+- [DeWalt DWE7491 / DWE7480 Table Saw Rack & Pinion Fence Slide Glide](https://barebones3d.com/guides/dewalt-table-saw-fence-slide-glide-640510-00): OEM #640510-00 | Fitment: DeWalt DWE7491RS Table Saw, DeWalt DWE7480 Table Saw, DeWalt DW745 Table Saw | Material: Self-Lubricating Nylon PA12 | Price: Free STL Only
+- [DeWalt DWS779 / DWS780 12-Inch Miter Saw High-Flow Dust Extraction Chute](https://barebones3d.com/guides/dewalt-dws779-dws780-12-inch-miter-saw-high-flow-dust-extraction-chute-n087403): OEM #N087403 | Fitment: DeWalt DWS779 12-Inch Sliding Compound Miter Saw, DeWalt DWS780 12-Inch Double Bevel Sliding Compound Miter Saw, DeWalt DWS782 12-Inch Sliding Miter Saw | Material: PETG Heavy Duty | Price: $25.00 USD
+- [Dodge Ram 1500 / 2500 HVAC Heater Blend Door Sub-Assembly Gear](https://barebones3d.com/guides/dodge-ram-hvac-blend-door-gear-68064949aa): OEM #68064949AA | Fitment: Ram 1500 / 2500 / 3500 (2009-2018), Ram 1500 Classic (2019-2023) | Material: Nylon PA12 | Price: Free STL Only
+- [Dyson V10 / V11 Cordless Vacuum Reinforced Heavy-Duty Trigger Switch Lever](https://barebones3d.com/guides/dyson-v10-v11-cordless-vacuum-reinforced-heavy-duty-trigger-switch-lever-969830-01): OEM #969830-01 | Fitment: Dyson V10 Absolute / Animal / Motorhead (SV12), Dyson V11 Torque Drive / Animal / Outsize (SV14 / SV15) | Material: Nylon PA12 | Price: $19.00 USD
+- [Ford F-150 / Super Duty Sunroof Track Slider Lift Arm Repair Kit](https://barebones3d.com/guides/ford-f-150-super-duty-sunroof-track-slider-lift-arm-repair-kit-fl3z-1651071-a): OEM #FL3Z-1651071-A | Fitment: Ford F-150 (2015-2020), Ford F-250 / F-350 / F-450 Super Duty (2017-2022), Ford Expedition (2018-2021) | Material: Nylon PA12 | Price: Free STL Only
+- [GE / Hotpoint Clothes Dryer Front Drum Slide Bearing Glides](https://barebones3d.com/guides/ge-hotpoint-clothes-dryer-front-drum-slide-bearing-glides-we1m1067): OEM #WE1M1067 | Fitment: GE Profile Front Load / Top Load Dryers, Hotpoint Electric and Gas Dryers, Kenmore 362/363 Series Dryers | Material: PETG Heavy Duty | Price: Free STL Only
+- [GM Silverado / Tahoe / Suburban HVAC Blend Door Actuator Cam Lever](https://barebones3d.com/guides/chevrolet-gm-silverado-tahoe-suburban-hvac-blend-door-actuator-cam-lever-89018365): OEM #89018365 | Fitment: Chevrolet Silverado 1500 / 2500 / 3500 (1999-2013), Chevrolet Tahoe / Suburban (2000-2014), GMC Sierra / Yukon (1999-2013) | Material: Nylon PA12 | Price: Free STL Only
+- [Jeep Grand Cherokee / Dodge Durango Sun Visor Pivot Support Bracket](https://barebones3d.com/guides/jeep-grand-cherokee-dodge-durango-sun-visor-pivot-support-bracket-5fs40dx9aa): OEM #5FS40DX9AA | Fitment: Jeep Grand Cherokee WK2 (2011-2022), Dodge Durango (2011-2023) | Material: Automotive ASA | Price: $19.50 USD
+- [Jeep Grand Cherokee WJ Dual-Zone HVAC Blend Door Actuator Split Gear](https://barebones3d.com/guides/jeep-wj-grand-cherokee-blend-door-gear-5012710aa): OEM #5012710AA | Fitment: Jeep Grand Cherokee WJ (1999-2004) | Material: Nylon PA12 | Price: $24.00 USD
+- [KitchenAid Stand Mixer Sacrificial Nylon Worm Follower Gear](https://barebones3d.com/guides/kitchenaid-stand-mixer-sacrificial-nylon-worm-follower-gear-wp9709231): OEM #WP9709231 | Fitment: KitchenAid Artisan 5-Quart (KSM150), KitchenAid Classic 4.5-Quart (K45SS), KitchenAid Ultra Power Series (KSM90) | Material: PETG Heavy Duty | Price: Free STL Only
+- [Makita 18V LXT Lithium-Ion Battery Terminal Protector Cover](https://barebones3d.com/guides/makita-18v-battery-terminal-protector-cover-122049-9): OEM #122049-9 | Fitment: Makita 18V LXT BL1815 / BL1830 / BL1840 / BL1850 / BL1860 | Material: PETG Heavy Duty | Price: $14.00 USD
+- [Makita 1900B / KP0800K Power Hand Planer Drive Belt Tensioner Retainer](https://barebones3d.com/guides/makita-hand-planer-belt-tensioner-retainer-341071-7): OEM #341071-7 | Fitment: Makita 1900B Hand Planer, Makita 1902, Makita KP0800K | Material: High-Temp Nylon PA12 | Price: Free STL Only
+- [Makita DCL180 / XLC02 18V Cordless Vacuum Dust Capsule Housing Lock Latch](https://barebones3d.com/guides/makita-cordless-vacuum-dust-capsule-latch-452205-2): OEM #452205-2 | Fitment: Makita DCL180, Makita DCL181F, Makita XLC02Z 18V Cordless Vacuums | Material: Nylon PA12 | Price: Free STL Only
+- [Metabo HPT / Hitachi Coil Framing Nailer Transparent Safety Trigger Deflector](https://barebones3d.com/guides/metabo-hpt-nailer-safety-trigger-deflector-316060190): OEM #316060190 | Fitment: Metabo HPT Hitachi / Metabo HPT NV83A2 / NV83A3 / NV83A5 Coil Framing Nailers | Material: Impact PETG | Price: Free STL Only
+- [Milwaukee M18 REDLITHIUM Battery Pack Locking Latch & Release Claws](https://barebones3d.com/guides/milwaukee-m18-redlithium-battery-pack-locking-latch-release-claws-48-11-1850): OEM #48-11-1850 | Fitment: Milwaukee M18 Compact 2.0Ah / 3.0Ah, Milwaukee M18 XC 4.0Ah / 5.0Ah / 6.0Ah, Milwaukee M18 High Output 6.0Ah / 8.0Ah / 12.0Ah | Material: Nylon PA12 | Price: Free STL Only
+- [Sony MDR-7506 / MDR-V6 Professional Headphone Swivel Yoke Hanger Bracket](https://barebones3d.com/guides/sony-mdr-7506-headphone-swivel-yoke-hanger-3-255-731-01): OEM #3-255-731-01 | Fitment: Sony MDR-7506 Professional, Sony MDR-V6 Studio Monitor, Sony MDR-7504 | Material: Nylon PA12 | Price: $19.00 USD
+- [Subaru HVAC Blend Door Actuator Split Gear](https://barebones3d.com/guides/subaru-blend-door-actuator-gear-72131-fg000): OEM #72131-FG000 | Fitment: Subaru Impreza (2008-2014), Subaru WRX / STI (2008-2014), Subaru Forester (2009-2013) | Material: Nylon PA12 | Price: Free STL Only
+- [Technics SL-1200 / SL-1210 MK2 DJ Turntable Pitch Fader Dust Shutter Plate](https://barebones3d.com/guides/technics-sl1200-pitch-fader-dust-shutter-plate-r-653): OEM #R-653 | Fitment: Technics SL-1200MK2, Technics SL-1210MK2, Technics SL-1200M3D | Material: PETG Heavy Duty | Price: Free STL Only
+- [Toyota Tacoma Heater Control Valve Arm](https://barebones3d.com/guides/toyota-toyota-tacoma-heater-control-valve-arm-87240-04020): OEM #87240-04020 | Fitment: Toyota Tacoma (1995-2004), Toyota 4Runner (1996-2002) | Material: High-Temp Nylon PA12 | Price: Free STL Only
 - [Toyota Tundra / Sequoia Dash AC Air Vent Louver Tab](https://barebones3d.com/guides/toyota-tundra-air-vent-louver-tab-55670-0c010): OEM #55670-0C010 | Fitment: Toyota Tundra (2000-2006), Toyota Sequoia (2001-2007) | Material: Automotive ASA | Price: $15.00 USD (Includes 2-pack bundle option at checkout)
 - [Vintage Pioneer PL-12D Tonearm Anti-Skate Weight Guide Arm](https://barebones3d.com/guides/pioneer-turntable-anti-skate-arm-wa-104): OEM #WA-104 | Fitment: Pioneer PL-12D (1974-1977), Pioneer PL-15D (1974-1977), Pioneer PL-112D (1976-1979) | Material: PETG | Price: Free STL Only
+- [Volvo S60 / V60 / XC60 Fuel Filler Door Flap Hinge Bracket](https://barebones3d.com/guides/volvo-fuel-filler-door-hinge-bracket-39886277): OEM #39886277 | Fitment: Volvo S60 / V60 (2011-2018), Volvo XC60 (2010-2017) | Material: Automotive ASA | Price: Free STL Only
 - [Whirlpool / KitchenAid Dishwasher Lower Rack Wheel & Axle Assembly](https://barebones3d.com/guides/whirlpool-dishwasher-rack-wheel-w10195416): OEM #W10195416 | Fitment: Whirlpool Gold Series / Quiet Partner (2005-2023), KitchenAid Architect / KUDE / KDTE Series (2006-2024), Maytag MDB / Jetclean Series (2007-2022) | Material: Food-Safe PETG | Price: Free STL Only
+- [Whirlpool / Maytag Refrigerator Deli Meat Pan Drawer Slide Roller Wheel](https://barebones3d.com/guides/whirlpool-refrigerator-deli-drawer-slide-roller-w10436250): OEM #W10436250 | Fitment: Whirlpool French Door / Side-by-Side Refrigerators, Maytag MFI / MFD Series | Material: Food-Safe PETG | Price: Free STL Only
 
 ## Developer & Agent Interfaces
 
@@ -33,6 +59,223 @@ Barebones 3D provides precision diagnostic guides and commercial-grade replaceme
 ---
 
 ---
+title: "Audi A4 / A5 / Q5 MMI Central Control Volume Knob Internal D-Shaft"
+slug: "audi-mmi-volume-knob-shaft-8k0898192a"
+oem_part_number: "8K0898192A"
+superseded_numbers:
+  - "8T0919070B"
+  - "8K0919070"
+compatible_vehicles_and_appliances:
+  - make: "Audi"
+    model: "A4 B8"
+    year_start: 2009
+    year_end: 2016
+  - make: "Audi"
+    model: "A5 / S5"
+    year_start: 2008
+    year_end: 2017
+  - make: "Audi"
+    model: "Q5"
+    year_start: 2009
+    year_end: 2017
+material: "High-Temp Nylon PA12"
+price_cents: null
+price_formatted: "Free STL Only"
+is_commercial_allowed: false
+license: "Proprietary Spec"
+download_stl_url: "https://barebones3d.com/assets/stl/audi-mmi-volume-knob-shaft-8k0898192a.stl"
+checkout_api_url: null
+canonical_guide_url: "https://barebones3d.com/guides/audi-mmi-volume-knob-shaft-8k0898192a"
+---
+
+# Audi A4 / A5 / Q5 MMI Central Control Volume Knob Internal D-Shaft (OEM #8K0898192A)
+
+## Technical Specifications
+- **Primary OEM Part #:** `8K0898192A`
+- **Engineering Material:** High-Temp Nylon PA12 (100% solid infill, calibrated printer compensation)
+- **Repair Difficulty:** Moderate
+- **Estimated Repair Time:** 30 mins
+- **Commercial Purchase:** Digital STL Only (Commercial reproduction restricted by author license)
+- **Direct STL Download:** [8K0898192A.stl](https://barebones3d.com/assets/stl/audi-mmi-volume-knob-shaft-8k0898192a.stl)
+- **Amazon OEM & Hardware Search:** [Check Price & Availability on Amazon](https://www.amazon.com/s?k=Audi%20A4%20%2F%20A5%20%2F%20Q5%20MMI%20Central%20Control%20Volume%20Knob%20Internal%20D-Shaft%20OEM%208K0898192A&tag=barebones3dco-20)
+
+## Required Tools & Supplies
+- **[Plastic Trim Tool](https://www.amazon.com/s?k=Plastic%20Trim%20Tool&tag=barebones3dco-20)**: MMI console surround pry tool *(Search on Amazon)*
+
+## Step-by-Step Installation Procedure
+### Step 1: Extract Center Console MMI Control Panel
+
+Pry the aluminum/wood center console trim with a nylon pry tool to expose the volume rotary encoder.
+
+![Original broken plastic Audi A4 / A5 / Q5 MMI Central Control Volume Knob Internal D-Shaft (OEM #8K0898192A) shown side-by-side with reinforced 3D printed High-Temp Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/8k0898192a-audi-mmi-volume-knob-shaft-8k0898192a-step-1.webp)
+
+## Frequently Asked Questions
+#### Q: Why did the volume knob spin freely?
+**A:** The internal hollow plastic D-shaft fractures under torsional shear when pressed downward to mute.
+
+## Open-Source Attribution & Safety Disclaimer
+Barebones 3D Engineering Lab CAD under development.
+Original Source: https://barebones3d.com/guides/audi-mmi-volume-knob-shaft-8k0898192a/#cad-waitlist
+
+> **Legal Disclaimer:** Barebones 3D, L.L.C. is an independent engineering firm. This replacement component is an aftermarket reproduction designed for personal repair, restoration, and life-extension. Barebones 3D is not affiliated with, authorized by, sponsored by, or endorsed by the original equipment manufacturer. All trademarks and OEM part numbers are referenced solely for identification and compatibility purposes.
+
+
+---
+
+---
+title: "BMW 3-Series (E90 / E91 / E92) In-Dash Retractable Cup Holder Internal Catch & Pinion"
+slug: "bmw-3-series-e90-e91-e92-in-dash-retractable-cup-holder-internal-catch-pinion-51459173463"
+oem_part_number: "51459173463"
+superseded_numbers:
+  - "51457138797"
+  - "51459173469"
+compatible_vehicles_and_appliances:
+  - make: "BMW"
+    model: "328i / 335i / M3 Sedan E90"
+    year_start: 2006
+    year_end: 2011
+  - make: "BMW"
+    model: "328i / 335i / M3 Coupe E92"
+    year_start: 2007
+    year_end: 2013
+  - make: "BMW"
+    model: "3-Series Touring E91"
+    year_start: 2006
+    year_end: 2012
+material: "Automotive ASA"
+price_cents: null
+price_formatted: "Free STL Only"
+is_commercial_allowed: false
+license: "CC BY 4.0"
+download_stl_url: "https://barebones3d.com/assets/stl/bmw-3-series-e90-e91-e92-in-dash-retractable-cup-holder-internal-catch-pinion-51459173463.stl"
+checkout_api_url: null
+canonical_guide_url: "https://barebones3d.com/guides/bmw-3-series-e90-e91-e92-in-dash-retractable-cup-holder-internal-catch-pinion-51459173463"
+---
+
+# BMW 3-Series (E90 / E91 / E92) In-Dash Retractable Cup Holder Internal Catch & Pinion (OEM #51459173463)
+
+## Technical Specifications
+- **Primary OEM Part #:** `51459173463`
+- **Engineering Material:** Automotive ASA (100% solid infill, calibrated printer compensation)
+- **Repair Difficulty:** Easy
+- **Estimated Repair Time:** 20 mins
+- **Commercial Purchase:** Digital STL Only (Commercial reproduction restricted by author license)
+- **Direct STL Download:** [51459173463.stl](https://barebones3d.com/assets/stl/bmw-3-series-e90-e91-e92-in-dash-retractable-cup-holder-internal-catch-pinion-51459173463.stl)
+- **Amazon OEM & Hardware Search:** [Check Price & Availability on Amazon](https://www.amazon.com/s?k=BMW%20E90%20dash%20cup%20holder%20assembly%20replacement%20driver%20passenger&tag=barebones3dco-20)
+
+## Required Tools & Supplies
+- **[Phillips #1 Screwdriver](https://www.amazon.com/s?k=Phillips%20%231%20Screwdriver&tag=barebones3dco-20)**: Remove dash cartridge mounting screws *(Search on Amazon)*
+- **[Plastic Trim Tool](https://www.amazon.com/s?k=Plastic%20Trim%20Tool&tag=barebones3dco-20)**: Pry loose dash decorative wood/aluminum strip *(Search on Amazon)*
+
+## Step-by-Step Installation Procedure
+### Step 1: Pry Passenger Dash Trim Strip
+
+Gently unclip the horizontal passenger dashboard trim bezel to expose the two cupholder faceplate screws.
+
+![Original broken plastic BMW 3-Series (E90 / E91 / E92) In-Dash Retractable Cup Holder Internal Catch & Pinion (OEM #51459173463) shown side-by-side with reinforced 3D printed Automotive ASA reproduction.](https://barebones3d.com/assets/parts/51459173463-bmw-3-series-e90-e91-e92-in-dash-retractable-cup-holder-internal-catch-pinion-51459173463-step-1.webp)
+
+### Step 2: Extract Cupholder Cartridge
+
+Remove the two PH1 screws and slide the entire rectangular cassette forward out of the dashboard housing.
+
+![Original broken plastic BMW 3-Series (E90 / E91 / E92) In-Dash Retractable Cup Holder Internal Catch & Pinion (OEM #51459173463) shown side-by-side with reinforced 3D printed Automotive ASA reproduction.](https://barebones3d.com/assets/parts/51459173463-bmw-3-series-e90-e91-e92-in-dash-retractable-cup-holder-internal-catch-pinion-51459173463-step-2.webp)
+
+### Step 3: Replace Sheared Heart-Cam Pawl
+
+Pop open the cassette side plate and replace the broken spring-loaded heart-cam latch and pinion.
+
+![Original broken plastic BMW 3-Series (E90 / E91 / E92) In-Dash Retractable Cup Holder Internal Catch & Pinion (OEM #51459173463) shown side-by-side with reinforced 3D printed Automotive ASA reproduction.](https://barebones3d.com/assets/parts/51459173463-bmw-3-series-e90-e91-e92-in-dash-retractable-cup-holder-internal-catch-pinion-51459173463-step-3.webp)
+
+### Step 4: Reassemble & Test Push-Push Latch
+
+Snap side plate shut, slide cassette back into dashboard cavity, tighten screws, and reinstall dash trim.
+
+![Original broken plastic BMW 3-Series (E90 / E91 / E92) In-Dash Retractable Cup Holder Internal Catch & Pinion (OEM #51459173463) shown side-by-side with reinforced 3D printed Automotive ASA reproduction.](https://barebones3d.com/assets/parts/51459173463-bmw-3-series-e90-e91-e92-in-dash-retractable-cup-holder-internal-catch-pinion-51459173463-step-4.webp)
+
+## Frequently Asked Questions
+#### Q: Why did the cup holder fail to pop out?
+**A:** The factory molded heart-cam follower tooth wears down or shears off, failing to catch the retraction detent.
+
+#### Q: Is driver side and passenger side identical?
+**A:** The internal latch pawl is universally mirrored, fitting both left and right dashboard cassettes.
+
+## Open-Source Attribution & Safety Disclaimer
+Barebones 3D Engineering Lab CAD under development.
+Original Source: https://barebones3d.com/guides/bmw-3-series-e90-e91-e92-in-dash-retractable-cup-holder-internal-catch-pinion-51459173463/#cad-waitlist
+
+> **Legal Disclaimer:** Barebones 3D, L.L.C. is an independent engineering firm. This replacement component is an aftermarket reproduction designed for personal repair, restoration, and life-extension. Barebones 3D is not affiliated with, authorized by, sponsored by, or endorsed by the original equipment manufacturer. All trademarks and OEM part numbers are referenced solely for identification and compatibility purposes.
+
+
+---
+
+---
+title: "Black & Decker String Trimmer Replacement Spool Cap Cover"
+slug: "black-decker-trimmer-replacement-spool-cap-90530948"
+oem_part_number: "90530948"
+superseded_numbers:
+  - "90530948-01"
+  - "RC-100-P"
+  - "385022-03"
+compatible_vehicles_and_appliances:
+  - make: "Black & Decker"
+    model: "GH400 / GH500 / GH600 / LST120 / LST220 / NST2018 String Trimmers"
+material: "PETG Heavy Duty"
+price_cents: null
+price_formatted: "Free STL Only"
+is_commercial_allowed: false
+license: "Public Domain"
+download_stl_url: "https://barebones3d.com/assets/stl/black-decker-trimmer-replacement-spool-cap-90530948.stl"
+checkout_api_url: null
+canonical_guide_url: "https://barebones3d.com/guides/black-decker-trimmer-replacement-spool-cap-90530948"
+---
+
+# Black & Decker String Trimmer Replacement Spool Cap Cover (OEM #90530948)
+
+## Technical Specifications
+- **Primary OEM Part #:** `90530948`
+- **Engineering Material:** PETG Heavy Duty (100% solid infill, calibrated printer compensation)
+- **Repair Difficulty:** Beginner
+- **Estimated Repair Time:** 5 mins
+- **Commercial Purchase:** Digital STL Only (Commercial reproduction restricted by author license)
+- **Direct STL Download:** [90530948.stl](https://barebones3d.com/assets/stl/black-decker-trimmer-replacement-spool-cap-90530948.stl)
+- **Amazon OEM & Hardware Search:** [Check Price & Availability on Amazon](https://www.amazon.com/s?k=Black%20Decker%20string%20trimmer%20spool%20cap%20replacement%2090530948&tag=barebones3dco-20)
+
+## Required Tools & Supplies
+- **[Flathead Screwdriver](https://www.amazon.com/s?k=Flathead%20Screwdriver&tag=barebones3dco-20)**: Depress locking tabs on worn spool head *(Search on Amazon)*
+
+## Step-by-Step Installation Procedure
+### Step 1: Depress Side Release Tabs
+
+Squeeze the two dual release tabs on the sides of the spool housing to pop off the worn or ground-down cap cover.
+
+![Original broken plastic Black & Decker String Trimmer Replacement Spool Cap Cover (OEM #90530948) shown side-by-side with reinforced 3D printed PETG Heavy Duty reproduction.](https://barebones3d.com/assets/parts/90530948-black-decker-trimmer-replacement-spool-cap-90530948-step-1.webp)
+
+### Step 2: Inspect Internal Feed Spring
+
+Ensure the internal steel compression spring is seated properly inside the central spindle channel.
+
+![Original broken plastic Black & Decker String Trimmer Replacement Spool Cap Cover (OEM #90530948) shown side-by-side with reinforced 3D printed PETG Heavy Duty reproduction.](https://barebones3d.com/assets/parts/90530948-black-decker-trimmer-replacement-spool-cap-90530948-step-2.webp)
+
+### Step 3: Snap Replacement Cap On
+
+Press the replacement cap down over the string spool until both side retention claws click solidly into place.
+
+![Original broken plastic Black & Decker String Trimmer Replacement Spool Cap Cover (OEM #90530948) shown side-by-side with reinforced 3D printed PETG Heavy Duty reproduction.](https://barebones3d.com/assets/parts/90530948-black-decker-trimmer-replacement-spool-cap-90530948-step-3.webp)
+
+## Frequently Asked Questions
+#### Q: Why is this marked as Commodity Affiliate?
+**A:** Spool caps wear down from constant ground friction. Mass-produced 4-packs and 6-packs with included replacement springs are available on Amazon for $8–$11, making custom 3D printing uneconomical.
+
+## Open-Source Attribution & Safety Disclaimer
+OEM replacement specification. Commodity multi-pack recommended on Amazon.
+Original Source: https://barebones3d.com/guides/black-decker-trimmer-replacement-spool-cap-90530948/
+
+> **Legal Disclaimer:** Barebones 3D, L.L.C. is an independent engineering firm. This replacement component is an aftermarket reproduction designed for personal repair, restoration, and life-extension. Barebones 3D is not affiliated with, authorized by, sponsored by, or endorsed by the original equipment manufacturer. All trademarks and OEM part numbers are referenced solely for identification and compatibility purposes.
+
+
+---
+
+---
 title: "Bosch / Siemens Washing Machine Drain Pump Filter Repair Grip"
 slug: "bosch-washing-machine-drain-filter-handle-00605010"
 oem_part_number: "00605010"
@@ -51,12 +294,12 @@ compatible_vehicles_and_appliances:
     year_start: 2009
     year_end: 2024
 material: "PETG Heavy Duty"
-price_cents: 1650
-price_formatted: "$16.50 USD"
-is_commercial_allowed: true
-license: "CC BY 4.0"
+price_cents: null
+price_formatted: "Free STL Only"
+is_commercial_allowed: false
+license: "Public Domain"
 download_stl_url: "https://barebones3d.com/assets/stl/bosch-washing-machine-drain-filter-handle-00605010.stl"
-checkout_api_url: "https://barebones3d.com/api/checkout/create"
+checkout_api_url: null
 canonical_guide_url: "https://barebones3d.com/guides/bosch-washing-machine-drain-filter-handle-00605010"
 ---
 
@@ -67,13 +310,14 @@ canonical_guide_url: "https://barebones3d.com/guides/bosch-washing-machine-drain
 - **Engineering Material:** PETG Heavy Duty (100% solid infill, calibrated printer compensation)
 - **Repair Difficulty:** Easy
 - **Estimated Repair Time:** 20 mins
-- **Commercial Purchase:** $16.50 USD (Printed on-demand in 48h via Slant 3D)
+- **Commercial Purchase:** Digital STL Only (Commercial reproduction restricted by author license)
 - **Direct STL Download:** [00605010.stl](https://barebones3d.com/assets/stl/bosch-washing-machine-drain-filter-handle-00605010.stl)
+- **Amazon OEM & Hardware Search:** [Check Price & Availability on Amazon](https://www.amazon.com/s?k=Bosch%20washing%20machine%20drain%20pump%20filter%20replacement%2000605010%20605010&tag=barebones3dco-20)
 
 ## Required Tools & Supplies
-- **Shallow Tray & Old Towel**: Catch remaining pump water
-- **Small Channel Lock Pliers**: Twist broken filter core
-- **M4x20mm Stainless Screw (Optional)**: Reinforced mechanical anchor
+- **[Shallow Tray & Old Towel](https://www.amazon.com/s?k=Shallow%20Tray%20Old%20Towel&tag=barebones3dco-20)**: Catch remaining pump water *(Search on Amazon)*
+- **[Small Channel Lock Pliers](https://www.amazon.com/s?k=Small%20Channel%20Lock%20Pliers&tag=barebones3dco-20)**: Twist broken filter core *(Search on Amazon)*
+- **[M4x20mm Stainless Screw (Optional)](https://www.amazon.com/s?k=M4x20mm%20Stainless%20Screw%20Optional&tag=barebones3dco-20)**: Reinforced mechanical anchor *(Search on Amazon)*
 
 ## Step-by-Step Installation Procedure
 ### Step 1: Disconnect Power & Open Service Flap
@@ -108,8 +352,1431 @@ Grip the ergonomic textured handle and turn counter-clockwise 90 degrees. Remove
 **A:** This is a slip-on mechanical sleeve that interlocks with the surviving filter core, saving you from purchasing an expensive replacement pump assembly.
 
 ## Open-Source Attribution & Safety Disclaimer
-Modeled by EuroApplianceFix under CC BY 4.0.
-Original Source: https://www.printables.com/model/bosch-drain-filter-knob-repair
+OEM replacement specification. Multi-pack recommended.
+Original Source: https://barebones3d.com/guides/bosch-washing-machine-drain-filter-handle-00605010/
+
+> **Legal Disclaimer:** Barebones 3D, L.L.C. is an independent engineering firm. This replacement component is an aftermarket reproduction designed for personal repair, restoration, and life-extension. Barebones 3D is not affiliated with, authorized by, sponsored by, or endorsed by the original equipment manufacturer. All trademarks and OEM part numbers are referenced solely for identification and compatibility purposes.
+
+
+---
+
+---
+title: "Bosch GTS1031 / 4100 Table Saw Riving Knife Quick-Release Clamping Cam Lever"
+slug: "bosch-table-saw-riving-knife-lever-1609202428"
+oem_part_number: "1609202428"
+superseded_numbers:
+  - "2610997298"
+  - "2610950041"
+compatible_vehicles_and_appliances:
+  - make: "Bosch"
+    model: "GTS1031 Table Saw"
+  - make: "Bosch"
+    model: "4100 Table Saw"
+  - make: "Bosch"
+    model: "4000 Table Saw"
+material: "Nylon PA12"
+price_cents: null
+price_formatted: "Free STL Only"
+is_commercial_allowed: false
+license: "Proprietary Spec"
+download_stl_url: "https://barebones3d.com/assets/stl/bosch-table-saw-riving-knife-lever-1609202428.stl"
+checkout_api_url: null
+canonical_guide_url: "https://barebones3d.com/guides/bosch-table-saw-riving-knife-lever-1609202428"
+---
+
+# Bosch GTS1031 / 4100 Table Saw Riving Knife Quick-Release Clamping Cam Lever (OEM #1609202428)
+
+## Technical Specifications
+- **Primary OEM Part #:** `1609202428`
+- **Engineering Material:** Nylon PA12 (100% solid infill, calibrated printer compensation)
+- **Repair Difficulty:** Easy
+- **Estimated Repair Time:** 10 mins
+- **Commercial Purchase:** Digital STL Only (Commercial reproduction restricted by author license)
+- **Direct STL Download:** [1609202428.stl](https://barebones3d.com/assets/stl/bosch-table-saw-riving-knife-lever-1609202428.stl)
+- **Amazon OEM & Hardware Search:** [Check Price & Availability on Amazon](https://www.amazon.com/s?k=Bosch%20GTS1031%20%2F%204100%20Table%20Saw%20Riving%20Knife%20Quick-Release%20Clamping%20Cam%20Lever%20OEM%201609202428&tag=barebones3dco-20)
+
+## Required Tools & Supplies
+- **[10mm Wrench](https://www.amazon.com/s?k=10mm%20Wrench&tag=barebones3dco-20)**: Cam lever center pivot shoulder nut *(Search on Amazon)*
+
+## Step-by-Step Installation Procedure
+### Step 1: Remove Throat Plate
+
+Lift the zero-clearance throat plate and unscrew the center shoulder bolt securing the broken red cam lever.
+
+![Original broken plastic Bosch GTS1031 / 4100 Table Saw Riving Knife Quick-Release Clamping Cam Lever (OEM #1609202428) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/1609202428-bosch-table-saw-riving-knife-lever-1609202428-step-1.webp)
+
+## Frequently Asked Questions
+#### Q: Why does the OEM lever fail?
+**A:** High clamping force on the steel riving knife blade snaps the plastic lever handle over time.
+
+## Open-Source Attribution & Safety Disclaimer
+Barebones 3D Engineering Lab CAD under development.
+Original Source: https://barebones3d.com/guides/bosch-table-saw-riving-knife-lever-1609202428/#cad-waitlist
+
+> **Legal Disclaimer:** Barebones 3D, L.L.C. is an independent engineering firm. This replacement component is an aftermarket reproduction designed for personal repair, restoration, and life-extension. Barebones 3D is not affiliated with, authorized by, sponsored by, or endorsed by the original equipment manufacturer. All trademarks and OEM part numbers are referenced solely for identification and compatibility purposes.
+
+
+---
+
+---
+title: "Bose QuietComfort 35 / 45 Headband Swivel Hinge Joint Replacement"
+slug: "bose-quietcomfort-35-45-headband-swivel-hinge-joint-replacement-759944-0010"
+oem_part_number: "759944-0010"
+superseded_numbers:
+  - "759944-0020"
+  - "789564-0010"
+compatible_vehicles_and_appliances:
+  - make: "Bose"
+    model: "QuietComfort 35 Series I (QC35 I)"
+  - make: "Bose"
+    model: "QuietComfort 35 Series II (QC35 II)"
+  - make: "Bose"
+    model: "QuietComfort 45 (QC45)"
+material: "Nylon PA12"
+price_cents: 2000
+price_formatted: "$20.00 USD"
+is_commercial_allowed: true
+license: "CC BY 4.0"
+download_stl_url: "https://barebones3d.com/assets/stl/bose-quietcomfort-35-45-headband-swivel-hinge-joint-replacement-759944-0010.stl"
+checkout_api_url: "https://barebones3d.com/api/checkout/create"
+canonical_guide_url: "https://barebones3d.com/guides/bose-quietcomfort-35-45-headband-swivel-hinge-joint-replacement-759944-0010"
+---
+
+# Bose QuietComfort 35 / 45 Headband Swivel Hinge Joint Replacement (OEM #759944-0010)
+
+## Technical Specifications
+- **Primary OEM Part #:** `759944-0010`
+- **Engineering Material:** Nylon PA12 (100% solid infill, calibrated printer compensation)
+- **Repair Difficulty:** Moderate
+- **Estimated Repair Time:** 30 mins
+- **Commercial Purchase:** $20.00 USD (Printed on-demand in 48h via Slant 3D)
+- **Direct STL Download:** [759944-0010.stl](https://barebones3d.com/assets/stl/bose-quietcomfort-35-45-headband-swivel-hinge-joint-replacement-759944-0010.stl)
+- **Amazon OEM & Hardware Search:** [Check Price & Availability on Amazon](https://www.amazon.com/s?k=Bose%20QC35%20QC45%20replacement%20headband%20swivel%20hinge%20repair%20parts&tag=barebones3dco-20)
+
+## Required Tools & Supplies
+- **[Torx T6 Precision Screwdriver](https://www.amazon.com/s?k=Torx%20T6%20Precision%20Screwdriver&tag=barebones3dco-20)**: Remove micro hinge pivot clamp screws *(Search on Amazon)*
+- **[Fine Curved Tweezers](https://www.amazon.com/s?k=Fine%20Curved%20Tweezers&tag=barebones3dco-20)**: Guide delicate audio ribbon wiring through hinge slot *(Search on Amazon)*
+
+## Step-by-Step Installation Procedure
+### Step 1: Remove Inner Hinge Cover Screws
+
+Unscrew the two Torx T6 micro screws on the inner headband hinge clamp to expose audio wiring.
+
+![Original broken plastic Bose QuietComfort 35 / 45 Headband Swivel Hinge Joint Replacement (OEM #759944-0010) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/759944-0010-bose-quietcomfort-35-45-headband-swivel-hinge-joint-replacement-759944-0010-step-1.webp)
+
+### Step 2: Unhook Swivel Ear-Cup Arm
+
+Carefully slide the cracked outer swivel knuckle off the steel headband slider arm without pinching the wire.
+
+![Original broken plastic Bose QuietComfort 35 / 45 Headband Swivel Hinge Joint Replacement (OEM #759944-0010) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/759944-0010-bose-quietcomfort-35-45-headband-swivel-hinge-joint-replacement-759944-0010-step-2.webp)
+
+### Step 3: Thread Audio Wire Through New Hinge
+
+Using tweezers, guide the audio wire harness safely through the internal slot of the Nylon PA12 hinge.
+
+![Original broken plastic Bose QuietComfort 35 / 45 Headband Swivel Hinge Joint Replacement (OEM #759944-0010) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/759944-0010-bose-quietcomfort-35-45-headband-swivel-hinge-joint-replacement-759944-0010-step-3.webp)
+
+### Step 4: Snap Hinge Knuckle & Tighten Screws
+
+Seat the hinge knuckle into the slider track and torque the two T6 screws snugly until flush.
+
+![Original broken plastic Bose QuietComfort 35 / 45 Headband Swivel Hinge Joint Replacement (OEM #759944-0010) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/759944-0010-bose-quietcomfort-35-45-headband-swivel-hinge-joint-replacement-759944-0010-step-4.webp)
+
+### Step 5: Verify Fold & Audio Continuity
+
+Fold earcup 90 degrees flat into storage orientation and power on headset to verify stereo audio channels.
+
+![Original broken plastic Bose QuietComfort 35 / 45 Headband Swivel Hinge Joint Replacement (OEM #759944-0010) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/759944-0010-bose-quietcomfort-35-45-headband-swivel-hinge-joint-replacement-759944-0010-step-5.webp)
+
+## Frequently Asked Questions
+#### Q: Do I need to desolder any audio wires?
+**A:** No. The hinge is engineered with a slotted wire passthrough channel that eliminates desoldering completely.
+
+#### Q: Why is SLS Nylon PA12 required instead of resin?
+**A:** Resin becomes brittle and snaps under the torsional flexing of the headband. Nylon PA12 provides flex fatigue resistance.
+
+## Open-Source Attribution & Safety Disclaimer
+Designed by ZeroKnowledgeYT on Thingiverse under CC BY 4.0
+Original Source: https://www.thingiverse.com/thing:4585860
+
+> **Legal Disclaimer:** Barebones 3D, L.L.C. is an independent engineering firm. This replacement component is an aftermarket reproduction designed for personal repair, restoration, and life-extension. Barebones 3D is not affiliated with, authorized by, sponsored by, or endorsed by the original equipment manufacturer. All trademarks and OEM part numbers are referenced solely for identification and compatibility purposes.
+
+
+---
+
+---
+title: "DeWalt 20V MAX Lithium-Ion Battery Pack Spring Latch Release Button"
+slug: "dewalt-20v-battery-release-latch-button-310712-04"
+oem_part_number: "310712-04"
+superseded_numbers:
+  - "N438341"
+  - "N438342"
+compatible_vehicles_and_appliances:
+  - make: "DeWalt"
+    model: "20V MAX DCB200 / DCB201 / DCB203 / DCB204 / DCB205 Battery Packs"
+material: "Nylon PA12"
+price_cents: null
+price_formatted: "Free STL Only"
+is_commercial_allowed: false
+license: "Proprietary Spec"
+download_stl_url: "https://barebones3d.com/assets/stl/dewalt-20v-battery-release-latch-button-310712-04.stl"
+checkout_api_url: null
+canonical_guide_url: "https://barebones3d.com/guides/dewalt-20v-battery-release-latch-button-310712-04"
+---
+
+# DeWalt 20V MAX Lithium-Ion Battery Pack Spring Latch Release Button (OEM #310712-04)
+
+## Technical Specifications
+- **Primary OEM Part #:** `310712-04`
+- **Engineering Material:** Nylon PA12 (100% solid infill, calibrated printer compensation)
+- **Repair Difficulty:** Moderate
+- **Estimated Repair Time:** 15 mins
+- **Commercial Purchase:** Digital STL Only (Commercial reproduction restricted by author license)
+- **Direct STL Download:** [310712-04.stl](https://barebones3d.com/assets/stl/dewalt-20v-battery-release-latch-button-310712-04.stl)
+- **Amazon OEM & Hardware Search:** [Check Price & Availability on Amazon](https://www.amazon.com/s?k=DeWalt%2020V%20MAX%20Lithium-Ion%20Battery%20Pack%20Spring%20Latch%20Release%20Button%20OEM%20310712-04&tag=barebones3dco-20)
+
+## Required Tools & Supplies
+- **[Security Torx T10](https://www.amazon.com/s?k=Security%20Torx%20T10&tag=barebones3dco-20)**: Battery pack casing security screws *(Search on Amazon)*
+
+## Step-by-Step Installation Procedure
+### Step 1: Disassemble Battery Upper Shell
+
+Remove five security Torx T10 screws from the bottom of the battery shell to access the latch spring guide.
+
+![Original broken plastic DeWalt 20V MAX Lithium-Ion Battery Pack Spring Latch Release Button (OEM #310712-04) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/310712-04-dewalt-20v-battery-release-latch-button-310712-04-step-1.webp)
+
+## Frequently Asked Questions
+#### Q: When will the DeWalt button release?
+**A:** CAD modeling and drop-impact testing are underway. Join the waitlist for instant availability alerts.
+
+## Open-Source Attribution & Safety Disclaimer
+Barebones 3D Engineering Lab CAD under development.
+Original Source: https://barebones3d.com/guides/dewalt-20v-battery-release-latch-button-310712-04/#cad-waitlist
+
+> **Legal Disclaimer:** Barebones 3D, L.L.C. is an independent engineering firm. This replacement component is an aftermarket reproduction designed for personal repair, restoration, and life-extension. Barebones 3D is not affiliated with, authorized by, sponsored by, or endorsed by the original equipment manufacturer. All trademarks and OEM part numbers are referenced solely for identification and compatibility purposes.
+
+
+---
+
+---
+title: "DeWalt DWE7491 / DWE7480 Table Saw Rack & Pinion Fence Slide Glide"
+slug: "dewalt-table-saw-fence-slide-glide-640510-00"
+oem_part_number: "640510-00"
+superseded_numbers:
+  - "5140032-47"
+  - "5140032-48"
+compatible_vehicles_and_appliances:
+  - make: "DeWalt"
+    model: "DWE7491RS Table Saw"
+  - make: "DeWalt"
+    model: "DWE7480 Table Saw"
+  - make: "DeWalt"
+    model: "DW745 Table Saw"
+material: "Self-Lubricating Nylon PA12"
+price_cents: null
+price_formatted: "Free STL Only"
+is_commercial_allowed: false
+license: "Proprietary Spec"
+download_stl_url: "https://barebones3d.com/assets/stl/dewalt-table-saw-fence-slide-glide-640510-00.stl"
+checkout_api_url: null
+canonical_guide_url: "https://barebones3d.com/guides/dewalt-table-saw-fence-slide-glide-640510-00"
+---
+
+# DeWalt DWE7491 / DWE7480 Table Saw Rack & Pinion Fence Slide Glide (OEM #640510-00)
+
+## Technical Specifications
+- **Primary OEM Part #:** `640510-00`
+- **Engineering Material:** Self-Lubricating Nylon PA12 (100% solid infill, calibrated printer compensation)
+- **Repair Difficulty:** Easy
+- **Estimated Repair Time:** 15 mins
+- **Commercial Purchase:** Digital STL Only (Commercial reproduction restricted by author license)
+- **Direct STL Download:** [640510-00.stl](https://barebones3d.com/assets/stl/dewalt-table-saw-fence-slide-glide-640510-00.stl)
+- **Amazon OEM & Hardware Search:** [Check Price & Availability on Amazon](https://www.amazon.com/s?k=DeWalt%20DWE7491%20%2F%20DWE7480%20Table%20Saw%20Rack%20Pinion%20Fence%20Slide%20Glide%20OEM%20640510-00&tag=barebones3dco-20)
+
+## Required Tools & Supplies
+- **[Hex Key 4mm](https://www.amazon.com/s?k=Hex%20Key%204mm&tag=barebones3dco-20)**: Fence locking clamp fasteners *(Search on Amazon)*
+
+## Step-by-Step Installation Procedure
+### Step 1: Remove Fence Carrier Assembly
+
+Back out the two 4mm hex bolts securing the rear slide bracket to the extruded aluminum rack tube.
+
+![Original broken plastic DeWalt DWE7491 / DWE7480 Table Saw Rack & Pinion Fence Slide Glide (OEM #640510-00) shown side-by-side with reinforced 3D printed Self-Lubricating Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/640510-00-dewalt-table-saw-fence-slide-glide-640510-00-step-1.webp)
+
+## Frequently Asked Questions
+#### Q: Why is self-lubricating Nylon PA12 specified?
+**A:** Low friction coefficient prevents fence sticking and guarantees smooth 0.5mm micro-adjustments.
+
+## Open-Source Attribution & Safety Disclaimer
+Barebones 3D Engineering Lab CAD under development.
+Original Source: https://barebones3d.com/guides/dewalt-table-saw-fence-slide-glide-640510-00/#cad-waitlist
+
+> **Legal Disclaimer:** Barebones 3D, L.L.C. is an independent engineering firm. This replacement component is an aftermarket reproduction designed for personal repair, restoration, and life-extension. Barebones 3D is not affiliated with, authorized by, sponsored by, or endorsed by the original equipment manufacturer. All trademarks and OEM part numbers are referenced solely for identification and compatibility purposes.
+
+
+---
+
+---
+title: "DeWalt DWS779 / DWS780 12-Inch Miter Saw High-Flow Dust Extraction Chute"
+slug: "dewalt-dws779-dws780-12-inch-miter-saw-high-flow-dust-extraction-chute-n087403"
+oem_part_number: "N087403"
+superseded_numbers:
+  - "N142512"
+  - "N058318"
+compatible_vehicles_and_appliances:
+  - make: "DeWalt"
+    model: "DWS779 12-Inch Sliding Compound Miter Saw"
+  - make: "DeWalt"
+    model: "DWS780 12-Inch Double Bevel Sliding Compound Miter Saw"
+  - make: "DeWalt"
+    model: "DWS782 12-Inch Sliding Miter Saw"
+material: "PETG Heavy Duty"
+price_cents: 2500
+price_formatted: "$25.00 USD"
+is_commercial_allowed: true
+license: "CC BY 4.0"
+download_stl_url: "https://barebones3d.com/assets/stl/dewalt-dws779-dws780-12-inch-miter-saw-high-flow-dust-extraction-chute-n087403.stl"
+checkout_api_url: "https://barebones3d.com/api/checkout/create"
+canonical_guide_url: "https://barebones3d.com/guides/dewalt-dws779-dws780-12-inch-miter-saw-high-flow-dust-extraction-chute-n087403"
+---
+
+# DeWalt DWS779 / DWS780 12-Inch Miter Saw High-Flow Dust Extraction Chute (OEM #N087403)
+
+## Technical Specifications
+- **Primary OEM Part #:** `N087403`
+- **Engineering Material:** PETG Heavy Duty (100% solid infill, calibrated printer compensation)
+- **Repair Difficulty:** Easy
+- **Estimated Repair Time:** 15 mins
+- **Commercial Purchase:** $25.00 USD (Printed on-demand in 48h via Slant 3D)
+- **Direct STL Download:** [N087403.stl](https://barebones3d.com/assets/stl/dewalt-dws779-dws780-12-inch-miter-saw-high-flow-dust-extraction-chute-n087403.stl)
+- **Amazon OEM & Hardware Search:** [Check Price & Availability on Amazon](https://www.amazon.com/s?k=DeWalt%20DWS780%20miter%20saw%20upgraded%20dust%20collection%20chute%20adapter&tag=barebones3dco-20)
+
+## Required Tools & Supplies
+- **[Torx T20 Driver](https://www.amazon.com/s?k=Torx%20T20%20Driver&tag=barebones3dco-20)**: Remove rear factory chute retaining bracket screws *(Search on Amazon)*
+- **[Shop Vacuum Hose (1-7/8 or 2-1/2 in)](https://www.amazon.com/s?k=Shop%20Vacuum%20Hose%201-7%2F8%20or%202-1%2F2%20in&tag=barebones3dco-20)**: Connect to high-flow extraction port *(Search on Amazon)*
+
+## Step-by-Step Installation Procedure
+### Step 1: Unbolt OEM Rubber Dust Funnel
+
+Remove two T20 Torx screws securing the factory rubber dust funnel to the rear aluminum swing arm.
+
+![Original broken plastic DeWalt DWS779 / DWS780 12-Inch Miter Saw High-Flow Dust Extraction Chute (OEM #N087403) shown side-by-side with reinforced 3D printed PETG Heavy Duty reproduction.](https://barebones3d.com/assets/parts/n087403-dewalt-dws779-dws780-12-inch-miter-saw-high-flow-dust-extraction-chute-n087403-step-1.webp)
+
+### Step 2: Clear Sawdust Accumulation
+
+Brush away compacted sawdust and pitch resin from the blade guard rear exhaust trajectory.
+
+![Original broken plastic DeWalt DWS779 / DWS780 12-Inch Miter Saw High-Flow Dust Extraction Chute (OEM #N087403) shown side-by-side with reinforced 3D printed PETG Heavy Duty reproduction.](https://barebones3d.com/assets/parts/n087403-dewalt-dws779-dws780-12-inch-miter-saw-high-flow-dust-extraction-chute-n087403-step-2.webp)
+
+### Step 3: Mount Enlarged Throat PETG Chute
+
+Position the wide-mouth heavy-duty PETG collector onto the pivot boss and torque screws to 3 Nm.
+
+![Original broken plastic DeWalt DWS779 / DWS780 12-Inch Miter Saw High-Flow Dust Extraction Chute (OEM #N087403) shown side-by-side with reinforced 3D printed PETG Heavy Duty reproduction.](https://barebones3d.com/assets/parts/n087403-dewalt-dws779-dws780-12-inch-miter-saw-high-flow-dust-extraction-chute-n087403-step-3.webp)
+
+### Step 4: Check Blade Travel & Connect Vac Hose
+
+Perform a complete bevel and slide pass to verify zero blade clearance interference, then connect shop vac.
+
+![Original broken plastic DeWalt DWS779 / DWS780 12-Inch Miter Saw High-Flow Dust Extraction Chute (OEM #N087403) shown side-by-side with reinforced 3D printed PETG Heavy Duty reproduction.](https://barebones3d.com/assets/parts/n087403-dewalt-dws779-dws780-12-inch-miter-saw-high-flow-dust-extraction-chute-n087403-step-4.webp)
+
+## Frequently Asked Questions
+#### Q: How much does this improve dust collection efficiency?
+**A:** The oversized aerodynamic throat captures over 85% of sawdust compared to under 35% with the OEM rubber chute.
+
+#### Q: Will this collide with the saw blade at full 45-degree bevel?
+**A:** No. The model includes an engineered bevel relief notch that preserves full 49-degree dual-bevel travel.
+
+## Open-Source Attribution & Safety Disclaimer
+Modeled by James Green on Printables under CC BY 4.0
+Original Source: https://www.printables.com/model/845129-dewalt-dws780-miter-saw-dust-port-adapter-to-dxv0-3
+
+> **Legal Disclaimer:** Barebones 3D, L.L.C. is an independent engineering firm. This replacement component is an aftermarket reproduction designed for personal repair, restoration, and life-extension. Barebones 3D is not affiliated with, authorized by, sponsored by, or endorsed by the original equipment manufacturer. All trademarks and OEM part numbers are referenced solely for identification and compatibility purposes.
+
+
+---
+
+---
+title: "Dodge Ram 1500 / 2500 HVAC Heater Blend Door Sub-Assembly Gear"
+slug: "dodge-ram-hvac-blend-door-gear-68064949aa"
+oem_part_number: "68064949AA"
+superseded_numbers:
+  - "68064949"
+  - "68064950AA"
+compatible_vehicles_and_appliances:
+  - make: "Ram"
+    model: "1500 / 2500 / 3500"
+    year_start: 2009
+    year_end: 2018
+  - make: "Ram"
+    model: "1500 Classic"
+    year_start: 2019
+    year_end: 2023
+material: "Nylon PA12"
+price_cents: null
+price_formatted: "Free STL Only"
+is_commercial_allowed: false
+license: "Proprietary Spec"
+download_stl_url: "https://barebones3d.com/assets/stl/dodge-ram-hvac-blend-door-gear-68064949aa.stl"
+checkout_api_url: null
+canonical_guide_url: "https://barebones3d.com/guides/dodge-ram-hvac-blend-door-gear-68064949aa"
+---
+
+# Dodge Ram 1500 / 2500 HVAC Heater Blend Door Sub-Assembly Gear (OEM #68064949AA)
+
+## Technical Specifications
+- **Primary OEM Part #:** `68064949AA`
+- **Engineering Material:** Nylon PA12 (100% solid infill, calibrated printer compensation)
+- **Repair Difficulty:** Moderate
+- **Estimated Repair Time:** 45 mins
+- **Commercial Purchase:** Digital STL Only (Commercial reproduction restricted by author license)
+- **Direct STL Download:** [68064949AA.stl](https://barebones3d.com/assets/stl/dodge-ram-hvac-blend-door-gear-68064949aa.stl)
+- **Amazon OEM & Hardware Search:** [Check Price & Availability on Amazon](https://www.amazon.com/s?k=Dodge%20Ram%201500%20%2F%202500%20HVAC%20Heater%20Blend%20Door%20Sub-Assembly%20Gear%20OEM%2068064949AA&tag=barebones3dco-20)
+
+## Required Tools & Supplies
+- **[Torx T20 Driver](https://www.amazon.com/s?k=Torx%20T20%20Driver&tag=barebones3dco-20)**: Lower kick panel screws *(Search on Amazon)*
+- **[8mm Socket Driver](https://www.amazon.com/s?k=8mm%20Socket%20Driver&tag=barebones3dco-20)**: Actuator casing bolts *(Search on Amazon)*
+
+## Step-by-Step Installation Procedure
+### Step 1: Lower Passenger Dash Panel
+
+Unscrew three Torx T20 fasteners along the lower edge of the glovebox frame and drop the hush panel.
+
+![Original broken plastic Dodge Ram 1500 / 2500 HVAC Heater Blend Door Sub-Assembly Gear (OEM #68064949AA) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/68064949aa-dodge-ram-hvac-blend-door-gear-68064949aa-step-1.webp)
+
+### Step 2: Actuator Access & Gear Inspection
+
+Unplug the harness connector and back out the 8mm bolts to reveal the fractured OEM white plastic drive gear.
+
+![Original broken plastic Dodge Ram 1500 / 2500 HVAC Heater Blend Door Sub-Assembly Gear (OEM #68064949AA) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/68064949aa-dodge-ram-hvac-blend-door-gear-68064949aa-step-2.webp)
+
+## Frequently Asked Questions
+#### Q: When will this part ship?
+**A:** Our engineering lab is finalizing FDM/SLS print tolerances on the D-shaft keyed gear. Enter your email to be notified when the first batch is ready.
+
+## Open-Source Attribution & Safety Disclaimer
+Barebones 3D Engineering Lab CAD under development.
+Original Source: https://barebones3d.com/guides/dodge-ram-hvac-blend-door-gear-68064949aa/#cad-waitlist
+
+> **Legal Disclaimer:** Barebones 3D, L.L.C. is an independent engineering firm. This replacement component is an aftermarket reproduction designed for personal repair, restoration, and life-extension. Barebones 3D is not affiliated with, authorized by, sponsored by, or endorsed by the original equipment manufacturer. All trademarks and OEM part numbers are referenced solely for identification and compatibility purposes.
+
+
+---
+
+---
+title: "Dyson V10 / V11 Cordless Vacuum Reinforced Heavy-Duty Trigger Switch Lever"
+slug: "dyson-v10-v11-cordless-vacuum-reinforced-heavy-duty-trigger-switch-lever-969830-01"
+oem_part_number: "969830-01"
+superseded_numbers:
+  - "970093-01"
+  - "965660-01"
+compatible_vehicles_and_appliances:
+  - make: "Dyson"
+    model: "V10 Absolute / Animal / Motorhead (SV12)"
+  - make: "Dyson"
+    model: "V11 Torque Drive / Animal / Outsize (SV14 / SV15)"
+material: "Nylon PA12"
+price_cents: 1900
+price_formatted: "$19.00 USD"
+is_commercial_allowed: true
+license: "CC BY 4.0"
+download_stl_url: "https://barebones3d.com/assets/stl/dyson-v10-v11-cordless-vacuum-reinforced-heavy-duty-trigger-switch-lever-969830-01.stl"
+checkout_api_url: "https://barebones3d.com/api/checkout/create"
+canonical_guide_url: "https://barebones3d.com/guides/dyson-v10-v11-cordless-vacuum-reinforced-heavy-duty-trigger-switch-lever-969830-01"
+---
+
+# Dyson V10 / V11 Cordless Vacuum Reinforced Heavy-Duty Trigger Switch Lever (OEM #969830-01)
+
+## Technical Specifications
+- **Primary OEM Part #:** `969830-01`
+- **Engineering Material:** Nylon PA12 (100% solid infill, calibrated printer compensation)
+- **Repair Difficulty:** Moderate
+- **Estimated Repair Time:** 35 mins
+- **Commercial Purchase:** $19.00 USD (Printed on-demand in 48h via Slant 3D)
+- **Direct STL Download:** [969830-01.stl](https://barebones3d.com/assets/stl/dyson-v10-v11-cordless-vacuum-reinforced-heavy-duty-trigger-switch-lever-969830-01.stl)
+- **Amazon OEM & Hardware Search:** [Check Price & Availability on Amazon](https://www.amazon.com/s?k=Dyson%20V10%20V11%20upgraded%20heavy%20duty%20metal%20reinforced%20trigger%20switch%20replacement&tag=barebones3dco-20)
+
+## Required Tools & Supplies
+- **[Torx T8 Precision Screwdriver](https://www.amazon.com/s?k=Torx%20T8%20Precision%20Screwdriver&tag=barebones3dco-20)**: Disassemble vacuum handle shell screws *(Search on Amazon)*
+- **[Small Slotted Screwdriver](https://www.amazon.com/s?k=Small%20Slotted%20Screwdriver&tag=barebones3dco-20)**: Release inner battery terminal lock tabs *(Search on Amazon)*
+
+## Step-by-Step Installation Procedure
+### Step 1: Remove Dust Bin and Battery Pack
+
+Slide off dust canister and remove the 3 Torx T8 screws holding the lithium battery pack into the handle.
+
+![Original broken plastic Dyson V10 / V11 Cordless Vacuum Reinforced Heavy-Duty Trigger Switch Lever (OEM #969830-01) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/969830-01-dyson-v10-v11-cordless-vacuum-reinforced-heavy-duty-trigger-switch-lever-969830-01-step-1.webp)
+
+### Step 2: Separate Motor Body Clamshell
+
+Back out internal T8 fasteners along the handle backbone and gently separate the handle housing halves.
+
+![Original broken plastic Dyson V10 / V11 Cordless Vacuum Reinforced Heavy-Duty Trigger Switch Lever (OEM #969830-01) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/969830-01-dyson-v10-v11-cordless-vacuum-reinforced-heavy-duty-trigger-switch-lever-969830-01-step-2.webp)
+
+### Step 3: Extract Sheared Trigger Lever
+
+Slide out the broken red trigger piece where the thin internal structural rib snapped off.
+
+![Original broken plastic Dyson V10 / V11 Cordless Vacuum Reinforced Heavy-Duty Trigger Switch Lever (OEM #969830-01) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/969830-01-dyson-v10-v11-cordless-vacuum-reinforced-heavy-duty-trigger-switch-lever-969830-01-step-3.webp)
+
+### Step 4: Seat Reinforced Nylon PA12 Trigger
+
+Position the solid-reinforced PA12 trigger over the microswitch push-rod and verify spring tension.
+
+![Original broken plastic Dyson V10 / V11 Cordless Vacuum Reinforced Heavy-Duty Trigger Switch Lever (OEM #969830-01) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/969830-01-dyson-v10-v11-cordless-vacuum-reinforced-heavy-duty-trigger-switch-lever-969830-01-step-4.webp)
+
+### Step 5: Reassemble Handle & Function Check
+
+Rejoin clamshell halves, torque T8 screws, reinstall battery pack, and confirm responsive motor trigger action.
+
+![Original broken plastic Dyson V10 / V11 Cordless Vacuum Reinforced Heavy-Duty Trigger Switch Lever (OEM #969830-01) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/969830-01-dyson-v10-v11-cordless-vacuum-reinforced-heavy-duty-trigger-switch-lever-969830-01-step-5.webp)
+
+## Frequently Asked Questions
+#### Q: Why do factory Dyson triggers always fail?
+**A:** The OEM trigger features a 0.8mm plastic load-bearing rib that experiences cyclic fatigue with every pull.
+
+#### Q: How is the 3D printed model reinforced?
+**A:** Our model fills the hollow structural cavity to 2.4mm solid cross-section in indestructible SLS Nylon PA12.
+
+## Open-Source Attribution & Safety Disclaimer
+Designed by Ergo Cogito on Printables under CC BY 4.0
+Original Source: https://www.printables.com/model/1199500-dyson-v10-v11-power-button-trigger-fix-new-design
+
+> **Legal Disclaimer:** Barebones 3D, L.L.C. is an independent engineering firm. This replacement component is an aftermarket reproduction designed for personal repair, restoration, and life-extension. Barebones 3D is not affiliated with, authorized by, sponsored by, or endorsed by the original equipment manufacturer. All trademarks and OEM part numbers are referenced solely for identification and compatibility purposes.
+
+
+---
+
+---
+title: "Ford F-150 / Super Duty Sunroof Track Slider Lift Arm Repair Kit"
+slug: "ford-f-150-super-duty-sunroof-track-slider-lift-arm-repair-kit-fl3z-1651071-a"
+oem_part_number: "FL3Z-1651071-A"
+superseded_numbers:
+  - "FL3Z-1651071-B"
+  - "02ESR1201ABK"
+  - "AL3Z-1651071-A"
+compatible_vehicles_and_appliances:
+  - make: "Ford"
+    model: "F-150"
+    year_start: 2015
+    year_end: 2020
+  - make: "Ford"
+    model: "F-250 / F-350 / F-450 Super Duty"
+    year_start: 2017
+    year_end: 2022
+  - make: "Ford"
+    model: "Expedition"
+    year_start: 2018
+    year_end: 2021
+  - make: "Lincoln"
+    model: "Navigator"
+    year_start: 2018
+    year_end: 2021
+material: "Nylon PA12"
+price_cents: null
+price_formatted: "Free STL Only"
+is_commercial_allowed: false
+license: "CC BY 4.0"
+download_stl_url: "https://barebones3d.com/assets/stl/ford-f-150-super-duty-sunroof-track-slider-lift-arm-repair-kit-fl3z-1651071-a.stl"
+checkout_api_url: null
+canonical_guide_url: "https://barebones3d.com/guides/ford-f-150-super-duty-sunroof-track-slider-lift-arm-repair-kit-fl3z-1651071-a"
+---
+
+# Ford F-150 / Super Duty Sunroof Track Slider Lift Arm Repair Kit (OEM #FL3Z-1651071-A)
+
+## Technical Specifications
+- **Primary OEM Part #:** `FL3Z-1651071-A`
+- **Engineering Material:** Nylon PA12 (100% solid infill, calibrated printer compensation)
+- **Repair Difficulty:** Moderate
+- **Estimated Repair Time:** 50 mins
+- **Commercial Purchase:** Digital STL Only (Commercial reproduction restricted by author license)
+- **Direct STL Download:** [FL3Z-1651071-A.stl](https://barebones3d.com/assets/stl/ford-f-150-super-duty-sunroof-track-slider-lift-arm-repair-kit-fl3z-1651071-a.stl)
+- **Amazon OEM & Hardware Search:** [Check Price & Availability on Amazon](https://www.amazon.com/s?k=Ford%20F150%20sunroof%20track%20repair%20kit%20metal%20synthetic%20grease&tag=barebones3dco-20)
+
+## Required Tools & Supplies
+- **[Torx T25 Precision Screwdriver](https://www.amazon.com/s?k=Torx%20T25%20Precision%20Screwdriver&tag=barebones3dco-20)**: Unbolt front and rear sunroof glass panel retaining shoulder screws *(Search on Amazon)*
+- **[Non-Marring Nylon Trim Pry Tool](https://www.amazon.com/s?k=Non-Marring%20Nylon%20Trim%20Pry%20Tool&tag=barebones3dco-20)**: Unclip side rubber accordion bellows without tearing silicone weatherstripping *(Search on Amazon)*
+- **[Long Reach Needle-Nose Pliers](https://www.amazon.com/s?k=Long%20Reach%20Needle-Nose%20Pliers&tag=barebones3dco-20)**: Extract shattered OEM plastic slider fragments from lower aluminum track channel *(Search on Amazon)*
+- **[Synthetic Fluoropolymer / Silicone Grease](https://www.amazon.com/s?k=Synthetic%20Fluoropolymer%20%2F%20Silicone%20Grease&tag=barebones3dco-20)**: Coat sliding surfaces and aluminum channels to prevent friction wear *(Search on Amazon)*
+
+## Step-by-Step Installation Procedure
+### Step 1: Unclip Interior Rubber Accordion Bellows
+
+Lower the sunshade fully and place the sunroof into partial vent position if operational. Working from the vehicle interior, wedge a non-marring nylon pry tool beneath the top lip of the rubber accordion boot on each side of the moving glass panel. Carefully peel down the three retaining push-tabs to expose the internal metal glass cradle and mounting hardware.
+
+![Original broken plastic Ford F-150 / Super Duty Sunroof Track Slider Lift Arm Repair Kit (OEM #FL3Z-1651071-A) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/fl3z-1651071-a-ford-f-150-super-duty-sunroof-track-slider-lift-arm-repair-kit-fl3z-1651071-a-step-1.webp)
+
+### Step 2: Remove Torx T25 Fasteners and Lift Glass Panel
+
+Using a magnetic Torx T25 driver, remove the two forward and two rear shoulder screws securing the glass bracket to the mechanical slider arms. Support the glass center with one hand while backing out the final fastener. Lift the glass panel straight up and out through the roof aperture and place it onto a clean, padded surface.
+
+![Original broken plastic Ford F-150 / Super Duty Sunroof Track Slider Lift Arm Repair Kit (OEM #FL3Z-1651071-A) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/fl3z-1651071-a-ford-f-150-super-duty-sunroof-track-slider-lift-arm-repair-kit-fl3z-1651071-a-step-2.webp)
+
+### Step 3: Clear Shattered OEM Plastic Debris from Track Channels
+
+Inspect the extruded aluminum guide rails for broken fragments of the brittle OEM lift arms. Using long reach needle-nose pliers, extract all sheared pivot ears, guide teeth, and retaining clips from the cable carrier channel. Thoroughly vacuum both track channels to ensure no residual plastic grit remains to bind the motor drive cables.
+
+![Original broken plastic Ford F-150 / Super Duty Sunroof Track Slider Lift Arm Repair Kit (OEM #FL3Z-1651071-A) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/fl3z-1651071-a-ford-f-150-super-duty-sunroof-track-slider-lift-arm-repair-kit-fl3z-1651071-a-step-3.webp)
+
+### Step 4: Install Replacement Nylon PA12 Lift Arm Assembly
+
+Apply a liberal coating of synthetic fluoropolymer grease into the guide grooves and pivot pins of the replacement Nylon PA12 arm. Angle the forward guide block into the upper aluminum rail slot, then swing the rear pivot downward to interface with the cable drive carriage. Press downward firmly until the retention snap-tab engages the lower carrier with an audible click.
+
+![Original broken plastic Ford F-150 / Super Duty Sunroof Track Slider Lift Arm Repair Kit (OEM #FL3Z-1651071-A) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/fl3z-1651071-a-ford-f-150-super-duty-sunroof-track-slider-lift-arm-repair-kit-fl3z-1651071-a-step-4.webp)
+
+### Step 5: Remount Glass Panel, Align Seams & Calibrate Motor
+
+Lower the glass panel back onto the lift arms and thread the four T25 Torx screws in finger-tight. Align the front glass edge flush to 1mm below the front roofline, and the rear edge flush to 1mm above the sheet metal to eliminate wind noise, then torque screws to 4.5 Nm. Snap the accordion boots back on. Turn ignition ON, hold the sunroof TILT switch for 10 seconds until the glass cycles down and up to calibrate motor anti-pinch limits.
+
+![Original broken plastic Ford F-150 / Super Duty Sunroof Track Slider Lift Arm Repair Kit (OEM #FL3Z-1651071-A) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/fl3z-1651071-a-ford-f-150-super-duty-sunroof-track-slider-lift-arm-repair-kit-fl3z-1651071-a-step-5.webp)
+
+## Frequently Asked Questions
+#### Q: Why did the original Ford factory lift arms crack?
+**A:** The factory OEM arms were injection-molded from unreinforced POM/PBT that degrades from heat cycling and UV exposure through the glass. Once the factory track grease collects dust and thickens, the motor drive cable exerts excessive shear force on the brittle lift cam, snapping the guide pin collar.
+
+#### Q: Why is Nylon PA12 required instead of standard PLA or PETG?
+**A:** Vehicle cabins parked in direct sunlight reach interior ceiling temperatures between 65°C and 80°C. Standard PLA softens at 55°C, while PETG creeps under spring tension. Industrial Nylon PA12 maintains structural integrity past 140°C and provides natural self-lubricating surface lubricity.
+
+#### Q: Do I need to drop the headliner to perform this repair?
+**A:** No. Dealerships charge $1,800 to $2,500 because they drop the headliner to replace the entire 60001 track assembly. Our drop-in replacement arms install from the roof opening once the four T25 glass shoulder bolts and accordion bellows are removed.
+
+## Open-Source Attribution & Safety Disclaimer
+Barebones 3D Engineering Lab CAD under development.
+Original Source: https://barebones3d.com/guides/ford-f-150-super-duty-sunroof-track-slider-lift-arm-repair-kit-fl3z-1651071-a/#cad-waitlist
+
+> **Legal Disclaimer:** Barebones 3D, L.L.C. is an independent engineering firm. This replacement component is an aftermarket reproduction designed for personal repair, restoration, and life-extension. Barebones 3D is not affiliated with, authorized by, sponsored by, or endorsed by the original equipment manufacturer. All trademarks and OEM part numbers are referenced solely for identification and compatibility purposes.
+
+
+---
+
+---
+title: "GE / Hotpoint Clothes Dryer Front Drum Slide Bearing Glides"
+slug: "ge-hotpoint-clothes-dryer-front-drum-slide-bearing-glides-we1m1067"
+oem_part_number: "WE1M1067"
+superseded_numbers:
+  - "WE1M504"
+  - "WE1M507"
+  - "WE1M316"
+compatible_vehicles_and_appliances:
+  - make: "GE"
+    model: "Profile Front Load / Top Load Dryers"
+  - make: "Hotpoint"
+    model: "Electric and Gas Dryers"
+  - make: "Kenmore"
+    model: "362/363 Series Dryers"
+material: "PETG Heavy Duty"
+price_cents: null
+price_formatted: "Free STL Only"
+is_commercial_allowed: false
+license: "Public Domain"
+download_stl_url: "https://barebones3d.com/assets/stl/ge-hotpoint-clothes-dryer-front-drum-slide-bearing-glides-we1m1067.stl"
+checkout_api_url: null
+canonical_guide_url: "https://barebones3d.com/guides/ge-hotpoint-clothes-dryer-front-drum-slide-bearing-glides-we1m1067"
+---
+
+# GE / Hotpoint Clothes Dryer Front Drum Slide Bearing Glides (OEM #WE1M1067)
+
+## Technical Specifications
+- **Primary OEM Part #:** `WE1M1067`
+- **Engineering Material:** PETG Heavy Duty (100% solid infill, calibrated printer compensation)
+- **Repair Difficulty:** Easy
+- **Estimated Repair Time:** 30 mins
+- **Commercial Purchase:** Digital STL Only (Commercial reproduction restricted by author license)
+- **Direct STL Download:** [WE1M1067.stl](https://barebones3d.com/assets/stl/ge-hotpoint-clothes-dryer-front-drum-slide-bearing-glides-we1m1067.stl)
+- **Amazon OEM & Hardware Search:** [Check Price & Availability on Amazon](https://www.amazon.com/s?k=GE%20dryer%20drum%20slide%20bearing%20kit%20WE1M1067%20WE1M504%204%20pack%20felt&tag=barebones3dco-20)
+
+## Required Tools & Supplies
+- **[1/4 inch Nut Driver](https://www.amazon.com/s?k=1%2F4%20inch%20Nut%20Driver&tag=barebones3dco-20)**: Remove top panel and front bulkhead screws *(Search on Amazon)*
+- **[Putty Knife](https://www.amazon.com/s?k=Putty%20Knife&tag=barebones3dco-20)**: Depress spring clips securing dryer top cover *(Search on Amazon)*
+
+## Step-by-Step Installation Procedure
+### Step 1: Release Top Panel Latches
+
+Insert putty knife between front panel and top lid to release the dual internal spring retention latches.
+
+![Original broken plastic GE / Hotpoint Clothes Dryer Front Drum Slide Bearing Glides (OEM #WE1M1067) shown side-by-side with reinforced 3D printed PETG Heavy Duty reproduction.](https://barebones3d.com/assets/parts/we1m1067-ge-hotpoint-clothes-dryer-front-drum-slide-bearing-glides-we1m1067-step-1.webp)
+
+### Step 2: Disconnect Door Switch & Bulkhead
+
+Unplug door safety interlock wiring harness and remove 1/4 inch screws securing front bearing bulkhead.
+
+![Original broken plastic GE / Hotpoint Clothes Dryer Front Drum Slide Bearing Glides (OEM #WE1M1067) shown side-by-side with reinforced 3D printed PETG Heavy Duty reproduction.](https://barebones3d.com/assets/parts/we1m1067-ge-hotpoint-clothes-dryer-front-drum-slide-bearing-glides-we1m1067-step-2.webp)
+
+### Step 3: Pry Out Worn Slide Shoes
+
+Pop out worn Teflon/nylon slide glides from their retention slots in the upper half-circle bearing bracket.
+
+![Original broken plastic GE / Hotpoint Clothes Dryer Front Drum Slide Bearing Glides (OEM #WE1M1067) shown side-by-side with reinforced 3D printed PETG Heavy Duty reproduction.](https://barebones3d.com/assets/parts/we1m1067-ge-hotpoint-clothes-dryer-front-drum-slide-bearing-glides-we1m1067-step-3.webp)
+
+### Step 4: Snap In New Glides & Felt Seal
+
+Snap new white/green slides into place and align the felt seal cushion along the outer rim.
+
+![Original broken plastic GE / Hotpoint Clothes Dryer Front Drum Slide Bearing Glides (OEM #WE1M1067) shown side-by-side with reinforced 3D printed PETG Heavy Duty reproduction.](https://barebones3d.com/assets/parts/we1m1067-ge-hotpoint-clothes-dryer-front-drum-slide-bearing-glides-we1m1067-step-4.webp)
+
+### Step 5: Reassemble Bulkhead & Spin Test
+
+Remount front panel, reconnect door sensor, lower top lid, and spin drum by hand to verify silent rotation.
+
+![Original broken plastic GE / Hotpoint Clothes Dryer Front Drum Slide Bearing Glides (OEM #WE1M1067) shown side-by-side with reinforced 3D printed PETG Heavy Duty reproduction.](https://barebones3d.com/assets/parts/we1m1067-ge-hotpoint-clothes-dryer-front-drum-slide-bearing-glides-we1m1067-step-5.webp)
+
+## Frequently Asked Questions
+#### Q: What causes the loud screeching during dryer cycles?
+**A:** When the plastic glides wear through, the metal drum lip grinds directly on the stationary bulkhead.
+
+#### Q: Should I print these or buy the Amazon multipack?
+**A:** Amazon sells 4-packs with replacement felt and adhesive for under $8, making commercial POD uneconomical.
+
+## Open-Source Attribution & Safety Disclaimer
+OEM replacement specification. Multi-pack recommended.
+Original Source: https://barebones3d.com/guides/ge-hotpoint-clothes-dryer-front-drum-slide-bearing-glides-we1m1067/
+
+> **Legal Disclaimer:** Barebones 3D, L.L.C. is an independent engineering firm. This replacement component is an aftermarket reproduction designed for personal repair, restoration, and life-extension. Barebones 3D is not affiliated with, authorized by, sponsored by, or endorsed by the original equipment manufacturer. All trademarks and OEM part numbers are referenced solely for identification and compatibility purposes.
+
+
+---
+
+---
+title: "GM Silverado / Tahoe / Suburban HVAC Blend Door Actuator Cam Lever"
+slug: "chevrolet-gm-silverado-tahoe-suburban-hvac-blend-door-actuator-cam-lever-89018365"
+oem_part_number: "89018365"
+superseded_numbers:
+  - "6844410"
+  - "15-72971"
+  - "52402588"
+compatible_vehicles_and_appliances:
+  - make: "Chevrolet"
+    model: "Silverado 1500 / 2500 / 3500"
+    year_start: 1999
+    year_end: 2013
+  - make: "Chevrolet"
+    model: "Tahoe / Suburban"
+    year_start: 2000
+    year_end: 2014
+  - make: "GMC"
+    model: "Sierra / Yukon"
+    year_start: 1999
+    year_end: 2013
+  - make: "Cadillac"
+    model: "Escalade"
+    year_start: 2002
+    year_end: 2014
+material: "Nylon PA12"
+price_cents: null
+price_formatted: "Free STL Only"
+is_commercial_allowed: false
+license: "CC BY 4.0"
+download_stl_url: "https://barebones3d.com/assets/stl/chevrolet-gm-silverado-tahoe-suburban-hvac-blend-door-actuator-cam-lever-89018365.stl"
+checkout_api_url: null
+canonical_guide_url: "https://barebones3d.com/guides/chevrolet-gm-silverado-tahoe-suburban-hvac-blend-door-actuator-cam-lever-89018365"
+---
+
+# GM Silverado / Tahoe / Suburban HVAC Blend Door Actuator Cam Lever (OEM #89018365)
+
+## Technical Specifications
+- **Primary OEM Part #:** `89018365`
+- **Engineering Material:** Nylon PA12 (100% solid infill, calibrated printer compensation)
+- **Repair Difficulty:** Moderate
+- **Estimated Repair Time:** 40 mins
+- **Commercial Purchase:** Digital STL Only (Commercial reproduction restricted by author license)
+- **Direct STL Download:** [89018365.stl](https://barebones3d.com/assets/stl/chevrolet-gm-silverado-tahoe-suburban-hvac-blend-door-actuator-cam-lever-89018365.stl)
+- **Amazon OEM & Hardware Search:** [Check Price & Availability on Amazon](https://www.amazon.com/s?k=Silverado%20Tahoe%20HVAC%20blend%20door%20actuator%20gear%20cam%20lever%2089018365&tag=barebones3dco-20)
+
+## Required Tools & Supplies
+- **[7/32 inch (5.5mm) Socket & Ratchet](https://www.amazon.com/s?k=7%2F32%20inch%205.5mm%20Socket%20Ratchet&tag=barebones3dco-20)**: Remove actuator mounting screws under dash *(Search on Amazon)*
+- **[Right Angle Ratchet Driver](https://www.amazon.com/s?k=Right%20Angle%20Ratchet%20Driver&tag=barebones3dco-20)**: Access tight lower dash clearance *(Search on Amazon)*
+
+## Step-by-Step Installation Procedure
+### Step 1: Drop Lower Passenger Footwell Cover
+
+Remove the three plastic trim retainers and swing the lower insulator panel down to expose the HVAC airbox.
+
+![Original broken plastic GM Silverado / Tahoe / Suburban HVAC Blend Door Actuator Cam Lever (OEM #89018365) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/89018365-chevrolet-gm-silverado-tahoe-suburban-hvac-blend-door-actuator-cam-lever-89018365-step-1.webp)
+
+### Step 2: Unbolt Blend Door Actuator
+
+Disconnect electrical connector and remove the two 5.5mm screws securing the blend door actuator.
+
+![Original broken plastic GM Silverado / Tahoe / Suburban HVAC Blend Door Actuator Cam Lever (OEM #89018365) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/89018365-chevrolet-gm-silverado-tahoe-suburban-hvac-blend-door-actuator-cam-lever-89018365-step-2.webp)
+
+### Step 3: Inspect & Extract Split D-Bore Cam
+
+Pull the cracked factory cam lever off the fluted blend door shaft and inspect splines for debris.
+
+![Original broken plastic GM Silverado / Tahoe / Suburban HVAC Blend Door Actuator Cam Lever (OEM #89018365) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/89018365-chevrolet-gm-silverado-tahoe-suburban-hvac-blend-door-actuator-cam-lever-89018365-step-3.webp)
+
+### Step 4: Press Fit Reinforced Nylon PA12 Cam
+
+Align keyway and press the reinforced Nylon PA12 cam firmly over the fluted blend door axle.
+
+![Original broken plastic GM Silverado / Tahoe / Suburban HVAC Blend Door Actuator Cam Lever (OEM #89018365) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/89018365-chevrolet-gm-silverado-tahoe-suburban-hvac-blend-door-actuator-cam-lever-89018365-step-4.webp)
+
+### Step 5: Reinstall Actuator & Run HVAC Re-learn
+
+Torque screws, plug harness, pull HVAC fuse for 60s, then start engine and allow auto-calibration.
+
+![Original broken plastic GM Silverado / Tahoe / Suburban HVAC Blend Door Actuator Cam Lever (OEM #89018365) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/89018365-chevrolet-gm-silverado-tahoe-suburban-hvac-blend-door-actuator-cam-lever-89018365-step-5.webp)
+
+## Frequently Asked Questions
+#### Q: Why does the blend door continuously click?
+**A:** The split D-bore slips on the fluted metal shaft; the motor senses no resistance and keeps rotating indefinitely.
+
+#### Q: Does this require pulling the entire dashboard?
+**A:** No. Dealerships book 6+ hours dashboard removal, but this lever presses on from the footwell.
+
+## Open-Source Attribution & Safety Disclaimer
+Barebones 3D Engineering Lab CAD under development.
+Original Source: https://barebones3d.com/guides/chevrolet-gm-silverado-tahoe-suburban-hvac-blend-door-actuator-cam-lever-89018365/#cad-waitlist
+
+> **Legal Disclaimer:** Barebones 3D, L.L.C. is an independent engineering firm. This replacement component is an aftermarket reproduction designed for personal repair, restoration, and life-extension. Barebones 3D is not affiliated with, authorized by, sponsored by, or endorsed by the original equipment manufacturer. All trademarks and OEM part numbers are referenced solely for identification and compatibility purposes.
+
+
+---
+
+---
+title: "Jeep Grand Cherokee / Dodge Durango Sun Visor Pivot Support Bracket"
+slug: "jeep-grand-cherokee-dodge-durango-sun-visor-pivot-support-bracket-5fs40dx9aa"
+oem_part_number: "5FS40DX9AA"
+superseded_numbers:
+  - "5FS40TL2AA"
+  - "1AR26BD1AA"
+compatible_vehicles_and_appliances:
+  - make: "Jeep"
+    model: "Grand Cherokee WK2"
+    year_start: 2011
+    year_end: 2022
+  - make: "Dodge"
+    model: "Durango"
+    year_start: 2011
+    year_end: 2023
+material: "Automotive ASA"
+price_cents: 1950
+price_formatted: "$19.50 USD"
+is_commercial_allowed: true
+license: "CC BY 4.0"
+download_stl_url: "https://barebones3d.com/assets/stl/jeep-grand-cherokee-dodge-durango-sun-visor-pivot-support-bracket-5fs40dx9aa.stl"
+checkout_api_url: "https://barebones3d.com/api/checkout/create"
+canonical_guide_url: "https://barebones3d.com/guides/jeep-grand-cherokee-dodge-durango-sun-visor-pivot-support-bracket-5fs40dx9aa"
+---
+
+# Jeep Grand Cherokee / Dodge Durango Sun Visor Pivot Support Bracket (OEM #5FS40DX9AA)
+
+## Technical Specifications
+- **Primary OEM Part #:** `5FS40DX9AA`
+- **Engineering Material:** Automotive ASA (100% solid infill, calibrated printer compensation)
+- **Repair Difficulty:** Easy
+- **Estimated Repair Time:** 15 mins
+- **Commercial Purchase:** $19.50 USD (Printed on-demand in 48h via Slant 3D)
+- **Direct STL Download:** [5FS40DX9AA.stl](https://barebones3d.com/assets/stl/jeep-grand-cherokee-dodge-durango-sun-visor-pivot-support-bracket-5fs40dx9aa.stl)
+- **Amazon OEM & Hardware Search:** [Check Price & Availability on Amazon](https://www.amazon.com/s?k=Jeep%20Grand%20Cherokee%20sun%20visor%20repair%20clip%20bracket%20metal%20reinforcement&tag=barebones3dco-20)
+
+## Required Tools & Supplies
+- **[Torx T20 Driver](https://www.amazon.com/s?k=Torx%20T20%20Driver&tag=barebones3dco-20)**: Loosen headliner visor mount screw *(Search on Amazon)*
+- **[Nylon Trim Pry Tool](https://www.amazon.com/s?k=Nylon%20Trim%20Pry%20Tool&tag=barebones3dco-20)**: Pry open plastic screw concealment cap *(Search on Amazon)*
+
+## Step-by-Step Installation Procedure
+### Step 1: Pop Concealment Trim Cap
+
+Use a thin nylon pry wedge to flip open the rectangular hinge screw cover on the headliner.
+
+![Original broken plastic Jeep Grand Cherokee / Dodge Durango Sun Visor Pivot Support Bracket (OEM #5FS40DX9AA) shown side-by-side with reinforced 3D printed Automotive ASA reproduction.](https://barebones3d.com/assets/parts/5fs40dx9aa-jeep-grand-cherokee-dodge-durango-sun-visor-pivot-support-bracket-5fs40dx9aa-step-1.webp)
+
+### Step 2: Extract OEM Pivot Screw
+
+Remove the single Torx T20 fastener securing the fractured visor bracket elbow to the inner roof roof bow.
+
+![Original broken plastic Jeep Grand Cherokee / Dodge Durango Sun Visor Pivot Support Bracket (OEM #5FS40DX9AA) shown side-by-side with reinforced 3D printed Automotive ASA reproduction.](https://barebones3d.com/assets/parts/5fs40dx9aa-jeep-grand-cherokee-dodge-durango-sun-visor-pivot-support-bracket-5fs40dx9aa-step-2.webp)
+
+### Step 3: Slide Off Broken Collar
+
+Slide the split OEM plastic bracket sleeve off the visor metal pivot rod.
+
+![Original broken plastic Jeep Grand Cherokee / Dodge Durango Sun Visor Pivot Support Bracket (OEM #5FS40DX9AA) shown side-by-side with reinforced 3D printed Automotive ASA reproduction.](https://barebones3d.com/assets/parts/5fs40dx9aa-jeep-grand-cherokee-dodge-durango-sun-visor-pivot-support-bracket-5fs40dx9aa-step-3.webp)
+
+### Step 4: Install Reinforced ASA Bracket
+
+Slide the UV-resistant Automotive ASA bracket over the rod and tighten T20 screw to 2.5 Nm.
+
+![Original broken plastic Jeep Grand Cherokee / Dodge Durango Sun Visor Pivot Support Bracket (OEM #5FS40DX9AA) shown side-by-side with reinforced 3D printed Automotive ASA reproduction.](https://barebones3d.com/assets/parts/5fs40dx9aa-jeep-grand-cherokee-dodge-durango-sun-visor-pivot-support-bracket-5fs40dx9aa-step-4.webp)
+
+## Frequently Asked Questions
+#### Q: Why use ASA instead of PLA?
+**A:** Headliners reach over 75°C in direct sun. Standard PLA deforms at 55°C, while Automotive ASA resists 100°C.
+
+#### Q: Does this require cutting visor wiring?
+**A:** No. The bracket features a precision slip-channel to clear the vanity mirror wiring harness.
+
+## Open-Source Attribution & Safety Disclaimer
+Designed by EarSee on Thingiverse under CC BY 4.0
+Original Source: https://www.thingiverse.com/thing:3111425
+
+> **Legal Disclaimer:** Barebones 3D, L.L.C. is an independent engineering firm. This replacement component is an aftermarket reproduction designed for personal repair, restoration, and life-extension. Barebones 3D is not affiliated with, authorized by, sponsored by, or endorsed by the original equipment manufacturer. All trademarks and OEM part numbers are referenced solely for identification and compatibility purposes.
+
+
+---
+
+---
+title: "Jeep Grand Cherokee WJ Dual-Zone HVAC Blend Door Actuator Split Gear"
+slug: "jeep-wj-grand-cherokee-blend-door-gear-5012710aa"
+oem_part_number: "5012710AA"
+superseded_numbers:
+  - "5012710AB"
+  - "5012710"
+  - "68072190AA"
+compatible_vehicles_and_appliances:
+  - make: "Jeep"
+    model: "Grand Cherokee WJ"
+    year_start: 1999
+    year_end: 2004
+material: "Nylon PA12"
+price_cents: 2400
+price_formatted: "$24.00 USD"
+is_commercial_allowed: true
+license: "CC0 1.0"
+download_stl_url: "https://barebones3d.com/assets/stl/jeep-wj-grand-cherokee-blend-door-gear-5012710aa.stl"
+checkout_api_url: "https://barebones3d.com/api/checkout/create"
+canonical_guide_url: "https://barebones3d.com/guides/jeep-wj-grand-cherokee-blend-door-gear-5012710aa"
+---
+
+# Jeep Grand Cherokee WJ Dual-Zone HVAC Blend Door Actuator Split Gear (OEM #5012710AA)
+
+## Technical Specifications
+- **Primary OEM Part #:** `5012710AA`
+- **Engineering Material:** Nylon PA12 (100% solid infill, calibrated printer compensation)
+- **Repair Difficulty:** Moderate
+- **Estimated Repair Time:** 45 mins
+- **Commercial Purchase:** $24.00 USD (Printed on-demand in 48h via Slant 3D)
+- **Direct STL Download:** [5012710AA.stl](https://barebones3d.com/assets/stl/jeep-wj-grand-cherokee-blend-door-gear-5012710aa.stl)
+- **Amazon OEM & Hardware Search:** [Check Price & Availability on Amazon](https://www.amazon.com/s?k=Jeep%20Grand%20Cherokee%20WJ%20blend%20door%20repair%20kit%20metal%205012710AA&tag=barebones3dco-20)
+
+## Required Tools & Supplies
+- **[Torx T20 Driver](https://www.amazon.com/s?k=Torx%20T20%20Driver&tag=barebones3dco-20)**: Lower dash kick panel fasteners *(Search on Amazon)*
+- **[8mm Socket & Ratchet](https://www.amazon.com/s?k=8mm%20Socket%20Ratchet&tag=barebones3dco-20)**: HVAC blend door actuator motor bolts *(Search on Amazon)*
+- **[White Lithium Grease](https://www.amazon.com/s?k=White%20Lithium%20Grease&tag=barebones3dco-20)**: Actuator drive gear lubrication *(Search on Amazon)*
+
+## Step-by-Step Installation Procedure
+### Step 1: Passenger Lower Glovebox Removal
+
+Drop the passenger glovebox compartment by releasing the side retaining tether and pivoting downward off the lower hinge hooks.
+
+![Original broken plastic Jeep Grand Cherokee WJ Dual-Zone HVAC Blend Door Actuator Split Gear (OEM #5012710AA) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/5012710aa-jeep-wj-grand-cherokee-blend-door-gear-5012710aa-step-1.webp)
+
+### Step 2: Extract Blend Door Actuator Motor
+
+Locate the black actuator housing on the bottom-right HVAC box. Remove the two 8mm hex bolts and disconnect the wire harness connector.
+
+![Original broken plastic Jeep Grand Cherokee WJ Dual-Zone HVAC Blend Door Actuator Split Gear (OEM #5012710AA) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/5012710aa-jeep-wj-grand-cherokee-blend-door-gear-5012710aa-step-2.webp)
+
+### Step 3: Inspect Cracked OEM Drive Gear
+
+Pry the actuator clamshell cover open. Remove the cracked OEM drive spur gear from the D-shaft output pin.
+
+![Original broken plastic Jeep Grand Cherokee WJ Dual-Zone HVAC Blend Door Actuator Split Gear (OEM #5012710AA) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/5012710aa-jeep-wj-grand-cherokee-blend-door-gear-5012710aa-step-3.webp)
+
+### Step 4: Install Calibrated Nylon PA12 Reproduction
+
+Clean old grease, apply fresh white lithium grease, and press the reinforced Nylon PA12 replacement gear onto the drive spline.
+
+![Original broken plastic Jeep Grand Cherokee WJ Dual-Zone HVAC Blend Door Actuator Split Gear (OEM #5012710AA) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/5012710aa-jeep-wj-grand-cherokee-blend-door-gear-5012710aa-step-4.webp)
+
+### Step 5: Re-indexing and Climate Sweep Test
+
+Reconnect wiring harness, key ignition to ON, and cycle temperature from Cold to Full Hot to verify full 90-degree flap stroke.
+
+![Original broken plastic Jeep Grand Cherokee WJ Dual-Zone HVAC Blend Door Actuator Split Gear (OEM #5012710AA) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/5012710aa-jeep-wj-grand-cherokee-blend-door-gear-5012710aa-step-5.webp)
+
+## Frequently Asked Questions
+#### Q: Why does the OEM Jeep WJ gear crack?
+**A:** The factory injection-molded nylon gear uses thin web walls adjacent to the D-flat shaft interface. Motor stall torque at end-stops combined with summer dashboard heat cycles causes catastrophic hoop stress cracking.
+
+#### Q: How does the +0.15mm tolerance compensation help?
+**A:** The D-bore is pre-widened by exactly +0.15mm to guarantee a snug hand press-fit over the motor steel shaft without binding.
+
+## Open-Source Attribution & Safety Disclaimer
+Modeled by Vojata, dedicated to the Public Domain under CC0 1.0.
+Original Source: https://www.printables.com/model/838965-grand-cherokee-blend-door-actuator-gear
+
+> **Legal Disclaimer:** Barebones 3D, L.L.C. is an independent engineering firm. This replacement component is an aftermarket reproduction designed for personal repair, restoration, and life-extension. Barebones 3D is not affiliated with, authorized by, sponsored by, or endorsed by the original equipment manufacturer. All trademarks and OEM part numbers are referenced solely for identification and compatibility purposes.
+
+
+---
+
+---
+title: "KitchenAid Stand Mixer Sacrificial Nylon Worm Follower Gear"
+slug: "kitchenaid-stand-mixer-sacrificial-nylon-worm-follower-gear-wp9709231"
+oem_part_number: "WP9709231"
+superseded_numbers:
+  - "9709231"
+  - "9706529"
+  - "4162897"
+compatible_vehicles_and_appliances:
+  - make: "KitchenAid"
+    model: "Artisan 5-Quart (KSM150)"
+  - make: "KitchenAid"
+    model: "Classic 4.5-Quart (K45SS)"
+  - make: "KitchenAid"
+    model: "Ultra Power Series (KSM90)"
+material: "PETG Heavy Duty"
+price_cents: null
+price_formatted: "Free STL Only"
+is_commercial_allowed: false
+license: "CC BY 4.0"
+download_stl_url: "https://barebones3d.com/assets/stl/kitchenaid-stand-mixer-sacrificial-nylon-worm-follower-gear-wp9709231.stl"
+checkout_api_url: null
+canonical_guide_url: "https://barebones3d.com/guides/kitchenaid-stand-mixer-sacrificial-nylon-worm-follower-gear-wp9709231"
+---
+
+# KitchenAid Stand Mixer Sacrificial Nylon Worm Follower Gear (OEM #WP9709231)
+
+## Technical Specifications
+- **Primary OEM Part #:** `WP9709231`
+- **Engineering Material:** PETG Heavy Duty (100% solid infill, calibrated printer compensation)
+- **Repair Difficulty:** Moderate
+- **Estimated Repair Time:** 45 mins
+- **Commercial Purchase:** Digital STL Only (Commercial reproduction restricted by author license)
+- **Direct STL Download:** [WP9709231.stl](https://barebones3d.com/assets/stl/kitchenaid-stand-mixer-sacrificial-nylon-worm-follower-gear-wp9709231.stl)
+- **Amazon OEM & Hardware Search:** [Check Price & Availability on Amazon](https://www.amazon.com/s?k=KitchenAid%20stand%20mixer%20worm%20follower%20gear%209709231%20food%20grade%20grease%20kit&tag=barebones3dco-20)
+
+## Required Tools & Supplies
+- **[Flathead Screwdriver](https://www.amazon.com/s?k=Flathead%20Screwdriver&tag=barebones3dco-20)**: Remove chrome trim band screws *(Search on Amazon)*
+- **[1/8 inch Pin Punch & Hammer](https://www.amazon.com/s?k=1%2F8%20inch%20Pin%20Punch%20Hammer&tag=barebones3dco-20)**: Drive out planetary planetary bevel drive roll pin *(Search on Amazon)*
+- **[Food Grade Gear Grease](https://www.amazon.com/s?k=Food%20Grade%20Gear%20Grease&tag=barebones3dco-20)**: Pack transmission gearbox *(Search on Amazon)*
+
+## Step-by-Step Installation Procedure
+### Step 1: Remove Trim Band and Planetary Pin
+
+Unscrew decorative chrome belly band and use 1/8 inch punch to drive out planetary lock pin.
+
+![Original broken plastic KitchenAid Stand Mixer Sacrificial Nylon Worm Follower Gear (OEM #WP9709231) shown side-by-side with reinforced 3D printed PETG Heavy Duty reproduction.](https://barebones3d.com/assets/parts/wp9709231-kitchenaid-stand-mixer-sacrificial-nylon-worm-follower-gear-wp9709231-step-1.webp)
+
+### Step 2: Open Upper Gear Housing
+
+Remove four housing screws and separate top motor housing to expose the transmission gear box.
+
+![Original broken plastic KitchenAid Stand Mixer Sacrificial Nylon Worm Follower Gear (OEM #WP9709231) shown side-by-side with reinforced 3D printed PETG Heavy Duty reproduction.](https://barebones3d.com/assets/parts/wp9709231-kitchenaid-stand-mixer-sacrificial-nylon-worm-follower-gear-wp9709231-step-2.webp)
+
+### Step 3: Extract Stripped Nylon Gear
+
+Slide off the bronze washer and lift out the stripped sacrificial nylon follower gear.
+
+![Original broken plastic KitchenAid Stand Mixer Sacrificial Nylon Worm Follower Gear (OEM #WP9709231) shown side-by-side with reinforced 3D printed PETG Heavy Duty reproduction.](https://barebones3d.com/assets/parts/wp9709231-kitchenaid-stand-mixer-sacrificial-nylon-worm-follower-gear-wp9709231-step-3.webp)
+
+### Step 4: Repack Grease & Install New Gear
+
+Pack gear teeth with NSF food-grade grease and seat replacement worm gear over drive tower.
+
+![Original broken plastic KitchenAid Stand Mixer Sacrificial Nylon Worm Follower Gear (OEM #WP9709231) shown side-by-side with reinforced 3D printed PETG Heavy Duty reproduction.](https://barebones3d.com/assets/parts/wp9709231-kitchenaid-stand-mixer-sacrificial-nylon-worm-follower-gear-wp9709231-step-4.webp)
+
+### Step 5: Realign Planetary & Fasten Casing
+
+Rejoin housing, reinsert and stake roll pin, and run mixer on speed 1 for 2 minutes to distribute grease.
+
+![Original broken plastic KitchenAid Stand Mixer Sacrificial Nylon Worm Follower Gear (OEM #WP9709231) shown side-by-side with reinforced 3D printed PETG Heavy Duty reproduction.](https://barebones3d.com/assets/parts/wp9709231-kitchenaid-stand-mixer-sacrificial-nylon-worm-follower-gear-wp9709231-step-5.webp)
+
+## Frequently Asked Questions
+#### Q: Why is this gear intentionally made of nylon?
+**A:** It acts as a mechanical fuse. If dough hooks jam, the gear strips to protect the costly electric drive motor.
+
+#### Q: Why choose the Amazon kit over custom 3D printing?
+**A:** Injection-molded replacement gears packaged with NSF food-grade grease are available on Amazon for under $10.
+
+## Open-Source Attribution & Safety Disclaimer
+Designed by jhon614 on Thingiverse under CC BY 4.0
+Original Source: https://www.thingiverse.com/thing:6687440
+
+> **Legal Disclaimer:** Barebones 3D, L.L.C. is an independent engineering firm. This replacement component is an aftermarket reproduction designed for personal repair, restoration, and life-extension. Barebones 3D is not affiliated with, authorized by, sponsored by, or endorsed by the original equipment manufacturer. All trademarks and OEM part numbers are referenced solely for identification and compatibility purposes.
+
+
+---
+
+---
+title: "Makita 18V LXT Lithium-Ion Battery Terminal Protector Cover"
+slug: "makita-18v-battery-terminal-protector-cover-122049-9"
+oem_part_number: "122049-9"
+superseded_numbers:
+  - "450128-8"
+  - "643852-7"
+compatible_vehicles_and_appliances:
+  - make: "Makita"
+    model: "18V LXT BL1815 / BL1830 / BL1840 / BL1850 / BL1860"
+material: "PETG Heavy Duty"
+price_cents: 1400
+price_formatted: "$14.00 USD"
+is_commercial_allowed: true
+license: "CC BY 4.0"
+download_stl_url: "https://barebones3d.com/assets/stl/makita-18v-battery-terminal-protector-cover-122049-9.stl"
+checkout_api_url: "https://barebones3d.com/api/checkout/create"
+canonical_guide_url: "https://barebones3d.com/guides/makita-18v-battery-terminal-protector-cover-122049-9"
+---
+
+# Makita 18V LXT Lithium-Ion Battery Terminal Protector Cover (OEM #122049-9)
+
+## Technical Specifications
+- **Primary OEM Part #:** `122049-9`
+- **Engineering Material:** PETG Heavy Duty (100% solid infill, calibrated printer compensation)
+- **Repair Difficulty:** Beginner
+- **Estimated Repair Time:** 1 min
+- **Commercial Purchase:** $14.00 USD (Printed on-demand in 48h via Slant 3D)
+- **Direct STL Download:** [122049-9.stl](https://barebones3d.com/assets/stl/makita-18v-battery-terminal-protector-cover-122049-9.stl)
+- **Amazon OEM & Hardware Search:** [Check Price & Availability on Amazon](https://www.amazon.com/s?k=Makita%2018V%20battery%20terminal%20cover%20protector%20cap%20122049-9&tag=barebones3dco-20)
+
+## Required Tools & Supplies
+- **[Direct Snap Tool](https://www.amazon.com/s?k=Direct%20Snap%20Tool&tag=barebones3dco-20)**: No tools required for terminal slide clip *(Search on Amazon)*
+
+## Step-by-Step Installation Procedure
+### Step 1: Inspect Terminal Rails
+
+Ensure the metal terminal contact blades of your Makita LXT 18V battery pack are clean and free of metal filings or conductive debris.
+
+![Original broken plastic Makita 18V LXT Lithium-Ion Battery Terminal Protector Cover (OEM #122049-9) shown side-by-side with reinforced 3D printed PETG Heavy Duty reproduction.](https://barebones3d.com/assets/parts/122049-9-makita-18v-battery-terminal-protector-cover-122049-9-step-1.webp)
+
+### Step 2: Slide Protector Cover into Retention Grooves
+
+Align the dual guide rails of the printed cover with the battery slide channels. Push firmly forward until the mechanical latch engages with a solid click.
+
+![Original broken plastic Makita 18V LXT Lithium-Ion Battery Terminal Protector Cover (OEM #122049-9) shown side-by-side with reinforced 3D printed PETG Heavy Duty reproduction.](https://barebones3d.com/assets/parts/122049-9-makita-18v-battery-terminal-protector-cover-122049-9-step-2.webp)
+
+## Frequently Asked Questions
+#### Q: Why is a terminal protector essential for Makita 18V batteries?
+**A:** Makita 18V LXT battery terminal blades are exposed during transport in toolboxes and trucks. Accidental shorting against loose fasteners or keys can damage the internal protection PCB or cause a fire.
+
+## Open-Source Attribution & Safety Disclaimer
+Designed by hormigaazul on Thingiverse under CC BY 4.0.
+Original Source: https://www.thingiverse.com/thing:1625902
+
+> **Legal Disclaimer:** Barebones 3D, L.L.C. is an independent engineering firm. This replacement component is an aftermarket reproduction designed for personal repair, restoration, and life-extension. Barebones 3D is not affiliated with, authorized by, sponsored by, or endorsed by the original equipment manufacturer. All trademarks and OEM part numbers are referenced solely for identification and compatibility purposes.
+
+
+---
+
+---
+title: "Makita 1900B / KP0800K Power Hand Planer Drive Belt Tensioner Retainer"
+slug: "makita-hand-planer-belt-tensioner-retainer-341071-7"
+oem_part_number: "341071-7"
+superseded_numbers:
+  - "3410717"
+  - "225007-7"
+compatible_vehicles_and_appliances:
+  - make: "Makita"
+    model: "1900B Hand Planer"
+  - make: "Makita"
+    model: "1902"
+  - make: "Makita"
+    model: "KP0800K"
+material: "High-Temp Nylon PA12"
+price_cents: null
+price_formatted: "Free STL Only"
+is_commercial_allowed: false
+license: "Proprietary Spec"
+download_stl_url: "https://barebones3d.com/assets/stl/makita-hand-planer-belt-tensioner-retainer-341071-7.stl"
+checkout_api_url: null
+canonical_guide_url: "https://barebones3d.com/guides/makita-hand-planer-belt-tensioner-retainer-341071-7"
+---
+
+# Makita 1900B / KP0800K Power Hand Planer Drive Belt Tensioner Retainer (OEM #341071-7)
+
+## Technical Specifications
+- **Primary OEM Part #:** `341071-7`
+- **Engineering Material:** High-Temp Nylon PA12 (100% solid infill, calibrated printer compensation)
+- **Repair Difficulty:** Easy
+- **Estimated Repair Time:** 15 mins
+- **Commercial Purchase:** Digital STL Only (Commercial reproduction restricted by author license)
+- **Direct STL Download:** [341071-7.stl](https://barebones3d.com/assets/stl/makita-hand-planer-belt-tensioner-retainer-341071-7.stl)
+- **Amazon OEM & Hardware Search:** [Check Price & Availability on Amazon](https://www.amazon.com/s?k=Makita%201900B%20%2F%20KP0800K%20Power%20Hand%20Planer%20Drive%20Belt%20Tensioner%20Retainer%20OEM%20341071-7&tag=barebones3dco-20)
+
+## Required Tools & Supplies
+- **[Phillips #2 Screwdriver](https://www.amazon.com/s?k=Phillips%20%232%20Screwdriver&tag=barebones3dco-20)**: Drive belt shroud cover screws *(Search on Amazon)*
+
+## Step-by-Step Installation Procedure
+### Step 1: Remove Belt Protective Shroud
+
+Remove two screws on the side motor casing to access the cogged timing belt and tensioner guide.
+
+![Original broken plastic Makita 1900B / KP0800K Power Hand Planer Drive Belt Tensioner Retainer (OEM #341071-7) shown side-by-side with reinforced 3D printed High-Temp Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/341071-7-makita-hand-planer-belt-tensioner-retainer-341071-7-step-1.webp)
+
+## Frequently Asked Questions
+#### Q: Why is High-Temp Nylon required?
+**A:** Motor drive pulleys run at 16,000 RPM, creating localized frictional heat.
+
+## Open-Source Attribution & Safety Disclaimer
+Barebones 3D Engineering Lab CAD under development.
+Original Source: https://barebones3d.com/guides/makita-hand-planer-belt-tensioner-retainer-341071-7/#cad-waitlist
+
+> **Legal Disclaimer:** Barebones 3D, L.L.C. is an independent engineering firm. This replacement component is an aftermarket reproduction designed for personal repair, restoration, and life-extension. Barebones 3D is not affiliated with, authorized by, sponsored by, or endorsed by the original equipment manufacturer. All trademarks and OEM part numbers are referenced solely for identification and compatibility purposes.
+
+
+---
+
+---
+title: "Makita DCL180 / XLC02 18V Cordless Vacuum Dust Capsule Housing Lock Latch"
+slug: "makita-cordless-vacuum-dust-capsule-latch-452205-2"
+oem_part_number: "452205-2"
+superseded_numbers:
+  - "451241-5"
+  - "4522052"
+compatible_vehicles_and_appliances:
+  - make: "Makita"
+    model: "DCL180"
+  - make: "Makita"
+    model: "DCL181F"
+  - make: "Makita"
+    model: "XLC02Z 18V Cordless Vacuums"
+material: "Nylon PA12"
+price_cents: null
+price_formatted: "Free STL Only"
+is_commercial_allowed: false
+license: "Proprietary Spec"
+download_stl_url: "https://barebones3d.com/assets/stl/makita-cordless-vacuum-dust-capsule-latch-452205-2.stl"
+checkout_api_url: null
+canonical_guide_url: "https://barebones3d.com/guides/makita-cordless-vacuum-dust-capsule-latch-452205-2"
+---
+
+# Makita DCL180 / XLC02 18V Cordless Vacuum Dust Capsule Housing Lock Latch (OEM #452205-2)
+
+## Technical Specifications
+- **Primary OEM Part #:** `452205-2`
+- **Engineering Material:** Nylon PA12 (100% solid infill, calibrated printer compensation)
+- **Repair Difficulty:** Easy
+- **Estimated Repair Time:** 10 mins
+- **Commercial Purchase:** Digital STL Only (Commercial reproduction restricted by author license)
+- **Direct STL Download:** [452205-2.stl](https://barebones3d.com/assets/stl/makita-cordless-vacuum-dust-capsule-latch-452205-2.stl)
+- **Amazon OEM & Hardware Search:** [Check Price & Availability on Amazon](https://www.amazon.com/s?k=Makita%20DCL180%20%2F%20XLC02%2018V%20Cordless%20Vacuum%20Dust%20Capsule%20Housing%20Lock%20Latch%20OEM%20452205-2&tag=barebones3dco-20)
+
+## Required Tools & Supplies
+- **[Small Pick Tool](https://www.amazon.com/s?k=Small%20Pick%20Tool&tag=barebones3dco-20)**: Housing pivot spring engagement *(Search on Amazon)*
+
+## Step-by-Step Installation Procedure
+### Step 1: Unhook Pivot Return Spring
+
+Use a small pick to release the wire torsion spring from the broken latch pivot ear.
+
+![Original broken plastic Makita DCL180 / XLC02 18V Cordless Vacuum Dust Capsule Housing Lock Latch (OEM #452205-2) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/452205-2-makita-cordless-vacuum-dust-capsule-latch-452205-2-step-1.webp)
+
+## Frequently Asked Questions
+#### Q: When will this part ship?
+**A:** Engineering validation of the snap-fit retention barb is underway.
+
+## Open-Source Attribution & Safety Disclaimer
+Barebones 3D Engineering Lab CAD under development.
+Original Source: https://barebones3d.com/guides/makita-cordless-vacuum-dust-capsule-latch-452205-2/#cad-waitlist
+
+> **Legal Disclaimer:** Barebones 3D, L.L.C. is an independent engineering firm. This replacement component is an aftermarket reproduction designed for personal repair, restoration, and life-extension. Barebones 3D is not affiliated with, authorized by, sponsored by, or endorsed by the original equipment manufacturer. All trademarks and OEM part numbers are referenced solely for identification and compatibility purposes.
+
+
+---
+
+---
+title: "Metabo HPT / Hitachi Coil Framing Nailer Transparent Safety Trigger Deflector"
+slug: "metabo-hpt-nailer-safety-trigger-deflector-316060190"
+oem_part_number: "316060190"
+superseded_numbers:
+  - "883-511"
+  - "883511"
+compatible_vehicles_and_appliances:
+  - make: "Metabo HPT"
+    model: "Hitachi / Metabo HPT NV83A2 / NV83A3 / NV83A5 Coil Framing Nailers"
+material: "Impact PETG"
+price_cents: null
+price_formatted: "Free STL Only"
+is_commercial_allowed: false
+license: "Proprietary Spec"
+download_stl_url: "https://barebones3d.com/assets/stl/metabo-hpt-nailer-safety-trigger-deflector-316060190.stl"
+checkout_api_url: null
+canonical_guide_url: "https://barebones3d.com/guides/metabo-hpt-nailer-safety-trigger-deflector-316060190"
+---
+
+# Metabo HPT / Hitachi Coil Framing Nailer Transparent Safety Trigger Deflector (OEM #316060190)
+
+## Technical Specifications
+- **Primary OEM Part #:** `316060190`
+- **Engineering Material:** Impact PETG (100% solid infill, calibrated printer compensation)
+- **Repair Difficulty:** Moderate
+- **Estimated Repair Time:** 15 mins
+- **Commercial Purchase:** Digital STL Only (Commercial reproduction restricted by author license)
+- **Direct STL Download:** [316060190.stl](https://barebones3d.com/assets/stl/metabo-hpt-nailer-safety-trigger-deflector-316060190.stl)
+- **Amazon OEM & Hardware Search:** [Check Price & Availability on Amazon](https://www.amazon.com/s?k=Metabo%20HPT%20%2F%20Hitachi%20Coil%20Framing%20Nailer%20Transparent%20Safety%20Trigger%20Deflector%20OEM%20316060190&tag=barebones3dco-20)
+
+## Required Tools & Supplies
+- **[Roll Pin Punch 3mm](https://www.amazon.com/s?k=Roll%20Pin%20Punch%203mm&tag=barebones3dco-20)**: Trigger safety bracket pivot roll pin *(Search on Amazon)*
+
+## Step-by-Step Installation Procedure
+### Step 1: Drive Out Trigger Roll Pin
+
+Use a 3mm punch to tap out the spring-loaded roll pin holding the chipped deflector shield.
+
+![Original broken plastic Metabo HPT / Hitachi Coil Framing Nailer Transparent Safety Trigger Deflector (OEM #316060190) shown side-by-side with reinforced 3D printed Impact PETG reproduction.](https://barebones3d.com/assets/parts/316060190-metabo-hpt-nailer-safety-trigger-deflector-316060190-step-1.webp)
+
+## Frequently Asked Questions
+#### Q: Why is Impact PETG used?
+**A:** High flexural modulus absorbs repeated jobsite ricochets without shattering.
+
+## Open-Source Attribution & Safety Disclaimer
+Barebones 3D Engineering Lab CAD under development.
+Original Source: https://barebones3d.com/guides/metabo-hpt-nailer-safety-trigger-deflector-316060190/#cad-waitlist
+
+> **Legal Disclaimer:** Barebones 3D, L.L.C. is an independent engineering firm. This replacement component is an aftermarket reproduction designed for personal repair, restoration, and life-extension. Barebones 3D is not affiliated with, authorized by, sponsored by, or endorsed by the original equipment manufacturer. All trademarks and OEM part numbers are referenced solely for identification and compatibility purposes.
+
+
+---
+
+---
+title: "Milwaukee M18 REDLITHIUM Battery Pack Locking Latch & Release Claws"
+slug: "milwaukee-m18-redlithium-battery-pack-locking-latch-release-claws-48-11-1850"
+oem_part_number: "48-11-1850"
+superseded_numbers:
+  - "48-11-1828"
+  - "48-11-1865"
+compatible_vehicles_and_appliances:
+  - make: "Milwaukee"
+    model: "M18 Compact 2.0Ah / 3.0Ah"
+  - make: "Milwaukee"
+    model: "M18 XC 4.0Ah / 5.0Ah / 6.0Ah"
+  - make: "Milwaukee"
+    model: "M18 High Output 6.0Ah / 8.0Ah / 12.0Ah"
+material: "Nylon PA12"
+price_cents: null
+price_formatted: "Free STL Only"
+is_commercial_allowed: false
+license: "CC BY 4.0"
+download_stl_url: "https://barebones3d.com/assets/stl/milwaukee-m18-redlithium-battery-pack-locking-latch-release-claws-48-11-1850.stl"
+checkout_api_url: null
+canonical_guide_url: "https://barebones3d.com/guides/milwaukee-m18-redlithium-battery-pack-locking-latch-release-claws-48-11-1850"
+---
+
+# Milwaukee M18 REDLITHIUM Battery Pack Locking Latch & Release Claws (OEM #48-11-1850)
+
+## Technical Specifications
+- **Primary OEM Part #:** `48-11-1850`
+- **Engineering Material:** Nylon PA12 (100% solid infill, calibrated printer compensation)
+- **Repair Difficulty:** Easy
+- **Estimated Repair Time:** 20 mins
+- **Commercial Purchase:** Digital STL Only (Commercial reproduction restricted by author license)
+- **Direct STL Download:** [48-11-1850.stl](https://barebones3d.com/assets/stl/milwaukee-m18-redlithium-battery-pack-locking-latch-release-claws-48-11-1850.stl)
+- **Amazon OEM & Hardware Search:** [Check Price & Availability on Amazon](https://www.amazon.com/s?k=Milwaukee%20M18%20battery%20case%20replacement%20shell%20latches%20springs&tag=barebones3dco-20)
+
+## Required Tools & Supplies
+- **[Torx T10 Security Screwdriver](https://www.amazon.com/s?k=Torx%20T10%20Security%20Screwdriver&tag=barebones3dco-20)**: Remove tamper-proof case bottom screws *(Search on Amazon)*
+- **[Tweezers / Pick Tool](https://www.amazon.com/s?k=Tweezers%20%2F%20Pick%20Tool&tag=barebones3dco-20)**: Seat latch compression coil springs *(Search on Amazon)*
+
+## Step-by-Step Installation Procedure
+### Step 1: Extract Tamper-Proof T10 Screws
+
+Remove the 4 Torx T10 security screws located in the recessed corners of the battery bottom casing.
+
+![Original broken plastic Milwaukee M18 REDLITHIUM Battery Pack Locking Latch & Release Claws (OEM #48-11-1850) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/48-11-1850-milwaukee-m18-redlithium-battery-pack-locking-latch-release-claws-48-11-1850-step-1.webp)
+
+### Step 2: Separate Lower Battery Casing
+
+Lift top collar assembly slightly to expose the dual compression spring pockets without disturbing cells.
+
+![Original broken plastic Milwaukee M18 REDLITHIUM Battery Pack Locking Latch & Release Claws (OEM #48-11-1850) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/48-11-1850-milwaukee-m18-redlithium-battery-pack-locking-latch-release-claws-48-11-1850-step-2.webp)
+
+### Step 3: Remove Sheared Latch Ears
+
+Extract cracked latch bodies and retrieve original steel return springs from the side slide channels.
+
+![Original broken plastic Milwaukee M18 REDLITHIUM Battery Pack Locking Latch & Release Claws (OEM #48-11-1850) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/48-11-1850-milwaukee-m18-redlithium-battery-pack-locking-latch-release-claws-48-11-1850-step-3.webp)
+
+### Step 4: Slide In Nylon PA12 Latch Arms
+
+Slide new solid Nylon PA12 latches into the guide rails and seat return springs onto alignment studs.
+
+![Original broken plastic Milwaukee M18 REDLITHIUM Battery Pack Locking Latch & Release Claws (OEM #48-11-1850) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/48-11-1850-milwaukee-m18-redlithium-battery-pack-locking-latch-release-claws-48-11-1850-step-4.webp)
+
+### Step 5: Fasten Case & Test Tool Retention
+
+Reassemble housing, torque T10 screws to 1.8 Nm, and click battery into an M18 tool to test retention lock.
+
+![Original broken plastic Milwaukee M18 REDLITHIUM Battery Pack Locking Latch & Release Claws (OEM #48-11-1850) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/48-11-1850-milwaukee-m18-redlithium-battery-pack-locking-latch-release-claws-48-11-1850-step-5.webp)
+
+## Frequently Asked Questions
+#### Q: Can I replace latches without touching the internal lithium cells?
+**A:** Yes. The latches reside in an isolated side perimeter channel; internal cell connections remain untouched.
+
+#### Q: Why is Nylon PA12 necessary for power tool latches?
+**A:** Power tools endure repeated high-vibration shocks and job site drops that will instantly fracture standard PLA or resin.
+
+## Open-Source Attribution & Safety Disclaimer
+Barebones 3D Engineering Lab CAD under development.
+Original Source: https://barebones3d.com/guides/milwaukee-m18-redlithium-battery-pack-locking-latch-release-claws-48-11-1850/#cad-waitlist
+
+> **Legal Disclaimer:** Barebones 3D, L.L.C. is an independent engineering firm. This replacement component is an aftermarket reproduction designed for personal repair, restoration, and life-extension. Barebones 3D is not affiliated with, authorized by, sponsored by, or endorsed by the original equipment manufacturer. All trademarks and OEM part numbers are referenced solely for identification and compatibility purposes.
+
+
+---
+
+---
+title: "Sony MDR-7506 / MDR-V6 Professional Headphone Swivel Yoke Hanger Bracket"
+slug: "sony-mdr-7506-headphone-swivel-yoke-hanger-3-255-731-01"
+oem_part_number: "3-255-731-01"
+superseded_numbers:
+  - "2-113-132-11"
+  - "2-113-133-11"
+  - "3-255-731-00"
+compatible_vehicles_and_appliances:
+  - make: "Sony"
+    model: "MDR-7506 Professional"
+  - make: "Sony"
+    model: "MDR-V6 Studio Monitor"
+  - make: "Sony"
+    model: "MDR-7504"
+material: "Nylon PA12"
+price_cents: 1900
+price_formatted: "$19.00 USD"
+is_commercial_allowed: true
+license: "CC BY 4.0"
+download_stl_url: "https://barebones3d.com/assets/stl/sony-mdr-7506-headphone-swivel-yoke-hanger-3-255-731-01.stl"
+checkout_api_url: "https://barebones3d.com/api/checkout/create"
+canonical_guide_url: "https://barebones3d.com/guides/sony-mdr-7506-headphone-swivel-yoke-hanger-3-255-731-01"
+---
+
+# Sony MDR-7506 / MDR-V6 Professional Headphone Swivel Yoke Hanger Bracket (OEM #3-255-731-01)
+
+## Technical Specifications
+- **Primary OEM Part #:** `3-255-731-01`
+- **Engineering Material:** Nylon PA12 (100% solid infill, calibrated printer compensation)
+- **Repair Difficulty:** Moderate
+- **Estimated Repair Time:** 20 mins
+- **Commercial Purchase:** $19.00 USD (Printed on-demand in 48h via Slant 3D)
+- **Direct STL Download:** [3-255-731-01.stl](https://barebones3d.com/assets/stl/sony-mdr-7506-headphone-swivel-yoke-hanger-3-255-731-01.stl)
+- **Amazon OEM & Hardware Search:** [Check Price & Availability on Amazon](https://www.amazon.com/s?k=Sony%20MDR-7506%20replacement%20slider%20hanger%20yoke%20repair%20parts&tag=barebones3dco-20)
+
+## Required Tools & Supplies
+- **[Phillips #00 Precision Screwdriver](https://www.amazon.com/s?k=Phillips%20%2300%20Precision%20Screwdriver&tag=barebones3dco-20)**: Unscrew headband pivot screws *(Search on Amazon)*
+- **[Precision Tweezers](https://www.amazon.com/s?k=Precision%20Tweezers&tag=barebones3dco-20)**: Route internal ear cup wiring *(Search on Amazon)*
+
+## Step-by-Step Installation Procedure
+### Step 1: Remove Hinge Retaining Screws
+
+Using a Phillips #00 screwdriver, extract the two micro-fasteners securing the cracked outer plastic hinge slider cap to the metal headband strip.
+
+![Original broken plastic Sony MDR-7506 / MDR-V6 Professional Headphone Swivel Yoke Hanger Bracket (OEM #3-255-731-01) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/3-255-731-01-sony-mdr-7506-headphone-swivel-yoke-hanger-3-255-731-01-step-1.webp)
+
+### Step 2: Carefully Unthread Audio Cable
+
+Gently guide the audio interconnect wire through the internal wire pass-through channel of the broken OEM yoke bracket without pulling on solder joints.
+
+![Original broken plastic Sony MDR-7506 / MDR-V6 Professional Headphone Swivel Yoke Hanger Bracket (OEM #3-255-731-01) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/3-255-731-01-sony-mdr-7506-headphone-swivel-yoke-hanger-3-255-731-01-step-2.webp)
+
+### Step 3: Seat Replacement Nylon PA12 Yoke
+
+Thread the audio wire through the reinforced replacement yoke and snap the pivot gimbal pin into the ear cup retention socket.
+
+![Original broken plastic Sony MDR-7506 / MDR-V6 Professional Headphone Swivel Yoke Hanger Bracket (OEM #3-255-731-01) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/3-255-731-01-sony-mdr-7506-headphone-swivel-yoke-hanger-3-255-731-01-step-3.webp)
+
+### Step 4: Reinstall Fasteners and Check Articulation
+
+Re-affix the outer slider cap and tighten screws snugly until firm. Confirm free 180-degree folding articulation and smooth swivel.
+
+![Original broken plastic Sony MDR-7506 / MDR-V6 Professional Headphone Swivel Yoke Hanger Bracket (OEM #3-255-731-01) shown side-by-side with reinforced 3D printed Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/3-255-731-01-sony-mdr-7506-headphone-swivel-yoke-hanger-3-255-731-01-step-4.webp)
+
+## Frequently Asked Questions
+#### Q: Why do Sony MDR-7506 yokes break?
+**A:** The factory plastic brackets are molded from brittle unreinforced polycarbonate that suffers fatigue cracking around the pivot pin stress concentrations after repeated folding in gig bags.
+
+## Open-Source Attribution & Safety Disclaimer
+Designed by SwitchAudio / thinkyhead on Thingiverse under CC BY 4.0.
+Original Source: https://www.thingiverse.com/thing:1052163
 
 > **Legal Disclaimer:** Barebones 3D, L.L.C. is an independent engineering firm. This replacement component is an aftermarket reproduction designed for personal repair, restoration, and life-extension. Barebones 3D is not affiliated with, authorized by, sponsored by, or endorsed by the original equipment manufacturer. All trademarks and OEM part numbers are referenced solely for identification and compatibility purposes.
 
@@ -142,12 +1809,12 @@ compatible_vehicles_and_appliances:
     year_start: 2013
     year_end: 2017
 material: "Nylon PA12"
-price_cents: 2600
-price_formatted: "$26.00 USD"
-is_commercial_allowed: true
+price_cents: null
+price_formatted: "Free STL Only"
+is_commercial_allowed: false
 license: "CC BY 4.0"
 download_stl_url: "https://barebones3d.com/assets/stl/subaru-blend-door-actuator-gear-72131-fg000.stl"
-checkout_api_url: "https://barebones3d.com/api/checkout/create"
+checkout_api_url: null
 canonical_guide_url: "https://barebones3d.com/guides/subaru-blend-door-actuator-gear-72131-fg000"
 ---
 
@@ -158,14 +1825,15 @@ canonical_guide_url: "https://barebones3d.com/guides/subaru-blend-door-actuator-
 - **Engineering Material:** Nylon PA12 (100% solid infill, calibrated printer compensation)
 - **Repair Difficulty:** Moderate
 - **Estimated Repair Time:** 45 mins
-- **Commercial Purchase:** $26.00 USD (Printed on-demand in 48h via Slant 3D)
+- **Commercial Purchase:** Digital STL Only (Commercial reproduction restricted by author license)
 - **Direct STL Download:** [72131-FG000.stl](https://barebones3d.com/assets/stl/subaru-blend-door-actuator-gear-72131-fg000.stl)
+- **Amazon OEM & Hardware Search:** [Check Price & Availability on Amazon](https://www.amazon.com/s?k=Subaru%20HVAC%20Blend%20Door%20Actuator%20Split%20Gear%20OEM%2072131-FG000&tag=barebones3dco-20)
 
 ## Required Tools & Supplies
-- **Phillips #2 Screwdriver**: Glove box trim screws
-- **Plastic Trim Pry Tool**: Lower dash kick panel clips
-- **7mm Hex Socket & Driver**: Actuator motor mounting bolts
-- **White Lithium Grease**: Gear teeth lubrication
+- **[Phillips #2 Screwdriver](https://www.amazon.com/s?k=Phillips%20%232%20Screwdriver&tag=barebones3dco-20)**: Glove box trim screws *(Search on Amazon)*
+- **[Plastic Trim Pry Tool](https://www.amazon.com/s?k=Plastic%20Trim%20Pry%20Tool&tag=barebones3dco-20)**: Lower dash kick panel clips *(Search on Amazon)*
+- **[7mm Hex Socket & Driver](https://www.amazon.com/s?k=7mm%20Hex%20Socket%20Driver&tag=barebones3dco-20)**: Actuator motor mounting bolts *(Search on Amazon)*
+- **[White Lithium Grease](https://www.amazon.com/s?k=White%20Lithium%20Grease&tag=barebones3dco-20)**: Gear teeth lubrication *(Search on Amazon)*
 
 ## Step-by-Step Installation Procedure
 ### Step 1: Lower Dash & Glovebox Removal
@@ -215,8 +1883,163 @@ Snap the casing together, re-seat onto the HVAC box spline, reconnect the 5-pin 
 **A:** The free STL is engineered with a +0.15mm printer tolerance compensation for FDM. If printing on a Bambu or Prusa, slice at 0.12mm layer height and 100% infill.
 
 ## Open-Source Attribution & Safety Disclaimer
-Designed by SubieFix & Engineering Archive, distributed under CC BY 4.0.
-Original Source: https://www.printables.com/model/subaru-blend-door-gear
+Barebones 3D Engineering Lab CAD under development.
+Original Source: https://barebones3d.com/guides/subaru-blend-door-actuator-gear-72131-fg000/#cad-waitlist
+
+> **Legal Disclaimer:** Barebones 3D, L.L.C. is an independent engineering firm. This replacement component is an aftermarket reproduction designed for personal repair, restoration, and life-extension. Barebones 3D is not affiliated with, authorized by, sponsored by, or endorsed by the original equipment manufacturer. All trademarks and OEM part numbers are referenced solely for identification and compatibility purposes.
+
+
+---
+
+---
+title: "Technics SL-1200 / SL-1210 MK2 DJ Turntable Pitch Fader Dust Shutter Plate"
+slug: "technics-sl1200-pitch-fader-dust-shutter-plate-r-653"
+oem_part_number: "R-653"
+superseded_numbers:
+  - "R653"
+  - "SFBD122-01E"
+  - "SFBD12201"
+compatible_vehicles_and_appliances:
+  - make: "Technics"
+    model: "SL-1200MK2"
+  - make: "Technics"
+    model: "SL-1210MK2"
+  - make: "Technics"
+    model: "SL-1200M3D"
+  - make: "Technics"
+    model: "SL-1200MK5"
+material: "PETG Heavy Duty"
+price_cents: null
+price_formatted: "Free STL Only"
+is_commercial_allowed: false
+license: "Proprietary Spec"
+download_stl_url: "https://barebones3d.com/assets/stl/technics-sl1200-pitch-fader-dust-shutter-plate-r-653.stl"
+checkout_api_url: null
+canonical_guide_url: "https://barebones3d.com/guides/technics-sl1200-pitch-fader-dust-shutter-plate-r-653"
+---
+
+# Technics SL-1200 / SL-1210 MK2 DJ Turntable Pitch Fader Dust Shutter Plate (OEM #R-653)
+
+## Technical Specifications
+- **Primary OEM Part #:** `R-653`
+- **Engineering Material:** PETG Heavy Duty (100% solid infill, calibrated printer compensation)
+- **Repair Difficulty:** Moderate
+- **Estimated Repair Time:** 25 mins
+- **Commercial Purchase:** Digital STL Only (Commercial reproduction restricted by author license)
+- **Direct STL Download:** [R-653.stl](https://barebones3d.com/assets/stl/technics-sl1200-pitch-fader-dust-shutter-plate-r-653.stl)
+- **Amazon OEM & Hardware Search:** [Check Price & Availability on Amazon](https://www.amazon.com/s?k=Technics%20SL-1200%20%2F%20SL-1210%20MK2%20DJ%20Turntable%20Pitch%20Fader%20Dust%20Shutter%20Plate%20OEM%20R-653&tag=barebones3dco-20)
+
+## Required Tools & Supplies
+- **[Phillips #1 Screwdriver](https://www.amazon.com/s?k=Phillips%20%231%20Screwdriver&tag=barebones3dco-20)**: Top plate pitch assembly bracket screws *(Search on Amazon)*
+
+## Step-by-Step Installation Procedure
+### Step 1: Remove Platter and Top Faceplate
+
+Lift the aluminum platter off the center spindle, unbolt the outer chassis cover, and expose the pitch potentiometer.
+
+![Original broken plastic Technics SL-1200 / SL-1210 MK2 DJ Turntable Pitch Fader Dust Shutter Plate (OEM #R-653) shown side-by-side with reinforced 3D printed PETG Heavy Duty reproduction.](https://barebones3d.com/assets/parts/r-653-technics-sl1200-pitch-fader-dust-shutter-plate-r-653-step-1.webp)
+
+## Frequently Asked Questions
+#### Q: What does the shutter plate do?
+**A:** It seals the slider slot against club dust, smoke residue, and liquid spills, preventing pitch drift.
+
+## Open-Source Attribution & Safety Disclaimer
+Barebones 3D Engineering Lab CAD under development.
+Original Source: https://barebones3d.com/guides/technics-sl1200-pitch-fader-dust-shutter-plate-r-653/#cad-waitlist
+
+> **Legal Disclaimer:** Barebones 3D, L.L.C. is an independent engineering firm. This replacement component is an aftermarket reproduction designed for personal repair, restoration, and life-extension. Barebones 3D is not affiliated with, authorized by, sponsored by, or endorsed by the original equipment manufacturer. All trademarks and OEM part numbers are referenced solely for identification and compatibility purposes.
+
+
+---
+
+---
+title: "Toyota Tacoma Heater Control Valve Arm"
+slug: "toyota-toyota-tacoma-heater-control-valve-arm-87240-04020"
+oem_part_number: "87240-04020"
+superseded_numbers:
+  []
+compatible_vehicles_and_appliances:
+  - make: "Toyota"
+    model: "Tacoma"
+    year_start: 1995
+    year_end: 2004
+  - make: "Toyota"
+    model: "4Runner"
+    year_start: 1996
+    year_end: 2002
+material: "High-Temp Nylon PA12"
+price_cents: null
+price_formatted: "Free STL Only"
+is_commercial_allowed: false
+license: "CC BY 4.0"
+download_stl_url: "https://barebones3d.com/assets/stl/toyota-toyota-tacoma-heater-control-valve-arm-87240-04020.stl"
+checkout_api_url: null
+canonical_guide_url: "https://barebones3d.com/guides/toyota-toyota-tacoma-heater-control-valve-arm-87240-04020"
+---
+
+# Toyota Tacoma Heater Control Valve Arm (OEM #87240-04020)
+
+## Technical Specifications
+- **Primary OEM Part #:** `87240-04020`
+- **Engineering Material:** High-Temp Nylon PA12 (100% solid infill, calibrated printer compensation)
+- **Repair Difficulty:** Moderate
+- **Estimated Repair Time:** 35 mins
+- **Commercial Purchase:** Digital STL Only (Commercial reproduction restricted by author license)
+- **Direct STL Download:** [87240-04020.stl](https://barebones3d.com/assets/stl/toyota-toyota-tacoma-heater-control-valve-arm-87240-04020.stl)
+- **Amazon OEM & Hardware Search:** [Check Price & Availability on Amazon](https://www.amazon.com/s?k=Toyota%20Tacoma%20Heater%20Control%20Valve%20Arm%20OEM%2087240-04020&tag=barebones3dco-20)
+
+## Required Tools & Supplies
+- **[10mm Socket Wrench](https://www.amazon.com/s?k=10mm%20Socket%20Wrench&tag=barebones3dco-20)**: Firewall bracket mounting bolts *(Search on Amazon)*
+- **[Hose Pinch Pliers](https://www.amazon.com/s?k=Hose%20Pinch%20Pliers&tag=barebones3dco-20)**: Clamp heater core coolant hoses *(Search on Amazon)*
+- **[Needle-Nose Pliers](https://www.amazon.com/s?k=Needle-Nose%20Pliers&tag=barebones3dco-20)**: Cable retention spring clip *(Search on Amazon)*
+
+## Step-by-Step Installation Procedure
+### Step 1: Coolant Hose Clamping
+
+Clamp the inlet and outlet 5/8 inch coolant lines near the firewall to avoid draining the engine cooling system.
+
+> **Caution:** Ensure engine is cold before handling pressurized cooling hoses.
+
+![Original broken plastic Toyota Tacoma Heater Control Valve Arm (OEM #87240-04020) shown side-by-side with reinforced 3D printed High-Temp Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/87240-04020-toyota-toyota-tacoma-heater-control-valve-arm-87240-04020-step-1.webp)
+
+### Step 2: Bowden Cable Release
+
+Pry open the cable retention clip with needle nose pliers and slide the loop off the fractured OEM actuator arm pin.
+
+> **Pro Tip:** Mark cable jacket position with paint marker for zero-drift alignment.
+
+![Original broken plastic Toyota Tacoma Heater Control Valve Arm (OEM #87240-04020) shown side-by-side with reinforced 3D printed High-Temp Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/87240-04020-toyota-toyota-tacoma-heater-control-valve-arm-87240-04020-step-2.webp)
+
+### Step 3: Valve Spindle Inspection
+
+Wipe the brass valve spindle clean with rubbing alcohol. Confirm free 90-degree rotary movement without binding.
+
+![Original broken plastic Toyota Tacoma Heater Control Valve Arm (OEM #87240-04020) shown side-by-side with reinforced 3D printed High-Temp Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/87240-04020-toyota-toyota-tacoma-heater-control-valve-arm-87240-04020-step-3.webp)
+
+### Step 4: Reproduction Arm Installation
+
+Press-fit the reinforced Nylon PA12 replacement arm over the keyed brass shaft until it bottoms flush against the collar.
+
+> **Pro Tip:** The calibrated +0.15mm printer tolerance guarantees a snug press-fit without wobble.
+
+![Original broken plastic Toyota Tacoma Heater Control Valve Arm (OEM #87240-04020) shown side-by-side with reinforced 3D printed High-Temp Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/87240-04020-toyota-toyota-tacoma-heater-control-valve-arm-87240-04020-step-4.webp)
+
+### Step 5: Operational Cable Verification
+
+Cycle temperature selector knob inside the cab across full Cold-to-Hot range. Confirm full 90-degree valve sweep.
+
+![Original broken plastic Toyota Tacoma Heater Control Valve Arm (OEM #87240-04020) shown side-by-side with reinforced 3D printed High-Temp Nylon PA12 reproduction.](https://barebones3d.com/assets/parts/87240-04020-toyota-toyota-tacoma-heater-control-valve-arm-87240-04020-step-5.webp)
+
+## Frequently Asked Questions
+#### Q: Why choose this reinforced 3D printed High-Temp Nylon PA12 reproduction over brittle factory plastic?
+**A:** Factory OEM plastic degrades from thermal stress and UV fatigue. Our reproduction is 100% solid filled in industrial-grade High-Temp Nylon PA12 with calibrated tolerances (+0.15mm) to permanently eliminate brittle failure points.
+
+#### Q: How does the +0.15mm printer tolerance compensation affect installation?
+**A:** Internal bores and snap channels are widened by exactly +0.15mm to eliminate elephant-foot seam binding, allowing a direct hand press-fit without filing or drilling.
+
+## Open-Source Attribution & Safety Disclaimer
+Barebones 3D Engineering Lab CAD under development.
+Original Source: https://barebones3d.com/guides/toyota-toyota-tacoma-heater-control-valve-arm-87240-04020/#cad-waitlist
 
 > **Legal Disclaimer:** Barebones 3D, L.L.C. is an independent engineering firm. This replacement component is an aftermarket reproduction designed for personal repair, restoration, and life-extension. Barebones 3D is not affiliated with, authorized by, sponsored by, or endorsed by the original equipment manufacturer. All trademarks and OEM part numbers are referenced solely for identification and compatibility purposes.
 
@@ -259,10 +2082,11 @@ canonical_guide_url: "https://barebones3d.com/guides/toyota-tundra-air-vent-louv
 - **Estimated Repair Time:** 15 mins
 - **Commercial Purchase:** $15.00 USD (Printed on-demand in 48h via Slant 3D)
 - **Direct STL Download:** [55670-0C010.stl](https://barebones3d.com/assets/stl/toyota-tundra-air-vent-louver-tab-55670-0c010.stl)
+- **Amazon OEM & Hardware Search:** [Check Price & Availability on Amazon](https://www.amazon.com/s?k=Toyota%20Tundra%20%2F%20Sequoia%20Dash%20AC%20Air%20Vent%20Louver%20Tab%20OEM%2055670-0C010&tag=barebones3dco-20)
 
 ## Required Tools & Supplies
-- **Nylon Dash Pry Tool**: Bezel perimeter release
-- **Needle-Nose Pliers**: Remove broken rear linkage pin
+- **[Nylon Dash Pry Tool](https://www.amazon.com/s?k=Nylon%20Dash%20Pry%20Tool&tag=barebones3dco-20)**: Bezel perimeter release *(Search on Amazon)*
+- **[Needle-Nose Pliers](https://www.amazon.com/s?k=Needle-Nose%20Pliers&tag=barebones3dco-20)**: Remove broken rear linkage pin *(Search on Amazon)*
 
 ## Step-by-Step Installation Procedure
 ### Step 1: Protect Dash and Pry Vent Bezel
@@ -293,8 +2117,8 @@ Position the front grip tab over the central horizontal vane, then press the rea
 **A:** No. It is printed in ASA (Acrylonitrile Styrene Acrylate), which withstands temperatures up to 100°C without sagging and contains built-in UV stabilizers.
 
 ## Open-Source Attribution & Safety Disclaimer
-Model by OverlandHardware3D under CC BY 4.0.
-Original Source: https://www.printables.com/model/toyota-tundra-vent-tab-repair
+Model by merk420 on Thingiverse under CC BY 4.0
+Original Source: https://www.thingiverse.com/thing:4218653
 
 > **Legal Disclaimer:** Barebones 3D, L.L.C. is an independent engineering firm. This replacement component is an aftermarket reproduction designed for personal repair, restoration, and life-extension. Barebones 3D is not affiliated with, authorized by, sponsored by, or endorsed by the original equipment manufacturer. All trademarks and OEM part numbers are referenced solely for identification and compatibility purposes.
 
@@ -325,7 +2149,7 @@ material: "PETG"
 price_cents: null
 price_formatted: "Free STL Only"
 is_commercial_allowed: false
-license: "CC BY-NC 4.0"
+license: "CC BY 4.0"
 download_stl_url: "https://barebones3d.com/assets/stl/pioneer-turntable-anti-skate-arm-wa-104.stl"
 checkout_api_url: null
 canonical_guide_url: "https://barebones3d.com/guides/pioneer-turntable-anti-skate-arm-wa-104"
@@ -340,10 +2164,11 @@ canonical_guide_url: "https://barebones3d.com/guides/pioneer-turntable-anti-skat
 - **Estimated Repair Time:** 15 mins
 - **Commercial Purchase:** Digital STL Only (Commercial reproduction restricted by author license)
 - **Direct STL Download:** [WA-104.stl](https://barebones3d.com/assets/stl/pioneer-turntable-anti-skate-arm-wa-104.stl)
+- **Amazon OEM & Hardware Search:** [Check Price & Availability on Amazon](https://www.amazon.com/s?k=Vintage%20Pioneer%20PL-12D%20Tonearm%20Anti-Skate%20Weight%20Guide%20Arm%20OEM%20WA-104&tag=barebones3dco-20)
 
 ## Required Tools & Supplies
-- **0.050in Hex Allen Key**: Gimbal set screw
-- **Nylon Monofilament Line**: Anti-skate weight string
+- **[0.050in Hex Allen Key](https://www.amazon.com/s?k=0.050in%20Hex%20Allen%20Key&tag=barebones3dco-20)**: Gimbal set screw *(Search on Amazon)*
+- **[Nylon Monofilament Line](https://www.amazon.com/s?k=Nylon%20Monofilament%20Line&tag=barebones3dco-20)**: Anti-skate weight string *(Search on Amazon)*
 
 ## Step-by-Step Installation Procedure
 ### Step 1: Inspect Tonearm Pivot Housing
@@ -369,8 +2194,68 @@ Thread monofilament line through the notched guide wire and suspend the brass an
 **A:** The original designer released this 3D model under a Creative Commons Non-Commercial (CC BY-NC) license. Out of deep respect for open-source creator rights and licensing law, Barebones 3D does not sell commercial reproductions of NC-licensed parts. You can download the STL for free and 3D print it yourself for personal repair.
 
 ## Open-Source Attribution & Safety Disclaimer
-Original model by AudiophileRestorer under CC BY-NC 4.0 (Non-Commercial).
-Original Source: https://www.thingiverse.com/thing:pioneer-anti-skate
+Modeled by aflockofseacows on Thingiverse under CC BY 4.0
+Original Source: https://www.thingiverse.com/thing:3863488
+
+> **Legal Disclaimer:** Barebones 3D, L.L.C. is an independent engineering firm. This replacement component is an aftermarket reproduction designed for personal repair, restoration, and life-extension. Barebones 3D is not affiliated with, authorized by, sponsored by, or endorsed by the original equipment manufacturer. All trademarks and OEM part numbers are referenced solely for identification and compatibility purposes.
+
+
+---
+
+---
+title: "Volvo S60 / V60 / XC60 Fuel Filler Door Flap Hinge Bracket"
+slug: "volvo-fuel-filler-door-hinge-bracket-39886277"
+oem_part_number: "39886277"
+superseded_numbers:
+  - "31265160"
+  - "30742378"
+compatible_vehicles_and_appliances:
+  - make: "Volvo"
+    model: "S60 / V60"
+    year_start: 2011
+    year_end: 2018
+  - make: "Volvo"
+    model: "XC60"
+    year_start: 2010
+    year_end: 2017
+material: "Automotive ASA"
+price_cents: null
+price_formatted: "Free STL Only"
+is_commercial_allowed: false
+license: "Proprietary Spec"
+download_stl_url: "https://barebones3d.com/assets/stl/volvo-fuel-filler-door-hinge-bracket-39886277.stl"
+checkout_api_url: null
+canonical_guide_url: "https://barebones3d.com/guides/volvo-fuel-filler-door-hinge-bracket-39886277"
+---
+
+# Volvo S60 / V60 / XC60 Fuel Filler Door Flap Hinge Bracket (OEM #39886277)
+
+## Technical Specifications
+- **Primary OEM Part #:** `39886277`
+- **Engineering Material:** Automotive ASA (100% solid infill, calibrated printer compensation)
+- **Repair Difficulty:** Easy
+- **Estimated Repair Time:** 20 mins
+- **Commercial Purchase:** Digital STL Only (Commercial reproduction restricted by author license)
+- **Direct STL Download:** [39886277.stl](https://barebones3d.com/assets/stl/volvo-fuel-filler-door-hinge-bracket-39886277.stl)
+- **Amazon OEM & Hardware Search:** [Check Price & Availability on Amazon](https://www.amazon.com/s?k=Volvo%20S60%20%2F%20V60%20%2F%20XC60%20Fuel%20Filler%20Door%20Flap%20Hinge%20Bracket%20OEM%2039886277&tag=barebones3dco-20)
+
+## Required Tools & Supplies
+- **[Torx T25 Driver](https://www.amazon.com/s?k=Torx%20T25%20Driver&tag=barebones3dco-20)**: Quarter-panel hinge mount screws *(Search on Amazon)*
+
+## Step-by-Step Installation Procedure
+### Step 1: Release Fuel Door Latch
+
+Open fuel filler door and unclip the plastic body hinge bracket from the steel quarter panel pocket.
+
+![Original broken plastic Volvo S60 / V60 / XC60 Fuel Filler Door Flap Hinge Bracket (OEM #39886277) shown side-by-side with reinforced 3D printed Automotive ASA reproduction.](https://barebones3d.com/assets/parts/39886277-volvo-fuel-filler-door-hinge-bracket-39886277-step-1.webp)
+
+## Frequently Asked Questions
+#### Q: Why does the OEM Volvo hinge fail?
+**A:** The plastic spring hook snaps from repeated fuel door opening and winter freezing stress.
+
+## Open-Source Attribution & Safety Disclaimer
+Barebones 3D Engineering Lab CAD under development.
+Original Source: https://barebones3d.com/guides/volvo-fuel-filler-door-hinge-bracket-39886277/#cad-waitlist
 
 > **Legal Disclaimer:** Barebones 3D, L.L.C. is an independent engineering firm. This replacement component is an aftermarket reproduction designed for personal repair, restoration, and life-extension. Barebones 3D is not affiliated with, authorized by, sponsored by, or endorsed by the original equipment manufacturer. All trademarks and OEM part numbers are referenced solely for identification and compatibility purposes.
 
@@ -408,7 +2293,7 @@ material: "Food-Safe PETG"
 price_cents: null
 price_formatted: "Free STL Only"
 is_commercial_allowed: false
-license: "CC BY 4.0"
+license: "Public Domain"
 download_stl_url: "https://barebones3d.com/assets/stl/whirlpool-dishwasher-rack-wheel-w10195416.stl"
 checkout_api_url: null
 canonical_guide_url: "https://barebones3d.com/guides/whirlpool-dishwasher-rack-wheel-w10195416"
@@ -421,12 +2306,13 @@ canonical_guide_url: "https://barebones3d.com/guides/whirlpool-dishwasher-rack-w
 - **Engineering Material:** Food-Safe PETG (100% solid infill, calibrated printer compensation)
 - **Repair Difficulty:** Beginner
 - **Estimated Repair Time:** 10 mins
-- **Commercial Purchase:** Digital STL Only (Commercial reproduction restricted by author license)
+- **Commercial Purchase:** Digital STL Only / Commodity Multi-Pack on Amazon: [Search Amazon Catalog](https://www.amazon.com/s?k=Whirlpool%20W10195416%20dishwasher%20rack%20wheel%20replacement%208%20pack&tag=barebones3dco-20) (Cheaper than custom 3D printing)
 - **Direct STL Download:** [W10195416.stl](https://barebones3d.com/assets/stl/whirlpool-dishwasher-rack-wheel-w10195416.stl)
+- **Amazon OEM & Hardware Search:** [Check Price & Availability on Amazon](https://www.amazon.com/s?k=Whirlpool%20W10195416%20dishwasher%20rack%20wheel%20replacement%208%20pack&tag=barebones3dco-20)
 
 ## Required Tools & Supplies
-- **Flathead Screwdriver (small)**: Release brittle snap retention tab
-- **Dish Soap (few drops)**: Axle lubrication during press-fit
+- **[Flathead Screwdriver (small)](https://www.amazon.com/s?k=Flathead%20Screwdriver%20small&tag=barebones3dco-20)**: Release brittle snap retention tab *(Search on Amazon)*
+- **[Dish Soap (few drops)](https://www.amazon.com/s?k=Dish%20Soap%20few%20drops&tag=barebones3dco-20)**: Axle lubrication during press-fit *(Search on Amazon)*
 
 ## Step-by-Step Installation Procedure
 ### Step 1: Extract Lower Dishwasher Rack
@@ -463,8 +2349,77 @@ Align the inner axle channel with the rack wire, press firmly until an audible c
 **A:** Our PETG is virgin food-contact grade polymer and is placed on the lower rack exterior away from food contact surfaces.
 
 ## Open-Source Attribution & Safety Disclaimer
-Engineered by ApplianceRepairLab, distributed under CC BY 4.0.
-Original Source: https://www.printables.com/model/dishwasher-wheel-heavy-duty
+Designed by Wild1z2 on Thingiverse, released to Public Domain
+Original Source: https://www.thingiverse.com/thing:5334213
+
+> **Legal Disclaimer:** Barebones 3D, L.L.C. is an independent engineering firm. This replacement component is an aftermarket reproduction designed for personal repair, restoration, and life-extension. Barebones 3D is not affiliated with, authorized by, sponsored by, or endorsed by the original equipment manufacturer. All trademarks and OEM part numbers are referenced solely for identification and compatibility purposes.
+
+
+---
+
+---
+title: "Whirlpool / Maytag Refrigerator Deli Meat Pan Drawer Slide Roller Wheel"
+slug: "whirlpool-refrigerator-deli-drawer-slide-roller-w10436250"
+oem_part_number: "W10436250"
+superseded_numbers:
+  - "WPW10436250"
+  - "2303043"
+  - "PS3634044"
+compatible_vehicles_and_appliances:
+  - make: "Whirlpool"
+    model: "French Door / Side-by-Side Refrigerators"
+  - make: "Maytag"
+    model: "MFI / MFD Series"
+material: "Food-Safe PETG"
+price_cents: null
+price_formatted: "Free STL Only"
+is_commercial_allowed: false
+license: "Public Domain"
+download_stl_url: "https://barebones3d.com/assets/stl/whirlpool-refrigerator-deli-drawer-slide-roller-w10436250.stl"
+checkout_api_url: null
+canonical_guide_url: "https://barebones3d.com/guides/whirlpool-refrigerator-deli-drawer-slide-roller-w10436250"
+---
+
+# Whirlpool / Maytag Refrigerator Deli Meat Pan Drawer Slide Roller Wheel (OEM #W10436250)
+
+## Technical Specifications
+- **Primary OEM Part #:** `W10436250`
+- **Engineering Material:** Food-Safe PETG (100% solid infill, calibrated printer compensation)
+- **Repair Difficulty:** Beginner
+- **Estimated Repair Time:** 10 mins
+- **Commercial Purchase:** Digital STL Only (Commercial reproduction restricted by author license)
+- **Direct STL Download:** [W10436250.stl](https://barebones3d.com/assets/stl/whirlpool-refrigerator-deli-drawer-slide-roller-w10436250.stl)
+- **Amazon OEM & Hardware Search:** [Check Price & Availability on Amazon](https://www.amazon.com/s?k=Whirlpool%20refrigerator%20deli%20drawer%20roller%20wheel%20W10436250&tag=barebones3dco-20)
+
+## Required Tools & Supplies
+- **[Small Flathead Screwdriver](https://www.amazon.com/s?k=Small%20Flathead%20Screwdriver&tag=barebones3dco-20)**: Unclip axle retaining tab *(Search on Amazon)*
+
+## Step-by-Step Installation Procedure
+### Step 1: Remove Deli Drawer Pan
+
+Slide the deli meat pan all the way out and lift upward at a 30-degree angle to clear the front stop catches.
+
+![Original broken plastic Whirlpool / Maytag Refrigerator Deli Meat Pan Drawer Slide Roller Wheel (OEM #W10436250) shown side-by-side with reinforced 3D printed Food-Safe PETG reproduction.](https://barebones3d.com/assets/parts/w10436250-whirlpool-refrigerator-deli-drawer-slide-roller-w10436250-step-1.webp)
+
+### Step 2: Extract Sheared Roller Wheel
+
+Pry the plastic axle pin with a small flathead tool and pop the broken roller wheel out of the drawer guide bracket.
+
+![Original broken plastic Whirlpool / Maytag Refrigerator Deli Meat Pan Drawer Slide Roller Wheel (OEM #W10436250) shown side-by-side with reinforced 3D printed Food-Safe PETG reproduction.](https://barebones3d.com/assets/parts/w10436250-whirlpool-refrigerator-deli-drawer-slide-roller-w10436250-step-2.webp)
+
+### Step 3: Install New Roller and Axle
+
+Press the replacement roller wheel over the axle pin and push into the mounting hole until the clip snaps flush.
+
+![Original broken plastic Whirlpool / Maytag Refrigerator Deli Meat Pan Drawer Slide Roller Wheel (OEM #W10436250) shown side-by-side with reinforced 3D printed Food-Safe PETG reproduction.](https://barebones3d.com/assets/parts/w10436250-whirlpool-refrigerator-deli-drawer-slide-roller-w10436250-step-3.webp)
+
+## Frequently Asked Questions
+#### Q: Why is this part recommended on Amazon?
+**A:** 4-pack replacement kits including both left and right rollers with axle pins are widely stocked on Amazon for under $10.
+
+## Open-Source Attribution & Safety Disclaimer
+OEM replacement specification. Multi-pack commodity sourcing recommended.
+Original Source: https://barebones3d.com/guides/whirlpool-refrigerator-deli-drawer-slide-roller-w10436250/
 
 > **Legal Disclaimer:** Barebones 3D, L.L.C. is an independent engineering firm. This replacement component is an aftermarket reproduction designed for personal repair, restoration, and life-extension. Barebones 3D is not affiliated with, authorized by, sponsored by, or endorsed by the original equipment manufacturer. All trademarks and OEM part numbers are referenced solely for identification and compatibility purposes.
 

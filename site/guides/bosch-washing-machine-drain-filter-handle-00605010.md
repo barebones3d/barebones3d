@@ -17,12 +17,12 @@ compatible_vehicles_and_appliances:
     year_start: 2009
     year_end: 2024
 material: "PETG Heavy Duty"
-price_cents: 1650
-price_formatted: "$16.50 USD"
-is_commercial_allowed: true
-license: "CC BY 4.0"
+price_cents: null
+price_formatted: "Free STL Only"
+is_commercial_allowed: false
+license: "Public Domain"
 download_stl_url: "https://barebones3d.com/assets/stl/bosch-washing-machine-drain-filter-handle-00605010.stl"
-checkout_api_url: "https://barebones3d.com/api/checkout/create"
+checkout_api_url: null
 canonical_guide_url: "https://barebones3d.com/guides/bosch-washing-machine-drain-filter-handle-00605010"
 ---
 
@@ -33,13 +33,14 @@ canonical_guide_url: "https://barebones3d.com/guides/bosch-washing-machine-drain
 - **Engineering Material:** PETG Heavy Duty (100% solid infill, calibrated printer compensation)
 - **Repair Difficulty:** Easy
 - **Estimated Repair Time:** 20 mins
-- **Commercial Purchase:** $16.50 USD (Printed on-demand in 48h via Slant 3D)
+- **Commercial Purchase:** Digital STL Only (Commercial reproduction restricted by author license)
 - **Direct STL Download:** [00605010.stl](https://barebones3d.com/assets/stl/bosch-washing-machine-drain-filter-handle-00605010.stl)
+- **Amazon OEM & Hardware Search:** [Check Price & Availability on Amazon](https://www.amazon.com/s?k=Bosch%20washing%20machine%20drain%20pump%20filter%20replacement%2000605010%20605010&tag=barebones3dco-20)
 
 ## Required Tools & Supplies
-- **Shallow Tray & Old Towel**: Catch remaining pump water
-- **Small Channel Lock Pliers**: Twist broken filter core
-- **M4x20mm Stainless Screw (Optional)**: Reinforced mechanical anchor
+- **[Shallow Tray & Old Towel](https://www.amazon.com/s?k=Shallow%20Tray%20Old%20Towel&tag=barebones3dco-20)**: Catch remaining pump water *(Search on Amazon)*
+- **[Small Channel Lock Pliers](https://www.amazon.com/s?k=Small%20Channel%20Lock%20Pliers&tag=barebones3dco-20)**: Twist broken filter core *(Search on Amazon)*
+- **[M4x20mm Stainless Screw (Optional)](https://www.amazon.com/s?k=M4x20mm%20Stainless%20Screw%20Optional&tag=barebones3dco-20)**: Reinforced mechanical anchor *(Search on Amazon)*
 
 ## Step-by-Step Installation Procedure
 ### Step 1: Disconnect Power & Open Service Flap
@@ -74,7 +75,7 @@ Grip the ergonomic textured handle and turn counter-clockwise 90 degrees. Remove
 **A:** This is a slip-on mechanical sleeve that interlocks with the surviving filter core, saving you from purchasing an expensive replacement pump assembly.
 
 ## Open-Source Attribution & Safety Disclaimer
-Modeled by EuroApplianceFix under CC BY 4.0.
-Original Source: https://www.printables.com/model/bosch-drain-filter-knob-repair
+OEM replacement specification. Multi-pack recommended.
+Original Source: https://barebones3d.com/guides/bosch-washing-machine-drain-filter-handle-00605010/
 
 > **Legal Disclaimer:** Barebones 3D, L.L.C. is an independent engineering firm. This replacement component is an aftermarket reproduction designed for personal repair, restoration, and life-extension. Barebones 3D is not affiliated with, authorized by, sponsored by, or endorsed by the original equipment manufacturer. All trademarks and OEM part numbers are referenced solely for identification and compatibility purposes.

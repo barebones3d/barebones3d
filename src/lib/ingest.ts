@@ -210,7 +210,8 @@ export function buildPartAndGuideFromIngest(data: IngestedModelData): { part: Pa
     license_type: data.licenseType,
     attribution_text: `Original design by ${data.author}, licensed under ${data.licenseType}.`,
     is_commercial_allowed: isCommAllowed,
-    is_active: true
+    is_active: true,
+    status: isCommAllowed ? 'active' : 'affiliate_only'
   };
 
   const guide: Guide = {

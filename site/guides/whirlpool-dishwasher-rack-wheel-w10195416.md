@@ -29,7 +29,7 @@ material: "Food-Safe PETG"
 price_cents: null
 price_formatted: "Free STL Only"
 is_commercial_allowed: false
-license: "CC BY 4.0"
+license: "Public Domain"
 download_stl_url: "https://barebones3d.com/assets/stl/whirlpool-dishwasher-rack-wheel-w10195416.stl"
 checkout_api_url: null
 canonical_guide_url: "https://barebones3d.com/guides/whirlpool-dishwasher-rack-wheel-w10195416"
@@ -42,12 +42,13 @@ canonical_guide_url: "https://barebones3d.com/guides/whirlpool-dishwasher-rack-w
 - **Engineering Material:** Food-Safe PETG (100% solid infill, calibrated printer compensation)
 - **Repair Difficulty:** Beginner
 - **Estimated Repair Time:** 10 mins
-- **Commercial Purchase:** Digital STL Only (Commercial reproduction restricted by author license)
+- **Commercial Purchase:** Digital STL Only / Commodity Multi-Pack on Amazon: [Search Amazon Catalog](https://www.amazon.com/s?k=Whirlpool%20W10195416%20dishwasher%20rack%20wheel%20replacement%208%20pack&tag=barebones3dco-20) (Cheaper than custom 3D printing)
 - **Direct STL Download:** [W10195416.stl](https://barebones3d.com/assets/stl/whirlpool-dishwasher-rack-wheel-w10195416.stl)
+- **Amazon OEM & Hardware Search:** [Check Price & Availability on Amazon](https://www.amazon.com/s?k=Whirlpool%20W10195416%20dishwasher%20rack%20wheel%20replacement%208%20pack&tag=barebones3dco-20)
 
 ## Required Tools & Supplies
-- **Flathead Screwdriver (small)**: Release brittle snap retention tab
-- **Dish Soap (few drops)**: Axle lubrication during press-fit
+- **[Flathead Screwdriver (small)](https://www.amazon.com/s?k=Flathead%20Screwdriver%20small&tag=barebones3dco-20)**: Release brittle snap retention tab *(Search on Amazon)*
+- **[Dish Soap (few drops)](https://www.amazon.com/s?k=Dish%20Soap%20few%20drops&tag=barebones3dco-20)**: Axle lubrication during press-fit *(Search on Amazon)*
 
 ## Step-by-Step Installation Procedure
 ### Step 1: Extract Lower Dishwasher Rack
@@ -84,7 +85,7 @@ Align the inner axle channel with the rack wire, press firmly until an audible c
 **A:** Our PETG is virgin food-contact grade polymer and is placed on the lower rack exterior away from food contact surfaces.
 
 ## Open-Source Attribution & Safety Disclaimer
-Engineered by ApplianceRepairLab, distributed under CC BY 4.0.
-Original Source: https://www.printables.com/model/dishwasher-wheel-heavy-duty
+Designed by Wild1z2 on Thingiverse, released to Public Domain
+Original Source: https://www.thingiverse.com/thing:5334213
 
 > **Legal Disclaimer:** Barebones 3D, L.L.C. is an independent engineering firm. This replacement component is an aftermarket reproduction designed for personal repair, restoration, and life-extension. Barebones 3D is not affiliated with, authorized by, sponsored by, or endorsed by the original equipment manufacturer. All trademarks and OEM part numbers are referenced solely for identification and compatibility purposes.

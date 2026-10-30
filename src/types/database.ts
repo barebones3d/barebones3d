@@ -9,6 +9,7 @@ export interface CompatibleMakeModel {
 export interface ToolNeeded {
   name: string;
   purpose?: string;
+  amazon_search_keyword?: string;
 }
 
 export interface GuideStep {
@@ -18,6 +19,8 @@ export interface GuideStep {
   image_url?: string;
   tip?: string;
   warning?: string;
+  svg_code?: string;
+  action_type?: string;
 }
 
 export interface FAQItem {
@@ -34,6 +37,8 @@ export interface ShippingAddress {
   country: string;
 }
 
+export type PartStatus = 'active' | 'affiliate_only' | 'cad_waitlist';
+
 export interface Part {
   id: string;
   slug: string;
@@ -49,6 +54,7 @@ export interface Part {
   attribution_text?: string | null;
   is_commercial_allowed: boolean;
   is_active: boolean;
+  status: PartStatus;
   created_at?: string;
 }
 
@@ -67,6 +73,7 @@ export interface PartRaw {
   attribution_text?: string | null;
   is_commercial_allowed: number;
   is_active: number;
+  status?: string;
   created_at?: string;
 }
 
@@ -135,6 +142,7 @@ export interface EnvBindings {
 export function parsePart(raw: PartRaw): Part {
   return {
     ...raw,
+    status: (raw.status as PartStatus) || (raw.is_commercial_allowed ? 'active' : 'affiliate_only'),
     superseded_numbers: typeof raw.superseded_numbers === 'string' ? JSON.parse(raw.superseded_numbers || '[]') : raw.superseded_numbers,
     compatible_makes_models: typeof raw.compatible_makes_models === 'string' ? JSON.parse(raw.compatible_makes_models || '[]') : raw.compatible_makes_models,
     is_commercial_allowed: Boolean(raw.is_commercial_allowed),
