@@ -1,0 +1,131 @@
+{
+  "site": "sc-domain:wncretainingwall.com",
+  "total_queries": 60,
+  "total_clicks": 0,
+  "total_impressions": 106,
+  "avg_ctr": 0.0,
+  "striking_distance_standard": [],
+  "low_ctr_standard": [],
+  "striking_distance_sensitive": [
+    {
+      "query": "retaining walls west jefferson nc",
+      "page": "https://wncretainingwall.com/high-country/west-jefferson-nc/",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr_percent": 0,
+      "position": 11.4
+    },
+    {
+      "query": "who builds retaining walls west jefferson nc",
+      "page": "https://wncretainingwall.com/high-country/west-jefferson-nc/",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr_percent": 0,
+      "position": 8.2
+    }
+  ],
+  "low_ctr_sensitive": [],
+  "raw_top_by_impressions": [
+    {
+      "keys": [
+        "slope stabilization services asheville nc",
+        "https://wncretainingwall.com/metro-asheville//"
+      ],
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 88.14285714285714
+    },
+    {
+      "keys": [
+        "slope stabilization services asheville nc",
+        "https://wncretainingwall.com/metro-asheville/black-mountain-nc//"
+      ],
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 81.5
+    },
+    {
+      "keys": [
+        "retaining walls west jefferson nc",
+        "https://wncretainingwall.com/high-country/west-jefferson-nc/"
+      ],
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 11.4
+    },
+    {
+      "keys": [
+        "slope stabilization services asheville nc",
+        "https://wncretainingwall.com/metro-asheville/asheville-nc//"
+      ],
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 71.6
+    },
+    {
+      "keys": [
+        "retaining walls asheville nc",
+        "https://wncretainingwall.com/asheville-nc-retaining-wall.html"
+      ],
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 71.5
+    },
+    {
+      "keys": [
+        "slope stabilization services asheville nc",
+        "https://wncretainingwall.com/metro-asheville/weaverville-nc//"
+      ],
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 72.25
+    },
+    {
+      "keys": [
+        "who builds retaining walls west jefferson nc",
+        "https://wncretainingwall.com/high-country/west-jefferson-nc/"
+      ],
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 8.25
+    },
+    {
+      "keys": [
+        "slope stabilization services asheville nc",
+        "https://wncretainingwall.com/east-foothills//"
+      ],
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 99
+    },
+    {
+      "keys": [
+        "slope stabilization services asheville nc",
+        "https://wncretainingwall.com/metro-asheville/asheville-nc/"
+      ],
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 74
+    },
+    {
+      "keys": [
+        "slope stabilization services asheville nc",
+        "https://wncretainingwall.com/services/hillside-stabilization-drainage.html"
+      ],
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 100
+    }
+  ],
+  "raw_top_by_clicks": []
+}

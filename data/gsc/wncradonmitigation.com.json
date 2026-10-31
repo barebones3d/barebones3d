@@ -1,0 +1,34 @@
+{
+  "site": "sc-domain:wncradonmitigation.com",
+  "total_queries": 2,
+  "total_clicks": 0,
+  "total_impressions": 2,
+  "avg_ctr": 0.0,
+  "striking_distance_standard": [],
+  "low_ctr_standard": [],
+  "striking_distance_sensitive": [],
+  "low_ctr_sensitive": [],
+  "raw_top_by_impressions": [
+    {
+      "keys": [
+        "huntersville radon mitigation",
+        "https://wncradonmitigation.com/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 84
+    },
+    {
+      "keys": [
+        "west rowan radon mitigation",
+        "https://wncradonmitigation.com/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 54
+    }
+  ],
+  "raw_top_by_clicks": []
+}

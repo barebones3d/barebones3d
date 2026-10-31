@@ -1,0 +1,211 @@
+{
+  "site": "sc-domain:wncdeckbuilding.com",
+  "total_queries": 229,
+  "total_clicks": 0,
+  "total_impressions": 520,
+  "avg_ctr": 0.0,
+  "striking_distance_standard": [],
+  "low_ctr_standard": [],
+  "striking_distance_sensitive": [
+    {
+      "query": "deck installation black mountain",
+      "page": "https://wncdeckbuilding.com/metro-asheville/black-mountain-nc//",
+      "clicks": 0,
+      "impressions": 8,
+      "ctr_percent": 0,
+      "position": 9.4
+    },
+    {
+      "query": "deck on steep slope asheville",
+      "page": "https://wncdeckbuilding.com/metro-asheville/asheville-nc//",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr_percent": 0,
+      "position": 14.5
+    },
+    {
+      "query": "outdoor structure builder asheville",
+      "page": "https://wncdeckbuilding.com/metro-asheville/asheville-nc//",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr_percent": 0,
+      "position": 12.5
+    },
+    {
+      "query": "wnc deck builder",
+      "page": "https://wncdeckbuilding.com/metro-asheville/black-mountain-nc//",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr_percent": 0,
+      "position": 13.8
+    },
+    {
+      "query": "black mountain deck builder",
+      "page": "https://wncdeckbuilding.com/metro-asheville/black-mountain-nc//",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr_percent": 0,
+      "position": 11.3
+    },
+    {
+      "query": "deck builder weaverville",
+      "page": "https://wncdeckbuilding.com/metro-asheville/weaverville-nc//",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr_percent": 0,
+      "position": 14.3
+    },
+    {
+      "query": "deck builders near black mountain",
+      "page": "https://wncdeckbuilding.com/metro-asheville/black-mountain-nc//",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr_percent": 0,
+      "position": 8.3
+    },
+    {
+      "query": "hillside deck builder asheville",
+      "page": "https://wncdeckbuilding.com/metro-asheville/black-mountain-nc//",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr_percent": 0,
+      "position": 9.7
+    },
+    {
+      "query": "lake junaluska deck builder",
+      "page": "https://wncdeckbuilding.com/central-west/waynesville-nc//",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr_percent": 0,
+      "position": 17.7
+    },
+    {
+      "query": "licensed deck builder asheville",
+      "page": "https://wncdeckbuilding.com/metro-asheville/asheville-nc//",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr_percent": 0,
+      "position": 12.7
+    },
+    {
+      "query": "weaverville deck ideas",
+      "page": "https://wncdeckbuilding.com/metro-asheville/weaverville-nc//",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr_percent": 0,
+      "position": 10.3
+    },
+    {
+      "query": "wnc deck builder",
+      "page": "https://wncdeckbuilding.com/high-country/boone-nc//",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr_percent": 0,
+      "position": 16.3
+    }
+  ],
+  "low_ctr_sensitive": [],
+  "raw_top_by_impressions": [
+    {
+      "keys": [
+        "composite deck installation garner nc",
+        "https://wncdeckbuilding.com/services/composite-decking.html"
+      ],
+      "clicks": 0,
+      "impressions": 8,
+      "ctr": 0,
+      "position": 91
+    },
+    {
+      "keys": [
+        "deck installation black mountain",
+        "https://wncdeckbuilding.com/metro-asheville/black-mountain-nc//"
+      ],
+      "clicks": 0,
+      "impressions": 8,
+      "ctr": 0,
+      "position": 9.375
+    },
+    {
+      "keys": [
+        "screen porch contractors hendersonville",
+        "https://wncdeckbuilding.com/services/covered-porches.html"
+      ],
+      "clicks": 0,
+      "impressions": 8,
+      "ctr": 0,
+      "position": 53.75
+    },
+    {
+      "keys": [
+        "deck builders asheville nc",
+        "https://wncdeckbuilding.com/metro-asheville/asheville-nc//"
+      ],
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 70.83333333333333
+    },
+    {
+      "keys": [
+        "multi-level deck construction garner nc",
+        "https://wncdeckbuilding.com/"
+      ],
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 69.2
+    },
+    {
+      "keys": [
+        "western nc deck builder",
+        "https://wncdeckbuilding.com/"
+      ],
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 57.6
+    },
+    {
+      "keys": [
+        "wnc deck builder",
+        "https://wncdeckbuilding.com/metro-asheville/asheville-nc//"
+      ],
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 26.2
+    },
+    {
+      "keys": [
+        "buncombe county deck builder",
+        "https://wncdeckbuilding.com/metro-asheville/asheville-nc//"
+      ],
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 45.25
+    },
+    {
+      "keys": [
+        "deck and porch builder asheville",
+        "https://wncdeckbuilding.com/metro-asheville/asheville-nc//"
+      ],
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 89.25
+    },
+    {
+      "keys": [
+        "deck and porch builder asheville nc",
+        "https://wncdeckbuilding.com/metro-asheville/asheville-nc//"
+      ],
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 69.75
+    }
+  ],
+  "raw_top_by_clicks": []
+}

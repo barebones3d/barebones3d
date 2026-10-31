@@ -1,0 +1,220 @@
+{
+  "site": "sc-domain:omnioperand.com",
+  "total_queries": 1000,
+  "total_clicks": 3,
+  "total_impressions": 2427,
+  "avg_ctr": 0.12,
+  "striking_distance_standard": [],
+  "low_ctr_standard": [
+    {
+      "query": "auto loans",
+      "page": "https://omnioperand.com/pl/finance/auto-loan/",
+      "clicks": 0,
+      "impressions": 266,
+      "ctr_percent": 0,
+      "position": 5.5
+    }
+  ],
+  "striking_distance_sensitive": [
+    {
+      "query": "auto loans",
+      "page": "https://omnioperand.com/nl/finance/auto-loan/",
+      "clicks": 0,
+      "impressions": 9,
+      "ctr_percent": 0,
+      "position": 11.8
+    },
+    {
+      "query": "creatinine clearance (cockcroft\u2013gault) biomarker test",
+      "page": "https://omnioperand.com/biotech/cockcroft-gault-crcl/",
+      "clicks": 0,
+      "impressions": 6,
+      "ctr_percent": 0,
+      "position": 18.5
+    },
+    {
+      "query": "brick soling",
+      "page": "https://omnioperand.com/construction/brick-soling/",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr_percent": 0,
+      "position": 9.4
+    },
+    {
+      "query": "can i get an accurate tm calculator used by professionals?",
+      "page": "https://omnioperand.com/biotech/pcr-primer-tm/",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr_percent": 0,
+      "position": 9.4
+    },
+    {
+      "query": "crcl (cockcroft\u2013gault) biomarker test",
+      "page": "https://omnioperand.com/biotech/cockcroft-gault-crcl/",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr_percent": 0,
+      "position": 19.2
+    },
+    {
+      "query": "brick flat soling calculation",
+      "page": "https://omnioperand.com/construction/brick-soling/",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr_percent": 0,
+      "position": 9.3
+    },
+    {
+      "query": "can i find a free and accurate tm calculator online?",
+      "page": "https://omnioperand.com/biotech/qpcr-primer-tm/",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr_percent": 0,
+      "position": 10.7
+    }
+  ],
+  "low_ctr_sensitive": [
+    {
+      "query": "auto loans",
+      "page": "https://omnioperand.com/pl/finance/auto-loan/",
+      "clicks": 0,
+      "impressions": 266,
+      "ctr_percent": 0,
+      "position": 5.5
+    }
+  ],
+  "raw_top_by_impressions": [
+    {
+      "keys": [
+        "auto loans",
+        "https://omnioperand.com/pl/finance/auto-loan/"
+      ],
+      "clicks": 0,
+      "impressions": 266,
+      "ctr": 0,
+      "position": 5.526315789473684
+    },
+    {
+      "keys": [
+        "72t sepp calculator",
+        "https://omnioperand.com/finance/sepp-72t-distribution/"
+      ],
+      "clicks": 0,
+      "impressions": 48,
+      "ctr": 0,
+      "position": 54.958333333333336
+    },
+    {
+      "keys": [
+        "72t sepp",
+        "https://omnioperand.com/finance/sepp-72t-distribution/"
+      ],
+      "clicks": 0,
+      "impressions": 46,
+      "ctr": 0,
+      "position": 88.45652173913044
+    },
+    {
+      "keys": [
+        "blood alcohol calculator",
+        "https://omnioperand.com/health/bac/"
+      ],
+      "clicks": 0,
+      "impressions": 35,
+      "ctr": 0,
+      "position": 60.142857142857146
+    },
+    {
+      "keys": [
+        "car depreciation chart",
+        "https://omnioperand.com/finance/car-depreciation/"
+      ],
+      "clicks": 0,
+      "impressions": 32,
+      "ctr": 0,
+      "position": 73.21875
+    },
+    {
+      "keys": [
+        "10000 g to rpm",
+        "https://omnioperand.com/biotech/centrifuge-rcf-g-force/"
+      ],
+      "clicks": 0,
+      "impressions": 31,
+      "ctr": 0,
+      "position": 68.19354838709677
+    },
+    {
+      "keys": [
+        "car depreciation calculator",
+        "https://omnioperand.com/finance/car-depreciation/"
+      ],
+      "clicks": 0,
+      "impressions": 31,
+      "ctr": 0,
+      "position": 74.58064516129032
+    },
+    {
+      "keys": [
+        "bac calculator",
+        "https://omnioperand.com/health/bac/"
+      ],
+      "clicks": 1,
+      "impressions": 30,
+      "ctr": 0.03333333333333333,
+      "position": 61.8
+    },
+    {
+      "keys": [
+        "centrifuge g force",
+        "https://omnioperand.com/biotech/centrifuge-rcf-g-force/"
+      ],
+      "clicks": 0,
+      "impressions": 26,
+      "ctr": 0,
+      "position": 63.34615384615385
+    },
+    {
+      "keys": [
+        "convert rpm to g",
+        "https://omnioperand.com/biotech/centrifuge-rcf-g-force/"
+      ],
+      "clicks": 0,
+      "impressions": 26,
+      "ctr": 0,
+      "position": 69.5
+    }
+  ],
+  "raw_top_by_clicks": [
+    {
+      "keys": [
+        "bac calculator",
+        "https://omnioperand.com/health/bac/"
+      ],
+      "clicks": 1,
+      "impressions": 30,
+      "ctr": 0.03333333333333333,
+      "position": 61.8
+    },
+    {
+      "keys": [
+        "free grain bin calculator",
+        "https://omnioperand.com/agriculture/grain-bin-bushel-capacity/"
+      ],
+      "clicks": 1,
+      "impressions": 1,
+      "ctr": 1,
+      "position": 80
+    },
+    {
+      "keys": [
+        "z 0 calculator",
+        "https://omnioperand.com/ro/statistics/z-score/"
+      ],
+      "clicks": 1,
+      "impressions": 1,
+      "ctr": 1,
+      "position": 1
+    }
+  ]
+}

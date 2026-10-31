@@ -1,0 +1,33 @@
+{
+  "site": "sc-domain:barebones3d.com",
+  "total_queries": 1,
+  "total_clicks": 0,
+  "total_impressions": 4,
+  "avg_ctr": 0.0,
+  "striking_distance_standard": [],
+  "low_ctr_standard": [],
+  "striking_distance_sensitive": [
+    {
+      "query": "bare bones 3d",
+      "page": "https://barebones3d.com/",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr_percent": 0,
+      "position": 7.5
+    }
+  ],
+  "low_ctr_sensitive": [],
+  "raw_top_by_impressions": [
+    {
+      "keys": [
+        "bare bones 3d",
+        "https://barebones3d.com/"
+      ],
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 7.5
+    }
+  ],
+  "raw_top_by_clicks": []
+}

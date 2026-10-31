@@ -1,0 +1,94 @@
+{
+  "site": "sc-domain:saunaheatingelements.com",
+  "total_queries": 8,
+  "total_clicks": 0,
+  "total_impressions": 8,
+  "avg_ctr": 0.0,
+  "striking_distance_standard": [],
+  "low_ctr_standard": [],
+  "striking_distance_sensitive": [],
+  "low_ctr_sensitive": [],
+  "raw_top_by_impressions": [
+    {
+      "keys": [
+        "electric sauna heater elements",
+        "https://saunaheatingelements.com/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 72
+    },
+    {
+      "keys": [
+        "harvia calculator",
+        "https://saunaheatingelements.com/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 68
+    },
+    {
+      "keys": [
+        "harvia heater calculator",
+        "https://saunaheatingelements.com/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 70
+    },
+    {
+      "keys": [
+        "harvia sauna calculator",
+        "https://saunaheatingelements.com/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 69
+    },
+    {
+      "keys": [
+        "harvia sauna heater calculator",
+        "https://saunaheatingelements.com/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 72
+    },
+    {
+      "keys": [
+        "heating element in finland",
+        "http://saunaheatingelements.com/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 32
+    },
+    {
+      "keys": [
+        "sauna element replacement",
+        "http://saunaheatingelements.com/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 63
+    },
+    {
+      "keys": [
+        "sauna heating elements",
+        "https://saunaheatingelements.com/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 24
+    }
+  ],
+  "raw_top_by_clicks": []
+}

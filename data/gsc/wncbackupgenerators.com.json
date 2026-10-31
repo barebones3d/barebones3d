@@ -1,0 +1,203 @@
+{
+  "site": "sc-domain:wncbackupgenerators.com",
+  "total_queries": 243,
+  "total_clicks": 0,
+  "total_impressions": 707,
+  "avg_ctr": 0.0,
+  "striking_distance_standard": [],
+  "low_ctr_standard": [],
+  "striking_distance_sensitive": [
+    {
+      "query": "backup generator maintenance stallings nc",
+      "page": "https://wncbackupgenerators.com/east-foothills/marion-nc//",
+      "clicks": 0,
+      "impressions": 10,
+      "ctr_percent": 0,
+      "position": 9.2
+    },
+    {
+      "query": "backup generator maintenance stallings nc",
+      "page": "https://wncbackupgenerators.com/southern-plateau/saluda-nc//",
+      "clicks": 0,
+      "impressions": 9,
+      "ctr_percent": 0,
+      "position": 8.1
+    },
+    {
+      "query": "commercial load bank testing company in columbia",
+      "page": "https://wncbackupgenerators.com/services/generator-load-bank-testing.html",
+      "clicks": 0,
+      "impressions": 9,
+      "ctr_percent": 0,
+      "position": 19.6
+    },
+    {
+      "query": "columbia generator load bank testing service",
+      "page": "https://wncbackupgenerators.com/services/generator-load-bank-testing.html",
+      "clicks": 0,
+      "impressions": 6,
+      "ctr_percent": 0,
+      "position": 13.7
+    },
+    {
+      "query": "commercial generator load test contractor",
+      "page": "https://wncbackupgenerators.com/services/generator-load-bank-testing.html",
+      "clicks": 0,
+      "impressions": 6,
+      "ctr_percent": 0,
+      "position": 9.3
+    },
+    {
+      "query": "generator installation camp lejeune nc",
+      "page": "https://wncbackupgenerators.com/central-west/sylva-nc//",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr_percent": 0,
+      "position": 10
+    },
+    {
+      "query": "automatic transfer switch atlanta",
+      "page": "https://wncbackupgenerators.com/services/automatic-transfer-switch.html",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr_percent": 0,
+      "position": 8
+    },
+    {
+      "query": "backup generator maintenance stallings nc",
+      "page": "https://wncbackupgenerators.com/central-west/sylva-nc/",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr_percent": 0,
+      "position": 8
+    },
+    {
+      "query": "generator installation louisburg",
+      "page": "https://wncbackupgenerators.com/luxury-crest/cashiers-nc//",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr_percent": 0,
+      "position": 11.3
+    },
+    {
+      "query": "generator installation louisburg",
+      "page": "https://wncbackupgenerators.com/luxury-crest/sapphire-nc//",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr_percent": 0,
+      "position": 12
+    },
+    {
+      "query": "vass generator installation",
+      "page": "https://wncbackupgenerators.com/central-west/sylva-nc//",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr_percent": 0,
+      "position": 16.7
+    }
+  ],
+  "low_ctr_sensitive": [],
+  "raw_top_by_impressions": [
+    {
+      "keys": [
+        "columbia industrial generator load bank testing",
+        "https://wncbackupgenerators.com/services/generator-load-bank-testing.html"
+      ],
+      "clicks": 0,
+      "impressions": 14,
+      "ctr": 0,
+      "position": 63.07142857142857
+    },
+    {
+      "keys": [
+        "generator discharge bank",
+        "https://wncbackupgenerators.com/services/generator-load-bank-testing.html"
+      ],
+      "clicks": 0,
+      "impressions": 13,
+      "ctr": 0,
+      "position": 27.846153846153847
+    },
+    {
+      "keys": [
+        "generator installation moncure",
+        "https://wncbackupgenerators.com/luxury-crest/sapphire-nc//"
+      ],
+      "clicks": 0,
+      "impressions": 13,
+      "ctr": 0,
+      "position": 28.46153846153846
+    },
+    {
+      "keys": [
+        "generator load bank testing service",
+        "https://wncbackupgenerators.com/services/generator-load-bank-testing.html"
+      ],
+      "clicks": 0,
+      "impressions": 11,
+      "ctr": 0,
+      "position": 57.18181818181818
+    },
+    {
+      "keys": [
+        "backup generator maintenance stallings nc",
+        "https://wncbackupgenerators.com/east-foothills/marion-nc//"
+      ],
+      "clicks": 0,
+      "impressions": 10,
+      "ctr": 0,
+      "position": 9.2
+    },
+    {
+      "keys": [
+        "columbia load bank test for generators",
+        "https://wncbackupgenerators.com/services/generator-load-bank-testing.html"
+      ],
+      "clicks": 0,
+      "impressions": 10,
+      "ctr": 0,
+      "position": 70.3
+    },
+    {
+      "keys": [
+        "ats generator",
+        "https://wncbackupgenerators.com/services/automatic-transfer-switch.html"
+      ],
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0,
+      "position": 71.66666666666667
+    },
+    {
+      "keys": [
+        "backup generator maintenance stallings nc",
+        "https://wncbackupgenerators.com/southern-plateau/saluda-nc//"
+      ],
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0,
+      "position": 8.11111111111111
+    },
+    {
+      "keys": [
+        "columbia city facility generator load bank testing",
+        "https://wncbackupgenerators.com/services/generator-load-bank-testing.html"
+      ],
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0,
+      "position": 42
+    },
+    {
+      "keys": [
+        "columbia on-site generator load bank testing",
+        "https://wncbackupgenerators.com/services/generator-load-bank-testing.html"
+      ],
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0,
+      "position": 71.44444444444444
+    }
+  ],
+  "raw_top_by_clicks": []
+}

@@ -1,0 +1,24 @@
+{
+  "site": "sc-domain:boilercirculatorpumps.com",
+  "total_queries": 1,
+  "total_clicks": 0,
+  "total_impressions": 4,
+  "avg_ctr": 0.0,
+  "striking_distance_standard": [],
+  "low_ctr_standard": [],
+  "striking_distance_sensitive": [],
+  "low_ctr_sensitive": [],
+  "raw_top_by_impressions": [
+    {
+      "keys": [
+        "circulator pumps for a boiler",
+        "https://boilercirculatorpumps.com/"
+      ],
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 71.25
+    }
+  ],
+  "raw_top_by_clicks": []
+}

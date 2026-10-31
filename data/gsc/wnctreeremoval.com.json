@@ -1,0 +1,125 @@
+{
+  "site": "sc-domain:wnctreeremoval.com",
+  "total_queries": 24,
+  "total_clicks": 1,
+  "total_impressions": 38,
+  "avg_ctr": 2.63,
+  "striking_distance_standard": [],
+  "low_ctr_standard": [],
+  "striking_distance_sensitive": [],
+  "low_ctr_sensitive": [],
+  "raw_top_by_impressions": [
+    {
+      "keys": [
+        "emergency tree removal asheville nc",
+        "https://wnctreeremoval.com/asheville-nc-tree-removal.html"
+      ],
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 79.57142857142857
+    },
+    {
+      "keys": [
+        "emergency tree removal asheville nc",
+        "https://wnctreeremoval.com/asheville-nc-tree-removal"
+      ],
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 65
+    },
+    {
+      "keys": [
+        "emergency tree removal hendersonville nc",
+        "https://wnctreeremoval.com/"
+      ],
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 86.33333333333333
+    },
+    {
+      "keys": [
+        "emergency tree removal hendersonville nc",
+        "https://wnctreeremoval.com/hendersonville-nc-tree-removal.html"
+      ],
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 77.33333333333333
+    },
+    {
+      "keys": [
+        "forestry services banner elk nc",
+        "https://wnctreeremoval.com/toe-river-valley/banner-elk-nc//"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 42
+    },
+    {
+      "keys": [
+        "land clearing blowing rock nc",
+        "https://wnctreeremoval.com/high-country/blowing-rock-nc//"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 17.5
+    },
+    {
+      "keys": [
+        "wnc tree service",
+        "https://wnctreeremoval.com/"
+      ],
+      "clicks": 1,
+      "impressions": 1,
+      "ctr": 1,
+      "position": 4
+    },
+    {
+      "keys": [
+        "arborist consultation asheville nc",
+        "https://wnctreeremoval.com/metro-asheville/asheville-nc//"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 41
+    },
+    {
+      "keys": [
+        "arborist hendersonville nc",
+        "https://wnctreeremoval.com/southern-plateau/hendersonville-nc/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 96
+    },
+    {
+      "keys": [
+        "asheville tree removal",
+        "https://wnctreeremoval.com/metro-asheville/asheville-nc/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 87
+    }
+  ],
+  "raw_top_by_clicks": [
+    {
+      "keys": [
+        "wnc tree service",
+        "https://wnctreeremoval.com/"
+      ],
+      "clicks": 1,
+      "impressions": 1,
+      "ctr": 1,
+      "position": 4
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "site": "sc-domain:wncloghomerestoration.com",
+  "total_queries": 27,
+  "total_clicks": 0,
+  "total_impressions": 81,
+  "avg_ctr": 0.0,
+  "striking_distance_standard": [],
+  "low_ctr_standard": [],
+  "striking_distance_sensitive": [
+    {
+      "query": "spruce pine water damage restoration",
+      "page": "https://wncloghomerestoration.com/toe-river-valley/spruce-pine-nc//",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr_percent": 0,
+      "position": 8.7
+    },
+    {
+      "query": "sylva mold removal",
+      "page": "https://wncloghomerestoration.com/central-west/sylva-nc//",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr_percent": 0,
+      "position": 11.3
+    }
+  ],
+  "low_ctr_sensitive": [],
+  "raw_top_by_impressions": [
+    {
+      "keys": [
+        "historic renovation asheville nc",
+        "https://wncloghomerestoration.com/metro-asheville/asheville-nc//"
+      ],
+      "clicks": 0,
+      "impressions": 18,
+      "ctr": 0,
+      "position": 61.111111111111114
+    },
+    {
+      "keys": [
+        "weathered wood shingles waynesville",
+        "https://wncloghomerestoration.com/central-west/waynesville-nc//"
+      ],
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0,
+      "position": 46.44444444444444
+    },
+    {
+      "keys": [
+        "wood protection troutman nc",
+        "https://wncloghomerestoration.com/central-west/sylva-nc//"
+      ],
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 27
+    },
+    {
+      "keys": [
+        "bark siding waynesville",
+        "https://wncloghomerestoration.com/central-west/waynesville-nc//"
+      ],
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 48.166666666666664
+    },
+    {
+      "keys": [
+        "wood rot repair hendersonville",
+        "https://wncloghomerestoration.com/southern-plateau/hendersonville-nc//"
+      ],
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 34.6
+    },
+    {
+      "keys": [
+        "waynesville restoration services",
+        "https://wncloghomerestoration.com/central-west/waynesville-nc//"
+      ],
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 69
+    },
+    {
+      "keys": [
+        "spruce pine mold remediation",
+        "https://wncloghomerestoration.com/toe-river-valley/spruce-pine-nc//"
+      ],
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 5
+    },
+    {
+      "keys": [
+        "spruce pine water damage restoration",
+        "https://wncloghomerestoration.com/toe-river-valley/spruce-pine-nc//"
+      ],
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 8.666666666666668
+    },
+    {
+      "keys": [
+        "sylva mold removal",
+        "https://wncloghomerestoration.com/central-west/sylva-nc//"
+      ],
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 11.333333333333334
+    },
+    {
+      "keys": [
+        "chinking near me",
+        "https://wncloghomerestoration.com/metro-asheville/weaverville-nc//"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 48.5
+    }
+  ],
+  "raw_top_by_clicks": []
+}

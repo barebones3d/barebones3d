@@ -1,0 +1,55 @@
+{
+  "summary": {
+    "total_queries_analyzed": 1000,
+    "striking_distance_count": 4,
+    "low_ctr_count": 1
+  },
+  "recommendations": {
+    "page_2_striking_distance": [
+      {
+        "query": "auto loans",
+        "page": "https://omnioperand.com/nl/finance/auto-loan/",
+        "clicks": 0,
+        "impressions": 9,
+        "ctr_percent": 0,
+        "position": 11.8
+      },
+      {
+        "query": "creatinine clearance (cockcroft\u2013gault) biomarker test",
+        "page": "https://omnioperand.com/biotech/cockcroft-gault-crcl/",
+        "clicks": 0,
+        "impressions": 6,
+        "ctr_percent": 0,
+        "position": 18.5
+      },
+      {
+        "query": "brick soling",
+        "page": "https://omnioperand.com/construction/brick-soling/",
+        "clicks": 0,
+        "impressions": 5,
+        "ctr_percent": 0,
+        "position": 9.4
+      },
+      {
+        "query": "can i get an accurate tm calculator used by professionals?",
+        "page": "https://omnioperand.com/biotech/pcr-primer-tm/",
+        "clicks": 0,
+        "impressions": 5,
+        "ctr_percent": 0,
+        "position": 9.4
+      }
+    ],
+    "title_meta_tuneups": [
+      {
+        "query": "auto loans",
+        "page": "https://omnioperand.com/pl/finance/auto-loan/",
+        "clicks": 0,
+        "impressions": 266,
+        "ctr_percent": 0,
+        "position": 5.5
+      }
+    ]
+  },
+  "site": "sc-domain:omnioperand.com",
+  "retrieved_at": "2026-10-31T14:19:56.947684"
+}

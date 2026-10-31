@@ -1,0 +1,4160 @@
+{
+  "OmniOperand": [
+    {
+      "site": "sc-domain:omnioperand.com",
+      "total_queries": 1000,
+      "total_clicks": 3,
+      "total_impressions": 2427,
+      "avg_ctr": 0.12,
+      "striking_distance_standard": [],
+      "low_ctr_standard": [
+        {
+          "query": "auto loans",
+          "page": "https://omnioperand.com/pl/finance/auto-loan/",
+          "clicks": 0,
+          "impressions": 266,
+          "ctr_percent": 0,
+          "position": 5.5
+        }
+      ],
+      "striking_distance_sensitive": [
+        {
+          "query": "auto loans",
+          "page": "https://omnioperand.com/nl/finance/auto-loan/",
+          "clicks": 0,
+          "impressions": 9,
+          "ctr_percent": 0,
+          "position": 11.8
+        },
+        {
+          "query": "creatinine clearance (cockcroft\u2013gault) biomarker test",
+          "page": "https://omnioperand.com/biotech/cockcroft-gault-crcl/",
+          "clicks": 0,
+          "impressions": 6,
+          "ctr_percent": 0,
+          "position": 18.5
+        },
+        {
+          "query": "brick soling",
+          "page": "https://omnioperand.com/construction/brick-soling/",
+          "clicks": 0,
+          "impressions": 5,
+          "ctr_percent": 0,
+          "position": 9.4
+        },
+        {
+          "query": "can i get an accurate tm calculator used by professionals?",
+          "page": "https://omnioperand.com/biotech/pcr-primer-tm/",
+          "clicks": 0,
+          "impressions": 5,
+          "ctr_percent": 0,
+          "position": 9.4
+        },
+        {
+          "query": "crcl (cockcroft\u2013gault) biomarker test",
+          "page": "https://omnioperand.com/biotech/cockcroft-gault-crcl/",
+          "clicks": 0,
+          "impressions": 4,
+          "ctr_percent": 0,
+          "position": 19.2
+        },
+        {
+          "query": "brick flat soling calculation",
+          "page": "https://omnioperand.com/construction/brick-soling/",
+          "clicks": 0,
+          "impressions": 3,
+          "ctr_percent": 0,
+          "position": 9.3
+        },
+        {
+          "query": "can i find a free and accurate tm calculator online?",
+          "page": "https://omnioperand.com/biotech/qpcr-primer-tm/",
+          "clicks": 0,
+          "impressions": 3,
+          "ctr_percent": 0,
+          "position": 10.7
+        }
+      ],
+      "low_ctr_sensitive": [
+        {
+          "query": "auto loans",
+          "page": "https://omnioperand.com/pl/finance/auto-loan/",
+          "clicks": 0,
+          "impressions": 266,
+          "ctr_percent": 0,
+          "position": 5.5
+        }
+      ],
+      "raw_top_by_impressions": [
+        {
+          "keys": [
+            "auto loans",
+            "https://omnioperand.com/pl/finance/auto-loan/"
+          ],
+          "clicks": 0,
+          "impressions": 266,
+          "ctr": 0,
+          "position": 5.526315789473684
+        },
+        {
+          "keys": [
+            "72t sepp calculator",
+            "https://omnioperand.com/finance/sepp-72t-distribution/"
+          ],
+          "clicks": 0,
+          "impressions": 48,
+          "ctr": 0,
+          "position": 54.958333333333336
+        },
+        {
+          "keys": [
+            "72t sepp",
+            "https://omnioperand.com/finance/sepp-72t-distribution/"
+          ],
+          "clicks": 0,
+          "impressions": 46,
+          "ctr": 0,
+          "position": 88.45652173913044
+        },
+        {
+          "keys": [
+            "blood alcohol calculator",
+            "https://omnioperand.com/health/bac/"
+          ],
+          "clicks": 0,
+          "impressions": 35,
+          "ctr": 0,
+          "position": 60.142857142857146
+        },
+        {
+          "keys": [
+            "car depreciation chart",
+            "https://omnioperand.com/finance/car-depreciation/"
+          ],
+          "clicks": 0,
+          "impressions": 32,
+          "ctr": 0,
+          "position": 73.21875
+        },
+        {
+          "keys": [
+            "10000 g to rpm",
+            "https://omnioperand.com/biotech/centrifuge-rcf-g-force/"
+          ],
+          "clicks": 0,
+          "impressions": 31,
+          "ctr": 0,
+          "position": 68.19354838709677
+        },
+        {
+          "keys": [
+            "car depreciation calculator",
+            "https://omnioperand.com/finance/car-depreciation/"
+          ],
+          "clicks": 0,
+          "impressions": 31,
+          "ctr": 0,
+          "position": 74.58064516129032
+        },
+        {
+          "keys": [
+            "bac calculator",
+            "https://omnioperand.com/health/bac/"
+          ],
+          "clicks": 1,
+          "impressions": 30,
+          "ctr": 0.03333333333333333,
+          "position": 61.8
+        },
+        {
+          "keys": [
+            "centrifuge g force",
+            "https://omnioperand.com/biotech/centrifuge-rcf-g-force/"
+          ],
+          "clicks": 0,
+          "impressions": 26,
+          "ctr": 0,
+          "position": 63.34615384615385
+        },
+        {
+          "keys": [
+            "convert rpm to g",
+            "https://omnioperand.com/biotech/centrifuge-rcf-g-force/"
+          ],
+          "clicks": 0,
+          "impressions": 26,
+          "ctr": 0,
+          "position": 69.5
+        }
+      ],
+      "raw_top_by_clicks": [
+        {
+          "keys": [
+            "bac calculator",
+            "https://omnioperand.com/health/bac/"
+          ],
+          "clicks": 1,
+          "impressions": 30,
+          "ctr": 0.03333333333333333,
+          "position": 61.8
+        },
+        {
+          "keys": [
+            "free grain bin calculator",
+            "https://omnioperand.com/agriculture/grain-bin-bushel-capacity/"
+          ],
+          "clicks": 1,
+          "impressions": 1,
+          "ctr": 1,
+          "position": 80
+        },
+        {
+          "keys": [
+            "z 0 calculator",
+            "https://omnioperand.com/ro/statistics/z-score/"
+          ],
+          "clicks": 1,
+          "impressions": 1,
+          "ctr": 1,
+          "position": 1
+        }
+      ]
+    }
+  ],
+  "WNC Trade Sites": [
+    {
+      "site": "sc-domain:ridgelinetrade.com",
+      "total_queries": 46,
+      "total_clicks": 0,
+      "total_impressions": 74,
+      "avg_ctr": 0.0,
+      "striking_distance_standard": [],
+      "low_ctr_standard": [],
+      "striking_distance_sensitive": [],
+      "low_ctr_sensitive": [],
+      "raw_top_by_impressions": [
+        {
+          "keys": [
+            "generator installation jamestown",
+            "https://preview.ridgelinetrade.com/sites/lake-james-electric/"
+          ],
+          "clicks": 0,
+          "impressions": 5,
+          "ctr": 0,
+          "position": 54.8
+        },
+        {
+          "keys": [
+            "generator installation flat rock nc",
+            "https://preview.ridgelinetrade.com/sites/mountain-generator-service/"
+          ],
+          "clicks": 0,
+          "impressions": 4,
+          "ctr": 0,
+          "position": 92.5
+        },
+        {
+          "keys": [
+            "well pump installation university nc",
+            "https://preview.ridgelinetrade.com/sites/boone-well-services/"
+          ],
+          "clicks": 0,
+          "impressions": 4,
+          "ctr": 0,
+          "position": 33.5
+        },
+        {
+          "keys": [
+            "burnsville nc hydroseeding",
+            "https://preview.ridgelinetrade.com/sites/austin-grading-land/"
+          ],
+          "clicks": 0,
+          "impressions": 3,
+          "ctr": 0,
+          "position": 70
+        },
+        {
+          "keys": [
+            "erosion control services burnsville nc",
+            "https://preview.ridgelinetrade.com/sites/austin-grading-land/"
+          ],
+          "clicks": 0,
+          "impressions": 3,
+          "ctr": 0,
+          "position": 70.66666666666667
+        },
+        {
+          "keys": [
+            "well shocking boone nc",
+            "https://preview.ridgelinetrade.com/sites/boone-well-services/"
+          ],
+          "clicks": 0,
+          "impressions": 3,
+          "ctr": 0,
+          "position": 29.666666666666668
+        },
+        {
+          "keys": [
+            "whole house generator holly springs nc",
+            "https://preview.ridgelinetrade.com/sites/lake-james-electric/"
+          ],
+          "clicks": 0,
+          "impressions": 3,
+          "ctr": 0,
+          "position": 57.333333333333336
+        },
+        {
+          "keys": [
+            "drainage management company burnsville nc",
+            "https://preview.ridgelinetrade.com/sites/austin-grading-land/"
+          ],
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 30
+        },
+        {
+          "keys": [
+            "erosion control burnsville nc",
+            "https://preview.ridgelinetrade.com/sites/austin-grading-land/"
+          ],
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 56
+        },
+        {
+          "keys": [
+            "fingerspace drain forsyth county",
+            "https://preview.ridgelinetrade.com/sites/basement-technologies-wnc/"
+          ],
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 48
+        }
+      ],
+      "raw_top_by_clicks": []
+    },
+    {
+      "site": "sc-domain:wncbackflowtesting.com",
+      "total_queries": 3,
+      "total_clicks": 0,
+      "total_impressions": 3,
+      "avg_ctr": 0.0,
+      "striking_distance_standard": [],
+      "low_ctr_standard": [],
+      "striking_distance_sensitive": [],
+      "low_ctr_sensitive": [],
+      "raw_top_by_impressions": [
+        {
+          "keys": [
+            "asse 1013 backflow preventer",
+            "https://wncbackflowtesting.com/services/rpz-reduced-pressure-zone.html"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 52
+        },
+        {
+          "keys": [
+            "prueba de backflow en salinas",
+            "https://wncbackflowtesting.com/es/central-west/waynesville-nc/"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 21
+        },
+        {
+          "keys": [
+            "prueba de backflow en salinas",
+            "https://wncbackflowtesting.com/es/high-country/blowing-rock-nc/"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 22
+        }
+      ],
+      "raw_top_by_clicks": []
+    },
+    {
+      "site": "sc-domain:wncbackupgenerators.com",
+      "total_queries": 243,
+      "total_clicks": 0,
+      "total_impressions": 707,
+      "avg_ctr": 0.0,
+      "striking_distance_standard": [],
+      "low_ctr_standard": [],
+      "striking_distance_sensitive": [
+        {
+          "query": "backup generator maintenance stallings nc",
+          "page": "https://wncbackupgenerators.com/east-foothills/marion-nc//",
+          "clicks": 0,
+          "impressions": 10,
+          "ctr_percent": 0,
+          "position": 9.2
+        },
+        {
+          "query": "backup generator maintenance stallings nc",
+          "page": "https://wncbackupgenerators.com/southern-plateau/saluda-nc//",
+          "clicks": 0,
+          "impressions": 9,
+          "ctr_percent": 0,
+          "position": 8.1
+        },
+        {
+          "query": "commercial load bank testing company in columbia",
+          "page": "https://wncbackupgenerators.com/services/generator-load-bank-testing.html",
+          "clicks": 0,
+          "impressions": 9,
+          "ctr_percent": 0,
+          "position": 19.6
+        },
+        {
+          "query": "columbia generator load bank testing service",
+          "page": "https://wncbackupgenerators.com/services/generator-load-bank-testing.html",
+          "clicks": 0,
+          "impressions": 6,
+          "ctr_percent": 0,
+          "position": 13.7
+        },
+        {
+          "query": "commercial generator load test contractor",
+          "page": "https://wncbackupgenerators.com/services/generator-load-bank-testing.html",
+          "clicks": 0,
+          "impressions": 6,
+          "ctr_percent": 0,
+          "position": 9.3
+        },
+        {
+          "query": "generator installation camp lejeune nc",
+          "page": "https://wncbackupgenerators.com/central-west/sylva-nc//",
+          "clicks": 0,
+          "impressions": 5,
+          "ctr_percent": 0,
+          "position": 10
+        },
+        {
+          "query": "automatic transfer switch atlanta",
+          "page": "https://wncbackupgenerators.com/services/automatic-transfer-switch.html",
+          "clicks": 0,
+          "impressions": 3,
+          "ctr_percent": 0,
+          "position": 8
+        },
+        {
+          "query": "backup generator maintenance stallings nc",
+          "page": "https://wncbackupgenerators.com/central-west/sylva-nc/",
+          "clicks": 0,
+          "impressions": 3,
+          "ctr_percent": 0,
+          "position": 8
+        },
+        {
+          "query": "generator installation louisburg",
+          "page": "https://wncbackupgenerators.com/luxury-crest/cashiers-nc//",
+          "clicks": 0,
+          "impressions": 3,
+          "ctr_percent": 0,
+          "position": 11.3
+        },
+        {
+          "query": "generator installation louisburg",
+          "page": "https://wncbackupgenerators.com/luxury-crest/sapphire-nc//",
+          "clicks": 0,
+          "impressions": 3,
+          "ctr_percent": 0,
+          "position": 12
+        },
+        {
+          "query": "vass generator installation",
+          "page": "https://wncbackupgenerators.com/central-west/sylva-nc//",
+          "clicks": 0,
+          "impressions": 3,
+          "ctr_percent": 0,
+          "position": 16.7
+        }
+      ],
+      "low_ctr_sensitive": [],
+      "raw_top_by_impressions": [
+        {
+          "keys": [
+            "columbia industrial generator load bank testing",
+            "https://wncbackupgenerators.com/services/generator-load-bank-testing.html"
+          ],
+          "clicks": 0,
+          "impressions": 14,
+          "ctr": 0,
+          "position": 63.07142857142857
+        },
+        {
+          "keys": [
+            "generator discharge bank",
+            "https://wncbackupgenerators.com/services/generator-load-bank-testing.html"
+          ],
+          "clicks": 0,
+          "impressions": 13,
+          "ctr": 0,
+          "position": 27.846153846153847
+        },
+        {
+          "keys": [
+            "generator installation moncure",
+            "https://wncbackupgenerators.com/luxury-crest/sapphire-nc//"
+          ],
+          "clicks": 0,
+          "impressions": 13,
+          "ctr": 0,
+          "position": 28.46153846153846
+        },
+        {
+          "keys": [
+            "generator load bank testing service",
+            "https://wncbackupgenerators.com/services/generator-load-bank-testing.html"
+          ],
+          "clicks": 0,
+          "impressions": 11,
+          "ctr": 0,
+          "position": 57.18181818181818
+        },
+        {
+          "keys": [
+            "backup generator maintenance stallings nc",
+            "https://wncbackupgenerators.com/east-foothills/marion-nc//"
+          ],
+          "clicks": 0,
+          "impressions": 10,
+          "ctr": 0,
+          "position": 9.2
+        },
+        {
+          "keys": [
+            "columbia load bank test for generators",
+            "https://wncbackupgenerators.com/services/generator-load-bank-testing.html"
+          ],
+          "clicks": 0,
+          "impressions": 10,
+          "ctr": 0,
+          "position": 70.3
+        },
+        {
+          "keys": [
+            "ats generator",
+            "https://wncbackupgenerators.com/services/automatic-transfer-switch.html"
+          ],
+          "clicks": 0,
+          "impressions": 9,
+          "ctr": 0,
+          "position": 71.66666666666667
+        },
+        {
+          "keys": [
+            "backup generator maintenance stallings nc",
+            "https://wncbackupgenerators.com/southern-plateau/saluda-nc//"
+          ],
+          "clicks": 0,
+          "impressions": 9,
+          "ctr": 0,
+          "position": 8.11111111111111
+        },
+        {
+          "keys": [
+            "columbia city facility generator load bank testing",
+            "https://wncbackupgenerators.com/services/generator-load-bank-testing.html"
+          ],
+          "clicks": 0,
+          "impressions": 9,
+          "ctr": 0,
+          "position": 42
+        },
+        {
+          "keys": [
+            "columbia on-site generator load bank testing",
+            "https://wncbackupgenerators.com/services/generator-load-bank-testing.html"
+          ],
+          "clicks": 0,
+          "impressions": 9,
+          "ctr": 0,
+          "position": 71.44444444444444
+        }
+      ],
+      "raw_top_by_clicks": []
+    },
+    {
+      "site": "sc-domain:wnccrawlspace.com",
+      "total_queries": 314,
+      "total_clicks": 0,
+      "total_impressions": 1055,
+      "avg_ctr": 0.0,
+      "striking_distance_standard": [
+        {
+          "query": "crawl space repair near me",
+          "page": "https://wnccrawlspace.com/mills-river-nc-crawlspace.html",
+          "clicks": 0,
+          "impressions": 25,
+          "ctr_percent": 0,
+          "position": 10.4
+        },
+        {
+          "query": "crawl space insulation near me",
+          "page": "https://wnccrawlspace.com/mills-river-nc-crawlspace.html",
+          "clicks": 0,
+          "impressions": 20,
+          "ctr_percent": 0,
+          "position": 12.1
+        }
+      ],
+      "low_ctr_standard": [],
+      "striking_distance_sensitive": [
+        {
+          "query": "crawl space repair near me",
+          "page": "https://wnccrawlspace.com/mills-river-nc-crawlspace.html",
+          "clicks": 0,
+          "impressions": 25,
+          "ctr_percent": 0,
+          "position": 10.4
+        },
+        {
+          "query": "crawl space insulation near me",
+          "page": "https://wnccrawlspace.com/mills-river-nc-crawlspace.html",
+          "clicks": 0,
+          "impressions": 20,
+          "ctr_percent": 0,
+          "position": 12.1
+        },
+        {
+          "query": "crawl space waterproofing near me",
+          "page": "https://wnccrawlspace.com/hendersonville-nc-crawlspace.html",
+          "clicks": 0,
+          "impressions": 12,
+          "ctr_percent": 0,
+          "position": 19.7
+        },
+        {
+          "query": "crawl space encapsulation near me",
+          "page": "https://wnccrawlspace.com/east-foothills/morganton-nc/",
+          "clicks": 0,
+          "impressions": 10,
+          "ctr_percent": 0,
+          "position": 13.6
+        },
+        {
+          "query": "crawl space encapsulation near me",
+          "page": "https://wnccrawlspace.com/",
+          "clicks": 0,
+          "impressions": 9,
+          "ctr_percent": 0,
+          "position": 19.7
+        },
+        {
+          "query": "crawl space waterproofing near me",
+          "page": "https://wnccrawlspace.com/",
+          "clicks": 0,
+          "impressions": 9,
+          "ctr_percent": 0,
+          "position": 18.6
+        },
+        {
+          "query": "crawl space insulation near me",
+          "page": "https://wnccrawlspace.com/east-foothills/rutherfordton-nc/",
+          "clicks": 0,
+          "impressions": 8,
+          "ctr_percent": 0,
+          "position": 10.5
+        },
+        {
+          "query": "crawl space insulation near me",
+          "page": "https://wnccrawlspace.com/southern-plateau/saluda-nc//",
+          "clicks": 0,
+          "impressions": 7,
+          "ctr_percent": 0,
+          "position": 7.6
+        },
+        {
+          "query": "sump trench supplier",
+          "page": "https://wnccrawlspace.com/services/interior-french-drains-and-sump-pumps.html",
+          "clicks": 0,
+          "impressions": 6,
+          "ctr_percent": 0,
+          "position": 11
+        },
+        {
+          "query": "how to fix ponding west jefferson nc",
+          "page": "https://wnccrawlspace.com/high-country/west-jefferson-nc//",
+          "clicks": 0,
+          "impressions": 5,
+          "ctr_percent": 0,
+          "position": 7.6
+        },
+        {
+          "query": "rutherfordton house lifting",
+          "page": "https://wnccrawlspace.com/east-foothills/rutherfordton-nc//",
+          "clicks": 0,
+          "impressions": 5,
+          "ctr_percent": 0,
+          "position": 16
+        },
+        {
+          "query": "crawl space repair near me",
+          "page": "https://wnccrawlspace.com/",
+          "clicks": 0,
+          "impressions": 4,
+          "ctr_percent": 0,
+          "position": 16.5
+        },
+        {
+          "query": "crawl space repair near me",
+          "page": "https://wnccrawlspace.com/southern-plateau/saluda-nc//",
+          "clicks": 0,
+          "impressions": 4,
+          "ctr_percent": 0,
+          "position": 14
+        },
+        {
+          "query": "crawlspace moisture control reidsville nc",
+          "page": "https://wnccrawlspace.com/metro-asheville/mars-hill-nc/",
+          "clicks": 0,
+          "impressions": 3,
+          "ctr_percent": 0,
+          "position": 16.7
+        }
+      ],
+      "low_ctr_sensitive": [],
+      "raw_top_by_impressions": [
+        {
+          "keys": [
+            "crawl space encapsulation near me",
+            "https://wnccrawlspace.com/asheville-nc-crawlspace.html"
+          ],
+          "clicks": 0,
+          "impressions": 50,
+          "ctr": 0,
+          "position": 25.44
+        },
+        {
+          "keys": [
+            "crawl space waterproofing near me",
+            "https://wnccrawlspace.com/asheville-nc-crawlspace.html"
+          ],
+          "clicks": 0,
+          "impressions": 44,
+          "ctr": 0,
+          "position": 25.363636363636363
+        },
+        {
+          "keys": [
+            "crawl space encapsulation in asheville, nc",
+            "https://wnccrawlspace.com/asheville-nc-crawlspace.html"
+          ],
+          "clicks": 0,
+          "impressions": 31,
+          "ctr": 0,
+          "position": 74.74193548387096
+        },
+        {
+          "keys": [
+            "crawl space repair in asheville, nc",
+            "https://wnccrawlspace.com/asheville-nc-crawlspace.html"
+          ],
+          "clicks": 0,
+          "impressions": 31,
+          "ctr": 0,
+          "position": 72.19354838709677
+        },
+        {
+          "keys": [
+            "crawl space insulation near me",
+            "https://wnccrawlspace.com/asheville-nc-crawlspace.html"
+          ],
+          "clicks": 0,
+          "impressions": 25,
+          "ctr": 0,
+          "position": 26.32
+        },
+        {
+          "keys": [
+            "crawl space repair near me",
+            "https://wnccrawlspace.com/mills-river-nc-crawlspace.html"
+          ],
+          "clicks": 0,
+          "impressions": 25,
+          "ctr": 0,
+          "position": 10.36
+        },
+        {
+          "keys": [
+            "crawl space waterproofing near me",
+            "https://wnccrawlspace.com/mills-river-nc-crawlspace.html"
+          ],
+          "clicks": 0,
+          "impressions": 25,
+          "ctr": 0,
+          "position": 5.64
+        },
+        {
+          "keys": [
+            "crawl space encapsulation near me",
+            "https://wnccrawlspace.com/mills-river-nc-crawlspace.html"
+          ],
+          "clicks": 0,
+          "impressions": 23,
+          "ctr": 0,
+          "position": 6.130434782608695
+        },
+        {
+          "keys": [
+            "crawl space insulation near me",
+            "https://wnccrawlspace.com/mills-river-nc-crawlspace.html"
+          ],
+          "clicks": 0,
+          "impressions": 20,
+          "ctr": 0,
+          "position": 12.1
+        },
+        {
+          "keys": [
+            "crawl space encapsulation in asheville, nc",
+            "https://wnccrawlspace.com/metro-asheville/asheville-nc//"
+          ],
+          "clicks": 0,
+          "impressions": 18,
+          "ctr": 0,
+          "position": 76.5
+        }
+      ],
+      "raw_top_by_clicks": []
+    },
+    {
+      "site": "sc-domain:wncdeckbuilding.com",
+      "total_queries": 229,
+      "total_clicks": 0,
+      "total_impressions": 520,
+      "avg_ctr": 0.0,
+      "striking_distance_standard": [],
+      "low_ctr_standard": [],
+      "striking_distance_sensitive": [
+        {
+          "query": "deck installation black mountain",
+          "page": "https://wncdeckbuilding.com/metro-asheville/black-mountain-nc//",
+          "clicks": 0,
+          "impressions": 8,
+          "ctr_percent": 0,
+          "position": 9.4
+        },
+        {
+          "query": "deck on steep slope asheville",
+          "page": "https://wncdeckbuilding.com/metro-asheville/asheville-nc//",
+          "clicks": 0,
+          "impressions": 4,
+          "ctr_percent": 0,
+          "position": 14.5
+        },
+        {
+          "query": "outdoor structure builder asheville",
+          "page": "https://wncdeckbuilding.com/metro-asheville/asheville-nc//",
+          "clicks": 0,
+          "impressions": 4,
+          "ctr_percent": 0,
+          "position": 12.5
+        },
+        {
+          "query": "wnc deck builder",
+          "page": "https://wncdeckbuilding.com/metro-asheville/black-mountain-nc//",
+          "clicks": 0,
+          "impressions": 4,
+          "ctr_percent": 0,
+          "position": 13.8
+        },
+        {
+          "query": "black mountain deck builder",
+          "page": "https://wncdeckbuilding.com/metro-asheville/black-mountain-nc//",
+          "clicks": 0,
+          "impressions": 3,
+          "ctr_percent": 0,
+          "position": 11.3
+        },
+        {
+          "query": "deck builder weaverville",
+          "page": "https://wncdeckbuilding.com/metro-asheville/weaverville-nc//",
+          "clicks": 0,
+          "impressions": 3,
+          "ctr_percent": 0,
+          "position": 14.3
+        },
+        {
+          "query": "deck builders near black mountain",
+          "page": "https://wncdeckbuilding.com/metro-asheville/black-mountain-nc//",
+          "clicks": 0,
+          "impressions": 3,
+          "ctr_percent": 0,
+          "position": 8.3
+        },
+        {
+          "query": "hillside deck builder asheville",
+          "page": "https://wncdeckbuilding.com/metro-asheville/black-mountain-nc//",
+          "clicks": 0,
+          "impressions": 3,
+          "ctr_percent": 0,
+          "position": 9.7
+        },
+        {
+          "query": "lake junaluska deck builder",
+          "page": "https://wncdeckbuilding.com/central-west/waynesville-nc//",
+          "clicks": 0,
+          "impressions": 3,
+          "ctr_percent": 0,
+          "position": 17.7
+        },
+        {
+          "query": "licensed deck builder asheville",
+          "page": "https://wncdeckbuilding.com/metro-asheville/asheville-nc//",
+          "clicks": 0,
+          "impressions": 3,
+          "ctr_percent": 0,
+          "position": 12.7
+        },
+        {
+          "query": "weaverville deck ideas",
+          "page": "https://wncdeckbuilding.com/metro-asheville/weaverville-nc//",
+          "clicks": 0,
+          "impressions": 3,
+          "ctr_percent": 0,
+          "position": 10.3
+        },
+        {
+          "query": "wnc deck builder",
+          "page": "https://wncdeckbuilding.com/high-country/boone-nc//",
+          "clicks": 0,
+          "impressions": 3,
+          "ctr_percent": 0,
+          "position": 16.3
+        }
+      ],
+      "low_ctr_sensitive": [],
+      "raw_top_by_impressions": [
+        {
+          "keys": [
+            "composite deck installation garner nc",
+            "https://wncdeckbuilding.com/services/composite-decking.html"
+          ],
+          "clicks": 0,
+          "impressions": 8,
+          "ctr": 0,
+          "position": 91
+        },
+        {
+          "keys": [
+            "deck installation black mountain",
+            "https://wncdeckbuilding.com/metro-asheville/black-mountain-nc//"
+          ],
+          "clicks": 0,
+          "impressions": 8,
+          "ctr": 0,
+          "position": 9.375
+        },
+        {
+          "keys": [
+            "screen porch contractors hendersonville",
+            "https://wncdeckbuilding.com/services/covered-porches.html"
+          ],
+          "clicks": 0,
+          "impressions": 8,
+          "ctr": 0,
+          "position": 53.75
+        },
+        {
+          "keys": [
+            "deck builders asheville nc",
+            "https://wncdeckbuilding.com/metro-asheville/asheville-nc//"
+          ],
+          "clicks": 0,
+          "impressions": 6,
+          "ctr": 0,
+          "position": 70.83333333333333
+        },
+        {
+          "keys": [
+            "multi-level deck construction garner nc",
+            "https://wncdeckbuilding.com/"
+          ],
+          "clicks": 0,
+          "impressions": 5,
+          "ctr": 0,
+          "position": 69.2
+        },
+        {
+          "keys": [
+            "western nc deck builder",
+            "https://wncdeckbuilding.com/"
+          ],
+          "clicks": 0,
+          "impressions": 5,
+          "ctr": 0,
+          "position": 57.6
+        },
+        {
+          "keys": [
+            "wnc deck builder",
+            "https://wncdeckbuilding.com/metro-asheville/asheville-nc//"
+          ],
+          "clicks": 0,
+          "impressions": 5,
+          "ctr": 0,
+          "position": 26.2
+        },
+        {
+          "keys": [
+            "buncombe county deck builder",
+            "https://wncdeckbuilding.com/metro-asheville/asheville-nc//"
+          ],
+          "clicks": 0,
+          "impressions": 4,
+          "ctr": 0,
+          "position": 45.25
+        },
+        {
+          "keys": [
+            "deck and porch builder asheville",
+            "https://wncdeckbuilding.com/metro-asheville/asheville-nc//"
+          ],
+          "clicks": 0,
+          "impressions": 4,
+          "ctr": 0,
+          "position": 89.25
+        },
+        {
+          "keys": [
+            "deck and porch builder asheville nc",
+            "https://wncdeckbuilding.com/metro-asheville/asheville-nc//"
+          ],
+          "clicks": 0,
+          "impressions": 4,
+          "ctr": 0,
+          "position": 69.75
+        }
+      ],
+      "raw_top_by_clicks": []
+    },
+    {
+      "site": "sc-domain:wncdrivewaypaving.com",
+      "total_queries": 62,
+      "total_clicks": 0,
+      "total_impressions": 176,
+      "avg_ctr": 0.0,
+      "striking_distance_standard": [],
+      "low_ctr_standard": [],
+      "striking_distance_sensitive": [],
+      "low_ctr_sensitive": [],
+      "raw_top_by_impressions": [
+        {
+          "keys": [
+            "driveway construction canton",
+            "https://wncdrivewaypaving.com/central-west/canton-nc/"
+          ],
+          "clicks": 0,
+          "impressions": 16,
+          "ctr": 0,
+          "position": 37.875
+        },
+        {
+          "keys": [
+            "commercial grading banner elk",
+            "https://wncdrivewaypaving.com/toe-river-valley/banner-elk-nc//"
+          ],
+          "clicks": 0,
+          "impressions": 13,
+          "ctr": 0,
+          "position": 62.61538461538461
+        },
+        {
+          "keys": [
+            "heated driveway banner elk nc",
+            "https://wncdrivewaypaving.com/toe-river-valley/banner-elk-nc//"
+          ],
+          "clicks": 0,
+          "impressions": 12,
+          "ctr": 0,
+          "position": 23
+        },
+        {
+          "keys": [
+            "commercial grading & utilities banner elk nc",
+            "https://wncdrivewaypaving.com/toe-river-valley/banner-elk-nc//"
+          ],
+          "clicks": 0,
+          "impressions": 8,
+          "ctr": 0,
+          "position": 78.625
+        },
+        {
+          "keys": [
+            "banner elk nc commercial grading & utilities",
+            "https://wncdrivewaypaving.com/toe-river-valley/banner-elk-nc//"
+          ],
+          "clicks": 0,
+          "impressions": 7,
+          "ctr": 0,
+          "position": 55.857142857142854
+        },
+        {
+          "keys": [
+            "new driveway installation ashe county nc",
+            "https://wncdrivewaypaving.com/high-country/west-jefferson-nc/"
+          ],
+          "clicks": 0,
+          "impressions": 7,
+          "ctr": 0,
+          "position": 5.714285714285714
+        },
+        {
+          "keys": [
+            "commercial grading contractor banner elk nc",
+            "https://wncdrivewaypaving.com/toe-river-valley/banner-elk-nc//"
+          ],
+          "clicks": 0,
+          "impressions": 6,
+          "ctr": 0,
+          "position": 68
+        },
+        {
+          "keys": [
+            "canton driveway extension",
+            "https://wncdrivewaypaving.com/central-west/canton-nc/"
+          ],
+          "clicks": 0,
+          "impressions": 5,
+          "ctr": 0,
+          "position": 43.4
+        },
+        {
+          "keys": [
+            "driveway contractor ashe county nc",
+            "https://wncdrivewaypaving.com/high-country/west-jefferson-nc//"
+          ],
+          "clicks": 0,
+          "impressions": 5,
+          "ctr": 0,
+          "position": 7
+        },
+        {
+          "keys": [
+            "driveway extensions canton",
+            "https://wncdrivewaypaving.com/central-west/canton-nc/"
+          ],
+          "clicks": 0,
+          "impressions": 5,
+          "ctr": 0,
+          "position": 23
+        }
+      ],
+      "raw_top_by_clicks": []
+    },
+    {
+      "site": "sc-domain:wncelectrical.com",
+      "total_queries": 220,
+      "total_clicks": 1,
+      "total_impressions": 1105,
+      "avg_ctr": 0.09,
+      "striking_distance_standard": [
+        {
+          "query": "whole home surge protector installation concord nc",
+          "page": "https://wncelectrical.com/services/whole-home-surge-protection.html",
+          "clicks": 0,
+          "impressions": 18,
+          "ctr_percent": 0,
+          "position": 13.4
+        }
+      ],
+      "low_ctr_standard": [],
+      "striking_distance_sensitive": [
+        {
+          "query": "whole home surge protector installation concord nc",
+          "page": "https://wncelectrical.com/services/whole-home-surge-protection.html",
+          "clicks": 0,
+          "impressions": 18,
+          "ctr_percent": 0,
+          "position": 13.4
+        },
+        {
+          "query": "surge protection mt pleasant sc",
+          "page": "https://wncelectrical.com/services/whole-home-surge-protection.html",
+          "clicks": 0,
+          "impressions": 14,
+          "ctr_percent": 0,
+          "position": 13.2
+        },
+        {
+          "query": "surge protection winston-salem nc",
+          "page": "https://wncelectrical.com/services/whole-home-surge-protection.html",
+          "clicks": 0,
+          "impressions": 14,
+          "ctr_percent": 0,
+          "position": 11.4
+        },
+        {
+          "query": "surge protector installation concord nc",
+          "page": "https://wncelectrical.com/services/whole-home-surge-protection.html",
+          "clicks": 0,
+          "impressions": 14,
+          "ctr_percent": 0,
+          "position": 10.1
+        },
+        {
+          "query": "surge protection fuquay-varina nc",
+          "page": "https://wncelectrical.com/services/whole-home-surge-protection.html",
+          "clicks": 0,
+          "impressions": 13,
+          "ctr_percent": 0,
+          "position": 11.2
+        },
+        {
+          "query": "whole house surge protector installation hendersonville nc",
+          "page": "https://wncelectrical.com/services/whole-home-surge-protection.html",
+          "clicks": 0,
+          "impressions": 12,
+          "ctr_percent": 0,
+          "position": 16.8
+        },
+        {
+          "query": "surge protection hendersonville nc",
+          "page": "https://wncelectrical.com/services/whole-home-surge-protection.html",
+          "clicks": 0,
+          "impressions": 11,
+          "ctr_percent": 0,
+          "position": 12.1
+        },
+        {
+          "query": "surge protection jacksonville nc",
+          "page": "https://wncelectrical.com/services/whole-home-surge-protection.html",
+          "clicks": 0,
+          "impressions": 10,
+          "ctr_percent": 0,
+          "position": 12.7
+        },
+        {
+          "query": "surge protection new bern nc",
+          "page": "https://wncelectrical.com/services/whole-home-surge-protection.html",
+          "clicks": 0,
+          "impressions": 10,
+          "ctr_percent": 0,
+          "position": 9.8
+        },
+        {
+          "query": "surge protection concord nc",
+          "page": "https://wncelectrical.com/services/whole-home-surge-protection.html",
+          "clicks": 0,
+          "impressions": 9,
+          "ctr_percent": 0,
+          "position": 10.9
+        },
+        {
+          "query": "surge protection installation garner",
+          "page": "https://wncelectrical.com/services/whole-home-surge-protection.html",
+          "clicks": 0,
+          "impressions": 9,
+          "ctr_percent": 0,
+          "position": 10.2
+        },
+        {
+          "query": "surge protector installation carrboro",
+          "page": "https://wncelectrical.com/services/whole-home-surge-protection.html",
+          "clicks": 0,
+          "impressions": 9,
+          "ctr_percent": 0,
+          "position": 11.3
+        },
+        {
+          "query": "surge protection installation smithfield",
+          "page": "https://wncelectrical.com/services/whole-home-surge-protection.html",
+          "clicks": 0,
+          "impressions": 8,
+          "ctr_percent": 0,
+          "position": 9.6
+        },
+        {
+          "query": "surge protector installation gastonia nc",
+          "page": "https://wncelectrical.com/services/whole-home-surge-protection.html",
+          "clicks": 0,
+          "impressions": 8,
+          "ctr_percent": 0,
+          "position": 8.5
+        },
+        {
+          "query": "surge protector installation mooresville",
+          "page": "https://wncelectrical.com/services/whole-home-surge-protection.html",
+          "clicks": 0,
+          "impressions": 8,
+          "ctr_percent": 0,
+          "position": 10.6
+        }
+      ],
+      "low_ctr_sensitive": [],
+      "raw_top_by_impressions": [
+        {
+          "keys": [
+            "aluminum wire remediation",
+            "https://wncelectrical.com/services/aluminum-wiring-repair.html"
+          ],
+          "clicks": 0,
+          "impressions": 79,
+          "ctr": 0,
+          "position": 83.74683544303798
+        },
+        {
+          "keys": [
+            "wnc electric",
+            "https://wncelectrical.com/"
+          ],
+          "clicks": 1,
+          "impressions": 23,
+          "ctr": 0.043478260869565216,
+          "position": 4.173913043478261
+        },
+        {
+          "keys": [
+            "whole home surge protector installation concord nc",
+            "https://wncelectrical.com/services/whole-home-surge-protection.html"
+          ],
+          "clicks": 0,
+          "impressions": 18,
+          "ctr": 0,
+          "position": 13.38888888888889
+        },
+        {
+          "keys": [
+            "aluminum wiring repair cary nc",
+            "https://wncelectrical.com/services/aluminum-wiring-repair.html"
+          ],
+          "clicks": 0,
+          "impressions": 17,
+          "ctr": 0,
+          "position": 43.94117647058823
+        },
+        {
+          "keys": [
+            "surge protector installation cary nc",
+            "https://wncelectrical.com/services/whole-home-surge-protection.html"
+          ],
+          "clicks": 0,
+          "impressions": 15,
+          "ctr": 0,
+          "position": 58.2
+        },
+        {
+          "keys": [
+            "surge protection mt pleasant sc",
+            "https://wncelectrical.com/services/whole-home-surge-protection.html"
+          ],
+          "clicks": 0,
+          "impressions": 14,
+          "ctr": 0,
+          "position": 13.214285714285714
+        },
+        {
+          "keys": [
+            "surge protection winston-salem nc",
+            "https://wncelectrical.com/services/whole-home-surge-protection.html"
+          ],
+          "clicks": 0,
+          "impressions": 14,
+          "ctr": 0,
+          "position": 11.428571428571429
+        },
+        {
+          "keys": [
+            "surge protector installation concord nc",
+            "https://wncelectrical.com/services/whole-home-surge-protection.html"
+          ],
+          "clicks": 0,
+          "impressions": 14,
+          "ctr": 0,
+          "position": 10.071428571428571
+        },
+        {
+          "keys": [
+            "surge protection fuquay-varina nc",
+            "https://wncelectrical.com/services/whole-home-surge-protection.html"
+          ],
+          "clicks": 0,
+          "impressions": 13,
+          "ctr": 0,
+          "position": 11.23076923076923
+        },
+        {
+          "keys": [
+            "electrician brevard nc",
+            "https://wncelectrical.com/southern-plateau/brevard-nc/"
+          ],
+          "clicks": 0,
+          "impressions": 12,
+          "ctr": 0,
+          "position": 70.08333333333333
+        }
+      ],
+      "raw_top_by_clicks": [
+        {
+          "keys": [
+            "wnc electric",
+            "https://wncelectrical.com/"
+          ],
+          "clicks": 1,
+          "impressions": 23,
+          "ctr": 0.043478260869565216,
+          "position": 4.173913043478261
+        }
+      ]
+    },
+    {
+      "site": "sc-domain:wncemergencyplumbing.com",
+      "total_queries": 207,
+      "total_clicks": 0,
+      "total_impressions": 967,
+      "avg_ctr": 0.0,
+      "striking_distance_standard": [
+        {
+          "query": "emergency plumber",
+          "page": "https://wncemergencyplumbing.com/hendersonville-nc-emergency-plumbing.html",
+          "clicks": 0,
+          "impressions": 33,
+          "ctr_percent": 0,
+          "position": 14.2
+        },
+        {
+          "query": "emergency plumber",
+          "page": "https://wncemergencyplumbing.com/fletcher-nc-emergency-plumbing.html",
+          "clicks": 0,
+          "impressions": 17,
+          "ctr_percent": 0,
+          "position": 14.4
+        },
+        {
+          "query": "plumber",
+          "page": "https://wncemergencyplumbing.com/brevard-nc-emergency-plumbing.html",
+          "clicks": 0,
+          "impressions": 15,
+          "ctr_percent": 0,
+          "position": 18.4
+        }
+      ],
+      "low_ctr_standard": [],
+      "striking_distance_sensitive": [
+        {
+          "query": "emergency plumber",
+          "page": "https://wncemergencyplumbing.com/hendersonville-nc-emergency-plumbing.html",
+          "clicks": 0,
+          "impressions": 33,
+          "ctr_percent": 0,
+          "position": 14.2
+        },
+        {
+          "query": "emergency plumber",
+          "page": "https://wncemergencyplumbing.com/fletcher-nc-emergency-plumbing.html",
+          "clicks": 0,
+          "impressions": 17,
+          "ctr_percent": 0,
+          "position": 14.4
+        },
+        {
+          "query": "plumber",
+          "page": "https://wncemergencyplumbing.com/brevard-nc-emergency-plumbing.html",
+          "clicks": 0,
+          "impressions": 15,
+          "ctr_percent": 0,
+          "position": 18.4
+        },
+        {
+          "query": "emergency plumber near me",
+          "page": "https://wncemergencyplumbing.com/hendersonville-nc-emergency-plumbing.html",
+          "clicks": 0,
+          "impressions": 9,
+          "ctr_percent": 0,
+          "position": 16.4
+        },
+        {
+          "query": "sewer line repair black mountain nc",
+          "page": "https://wncemergencyplumbing.com/metro-asheville/black-mountain-nc//",
+          "clicks": 0,
+          "impressions": 9,
+          "ctr_percent": 0,
+          "position": 19.4
+        },
+        {
+          "query": "emergency plumbing near me",
+          "page": "https://wncemergencyplumbing.com/hendersonville-nc-emergency-plumbing.html",
+          "clicks": 0,
+          "impressions": 7,
+          "ctr_percent": 0,
+          "position": 15.9
+        },
+        {
+          "query": "trenchless sewer replacement in black mountain",
+          "page": "https://wncemergencyplumbing.com/metro-asheville/black-mountain-nc//",
+          "clicks": 0,
+          "impressions": 6,
+          "ctr_percent": 0,
+          "position": 19.3
+        },
+        {
+          "query": "water line replacement east foothills",
+          "page": "https://wncemergencyplumbing.com/east-foothills//",
+          "clicks": 0,
+          "impressions": 5,
+          "ctr_percent": 0,
+          "position": 12.6
+        },
+        {
+          "query": "24 hour plumber",
+          "page": "https://wncemergencyplumbing.com/hendersonville-nc-emergency-plumbing.html",
+          "clicks": 0,
+          "impressions": 4,
+          "ctr_percent": 0,
+          "position": 12.5
+        },
+        {
+          "query": "emergency plumbing near me",
+          "page": "https://wncemergencyplumbing.com/fletcher-nc-emergency-plumbing.html",
+          "clicks": 0,
+          "impressions": 4,
+          "ctr_percent": 0,
+          "position": 17.5
+        },
+        {
+          "query": "leak detection morganton",
+          "page": "https://wncemergencyplumbing.com/east-foothills/morganton-nc//",
+          "clicks": 0,
+          "impressions": 4,
+          "ctr_percent": 0,
+          "position": 8.5
+        },
+        {
+          "query": "emergency plumber near me",
+          "page": "https://wncemergencyplumbing.com/fletcher-nc-emergency-plumbing.html",
+          "clicks": 0,
+          "impressions": 3,
+          "ctr_percent": 0,
+          "position": 12.7
+        },
+        {
+          "query": "emergency plumber weaverville nc",
+          "page": "https://wncemergencyplumbing.com/metro-asheville/weaverville-nc//",
+          "clicks": 0,
+          "impressions": 3,
+          "ctr_percent": 0,
+          "position": 11.7
+        }
+      ],
+      "low_ctr_sensitive": [],
+      "raw_top_by_impressions": [
+        {
+          "keys": [
+            "emergency plumber",
+            "https://wncemergencyplumbing.com/asheville-nc-emergency-plumbing.html"
+          ],
+          "clicks": 0,
+          "impressions": 37,
+          "ctr": 0,
+          "position": 25.7027027027027
+        },
+        {
+          "keys": [
+            "emergency plumber",
+            "https://wncemergencyplumbing.com/hendersonville-nc-emergency-plumbing.html"
+          ],
+          "clicks": 0,
+          "impressions": 33,
+          "ctr": 0,
+          "position": 14.151515151515152
+        },
+        {
+          "keys": [
+            "emergency plumbers hendersonville",
+            "https://wncemergencyplumbing.com/"
+          ],
+          "clicks": 0,
+          "impressions": 22,
+          "ctr": 0,
+          "position": 57.86363636363637
+        },
+        {
+          "keys": [
+            "emergency plumber hendersonville nc",
+            "https://wncemergencyplumbing.com/"
+          ],
+          "clicks": 0,
+          "impressions": 20,
+          "ctr": 0,
+          "position": 52.7
+        },
+        {
+          "keys": [
+            "emergency plumber",
+            "https://wncemergencyplumbing.com/fletcher-nc-emergency-plumbing.html"
+          ],
+          "clicks": 0,
+          "impressions": 17,
+          "ctr": 0,
+          "position": 14.352941176470589
+        },
+        {
+          "keys": [
+            "wnc plumbing",
+            "https://wncemergencyplumbing.com/"
+          ],
+          "clicks": 0,
+          "impressions": 16,
+          "ctr": 0,
+          "position": 38.6875
+        },
+        {
+          "keys": [
+            "burst water line repair hendersonville nc",
+            "https://wncemergencyplumbing.com/metro-asheville/asheville-nc//"
+          ],
+          "clicks": 0,
+          "impressions": 15,
+          "ctr": 0,
+          "position": 57
+        },
+        {
+          "keys": [
+            "emergency plumber asheville nc",
+            "https://wncemergencyplumbing.com/"
+          ],
+          "clicks": 0,
+          "impressions": 15,
+          "ctr": 0,
+          "position": 81.46666666666667
+        },
+        {
+          "keys": [
+            "plumber",
+            "https://wncemergencyplumbing.com/brevard-nc-emergency-plumbing.html"
+          ],
+          "clicks": 0,
+          "impressions": 15,
+          "ctr": 0,
+          "position": 18.4
+        },
+        {
+          "keys": [
+            "sewer line repair asheville",
+            "https://wncemergencyplumbing.com/metro-asheville//"
+          ],
+          "clicks": 0,
+          "impressions": 15,
+          "ctr": 0,
+          "position": 68.26666666666667
+        }
+      ],
+      "raw_top_by_clicks": []
+    },
+    {
+      "site": "sc-domain:wncexcavating.com",
+      "total_queries": 78,
+      "total_clicks": 0,
+      "total_impressions": 226,
+      "avg_ctr": 0.0,
+      "striking_distance_standard": [],
+      "low_ctr_standard": [],
+      "striking_distance_sensitive": [],
+      "low_ctr_sensitive": [],
+      "raw_top_by_impressions": [
+        {
+          "keys": [
+            "north carolina excavation company",
+            "https://wncexcavating.com/"
+          ],
+          "clicks": 0,
+          "impressions": 94,
+          "ctr": 0,
+          "position": 53.159574468085104
+        },
+        {
+          "keys": [
+            "demolition contractors flat rock",
+            "https://wncexcavating.com/southern-plateau/hendersonville-nc/"
+          ],
+          "clicks": 0,
+          "impressions": 7,
+          "ctr": 0,
+          "position": 28.285714285714285
+        },
+        {
+          "keys": [
+            "ditch excavation beaufort nc",
+            "https://wncexcavating.com/high-country/utility-trenching/"
+          ],
+          "clicks": 0,
+          "impressions": 6,
+          "ctr": 0,
+          "position": 39.166666666666664
+        },
+        {
+          "keys": [
+            "huntersville nc excavation services",
+            "https://wncexcavating.com/"
+          ],
+          "clicks": 0,
+          "impressions": 6,
+          "ctr": 0,
+          "position": 72.33333333333333
+        },
+        {
+          "keys": [
+            "nc sitework asheville nc",
+            "https://wncexcavating.com/metro-asheville/"
+          ],
+          "clicks": 0,
+          "impressions": 6,
+          "ctr": 0,
+          "position": 92.5
+        },
+        {
+          "keys": [
+            "site preparation services asheville nc",
+            "https://wncexcavating.com/metro-asheville/weaverville-nc/"
+          ],
+          "clicks": 0,
+          "impressions": 5,
+          "ctr": 0,
+          "position": 62
+        },
+        {
+          "keys": [
+            "commercial excavation asheville nc",
+            "https://wncexcavating.com/metro-asheville/weaverville-nc/"
+          ],
+          "clicks": 0,
+          "impressions": 4,
+          "ctr": 0,
+          "position": 92
+        },
+        {
+          "keys": [
+            "north carolina excavation",
+            "https://wncexcavating.com/"
+          ],
+          "clicks": 0,
+          "impressions": 4,
+          "ctr": 0,
+          "position": 24.25
+        },
+        {
+          "keys": [
+            "utility trenching mooresville nc",
+            "https://wncexcavating.com/services/utility-trenching/"
+          ],
+          "clicks": 0,
+          "impressions": 4,
+          "ctr": 0,
+          "position": 90.5
+        },
+        {
+          "keys": [
+            "land clearing contractor highlands nc",
+            "https://wncexcavating.com/luxury-crest/highlands-nc/"
+          ],
+          "clicks": 0,
+          "impressions": 3,
+          "ctr": 0,
+          "position": 47
+        }
+      ],
+      "raw_top_by_clicks": []
+    },
+    {
+      "site": "sc-domain:wnchvacrepair.com",
+      "total_queries": 135,
+      "total_clicks": 0,
+      "total_impressions": 319,
+      "avg_ctr": 0.0,
+      "striking_distance_standard": [],
+      "low_ctr_standard": [],
+      "striking_distance_sensitive": [
+        {
+          "query": "hvac near me",
+          "page": "https://wnchvacrepair.com/mills-river-nc-hvac-repair.html",
+          "clicks": 0,
+          "impressions": 9,
+          "ctr_percent": 0,
+          "position": 16.2
+        },
+        {
+          "query": "furnace repair near me",
+          "page": "https://wnchvacrepair.com/brevard-nc-hvac-repair.html",
+          "clicks": 0,
+          "impressions": 8,
+          "ctr_percent": 0,
+          "position": 11.1
+        },
+        {
+          "query": "furnace repair near me",
+          "page": "https://wnchvacrepair.com/mills-river-nc-hvac-repair.html",
+          "clicks": 0,
+          "impressions": 7,
+          "ctr_percent": 0,
+          "position": 8
+        },
+        {
+          "query": "furnace replacement near me",
+          "page": "https://wnchvacrepair.com/fletcher-nc-hvac-repair.html",
+          "clicks": 0,
+          "impressions": 7,
+          "ctr_percent": 0,
+          "position": 12.6
+        },
+        {
+          "query": "hvac services near me",
+          "page": "https://wnchvacrepair.com/mills-river-nc-hvac-repair.html",
+          "clicks": 0,
+          "impressions": 7,
+          "ctr_percent": 0,
+          "position": 16.9
+        },
+        {
+          "query": "hvac contractor near me",
+          "page": "https://wnchvacrepair.com/mills-river-nc-hvac-repair.html",
+          "clicks": 0,
+          "impressions": 6,
+          "ctr_percent": 0,
+          "position": 18
+        },
+        {
+          "query": "hvac near me",
+          "page": "https://wnchvacrepair.com/fletcher-nc-hvac-repair.html",
+          "clicks": 0,
+          "impressions": 6,
+          "ctr_percent": 0,
+          "position": 10.3
+        },
+        {
+          "query": "ac repair near me",
+          "page": "https://wnchvacrepair.com/mills-river-nc-hvac-repair.html",
+          "clicks": 0,
+          "impressions": 5,
+          "ctr_percent": 0,
+          "position": 10.4
+        },
+        {
+          "query": "heating and cooling near me",
+          "page": "https://wnchvacrepair.com/mills-river-nc-hvac-repair.html",
+          "clicks": 0,
+          "impressions": 3,
+          "ctr_percent": 0,
+          "position": 15.7
+        }
+      ],
+      "low_ctr_sensitive": [],
+      "raw_top_by_impressions": [
+        {
+          "keys": [
+            "furnace repair near me",
+            "https://wnchvacrepair.com/fletcher-nc-hvac-repair.html"
+          ],
+          "clicks": 0,
+          "impressions": 13,
+          "ctr": 0,
+          "position": 6.769230769230769
+        },
+        {
+          "keys": [
+            "heating and cooling fletcher nc",
+            "https://wnchvacrepair.com/southern-plateau/fletcher-nc//"
+          ],
+          "clicks": 0,
+          "impressions": 9,
+          "ctr": 0,
+          "position": 80
+        },
+        {
+          "keys": [
+            "hvac near me",
+            "https://wnchvacrepair.com/mills-river-nc-hvac-repair.html"
+          ],
+          "clicks": 0,
+          "impressions": 9,
+          "ctr": 0,
+          "position": 16.22222222222222
+        },
+        {
+          "keys": [
+            "furnace repair near me",
+            "https://wnchvacrepair.com/brevard-nc-hvac-repair.html"
+          ],
+          "clicks": 0,
+          "impressions": 8,
+          "ctr": 0,
+          "position": 11.125
+        },
+        {
+          "keys": [
+            "furnace repair near me",
+            "https://wnchvacrepair.com/mills-river-nc-hvac-repair.html"
+          ],
+          "clicks": 0,
+          "impressions": 7,
+          "ctr": 0,
+          "position": 8
+        },
+        {
+          "keys": [
+            "furnace replacement near me",
+            "https://wnchvacrepair.com/fletcher-nc-hvac-repair.html"
+          ],
+          "clicks": 0,
+          "impressions": 7,
+          "ctr": 0,
+          "position": 12.571428571428571
+        },
+        {
+          "keys": [
+            "hvac services near me",
+            "https://wnchvacrepair.com/mills-river-nc-hvac-repair.html"
+          ],
+          "clicks": 0,
+          "impressions": 7,
+          "ctr": 0,
+          "position": 16.857142857142858
+        },
+        {
+          "keys": [
+            "local hvac contractors",
+            "https://wnchvacrepair.com/mills-river-nc-hvac-repair.html"
+          ],
+          "clicks": 0,
+          "impressions": 7,
+          "ctr": 0,
+          "position": 22
+        },
+        {
+          "keys": [
+            "hvac contractor near me",
+            "https://wnchvacrepair.com/mills-river-nc-hvac-repair.html"
+          ],
+          "clicks": 0,
+          "impressions": 6,
+          "ctr": 0,
+          "position": 18
+        },
+        {
+          "keys": [
+            "hvac near me",
+            "https://wnchvacrepair.com/fletcher-nc-hvac-repair.html"
+          ],
+          "clicks": 0,
+          "impressions": 6,
+          "ctr": 0,
+          "position": 10.333333333333334
+        }
+      ],
+      "raw_top_by_clicks": []
+    },
+    {
+      "site": "sc-domain:wncloghomerestoration.com",
+      "total_queries": 27,
+      "total_clicks": 0,
+      "total_impressions": 81,
+      "avg_ctr": 0.0,
+      "striking_distance_standard": [],
+      "low_ctr_standard": [],
+      "striking_distance_sensitive": [
+        {
+          "query": "spruce pine water damage restoration",
+          "page": "https://wncloghomerestoration.com/toe-river-valley/spruce-pine-nc//",
+          "clicks": 0,
+          "impressions": 3,
+          "ctr_percent": 0,
+          "position": 8.7
+        },
+        {
+          "query": "sylva mold removal",
+          "page": "https://wncloghomerestoration.com/central-west/sylva-nc//",
+          "clicks": 0,
+          "impressions": 3,
+          "ctr_percent": 0,
+          "position": 11.3
+        }
+      ],
+      "low_ctr_sensitive": [],
+      "raw_top_by_impressions": [
+        {
+          "keys": [
+            "historic renovation asheville nc",
+            "https://wncloghomerestoration.com/metro-asheville/asheville-nc//"
+          ],
+          "clicks": 0,
+          "impressions": 18,
+          "ctr": 0,
+          "position": 61.111111111111114
+        },
+        {
+          "keys": [
+            "weathered wood shingles waynesville",
+            "https://wncloghomerestoration.com/central-west/waynesville-nc//"
+          ],
+          "clicks": 0,
+          "impressions": 9,
+          "ctr": 0,
+          "position": 46.44444444444444
+        },
+        {
+          "keys": [
+            "wood protection troutman nc",
+            "https://wncloghomerestoration.com/central-west/sylva-nc//"
+          ],
+          "clicks": 0,
+          "impressions": 7,
+          "ctr": 0,
+          "position": 27
+        },
+        {
+          "keys": [
+            "bark siding waynesville",
+            "https://wncloghomerestoration.com/central-west/waynesville-nc//"
+          ],
+          "clicks": 0,
+          "impressions": 6,
+          "ctr": 0,
+          "position": 48.166666666666664
+        },
+        {
+          "keys": [
+            "wood rot repair hendersonville",
+            "https://wncloghomerestoration.com/southern-plateau/hendersonville-nc//"
+          ],
+          "clicks": 0,
+          "impressions": 5,
+          "ctr": 0,
+          "position": 34.6
+        },
+        {
+          "keys": [
+            "waynesville restoration services",
+            "https://wncloghomerestoration.com/central-west/waynesville-nc//"
+          ],
+          "clicks": 0,
+          "impressions": 4,
+          "ctr": 0,
+          "position": 69
+        },
+        {
+          "keys": [
+            "spruce pine mold remediation",
+            "https://wncloghomerestoration.com/toe-river-valley/spruce-pine-nc//"
+          ],
+          "clicks": 0,
+          "impressions": 3,
+          "ctr": 0,
+          "position": 5
+        },
+        {
+          "keys": [
+            "spruce pine water damage restoration",
+            "https://wncloghomerestoration.com/toe-river-valley/spruce-pine-nc//"
+          ],
+          "clicks": 0,
+          "impressions": 3,
+          "ctr": 0,
+          "position": 8.666666666666668
+        },
+        {
+          "keys": [
+            "sylva mold removal",
+            "https://wncloghomerestoration.com/central-west/sylva-nc//"
+          ],
+          "clicks": 0,
+          "impressions": 3,
+          "ctr": 0,
+          "position": 11.333333333333334
+        },
+        {
+          "keys": [
+            "chinking near me",
+            "https://wncloghomerestoration.com/metro-asheville/weaverville-nc//"
+          ],
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 48.5
+        }
+      ],
+      "raw_top_by_clicks": []
+    },
+    {
+      "site": "sc-domain:wncpoolandspa.com",
+      "total_queries": 65,
+      "total_clicks": 1,
+      "total_impressions": 135,
+      "avg_ctr": 0.74,
+      "striking_distance_standard": [],
+      "low_ctr_standard": [],
+      "striking_distance_sensitive": [
+        {
+          "query": "hot tub repair near me",
+          "page": "https://wncpoolandspa.com/asheville-nc-pool-and-spa.html",
+          "clicks": 0,
+          "impressions": 7,
+          "ctr_percent": 0,
+          "position": 10
+        },
+        {
+          "query": "full pool and spa maintenance and repair (24/7 service)",
+          "page": "https://wncpoolandspa.com/asheville-nc-pool-and-spa.html",
+          "clicks": 0,
+          "impressions": 4,
+          "ctr_percent": 0,
+          "position": 7.8
+        },
+        {
+          "query": "pool and spa",
+          "page": "https://wncpoolandspa.com/asheville-nc-pool-and-spa.html",
+          "clicks": 0,
+          "impressions": 4,
+          "ctr_percent": 0,
+          "position": 14.2
+        }
+      ],
+      "low_ctr_sensitive": [],
+      "raw_top_by_impressions": [
+        {
+          "keys": [
+            "pool tub wiring hendersonville nc",
+            "https://wncpoolandspa.com/"
+          ],
+          "clicks": 0,
+          "impressions": 11,
+          "ctr": 0,
+          "position": 89.45454545454545
+        },
+        {
+          "keys": [
+            "hot tub removal asheville",
+            "https://wncpoolandspa.com/asheville-nc-pool-and-spa.html"
+          ],
+          "clicks": 0,
+          "impressions": 9,
+          "ctr": 0,
+          "position": 68.11111111111111
+        },
+        {
+          "keys": [
+            "pool tub wiring hendersonville nc",
+            "https://wncpoolandspa.com/hendersonville-nc-pool-and-spa.html"
+          ],
+          "clicks": 0,
+          "impressions": 8,
+          "ctr": 0,
+          "position": 87.375
+        },
+        {
+          "keys": [
+            "hot tub repair near me",
+            "https://wncpoolandspa.com/asheville-nc-pool-and-spa.html"
+          ],
+          "clicks": 0,
+          "impressions": 7,
+          "ctr": 0,
+          "position": 10
+        },
+        {
+          "keys": [
+            "\"vinyl liner pool\" -\"above ground\" -\"billiard\" -\"cleaner\" -\"fence\" -\"heater\" -\"rebar\" -\"svadon\" -\"table\" -\"toy\" -\"window\"",
+            "https://wncpoolandspa.com/high-country/"
+          ],
+          "clicks": 0,
+          "impressions": 6,
+          "ctr": 0,
+          "position": 7
+        },
+        {
+          "keys": [
+            "pool building service hendersonville",
+            "https://wncpoolandspa.com/southern-plateau/hendersonville-nc//"
+          ],
+          "clicks": 0,
+          "impressions": 6,
+          "ctr": 0,
+          "position": 77.16666666666667
+        },
+        {
+          "keys": [
+            "pool building service hendersonville",
+            "https://wncpoolandspa.com/hendersonville-nc-pool-and-spa.html"
+          ],
+          "clicks": 0,
+          "impressions": 5,
+          "ctr": 0,
+          "position": 90
+        },
+        {
+          "keys": [
+            "full pool and spa maintenance and repair (24/7 service)",
+            "https://wncpoolandspa.com/asheville-nc-pool-and-spa.html"
+          ],
+          "clicks": 0,
+          "impressions": 4,
+          "ctr": 0,
+          "position": 7.75
+        },
+        {
+          "keys": [
+            "hot tub repair near me",
+            "https://wncpoolandspa.com/hendersonville-nc-pool-and-spa.html"
+          ],
+          "clicks": 0,
+          "impressions": 4,
+          "ctr": 0,
+          "position": 5.5
+        },
+        {
+          "keys": [
+            "pool and spa",
+            "https://wncpoolandspa.com/asheville-nc-pool-and-spa.html"
+          ],
+          "clicks": 0,
+          "impressions": 4,
+          "ctr": 0,
+          "position": 14.25
+        }
+      ],
+      "raw_top_by_clicks": [
+        {
+          "keys": [
+            "hot tub sales and service near me",
+            "https://wncpoolandspa.com/hendersonville-nc-pool-and-spa.html"
+          ],
+          "clicks": 1,
+          "impressions": 1,
+          "ctr": 1,
+          "position": 9
+        }
+      ]
+    },
+    {
+      "site": "sc-domain:wncradonmitigation.com",
+      "total_queries": 2,
+      "total_clicks": 0,
+      "total_impressions": 2,
+      "avg_ctr": 0.0,
+      "striking_distance_standard": [],
+      "low_ctr_standard": [],
+      "striking_distance_sensitive": [],
+      "low_ctr_sensitive": [],
+      "raw_top_by_impressions": [
+        {
+          "keys": [
+            "huntersville radon mitigation",
+            "https://wncradonmitigation.com/"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 84
+        },
+        {
+          "keys": [
+            "west rowan radon mitigation",
+            "https://wncradonmitigation.com/"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 54
+        }
+      ],
+      "raw_top_by_clicks": []
+    },
+    {
+      "site": "sc-domain:wncretainingwall.com",
+      "total_queries": 60,
+      "total_clicks": 0,
+      "total_impressions": 106,
+      "avg_ctr": 0.0,
+      "striking_distance_standard": [],
+      "low_ctr_standard": [],
+      "striking_distance_sensitive": [
+        {
+          "query": "retaining walls west jefferson nc",
+          "page": "https://wncretainingwall.com/high-country/west-jefferson-nc/",
+          "clicks": 0,
+          "impressions": 5,
+          "ctr_percent": 0,
+          "position": 11.4
+        },
+        {
+          "query": "who builds retaining walls west jefferson nc",
+          "page": "https://wncretainingwall.com/high-country/west-jefferson-nc/",
+          "clicks": 0,
+          "impressions": 4,
+          "ctr_percent": 0,
+          "position": 8.2
+        }
+      ],
+      "low_ctr_sensitive": [],
+      "raw_top_by_impressions": [
+        {
+          "keys": [
+            "slope stabilization services asheville nc",
+            "https://wncretainingwall.com/metro-asheville//"
+          ],
+          "clicks": 0,
+          "impressions": 7,
+          "ctr": 0,
+          "position": 88.14285714285714
+        },
+        {
+          "keys": [
+            "slope stabilization services asheville nc",
+            "https://wncretainingwall.com/metro-asheville/black-mountain-nc//"
+          ],
+          "clicks": 0,
+          "impressions": 6,
+          "ctr": 0,
+          "position": 81.5
+        },
+        {
+          "keys": [
+            "retaining walls west jefferson nc",
+            "https://wncretainingwall.com/high-country/west-jefferson-nc/"
+          ],
+          "clicks": 0,
+          "impressions": 5,
+          "ctr": 0,
+          "position": 11.4
+        },
+        {
+          "keys": [
+            "slope stabilization services asheville nc",
+            "https://wncretainingwall.com/metro-asheville/asheville-nc//"
+          ],
+          "clicks": 0,
+          "impressions": 5,
+          "ctr": 0,
+          "position": 71.6
+        },
+        {
+          "keys": [
+            "retaining walls asheville nc",
+            "https://wncretainingwall.com/asheville-nc-retaining-wall.html"
+          ],
+          "clicks": 0,
+          "impressions": 4,
+          "ctr": 0,
+          "position": 71.5
+        },
+        {
+          "keys": [
+            "slope stabilization services asheville nc",
+            "https://wncretainingwall.com/metro-asheville/weaverville-nc//"
+          ],
+          "clicks": 0,
+          "impressions": 4,
+          "ctr": 0,
+          "position": 72.25
+        },
+        {
+          "keys": [
+            "who builds retaining walls west jefferson nc",
+            "https://wncretainingwall.com/high-country/west-jefferson-nc/"
+          ],
+          "clicks": 0,
+          "impressions": 4,
+          "ctr": 0,
+          "position": 8.25
+        },
+        {
+          "keys": [
+            "slope stabilization services asheville nc",
+            "https://wncretainingwall.com/east-foothills//"
+          ],
+          "clicks": 0,
+          "impressions": 3,
+          "ctr": 0,
+          "position": 99
+        },
+        {
+          "keys": [
+            "slope stabilization services asheville nc",
+            "https://wncretainingwall.com/metro-asheville/asheville-nc/"
+          ],
+          "clicks": 0,
+          "impressions": 3,
+          "ctr": 0,
+          "position": 74
+        },
+        {
+          "keys": [
+            "slope stabilization services asheville nc",
+            "https://wncretainingwall.com/services/hillside-stabilization-drainage.html"
+          ],
+          "clicks": 0,
+          "impressions": 3,
+          "ctr": 0,
+          "position": 100
+        }
+      ],
+      "raw_top_by_clicks": []
+    },
+    {
+      "site": "sc-domain:wncroofingrepair.com",
+      "total_queries": 232,
+      "total_clicks": 0,
+      "total_impressions": 850,
+      "avg_ctr": 0.0,
+      "striking_distance_standard": [
+        {
+          "query": "emergency roof repair near me",
+          "page": "https://wncroofingrepair.com/asheville-nc-roofing-repair.html",
+          "clicks": 0,
+          "impressions": 30,
+          "ctr_percent": 0,
+          "position": 17.3
+        }
+      ],
+      "low_ctr_standard": [],
+      "striking_distance_sensitive": [
+        {
+          "query": "emergency roof repair near me",
+          "page": "https://wncroofingrepair.com/asheville-nc-roofing-repair.html",
+          "clicks": 0,
+          "impressions": 30,
+          "ctr_percent": 0,
+          "position": 17.3
+        },
+        {
+          "query": "roof leak repair west jefferson nc",
+          "page": "https://wncroofingrepair.com/high-country/west-jefferson-nc//",
+          "clicks": 0,
+          "impressions": 9,
+          "ctr_percent": 0,
+          "position": 15.9
+        },
+        {
+          "query": "emergency roof repair asheville",
+          "page": "https://wncroofingrepair.com/asheville-nc-roofing-repair.html",
+          "clicks": 0,
+          "impressions": 7,
+          "ctr_percent": 0,
+          "position": 19.3
+        },
+        {
+          "query": "roof repair cost west jefferson nc",
+          "page": "https://wncroofingrepair.com/high-country/west-jefferson-nc//",
+          "clicks": 0,
+          "impressions": 7,
+          "ctr_percent": 0,
+          "position": 9.9
+        },
+        {
+          "query": "emergency roof repair fletcher nc",
+          "page": "https://wncroofingrepair.com/asheville-nc-roofing-repair.html",
+          "clicks": 0,
+          "impressions": 3,
+          "ctr_percent": 0,
+          "position": 14
+        },
+        {
+          "query": "roof inspection west jefferson",
+          "page": "https://wncroofingrepair.com/high-country/west-jefferson-nc//",
+          "clicks": 0,
+          "impressions": 3,
+          "ctr_percent": 0,
+          "position": 11.7
+        }
+      ],
+      "low_ctr_sensitive": [],
+      "raw_top_by_impressions": [
+        {
+          "keys": [
+            "emergency roof repair",
+            "https://wncroofingrepair.com/asheville-nc-roofing-repair.html"
+          ],
+          "clicks": 0,
+          "impressions": 54,
+          "ctr": 0,
+          "position": 26.85185185185185
+        },
+        {
+          "keys": [
+            "emergency roof repair near me",
+            "https://wncroofingrepair.com/asheville-nc-roofing-repair.html"
+          ],
+          "clicks": 0,
+          "impressions": 30,
+          "ctr": 0,
+          "position": 17.3
+        },
+        {
+          "keys": [
+            "roof rejuvenation services in hendersonville, nc",
+            "https://wncroofingrepair.com/southern-plateau/hendersonville-nc//"
+          ],
+          "clicks": 0,
+          "impressions": 27,
+          "ctr": 0,
+          "position": 73.29629629629629
+        },
+        {
+          "keys": [
+            "roof repair in hendersonville, nc",
+            "https://wncroofingrepair.com/southern-plateau/hendersonville-nc//"
+          ],
+          "clicks": 0,
+          "impressions": 24,
+          "ctr": 0,
+          "position": 77.33333333333333
+        },
+        {
+          "keys": [
+            "roof restoration services in hendersonville, nc",
+            "https://wncroofingrepair.com/southern-plateau/hendersonville-nc//"
+          ],
+          "clicks": 0,
+          "impressions": 23,
+          "ctr": 0,
+          "position": 68.91304347826087
+        },
+        {
+          "keys": [
+            "roof repair services in hendersonville, nc",
+            "https://wncroofingrepair.com/southern-plateau/hendersonville-nc//"
+          ],
+          "clicks": 0,
+          "impressions": 20,
+          "ctr": 0,
+          "position": 78.05
+        },
+        {
+          "keys": [
+            "storm damage repair company near me",
+            "https://wncroofingrepair.com/asheville-nc-roofing-repair.html"
+          ],
+          "clicks": 0,
+          "impressions": 18,
+          "ctr": 0,
+          "position": 22.11111111111111
+        },
+        {
+          "keys": [
+            "roof repair services in hendersonville, nc",
+            "https://wncroofingrepair.com/hendersonville-nc-roofing-repair.html"
+          ],
+          "clicks": 0,
+          "impressions": 17,
+          "ctr": 0,
+          "position": 68.29411764705883
+        },
+        {
+          "keys": [
+            "roof rejuvenation services in hendersonville, nc",
+            "https://wncroofingrepair.com/hendersonville-nc-roofing-repair.html"
+          ],
+          "clicks": 0,
+          "impressions": 16,
+          "ctr": 0,
+          "position": 70.5
+        },
+        {
+          "keys": [
+            "roof replacement in hendersonville, nc",
+            "https://wncroofingrepair.com/hendersonville-nc-roofing-repair.html"
+          ],
+          "clicks": 0,
+          "impressions": 16,
+          "ctr": 0,
+          "position": 82.1875
+        }
+      ],
+      "raw_top_by_clicks": []
+    },
+    {
+      "site": "sc-domain:wncsepticrepair.com",
+      "total_queries": 186,
+      "total_clicks": 0,
+      "total_impressions": 760,
+      "avg_ctr": 0.0,
+      "striking_distance_standard": [],
+      "low_ctr_standard": [],
+      "striking_distance_sensitive": [
+        {
+          "query": "septic repair services banner elk nc",
+          "page": "https://wncsepticrepair.com/toe-river-valley/banner-elk-nc//",
+          "clicks": 0,
+          "impressions": 13,
+          "ctr_percent": 0,
+          "position": 19.8
+        },
+        {
+          "query": "sewer pump service",
+          "page": "https://wncsepticrepair.com/southern-plateau/hendersonville-nc//",
+          "clicks": 0,
+          "impressions": 12,
+          "ctr_percent": 0,
+          "position": 20
+        },
+        {
+          "query": "septic installation & repair banner elk nc",
+          "page": "https://wncsepticrepair.com/toe-river-valley/banner-elk-nc//",
+          "clicks": 0,
+          "impressions": 8,
+          "ctr_percent": 0,
+          "position": 17
+        },
+        {
+          "query": "septic tank pumping",
+          "page": "https://wncsepticrepair.com/mills-river-nc-septic-repair.html",
+          "clicks": 0,
+          "impressions": 8,
+          "ctr_percent": 0,
+          "position": 18.9
+        },
+        {
+          "query": "terralift in huntersville nc",
+          "page": "https://wncsepticrepair.com/services/drain-field-restoration.html",
+          "clicks": 0,
+          "impressions": 8,
+          "ctr_percent": 0,
+          "position": 14.5
+        },
+        {
+          "query": "septic tank cleaning",
+          "page": "https://wncsepticrepair.com/mills-river-nc-septic-repair.html",
+          "clicks": 0,
+          "impressions": 7,
+          "ctr_percent": 0,
+          "position": 14
+        },
+        {
+          "query": "sewer pump service",
+          "page": "https://wncsepticrepair.com/mills-river-nc-septic-repair.html",
+          "clicks": 0,
+          "impressions": 7,
+          "ctr_percent": 0,
+          "position": 15.3
+        },
+        {
+          "query": "septic tank repair asheville nc",
+          "page": "http://wncsepticrepair.com/asheville-nc-septic-repair",
+          "clicks": 0,
+          "impressions": 3,
+          "ctr_percent": 0,
+          "position": 11.3
+        }
+      ],
+      "low_ctr_sensitive": [],
+      "raw_top_by_impressions": [
+        {
+          "keys": [
+            "septic tank pumping",
+            "https://wncsepticrepair.com/hendersonville-nc-septic-repair.html"
+          ],
+          "clicks": 0,
+          "impressions": 32,
+          "ctr": 0,
+          "position": 23.71875
+        },
+        {
+          "keys": [
+            "trusted septic system installation banner elk nc",
+            "https://wncsepticrepair.com/toe-river-valley/banner-elk-nc//"
+          ],
+          "clicks": 0,
+          "impressions": 21,
+          "ctr": 0,
+          "position": 51.285714285714285
+        },
+        {
+          "keys": [
+            "banner elk nc septic installation & repair",
+            "https://wncsepticrepair.com/toe-river-valley/banner-elk-nc//"
+          ],
+          "clicks": 0,
+          "impressions": 19,
+          "ctr": 0,
+          "position": 20.157894736842106
+        },
+        {
+          "keys": [
+            "septic tank installation asheville nc",
+            "https://wncsepticrepair.com/asheville-nc-septic-repair.html"
+          ],
+          "clicks": 0,
+          "impressions": 16,
+          "ctr": 0,
+          "position": 83.5
+        },
+        {
+          "keys": [
+            "sewer pump repair hendersonville nc",
+            "https://wncsepticrepair.com/southern-plateau/hendersonville-nc//"
+          ],
+          "clicks": 0,
+          "impressions": 15,
+          "ctr": 0,
+          "position": 71.4
+        },
+        {
+          "keys": [
+            "drain cleaning hendersonville nc",
+            "https://wncsepticrepair.com/hendersonville-nc-septic-repair.html"
+          ],
+          "clicks": 0,
+          "impressions": 14,
+          "ctr": 0,
+          "position": 67
+        },
+        {
+          "keys": [
+            "septic installation banner elk",
+            "https://wncsepticrepair.com/toe-river-valley/banner-elk-nc//"
+          ],
+          "clicks": 0,
+          "impressions": 13,
+          "ctr": 0,
+          "position": 46.53846153846154
+        },
+        {
+          "keys": [
+            "septic installation company banner elk nc",
+            "https://wncsepticrepair.com/toe-river-valley/banner-elk-nc//"
+          ],
+          "clicks": 0,
+          "impressions": 13,
+          "ctr": 0,
+          "position": 57.46153846153846
+        },
+        {
+          "keys": [
+            "septic repair services banner elk nc",
+            "https://wncsepticrepair.com/toe-river-valley/banner-elk-nc//"
+          ],
+          "clicks": 0,
+          "impressions": 13,
+          "ctr": 0,
+          "position": 19.846153846153847
+        },
+        {
+          "keys": [
+            "drain cleaning fletcher nc",
+            "https://wncsepticrepair.com/fletcher-nc-septic-repair.html"
+          ],
+          "clicks": 0,
+          "impressions": 12,
+          "ctr": 0,
+          "position": 66.91666666666667
+        }
+      ],
+      "raw_top_by_clicks": []
+    },
+    {
+      "site": "sc-domain:wncsolarpower.com",
+      "total_queries": 68,
+      "total_clicks": 0,
+      "total_impressions": 300,
+      "avg_ctr": 0.0,
+      "striking_distance_standard": [],
+      "low_ctr_standard": [],
+      "striking_distance_sensitive": [
+        {
+          "query": "ground-mounted solar arrays burnsville",
+          "page": "https://wncsolarpower.com/toe-river-valley/burnsville-nc/",
+          "clicks": 0,
+          "impressions": 13,
+          "ctr_percent": 0,
+          "position": 19.6
+        },
+        {
+          "query": "solar system installation yancey county nc",
+          "page": "https://wncsolarpower.com/toe-river-valley/burnsville-nc/",
+          "clicks": 0,
+          "impressions": 10,
+          "ctr_percent": 0,
+          "position": 13.9
+        },
+        {
+          "query": "professional solar power systems burnsville nc",
+          "page": "https://wncsolarpower.com/toe-river-valley/burnsville-nc/",
+          "clicks": 0,
+          "impressions": 3,
+          "ctr_percent": 0,
+          "position": 13.7
+        }
+      ],
+      "low_ctr_sensitive": [],
+      "raw_top_by_impressions": [
+        {
+          "keys": [
+            "home battery backup asheville",
+            "https://wncsolarpower.com/metro-asheville/"
+          ],
+          "clicks": 0,
+          "impressions": 17,
+          "ctr": 0,
+          "position": 85
+        },
+        {
+          "keys": [
+            "home battery backup asheville",
+            "https://wncsolarpower.com/"
+          ],
+          "clicks": 0,
+          "impressions": 16,
+          "ctr": 0,
+          "position": 85.125
+        },
+        {
+          "keys": [
+            "solar power system site prep burnsville",
+            "https://wncsolarpower.com/toe-river-valley/burnsville-nc/"
+          ],
+          "clicks": 0,
+          "impressions": 15,
+          "ctr": 0,
+          "position": 7.2
+        },
+        {
+          "keys": [
+            "asheville, nc solar",
+            "https://wncsolarpower.com/metro-asheville/"
+          ],
+          "clicks": 0,
+          "impressions": 14,
+          "ctr": 0,
+          "position": 84.28571428571429
+        },
+        {
+          "keys": [
+            "expert solar power systems burnsville nc",
+            "https://wncsolarpower.com/toe-river-valley/burnsville-nc/"
+          ],
+          "clicks": 0,
+          "impressions": 14,
+          "ctr": 0,
+          "position": 39.57142857142857
+        },
+        {
+          "keys": [
+            "ground-mounted solar arrays burnsville",
+            "https://wncsolarpower.com/toe-river-valley/burnsville-nc/"
+          ],
+          "clicks": 0,
+          "impressions": 13,
+          "ctr": 0,
+          "position": 19.615384615384617
+        },
+        {
+          "keys": [
+            "home battery backup asheville",
+            "https://wncsolarpower.com/metro-asheville/black-mountain-nc/"
+          ],
+          "clicks": 0,
+          "impressions": 13,
+          "ctr": 0,
+          "position": 88.76923076923077
+        },
+        {
+          "keys": [
+            "solar power burnsville nc",
+            "https://wncsolarpower.com/toe-river-valley/burnsville-nc/"
+          ],
+          "clicks": 0,
+          "impressions": 12,
+          "ctr": 0,
+          "position": 34
+        },
+        {
+          "keys": [
+            "expert solar panel installation burnsville nc",
+            "https://wncsolarpower.com/toe-river-valley/burnsville-nc/"
+          ],
+          "clicks": 0,
+          "impressions": 11,
+          "ctr": 0,
+          "position": 58.45454545454545
+        },
+        {
+          "keys": [
+            "roof-mounted solar systems burnsville nc",
+            "https://wncsolarpower.com/toe-river-valley/burnsville-nc/"
+          ],
+          "clicks": 0,
+          "impressions": 11,
+          "ctr": 0,
+          "position": 43.81818181818182
+        }
+      ],
+      "raw_top_by_clicks": []
+    },
+    {
+      "site": "sc-domain:wncsurveying.com",
+      "total_queries": 7,
+      "total_clicks": 0,
+      "total_impressions": 16,
+      "avg_ctr": 0.0,
+      "striking_distance_standard": [],
+      "low_ctr_standard": [],
+      "striking_distance_sensitive": [],
+      "low_ctr_sensitive": [],
+      "raw_top_by_impressions": [
+        {
+          "keys": [
+            "land development expert banner elk nc",
+            "https://wncsurveying.com/toe-river-valley/banner-elk-nc/"
+          ],
+          "clicks": 0,
+          "impressions": 5,
+          "ctr": 0,
+          "position": 60.2
+        },
+        {
+          "keys": [
+            "land development experts in banner elk",
+            "https://wncsurveying.com/toe-river-valley/banner-elk-nc/"
+          ],
+          "clicks": 0,
+          "impressions": 4,
+          "ctr": 0,
+          "position": 54.5
+        },
+        {
+          "keys": [
+            "professional land development banner elk nc",
+            "https://wncsurveying.com/toe-river-valley/banner-elk-nc/"
+          ],
+          "clicks": 0,
+          "impressions": 3,
+          "ctr": 0,
+          "position": 61.333333333333336
+        },
+        {
+          "keys": [
+            "blackrock surveying asheville nc",
+            "https://wncsurveying.com/metro-asheville/black-mountain-nc/"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 49
+        },
+        {
+          "keys": [
+            "site development expert banner elk nc",
+            "https://wncsurveying.com/toe-river-valley/banner-elk-nc/"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 60
+        },
+        {
+          "keys": [
+            "western carolina surveyors",
+            "https://wncsurveying.com/"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 13
+        },
+        {
+          "keys": [
+            "wnc map",
+            "https://wncsurveying.com/"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 53
+        }
+      ],
+      "raw_top_by_clicks": []
+    },
+    {
+      "site": "sc-domain:wnctreeremoval.com",
+      "total_queries": 24,
+      "total_clicks": 1,
+      "total_impressions": 38,
+      "avg_ctr": 2.63,
+      "striking_distance_standard": [],
+      "low_ctr_standard": [],
+      "striking_distance_sensitive": [],
+      "low_ctr_sensitive": [],
+      "raw_top_by_impressions": [
+        {
+          "keys": [
+            "emergency tree removal asheville nc",
+            "https://wnctreeremoval.com/asheville-nc-tree-removal.html"
+          ],
+          "clicks": 0,
+          "impressions": 7,
+          "ctr": 0,
+          "position": 79.57142857142857
+        },
+        {
+          "keys": [
+            "emergency tree removal asheville nc",
+            "https://wnctreeremoval.com/asheville-nc-tree-removal"
+          ],
+          "clicks": 0,
+          "impressions": 3,
+          "ctr": 0,
+          "position": 65
+        },
+        {
+          "keys": [
+            "emergency tree removal hendersonville nc",
+            "https://wnctreeremoval.com/"
+          ],
+          "clicks": 0,
+          "impressions": 3,
+          "ctr": 0,
+          "position": 86.33333333333333
+        },
+        {
+          "keys": [
+            "emergency tree removal hendersonville nc",
+            "https://wnctreeremoval.com/hendersonville-nc-tree-removal.html"
+          ],
+          "clicks": 0,
+          "impressions": 3,
+          "ctr": 0,
+          "position": 77.33333333333333
+        },
+        {
+          "keys": [
+            "forestry services banner elk nc",
+            "https://wnctreeremoval.com/toe-river-valley/banner-elk-nc//"
+          ],
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 42
+        },
+        {
+          "keys": [
+            "land clearing blowing rock nc",
+            "https://wnctreeremoval.com/high-country/blowing-rock-nc//"
+          ],
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 17.5
+        },
+        {
+          "keys": [
+            "wnc tree service",
+            "https://wnctreeremoval.com/"
+          ],
+          "clicks": 1,
+          "impressions": 1,
+          "ctr": 1,
+          "position": 4
+        },
+        {
+          "keys": [
+            "arborist consultation asheville nc",
+            "https://wnctreeremoval.com/metro-asheville/asheville-nc//"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 41
+        },
+        {
+          "keys": [
+            "arborist hendersonville nc",
+            "https://wnctreeremoval.com/southern-plateau/hendersonville-nc/"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 96
+        },
+        {
+          "keys": [
+            "asheville tree removal",
+            "https://wnctreeremoval.com/metro-asheville/asheville-nc/"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 87
+        }
+      ],
+      "raw_top_by_clicks": [
+        {
+          "keys": [
+            "wnc tree service",
+            "https://wnctreeremoval.com/"
+          ],
+          "clicks": 1,
+          "impressions": 1,
+          "ctr": 1,
+          "position": 4
+        }
+      ]
+    },
+    {
+      "site": "sc-domain:wncwaterdamage.com",
+      "total_queries": 214,
+      "total_clicks": 0,
+      "total_impressions": 1215,
+      "avg_ctr": 0.0,
+      "striking_distance_standard": [
+        {
+          "query": "water damage near me",
+          "page": "https://wncwaterdamage.com/brevard-nc-water-damage.html",
+          "clicks": 0,
+          "impressions": 15,
+          "ctr_percent": 0,
+          "position": 9.7
+        }
+      ],
+      "low_ctr_standard": [],
+      "striking_distance_sensitive": [
+        {
+          "query": "water damage near me",
+          "page": "https://wncwaterdamage.com/brevard-nc-water-damage.html",
+          "clicks": 0,
+          "impressions": 15,
+          "ctr_percent": 0,
+          "position": 9.7
+        },
+        {
+          "query": "water damage restoration near me",
+          "page": "https://wncwaterdamage.com/hendersonville-nc-water-damage.html",
+          "clicks": 0,
+          "impressions": 12,
+          "ctr_percent": 0,
+          "position": 14.2
+        },
+        {
+          "query": "water damage restoration",
+          "page": "https://wncwaterdamage.com/brevard-nc-water-damage.html",
+          "clicks": 0,
+          "impressions": 10,
+          "ctr_percent": 0,
+          "position": 16.9
+        },
+        {
+          "query": "water damage restoration services near me",
+          "page": "https://wncwaterdamage.com/hendersonville-nc-water-damage.html",
+          "clicks": 0,
+          "impressions": 9,
+          "ctr_percent": 0,
+          "position": 16.2
+        },
+        {
+          "query": "water damage near me",
+          "page": "https://wncwaterdamage.com/southern-plateau/brevard-nc//",
+          "clicks": 0,
+          "impressions": 7,
+          "ctr_percent": 0,
+          "position": 18.4
+        },
+        {
+          "query": "water damage restoration",
+          "page": "https://wncwaterdamage.com/southern-plateau/brevard-nc//",
+          "clicks": 0,
+          "impressions": 7,
+          "ctr_percent": 0,
+          "position": 19.9
+        },
+        {
+          "query": "water damage near me",
+          "page": "https://wncwaterdamage.com/southern-plateau/brevard-nc/",
+          "clicks": 0,
+          "impressions": 4,
+          "ctr_percent": 0,
+          "position": 8.8
+        },
+        {
+          "query": "fletcher water damage restoration",
+          "page": "https://wncwaterdamage.com/fletcher-nc-water-damage.html",
+          "clicks": 0,
+          "impressions": 3,
+          "ctr_percent": 0,
+          "position": 13
+        },
+        {
+          "query": "flood cleanup asheville nc",
+          "page": "https://wncwaterdamage.com/metro-asheville/asheville-nc//",
+          "clicks": 0,
+          "impressions": 3,
+          "ctr_percent": 0,
+          "position": 15
+        },
+        {
+          "query": "how to fix ponding boone nc",
+          "page": "https://wncwaterdamage.com/high-country/boone-nc//",
+          "clicks": 0,
+          "impressions": 3,
+          "ctr_percent": 0,
+          "position": 7.7
+        },
+        {
+          "query": "what to do about wet basement west jefferson nc",
+          "page": "https://wncwaterdamage.com/high-country/west-jefferson-nc//",
+          "clicks": 0,
+          "impressions": 3,
+          "ctr_percent": 0,
+          "position": 9.7
+        },
+        {
+          "query": "wnc water",
+          "page": "https://wncwaterdamage.com/",
+          "clicks": 0,
+          "impressions": 3,
+          "ctr_percent": 0,
+          "position": 7.7
+        }
+      ],
+      "low_ctr_sensitive": [],
+      "raw_top_by_impressions": [
+        {
+          "keys": [
+            "asheville water damage",
+            "https://wncwaterdamage.com/asheville-nc-water-damage.html"
+          ],
+          "clicks": 0,
+          "impressions": 60,
+          "ctr": 0,
+          "position": 21.483333333333334
+        },
+        {
+          "keys": [
+            "water damage asheville",
+            "https://wncwaterdamage.com/asheville-nc-water-damage.html"
+          ],
+          "clicks": 0,
+          "impressions": 46,
+          "ctr": 0,
+          "position": 61.32608695652174
+        },
+        {
+          "keys": [
+            "water damage asheville nc",
+            "https://wncwaterdamage.com/asheville-nc-water-damage.html"
+          ],
+          "clicks": 0,
+          "impressions": 44,
+          "ctr": 0,
+          "position": 62.27272727272727
+        },
+        {
+          "keys": [
+            "water damage asheville",
+            "https://wncwaterdamage.com/metro-asheville/asheville-nc//"
+          ],
+          "clicks": 0,
+          "impressions": 41,
+          "ctr": 0,
+          "position": 34.707317073170735
+        },
+        {
+          "keys": [
+            "water damage asheville nc",
+            "https://wncwaterdamage.com/metro-asheville/asheville-nc//"
+          ],
+          "clicks": 0,
+          "impressions": 35,
+          "ctr": 0,
+          "position": 31.142857142857142
+        },
+        {
+          "keys": [
+            "asheville water fire damage",
+            "https://wncwaterdamage.com/metro-asheville/asheville-nc//"
+          ],
+          "clicks": 0,
+          "impressions": 31,
+          "ctr": 0,
+          "position": 60.935483870967744
+        },
+        {
+          "keys": [
+            "asheville water fire damage",
+            "https://wncwaterdamage.com/asheville-nc-water-damage.html"
+          ],
+          "clicks": 0,
+          "impressions": 30,
+          "ctr": 0,
+          "position": 85.83333333333333
+        },
+        {
+          "keys": [
+            "water damage near me",
+            "https://wncwaterdamage.com/brevard-nc-water-damage.html"
+          ],
+          "clicks": 0,
+          "impressions": 15,
+          "ctr": 0,
+          "position": 9.733333333333333
+        },
+        {
+          "keys": [
+            "water damage",
+            "https://wncwaterdamage.com/asheville-nc-water-damage.html"
+          ],
+          "clicks": 0,
+          "impressions": 14,
+          "ctr": 0,
+          "position": 69.78571428571429
+        },
+        {
+          "keys": [
+            "water damage restoration asheville",
+            "https://wncwaterdamage.com/asheville-nc-water-damage.html"
+          ],
+          "clicks": 0,
+          "impressions": 14,
+          "ctr": 0,
+          "position": 47.57142857142857
+        }
+      ],
+      "raw_top_by_clicks": []
+    },
+    {
+      "site": "sc-domain:wncwatersystems.com",
+      "total_queries": 112,
+      "total_clicks": 1,
+      "total_impressions": 383,
+      "avg_ctr": 0.26,
+      "striking_distance_standard": [],
+      "low_ctr_standard": [],
+      "striking_distance_sensitive": [
+        {
+          "query": "water softener hendersonville nc",
+          "page": "https://wncwatersystems.com/southern-plateau/hendersonville-nc//",
+          "clicks": 0,
+          "impressions": 9,
+          "ctr_percent": 0,
+          "position": 17
+        },
+        {
+          "query": "water softening bakersville",
+          "page": "https://wncwatersystems.com/toe-river-valley/bakersville-nc/",
+          "clicks": 0,
+          "impressions": 8,
+          "ctr_percent": 0,
+          "position": 8.2
+        },
+        {
+          "query": "water extraction morganton nc",
+          "page": "https://wncwatersystems.com/east-foothills/morganton-nc/",
+          "clicks": 0,
+          "impressions": 6,
+          "ctr_percent": 0,
+          "position": 11.2
+        },
+        {
+          "query": "water ionizer installation mount airy nc",
+          "page": "https://wncwatersystems.com/high-country//",
+          "clicks": 0,
+          "impressions": 5,
+          "ctr_percent": 0,
+          "position": 19.4
+        },
+        {
+          "query": "water softening bakersville",
+          "page": "https://wncwatersystems.com/far-west//",
+          "clicks": 0,
+          "impressions": 5,
+          "ctr_percent": 0,
+          "position": 11.8
+        },
+        {
+          "query": "reverse osmosis system bakersville",
+          "page": "https://wncwatersystems.com/toe-river-valley/bakersville-nc/",
+          "clicks": 0,
+          "impressions": 4,
+          "ctr_percent": 0,
+          "position": 18.2
+        },
+        {
+          "query": "ultraviolet disinfection transylvania county nc",
+          "page": "https://wncwatersystems.com/southern-plateau/brevard-nc//",
+          "clicks": 0,
+          "impressions": 4,
+          "ctr_percent": 0,
+          "position": 14.8
+        },
+        {
+          "query": "well water filtration apex nc",
+          "page": "https://wncwatersystems.com/services/well-water-filtration.html",
+          "clicks": 0,
+          "impressions": 3,
+          "ctr_percent": 0,
+          "position": 18.7
+        }
+      ],
+      "low_ctr_sensitive": [],
+      "raw_top_by_impressions": [
+        {
+          "keys": [
+            "hancock water treatment",
+            "https://wncwatersystems.com/"
+          ],
+          "clicks": 0,
+          "impressions": 18,
+          "ctr": 0,
+          "position": 91.72222222222223
+        },
+        {
+          "keys": [
+            "well water filtration systems in orangeburg sc",
+            "https://wncwatersystems.com/services/well-water-filtration.html"
+          ],
+          "clicks": 0,
+          "impressions": 15,
+          "ctr": 0,
+          "position": 87.2
+        },
+        {
+          "keys": [
+            "hancock reverse osmosis systems",
+            "https://wncwatersystems.com/services/reverse-osmosis-systems.html"
+          ],
+          "clicks": 0,
+          "impressions": 12,
+          "ctr": 0,
+          "position": 89.33333333333333
+        },
+        {
+          "keys": [
+            "whole house water filtration hendersonville nc",
+            "https://wncwatersystems.com/metro-asheville//"
+          ],
+          "clicks": 0,
+          "impressions": 12,
+          "ctr": 0,
+          "position": 26.416666666666668
+        },
+        {
+          "keys": [
+            "wnc water",
+            "https://wncwatersystems.com/"
+          ],
+          "clicks": 1,
+          "impressions": 11,
+          "ctr": 0.09090909090909091,
+          "position": 4.818181818181818
+        },
+        {
+          "keys": [
+            "water filtration hendersonville nc",
+            "https://wncwatersystems.com/metro-asheville//"
+          ],
+          "clicks": 0,
+          "impressions": 10,
+          "ctr": 0,
+          "position": 51.2
+        },
+        {
+          "keys": [
+            "water softener hendersonville nc",
+            "https://wncwatersystems.com/southern-plateau/hendersonville-nc//"
+          ],
+          "clicks": 0,
+          "impressions": 9,
+          "ctr": 0,
+          "position": 17
+        },
+        {
+          "keys": [
+            "water treatment flat rock nc",
+            "https://wncwatersystems.com/southern-plateau//"
+          ],
+          "clicks": 0,
+          "impressions": 9,
+          "ctr": 0,
+          "position": 42.888888888888886
+        },
+        {
+          "keys": [
+            "uv water treatment for breweries",
+            "https://wncwatersystems.com/services/uv-water-disinfection.html"
+          ],
+          "clicks": 0,
+          "impressions": 8,
+          "ctr": 0,
+          "position": 61.875
+        },
+        {
+          "keys": [
+            "water filtration hendersonville nc",
+            "https://wncwatersystems.com/southern-plateau/hendersonville-nc//"
+          ],
+          "clicks": 0,
+          "impressions": 8,
+          "ctr": 0,
+          "position": 65.375
+        }
+      ],
+      "raw_top_by_clicks": [
+        {
+          "keys": [
+            "wnc water",
+            "https://wncwatersystems.com/"
+          ],
+          "clicks": 1,
+          "impressions": 11,
+          "ctr": 0.09090909090909091,
+          "position": 4.818181818181818
+        }
+      ]
+    }
+  ],
+  "Affiliate / Niche Sites": [
+    {
+      "site": "sc-domain:boilercirculatorpumps.com",
+      "total_queries": 1,
+      "total_clicks": 0,
+      "total_impressions": 4,
+      "avg_ctr": 0.0,
+      "striking_distance_standard": [],
+      "low_ctr_standard": [],
+      "striking_distance_sensitive": [],
+      "low_ctr_sensitive": [],
+      "raw_top_by_impressions": [
+        {
+          "keys": [
+            "circulator pumps for a boiler",
+            "https://boilercirculatorpumps.com/"
+          ],
+          "clicks": 0,
+          "impressions": 4,
+          "ctr": 0,
+          "position": 71.25
+        }
+      ],
+      "raw_top_by_clicks": []
+    },
+    {
+      "site": "sc-domain:co2lasertubes.com",
+      "total_queries": 0,
+      "total_clicks": 0,
+      "total_impressions": 0,
+      "avg_ctr": 0,
+      "striking_distance_standard": [],
+      "low_ctr_standard": [],
+      "striking_distance_sensitive": [],
+      "low_ctr_sensitive": [],
+      "raw_top_by_impressions": [],
+      "raw_top_by_clicks": []
+    },
+    {
+      "site": "sc-domain:gasfurnaceigniters.com",
+      "total_queries": 4,
+      "total_clicks": 0,
+      "total_impressions": 4,
+      "avg_ctr": 0.0,
+      "striking_distance_standard": [],
+      "low_ctr_standard": [],
+      "striking_distance_sensitive": [],
+      "low_ctr_sensitive": [],
+      "raw_top_by_impressions": [
+        {
+          "keys": [
+            "furnace ignitor resistance",
+            "https://gasfurnaceigniters.com/"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 62
+        },
+        {
+          "keys": [
+            "hot surface ignitor resistance",
+            "https://gasfurnaceigniters.com/"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 88
+        },
+        {
+          "keys": [
+            "silicon nitride",
+            "https://gasfurnaceigniters.com/"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 114
+        },
+        {
+          "keys": [
+            "white and rodgers 768a-9",
+            "https://gasfurnaceigniters.com/"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 109
+        }
+      ],
+      "raw_top_by_clicks": []
+    },
+    {
+      "site": "sc-domain:hottubheatingelements.com",
+      "total_queries": 8,
+      "total_clicks": 0,
+      "total_impressions": 16,
+      "avg_ctr": 0.0,
+      "striking_distance_standard": [],
+      "low_ctr_standard": [],
+      "striking_distance_sensitive": [],
+      "low_ctr_sensitive": [],
+      "raw_top_by_impressions": [
+        {
+          "keys": [
+            "apa itu elemen pemanas incoloy",
+            "https://hottubheatingelements.com/incoloy-vs-titanium"
+          ],
+          "clicks": 0,
+          "impressions": 9,
+          "ctr": 0,
+          "position": 94.66666666666667
+        },
+        {
+          "keys": [
+            "incoloy elements",
+            "https://hottubheatingelements.com/incoloy-vs-titanium"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 9
+        },
+        {
+          "keys": [
+            "incoloy heat exchanger tube",
+            "https://hottubheatingelements.com/incoloy-vs-titanium"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 80
+        },
+        {
+          "keys": [
+            "incoloy heater",
+            "https://hottubheatingelements.com/incoloy-vs-titanium"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 25
+        },
+        {
+          "keys": [
+            "incoloy oven bake heating element",
+            "https://hottubheatingelements.com/incoloy-vs-titanium"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 20
+        },
+        {
+          "keys": [
+            "incoloy water heater element",
+            "https://hottubheatingelements.com/incoloy-vs-titanium"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 35
+        },
+        {
+          "keys": [
+            "intercambiador de caro para tina de hidromasaje",
+            "https://hottubheatingelements.com/es/"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 69
+        },
+        {
+          "keys": [
+            "what is transformer impedance",
+            "https://hottubheatingelements.com/"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 1
+        }
+      ],
+      "raw_top_by_clicks": []
+    },
+    {
+      "site": "sc-domain:pelletstoveigniter.com",
+      "total_queries": 1,
+      "total_clicks": 0,
+      "total_impressions": 3,
+      "avg_ctr": 0.0,
+      "striking_distance_standard": [],
+      "low_ctr_standard": [],
+      "striking_distance_sensitive": [],
+      "low_ctr_sensitive": [],
+      "raw_top_by_impressions": [
+        {
+          "keys": [
+            "pellet igniter",
+            "https://pelletstoveigniter.com/es/"
+          ],
+          "clicks": 0,
+          "impressions": 3,
+          "ctr": 0,
+          "position": 6.666666666666667
+        }
+      ],
+      "raw_top_by_clicks": []
+    },
+    {
+      "site": "sc-domain:poolpumpcapacitors.com",
+      "total_queries": 10,
+      "total_clicks": 0,
+      "total_impressions": 11,
+      "avg_ctr": 0.0,
+      "striking_distance_standard": [],
+      "low_ctr_standard": [],
+      "striking_distance_sensitive": [],
+      "low_ctr_sensitive": [],
+      "raw_top_by_impressions": [
+        {
+          "keys": [
+            "capacitors for pool pump motors",
+            "https://poolpumpcapacitors.com/"
+          ],
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 41
+        },
+        {
+          "keys": [
+            "capacitor bomba",
+            "https://poolpumpcapacitors.com/es/"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 25
+        },
+        {
+          "keys": [
+            "capacitor bomba piscina",
+            "https://poolpumpcapacitors.com/es/"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 15
+        },
+        {
+          "keys": [
+            "capacitor para bomba de piscina",
+            "https://poolpumpcapacitors.com/es/"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 14
+        },
+        {
+          "keys": [
+            "capacitor para bomba de piscina",
+            "https://www.poolpumpcapacitors.com/es/"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 17
+        },
+        {
+          "keys": [
+            "capacitor para motor de piscina",
+            "https://www.poolpumpcapacitors.com/es/"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 10
+        },
+        {
+          "keys": [
+            "condensador piscina",
+            "https://poolpumpcapacitors.com/es/"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 47
+        },
+        {
+          "keys": [
+            "pool pump capacitor",
+            "https://poolpumpcapacitors.com/"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 44
+        },
+        {
+          "keys": [
+            "tabla de capacitores para bombas de agua",
+            "https://poolpumpcapacitors.com/es/"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 8
+        },
+        {
+          "keys": [
+            "tabla de capacitores para bombas sumergibles",
+            "https://www.poolpumpcapacitors.com/es/"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 9
+        }
+      ],
+      "raw_top_by_clicks": []
+    },
+    {
+      "site": "sc-domain:rvwaterheateranodes.com",
+      "total_queries": 33,
+      "total_clicks": 0,
+      "total_impressions": 74,
+      "avg_ctr": 0.0,
+      "striking_distance_standard": [],
+      "low_ctr_standard": [],
+      "striking_distance_sensitive": [],
+      "low_ctr_sensitive": [],
+      "raw_top_by_impressions": [
+        {
+          "keys": [
+            "best anode rod for rv water heater",
+            "https://rvwaterheateranodes.com/"
+          ],
+          "clicks": 0,
+          "impressions": 8,
+          "ctr": 0,
+          "position": 46.125
+        },
+        {
+          "keys": [
+            "suburban anode rod magnesium or aluminum",
+            "https://rvwaterheateranodes.com/"
+          ],
+          "clicks": 0,
+          "impressions": 7,
+          "ctr": 0,
+          "position": 63.714285714285715
+        },
+        {
+          "keys": [
+            "rv water heater anode",
+            "https://rvwaterheateranodes.com/"
+          ],
+          "clicks": 0,
+          "impressions": 5,
+          "ctr": 0,
+          "position": 35.8
+        },
+        {
+          "keys": [
+            "anode for suburban water heater rv",
+            "http://rvwaterheateranodes.com/"
+          ],
+          "clicks": 0,
+          "impressions": 4,
+          "ctr": 0,
+          "position": 37.75
+        },
+        {
+          "keys": [
+            "suburban hot water heater anode rod",
+            "https://rvwaterheateranodes.com/"
+          ],
+          "clicks": 0,
+          "impressions": 4,
+          "ctr": 0,
+          "position": 42
+        },
+        {
+          "keys": [
+            "tige anode chauffe-eau",
+            "https://www.rvwaterheateranodes.com/fr/"
+          ],
+          "clicks": 0,
+          "impressions": 4,
+          "ctr": 0,
+          "position": 74
+        },
+        {
+          "keys": [
+            "rv water heater anode rod",
+            "https://rvwaterheateranodes.com/"
+          ],
+          "clicks": 0,
+          "impressions": 3,
+          "ctr": 0,
+          "position": 39.333333333333336
+        },
+        {
+          "keys": [
+            "suburban 232767",
+            "https://rvwaterheateranodes.com/"
+          ],
+          "clicks": 0,
+          "impressions": 3,
+          "ctr": 0,
+          "position": 31
+        },
+        {
+          "keys": [
+            "suburban anode rod 232767",
+            "https://rvwaterheateranodes.com/"
+          ],
+          "clicks": 0,
+          "impressions": 3,
+          "ctr": 0,
+          "position": 34.333333333333336
+        },
+        {
+          "keys": [
+            "suburban rv water heater anode rod",
+            "https://rvwaterheateranodes.com/"
+          ],
+          "clicks": 0,
+          "impressions": 3,
+          "ctr": 0,
+          "position": 34
+        }
+      ],
+      "raw_top_by_clicks": []
+    },
+    {
+      "site": "sc-domain:saunaheatingelements.com",
+      "total_queries": 8,
+      "total_clicks": 0,
+      "total_impressions": 8,
+      "avg_ctr": 0.0,
+      "striking_distance_standard": [],
+      "low_ctr_standard": [],
+      "striking_distance_sensitive": [],
+      "low_ctr_sensitive": [],
+      "raw_top_by_impressions": [
+        {
+          "keys": [
+            "electric sauna heater elements",
+            "https://saunaheatingelements.com/"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 72
+        },
+        {
+          "keys": [
+            "harvia calculator",
+            "https://saunaheatingelements.com/"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 68
+        },
+        {
+          "keys": [
+            "harvia heater calculator",
+            "https://saunaheatingelements.com/"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 70
+        },
+        {
+          "keys": [
+            "harvia sauna calculator",
+            "https://saunaheatingelements.com/"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 69
+        },
+        {
+          "keys": [
+            "harvia sauna heater calculator",
+            "https://saunaheatingelements.com/"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 72
+        },
+        {
+          "keys": [
+            "heating element in finland",
+            "http://saunaheatingelements.com/"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 32
+        },
+        {
+          "keys": [
+            "sauna element replacement",
+            "http://saunaheatingelements.com/"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 63
+        },
+        {
+          "keys": [
+            "sauna heating elements",
+            "https://saunaheatingelements.com/"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 24
+        }
+      ],
+      "raw_top_by_clicks": []
+    },
+    {
+      "site": "sc-domain:triplexwasherpumps.com",
+      "total_queries": 3,
+      "total_clicks": 0,
+      "total_impressions": 3,
+      "avg_ctr": 0.0,
+      "striking_distance_standard": [],
+      "low_ctr_standard": [],
+      "striking_distance_sensitive": [],
+      "low_ctr_sensitive": [],
+      "raw_top_by_impressions": [
+        {
+          "keys": [
+            "triplex pressure washer pump",
+            "https://triplexwasherpumps.com/"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 47
+        },
+        {
+          "keys": [
+            "triplex pump pressure washer",
+            "https://triplexwasherpumps.com/"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 95
+        },
+        {
+          "keys": [
+            "triplex pump repair",
+            "https://triplexwasherpumps.com/contact"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 95
+        }
+      ],
+      "raw_top_by_clicks": []
+    },
+    {
+      "site": "sc-domain:barebonesindustrial.com",
+      "total_queries": 0,
+      "total_clicks": 0,
+      "total_impressions": 0,
+      "avg_ctr": 0,
+      "striking_distance_standard": [],
+      "low_ctr_standard": [],
+      "striking_distance_sensitive": [],
+      "low_ctr_sensitive": [],
+      "raw_top_by_impressions": [],
+      "raw_top_by_clicks": []
+    },
+    {
+      "site": "sc-domain:barebonesindustrialsupply.com",
+      "total_queries": 0,
+      "total_clicks": 0,
+      "total_impressions": 0,
+      "avg_ctr": 0,
+      "striking_distance_standard": [],
+      "low_ctr_standard": [],
+      "striking_distance_sensitive": [],
+      "low_ctr_sensitive": [],
+      "raw_top_by_impressions": [],
+      "raw_top_by_clicks": []
+    },
+    {
+      "site": "sc-domain:carbonsocket.com",
+      "total_queries": 0,
+      "total_clicks": 0,
+      "total_impressions": 0,
+      "avg_ctr": 0,
+      "striking_distance_standard": [],
+      "low_ctr_standard": [],
+      "striking_distance_sensitive": [],
+      "low_ctr_sensitive": [],
+      "raw_top_by_impressions": [],
+      "raw_top_by_clicks": []
+    },
+    {
+      "site": "sc-domain:barebones3d.com",
+      "total_queries": 1,
+      "total_clicks": 0,
+      "total_impressions": 4,
+      "avg_ctr": 0.0,
+      "striking_distance_standard": [],
+      "low_ctr_standard": [],
+      "striking_distance_sensitive": [
+        {
+          "query": "bare bones 3d",
+          "page": "https://barebones3d.com/",
+          "clicks": 0,
+          "impressions": 4,
+          "ctr_percent": 0,
+          "position": 7.5
+        }
+      ],
+      "low_ctr_sensitive": [],
+      "raw_top_by_impressions": [
+        {
+          "keys": [
+            "bare bones 3d",
+            "https://barebones3d.com/"
+          ],
+          "clicks": 0,
+          "impressions": 4,
+          "ctr": 0,
+          "position": 7.5
+        }
+      ],
+      "raw_top_by_clicks": []
+    }
+  ]
+}

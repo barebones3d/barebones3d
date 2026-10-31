@@ -1,0 +1,190 @@
+{
+  "site": "sc-domain:wncwatersystems.com",
+  "total_queries": 112,
+  "total_clicks": 1,
+  "total_impressions": 383,
+  "avg_ctr": 0.26,
+  "striking_distance_standard": [],
+  "low_ctr_standard": [],
+  "striking_distance_sensitive": [
+    {
+      "query": "water softener hendersonville nc",
+      "page": "https://wncwatersystems.com/southern-plateau/hendersonville-nc//",
+      "clicks": 0,
+      "impressions": 9,
+      "ctr_percent": 0,
+      "position": 17
+    },
+    {
+      "query": "water softening bakersville",
+      "page": "https://wncwatersystems.com/toe-river-valley/bakersville-nc/",
+      "clicks": 0,
+      "impressions": 8,
+      "ctr_percent": 0,
+      "position": 8.2
+    },
+    {
+      "query": "water extraction morganton nc",
+      "page": "https://wncwatersystems.com/east-foothills/morganton-nc/",
+      "clicks": 0,
+      "impressions": 6,
+      "ctr_percent": 0,
+      "position": 11.2
+    },
+    {
+      "query": "water ionizer installation mount airy nc",
+      "page": "https://wncwatersystems.com/high-country//",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr_percent": 0,
+      "position": 19.4
+    },
+    {
+      "query": "water softening bakersville",
+      "page": "https://wncwatersystems.com/far-west//",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr_percent": 0,
+      "position": 11.8
+    },
+    {
+      "query": "reverse osmosis system bakersville",
+      "page": "https://wncwatersystems.com/toe-river-valley/bakersville-nc/",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr_percent": 0,
+      "position": 18.2
+    },
+    {
+      "query": "ultraviolet disinfection transylvania county nc",
+      "page": "https://wncwatersystems.com/southern-plateau/brevard-nc//",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr_percent": 0,
+      "position": 14.8
+    },
+    {
+      "query": "well water filtration apex nc",
+      "page": "https://wncwatersystems.com/services/well-water-filtration.html",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr_percent": 0,
+      "position": 18.7
+    }
+  ],
+  "low_ctr_sensitive": [],
+  "raw_top_by_impressions": [
+    {
+      "keys": [
+        "hancock water treatment",
+        "https://wncwatersystems.com/"
+      ],
+      "clicks": 0,
+      "impressions": 18,
+      "ctr": 0,
+      "position": 91.72222222222223
+    },
+    {
+      "keys": [
+        "well water filtration systems in orangeburg sc",
+        "https://wncwatersystems.com/services/well-water-filtration.html"
+      ],
+      "clicks": 0,
+      "impressions": 15,
+      "ctr": 0,
+      "position": 87.2
+    },
+    {
+      "keys": [
+        "hancock reverse osmosis systems",
+        "https://wncwatersystems.com/services/reverse-osmosis-systems.html"
+      ],
+      "clicks": 0,
+      "impressions": 12,
+      "ctr": 0,
+      "position": 89.33333333333333
+    },
+    {
+      "keys": [
+        "whole house water filtration hendersonville nc",
+        "https://wncwatersystems.com/metro-asheville//"
+      ],
+      "clicks": 0,
+      "impressions": 12,
+      "ctr": 0,
+      "position": 26.416666666666668
+    },
+    {
+      "keys": [
+        "wnc water",
+        "https://wncwatersystems.com/"
+      ],
+      "clicks": 1,
+      "impressions": 11,
+      "ctr": 0.09090909090909091,
+      "position": 4.818181818181818
+    },
+    {
+      "keys": [
+        "water filtration hendersonville nc",
+        "https://wncwatersystems.com/metro-asheville//"
+      ],
+      "clicks": 0,
+      "impressions": 10,
+      "ctr": 0,
+      "position": 51.2
+    },
+    {
+      "keys": [
+        "water softener hendersonville nc",
+        "https://wncwatersystems.com/southern-plateau/hendersonville-nc//"
+      ],
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0,
+      "position": 17
+    },
+    {
+      "keys": [
+        "water treatment flat rock nc",
+        "https://wncwatersystems.com/southern-plateau//"
+      ],
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0,
+      "position": 42.888888888888886
+    },
+    {
+      "keys": [
+        "uv water treatment for breweries",
+        "https://wncwatersystems.com/services/uv-water-disinfection.html"
+      ],
+      "clicks": 0,
+      "impressions": 8,
+      "ctr": 0,
+      "position": 61.875
+    },
+    {
+      "keys": [
+        "water filtration hendersonville nc",
+        "https://wncwatersystems.com/southern-plateau/hendersonville-nc//"
+      ],
+      "clicks": 0,
+      "impressions": 8,
+      "ctr": 0,
+      "position": 65.375
+    }
+  ],
+  "raw_top_by_clicks": [
+    {
+      "keys": [
+        "wnc water",
+        "https://wncwatersystems.com/"
+      ],
+      "clicks": 1,
+      "impressions": 11,
+      "ctr": 0.09090909090909091,
+      "position": 4.818181818181818
+    }
+  ]
+}

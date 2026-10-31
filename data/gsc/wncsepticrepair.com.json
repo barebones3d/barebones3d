@@ -1,0 +1,179 @@
+{
+  "site": "sc-domain:wncsepticrepair.com",
+  "total_queries": 186,
+  "total_clicks": 0,
+  "total_impressions": 760,
+  "avg_ctr": 0.0,
+  "striking_distance_standard": [],
+  "low_ctr_standard": [],
+  "striking_distance_sensitive": [
+    {
+      "query": "septic repair services banner elk nc",
+      "page": "https://wncsepticrepair.com/toe-river-valley/banner-elk-nc//",
+      "clicks": 0,
+      "impressions": 13,
+      "ctr_percent": 0,
+      "position": 19.8
+    },
+    {
+      "query": "sewer pump service",
+      "page": "https://wncsepticrepair.com/southern-plateau/hendersonville-nc//",
+      "clicks": 0,
+      "impressions": 12,
+      "ctr_percent": 0,
+      "position": 20
+    },
+    {
+      "query": "septic installation & repair banner elk nc",
+      "page": "https://wncsepticrepair.com/toe-river-valley/banner-elk-nc//",
+      "clicks": 0,
+      "impressions": 8,
+      "ctr_percent": 0,
+      "position": 17
+    },
+    {
+      "query": "septic tank pumping",
+      "page": "https://wncsepticrepair.com/mills-river-nc-septic-repair.html",
+      "clicks": 0,
+      "impressions": 8,
+      "ctr_percent": 0,
+      "position": 18.9
+    },
+    {
+      "query": "terralift in huntersville nc",
+      "page": "https://wncsepticrepair.com/services/drain-field-restoration.html",
+      "clicks": 0,
+      "impressions": 8,
+      "ctr_percent": 0,
+      "position": 14.5
+    },
+    {
+      "query": "septic tank cleaning",
+      "page": "https://wncsepticrepair.com/mills-river-nc-septic-repair.html",
+      "clicks": 0,
+      "impressions": 7,
+      "ctr_percent": 0,
+      "position": 14
+    },
+    {
+      "query": "sewer pump service",
+      "page": "https://wncsepticrepair.com/mills-river-nc-septic-repair.html",
+      "clicks": 0,
+      "impressions": 7,
+      "ctr_percent": 0,
+      "position": 15.3
+    },
+    {
+      "query": "septic tank repair asheville nc",
+      "page": "http://wncsepticrepair.com/asheville-nc-septic-repair",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr_percent": 0,
+      "position": 11.3
+    }
+  ],
+  "low_ctr_sensitive": [],
+  "raw_top_by_impressions": [
+    {
+      "keys": [
+        "septic tank pumping",
+        "https://wncsepticrepair.com/hendersonville-nc-septic-repair.html"
+      ],
+      "clicks": 0,
+      "impressions": 32,
+      "ctr": 0,
+      "position": 23.71875
+    },
+    {
+      "keys": [
+        "trusted septic system installation banner elk nc",
+        "https://wncsepticrepair.com/toe-river-valley/banner-elk-nc//"
+      ],
+      "clicks": 0,
+      "impressions": 21,
+      "ctr": 0,
+      "position": 51.285714285714285
+    },
+    {
+      "keys": [
+        "banner elk nc septic installation & repair",
+        "https://wncsepticrepair.com/toe-river-valley/banner-elk-nc//"
+      ],
+      "clicks": 0,
+      "impressions": 19,
+      "ctr": 0,
+      "position": 20.157894736842106
+    },
+    {
+      "keys": [
+        "septic tank installation asheville nc",
+        "https://wncsepticrepair.com/asheville-nc-septic-repair.html"
+      ],
+      "clicks": 0,
+      "impressions": 16,
+      "ctr": 0,
+      "position": 83.5
+    },
+    {
+      "keys": [
+        "sewer pump repair hendersonville nc",
+        "https://wncsepticrepair.com/southern-plateau/hendersonville-nc//"
+      ],
+      "clicks": 0,
+      "impressions": 15,
+      "ctr": 0,
+      "position": 71.4
+    },
+    {
+      "keys": [
+        "drain cleaning hendersonville nc",
+        "https://wncsepticrepair.com/hendersonville-nc-septic-repair.html"
+      ],
+      "clicks": 0,
+      "impressions": 14,
+      "ctr": 0,
+      "position": 67
+    },
+    {
+      "keys": [
+        "septic installation banner elk",
+        "https://wncsepticrepair.com/toe-river-valley/banner-elk-nc//"
+      ],
+      "clicks": 0,
+      "impressions": 13,
+      "ctr": 0,
+      "position": 46.53846153846154
+    },
+    {
+      "keys": [
+        "septic installation company banner elk nc",
+        "https://wncsepticrepair.com/toe-river-valley/banner-elk-nc//"
+      ],
+      "clicks": 0,
+      "impressions": 13,
+      "ctr": 0,
+      "position": 57.46153846153846
+    },
+    {
+      "keys": [
+        "septic repair services banner elk nc",
+        "https://wncsepticrepair.com/toe-river-valley/banner-elk-nc//"
+      ],
+      "clicks": 0,
+      "impressions": 13,
+      "ctr": 0,
+      "position": 19.846153846153847
+    },
+    {
+      "keys": [
+        "drain cleaning fletcher nc",
+        "https://wncsepticrepair.com/fletcher-nc-septic-repair.html"
+      ],
+      "clicks": 0,
+      "impressions": 12,
+      "ctr": 0,
+      "position": 66.91666666666667
+    }
+  ],
+  "raw_top_by_clicks": []
+}

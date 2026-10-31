@@ -1,0 +1,230 @@
+{
+  "summary": {
+    "total_queries_analyzed": 1000,
+    "striking_distance_count": 0,
+    "low_ctr_count": 1
+  },
+  "recommendations": {
+    "page_2_striking_distance": [],
+    "title_meta_tuneups": [
+      {
+        "query": "auto loans",
+        "page": "https://omnioperand.com/pl/finance/auto-loan/",
+        "clicks": 0,
+        "impressions": 266,
+        "ctr_percent": 0,
+        "position": 5.5
+      }
+    ]
+  },
+  "site": "sc-domain:omnioperand.com",
+  "retrieved_at": "2026-10-31T14:47:36.926378",
+  "indexing_audit": {
+    "total_inspected": 10,
+    "verdict_summary": {
+      "PASS": 9,
+      "NEUTRAL": 1
+    },
+    "coverage_summary": {
+      "Submitted and indexed": 9,
+      "Alternate page with proper canonical tag": 1
+    },
+    "canonical_mismatches_count": 0,
+    "canonical_mismatches": [],
+    "indexing_issues_count": 1,
+    "indexing_issues": [
+      {
+        "url": "https://www.omnioperand.com/finance/viral-coefficient/",
+        "verdict": "NEUTRAL",
+        "coverage_state": "Alternate page with proper canonical tag",
+        "google_canonical": "https://omnioperand.com/finance/viral-coefficient/",
+        "referring_urls": [
+          "https://www.omnioperand.com/finance/"
+        ]
+      }
+    ],
+    "inspected_details": [
+      {
+        "url": "https://omnioperand.com/",
+        "verdict": "PASS",
+        "coverage_state": "Submitted and indexed",
+        "indexing_state": "INDEXING_ALLOWED",
+        "page_fetch_state": "SUCCESSFUL",
+        "robots_txt_state": "ALLOWED",
+        "user_canonical": "https://omnioperand.com/",
+        "google_canonical": "https://omnioperand.com/",
+        "canonical_match": true,
+        "referring_urls": [
+          "https://omnioperand.com/finance/",
+          "https://omnioperand.com/engineering/",
+          "https://omnioperand.com/pl/",
+          "https://omnioperand.com/finance/self-storage-roi/",
+          "https://omnioperand.com/api/"
+        ],
+        "last_crawl_time": "2026-10-28T13:12:23Z",
+        "crawled_as": "MOBILE",
+        "gsc_inspect_link": "https://search.google.com/search-console/inspect?resource_id=sc-domain:omnioperand.com&id=qwk2a3u268w7jsH4ZGwpCA&utm_medium=link&utm_source=api"
+      },
+      {
+        "url": "https://omnioperand.com/health/bac/",
+        "verdict": "PASS",
+        "coverage_state": "Submitted and indexed",
+        "indexing_state": "INDEXING_ALLOWED",
+        "page_fetch_state": "SUCCESSFUL",
+        "robots_txt_state": "ALLOWED",
+        "user_canonical": "https://omnioperand.com/health/bac/",
+        "google_canonical": "https://omnioperand.com/health/bac/",
+        "canonical_match": true,
+        "referring_urls": [
+          "https://omnioperand.com/health/"
+        ],
+        "last_crawl_time": "2026-10-20T21:29:09Z",
+        "crawled_as": "MOBILE",
+        "gsc_inspect_link": "https://search.google.com/search-console/inspect?resource_id=sc-domain:omnioperand.com&id=8Ha0_EgqnyyoW0D6uwqgHA&utm_medium=link&utm_source=api"
+      },
+      {
+        "url": "https://omnioperand.com/agriculture/grain-bin-bushel-capacity/",
+        "verdict": "PASS",
+        "coverage_state": "Submitted and indexed",
+        "indexing_state": "INDEXING_ALLOWED",
+        "page_fetch_state": "SUCCESSFUL",
+        "robots_txt_state": "ALLOWED",
+        "user_canonical": "https://omnioperand.com/agriculture/grain-bin-bushel-capacity/",
+        "google_canonical": "https://omnioperand.com/agriculture/grain-bin-bushel-capacity/",
+        "canonical_match": true,
+        "referring_urls": [
+          "https://omnioperand.com/agriculture/"
+        ],
+        "last_crawl_time": "2026-10-21T18:45:40Z",
+        "crawled_as": "MOBILE",
+        "gsc_inspect_link": "https://search.google.com/search-console/inspect?resource_id=sc-domain:omnioperand.com&id=dvFyjbnECCE8v6CdcBGq-A&utm_medium=link&utm_source=api"
+      },
+      {
+        "url": "https://omnioperand.com/ro/statistics/z-score/",
+        "verdict": "PASS",
+        "coverage_state": "Submitted and indexed",
+        "indexing_state": "INDEXING_ALLOWED",
+        "page_fetch_state": "SUCCESSFUL",
+        "robots_txt_state": "ALLOWED",
+        "user_canonical": "https://omnioperand.com/ro/statistics/z-score/",
+        "google_canonical": "https://omnioperand.com/ro/statistics/z-score/",
+        "canonical_match": true,
+        "referring_urls": [
+          "https://omnioperand.com/fi/statistics/z-score/",
+          "https://omnioperand.com/it/statistics/z-score/"
+        ],
+        "last_crawl_time": "2026-10-25T06:52:36Z",
+        "crawled_as": "MOBILE",
+        "gsc_inspect_link": "https://search.google.com/search-console/inspect?resource_id=sc-domain:omnioperand.com&id=fL2B31Clcr_GBYdi5SF-xA&utm_medium=link&utm_source=api"
+      },
+      {
+        "url": "https://www.omnioperand.com/finance/viral-coefficient/",
+        "verdict": "NEUTRAL",
+        "coverage_state": "Alternate page with proper canonical tag",
+        "indexing_state": "INDEXING_ALLOWED",
+        "page_fetch_state": "SUCCESSFUL",
+        "robots_txt_state": "ALLOWED",
+        "user_canonical": "https://omnioperand.com/finance/viral-coefficient/",
+        "google_canonical": "https://omnioperand.com/finance/viral-coefficient/",
+        "canonical_match": true,
+        "referring_urls": [
+          "https://www.omnioperand.com/finance/"
+        ],
+        "last_crawl_time": "2026-10-22T02:14:55Z",
+        "crawled_as": "MOBILE",
+        "gsc_inspect_link": "https://search.google.com/search-console/inspect?resource_id=sc-domain:omnioperand.com&id=HDJ0gvjs_kCYTp0ivd0GEA&utm_medium=link&utm_source=api"
+      },
+      {
+        "url": "https://omnioperand.com/pl/geometry/2d/shapes/",
+        "verdict": "PASS",
+        "coverage_state": "Submitted and indexed",
+        "indexing_state": "INDEXING_ALLOWED",
+        "page_fetch_state": "SUCCESSFUL",
+        "robots_txt_state": "ALLOWED",
+        "user_canonical": "https://omnioperand.com/pl/geometry/2d/shapes/",
+        "google_canonical": "https://omnioperand.com/pl/geometry/2d/shapes/",
+        "canonical_match": true,
+        "referring_urls": [
+          "https://omnioperand.com/pl/geometry/2d/shapes/hexagon/",
+          "https://omnioperand.com/pl/"
+        ],
+        "last_crawl_time": "2026-10-24T21:17:56Z",
+        "crawled_as": "MOBILE",
+        "gsc_inspect_link": "https://search.google.com/search-console/inspect?resource_id=sc-domain:omnioperand.com&id=jeNj2S6Zjk6CF-bWy9J64Q&utm_medium=link&utm_source=api"
+      },
+      {
+        "url": "https://omnioperand.com/fi/geometry/2d/shapes/decagon/",
+        "verdict": "PASS",
+        "coverage_state": "Submitted and indexed",
+        "indexing_state": "INDEXING_ALLOWED",
+        "page_fetch_state": "SUCCESSFUL",
+        "robots_txt_state": "ALLOWED",
+        "user_canonical": "https://omnioperand.com/fi/geometry/2d/shapes/decagon/",
+        "google_canonical": "https://omnioperand.com/fi/geometry/2d/shapes/decagon/",
+        "canonical_match": true,
+        "referring_urls": [
+          "https://omnioperand.com/it/geometry/2d/shapes/decagon/",
+          "https://omnioperand.com/fi/"
+        ],
+        "last_crawl_time": "2026-10-24T18:27:37Z",
+        "crawled_as": "MOBILE",
+        "gsc_inspect_link": "https://search.google.com/search-console/inspect?resource_id=sc-domain:omnioperand.com&id=s9sjgbg7nUrCfEmFVkg5UA&utm_medium=link&utm_source=api"
+      },
+      {
+        "url": "https://omnioperand.com/finance/self-storage-roi/",
+        "verdict": "PASS",
+        "coverage_state": "Submitted and indexed",
+        "indexing_state": "INDEXING_ALLOWED",
+        "page_fetch_state": "SUCCESSFUL",
+        "robots_txt_state": "ALLOWED",
+        "user_canonical": "https://omnioperand.com/finance/self-storage-roi/",
+        "google_canonical": "https://omnioperand.com/finance/self-storage-roi/",
+        "canonical_match": true,
+        "referring_urls": [
+          "https://omnioperand.com/finance/",
+          "https://omnioperand.com/pt/finance/"
+        ],
+        "last_crawl_time": "2026-10-24T23:05:59Z",
+        "crawled_as": "MOBILE",
+        "gsc_inspect_link": "https://search.google.com/search-console/inspect?resource_id=sc-domain:omnioperand.com&id=nfNwEm7wk1-ejk26FXCslA&utm_medium=link&utm_source=api"
+      },
+      {
+        "url": "https://omnioperand.com/sv/geometry/2d/shapes/pentagon/",
+        "verdict": "PASS",
+        "coverage_state": "Submitted and indexed",
+        "indexing_state": "INDEXING_ALLOWED",
+        "page_fetch_state": "SUCCESSFUL",
+        "robots_txt_state": "ALLOWED",
+        "user_canonical": "https://omnioperand.com/sv/geometry/2d/shapes/pentagon/",
+        "google_canonical": "https://omnioperand.com/sv/geometry/2d/shapes/pentagon/",
+        "canonical_match": true,
+        "referring_urls": [
+          "https://omnioperand.com/nl/geometry/2d/shapes/pentagon/",
+          "https://omnioperand.com/pt/geometry/2d/shapes/pentagon/"
+        ],
+        "last_crawl_time": "2026-10-24T21:40:46Z",
+        "crawled_as": "MOBILE",
+        "gsc_inspect_link": "https://search.google.com/search-console/inspect?resource_id=sc-domain:omnioperand.com&id=1-KKBNI5KEWLYTmzd_gWUA&utm_medium=link&utm_source=api"
+      },
+      {
+        "url": "https://omnioperand.com/geometry/cylinder/",
+        "verdict": "PASS",
+        "coverage_state": "Submitted and indexed",
+        "indexing_state": "INDEXING_ALLOWED",
+        "page_fetch_state": "SUCCESSFUL",
+        "robots_txt_state": "ALLOWED",
+        "user_canonical": "https://omnioperand.com/geometry/cylinder/",
+        "google_canonical": "https://omnioperand.com/geometry/cylinder/",
+        "canonical_match": true,
+        "referring_urls": [
+          "https://omnioperand.com/geometry/",
+          "https://omnioperand.com/pt/geometry/cylinder/",
+          "https://omnioperand.com/fi/geometry/cylinder/"
+        ],
+        "last_crawl_time": "2026-10-25T12:56:45Z",
+        "crawled_as": "MOBILE",
+        "gsc_inspect_link": "https://search.google.com/search-console/inspect?resource_id=sc-domain:omnioperand.com&id=fKb7l9l-YlZYK0YP51432Q&utm_medium=link&utm_source=api"
+      }
+    ]
+  }
+}

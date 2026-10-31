@@ -1,0 +1,13 @@
+{
+  "site": "sc-domain:barebonesindustrial.com",
+  "total_queries": 0,
+  "total_clicks": 0,
+  "total_impressions": 0,
+  "avg_ctr": 0,
+  "striking_distance_standard": [],
+  "low_ctr_standard": [],
+  "striking_distance_sensitive": [],
+  "low_ctr_sensitive": [],
+  "raw_top_by_impressions": [],
+  "raw_top_by_clicks": []
+}

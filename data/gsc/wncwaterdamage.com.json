@@ -1,0 +1,220 @@
+{
+  "site": "sc-domain:wncwaterdamage.com",
+  "total_queries": 214,
+  "total_clicks": 0,
+  "total_impressions": 1215,
+  "avg_ctr": 0.0,
+  "striking_distance_standard": [
+    {
+      "query": "water damage near me",
+      "page": "https://wncwaterdamage.com/brevard-nc-water-damage.html",
+      "clicks": 0,
+      "impressions": 15,
+      "ctr_percent": 0,
+      "position": 9.7
+    }
+  ],
+  "low_ctr_standard": [],
+  "striking_distance_sensitive": [
+    {
+      "query": "water damage near me",
+      "page": "https://wncwaterdamage.com/brevard-nc-water-damage.html",
+      "clicks": 0,
+      "impressions": 15,
+      "ctr_percent": 0,
+      "position": 9.7
+    },
+    {
+      "query": "water damage restoration near me",
+      "page": "https://wncwaterdamage.com/hendersonville-nc-water-damage.html",
+      "clicks": 0,
+      "impressions": 12,
+      "ctr_percent": 0,
+      "position": 14.2
+    },
+    {
+      "query": "water damage restoration",
+      "page": "https://wncwaterdamage.com/brevard-nc-water-damage.html",
+      "clicks": 0,
+      "impressions": 10,
+      "ctr_percent": 0,
+      "position": 16.9
+    },
+    {
+      "query": "water damage restoration services near me",
+      "page": "https://wncwaterdamage.com/hendersonville-nc-water-damage.html",
+      "clicks": 0,
+      "impressions": 9,
+      "ctr_percent": 0,
+      "position": 16.2
+    },
+    {
+      "query": "water damage near me",
+      "page": "https://wncwaterdamage.com/southern-plateau/brevard-nc//",
+      "clicks": 0,
+      "impressions": 7,
+      "ctr_percent": 0,
+      "position": 18.4
+    },
+    {
+      "query": "water damage restoration",
+      "page": "https://wncwaterdamage.com/southern-plateau/brevard-nc//",
+      "clicks": 0,
+      "impressions": 7,
+      "ctr_percent": 0,
+      "position": 19.9
+    },
+    {
+      "query": "water damage near me",
+      "page": "https://wncwaterdamage.com/southern-plateau/brevard-nc/",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr_percent": 0,
+      "position": 8.8
+    },
+    {
+      "query": "fletcher water damage restoration",
+      "page": "https://wncwaterdamage.com/fletcher-nc-water-damage.html",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr_percent": 0,
+      "position": 13
+    },
+    {
+      "query": "flood cleanup asheville nc",
+      "page": "https://wncwaterdamage.com/metro-asheville/asheville-nc//",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr_percent": 0,
+      "position": 15
+    },
+    {
+      "query": "how to fix ponding boone nc",
+      "page": "https://wncwaterdamage.com/high-country/boone-nc//",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr_percent": 0,
+      "position": 7.7
+    },
+    {
+      "query": "what to do about wet basement west jefferson nc",
+      "page": "https://wncwaterdamage.com/high-country/west-jefferson-nc//",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr_percent": 0,
+      "position": 9.7
+    },
+    {
+      "query": "wnc water",
+      "page": "https://wncwaterdamage.com/",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr_percent": 0,
+      "position": 7.7
+    }
+  ],
+  "low_ctr_sensitive": [],
+  "raw_top_by_impressions": [
+    {
+      "keys": [
+        "asheville water damage",
+        "https://wncwaterdamage.com/asheville-nc-water-damage.html"
+      ],
+      "clicks": 0,
+      "impressions": 60,
+      "ctr": 0,
+      "position": 21.483333333333334
+    },
+    {
+      "keys": [
+        "water damage asheville",
+        "https://wncwaterdamage.com/asheville-nc-water-damage.html"
+      ],
+      "clicks": 0,
+      "impressions": 46,
+      "ctr": 0,
+      "position": 61.32608695652174
+    },
+    {
+      "keys": [
+        "water damage asheville nc",
+        "https://wncwaterdamage.com/asheville-nc-water-damage.html"
+      ],
+      "clicks": 0,
+      "impressions": 44,
+      "ctr": 0,
+      "position": 62.27272727272727
+    },
+    {
+      "keys": [
+        "water damage asheville",
+        "https://wncwaterdamage.com/metro-asheville/asheville-nc//"
+      ],
+      "clicks": 0,
+      "impressions": 41,
+      "ctr": 0,
+      "position": 34.707317073170735
+    },
+    {
+      "keys": [
+        "water damage asheville nc",
+        "https://wncwaterdamage.com/metro-asheville/asheville-nc//"
+      ],
+      "clicks": 0,
+      "impressions": 35,
+      "ctr": 0,
+      "position": 31.142857142857142
+    },
+    {
+      "keys": [
+        "asheville water fire damage",
+        "https://wncwaterdamage.com/metro-asheville/asheville-nc//"
+      ],
+      "clicks": 0,
+      "impressions": 31,
+      "ctr": 0,
+      "position": 60.935483870967744
+    },
+    {
+      "keys": [
+        "asheville water fire damage",
+        "https://wncwaterdamage.com/asheville-nc-water-damage.html"
+      ],
+      "clicks": 0,
+      "impressions": 30,
+      "ctr": 0,
+      "position": 85.83333333333333
+    },
+    {
+      "keys": [
+        "water damage near me",
+        "https://wncwaterdamage.com/brevard-nc-water-damage.html"
+      ],
+      "clicks": 0,
+      "impressions": 15,
+      "ctr": 0,
+      "position": 9.733333333333333
+    },
+    {
+      "keys": [
+        "water damage",
+        "https://wncwaterdamage.com/asheville-nc-water-damage.html"
+      ],
+      "clicks": 0,
+      "impressions": 14,
+      "ctr": 0,
+      "position": 69.78571428571429
+    },
+    {
+      "keys": [
+        "water damage restoration asheville",
+        "https://wncwaterdamage.com/asheville-nc-water-damage.html"
+      ],
+      "clicks": 0,
+      "impressions": 14,
+      "ctr": 0,
+      "position": 47.57142857142857
+    }
+  ],
+  "raw_top_by_clicks": []
+}

@@ -1,0 +1,94 @@
+{
+  "site": "sc-domain:hottubheatingelements.com",
+  "total_queries": 8,
+  "total_clicks": 0,
+  "total_impressions": 16,
+  "avg_ctr": 0.0,
+  "striking_distance_standard": [],
+  "low_ctr_standard": [],
+  "striking_distance_sensitive": [],
+  "low_ctr_sensitive": [],
+  "raw_top_by_impressions": [
+    {
+      "keys": [
+        "apa itu elemen pemanas incoloy",
+        "https://hottubheatingelements.com/incoloy-vs-titanium"
+      ],
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0,
+      "position": 94.66666666666667
+    },
+    {
+      "keys": [
+        "incoloy elements",
+        "https://hottubheatingelements.com/incoloy-vs-titanium"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "keys": [
+        "incoloy heat exchanger tube",
+        "https://hottubheatingelements.com/incoloy-vs-titanium"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 80
+    },
+    {
+      "keys": [
+        "incoloy heater",
+        "https://hottubheatingelements.com/incoloy-vs-titanium"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 25
+    },
+    {
+      "keys": [
+        "incoloy oven bake heating element",
+        "https://hottubheatingelements.com/incoloy-vs-titanium"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 20
+    },
+    {
+      "keys": [
+        "incoloy water heater element",
+        "https://hottubheatingelements.com/incoloy-vs-titanium"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 35
+    },
+    {
+      "keys": [
+        "intercambiador de caro para tina de hidromasaje",
+        "https://hottubheatingelements.com/es/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 69
+    },
+    {
+      "keys": [
+        "what is transformer impedance",
+        "https://hottubheatingelements.com/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
+    }
+  ],
+  "raw_top_by_clicks": []
+}

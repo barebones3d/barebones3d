@@ -1,0 +1,44 @@
+{
+  "site": "sc-domain:triplexwasherpumps.com",
+  "total_queries": 3,
+  "total_clicks": 0,
+  "total_impressions": 3,
+  "avg_ctr": 0.0,
+  "striking_distance_standard": [],
+  "low_ctr_standard": [],
+  "striking_distance_sensitive": [],
+  "low_ctr_sensitive": [],
+  "raw_top_by_impressions": [
+    {
+      "keys": [
+        "triplex pressure washer pump",
+        "https://triplexwasherpumps.com/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 47
+    },
+    {
+      "keys": [
+        "triplex pump pressure washer",
+        "https://triplexwasherpumps.com/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 95
+    },
+    {
+      "keys": [
+        "triplex pump repair",
+        "https://triplexwasherpumps.com/contact"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 95
+    }
+  ],
+  "raw_top_by_clicks": []
+}

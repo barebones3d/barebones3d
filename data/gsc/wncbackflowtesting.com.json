@@ -1,0 +1,44 @@
+{
+  "site": "sc-domain:wncbackflowtesting.com",
+  "total_queries": 3,
+  "total_clicks": 0,
+  "total_impressions": 3,
+  "avg_ctr": 0.0,
+  "striking_distance_standard": [],
+  "low_ctr_standard": [],
+  "striking_distance_sensitive": [],
+  "low_ctr_sensitive": [],
+  "raw_top_by_impressions": [
+    {
+      "keys": [
+        "asse 1013 backflow preventer",
+        "https://wncbackflowtesting.com/services/rpz-reduced-pressure-zone.html"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 52
+    },
+    {
+      "keys": [
+        "prueba de backflow en salinas",
+        "https://wncbackflowtesting.com/es/central-west/waynesville-nc/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 21
+    },
+    {
+      "keys": [
+        "prueba de backflow en salinas",
+        "https://wncbackflowtesting.com/es/high-country/blowing-rock-nc/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 22
+    }
+  ],
+  "raw_top_by_clicks": []
+}

@@ -1,0 +1,54 @@
+{
+  "site": "sc-domain:gasfurnaceigniters.com",
+  "total_queries": 4,
+  "total_clicks": 0,
+  "total_impressions": 4,
+  "avg_ctr": 0.0,
+  "striking_distance_standard": [],
+  "low_ctr_standard": [],
+  "striking_distance_sensitive": [],
+  "low_ctr_sensitive": [],
+  "raw_top_by_impressions": [
+    {
+      "keys": [
+        "furnace ignitor resistance",
+        "https://gasfurnaceigniters.com/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 62
+    },
+    {
+      "keys": [
+        "hot surface ignitor resistance",
+        "https://gasfurnaceigniters.com/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 88
+    },
+    {
+      "keys": [
+        "silicon nitride",
+        "https://gasfurnaceigniters.com/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 114
+    },
+    {
+      "keys": [
+        "white and rodgers 768a-9",
+        "https://gasfurnaceigniters.com/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 109
+    }
+  ],
+  "raw_top_by_clicks": []
+}

@@ -427,6 +427,8 @@ All tools follow the same 3-step pattern:
    v-geo --service "sunroof repair" --state NC --cities "Asheville,Charlotte" --output "data/geo.json"
    v-asset --image "path/img.jpg" --quality 85 --output-dir "public/webp/"
    v-gsc --site "sc-domain:barebones3d.com" --days 28 --output "data/gsc_opportunities.json"
+   v-gsc --site "sc-domain:omnioperand.com" --audit-indexing --inspect-limit 25 --output "data/gsc_indexing.json"
+   v-gsc --site "sc-domain:omnioperand.com" --inspect-url "https://omnioperand.com/path/" --output "data/url_inspect.json"
    ```
 
 2. **Wait for the completion line** (e.g., `[RESEARCH COMPLETE] Appended to data/...`).

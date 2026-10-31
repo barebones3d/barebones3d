@@ -1,0 +1,114 @@
+{
+  "site": "sc-domain:ridgelinetrade.com",
+  "total_queries": 46,
+  "total_clicks": 0,
+  "total_impressions": 74,
+  "avg_ctr": 0.0,
+  "striking_distance_standard": [],
+  "low_ctr_standard": [],
+  "striking_distance_sensitive": [],
+  "low_ctr_sensitive": [],
+  "raw_top_by_impressions": [
+    {
+      "keys": [
+        "generator installation jamestown",
+        "https://preview.ridgelinetrade.com/sites/lake-james-electric/"
+      ],
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 54.8
+    },
+    {
+      "keys": [
+        "generator installation flat rock nc",
+        "https://preview.ridgelinetrade.com/sites/mountain-generator-service/"
+      ],
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 92.5
+    },
+    {
+      "keys": [
+        "well pump installation university nc",
+        "https://preview.ridgelinetrade.com/sites/boone-well-services/"
+      ],
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 33.5
+    },
+    {
+      "keys": [
+        "burnsville nc hydroseeding",
+        "https://preview.ridgelinetrade.com/sites/austin-grading-land/"
+      ],
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 70
+    },
+    {
+      "keys": [
+        "erosion control services burnsville nc",
+        "https://preview.ridgelinetrade.com/sites/austin-grading-land/"
+      ],
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 70.66666666666667
+    },
+    {
+      "keys": [
+        "well shocking boone nc",
+        "https://preview.ridgelinetrade.com/sites/boone-well-services/"
+      ],
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 29.666666666666668
+    },
+    {
+      "keys": [
+        "whole house generator holly springs nc",
+        "https://preview.ridgelinetrade.com/sites/lake-james-electric/"
+      ],
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 57.333333333333336
+    },
+    {
+      "keys": [
+        "drainage management company burnsville nc",
+        "https://preview.ridgelinetrade.com/sites/austin-grading-land/"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 30
+    },
+    {
+      "keys": [
+        "erosion control burnsville nc",
+        "https://preview.ridgelinetrade.com/sites/austin-grading-land/"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 56
+    },
+    {
+      "keys": [
+        "fingerspace drain forsyth county",
+        "https://preview.ridgelinetrade.com/sites/basement-technologies-wnc/"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 48
+    }
+  ],
+  "raw_top_by_clicks": []
+}

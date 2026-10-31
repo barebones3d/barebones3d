@@ -1,0 +1,244 @@
+{
+  "site": "sc-domain:wncemergencyplumbing.com",
+  "total_queries": 207,
+  "total_clicks": 0,
+  "total_impressions": 967,
+  "avg_ctr": 0.0,
+  "striking_distance_standard": [
+    {
+      "query": "emergency plumber",
+      "page": "https://wncemergencyplumbing.com/hendersonville-nc-emergency-plumbing.html",
+      "clicks": 0,
+      "impressions": 33,
+      "ctr_percent": 0,
+      "position": 14.2
+    },
+    {
+      "query": "emergency plumber",
+      "page": "https://wncemergencyplumbing.com/fletcher-nc-emergency-plumbing.html",
+      "clicks": 0,
+      "impressions": 17,
+      "ctr_percent": 0,
+      "position": 14.4
+    },
+    {
+      "query": "plumber",
+      "page": "https://wncemergencyplumbing.com/brevard-nc-emergency-plumbing.html",
+      "clicks": 0,
+      "impressions": 15,
+      "ctr_percent": 0,
+      "position": 18.4
+    }
+  ],
+  "low_ctr_standard": [],
+  "striking_distance_sensitive": [
+    {
+      "query": "emergency plumber",
+      "page": "https://wncemergencyplumbing.com/hendersonville-nc-emergency-plumbing.html",
+      "clicks": 0,
+      "impressions": 33,
+      "ctr_percent": 0,
+      "position": 14.2
+    },
+    {
+      "query": "emergency plumber",
+      "page": "https://wncemergencyplumbing.com/fletcher-nc-emergency-plumbing.html",
+      "clicks": 0,
+      "impressions": 17,
+      "ctr_percent": 0,
+      "position": 14.4
+    },
+    {
+      "query": "plumber",
+      "page": "https://wncemergencyplumbing.com/brevard-nc-emergency-plumbing.html",
+      "clicks": 0,
+      "impressions": 15,
+      "ctr_percent": 0,
+      "position": 18.4
+    },
+    {
+      "query": "emergency plumber near me",
+      "page": "https://wncemergencyplumbing.com/hendersonville-nc-emergency-plumbing.html",
+      "clicks": 0,
+      "impressions": 9,
+      "ctr_percent": 0,
+      "position": 16.4
+    },
+    {
+      "query": "sewer line repair black mountain nc",
+      "page": "https://wncemergencyplumbing.com/metro-asheville/black-mountain-nc//",
+      "clicks": 0,
+      "impressions": 9,
+      "ctr_percent": 0,
+      "position": 19.4
+    },
+    {
+      "query": "emergency plumbing near me",
+      "page": "https://wncemergencyplumbing.com/hendersonville-nc-emergency-plumbing.html",
+      "clicks": 0,
+      "impressions": 7,
+      "ctr_percent": 0,
+      "position": 15.9
+    },
+    {
+      "query": "trenchless sewer replacement in black mountain",
+      "page": "https://wncemergencyplumbing.com/metro-asheville/black-mountain-nc//",
+      "clicks": 0,
+      "impressions": 6,
+      "ctr_percent": 0,
+      "position": 19.3
+    },
+    {
+      "query": "water line replacement east foothills",
+      "page": "https://wncemergencyplumbing.com/east-foothills//",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr_percent": 0,
+      "position": 12.6
+    },
+    {
+      "query": "24 hour plumber",
+      "page": "https://wncemergencyplumbing.com/hendersonville-nc-emergency-plumbing.html",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr_percent": 0,
+      "position": 12.5
+    },
+    {
+      "query": "emergency plumbing near me",
+      "page": "https://wncemergencyplumbing.com/fletcher-nc-emergency-plumbing.html",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr_percent": 0,
+      "position": 17.5
+    },
+    {
+      "query": "leak detection morganton",
+      "page": "https://wncemergencyplumbing.com/east-foothills/morganton-nc//",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr_percent": 0,
+      "position": 8.5
+    },
+    {
+      "query": "emergency plumber near me",
+      "page": "https://wncemergencyplumbing.com/fletcher-nc-emergency-plumbing.html",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr_percent": 0,
+      "position": 12.7
+    },
+    {
+      "query": "emergency plumber weaverville nc",
+      "page": "https://wncemergencyplumbing.com/metro-asheville/weaverville-nc//",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr_percent": 0,
+      "position": 11.7
+    }
+  ],
+  "low_ctr_sensitive": [],
+  "raw_top_by_impressions": [
+    {
+      "keys": [
+        "emergency plumber",
+        "https://wncemergencyplumbing.com/asheville-nc-emergency-plumbing.html"
+      ],
+      "clicks": 0,
+      "impressions": 37,
+      "ctr": 0,
+      "position": 25.7027027027027
+    },
+    {
+      "keys": [
+        "emergency plumber",
+        "https://wncemergencyplumbing.com/hendersonville-nc-emergency-plumbing.html"
+      ],
+      "clicks": 0,
+      "impressions": 33,
+      "ctr": 0,
+      "position": 14.151515151515152
+    },
+    {
+      "keys": [
+        "emergency plumbers hendersonville",
+        "https://wncemergencyplumbing.com/"
+      ],
+      "clicks": 0,
+      "impressions": 22,
+      "ctr": 0,
+      "position": 57.86363636363637
+    },
+    {
+      "keys": [
+        "emergency plumber hendersonville nc",
+        "https://wncemergencyplumbing.com/"
+      ],
+      "clicks": 0,
+      "impressions": 20,
+      "ctr": 0,
+      "position": 52.7
+    },
+    {
+      "keys": [
+        "emergency plumber",
+        "https://wncemergencyplumbing.com/fletcher-nc-emergency-plumbing.html"
+      ],
+      "clicks": 0,
+      "impressions": 17,
+      "ctr": 0,
+      "position": 14.352941176470589
+    },
+    {
+      "keys": [
+        "wnc plumbing",
+        "https://wncemergencyplumbing.com/"
+      ],
+      "clicks": 0,
+      "impressions": 16,
+      "ctr": 0,
+      "position": 38.6875
+    },
+    {
+      "keys": [
+        "burst water line repair hendersonville nc",
+        "https://wncemergencyplumbing.com/metro-asheville/asheville-nc//"
+      ],
+      "clicks": 0,
+      "impressions": 15,
+      "ctr": 0,
+      "position": 57
+    },
+    {
+      "keys": [
+        "emergency plumber asheville nc",
+        "https://wncemergencyplumbing.com/"
+      ],
+      "clicks": 0,
+      "impressions": 15,
+      "ctr": 0,
+      "position": 81.46666666666667
+    },
+    {
+      "keys": [
+        "plumber",
+        "https://wncemergencyplumbing.com/brevard-nc-emergency-plumbing.html"
+      ],
+      "clicks": 0,
+      "impressions": 15,
+      "ctr": 0,
+      "position": 18.4
+    },
+    {
+      "keys": [
+        "sewer line repair asheville",
+        "https://wncemergencyplumbing.com/metro-asheville//"
+      ],
+      "clicks": 0,
+      "impressions": 15,
+      "ctr": 0,
+      "position": 68.26666666666667
+    }
+  ],
+  "raw_top_by_clicks": []
+}
