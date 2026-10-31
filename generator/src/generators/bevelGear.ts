@@ -5,14 +5,12 @@ import {
   generateBore2D,
   computeMeshVolume,
   estimateWeightGrams,
+  triangulateCap,
 } from '../utils/meshMath';
 
 /**
- * Generates a precision Miter / Bevel Gear using Mathematical Slice-Lofting:
- * - Straight conical involute tooth flanks tapered from heel (pitch radius) to toe
- * - Integrated rear mounting hub collar
- * - Central shaft bore (round, D-shaft, or hex)
- * - Watertight 2-manifold lofted quad mesh with triangulated caps
+ * Generates a precision Miter / Bevel Gear using Mathematical Slice-Lofting
+
  */
 export function generateBevelGear(params: BevelGearParams): GeneratedMeshResult {
   const {
@@ -40,9 +38,10 @@ export function generateBevelGear(params: BevelGearParams): GeneratedMeshResult 
   const requestedBore = boreDiameter !== undefined ? boreDiameter : 5.0;
   const actualBoreDia = Math.min(requestedBore, maxSafeBore);
 
-  const boreProfile = actualBoreDia > 1.0
-    ? generateBore2D(boreType || 'round', actualBoreDia, dShaftFlatOffset || 0, printer_compensation || 0, 32)
-    : [];
+  const boreProfile =
+    actualBoreDia > 1.0
+      ? generateBore2D(boreType || 'round', actualBoreDia, dShaftFlatOffset || 0, printer_compensation || 0, 32)
+      : [];
   const numBore = boreProfile.length;
   const hasBore = numBore >= 3;
 
@@ -99,7 +98,6 @@ export function generateBevelGear(params: BevelGearParams): GeneratedMeshResult 
   const actualHubLen = hasHub ? Math.max(3, hubLength) : 0;
   const hubRadius = Math.max(actualBoreDia / 2 + 2.5, hubDiameter / 2);
 
-  // Generate hub circular profile resampled to numOuter points
   const hubProfile: THREE.Vector2[] = [];
   for (let i = 0; i < numOuter; i++) {
     const angle = (i / numOuter) * Math.PI * 2;
@@ -123,7 +121,6 @@ export function generateBevelGear(params: BevelGearParams): GeneratedMeshResult 
   for (let s = 0; s <= gearNumSlices; s++) {
     const t = s / gearNumSlices;
     const z = gearStartZ + t * gearZHeight;
-    // Radius taper factor from pitch cone geometry
     const coneDist = pitchRadius / Math.sin(coneAngleRad);
     const scale = Math.max(0.2, (coneDist - t * faceWidth) / coneDist);
 
@@ -135,36 +132,72 @@ export function generateBevelGear(params: BevelGearParams): GeneratedMeshResult 
     }
   }
 
-  // If hub existed, loft hub top to gear base (outer shelf only; bore is continuous at same Z)
+  // If hub existed, loft hub top to gear base (horizontal shoulder facing -Z)
+  // Decouple vertices to prevent Gouraud normal bleeding from vertical hub and conical teeth
   if (hasHub && actualHubLen > 0) {
-    loftSlices(1, coneStartSlice, false);
+    const shoulderBase = positions.length / 3;
+    for (let i = 0; i < numOuter; i++) {
+      positions.push(hubProfile[i].x, hubProfile[i].y, actualHubLen);
+    }
+    for (let i = 0; i < numOuter; i++) {
+      positions.push(outerProfile[i].x, outerProfile[i].y, actualHubLen);
+    }
+    for (let i = 0; i < numOuter; i++) {
+      const next = (i + 1) % numOuter;
+      const h0 = shoulderBase + i;
+      const h1 = shoulderBase + next;
+      const g0 = shoulderBase + numOuter + i;
+      const g1 = shoulderBase + numOuter + next;
+      // Downward-facing shoulder step (facing -Z)
+      indices.push(g0, h0, g1);
+      indices.push(g1, h0, h1);
+    }
   }
 
-  // 3. Bottom Cap (at slice 0)
+  // 3. Triangulate Flat Bottom Cap (facing -Z)
+  // Decouple vertices from side walls to avoid Gouraud normal smoothing artifacts
   const bottomOuter = hasHub && actualHubLen > 0 ? hubProfile : outerProfile;
-  const bottomHoles = hasBore ? [boreProfile] : [];
-  const bottomTris = THREE.ShapeUtils.triangulateShape(bottomOuter, bottomHoles);
-  for (const tri of bottomTris) {
-    const i0 = tri[0] < numOuter ? getOuterIdx(0, tri[0]) : getBoreIdx(0, tri[0] - numOuter);
-    const i1 = tri[1] < numOuter ? getOuterIdx(0, tri[1]) : getBoreIdx(0, tri[1] - numOuter);
-    const i2 = tri[2] < numOuter ? getOuterIdx(0, tri[2]) : getBoreIdx(0, tri[2] - numOuter);
-    // Downward normal: reverse winding
-    indices.push(i0, i2, i1);
+  const bottomHoles = hasBore ? boreProfile : null;
+  const bottomTris = triangulateCap(bottomOuter, bottomHoles);
+  const botCapBaseIdx = positions.length / 3;
+
+  for (let i = 0; i < bottomOuter.length; i++) {
+    positions.push(bottomOuter[i].x, bottomOuter[i].y, 0);
+  }
+  if (hasBore) {
+    for (let i = 0; i < numBore; i++) {
+      positions.push(boreProfile[i].x, boreProfile[i].y, 0);
+    }
+  }
+  for (const [i0, i1, i2] of bottomTris) {
+    indices.push(botCapBaseIdx + i0, botCapBaseIdx + i2, botCapBaseIdx + i1);
   }
 
-  // 4. Top Cap (at last slice)
-  const topSliceIdx = sliceCount - 1;
-  const topScale = Math.max(0.2, (pitchRadius / Math.sin(coneAngleRad) - faceWidth) / (pitchRadius / Math.sin(coneAngleRad)));
+  // 4. Triangulate Flat Top Cap (facing +Z)
+  // Decouple vertices from conical teeth
+  const topScale = Math.max(
+    0.2,
+    (pitchRadius / Math.sin(coneAngleRad) - faceWidth) / (pitchRadius / Math.sin(coneAngleRad))
+  );
   const topOuter = outerProfile.map((p) => new THREE.Vector2(p.x * topScale, p.y * topScale));
-  const topTris = THREE.ShapeUtils.triangulateShape(topOuter, bottomHoles);
-  for (const tri of topTris) {
-    const i0 = tri[0] < numOuter ? getOuterIdx(topSliceIdx, tri[0]) : getBoreIdx(topSliceIdx, tri[0] - numOuter);
-    const i1 = tri[1] < numOuter ? getOuterIdx(topSliceIdx, tri[1]) : getBoreIdx(topSliceIdx, tri[1] - numOuter);
-    const i2 = tri[2] < numOuter ? getOuterIdx(topSliceIdx, tri[2]) : getBoreIdx(topSliceIdx, tri[2] - numOuter);
-    indices.push(i0, i1, i2);
+  const topHoles = hasBore ? boreProfile : null;
+  const topTris = triangulateCap(topOuter, topHoles);
+  const topCapBaseIdx = positions.length / 3;
+  const topZ = gearStartZ + gearZHeight;
+
+  for (let i = 0; i < topOuter.length; i++) {
+    positions.push(topOuter[i].x, topOuter[i].y, topZ);
+  }
+  if (hasBore) {
+    for (let i = 0; i < numBore; i++) {
+      positions.push(boreProfile[i].x, boreProfile[i].y, topZ);
+    }
+  }
+  for (const [i0, i1, i2] of topTris) {
+    indices.push(topCapBaseIdx + i0, topCapBaseIdx + i1, topCapBaseIdx + i2);
   }
 
-  // 5. BufferGeometry
+  // 5. BufferGeometry and Metadata
   const geometry = new THREE.BufferGeometry();
   geometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
   geometry.setIndex(indices);

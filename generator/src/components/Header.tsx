@@ -26,6 +26,7 @@ import {
   Anchor,
   Activity,
   Maximize2,
+  ShoppingBag,
 } from 'lucide-react';
 
 interface HeaderProps {
@@ -33,6 +34,8 @@ interface HeaderProps {
   onSelectModel: (model: PrimitiveType) => void;
   onExportSTL: (binary: boolean) => void;
   isExporting?: boolean;
+  cartCount?: number;
+  onOpenCart?: () => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({
@@ -40,6 +43,8 @@ export const Header: React.FC<HeaderProps> = ({
   onSelectModel,
   onExportSTL,
   isExporting = false,
+  cartCount = 0,
+  onOpenCart,
 }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
@@ -425,8 +430,24 @@ export const Header: React.FC<HeaderProps> = ({
           </div>
         )}
 
-      {/* Export Action */}
+      {/* Export & Cart Actions */}
       <div className="flex items-center gap-2">
+        {onOpenCart && (
+          <button
+            onClick={onOpenCart}
+            className="relative flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-slate-700 bg-slate-900/90 hover:bg-slate-800 text-slate-200 text-xs font-mono transition-colors shadow-sm"
+            title="Open Custom Print Cart"
+          >
+            <ShoppingBag className="w-3.5 h-3.5 text-sky-400" />
+            <span className="hidden sm:inline">Print Cart</span>
+            {cartCount > 0 && (
+              <span className="flex items-center justify-center min-w-[18px] h-[18px] px-1 text-[10px] font-bold rounded-full bg-sky-500 text-slate-950">
+                {cartCount}
+              </span>
+            )}
+          </button>
+        )}
+
         <button
           onClick={() => onExportSTL(true)}
           disabled={isExporting}
@@ -434,7 +455,7 @@ export const Header: React.FC<HeaderProps> = ({
           title="Download binary STL file directly to your computer"
         >
           <Download className="w-4 h-4 stroke-[2.5]" />
-          <span>Export .STL</span>
+          <span>Download STL</span>
         </button>
       </div>
     </header>

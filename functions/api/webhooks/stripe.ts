@@ -1,7 +1,8 @@
-import type { EnvBindings, ShippingAddress } from '../../../src/types/database.ts';
+import type { EnvBindings, ShippingAddress, Part } from '../../../src/types/database.ts';
 import {
   getDbAdapter,
   getPartById,
+  insertPart,
   createOrder,
   updateOrderStatus,
   createFulfillment
@@ -48,7 +49,8 @@ export async function onRequestPost(context: PagesContext): Promise<Response> {
     const sessionId = session.id;
     const customerEmail = session.customer_details?.email || session.customer_email || 'customer@example.com';
     const amountTotal = session.amount_total || 0;
-    const partId = session.metadata?.part_id;
+    const partId = session.metadata?.part_id || session.metadata?.partId || session.metadata?.manifestId;
+    const customStlUrl = session.metadata?.stlUrl || session.metadata?.stl_url;
 
     if (!partId) {
       return new Response(JSON.stringify({ error: 'Missing part_id in session metadata' }), {
@@ -65,7 +67,33 @@ export async function onRequestPost(context: PagesContext): Promise<Response> {
     }
 
     const db = getDbAdapter(env.DB);
-    const part = await getPartById(db, partId);
+    let part = await getPartById(db, partId);
+
+    // If part is not in static database catalog, synthesize it for custom parametric orders
+    if (!part && customStlUrl) {
+      const syntheticPart: Part = {
+        id: partId,
+        slug: `custom-${partId.toLowerCase().replace(/_/g, '-')}-${sessionId.slice(-6)}`,
+        title: session.metadata?.title || 'Custom Parametric Part',
+        oem_part_number: session.metadata?.partNumber || 'PARAMETRIC-CUSTOM',
+        superseded_numbers: [],
+        compatible_makes_models: [],
+        material_spec: session.metadata?.targetMaterial || 'PETG Heavy Duty',
+        retail_price_cents: amountTotal,
+        stl_r2_key: customStlUrl,
+        license_type: 'CC BY-NC 4.0',
+        is_commercial_allowed: true,
+        is_active: true,
+        status: 'active'
+      };
+      try {
+        await insertPart(db, syntheticPart);
+        part = await getPartById(db, partId);
+      } catch (err) {
+        console.warn('Failed to insert synthetic part into D1:', err);
+      }
+      if (!part) part = syntheticPart;
+    }
 
     if (!part) {
       return new Response(JSON.stringify({ error: `Part not found in database: ${partId}` }), {
@@ -102,8 +130,11 @@ export async function onRequestPost(context: PagesContext): Promise<Response> {
       status: 'paid'
     });
 
-    // 2. Resolve STL Asset URL
-    const stlUrl = getR2AssetUrl(part.stl_r2_key, env);
+    // 2. Resolve STL Asset URL (Use dynamic custom STL from metadata if provided, otherwise resolve from R2 key)
+    const stlUrl = customStlUrl || getR2AssetUrl(part.stl_r2_key, env);
+    const materialSpec = session.metadata?.targetMaterial || part.material_spec || 'PETG Heavy Duty';
+    const partTitle = session.metadata?.title || part.title;
+    const oemPartNumber = session.metadata?.partNumber || part.oem_part_number;
 
     // 3. Dispatch to Fulfillment Provider (Slant 3D or Mock Adapter)
     const provider = getFulfillmentProvider(env);
@@ -122,9 +153,9 @@ export async function onRequestPost(context: PagesContext): Promise<Response> {
           country: shippingAddress.country
         },
         partId: part.id,
-        partTitle: part.title,
-        oemPartNumber: part.oem_part_number,
-        materialSpec: part.material_spec,
+        partTitle,
+        oemPartNumber,
+        materialSpec,
         stlUrl,
         quantity: 1,
         notes: `Order from barebones3d.com (${sessionId})`

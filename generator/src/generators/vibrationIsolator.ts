@@ -4,7 +4,7 @@ import {
   GeneratedMeshResult,
   SCREW_CLEARANCE_DIAMETERS,
 } from './types';
-import { computeMeshVolume, estimateWeightGrams } from '../utils/meshMath';
+import { computeMeshVolume, estimateWeightGrams, triangulateCap } from '../utils/meshMath';
 
 /**
  * Generates an Anti-Vibration TPU / Rubber Dampening Isolator Foot using Mathematical Lofting:
@@ -124,7 +124,7 @@ export function generateVibrationIsolator(params: VibrationIsolatorParams): Gene
     positions.push(Math.cos(angle) * nutHexRadius, Math.sin(angle) * nutHexRadius, D_cavity);
   }
 
-  // Cap between stud bore bottom and hex cavity ceiling (using THREE.ShapeUtils)
+  // Cap between stud bore bottom and hex cavity ceiling (facing -Z into hex cavity void)
   const hexCeilPoints: THREE.Vector2[] = [];
   for (let k = 0; k < numHexPoints; k++) {
     const angle = (k / numHexPoints) * Math.PI * 2;
@@ -136,13 +136,16 @@ export function generateVibrationIsolator(params: VibrationIsolatorParams): Gene
     studBorePoints.push(new THREE.Vector2(Math.cos(angle) * rStud, Math.sin(angle) * rStud));
   }
 
-  const ceilTriIndices = THREE.ShapeUtils.triangulateShape(hexCeilPoints, [studBorePoints]);
-  for (const tri of ceilTriIndices) {
-    const getV = (i: number) => {
-      if (i < numHexPoints) return hexCeilStart + i;
-      return studBoreBottomStart + (i - numHexPoints);
-    };
-    indices.push(getV(tri[0]), getV(tri[2]), getV(tri[1]));
+  const ceilTriIndices = triangulateCap(hexCeilPoints, studBorePoints);
+  const ceilCapBaseIdx = positions.length / 3;
+  for (const pt of hexCeilPoints) {
+    positions.push(pt.x, pt.y, D_cavity);
+  }
+  for (const pt of studBorePoints) {
+    positions.push(pt.x, pt.y, D_cavity);
+  }
+  for (const [i0, i1, i2] of ceilTriIndices) {
+    indices.push(ceilCapBaseIdx + i0, ceilCapBaseIdx + i2, ceilCapBaseIdx + i1);
   }
 
   // Hex cavity vertical walls from z = D_cavity down to z = 0
@@ -160,8 +163,7 @@ export function generateVibrationIsolator(params: VibrationIsolatorParams): Gene
     addQuad(c0, c1, f1, f0);
   }
 
-  // 5. Bottom Floor Cap (connects outer skin at z=0 to hex cavity floor at z=0)
-  const bottomOuterStart = 0;
+  // 5. Bottom Floor Cap (connects outer skin at z=0 to hex cavity floor at z=0, facing -Z)
   const floorOuterPoints: THREE.Vector2[] = [];
   for (let p = 0; p < numRadialPoints; p++) {
     const angle = (p / numRadialPoints) * Math.PI * 2;
@@ -173,13 +175,16 @@ export function generateVibrationIsolator(params: VibrationIsolatorParams): Gene
     floorHexHolePoints.push(new THREE.Vector2(Math.cos(angle) * nutHexRadius, Math.sin(angle) * nutHexRadius));
   }
 
-  const floorTriIndices = THREE.ShapeUtils.triangulateShape(floorOuterPoints, [floorHexHolePoints]);
-  for (const tri of floorTriIndices) {
-    const getV = (i: number) => {
-      if (i < numRadialPoints) return bottomOuterStart + i;
-      return hexFloorStart + (i - numRadialPoints);
-    };
-    indices.push(getV(tri[0]), getV(tri[2]), getV(tri[1]));
+  const floorTriIndices = triangulateCap(floorOuterPoints, floorHexHolePoints);
+  const floorCapBaseIdx = positions.length / 3;
+  for (const pt of floorOuterPoints) {
+    positions.push(pt.x, pt.y, 0);
+  }
+  for (const pt of floorHexHolePoints) {
+    positions.push(pt.x, pt.y, 0);
+  }
+  for (const [i0, i1, i2] of floorTriIndices) {
+    indices.push(floorCapBaseIdx + i0, floorCapBaseIdx + i2, floorCapBaseIdx + i1);
   }
 
   const geom = new THREE.BufferGeometry();

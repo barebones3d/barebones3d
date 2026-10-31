@@ -9,6 +9,7 @@ import {
   generateHexNut2D,
   computeMeshVolume,
   estimateWeightGrams,
+  triangulateCap,
 } from '../utils/meshMath';
 
 /**
@@ -165,23 +166,34 @@ export function generateThumbScrewWheel(params: ThumbScrewWheelParams): Generate
   sliceCount++;
   loftSlices(3, 4);
 
-  // Bottom cap at slice 0 (annulus between outerProfile and hexNutProfile)
-  const bottomTris = THREE.ShapeUtils.triangulateShape(outerProfile, [hexNutProfile]);
-  for (const tri of bottomTris) {
-    const i0 = tri[0] < numOuter ? getOuterIdx(0, tri[0]) : getBoreIdx(0, tri[0] - numOuter);
-    const i1 = tri[1] < numOuter ? getOuterIdx(0, tri[1]) : getBoreIdx(0, tri[1] - numOuter);
-    const i2 = tri[2] < numOuter ? getOuterIdx(0, tri[2]) : getBoreIdx(0, tri[2] - numOuter);
-    indices.push(i0, i2, i1);
+  // Bottom cap at slice 0 (annulus between outerProfile and hexNutProfile, facing -Z)
+  const bottomTris = triangulateCap(outerProfile, hexNutProfile);
+  const botCapBaseIdx = positions.length / 3;
+
+  for (let i = 0; i < numOuter; i++) {
+    positions.push(outerProfile[i].x, outerProfile[i].y, 0);
+  }
+  for (let i = 0; i < numBore; i++) {
+    positions.push(hexNutProfile[i].x, hexNutProfile[i].y, 0);
   }
 
-  // Top cap at slice 4 (annulus between chamferOuter and throughHoleProfile)
-  const topS = sliceCount - 1;
-  const topTris = THREE.ShapeUtils.triangulateShape(chamferOuter, [throughHoleProfile]);
-  for (const tri of topTris) {
-    const i0 = tri[0] < numOuter ? getOuterIdx(topS, tri[0]) : getBoreIdx(topS, tri[0] - numOuter);
-    const i1 = tri[1] < numOuter ? getOuterIdx(topS, tri[1]) : getBoreIdx(topS, tri[1] - numOuter);
-    const i2 = tri[2] < numOuter ? getOuterIdx(topS, tri[2]) : getBoreIdx(topS, tri[2] - numOuter);
-    indices.push(i0, i1, i2);
+  for (const [i0, i1, i2] of bottomTris) {
+    indices.push(botCapBaseIdx + i0, botCapBaseIdx + i2, botCapBaseIdx + i1);
+  }
+
+  // Top cap at slice 4 (annulus between chamferOuter and throughHoleProfile, facing +Z)
+  const topTris = triangulateCap(chamferOuter, throughHoleProfile);
+  const topCapBaseIdx = positions.length / 3;
+
+  for (let i = 0; i < numOuter; i++) {
+    positions.push(chamferOuter[i].x, chamferOuter[i].y, T);
+  }
+  for (let i = 0; i < numBore; i++) {
+    positions.push(throughHoleProfile[i].x, throughHoleProfile[i].y, T);
+  }
+
+  for (const [i0, i1, i2] of topTris) {
+    indices.push(topCapBaseIdx + i0, topCapBaseIdx + i1, topCapBaseIdx + i2);
   }
 
   // BufferGeometry

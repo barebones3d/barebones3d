@@ -5,7 +5,7 @@
 > **Rule for AI Agents & Engineers:** Before proposing, designing, or ingesting a new replacement part, verify that neither the target OEM part number nor any of its superseded/alternate part numbers appear in this index.
 
 **Catalog Status:** 40 Active Parts Published  
-**Last Updated:** 2026-10-30  
+**Last Updated:** 2026-10-31  
 **Canonical Web Directory:** [/guides/index.html](https://barebones3d.com/guides/)  
 **LLM Endpoint:** [https://barebones3d.com/llms.txt](https://barebones3d.com/llms.txt)
 

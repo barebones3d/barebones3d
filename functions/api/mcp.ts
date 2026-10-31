@@ -2,6 +2,7 @@ import type { EnvBindings, PartRaw, Part } from '../../src/types/database.ts';
 import { parsePart } from '../../src/types/database.ts';
 import { getDbAdapter, getPartById, getPartBySlug, getGuideByPartId, type DatabaseAdapter } from '../../src/lib/db.ts';
 import { createCheckoutSession } from '../../src/lib/stripe.ts';
+import { findMatchingStandardPulley, buildAmazonAffiliateUrl } from '../../src/lib/standardsCatalog.ts';
 
 interface PagesContext {
   request: Request;
@@ -35,6 +36,19 @@ const MCP_TOOLS = [
         }
       },
       required: ['part_id']
+    }
+  },
+  {
+    name: 'calc_gt2_pulley',
+    description: 'Calculates pitch diameter, verifies standard availability, generates STL URL',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        teeth: { type: 'integer', minimum: 10, maximum: 120 },
+        bore_mm: { type: 'number', minimum: 2, maximum: 25 },
+        belt_width_mm: { type: 'number', default: 6 }
+      },
+      required: ['teeth', 'bore_mm']
     }
   }
 ];
@@ -105,6 +119,64 @@ export async function onRequestPost(context: PagesContext): Promise<Response> {
   if (method === 'tools/call') {
     const toolName = params?.name;
     const args = params?.arguments || {};
+
+    if (toolName === 'calc_gt2_pulley') {
+      const teeth = Number(args.teeth);
+      const bore_mm = Number(args.bore_mm);
+      const belt_width_mm = Number(args.belt_width_mm ?? 6);
+
+      const pitch_dia = (teeth * 2.0) / Math.PI;
+      const outer_dia = pitch_dia - 0.508;
+      const wall_thickness = (outer_dia - bore_mm) / 2;
+      const pitch_dia_mm = Number(pitch_dia.toFixed(2));
+      const outer_dia_mm = Number(outer_dia.toFixed(2));
+
+      if (wall_thickness < 1.5) {
+        return new Response(JSON.stringify({
+          jsonrpc,
+          id,
+          result: {
+            isError: true,
+            content: [{
+              type: 'text',
+              text: JSON.stringify({
+                valid: false,
+                error: `Insufficient wall thickness (${wall_thickness.toFixed(2)}mm < 1.5mm). Risk of catastrophic failure.`,
+                pitch_dia_mm,
+                outer_dia_mm
+              })
+            }]
+          }
+        }), { status: 200, headers: corsHeaders });
+      }
+
+      const match = findMatchingStandardPulley(teeth, bore_mm, belt_width_mm);
+      const tag = (env as any)?.NEXT_PUBLIC_AMAZON_TAG || (env as any)?.AMAZON_TAG || 'barebones3d-20';
+      const is_standard = match !== null;
+      const amazon_buy_url = match ? buildAmazonAffiliateUrl(match.amazonSearchQuery, tag) : null;
+
+      const payload = {
+        valid: true,
+        pitch_dia_mm,
+        outer_dia_mm,
+        is_standard,
+        amazon_buy_url,
+        stl_download_url: `/api/v1/download/pulley?teeth=${teeth}&bore=${bore_mm}&width=${belt_width_mm}`,
+        pod_unit_cost_usd: 8.50
+      };
+
+      return new Response(JSON.stringify({
+        jsonrpc,
+        id,
+        result: {
+          isError: false,
+          content: [{
+            type: 'text',
+            text: JSON.stringify(payload)
+          }]
+        }
+      }), { status: 200, headers: corsHeaders });
+    }
 
     if (!env.DB) {
       return new Response(JSON.stringify({

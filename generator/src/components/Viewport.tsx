@@ -9,8 +9,10 @@ import {
   Layers,
   Scale,
   Sparkles,
-  Grid
+  Grid,
+  AlertTriangle,
 } from 'lucide-react';
+import { ManifoldValidationResult } from '../utils/manifoldValidation';
 
 interface ViewportProps {
   geometry: THREE.BufferGeometry | null;
@@ -18,6 +20,7 @@ interface ViewportProps {
   triangles: number;
   vertices: number;
   estimatedPrintWeightGrams: number;
+  validation?: ManifoldValidationResult;
 }
 
 export const Viewport: React.FC<ViewportProps> = ({
@@ -26,6 +29,7 @@ export const Viewport: React.FC<ViewportProps> = ({
   triangles,
   vertices,
   estimatedPrintWeightGrams,
+  validation,
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const rendererRef = useRef<THREE.WebGLRenderer | null>(null);
@@ -291,9 +295,33 @@ export const Viewport: React.FC<ViewportProps> = ({
             <span>{estimatedPrintWeightGrams}g <span className="text-slate-500 text-[10px]">PLA</span></span>
           </div>
           <div className="h-3 w-px bg-slate-800" />
-          <div className="flex items-center gap-1 text-emerald-400 text-[11px]">
-            <Sparkles className="w-3 h-3" />
-            <span>Watertight</span>
+          {/* Live Topological Manifold Status Pill */}
+          <div
+            className={`flex items-center gap-1.5 px-2.5 py-0.5 rounded-full border text-[11px] font-semibold transition-colors ${
+              (validation?.isManifold ?? true)
+                ? 'bg-emerald-500/10 border-emerald-500/40 text-emerald-400'
+                : 'bg-red-500/20 border-red-500/50 text-red-300 animate-pulse'
+            }`}
+            title={
+              validation
+                ? `Open Edges: ${validation.openEdges}, Multi-Edges: ${validation.multiEdges}, Flipped: ${validation.flippedEdges}, Euler χ: ${validation.eulerCharacteristic}`
+                : 'Watertight solid mesh'
+            }
+          >
+            {(validation?.isManifold ?? true) ? (
+              <>
+                <Sparkles className="w-3 h-3 text-emerald-400" />
+                <span>Watertight 2-Manifold</span>
+              </>
+            ) : (
+              <>
+                <AlertTriangle className="w-3 h-3 text-red-400" />
+                <span>Non-Manifold Mesh</span>
+                {validation && validation.openEdges > 0 && (
+                  <span className="text-[10px] text-red-400/80">({validation.openEdges} open)</span>
+                )}
+              </>
+            )}
           </div>
         </div>
       </div>

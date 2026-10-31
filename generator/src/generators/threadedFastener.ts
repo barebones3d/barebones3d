@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import { ThreadedFastenerParams, GeneratedMeshResult } from './types';
-import { computeMeshVolume, estimateWeightGrams } from '../utils/meshMath';
+import { computeMeshVolume, estimateWeightGrams, triangulateCap } from '../utils/meshMath';
 
 /**
  * Computes external thread radius for standard 60-deg metric V-thread.
@@ -178,16 +178,25 @@ export function generateThreadedFastener(params: ThreadedFastenerParams): Genera
     }
 
     // Bottom tip cap (z = 0, facing -Z)
-    const botTris = THREE.ShapeUtils.triangulateShape(sliceProfiles[0], []);
-    for (const tri of botTris) {
-      indices.push(getIdx(0, tri[0]), getIdx(0, tri[2]), getIdx(0, tri[1]));
+    const botTris = triangulateCap(sliceProfiles[0], null);
+    const botCapBaseIdx = positions.length / 3;
+    for (const p of sliceProfiles[0]) {
+      positions.push(p.x, p.y, 0);
+    }
+    for (const [i0, i1, i2] of botTris) {
+      indices.push(botCapBaseIdx + i0, botCapBaseIdx + i2, botCapBaseIdx + i1);
     }
 
     // Top head cap (z = L + Hhead, facing +Z)
     const topSlice = totalSlices - 1;
-    const topTris = THREE.ShapeUtils.triangulateShape(sliceProfiles[topSlice], []);
-    for (const tri of topTris) {
-      indices.push(getIdx(topSlice, tri[0]), getIdx(topSlice, tri[1]), getIdx(topSlice, tri[2]));
+    const topZ = L + Hhead;
+    const topTris = triangulateCap(sliceProfiles[topSlice], null);
+    const topCapBaseIdx = positions.length / 3;
+    for (const p of sliceProfiles[topSlice]) {
+      positions.push(p.x, p.y, topZ);
+    }
+    for (const [i0, i1, i2] of topTris) {
+      indices.push(topCapBaseIdx + i0, topCapBaseIdx + i1, topCapBaseIdx + i2);
     }
   } else {
     // ==========================================
@@ -265,21 +274,29 @@ export function generateThreadedFastener(params: ThreadedFastenerParams): Genera
     }
 
     // Bottom face cap (z = 0, facing -Z)
-    const botTris = THREE.ShapeUtils.triangulateShape(outerHexProfile, [sliceBores[0]]);
-    for (const tri of botTris) {
-      const idx0 = tri[0] < angularSamples ? getOutIdx(0, tri[0]) : getInIdx(0, tri[0] - angularSamples);
-      const idx1 = tri[1] < angularSamples ? getOutIdx(0, tri[1]) : getInIdx(0, tri[1] - angularSamples);
-      const idx2 = tri[2] < angularSamples ? getOutIdx(0, tri[2]) : getInIdx(0, tri[2] - angularSamples);
-      indices.push(idx0, idx2, idx1);
+    const botTris = triangulateCap(outerHexProfile, sliceBores[0]);
+    const botCapBaseIdx = positions.length / 3;
+    for (const p of outerHexProfile) {
+      positions.push(p.x, p.y, 0);
+    }
+    for (const p of sliceBores[0]) {
+      positions.push(p.x, p.y, 0);
+    }
+    for (const [i0, i1, i2] of botTris) {
+      indices.push(botCapBaseIdx + i0, botCapBaseIdx + i2, botCapBaseIdx + i1);
     }
 
     // Top face cap (z = Hnut, facing +Z)
-    const topTris = THREE.ShapeUtils.triangulateShape(outerHexProfile, [sliceBores[numSlices]]);
-    for (const tri of topTris) {
-      const idx0 = tri[0] < angularSamples ? getOutIdx(numSlices, tri[0]) : getInIdx(numSlices, tri[0] - angularSamples);
-      const idx1 = tri[1] < angularSamples ? getOutIdx(numSlices, tri[1]) : getInIdx(numSlices, tri[1] - angularSamples);
-      const idx2 = tri[2] < angularSamples ? getOutIdx(numSlices, tri[2]) : getInIdx(numSlices, tri[2] - angularSamples);
-      indices.push(idx0, idx1, idx2);
+    const topTris = triangulateCap(outerHexProfile, sliceBores[numSlices]);
+    const topCapBaseIdx = positions.length / 3;
+    for (const p of outerHexProfile) {
+      positions.push(p.x, p.y, Hnut);
+    }
+    for (const p of sliceBores[numSlices]) {
+      positions.push(p.x, p.y, Hnut);
+    }
+    for (const [i0, i1, i2] of topTris) {
+      indices.push(topCapBaseIdx + i0, topCapBaseIdx + i1, topCapBaseIdx + i2);
     }
   }
 

@@ -1,0 +1,24 @@
+[
+  {
+    "query": "Balboa 58083 M7 heater element",
+    "site": "hottub",
+    "title": "Balboa 58083 M7 Heater Element",
+    "specifications": {
+      "key_specs": [
+        "5.5kW",
+        "230V",
+        "M7 temperature sensor technology",
+        "Incoloy element material"
+      ],
+      "dimensions_or_sizes": "Standard 15-inch or 2-inch dual sensor M7 heater assembly housing element",
+      "part_numbers_or_compatibility": [
+        "58083",
+        "Balboa M7 systems",
+        "Master Spas and other compatible hot tub brands using Balboa control systems"
+      ],
+      "estimated_price_range": "$90 - $160"
+    },
+    "summary": "The Balboa 58083 is a 5.5kW 230V replacement heater element designed for Balboa M7 spa control systems. It utilizes dual M7 sensors to accurately monitor water temperature and flow without traditional pressure switches.",
+    "retrieved_at": "2026-10-30T18:15:47.405100"
+  }
+]

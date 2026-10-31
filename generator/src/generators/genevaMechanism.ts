@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import { GenevaMechanismParams, GeneratedMeshResult } from './types';
-import { computeMeshVolume, estimateWeightGrams } from '../utils/meshMath';
+import { computeMeshVolume, estimateWeightGrams, triangulateCap } from '../utils/meshMath';
 
 /**
  * Generates an Intermittent Motion Geneva Mechanism (Maltese Cross Wheel):
@@ -94,13 +94,6 @@ export function generateGenevaMechanism(params: GenevaMechanismParams): Generate
     boreCoords2D.push(new THREE.Vector2(Math.cos(a) * rBore, Math.sin(a) * rBore));
   }
 
-  // Triangulate 2D cap using THREE.ShapeUtils
-  const allHoles = [boreCoords2D];
-  const capTris = THREE.ShapeUtils.triangulateShape(outerCoords2D, allHoles);
-
-  const allPoints2D: THREE.Vector2[] = [...outerCoords2D, ...boreCoords2D];
-  const boreOffset = outerCoords2D.length;
-
   const positions: number[] = [];
   const indices: number[] = [];
 
@@ -111,53 +104,67 @@ export function generateGenevaMechanism(params: GenevaMechanismParams): Generate
 
   const zBot = -T / 2;
   const zTop = T / 2;
-
-  // 1. Bottom Cap
-  const botBase = positions.length / 3;
-  const numVertices2D = allPoints2D.length;
-  for (let i = 0; i < numVertices2D; i++) {
-    positions.push(allPoints2D[i].x, allPoints2D[i].y, zBot);
-  }
-  for (const tri of capTris) {
-    indices.push(
-      botBase + tri[0],
-      botBase + tri[2],
-      botBase + tri[1]
-    );
-  }
-
-  // 2. Top Cap
-  const topBase = positions.length / 3;
-  for (let i = 0; i < numVertices2D; i++) {
-    positions.push(allPoints2D[i].x, allPoints2D[i].y, zTop);
-  }
-  for (const tri of capTris) {
-    indices.push(
-      topBase + tri[0],
-      topBase + tri[1],
-      topBase + tri[2]
-    );
-  }
-
-  // 3. Outer Perimeter Quads
   const numOuter = outerCoords2D.length;
+
+  // 1. Outer Perimeter Wall Quads (separate wall vertices)
+  const wallBotBase = positions.length / 3;
+  for (let i = 0; i < numOuter; i++) {
+    positions.push(outerCoords2D[i].x, outerCoords2D[i].y, zBot);
+  }
+  const wallTopBase = positions.length / 3;
+  for (let i = 0; i < numOuter; i++) {
+    positions.push(outerCoords2D[i].x, outerCoords2D[i].y, zTop);
+  }
   for (let i = 0; i < numOuter; i++) {
     const next = (i + 1) % numOuter;
-    const b0 = botBase + i;
-    const b1 = botBase + next;
-    const t0 = topBase + i;
-    const t1 = topBase + next;
+    const b0 = wallBotBase + i;
+    const b1 = wallBotBase + next;
+    const t0 = wallTopBase + i;
+    const t1 = wallTopBase + next;
     addQuad(b0, b1, t1, t0);
   }
 
-  // 4. Central Bore Wall Quads (inward facing)
+  // 2. Central Bore Wall Quads (inward facing, separate wall vertices)
+  const boreWallBotBase = positions.length / 3;
+  for (let i = 0; i < numBorePoints; i++) {
+    positions.push(boreCoords2D[i].x, boreCoords2D[i].y, zBot);
+  }
+  const boreWallTopBase = positions.length / 3;
+  for (let i = 0; i < numBorePoints; i++) {
+    positions.push(boreCoords2D[i].x, boreCoords2D[i].y, zTop);
+  }
   for (let i = 0; i < numBorePoints; i++) {
     const next = (i + 1) % numBorePoints;
-    const b0 = botBase + boreOffset + i;
-    const b1 = botBase + boreOffset + next;
-    const t0 = topBase + boreOffset + i;
-    const t1 = topBase + boreOffset + next;
+    const b0 = boreWallBotBase + i;
+    const b1 = boreWallBotBase + next;
+    const t0 = boreWallTopBase + i;
+    const t1 = boreWallTopBase + next;
     addQuad(b0, t0, t1, b1);
+  }
+
+  // 3. Bottom Cap (facing -Z, decoupled cap vertices)
+  const capTris = triangulateCap(outerCoords2D, boreCoords2D);
+  const botCapBase = positions.length / 3;
+  for (let i = 0; i < numOuter; i++) {
+    positions.push(outerCoords2D[i].x, outerCoords2D[i].y, zBot);
+  }
+  for (let i = 0; i < numBorePoints; i++) {
+    positions.push(boreCoords2D[i].x, boreCoords2D[i].y, zBot);
+  }
+  for (const [i0, i1, i2] of capTris) {
+    indices.push(botCapBase + i0, botCapBase + i2, botCapBase + i1);
+  }
+
+  // 4. Top Cap (facing +Z, decoupled cap vertices)
+  const topCapBase = positions.length / 3;
+  for (let i = 0; i < numOuter; i++) {
+    positions.push(outerCoords2D[i].x, outerCoords2D[i].y, zTop);
+  }
+  for (let i = 0; i < numBorePoints; i++) {
+    positions.push(boreCoords2D[i].x, boreCoords2D[i].y, zTop);
+  }
+  for (const [i0, i1, i2] of capTris) {
+    indices.push(topCapBase + i0, topCapBase + i1, topCapBase + i2);
   }
 
   const geom = new THREE.BufferGeometry();

@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import { KnurledKnobParams, GeneratedMeshResult } from './types';
-import { generateBore2D, computeMeshVolume, estimateWeightGrams } from '../utils/meshMath';
+import { generateBore2D, computeMeshVolume, estimateWeightGrams, triangulateCap } from '../utils/meshMath';
 
 /**
  * Computes the radial radius for a knurled control knob at a given angle and height.
@@ -250,41 +250,54 @@ export function generateKnurledKnob(params: KnurledKnobParams): GeneratedMeshRes
       }
     } else if (b0 !== -1 && b1 === -1) {
       // Blind bore ceiling cap (facing -Z into bore void)
-      const shelfTris = THREE.ShapeUtils.triangulateShape(boreProfile2D, []);
-      for (const tri of shelfTris) {
-        indices.push(b0 + tri[0], b0 + tri[2], b0 + tri[1]);
+      const shelfTris = triangulateCap(boreProfile2D, null);
+      const shelfBaseIdx = positions.length / 3;
+      for (const p of boreProfile2D) {
+        positions.push(p.x, p.y, slices[s].z);
+      }
+      for (const [i0, i1, i2] of shelfTris) {
+        indices.push(shelfBaseIdx + i0, shelfBaseIdx + i2, shelfBaseIdx + i1);
       }
     }
   }
 
   // 7. Triangulate Bottom Cap (slice 0, z = 0, facing -Z)
   const botOuter = slices[0].profile;
-  const botHoles = slices[0].hasBoreAtThisZ ? [boreProfile2D] : [];
-  const botTris = THREE.ShapeUtils.triangulateShape(botOuter, botHoles);
-  const b0Outer = sliceOuterOffsets[0];
-  const b0Bore = sliceBoreOffsets[0];
+  const botHoles = slices[0].hasBoreAtThisZ ? boreProfile2D : null;
+  const botTris = triangulateCap(botOuter, botHoles);
+  const botCapBaseIdx = positions.length / 3;
 
-  for (const tri of botTris) {
-    const idx0 = tri[0] < numOuterPoints ? b0Outer + tri[0] : b0Bore + (tri[0] - numOuterPoints);
-    const idx1 = tri[1] < numOuterPoints ? b0Outer + tri[1] : b0Bore + (tri[1] - numOuterPoints);
-    const idx2 = tri[2] < numOuterPoints ? b0Outer + tri[2] : b0Bore + (tri[2] - numOuterPoints);
-    indices.push(idx0, idx2, idx1);
+  for (let i = 0; i < numOuterPoints; i++) {
+    positions.push(botOuter[i].x, botOuter[i].y, slices[0].z);
+  }
+  if (slices[0].hasBoreAtThisZ) {
+    for (let i = 0; i < numBorePoints; i++) {
+      positions.push(boreProfile2D[i].x, boreProfile2D[i].y, slices[0].z);
+    }
+  }
+
+  for (const [i0, i1, i2] of botTris) {
+    indices.push(botCapBaseIdx + i0, botCapBaseIdx + i2, botCapBaseIdx + i1);
   }
 
   // 8. Triangulate Top Cap (slice totalSlices - 1, z = totalHeight, facing +Z)
   const topIdx = totalSlices - 1;
   const topOuter = slices[topIdx].profile;
-  const topHasBore = slices[topIdx].hasBoreAtThisZ;
-  const topHoles = topHasBore ? [boreProfile2D] : [];
-  const topTris = THREE.ShapeUtils.triangulateShape(topOuter, topHoles);
-  const topOuterOffset = sliceOuterOffsets[topIdx];
-  const topBoreOffset = sliceBoreOffsets[topIdx];
+  const topHoles = slices[topIdx].hasBoreAtThisZ ? boreProfile2D : null;
+  const topTris = triangulateCap(topOuter, topHoles);
+  const topCapBaseIdx = positions.length / 3;
 
-  for (const tri of topTris) {
-    const idx0 = tri[0] < numOuterPoints ? topOuterOffset + tri[0] : topBoreOffset + (tri[0] - numOuterPoints);
-    const idx1 = tri[1] < numOuterPoints ? topOuterOffset + tri[1] : topBoreOffset + (tri[1] - numOuterPoints);
-    const idx2 = tri[2] < numOuterPoints ? topOuterOffset + tri[2] : topBoreOffset + (tri[2] - numOuterPoints);
-    indices.push(idx0, idx1, idx2);
+  for (let i = 0; i < numOuterPoints; i++) {
+    positions.push(topOuter[i].x, topOuter[i].y, slices[topIdx].z);
+  }
+  if (slices[topIdx].hasBoreAtThisZ) {
+    for (let i = 0; i < numBorePoints; i++) {
+      positions.push(boreProfile2D[i].x, boreProfile2D[i].y, slices[topIdx].z);
+    }
+  }
+
+  for (const [i0, i1, i2] of topTris) {
+    indices.push(topCapBaseIdx + i0, topCapBaseIdx + i1, topCapBaseIdx + i2);
   }
 
   // 9. Build Three.js BufferGeometry

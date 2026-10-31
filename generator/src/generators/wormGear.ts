@@ -4,6 +4,7 @@ import {
   generateBore2D,
   computeMeshVolume,
   estimateWeightGrams,
+  triangulateCap,
 } from '../utils/meshMath';
 
 /**
@@ -127,28 +128,44 @@ export function generateWormGear(params: WormGearParams): GeneratedMeshResult {
     }
   }
 
-  // Bottom cap (slice 0)
-  const bottomHoles = hasBore ? [boreProfile] : [];
-  const bottomTris = THREE.ShapeUtils.triangulateShape(baseProfile, bottomHoles);
-  for (const tri of bottomTris) {
-    const i0 = tri[0] < numOuter ? getOuterIdx(0, tri[0]) : getBoreIdx(0, tri[0] - numOuter);
-    const i1 = tri[1] < numOuter ? getOuterIdx(0, tri[1]) : getBoreIdx(0, tri[1] - numOuter);
-    const i2 = tri[2] < numOuter ? getOuterIdx(0, tri[2]) : getBoreIdx(0, tri[2] - numOuter);
-    indices.push(i0, i2, i1);
+  // Bottom cap (slice 0, z = 0, facing -Z)
+  const bottomHoles = hasBore ? boreProfile : null;
+  const bottomTris = triangulateCap(baseProfile, bottomHoles);
+  const botCapBaseIdx = positions.length / 3;
+
+  for (let i = 0; i < numOuter; i++) {
+    positions.push(baseProfile[i].x, baseProfile[i].y, 0);
+  }
+  if (hasBore) {
+    for (let i = 0; i < numBore; i++) {
+      positions.push(boreProfile[i].x, boreProfile[i].y, 0);
+    }
   }
 
-  // Top cap (last slice)
-  const topS = zSlices;
+  for (const [i0, i1, i2] of bottomTris) {
+    indices.push(botCapBaseIdx + i0, botCapBaseIdx + i2, botCapBaseIdx + i1);
+  }
+
+  // Top cap (last slice, z = length, facing +Z)
   const topTwist = (length / lead) * Math.PI * 2;
   const cosTop = Math.cos(topTwist);
   const sinTop = Math.sin(topTwist);
   const topOuter = baseProfile.map((p) => new THREE.Vector2(p.x * cosTop - p.y * sinTop, p.x * sinTop + p.y * cosTop));
-  const topTris = THREE.ShapeUtils.triangulateShape(topOuter, bottomHoles);
-  for (const tri of topTris) {
-    const i0 = tri[0] < numOuter ? getOuterIdx(topS, tri[0]) : getBoreIdx(topS, tri[0] - numOuter);
-    const i1 = tri[1] < numOuter ? getOuterIdx(topS, tri[1]) : getBoreIdx(topS, tri[1] - numOuter);
-    const i2 = tri[2] < numOuter ? getOuterIdx(topS, tri[2]) : getBoreIdx(topS, tri[2] - numOuter);
-    indices.push(i0, i1, i2);
+  const topHoles = hasBore ? boreProfile : null;
+  const topTris = triangulateCap(topOuter, topHoles);
+  const topCapBaseIdx = positions.length / 3;
+
+  for (let i = 0; i < numOuter; i++) {
+    positions.push(topOuter[i].x, topOuter[i].y, length);
+  }
+  if (hasBore) {
+    for (let i = 0; i < numBore; i++) {
+      positions.push(boreProfile[i].x, boreProfile[i].y, length);
+    }
+  }
+
+  for (const [i0, i1, i2] of topTris) {
+    indices.push(topCapBaseIdx + i0, topCapBaseIdx + i1, topCapBaseIdx + i2);
   }
 
   // BufferGeometry

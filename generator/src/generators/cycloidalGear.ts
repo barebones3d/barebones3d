@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import { CycloidalGearParams, GeneratedMeshResult } from './types';
-import { computeMeshVolume, estimateWeightGrams } from '../utils/meshMath';
+import { computeMeshVolume, estimateWeightGrams, triangulateCap } from '../utils/meshMath';
 
 /**
  * Generates an Epicycloidal Reduction Gear Disc (Cycloidal Drive):
@@ -75,19 +75,12 @@ export function generateCycloidalGear(params: CycloidalGearParams): GeneratedMes
     driveHoles.push(holeRing);
   }
 
-  // Triangulate 2D cap using THREE.ShapeUtils
+  // Triangulate 2D cap using triangulateCap
   const allHoles = [boreCoords2D, ...driveHoles];
-  const capTris = THREE.ShapeUtils.triangulateShape(outerCoords2D, allHoles);
+  const capTris = triangulateCap(outerCoords2D, allHoles);
+  const allCapPoints: THREE.Vector2[] = [...outerCoords2D, ...boreCoords2D, ...driveHoles.flat()];
 
-  // Reconstruct unified 2D point array matching ShapeUtils index order
-  const allPoints2D: THREE.Vector2[] = [...outerCoords2D];
-  const holeStartOffsets: number[] = [];
-  for (const hole of allHoles) {
-    holeStartOffsets.push(allPoints2D.length);
-    allPoints2D.push(...hole);
-  }
-
-  // Build 3D mesh: bottom cap (z = -T/2), top cap (z = +T/2), and lofted vertical walls
+  // Build 3D mesh: vertical walls (with own vertices) and decoupled planar caps
   const positions: number[] = [];
   const indices: number[] = [];
 
@@ -99,65 +92,79 @@ export function generateCycloidalGear(params: CycloidalGearParams): GeneratedMes
   const zBot = -T / 2;
   const zTop = T / 2;
 
-  // 1. Bottom Cap
-  const botBase = positions.length / 3;
-  const numVertices2D = allPoints2D.length;
-  for (let i = 0; i < numVertices2D; i++) {
-    positions.push(allPoints2D[i].x, allPoints2D[i].y, zBot);
+  // 1. Outer Wall Quads (separate wall vertices)
+  const wallBotBase = positions.length / 3;
+  for (let i = 0; i < numProfilePoints; i++) {
+    positions.push(outerCoords2D[i].x, outerCoords2D[i].y, zBot);
   }
-  for (const tri of capTris) {
-    indices.push(
-      botBase + tri[0],
-      botBase + tri[2],
-      botBase + tri[1]
-    );
+  const wallTopBase = positions.length / 3;
+  for (let i = 0; i < numProfilePoints; i++) {
+    positions.push(outerCoords2D[i].x, outerCoords2D[i].y, zTop);
   }
-
-  // 2. Top Cap
-  const topBase = positions.length / 3;
-  for (let i = 0; i < numVertices2D; i++) {
-    positions.push(allPoints2D[i].x, allPoints2D[i].y, zTop);
-  }
-  for (const tri of capTris) {
-    indices.push(
-      topBase + tri[0],
-      topBase + tri[1],
-      topBase + tri[2]
-    );
-  }
-
-  // 3. Outer Wall Quads
   for (let i = 0; i < numProfilePoints; i++) {
     const next = (i + 1) % numProfilePoints;
-    const b0 = botBase + i;
-    const b1 = botBase + next;
-    const t0 = topBase + i;
-    const t1 = topBase + next;
+    const b0 = wallBotBase + i;
+    const b1 = wallBotBase + next;
+    const t0 = wallTopBase + i;
+    const t1 = wallTopBase + next;
     addQuad(b0, b1, t1, t0);
   }
 
-  // 4. Bore Wall Quads (inward facing)
-  const boreOffset = holeStartOffsets[0];
+  // 2. Bore Wall Quads (inward facing, separate wall vertices)
+  const boreWallBotBase = positions.length / 3;
+  for (let i = 0; i < numBorePoints; i++) {
+    positions.push(boreCoords2D[i].x, boreCoords2D[i].y, zBot);
+  }
+  const boreWallTopBase = positions.length / 3;
+  for (let i = 0; i < numBorePoints; i++) {
+    positions.push(boreCoords2D[i].x, boreCoords2D[i].y, zTop);
+  }
   for (let i = 0; i < numBorePoints; i++) {
     const next = (i + 1) % numBorePoints;
-    const b0 = botBase + boreOffset + i;
-    const b1 = botBase + boreOffset + next;
-    const t0 = topBase + boreOffset + i;
-    const t1 = topBase + boreOffset + next;
+    const b0 = boreWallBotBase + i;
+    const b1 = boreWallBotBase + next;
+    const t0 = boreWallTopBase + i;
+    const t1 = boreWallTopBase + next;
     addQuad(b0, t0, t1, b1);
   }
 
-  // 5. Drive Hole Walls (inward facing)
+  // 3. Drive Hole Walls (inward facing, separate wall vertices)
   for (let h = 0; h < driveHoles.length; h++) {
-    const hOffset = holeStartOffsets[1 + h];
+    const dHole = driveHoles[h];
+    const dBotBase = positions.length / 3;
+    for (let i = 0; i < numDrivePoints; i++) {
+      positions.push(dHole[i].x, dHole[i].y, zBot);
+    }
+    const dTopBase = positions.length / 3;
+    for (let i = 0; i < numDrivePoints; i++) {
+      positions.push(dHole[i].x, dHole[i].y, zTop);
+    }
     for (let i = 0; i < numDrivePoints; i++) {
       const next = (i + 1) % numDrivePoints;
-      const b0 = botBase + hOffset + i;
-      const b1 = botBase + hOffset + next;
-      const t0 = topBase + hOffset + i;
-      const t1 = topBase + hOffset + next;
+      const b0 = dBotBase + i;
+      const b1 = dBotBase + next;
+      const t0 = dTopBase + i;
+      const t1 = dTopBase + next;
       addQuad(b0, t0, t1, b1);
     }
+  }
+
+  // 4. Bottom Cap (facing -Z, decoupled cap vertices)
+  const botCapBase = positions.length / 3;
+  for (const pt of allCapPoints) {
+    positions.push(pt.x, pt.y, zBot);
+  }
+  for (const [i0, i1, i2] of capTris) {
+    indices.push(botCapBase + i0, botCapBase + i2, botCapBase + i1);
+  }
+
+  // 5. Top Cap (facing +Z, decoupled cap vertices)
+  const topCapBase = positions.length / 3;
+  for (const pt of allCapPoints) {
+    positions.push(pt.x, pt.y, zTop);
+  }
+  for (const [i0, i1, i2] of capTris) {
+    indices.push(topCapBase + i0, topCapBase + i1, topCapBase + i2);
   }
 
   const geom = new THREE.BufferGeometry();

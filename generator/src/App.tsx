@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useCallback } from 'react';
+import React, { useState, useMemo, useCallback, useEffect } from 'react';
 import {
   PrimitiveType,
   HerringboneGearParams,
@@ -115,10 +115,28 @@ import {
   generateChamferToolHolder,
 } from './generators';
 import { exportSTL } from './utils/stlExport';
+import { validateMeshManifold } from './utils/manifoldValidation';
 import { Header } from './components/Header';
 import { PresetsBar } from './components/PresetsBar';
 import { ParameterSidebar } from './components/ParameterSidebar';
 import { Viewport } from './components/Viewport';
+import { CartDrawer } from './components/CartDrawer';
+import { CartItem, loadCart, saveCart } from './lib/cart';
+import { findMatchingStandardPulley, StandardComponent } from './lib/standardsCatalog';
+import { STLExporter } from 'three/examples/jsm/exporters/STLExporter.js';
+import * as THREE from 'three';
+
+// 150ms Debounce hook for slider inputs to ensure sub-16ms smooth UI interaction
+function useDebounce<T>(value: T, delayMs: number = 150): T {
+  const [debouncedValue, setDebouncedValue] = useState<T>(value);
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      setDebouncedValue(value);
+    }, delayMs);
+    return () => clearTimeout(handler);
+  }, [value, delayMs]);
+  return debouncedValue;
+}
 
 export const App: React.FC = () => {
   // Current active primitive model (defaults to GT2 Pulley or URL ?part= query)
@@ -1255,6 +1273,137 @@ export const App: React.FC = () => {
     }
   }, []);
 
+  // Cart state (localStorage synced)
+  const [cart, setCart] = useState<CartItem[]>(() => loadCart());
+  const [isCartOpen, setIsCartOpen] = useState(false);
+
+  // Active parameter set for the currently loaded model
+  const activeParams = useMemo(() => {
+    switch (activeModel) {
+      case 'gt2_pulley': return gt2Params;
+      case 'herringbone_gear': return gearParams;
+      case 'bearing_pillow_block': return pillowParams;
+      case 'structural_bracket': return bracketParams;
+      case 'knurled_knob': return knobParams;
+      case 'threaded_fastener': return fastenerParams;
+      case 'shaft_coupler': return couplerParams;
+      case 'project_enclosure': return enclosureParams;
+      case 'stepper_mount': return stepperParams;
+      case 'linear_rod_clamp': return clampParams;
+      case 'hose_barb': return barbParams;
+      case 'lead_screw_nut_block': return nutBlockParams;
+      case 'cable_chain_link': return chainParams;
+      case 'bevel_gear': return bevelParams;
+      case 'timing_belt_idler': return idlerParams;
+      case 'v_slot_wheel': return vWheelParams;
+      case 'flexible_beam_coupler': return beamParams;
+      case 'worm_gear': return wormParams;
+      case 'thumb_screw_wheel': return thumbParams;
+      case 'velocity_stack': return stackParams;
+      case 'centrifugal_impeller': return impellerParams;
+      case 'extrusion_end_cap': return endCapParams;
+      case 't_nut_slot': return tNutParams;
+      case 'corner_cube_bracket': return cornerCubeParams;
+      case 'ball_joint_rod_end': return ballJointParams;
+      case 'servo_horn': return servoHornParams;
+      case 'cable_guide_anchor': return anchorParams;
+      case 'stepper_damper_plate': return damperParams;
+      case 'pcb_standoff_clip': return standoffParams;
+      case 'endstop_mount': return endstopParams;
+      case 'fan_duct_shroud': return ductParams;
+      case 'spool_holder_hub': return spoolHubParams;
+      case 'dial_indicator_mount': return dialMountParams;
+      case 'cycloidal_gear': return cycloidalParams;
+      case 'geneva_mechanism': return genevaParams;
+      case 'planetary_carrier': return planetaryParams;
+      case 'rack_and_pinion': return rackParams;
+      case 'scotch_yoke': return scotchParams;
+      case 'din_rail_clip': return dinRailParams;
+      case 'hinge_leaf': return hingeParams;
+      case 'spindle_mount': return spindleParams;
+      case 'vibration_isolator': return isolatorParams;
+      case 'cross_slide_bracket': return crossSlideParams;
+      case 'venturi_nozzle': return venturiParams;
+      case 'pipe_flange': return flangeParams;
+      case 'peristaltic_pump_head': return pumpParams;
+      case 'cable_gland': return glandParams;
+      case 'strain_relief_boot': return bootParams;
+      case 'filament_runout_sensor': return runoutParams;
+      case 'slip_ring_capsule': return slipRingParams;
+      case 'piezo_mount': return piezoParams;
+      case 'drill_guide_block': return drillGuideParams;
+      case 'chamfer_tool_holder': return chamferParams;
+      default: return gt2Params;
+    }
+  }, [
+    activeModel,
+    gt2Params,
+    gearParams,
+    pillowParams,
+    bracketParams,
+    knobParams,
+    fastenerParams,
+    couplerParams,
+    enclosureParams,
+    stepperParams,
+    clampParams,
+    barbParams,
+    nutBlockParams,
+    chainParams,
+    bevelParams,
+    idlerParams,
+    vWheelParams,
+    beamParams,
+    wormParams,
+    thumbParams,
+    stackParams,
+    impellerParams,
+    endCapParams,
+    tNutParams,
+    cornerCubeParams,
+    ballJointParams,
+    servoHornParams,
+    anchorParams,
+    damperParams,
+    standoffParams,
+    endstopParams,
+    ductParams,
+    spoolHubParams,
+    dialMountParams,
+    cycloidalParams,
+    genevaParams,
+    planetaryParams,
+    rackParams,
+    scotchParams,
+    dinRailParams,
+    hingeParams,
+    spindleParams,
+    isolatorParams,
+    crossSlideParams,
+    venturiParams,
+    flangeParams,
+    pumpParams,
+    glandParams,
+    bootParams,
+    runoutParams,
+    slipRingParams,
+    piezoParams,
+    drillGuideParams,
+    chamferParams,
+  ]);
+
+  // Debounced parameters (150ms delay) to maintain sub-16ms viewport responsiveness
+  const debouncedActiveParams = useDebounce(activeParams, 150);
+
+  // Debounced Standard Spec Lookup (Task 2)
+  const standardMatch: StandardComponent | null = useMemo(() => {
+    if (activeModel === 'gt2_pulley') {
+      const p = debouncedActiveParams as GT2PulleyParams;
+      return findMatchingStandardPulley(p.toothCount, p.boreDiameter, p.beltWidth);
+    }
+    return null;
+  }, [activeModel, debouncedActiveParams]);
+
   // Compute 3D Mesh in real-time
   const meshResult: GeneratedMeshResult = useMemo(() => {
     switch (activeModel) {
@@ -1373,62 +1522,12 @@ export const App: React.FC = () => {
       default:
         return generateGT2Pulley(gt2Params);
     }
-  }, [
-    activeModel,
-    gt2Params,
-    gearParams,
-    pillowParams,
-    bracketParams,
-    knobParams,
-    fastenerParams,
-    couplerParams,
-    enclosureParams,
-    stepperParams,
-    clampParams,
-    barbParams,
-    nutBlockParams,
-    chainParams,
-    bevelParams,
-    idlerParams,
-    vWheelParams,
-    beamParams,
-    wormParams,
-    thumbParams,
-    stackParams,
-    impellerParams,
-    endCapParams,
-    tNutParams,
-    cornerCubeParams,
-    ballJointParams,
-    servoHornParams,
-    anchorParams,
-    damperParams,
-    standoffParams,
-    endstopParams,
-    ductParams,
-    spoolHubParams,
-    dialMountParams,
-    cycloidalParams,
-    genevaParams,
-    planetaryParams,
-    rackParams,
-    scotchParams,
-    dinRailParams,
-    hingeParams,
-    spindleParams,
-    isolatorParams,
-    crossSlideParams,
-    venturiParams,
-    flangeParams,
-    pumpParams,
-    glandParams,
-    bootParams,
-    runoutParams,
-    slipRingParams,
-    piezoParams,
-    drillGuideParams,
-    chamferParams,
-  ]);
+  }, [activeModel, debouncedActiveParams]);
+
+  // Client-side topological manifold validation (sub-16ms)
+  const validation = useMemo(() => {
+    return validateMeshManifold(meshResult.geometry);
+  }, [meshResult.geometry]);
 
   // Export STL handler
   const handleExportSTL = useCallback((binary: boolean = true) => {
@@ -1656,6 +1755,87 @@ export const App: React.FC = () => {
     chamferParams,
   ]);
 
+  // Cart Actions (Task 3)
+  const handleAddToCart = useCallback(() => {
+    let partName = `${activeModel.replace(/_/g, ' ')}`;
+    let config: Record<string, any> = {};
+
+    if (activeModel === 'gt2_pulley') {
+      partName = `GT2 Pulley ${gt2Params.toothCount}T (${gt2Params.boreDiameter}mm Bore, ${gt2Params.beltWidth}mm Belt)`;
+      config = {
+        teeth: gt2Params.toothCount,
+        boreMm: gt2Params.boreDiameter,
+        beltWidthMm: gt2Params.beltWidth,
+        flange: gt2Params.flangeType,
+      };
+    } else if (activeModel === 'herringbone_gear') {
+      partName = `Herringbone Gear M${gearParams.module} (${gearParams.toothCount} Teeth, ${gearParams.boreDiameter}mm Bore)`;
+      config = {
+        module: gearParams.module,
+        teeth: gearParams.toothCount,
+        boreMm: gearParams.boreDiameter,
+      };
+    } else if (activeModel === 'bearing_pillow_block') {
+      partName = `Pillow Block Bearing Mount (${pillowParams.preset.toUpperCase()})`;
+      config = { preset: pillowParams.preset, boreMm: pillowParams.bearingID };
+    } else if (activeModel === 'structural_bracket') {
+      partName = `L-Bracket ${bracketParams.leg1Length}x${bracketParams.leg2Length}mm`;
+      config = { leg1: bracketParams.leg1Length, leg2: bracketParams.leg2Length, width: bracketParams.width };
+    } else {
+      partName = PRIMITIVE_CATALOG.find((p) => p.id === activeModel)?.name || activeModel.replace(/_/g, ' ').toUpperCase();
+      config = { model: activeModel };
+    }
+
+    let stlBlobRef: string | undefined = undefined;
+    if (meshResult && meshResult.geometry) {
+      try {
+        const exporter = new STLExporter();
+        const tempMesh = new THREE.Mesh(meshResult.geometry, new THREE.MeshBasicMaterial());
+        const output = exporter.parse(tempMesh, { binary: true }) as DataView;
+        const bytes = new Uint8Array(output.buffer);
+        let binaryStr = '';
+        const chunkSize = 8192;
+        for (let i = 0; i < bytes.length; i += chunkSize) {
+          binaryStr += String.fromCharCode.apply(null, Array.from(bytes.subarray(i, i + chunkSize)));
+        }
+        stlBlobRef = `data:model/stl;base64,${btoa(binaryStr)}`;
+      } catch (e) {
+        console.warn('Could not serialize STL blob ref:', e);
+      }
+    }
+
+    const newItem: CartItem = {
+      id: `item_${Date.now()}_${Math.random().toString(36).slice(2, 7)}`,
+      partName,
+      partType: activeModel,
+      parametricConfig: config,
+      stlBlobRef,
+      unitPriceUsd: 8.50,
+      createdAt: Date.now(),
+    };
+
+    setCart((prev) => {
+      const next = [newItem, ...prev];
+      saveCart(next);
+      return next;
+    });
+
+    setIsCartOpen(true);
+  }, [activeModel, gt2Params, gearParams, pillowParams, bracketParams, meshResult]);
+
+  const handleRemoveItem = useCallback((id: string) => {
+    setCart((prev) => {
+      const next = prev.filter((item) => item.id !== id);
+      saveCart(next);
+      return next;
+    });
+  }, []);
+
+  const handleClearCart = useCallback(() => {
+    setCart([]);
+    saveCart([]);
+  }, []);
+
   return (
     <div className="flex flex-col h-screen w-screen overflow-hidden bg-[#090d16] text-slate-100 font-sans">
       {/* Top Header */}
@@ -1663,6 +1843,8 @@ export const App: React.FC = () => {
         activeModel={activeModel}
         onSelectModel={handleSelectModel}
         onExportSTL={handleExportSTL}
+        cartCount={cart.length}
+        onOpenCart={() => setIsCartOpen(true)}
       />
 
       {/* Hardware Presets Quick Toolbar */}
@@ -1677,6 +1859,9 @@ export const App: React.FC = () => {
         {/* Left Sidebar: Parametric Sliders & Number Inputs */}
         <ParameterSidebar
           activeModel={activeModel}
+          geometry={meshResult.geometry}
+          validation={validation}
+          parameters={activeParams}
           onSelectModel={handleSelectModel}
           gearParams={gearParams}
           pillowParams={pillowParams}
@@ -1785,6 +1970,10 @@ export const App: React.FC = () => {
           onUpdateDrillGuideParams={handleUpdateDrillGuideParams}
           onUpdateChamferParams={handleUpdateChamferParams}
           onExportSTL={handleExportSTL}
+          onAddToCart={handleAddToCart}
+          onOpenCart={() => setIsCartOpen(true)}
+          cartCount={cart.length}
+          standardMatch={standardMatch}
         />
 
         {/* Right Viewport: Interactive 3D Canvas */}
@@ -1795,9 +1984,19 @@ export const App: React.FC = () => {
             triangles={meshResult.triangles}
             vertices={meshResult.vertices}
             estimatedPrintWeightGrams={meshResult.estimatedPrintWeightGrams}
+            validation={validation}
           />
         </main>
       </div>
+
+      {/* Task 3: Multi-Part Local Cart Drawer */}
+      <CartDrawer
+        isOpen={isCartOpen}
+        onClose={() => setIsCartOpen(false)}
+        cart={cart}
+        onRemoveItem={handleRemoveItem}
+        onClearCart={handleClearCart}
+      />
     </div>
   );
 };

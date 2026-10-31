@@ -23,16 +23,23 @@ import {
 import {
   Sliders,
   HelpCircle,
-  Download,
   ChevronRight,
   ChevronDown,
   Box,
 } from 'lucide-react';
 import { NewParamControls, NewParamControlsProps } from './NewParamControls';
 import { NewParamControls20, NewParamControls20Props } from './NewParamControls20';
+import * as THREE from 'three';
+import { GeneratorControls } from './GeneratorControls';
+import { ManifoldValidationResult } from '../utils/manifoldValidation';
+import { StandardComponent } from '../lib/standardsCatalog';
 
 export interface ParameterSidebarProps extends NewParamControlsProps, NewParamControls20Props {
   activeModel: PrimitiveType;
+  geometry?: THREE.BufferGeometry | null;
+  validation?: ManifoldValidationResult;
+  parameters?: Record<string, any>;
+
   onSelectModel: (model: PrimitiveType) => void;
   gearParams: HerringboneGearParams;
   pillowParams: BearingPillowBlockParams;
@@ -61,6 +68,10 @@ export interface ParameterSidebarProps extends NewParamControlsProps, NewParamCo
   onUpdateNutBlockParams: (updates: Partial<LeadScrewNutBlockParams>) => void;
   onUpdateChainParams: (updates: Partial<CableChainLinkParams>) => void;
   onExportSTL: (binary: boolean) => void;
+  onAddToCart?: () => void;
+  onOpenCart?: () => void;
+  cartCount?: number;
+  standardMatch?: StandardComponent | null;
 }
 
 // Reusable Slider + Number Field pair with hard bounds
@@ -165,6 +176,9 @@ const getHardwareSearchQuery = (model: PrimitiveType): { label: string; query: s
 export const ParameterSidebar: React.FC<ParameterSidebarProps> = (props) => {
   const {
     activeModel,
+    geometry,
+    validation,
+    parameters,
     onSelectModel,
     gearParams,
     pillowParams,
@@ -192,7 +206,10 @@ export const ParameterSidebar: React.FC<ParameterSidebarProps> = (props) => {
     onUpdateBarbParams,
     onUpdateNutBlockParams,
     onUpdateChainParams,
-    onExportSTL,
+    onAddToCart,
+    onOpenCart,
+    cartCount,
+    standardMatch,
   } = props;
 
   const activeMeta = PRIMITIVE_CATALOG.find((m) => m.id === activeModel) || PRIMITIVE_CATALOG[0];
@@ -1559,16 +1576,29 @@ export const ParameterSidebar: React.FC<ParameterSidebarProps> = (props) => {
         </div>
       </div>
 
-      {/* Footer Quick Export Action */}
-      <div className="p-4 border-t border-slate-800 bg-[#090d16] shrink-0 font-mono">
-        <button
-          onClick={() => onExportSTL(true)}
-          className="w-full flex items-center justify-center gap-2 py-2.5 rounded-lg bg-sky-500 hover:bg-sky-400 active:scale-98 text-slate-950 font-bold text-xs transition-all shadow-md shadow-sky-500/20"
-        >
-          <Download className="w-4 h-4 stroke-[2.5]" />
-          <span>Export Watertight STL</span>
-        </button>
-      </div>
+      {/* Dynamic Engineering Quality Gating, Verification Tiers & POD Pipeline */}
+      <GeneratorControls
+        activeModel={activeModel}
+        geometry={geometry ?? null}
+        parameters={parameters ?? {}}
+        validation={
+          validation ?? {
+            isManifold: true,
+            openEdges: 0,
+            multiEdges: 0,
+            flippedEdges: 0,
+            signedVolumeMm3: 1,
+            eulerCharacteristic: 2,
+            genus: 0,
+            statusText: 'Watertight 2-Manifold',
+          }
+        }
+        onAddToCart={onAddToCart}
+        cartCount={cartCount}
+        onOpenCart={onOpenCart}
+        standardMatch={standardMatch}
+      />
     </aside>
   );
 };
+

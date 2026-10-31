@@ -34,7 +34,8 @@ Always select the correct modeling paradigm based on geometry type:
      // Triangle 1: (p00, p10, p11), Triangle 2: (p00, p11, p01)
      indices.push(p00, p10, p11, p00, p11, p01);
      ```
-  4. Cap top and bottom faces using ear-clipping triangulation (e.g., `THREE.ShapeUtils.triangulateShape`).
+  4. Cap top and bottom faces using ear-clipping triangulation (`triangulateCap`).
+- **Planar Caps & Bore Triangulation Rule**: Always use `triangulateCap()` from `../utils/meshMath` instead of calling `THREE.ShapeUtils.triangulateShape` directly. Mapbox Earcut requires outer boundaries to be CCW and hole boundaries to be CW; `triangulateCap()` enforces this and remaps indices cleanly. Always duplicate/decouple vertex positions for planar caps and sharp 90-degree steps so `computeVertexNormals()` creates crisp planar normals without shading bleeding from adjacent cylinder or tooth flank walls.
 * **Why:** $O(N)$ linear computational complexity, sub-5ms generation, zero CSG boolean failure modes.
 
 ### Pattern B: Defensive CSG (`three-bvh-csg`)
@@ -281,6 +282,7 @@ export function generateMyNewPart(params: MyNewPartParams): GeneratedMeshResult
    * **Step Shoulders:**
      * Stepping inward ($r_{\text{curr}} > r_{\text{next}}$): Faces $+\hat{z}$.
      * Stepping outward ($r_{\text{curr}} < r_{\text{next}}$): Faces $-\hat{z}$.
+   * **Planar Caps & Bore Triangulation Rule**: Always use `triangulateCap()` from `../utils/meshMath` instead of calling `THREE.ShapeUtils.triangulateShape` directly. Mapbox Earcut requires outer boundaries to be CCW and hole boundaries to be CW; `triangulateCap()` enforces this and remaps indices cleanly. Always duplicate/decouple vertex positions for planar caps and sharp 90-degree steps so `computeVertexNormals()` creates crisp planar normals without shading bleeding from adjacent cylinder or tooth flank walls.
 4. **Defensive CSG Invariants (Pattern B):**
    * Cylindrical and slot cutters must extend beyond part boundaries by $\ge 2.0\text{mm}$ along the depth/cutting axis (`cutterLength = partThickness + 4.0`, translated $-2.0\text{mm}$).
    * Dispose all intermediate geometries and brushes (`geom.dispose()`, `brush.geometry.dispose()`).
@@ -373,3 +375,68 @@ npm test
 5. **Git Commit & Push:**
    Commit clean changes and push to `origin/main`.
 
+# TOKEN PRESERVATION & EXTERNAL RESEARCH POLICY
+
+## 1. Native Browsing Prohibition
+- Do NOT use internal browser agents, Puppeteer, multi-turn web scrapers, or autonomous terminal searches to gather product specs, competitor details, or parts data.
+- All factual research must be delegated to the local runner (`scripts/research.py`).
+
+## 2. Mandatory Research Execution Flow
+Whenever you need dimensions, part numbers, replacement equivalents, or technical content for any site:
+
+1. **Run the external script via terminal:**
+   `python3 scripts/research.py --query "<exact part or query>" --site "<site_name>" --output "data/<site_name>_specs.json"`
+
+2. **Wait for completion:**
+   Wait for the single stdout line: `[RESEARCH COMPLETE] Appended...`
+
+3. **Read the local file:**
+   Open and read ONLY the relevant entry in `data/<site_name>_specs.json`.
+
+4. **Build the component/page:**
+   Implement the Astro/Next.js/HTML page or CAD script using strictly the structured local data.
+
+---
+
+# VENTURE TOOLS CLI SUITE
+
+## Global Tools (`~/.venture-tools/bin/`)
+
+A centralized, zero-token-waste automation suite is installed system-wide at `~/.venture-tools/`.  
+All tools are on `$PATH` (registered in `~/.zshrc` and `~/.bashrc`). **Use these instead of autonomous browsing or scraping.**
+
+| Command | Purpose | Output |
+|---------|---------|--------|
+| `v-research` | DuckDuckGo + Gemini live research → structured JSON | `[RESEARCH COMPLETE] Appended to <file>` |
+| `v-cad` | Trimesh watertightness + 3D printability validator | `[CAD COMPLETE] Appended to <file>` |
+| `v-geo` | Rank-and-rent local entity matrix via Gemini | `[GEO COMPLETE] Appended to <file>` |
+| `v-schema` | Schema.org JSON-LD generator (Product / LocalBusiness) | `[SCHEMA COMPLETE] Appended to <file>` |
+| `v-primer` | NetworkX Story Tree & Prerequisite Linter | `[PRIMER COMPLETE] Appended to <file>` |
+| `v-asset` | WebP image conversion + STL polygon reduction | `[ASSET COMPLETE] Appended to <file>` |
+| `v-gsc` | Google Search Console opportunity linter (striking-distance + low-CTR) | `[GSC COMPLETE] <site>: Found N striking-distance targets...` |
+
+### Mandatory Execution Pattern
+
+All tools follow the same 3-step pattern:
+
+1. **Run the CLI tool:**
+   ```bash
+   v-research --query "<exact query>" [--site amazon] --output "data/<topic>.json"
+   v-cad --stl "path/to/file.stl" --output "data/cad_reports.json"
+   v-schema --type product --name "Part Name" --sku "SKU" --price 24.00 --output "data/schemas.json"
+   v-geo --service "sunroof repair" --state NC --cities "Asheville,Charlotte" --output "data/geo.json"
+   v-asset --image "path/img.jpg" --quality 85 --output-dir "public/webp/"
+   v-gsc --site "sc-domain:barebones3d.com" --days 28 --output "data/gsc_opportunities.json"
+   ```
+
+2. **Wait for the completion line** (e.g., `[RESEARCH COMPLETE] Appended to data/...`).
+
+3. **Read ONLY from the local output file** — never from memory or hallucinated data.
+
+### Infrastructure
+
+- **Venv:** `~/.venture-tools/.venv/bin/python3`
+- **Lib scripts:** `~/.venture-tools/lib/v_research.py`, `v_cad.py`, `v_geo.py`, `v_schema.py`, `v_primer.py`, `v_asset.py`, `gsc_analyzer.py`
+- **Credentials:** `~/.venture-tools/.env` (all API keys — never commit this file)
+- **GSC auth:** `~/.venture-tools/service_account.json` — Google Cloud Service Account with Search Console read access (required by `v-gsc`)
+- **Global rules:** `~/.venture-tools/GLOBAL_AGENT_RULES.md`

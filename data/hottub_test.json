@@ -1,0 +1,31 @@
+[
+  {
+    "query": "Balboa 58083 M7 heater element",
+    "site": "hottub",
+    "title": "Balboa M7 Heater Assembly 58083",
+    "asin_or_oem": "58083",
+    "specifications": {
+      "wattage_or_power": "5.5 kW",
+      "voltage": "220V / 240V (operates on 120V or 240V setups)",
+      "dimensions_or_sizes": "2\" Plumbing",
+      "material_or_type": "Stainless Steel Housing / Flo-Thru Titanium/Stainless Element",
+      "cross_compatibility": [
+        "Balboa BP",
+        "VS",
+        "EL2001 Control Systems",
+        "25-175-1010"
+      ]
+    },
+    "pricing": {
+      "amazon_or_retail_price": "N/A",
+      "status": "Available"
+    },
+    "sources": [
+      "Amazon.com",
+      "Sunplay",
+      "Pool Supply Delivery"
+    ],
+    "summary": "The Balboa 58083 M7 heater assembly features a 5.5 kW heater element housed in stainless steel with 2\" plumbing connections. It is compatible with Balboa BP, VS, and EL2001 control systems and operates on dual voltage setups.",
+    "retrieved_at": "2026-10-30T18:51:45.809983"
+  }
+]

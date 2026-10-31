@@ -6,6 +6,7 @@ import {
   generateBore2D,
   computeMeshVolume,
   estimateWeightGrams,
+  triangulateCap,
 } from '../utils/meshMath';
 
 function ensureWinding(points: THREE.Vector2[], clockwise: boolean): THREE.Vector2[] {
@@ -147,7 +148,7 @@ export function generateHerringboneGear(params: HerringboneGearParams): Generate
     }
   }
 
-  // 7. Bottom Planar Cap (z = -halfWidth)
+  // 7. Bottom Planar Cap (z = -halfWidth, facing -Z)
   const bottomTwist = -halfWidth * twistRate;
   const cosBot = Math.cos(bottomTwist);
   const sinBot = Math.sin(bottomTwist);
@@ -155,19 +156,24 @@ export function generateHerringboneGear(params: HerringboneGearParams): Generate
     (p) => new THREE.Vector2(p.x * cosBot - p.y * sinBot, p.x * sinBot + p.y * cosBot)
   );
 
-  const bottomHoles = hasBore ? [chamferBoreProfile2D] : [];
-  const bottomTriangles = THREE.ShapeUtils.triangulateShape(botOuter2D, bottomHoles);
+  const bottomHoles = hasBore ? chamferBoreProfile2D : null;
+  const bottomTriangles = triangulateCap(botOuter2D, bottomHoles);
+  const botCapBaseIdx = positions.length / 3;
 
-  for (const tri of bottomTriangles) {
-    const idx0 = tri[0] < numOuterPoints ? getOuterIdx(0, tri[0]) : getBoreIdx(0, tri[0] - numOuterPoints);
-    const idx1 = tri[1] < numOuterPoints ? getOuterIdx(0, tri[1]) : getBoreIdx(0, tri[1] - numOuterPoints);
-    const idx2 = tri[2] < numOuterPoints ? getOuterIdx(0, tri[2]) : getBoreIdx(0, tri[2] - numOuterPoints);
-
-    // Normal points in -Z
-    indices.push(idx0, idx2, idx1);
+  for (let i = 0; i < numOuterPoints; i++) {
+    positions.push(botOuter2D[i].x, botOuter2D[i].y, -halfWidth);
+  }
+  if (hasBore) {
+    for (let i = 0; i < numBorePoints; i++) {
+      positions.push(chamferBoreProfile2D[i].x, chamferBoreProfile2D[i].y, -halfWidth);
+    }
   }
 
-  // 8. Top Planar Cap (z = +halfWidth)
+  for (const [i0, i1, i2] of bottomTriangles) {
+    indices.push(botCapBaseIdx + i0, botCapBaseIdx + i2, botCapBaseIdx + i1);
+  }
+
+  // 8. Top Planar Cap (z = +halfWidth, facing +Z)
   const topTwist = -halfWidth * twistRate;
   const cosTop = Math.cos(topTwist);
   const sinTop = Math.sin(topTwist);
@@ -175,17 +181,21 @@ export function generateHerringboneGear(params: HerringboneGearParams): Generate
     (p) => new THREE.Vector2(p.x * cosTop - p.y * sinTop, p.x * sinTop + p.y * cosTop)
   );
 
-  const topHoles = hasBore ? [chamferBoreProfile2D] : [];
-  const topSliceIdx = numSlices - 1;
-  const topTriangles = THREE.ShapeUtils.triangulateShape(topOuter2D, topHoles);
+  const topHoles = hasBore ? chamferBoreProfile2D : null;
+  const topTriangles = triangulateCap(topOuter2D, topHoles);
+  const topCapBaseIdx = positions.length / 3;
 
-  for (const tri of topTriangles) {
-    const idx0 = tri[0] < numOuterPoints ? getOuterIdx(topSliceIdx, tri[0]) : getBoreIdx(topSliceIdx, tri[0] - numOuterPoints);
-    const idx1 = tri[1] < numOuterPoints ? getOuterIdx(topSliceIdx, tri[1]) : getBoreIdx(topSliceIdx, tri[1] - numOuterPoints);
-    const idx2 = tri[2] < numOuterPoints ? getOuterIdx(topSliceIdx, tri[2]) : getBoreIdx(topSliceIdx, tri[2] - numOuterPoints);
+  for (let i = 0; i < numOuterPoints; i++) {
+    positions.push(topOuter2D[i].x, topOuter2D[i].y, halfWidth);
+  }
+  if (hasBore) {
+    for (let i = 0; i < numBorePoints; i++) {
+      positions.push(chamferBoreProfile2D[i].x, chamferBoreProfile2D[i].y, halfWidth);
+    }
+  }
 
-    // Normal points in +Z
-    indices.push(idx0, idx1, idx2);
+  for (const [i0, i1, i2] of topTriangles) {
+    indices.push(topCapBaseIdx + i0, topCapBaseIdx + i1, topCapBaseIdx + i2);
   }
 
   // 9. Build BufferGeometry and Crease Normals

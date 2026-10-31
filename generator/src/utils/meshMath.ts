@@ -235,3 +235,76 @@ export function generateScallopedPerimeter2D(
   }
   return points;
 }
+
+/**
+ * Robust triangulation for planar end caps with optional hole contour.
+ * Enforces CCW outer contour and CW hole contour as required by Mapbox Earcut,
+ * then maps triangle vertex indices back to original array order.
+ *
+ * Returned indices:
+ * - 0 to outerPoints.length - 1: corresponds to outerPoints
+ * - outerPoints.length to outerPoints.length + holePoints.length - 1: corresponds to holePoints
+ */
+export function triangulateCap(
+  outerPoints: THREE.Vector2[],
+  holePoints: THREE.Vector2[] | THREE.Vector2[][] | null
+): [number, number, number][] {
+  const isOuterCW = THREE.ShapeUtils.isClockWise(outerPoints);
+  const contour = isOuterCW ? outerPoints.slice().reverse() : outerPoints.slice();
+
+  let holes: THREE.Vector2[][] = [];
+  interface HoleMeta {
+    origOffset: number;
+    length: number;
+    isReversed: boolean;
+  }
+  const holesMeta: HoleMeta[] = [];
+
+  if (holePoints && holePoints.length > 0) {
+    const isMultiHole = Array.isArray(holePoints[0]);
+    const holesList: THREE.Vector2[][] = isMultiHole
+      ? (holePoints as THREE.Vector2[][])
+      : [holePoints as THREE.Vector2[]];
+
+    let currentOffset = outerPoints.length;
+    for (const h of holesList) {
+      if (h && h.length >= 3) {
+        const isHoleCW = THREE.ShapeUtils.isClockWise(h);
+        if (!isHoleCW) {
+          holes.push(h.slice().reverse());
+          holesMeta.push({ origOffset: currentOffset, length: h.length, isReversed: true });
+        } else {
+          holes.push(h.slice());
+          holesMeta.push({ origOffset: currentOffset, length: h.length, isReversed: false });
+        }
+        currentOffset += h.length;
+      }
+    }
+  }
+
+  const rawTriangles = THREE.ShapeUtils.triangulateShape(contour, holes);
+  const numOuter = outerPoints.length;
+
+  const mappedTriangles: [number, number, number][] = [];
+  for (const [a, b, c] of rawTriangles) {
+    const remap = (idx: number): number => {
+      if (idx < numOuter) {
+        return isOuterCW ? numOuter - 1 - idx : idx;
+      } else {
+        let acc = numOuter;
+        for (const meta of holesMeta) {
+          if (idx < acc + meta.length) {
+            const holeLocalIdx = idx - acc;
+            const remappedHoleIdx = meta.isReversed ? meta.length - 1 - holeLocalIdx : holeLocalIdx;
+            return meta.origOffset + remappedHoleIdx;
+          }
+          acc += meta.length;
+        }
+        return idx;
+      }
+    };
+    mappedTriangles.push([remap(a), remap(b), remap(c)]);
+  }
+  return mappedTriangles;
+}
+

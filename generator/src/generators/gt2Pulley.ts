@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import { GT2PulleyParams, GeneratedMeshResult } from './types';
-import { generateBore2D, computeMeshVolume, estimateWeightGrams } from '../utils/meshMath';
+import { generateBore2D, computeMeshVolume, estimateWeightGrams, triangulateCap } from '../utils/meshMath';
 
 /**
  * Computes a precise 2D curvilinear tooth radius for a GT2 belt pulley at a given angle.
@@ -13,29 +13,21 @@ function getGT2Radius(
   rootRadius: number
 ): number {
   const toothPitchAngle = (2 * Math.PI) / toothCount;
-  // Normalize angle to [0, toothPitchAngle)
-  let a = (angle % (2 * Math.PI) + 2 * Math.PI) % (2 * Math.PI);
+  const a = ((angle % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI);
   const toothIndex = Math.floor(a / toothPitchAngle);
-  const localAngle = a - (toothIndex + 0.5) * toothPitchAngle; // centered at tooth valley (-pitch/2 to +pitch/2)
+  const localAngle = a - (toothIndex + 0.5) * toothPitchAngle;
 
   const halfTooth = toothPitchAngle / 2;
-  const normalizedDist = Math.abs(localAngle) / halfTooth; // 0 at valley center, 1 at crest tip
+  const normalizedDist = Math.abs(localAngle) / halfTooth;
 
-  // Smooth curvilinear transition characteristic of Gates PowerGrip GT2
-  // Flat crest top land, steep flanks, circular trough
   const depth = outerRadius - rootRadius;
   const flankFactor = Math.pow(Math.sin(normalizedDist * Math.PI * 0.5), 1.6);
   return rootRadius + depth * flankFactor;
 }
 
+
 /**
  * Generates a watertight, mathematically lofted GT2 Timing Belt Pulley.
- * Features:
- * - Curvilinear tooth geometry with exact pitch radius and pitch line differential (PLD)
- * - Optional bottom and top retaining guide flanges
- * - Optional set-screw hub boss collar
- * - Precision internal bore (Round, D-Shaft, or Hex) with printer compensation
- * - 100% closed 2-manifold mesh with outward-facing normals
  */
 export function generateGT2Pulley(params: GT2PulleyParams): GeneratedMeshResult {
   const {
@@ -57,12 +49,11 @@ export function generateGT2Pulley(params: GT2PulleyParams): GeneratedMeshResult 
   // 1. Core Tooth Math
   const safeToothCount = Math.max(12, toothCount);
   const pitchRadius = (safeToothCount * pitch) / (2 * Math.PI);
-  const pld = pitch === 3.0 ? 0.38 : 0.254; // pitch line differential
+  const pld = pitch === 3.0 ? 0.38 : 0.254;
   const outerRadius = Math.max(1.0, pitchRadius - pld);
   const toothDepth = pitch === 3.0 ? 1.15 : 0.75;
   const rootRadius = Math.max(0.5, outerRadius - toothDepth);
 
-  // Clearance width for belt
   const faceWidth = Math.max(4.0, beltWidth + 1.5);
   const actualFlangeHeight = Math.max(1.0, flangeHeight);
   const flangeRadius = outerRadius + actualFlangeHeight;
@@ -75,7 +66,6 @@ export function generateGT2Pulley(params: GT2PulleyParams): GeneratedMeshResult 
   const hubRadius = actualHubDiameter / 2;
   const actualHubHeight = hasHub ? Math.max(3.0, hubHeight) : 0;
 
-  // Max safe bore radius (must leave at least 1.5mm wall inside root radius)
   const maxSafeBoreDia = Math.max(0, (rootRadius - 1.5) * 2);
   const actualBoreDia = Math.min(boreDiameter, maxSafeBoreDia);
   const hasBore = actualBoreDia > 1.0;
@@ -84,30 +74,24 @@ export function generateGT2Pulley(params: GT2PulleyParams): GeneratedMeshResult 
   const samplesPerTooth = 8;
   const numOuterPoints = safeToothCount * samplesPerTooth;
 
-  // Precompute angles
   const angles: number[] = [];
   for (let i = 0; i < numOuterPoints; i++) {
     angles.push((i / numOuterPoints) * Math.PI * 2);
   }
 
-  // Precompute 2D profiles
-  // A. Tooth profile
   const toothProfile2D: THREE.Vector2[] = angles.map((a) => {
     const r = getGT2Radius(a, safeToothCount, outerRadius, rootRadius);
     return new THREE.Vector2(r * Math.cos(a), r * Math.sin(a));
   });
 
-  // B. Flange profile
   const flangeProfile2D: THREE.Vector2[] = angles.map((a) => {
     return new THREE.Vector2(flangeRadius * Math.cos(a), flangeRadius * Math.sin(a));
   });
 
-  // C. Hub profile
   const hubProfile2D: THREE.Vector2[] = angles.map((a) => {
     return new THREE.Vector2(hubRadius * Math.cos(a), hubRadius * Math.sin(a));
   });
 
-  // D. Internal Bore profile (if present)
   let boreProfile2D: THREE.Vector2[] = [];
   let numBorePoints = 0;
   if (hasBore) {
@@ -135,13 +119,12 @@ export function generateGT2Pulley(params: GT2PulleyParams): GeneratedMeshResult 
     slices.push({ z: currentZ, profile: flangeProfile2D });
     currentZ += actualFlangeThick;
     slices.push({ z: currentZ, profile: flangeProfile2D });
-    // Step shoulder down to tooth profile
     slices.push({ z: currentZ, profile: toothProfile2D });
   } else {
     slices.push({ z: currentZ, profile: toothProfile2D });
   }
 
-  // Tooth Face Width (divided into vertical segments for smooth normals)
+  // Tooth Face Width
   const toothSegments = 6;
   const toothStartZ = currentZ;
   for (let s = 1; s <= toothSegments; s++) {
@@ -152,7 +135,6 @@ export function generateGT2Pulley(params: GT2PulleyParams): GeneratedMeshResult 
 
   // Top Flange
   if (hasTopFlange) {
-    // Step shoulder up to flange
     slices.push({ z: currentZ, profile: flangeProfile2D });
     currentZ += actualFlangeThick;
     slices.push({ z: currentZ, profile: flangeProfile2D });
@@ -160,7 +142,6 @@ export function generateGT2Pulley(params: GT2PulleyParams): GeneratedMeshResult 
 
   // Hub Collar
   if (hasHub) {
-    // Step shoulder to hub
     slices.push({ z: currentZ, profile: hubProfile2D });
     currentZ += actualHubHeight;
     slices.push({ z: currentZ, profile: hubProfile2D });
@@ -174,11 +155,9 @@ export function generateGT2Pulley(params: GT2PulleyParams): GeneratedMeshResult 
 
   for (let s = 0; s < totalSlices; s++) {
     const { z, profile } = slices[s];
-    // Outer boundary vertices
     for (let i = 0; i < numOuterPoints; i++) {
       positions.push(profile[i].x, profile[i].y, z);
     }
-    // Bore vertices
     if (hasBore) {
       for (let i = 0; i < numBorePoints; i++) {
         positions.push(boreProfile2D[i].x, boreProfile2D[i].y, z);
@@ -189,13 +168,13 @@ export function generateGT2Pulley(params: GT2PulleyParams): GeneratedMeshResult 
   const getOuterIdx = (slice: number, pointIdx: number) => slice * vertsPerSlice + pointIdx;
   const getBoreIdx = (slice: number, pointIdx: number) => slice * vertsPerSlice + numOuterPoints + pointIdx;
 
-  // 5. Connect Slices with Quads
+  // 5. Connect Slices with Quads (Vertical walls and horizontal step shoulders)
   for (let s = 0; s < totalSlices - 1; s++) {
     const zCurr = slices[s].z;
     const zNext = slices[s + 1].z;
     const isStepShoulder = Math.abs(zCurr - zNext) < 0.0001;
 
-    // Outer surface
+    // Outer wall / shoulder quads
     for (let i = 0; i < numOuterPoints; i++) {
       const nextI = (i + 1) % numOuterPoints;
 
@@ -205,26 +184,22 @@ export function generateGT2Pulley(params: GT2PulleyParams): GeneratedMeshResult 
       const p01 = getOuterIdx(s + 1, i);
 
       if (isStepShoulder) {
-        // Horizontal annular shoulder between different diameters at identical Z
         const rCurr = slices[s].profile[i].length();
         const rNext = slices[s + 1].profile[i].length();
         if (rCurr > rNext) {
-          // Stepping inward: top-facing shoulder (normal points +Z)
           indices.push(p00, p10, p11);
           indices.push(p00, p11, p01);
         } else {
-          // Stepping outward: bottom-facing shoulder (normal points -Z)
           indices.push(p00, p10, p01);
           indices.push(p10, p11, p01);
         }
       } else {
-        // Standard vertical cylinder/tooth flank wall
         indices.push(p00, p10, p11);
         indices.push(p00, p11, p01);
       }
     }
 
-    // Inner bore surface (facing inward towards center)
+    // Inner bore wall quads
     if (hasBore && !isStepShoulder) {
       for (let i = 0; i < numBorePoints; i++) {
         const nextI = (i + 1) % numBorePoints;
@@ -240,27 +215,44 @@ export function generateGT2Pulley(params: GT2PulleyParams): GeneratedMeshResult 
     }
   }
 
-  // 6. Triangulate Bottom Cap (slice 0, facing -Z)
+  // 6. Triangulate Flat Bottom Cap (slice 0, facing -Z)
+  // Duplicate cap vertices to prevent normal blending across sharp 90-degree edges
   const botOuter = slices[0].profile;
-  const botHoles = hasBore ? [boreProfile2D] : [];
-  const botTris = THREE.ShapeUtils.triangulateShape(botOuter, botHoles);
-  for (const tri of botTris) {
-    const idx0 = tri[0] < numOuterPoints ? getOuterIdx(0, tri[0]) : getBoreIdx(0, tri[0] - numOuterPoints);
-    const idx1 = tri[1] < numOuterPoints ? getOuterIdx(0, tri[1]) : getBoreIdx(0, tri[1] - numOuterPoints);
-    const idx2 = tri[2] < numOuterPoints ? getOuterIdx(0, tri[2]) : getBoreIdx(0, tri[2] - numOuterPoints);
-    indices.push(idx0, idx2, idx1);
+  const botHoles = hasBore ? boreProfile2D : null;
+  const botTris = triangulateCap(botOuter, botHoles);
+  const botCapBaseIdx = positions.length / 3;
+
+  for (let i = 0; i < numOuterPoints; i++) {
+    positions.push(botOuter[i].x, botOuter[i].y, slices[0].z);
+  }
+  if (hasBore) {
+    for (let i = 0; i < numBorePoints; i++) {
+      positions.push(boreProfile2D[i].x, boreProfile2D[i].y, slices[0].z);
+    }
   }
 
-  // 7. Triangulate Top Cap (slice totalSlices - 1, facing +Z)
+  for (const [i0, i1, i2] of botTris) {
+    indices.push(botCapBaseIdx + i0, botCapBaseIdx + i2, botCapBaseIdx + i1);
+  }
+
+  // 7. Triangulate Flat Top Cap (slice totalSlices - 1, facing +Z)
   const topSliceIdx = totalSlices - 1;
   const topOuter = slices[topSliceIdx].profile;
-  const topHoles = hasBore ? [boreProfile2D] : [];
-  const topTris = THREE.ShapeUtils.triangulateShape(topOuter, topHoles);
-  for (const tri of topTris) {
-    const idx0 = tri[0] < numOuterPoints ? getOuterIdx(topSliceIdx, tri[0]) : getBoreIdx(topSliceIdx, tri[0] - numOuterPoints);
-    const idx1 = tri[1] < numOuterPoints ? getOuterIdx(topSliceIdx, tri[1]) : getBoreIdx(topSliceIdx, tri[1] - numOuterPoints);
-    const idx2 = tri[2] < numOuterPoints ? getOuterIdx(topSliceIdx, tri[2]) : getBoreIdx(topSliceIdx, tri[2] - numOuterPoints);
-    indices.push(idx0, idx1, idx2);
+  const topHoles = hasBore ? boreProfile2D : null;
+  const topTris = triangulateCap(topOuter, topHoles);
+  const topCapBaseIdx = positions.length / 3;
+
+  for (let i = 0; i < numOuterPoints; i++) {
+    positions.push(topOuter[i].x, topOuter[i].y, slices[topSliceIdx].z);
+  }
+  if (hasBore) {
+    for (let i = 0; i < numBorePoints; i++) {
+      positions.push(boreProfile2D[i].x, boreProfile2D[i].y, slices[topSliceIdx].z);
+    }
+  }
+
+  for (const [i0, i1, i2] of topTris) {
+    indices.push(topCapBaseIdx + i0, topCapBaseIdx + i1, topCapBaseIdx + i2);
   }
 
   // 8. Construct BufferGeometry and Compute Metadata

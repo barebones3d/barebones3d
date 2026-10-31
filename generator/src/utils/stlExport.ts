@@ -10,30 +10,20 @@ export interface STLExportOptions {
 }
 
 /**
- * Exports a Three.js BufferGeometry to an STL file with embedded CC BY-NC 4.0
- * non-commercial attribution in the header, triggering immediate client-side download.
+ * Generates an STL Blob from a Three.js BufferGeometry with embedded CC BY-NC 4.0
+ * non-commercial attribution in the 80-byte binary header.
  * 100% client-side ($0 server compute).
  */
-export function exportSTL(
+export function generateSTLBlob(
   geometry: THREE.BufferGeometry,
   options: STLExportOptions = {}
-): void {
+): Blob {
   const {
-    filename,
     binary = true,
     partTitle = 'Parametric Component',
     partNumber = 'BB3D-PART',
     license = 'CC BY-NC 4.0',
   } = options;
-
-  // Resolve safe filename
-  const cleanBaseName = (filename || `${partNumber}_${partTitle}`)
-    .trim()
-    .replace(/[^a-zA-Z0-9_\-\.]/g, '_')
-    .replace(/_{2,}/g, '_');
-  const finalFilename = cleanBaseName.toLowerCase().endsWith('.stl')
-    ? cleanBaseName
-    : `${cleanBaseName}.stl`;
 
   // Create temporary mesh wrapper for STLExporter
   const tempMesh = new THREE.Mesh(
@@ -44,14 +34,12 @@ export function exportSTL(
   const exporter = new STLExporter();
   const output = exporter.parse(tempMesh, { binary });
 
-  let blob: Blob;
-
   if (binary) {
     const data = output as DataView;
 
     // Inject CC BY-NC 4.0 attribution into the standard 80-byte binary STL header block
     // Any binary STL reader reads bytes 0-79 as raw ASCII metadata before the uint32 triangle count
-    const headerString = `Barebones 3D (barebones3d.com) | ${partNumber} | ${license}`.slice(0, 80);
+    const headerString = `Barebones 3D | ${partNumber} | ${partTitle} | ${license}`.slice(0, 80);
 
     for (let i = 0; i < 80; i++) {
       data.setUint8(
@@ -60,8 +48,8 @@ export function exportSTL(
       );
     }
 
-    blob = new Blob([data.buffer as ArrayBuffer], {
-      type: 'application/octet-stream',
+    return new Blob([data.buffer as ArrayBuffer], {
+      type: 'model/stl',
     });
   } else {
     // Inject legal identifier into ASCII solid/endsolid tags
@@ -72,8 +60,33 @@ export function exportSTL(
     asciiText = asciiText.replace(/^solid\s*[^\r\n]*/i, `solid ${solidTag}`);
     asciiText = asciiText.replace(/endsolid\s*[^\r\n]*/i, `endsolid ${solidTag}`);
 
-    blob = new Blob([asciiText], { type: 'text/plain;charset=utf-8' });
+    return new Blob([asciiText], { type: 'text/plain;charset=utf-8' });
   }
+}
+
+/**
+ * Exports a Three.js BufferGeometry to an STL file with embedded CC BY-NC 4.0
+ * non-commercial attribution in the header, triggering immediate client-side download.
+ */
+export function exportSTL(
+  geometry: THREE.BufferGeometry,
+  options: STLExportOptions = {}
+): void {
+  const {
+    filename,
+    partTitle = 'Parametric Component',
+    partNumber = 'BB3D-PART',
+  } = options;
+
+  const cleanBaseName = (filename || `${partNumber}_${partTitle}`)
+    .trim()
+    .replace(/[^a-zA-Z0-9_\-\.]/g, '_')
+    .replace(/_{2,}/g, '_');
+  const finalFilename = cleanBaseName.toLowerCase().endsWith('.stl')
+    ? cleanBaseName
+    : `${cleanBaseName}.stl`;
+
+  const blob = generateSTLBlob(geometry, options);
 
   // Trigger client-side browser download
   const link = document.createElement('a');
