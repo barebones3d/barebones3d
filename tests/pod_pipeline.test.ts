@@ -97,7 +97,16 @@ async function runTests() {
   const canOrderChamferPod = !isChamferPodGated && solidValidation.isManifold;
   assert.strictEqual(canOrderChamferPod, false, 'POD Order button must be disabled for raw_generated CAD');
   assert.strictEqual(isChamferPodGated, true, 'raw_generated CAD must be flagged as POD gated');
-  console.log('  ✓ Raw generated tier gating verified: POD disabled with "POD Gated: Unverified CAD"');
+  // Test 2.4: Production Readiness Endorsement Display Logic
+  assert.strictEqual(gt2Manifest.endorsed, undefined, 'GT2 Pulley is not yet endorsed as production ready');
+  const getDisplayBadgeText = (m: typeof gt2Manifest) => {
+    if (m.endorsed && m.tier === 'production_certified') return 'Certified CAD';
+    if (m.endorsed && m.tier === 'geometry_verified') return 'Verified CAD';
+    return 'Experimental';
+  };
+  assert.strictEqual(getDisplayBadgeText(gt2Manifest), 'Experimental', 'Unendorsed manifests must display as Experimental on generator site');
+  assert.strictEqual(getDisplayBadgeText({ ...gt2Manifest, endorsed: true }), 'Certified CAD', 'Endorsed manifests display as Certified CAD');
+  console.log('  ✓ Production readiness endorsement display verified: defaults to "Experimental" until endorsed');
 
   // -------------------------------------------------------------
   // Test Suite 3: Client-Side Binary STL Export & Header License Embedding

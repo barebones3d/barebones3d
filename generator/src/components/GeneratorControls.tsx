@@ -130,20 +130,20 @@ export const GeneratorControls: React.FC<GeneratorControlsProps> = ({
       {/* Engineering Quality & Verification Manifest Badge */}
       <div className="flex items-center justify-between text-[11px] bg-[#0f172a] border border-slate-800 rounded-lg px-2.5 py-1.5">
         <div className="flex items-center gap-1.5">
-          {manifest.tier === 'production_certified' ? (
-            <span className="flex items-center gap-1 text-emerald-400 font-bold">
+          {manifest.endorsed && manifest.tier === 'production_certified' ? (
+            <span className="flex items-center gap-1 text-emerald-400 font-bold" title="Endorsed production-ready CAD design">
               <ShieldCheck className="w-3.5 h-3.5" />
               <span>Certified CAD</span>
             </span>
-          ) : manifest.tier === 'geometry_verified' ? (
-            <span className="flex items-center gap-1 text-sky-400 font-bold">
+          ) : manifest.endorsed && manifest.tier === 'geometry_verified' ? (
+            <span className="flex items-center gap-1 text-sky-400 font-bold" title="Endorsed geometry-verified CAD design">
               <CheckCircle className="w-3.5 h-3.5" />
               <span>Verified CAD</span>
             </span>
           ) : (
-            <span className="flex items-center gap-1 text-amber-400 font-bold">
+            <span className="flex items-center gap-1 text-amber-400 font-bold" title="Experimental CAD design pending production-ready endorsement">
               <AlertTriangle className="w-3.5 h-3.5" />
-              <span>Experimental CAD</span>
+              <span>Experimental</span>
             </span>
           )}
         </div>

@@ -7,6 +7,7 @@ export interface GeneratorManifest {
   title: string;
   partNumber: string;
   tier: VerificationTier;
+  endorsed?: boolean; // Production readiness endorsement
   retailPriceCents: number; // e.g. 2400 = $24.00
   defaultMaterial: string;  // e.g. 'PETG Heavy Duty', 'Nylon PA12', 'Automotive ASA'
   supportedMaterials: string[];
