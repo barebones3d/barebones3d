@@ -19,7 +19,7 @@ is_commercial_allowed: false
 license: "CC BY 4.0"
 download_stl_url: "https://barebones3d.com/assets/stl/milwaukee-m18-redlithium-battery-pack-locking-latch-release-claws-48-11-1850.stl"
 checkout_api_url: null
-canonical_guide_url: "https://barebones3d.com/guides/milwaukee-m18-redlithium-battery-pack-locking-latch-release-claws-48-11-1850"
+canonical_guide_url: "https://barebones3d.com/guides/milwaukee-m18-redlithium-battery-pack-locking-latch-release-claws-48-11-1850/"
 ---
 
 # Milwaukee M18 REDLITHIUM Battery Pack Locking Latch & Release Claws (OEM #48-11-1850)

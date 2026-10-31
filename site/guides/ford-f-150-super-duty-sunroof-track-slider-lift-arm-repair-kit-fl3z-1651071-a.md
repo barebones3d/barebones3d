@@ -30,7 +30,7 @@ is_commercial_allowed: false
 license: "CC BY 4.0"
 download_stl_url: "https://barebones3d.com/assets/stl/ford-f-150-super-duty-sunroof-track-slider-lift-arm-repair-kit-fl3z-1651071-a.stl"
 checkout_api_url: null
-canonical_guide_url: "https://barebones3d.com/guides/ford-f-150-super-duty-sunroof-track-slider-lift-arm-repair-kit-fl3z-1651071-a"
+canonical_guide_url: "https://barebones3d.com/guides/ford-f-150-super-duty-sunroof-track-slider-lift-arm-repair-kit-fl3z-1651071-a/"
 ---
 
 # Ford F-150 / Super Duty Sunroof Track Slider Lift Arm Repair Kit (OEM #FL3Z-1651071-A)

@@ -18,7 +18,7 @@ is_commercial_allowed: true
 license: "CC BY 4.0"
 download_stl_url: "https://barebones3d.com/assets/stl/bose-qc35-swivel-hinge-bracket-qc35-hinge-assy.stl"
 checkout_api_url: "https://barebones3d.com/api/checkout/create"
-canonical_guide_url: "https://barebones3d.com/guides/bose-qc35-swivel-hinge-bracket-qc35-hinge-assy"
+canonical_guide_url: "https://barebones3d.com/guides/bose-qc35-swivel-hinge-bracket-qc35-hinge-assy/"
 ---
 
 # Bose QuietComfort 35 (QC35 I & II) Swivel Hinge Repair Bracket (OEM #QC35-HINGE-ASSY)

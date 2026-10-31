@@ -30,7 +30,7 @@ is_commercial_allowed: false
 license: "CC BY 4.0"
 download_stl_url: "https://barebones3d.com/assets/stl/subaru-blend-door-actuator-gear-72131-fg000.stl"
 checkout_api_url: null
-canonical_guide_url: "https://barebones3d.com/guides/subaru-blend-door-actuator-gear-72131-fg000"
+canonical_guide_url: "https://barebones3d.com/guides/subaru-blend-door-actuator-gear-72131-fg000/"
 ---
 
 # Subaru HVAC Blend Door Actuator Split Gear (OEM #72131-FG000)

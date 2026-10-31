@@ -22,7 +22,7 @@ is_commercial_allowed: false
 license: "Proprietary Spec"
 download_stl_url: "https://barebones3d.com/assets/stl/technics-sl1200-pitch-fader-dust-shutter-plate-r-653.stl"
 checkout_api_url: null
-canonical_guide_url: "https://barebones3d.com/guides/technics-sl1200-pitch-fader-dust-shutter-plate-r-653"
+canonical_guide_url: "https://barebones3d.com/guides/technics-sl1200-pitch-fader-dust-shutter-plate-r-653/"
 ---
 
 # Technics SL-1200 / SL-1210 MK2 DJ Turntable Pitch Fader Dust Shutter Plate (OEM #R-653)

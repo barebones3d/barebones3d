@@ -20,7 +20,7 @@ is_commercial_allowed: true
 license: "CC BY 4.0"
 download_stl_url: "https://barebones3d.com/assets/stl/sony-mdr-7506-headphone-swivel-yoke-hanger-3-255-731-01.stl"
 checkout_api_url: "https://barebones3d.com/api/checkout/create"
-canonical_guide_url: "https://barebones3d.com/guides/sony-mdr-7506-headphone-swivel-yoke-hanger-3-255-731-01"
+canonical_guide_url: "https://barebones3d.com/guides/sony-mdr-7506-headphone-swivel-yoke-hanger-3-255-731-01/"
 ---
 
 # Sony MDR-7506 / MDR-V6 Professional Headphone Swivel Yoke Hanger Bracket (OEM #3-255-731-01)

@@ -26,7 +26,7 @@ is_commercial_allowed: true
 license: "CC0 1.0"
 download_stl_url: "https://barebones3d.com/assets/stl/ford-f-150-expedition-blend-door-actuator-gear-dl3z-19e616-a.stl"
 checkout_api_url: "https://barebones3d.com/api/checkout/create"
-canonical_guide_url: "https://barebones3d.com/guides/ford-f-150-expedition-blend-door-actuator-gear-dl3z-19e616-a"
+canonical_guide_url: "https://barebones3d.com/guides/ford-f-150-expedition-blend-door-actuator-gear-dl3z-19e616-a/"
 ---
 
 # Ford F-150 / Expedition HVAC Blend Door Actuator Reduction Gear (OEM #DL3Z-19E616-A)

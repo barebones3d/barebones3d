@@ -20,7 +20,7 @@ is_commercial_allowed: false
 license: "Public Domain"
 download_stl_url: "https://barebones3d.com/assets/stl/ge-hotpoint-clothes-dryer-front-drum-slide-bearing-glides-we1m1067.stl"
 checkout_api_url: null
-canonical_guide_url: "https://barebones3d.com/guides/ge-hotpoint-clothes-dryer-front-drum-slide-bearing-glides-we1m1067"
+canonical_guide_url: "https://barebones3d.com/guides/ge-hotpoint-clothes-dryer-front-drum-slide-bearing-glides-we1m1067/"
 ---
 
 # GE / Hotpoint Clothes Dryer Front Drum Slide Bearing Glides (OEM #WE1M1067)

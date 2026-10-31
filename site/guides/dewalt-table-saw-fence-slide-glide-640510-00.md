@@ -19,7 +19,7 @@ is_commercial_allowed: false
 license: "Proprietary Spec"
 download_stl_url: "https://barebones3d.com/assets/stl/dewalt-table-saw-fence-slide-glide-640510-00.stl"
 checkout_api_url: null
-canonical_guide_url: "https://barebones3d.com/guides/dewalt-table-saw-fence-slide-glide-640510-00"
+canonical_guide_url: "https://barebones3d.com/guides/dewalt-table-saw-fence-slide-glide-640510-00/"
 ---
 
 # DeWalt DWE7491 / DWE7480 Table Saw Rack & Pinion Fence Slide Glide (OEM #640510-00)

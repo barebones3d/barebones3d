@@ -21,7 +21,7 @@ is_commercial_allowed: true
 license: "CC BY 4.0"
 download_stl_url: "https://barebones3d.com/assets/stl/jeep-grand-cherokee-dodge-durango-sun-visor-pivot-support-bracket-5fs40dx9aa.stl"
 checkout_api_url: "https://barebones3d.com/api/checkout/create"
-canonical_guide_url: "https://barebones3d.com/guides/jeep-grand-cherokee-dodge-durango-sun-visor-pivot-support-bracket-5fs40dx9aa"
+canonical_guide_url: "https://barebones3d.com/guides/jeep-grand-cherokee-dodge-durango-sun-visor-pivot-support-bracket-5fs40dx9aa/"
 ---
 
 # Jeep Grand Cherokee / Dodge Durango Sun Visor Pivot Support Bracket (OEM #5FS40DX9AA)

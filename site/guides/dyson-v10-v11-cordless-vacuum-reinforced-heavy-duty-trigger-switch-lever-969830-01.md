@@ -17,7 +17,7 @@ is_commercial_allowed: true
 license: "CC BY 4.0"
 download_stl_url: "https://barebones3d.com/assets/stl/dyson-v10-v11-cordless-vacuum-reinforced-heavy-duty-trigger-switch-lever-969830-01.stl"
 checkout_api_url: "https://barebones3d.com/api/checkout/create"
-canonical_guide_url: "https://barebones3d.com/guides/dyson-v10-v11-cordless-vacuum-reinforced-heavy-duty-trigger-switch-lever-969830-01"
+canonical_guide_url: "https://barebones3d.com/guides/dyson-v10-v11-cordless-vacuum-reinforced-heavy-duty-trigger-switch-lever-969830-01/"
 ---
 
 # Dyson V10 / V11 Cordless Vacuum Reinforced Heavy-Duty Trigger Switch Lever (OEM #969830-01)

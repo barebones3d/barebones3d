@@ -21,7 +21,7 @@ is_commercial_allowed: false
 license: "Proprietary Spec"
 download_stl_url: "https://barebones3d.com/assets/stl/volvo-fuel-filler-door-hinge-bracket-39886277.stl"
 checkout_api_url: null
-canonical_guide_url: "https://barebones3d.com/guides/volvo-fuel-filler-door-hinge-bracket-39886277"
+canonical_guide_url: "https://barebones3d.com/guides/volvo-fuel-filler-door-hinge-bracket-39886277/"
 ---
 
 # Volvo S60 / V60 / XC60 Fuel Filler Door Flap Hinge Bracket (OEM #39886277)

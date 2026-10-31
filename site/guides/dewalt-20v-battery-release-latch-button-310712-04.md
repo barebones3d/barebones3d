@@ -15,7 +15,7 @@ is_commercial_allowed: false
 license: "Proprietary Spec"
 download_stl_url: "https://barebones3d.com/assets/stl/dewalt-20v-battery-release-latch-button-310712-04.stl"
 checkout_api_url: null
-canonical_guide_url: "https://barebones3d.com/guides/dewalt-20v-battery-release-latch-button-310712-04"
+canonical_guide_url: "https://barebones3d.com/guides/dewalt-20v-battery-release-latch-button-310712-04/"
 ---
 
 # DeWalt 20V MAX Lithium-Ion Battery Pack Spring Latch Release Button (OEM #310712-04)

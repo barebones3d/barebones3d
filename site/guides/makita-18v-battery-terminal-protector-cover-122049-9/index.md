@@ -15,7 +15,7 @@ is_commercial_allowed: true
 license: "CC BY 4.0"
 download_stl_url: "https://barebones3d.com/assets/stl/makita-18v-battery-terminal-protector-cover-122049-9.stl"
 checkout_api_url: "https://barebones3d.com/api/checkout/create"
-canonical_guide_url: "https://barebones3d.com/guides/makita-18v-battery-terminal-protector-cover-122049-9"
+canonical_guide_url: "https://barebones3d.com/guides/makita-18v-battery-terminal-protector-cover-122049-9/"
 ---
 
 # Makita 18V LXT Lithium-Ion Battery Terminal Protector Cover (OEM #122049-9)

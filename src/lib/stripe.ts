@@ -53,7 +53,7 @@ export async function createCheckoutSession(
   const params = new URLSearchParams();
   params.append('mode', 'payment');
   params.append('success_url', `${cleanSiteUrl}/order-success?session_id={CHECKOUT_SESSION_ID}`);
-  params.append('cancel_url', `${cleanSiteUrl}/guides/${part.slug}?cancelled=1`);
+  params.append('cancel_url', `${cleanSiteUrl}/guides/${part.slug}/?cancelled=1`);
   
   // Line items
   params.append('line_items[0][price_data][currency]', 'usd');

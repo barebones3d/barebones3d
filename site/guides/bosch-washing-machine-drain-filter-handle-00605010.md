@@ -23,7 +23,7 @@ is_commercial_allowed: false
 license: "Public Domain"
 download_stl_url: "https://barebones3d.com/assets/stl/bosch-washing-machine-drain-filter-handle-00605010.stl"
 checkout_api_url: null
-canonical_guide_url: "https://barebones3d.com/guides/bosch-washing-machine-drain-filter-handle-00605010"
+canonical_guide_url: "https://barebones3d.com/guides/bosch-washing-machine-drain-filter-handle-00605010/"
 ---
 
 # Bosch / Siemens Washing Machine Drain Pump Filter Repair Grip (OEM #00605010)

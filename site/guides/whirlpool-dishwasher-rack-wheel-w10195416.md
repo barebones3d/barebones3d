@@ -32,7 +32,7 @@ is_commercial_allowed: false
 license: "Public Domain"
 download_stl_url: "https://barebones3d.com/assets/stl/whirlpool-dishwasher-rack-wheel-w10195416.stl"
 checkout_api_url: null
-canonical_guide_url: "https://barebones3d.com/guides/whirlpool-dishwasher-rack-wheel-w10195416"
+canonical_guide_url: "https://barebones3d.com/guides/whirlpool-dishwasher-rack-wheel-w10195416/"
 ---
 
 # Whirlpool / KitchenAid Dishwasher Lower Rack Wheel & Axle Assembly (OEM #W10195416)

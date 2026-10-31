@@ -30,7 +30,7 @@ is_commercial_allowed: false
 license: "Proprietary"
 download_stl_url: "https://barebones3d.com/assets/stl/ford-f-150-super-duty-vista-sunroof-track-slider-lift-arm-fl3z-16502c22-e.stl"
 checkout_api_url: null
-canonical_guide_url: "https://barebones3d.com/guides/ford-f-150-super-duty-vista-sunroof-track-slider-lift-arm-fl3z-16502c22-e"
+canonical_guide_url: "https://barebones3d.com/guides/ford-f-150-super-duty-vista-sunroof-track-slider-lift-arm-fl3z-16502c22-e/"
 ---
 
 # Ford F-150 / Super Duty Vista Sunroof Track Slider Lift Arm (OEM #FL3Z-16502C22-E)

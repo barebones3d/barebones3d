@@ -19,7 +19,7 @@ is_commercial_allowed: false
 license: "Proprietary Spec"
 download_stl_url: "https://barebones3d.com/assets/stl/bosch-table-saw-riving-knife-lever-1609202428.stl"
 checkout_api_url: null
-canonical_guide_url: "https://barebones3d.com/guides/bosch-table-saw-riving-knife-lever-1609202428"
+canonical_guide_url: "https://barebones3d.com/guides/bosch-table-saw-riving-knife-lever-1609202428/"
 ---
 
 # Bosch GTS1031 / 4100 Table Saw Riving Knife Quick-Release Clamping Cam Lever (OEM #1609202428)

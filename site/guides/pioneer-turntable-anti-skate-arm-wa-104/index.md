@@ -25,7 +25,7 @@ is_commercial_allowed: false
 license: "CC BY 4.0"
 download_stl_url: "https://barebones3d.com/assets/stl/pioneer-turntable-anti-skate-arm-wa-104.stl"
 checkout_api_url: null
-canonical_guide_url: "https://barebones3d.com/guides/pioneer-turntable-anti-skate-arm-wa-104"
+canonical_guide_url: "https://barebones3d.com/guides/pioneer-turntable-anti-skate-arm-wa-104/"
 ---
 
 # Vintage Pioneer PL-12D Tonearm Anti-Skate Weight Guide Arm (OEM #WA-104)

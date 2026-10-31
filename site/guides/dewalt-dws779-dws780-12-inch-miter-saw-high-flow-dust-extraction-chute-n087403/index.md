@@ -19,7 +19,7 @@ is_commercial_allowed: true
 license: "CC BY 4.0"
 download_stl_url: "https://barebones3d.com/assets/stl/dewalt-dws779-dws780-12-inch-miter-saw-high-flow-dust-extraction-chute-n087403.stl"
 checkout_api_url: "https://barebones3d.com/api/checkout/create"
-canonical_guide_url: "https://barebones3d.com/guides/dewalt-dws779-dws780-12-inch-miter-saw-high-flow-dust-extraction-chute-n087403"
+canonical_guide_url: "https://barebones3d.com/guides/dewalt-dws779-dws780-12-inch-miter-saw-high-flow-dust-extraction-chute-n087403/"
 ---
 
 # DeWalt DWS779 / DWS780 12-Inch Miter Saw High-Flow Dust Extraction Chute (OEM #N087403)

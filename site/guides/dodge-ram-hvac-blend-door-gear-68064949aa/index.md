@@ -21,7 +21,7 @@ is_commercial_allowed: false
 license: "Proprietary Spec"
 download_stl_url: "https://barebones3d.com/assets/stl/dodge-ram-hvac-blend-door-gear-68064949aa.stl"
 checkout_api_url: null
-canonical_guide_url: "https://barebones3d.com/guides/dodge-ram-hvac-blend-door-gear-68064949aa"
+canonical_guide_url: "https://barebones3d.com/guides/dodge-ram-hvac-blend-door-gear-68064949aa/"
 ---
 
 # Dodge Ram 1500 / 2500 HVAC Heater Blend Door Sub-Assembly Gear (OEM #68064949AA)

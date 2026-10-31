@@ -30,7 +30,7 @@ is_commercial_allowed: false
 license: "CC BY 4.0"
 download_stl_url: "https://barebones3d.com/assets/stl/chevrolet-gm-silverado-tahoe-suburban-hvac-blend-door-actuator-cam-lever-89018365.stl"
 checkout_api_url: null
-canonical_guide_url: "https://barebones3d.com/guides/chevrolet-gm-silverado-tahoe-suburban-hvac-blend-door-actuator-cam-lever-89018365"
+canonical_guide_url: "https://barebones3d.com/guides/chevrolet-gm-silverado-tahoe-suburban-hvac-blend-door-actuator-cam-lever-89018365/"
 ---
 
 # GM Silverado / Tahoe / Suburban HVAC Blend Door Actuator Cam Lever (OEM #89018365)

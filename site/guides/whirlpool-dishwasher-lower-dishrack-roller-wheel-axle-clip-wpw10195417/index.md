@@ -23,7 +23,7 @@ is_commercial_allowed: false
 license: "CC BY 4.0"
 download_stl_url: "https://barebones3d.com/assets/stl/whirlpool-dishwasher-lower-dishrack-roller-wheel-axle-clip-wpw10195417.stl"
 checkout_api_url: null
-canonical_guide_url: "https://barebones3d.com/guides/whirlpool-dishwasher-lower-dishrack-roller-wheel-axle-clip-wpw10195417"
+canonical_guide_url: "https://barebones3d.com/guides/whirlpool-dishwasher-lower-dishrack-roller-wheel-axle-clip-wpw10195417/"
 ---
 
 # Whirlpool Dishwasher Lower Dishrack Roller Wheel & Axle Clip (OEM #WPW10195417)

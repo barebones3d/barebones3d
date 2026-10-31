@@ -95,6 +95,11 @@ async function build() {
   fs.writeFileSync(path.join(API_DIR, 'openapi.json'), JSON.stringify(openApiSpec, null, 2), 'utf8');
   console.log(`  ✓ Generated OpenAPI 3.1 Spec: /api/openapi.json`);
 
+  // Generate /sitemap.xml
+  const sitemapXml = generateSitemapXml(parts, SITE_URL);
+  fs.writeFileSync(path.join(SITE_DIR, 'sitemap.xml'), sitemapXml, 'utf8');
+  console.log(`  ✓ Generated dynamic sitemap.xml: /sitemap.xml (${parts.length + 6} URLs)`);
+
   // Generate /OEM_CATALOG.md in project root for planning & deduplication
   const oemCatalogMd = renderOemCatalogMarkdown(parts, SITE_URL);
   fs.writeFileSync(path.join(ROOT_DIR, 'OEM_CATALOG.md'), oemCatalogMd, 'utf8');
@@ -181,6 +186,40 @@ For automated planning prompts, agents can parse this JSON representation of all
 \`\`\`json
 ${jsonManifest}
 \`\`\`
+`;
+}
+
+function generateSitemapXml(parts: Part[], siteUrl: string): string {
+  const today = new Date().toISOString().split('T')[0];
+  const urls: Array<{ loc: string; lastmod: string; changefreq: string; priority: string }> = [
+    { loc: `${siteUrl}/`, lastmod: today, changefreq: 'daily', priority: '1.0' },
+    { loc: `${siteUrl}/generator/`, lastmod: today, changefreq: 'weekly', priority: '0.9' },
+    { loc: `${siteUrl}/guides/`, lastmod: today, changefreq: 'daily', priority: '0.9' },
+    { loc: `${siteUrl}/contact`, lastmod: '2026-10-17', changefreq: 'monthly', priority: '0.5' },
+    { loc: `${siteUrl}/privacy`, lastmod: '2026-10-17', changefreq: 'yearly', priority: '0.3' },
+    { loc: `${siteUrl}/terms`, lastmod: '2026-10-17', changefreq: 'yearly', priority: '0.3' },
+  ];
+
+  for (const part of parts) {
+    urls.push({
+      loc: `${siteUrl}/guides/${part.slug}/`,
+      lastmod: today,
+      changefreq: 'weekly',
+      priority: '0.8'
+    });
+  }
+
+  const urlXml = urls.map(u => `  <url>
+    <loc>${u.loc}</loc>
+    <lastmod>${u.lastmod}</lastmod>
+    <changefreq>${u.changefreq}</changefreq>
+    <priority>${u.priority}</priority>
+  </url>`).join('\n');
+
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urlXml}
+</urlset>
 `;
 }
 

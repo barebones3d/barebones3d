@@ -18,7 +18,7 @@ is_commercial_allowed: false
 license: "Public Domain"
 download_stl_url: "https://barebones3d.com/assets/stl/whirlpool-refrigerator-deli-drawer-slide-roller-w10436250.stl"
 checkout_api_url: null
-canonical_guide_url: "https://barebones3d.com/guides/whirlpool-refrigerator-deli-drawer-slide-roller-w10436250"
+canonical_guide_url: "https://barebones3d.com/guides/whirlpool-refrigerator-deli-drawer-slide-roller-w10436250/"
 ---
 
 # Whirlpool / Maytag Refrigerator Deli Meat Pan Drawer Slide Roller Wheel (OEM #W10436250)

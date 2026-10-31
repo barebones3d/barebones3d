@@ -25,7 +25,7 @@ is_commercial_allowed: false
 license: "CC BY 4.0"
 download_stl_url: "https://barebones3d.com/assets/stl/bmw-3-series-e90-e91-e92-in-dash-retractable-cup-holder-internal-catch-pinion-51459173463.stl"
 checkout_api_url: null
-canonical_guide_url: "https://barebones3d.com/guides/bmw-3-series-e90-e91-e92-in-dash-retractable-cup-holder-internal-catch-pinion-51459173463"
+canonical_guide_url: "https://barebones3d.com/guides/bmw-3-series-e90-e91-e92-in-dash-retractable-cup-holder-internal-catch-pinion-51459173463/"
 ---
 
 # BMW 3-Series (E90 / E91 / E92) In-Dash Retractable Cup Holder Internal Catch & Pinion (OEM #51459173463)

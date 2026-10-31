@@ -309,7 +309,7 @@ export function renderGuideHtml(part: Part, guide: Guide, siteUrl: string): stri
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${part.title} (OEM #${part.oem_part_number}) Repair Guide &amp; STL | Barebones 3D</title>
   <meta name="description" content="Free DIY repair guide, installation tutorial, and open-source 3D printable STL for ${part.title} (OEM #${part.oem_part_number}). Compatible with ${primaryMake}. Manufactured in ${part.material_spec}.">
-  <link rel="canonical" href="${siteUrl.replace(/\/$/, '')}/guides/${part.slug}">
+  <link rel="canonical" href="${siteUrl.replace(/\/$/, '')}/guides/${part.slug}/">
   <link rel="alternate" type="text/markdown" href="${siteUrl.replace(/\/$/, '')}/guides/${part.slug}.md" title="${part.title} Markdown Document">
 
   <!-- Google Fonts Preconnect & Async Display -->

@@ -25,7 +25,7 @@ is_commercial_allowed: false
 license: "Proprietary Spec"
 download_stl_url: "https://barebones3d.com/assets/stl/audi-mmi-volume-knob-shaft-8k0898192a.stl"
 checkout_api_url: null
-canonical_guide_url: "https://barebones3d.com/guides/audi-mmi-volume-knob-shaft-8k0898192a"
+canonical_guide_url: "https://barebones3d.com/guides/audi-mmi-volume-knob-shaft-8k0898192a/"
 ---
 
 # Audi A4 / A5 / Q5 MMI Central Control Volume Knob Internal D-Shaft (OEM #8K0898192A)

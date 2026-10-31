@@ -1,0 +1,48 @@
+{
+  "summary": {
+    "total_queries_analyzed": 1,
+    "striking_distance_count": 0,
+    "low_ctr_count": 0
+  },
+  "recommendations": {
+    "page_2_striking_distance": [],
+    "title_meta_tuneups": []
+  },
+  "site": "sc-domain:barebones3d.com",
+  "retrieved_at": "2026-10-31T14:54:33.522365",
+  "indexing_audit": {
+    "total_inspected": 1,
+    "verdict_summary": {
+      "PASS": 1
+    },
+    "coverage_summary": {
+      "Submitted and indexed": 1
+    },
+    "canonical_mismatches_count": 0,
+    "canonical_mismatches": [],
+    "indexing_issues_count": 0,
+    "indexing_issues": [],
+    "inspected_details": [
+      {
+        "url": "https://barebones3d.com/",
+        "verdict": "PASS",
+        "coverage_state": "Submitted and indexed",
+        "indexing_state": "INDEXING_ALLOWED",
+        "page_fetch_state": "SUCCESSFUL",
+        "robots_txt_state": "ALLOWED",
+        "user_canonical": "https://barebones3d.com/",
+        "google_canonical": "https://barebones3d.com/",
+        "canonical_match": true,
+        "referring_urls": [
+          "http://barebones3d.com/",
+          "http://e62d.axiom-base.lol/",
+          "https://barebones3d.com/wp-login.php",
+          "http://barebones3d.com/wp-login.php"
+        ],
+        "last_crawl_time": "2026-10-19T00:07:44Z",
+        "crawled_as": "MOBILE",
+        "gsc_inspect_link": "https://search.google.com/search-console/inspect?resource_id=sc-domain:barebones3d.com&id=_nvI-dOlkTeMfjBUwOTNjw&utm_medium=link&utm_source=api"
+      }
+    ]
+  }
+}

@@ -18,7 +18,7 @@ is_commercial_allowed: true
 license: "CC0 1.0"
 download_stl_url: "https://barebones3d.com/assets/stl/jeep-wj-grand-cherokee-blend-door-gear-5012710aa.stl"
 checkout_api_url: "https://barebones3d.com/api/checkout/create"
-canonical_guide_url: "https://barebones3d.com/guides/jeep-wj-grand-cherokee-blend-door-gear-5012710aa"
+canonical_guide_url: "https://barebones3d.com/guides/jeep-wj-grand-cherokee-blend-door-gear-5012710aa/"
 ---
 
 # Jeep Grand Cherokee WJ Dual-Zone HVAC Blend Door Actuator Gear (OEM #5012710AA)

@@ -30,7 +30,7 @@ is_commercial_allowed: false
 license: "Proprietary"
 download_stl_url: "https://barebones3d.com/assets/stl/gm-gmt900-hvac-recirculation-defrost-blend-door-actuator-cam-lever-20826188.stl"
 checkout_api_url: null
-canonical_guide_url: "https://barebones3d.com/guides/gm-gmt900-hvac-recirculation-defrost-blend-door-actuator-cam-lever-20826188"
+canonical_guide_url: "https://barebones3d.com/guides/gm-gmt900-hvac-recirculation-defrost-blend-door-actuator-cam-lever-20826188/"
 ---
 
 # GM GMT900 HVAC Recirculation & Defrost Blend Door Actuator Cam Lever (OEM #20826188)

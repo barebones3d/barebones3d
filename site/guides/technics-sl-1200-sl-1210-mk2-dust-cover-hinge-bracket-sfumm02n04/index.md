@@ -21,7 +21,7 @@ is_commercial_allowed: true
 license: "CC BY 4.0"
 download_stl_url: "https://barebones3d.com/assets/stl/technics-sl-1200-sl-1210-mk2-dust-cover-hinge-bracket-sfumm02n04.stl"
 checkout_api_url: "https://barebones3d.com/api/checkout/create"
-canonical_guide_url: "https://barebones3d.com/guides/technics-sl-1200-sl-1210-mk2-dust-cover-hinge-bracket-sfumm02n04"
+canonical_guide_url: "https://barebones3d.com/guides/technics-sl-1200-sl-1210-mk2-dust-cover-hinge-bracket-sfumm02n04/"
 ---
 
 # Technics SL-1200 / SL-1210 MK2 Turntable Dust Cover Hinge Repair Bracket (OEM #SFUMM02N04)

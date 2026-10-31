@@ -19,7 +19,7 @@ is_commercial_allowed: false
 license: "Proprietary Spec"
 download_stl_url: "https://barebones3d.com/assets/stl/makita-hand-planer-belt-tensioner-retainer-341071-7.stl"
 checkout_api_url: null
-canonical_guide_url: "https://barebones3d.com/guides/makita-hand-planer-belt-tensioner-retainer-341071-7"
+canonical_guide_url: "https://barebones3d.com/guides/makita-hand-planer-belt-tensioner-retainer-341071-7/"
 ---
 
 # Makita 1900B / KP0800K Power Hand Planer Drive Belt Tensioner Retainer (OEM #341071-7)

@@ -20,7 +20,7 @@ export function generateLlmsTxt(parts: Part[], siteUrl: string): string {
       .slice(0, 3)
       .join(', ');
 
-    return `- [${part.title}](${cleanSiteUrl}/guides/${part.slug}): OEM #${part.oem_part_number} | Fitment: ${makes || 'Universal'} | Material: ${part.material_spec} | Price: ${priceStr}`;
+    return `- [${part.title}](${cleanSiteUrl}/guides/${part.slug}/): OEM #${part.oem_part_number} | Fitment: ${makes || 'Universal'} | Material: ${part.material_spec} | Price: ${priceStr}`;
   });
 
   return `# barebones3d.com
@@ -127,7 +127,7 @@ is_commercial_allowed: ${part.is_commercial_allowed}
 license: "${part.license_type}"
 download_stl_url: "${downloadUrl}"
 checkout_api_url: ${part.is_commercial_allowed ? `"${checkoutUrl}"` : 'null'}
-canonical_guide_url: "${cleanSiteUrl}/guides/${part.slug}"
+canonical_guide_url: "${cleanSiteUrl}/guides/${part.slug}/"
 ---
 
 # ${part.title} (OEM #${part.oem_part_number})

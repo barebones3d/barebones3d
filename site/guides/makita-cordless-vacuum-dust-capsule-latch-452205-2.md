@@ -19,7 +19,7 @@ is_commercial_allowed: false
 license: "Proprietary Spec"
 download_stl_url: "https://barebones3d.com/assets/stl/makita-cordless-vacuum-dust-capsule-latch-452205-2.stl"
 checkout_api_url: null
-canonical_guide_url: "https://barebones3d.com/guides/makita-cordless-vacuum-dust-capsule-latch-452205-2"
+canonical_guide_url: "https://barebones3d.com/guides/makita-cordless-vacuum-dust-capsule-latch-452205-2/"
 ---
 
 # Makita DCL180 / XLC02 18V Cordless Vacuum Dust Capsule Housing Lock Latch (OEM #452205-2)

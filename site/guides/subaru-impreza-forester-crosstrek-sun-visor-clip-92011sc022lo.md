@@ -25,7 +25,7 @@ is_commercial_allowed: true
 license: "CC BY 4.0"
 download_stl_url: "https://barebones3d.com/assets/stl/subaru-impreza-forester-crosstrek-sun-visor-clip-92011sc022lo.stl"
 checkout_api_url: "https://barebones3d.com/api/checkout/create"
-canonical_guide_url: "https://barebones3d.com/guides/subaru-impreza-forester-crosstrek-sun-visor-clip-92011sc022lo"
+canonical_guide_url: "https://barebones3d.com/guides/subaru-impreza-forester-crosstrek-sun-visor-clip-92011sc022lo/"
 ---
 
 # Subaru Impreza / Forester / Crosstrek Sun Visor Pivot Clip Bracket (OEM #92011SC022LO)

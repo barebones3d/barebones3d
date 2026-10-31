@@ -19,7 +19,7 @@ is_commercial_allowed: false
 license: "CC BY 4.0"
 download_stl_url: "https://barebones3d.com/assets/stl/dyson-v10-v11-cordless-vacuum-reinforced-trigger-switch-970050-01.stl"
 checkout_api_url: null
-canonical_guide_url: "https://barebones3d.com/guides/dyson-v10-v11-cordless-vacuum-reinforced-trigger-switch-970050-01"
+canonical_guide_url: "https://barebones3d.com/guides/dyson-v10-v11-cordless-vacuum-reinforced-trigger-switch-970050-01/"
 ---
 
 # Dyson V10 / V11 Cordless Vacuum Reinforced Trigger Switch Assembly (OEM #970050-01)

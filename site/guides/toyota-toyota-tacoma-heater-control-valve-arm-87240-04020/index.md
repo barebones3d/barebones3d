@@ -20,7 +20,7 @@ is_commercial_allowed: false
 license: "CC BY 4.0"
 download_stl_url: "https://barebones3d.com/assets/stl/toyota-toyota-tacoma-heater-control-valve-arm-87240-04020.stl"
 checkout_api_url: null
-canonical_guide_url: "https://barebones3d.com/guides/toyota-toyota-tacoma-heater-control-valve-arm-87240-04020"
+canonical_guide_url: "https://barebones3d.com/guides/toyota-toyota-tacoma-heater-control-valve-arm-87240-04020/"
 ---
 
 # Toyota Tacoma Heater Control Valve Arm (OEM #87240-04020)

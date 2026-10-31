@@ -15,7 +15,7 @@ is_commercial_allowed: false
 license: "Proprietary Spec"
 download_stl_url: "https://barebones3d.com/assets/stl/metabo-hpt-nailer-safety-trigger-deflector-316060190.stl"
 checkout_api_url: null
-canonical_guide_url: "https://barebones3d.com/guides/metabo-hpt-nailer-safety-trigger-deflector-316060190"
+canonical_guide_url: "https://barebones3d.com/guides/metabo-hpt-nailer-safety-trigger-deflector-316060190/"
 ---
 
 # Metabo HPT / Hitachi Coil Framing Nailer Transparent Safety Trigger Deflector (OEM #316060190)

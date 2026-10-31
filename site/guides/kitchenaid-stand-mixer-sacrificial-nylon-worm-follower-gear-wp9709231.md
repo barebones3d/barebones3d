@@ -20,7 +20,7 @@ is_commercial_allowed: false
 license: "CC BY 4.0"
 download_stl_url: "https://barebones3d.com/assets/stl/kitchenaid-stand-mixer-sacrificial-nylon-worm-follower-gear-wp9709231.stl"
 checkout_api_url: null
-canonical_guide_url: "https://barebones3d.com/guides/kitchenaid-stand-mixer-sacrificial-nylon-worm-follower-gear-wp9709231"
+canonical_guide_url: "https://barebones3d.com/guides/kitchenaid-stand-mixer-sacrificial-nylon-worm-follower-gear-wp9709231/"
 ---
 
 # KitchenAid Stand Mixer Sacrificial Nylon Worm Follower Gear (OEM #WP9709231)

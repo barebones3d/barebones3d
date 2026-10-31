@@ -22,7 +22,7 @@ is_commercial_allowed: true
 license: "CC BY 4.0"
 download_stl_url: "https://barebones3d.com/assets/stl/toyota-tundra-air-vent-louver-tab-55670-0c010.stl"
 checkout_api_url: "https://barebones3d.com/api/checkout/create"
-canonical_guide_url: "https://barebones3d.com/guides/toyota-tundra-air-vent-louver-tab-55670-0c010"
+canonical_guide_url: "https://barebones3d.com/guides/toyota-tundra-air-vent-louver-tab-55670-0c010/"
 ---
 
 # Toyota Tundra / Sequoia Dash AC Air Vent Louver Tab (OEM #55670-0C010)

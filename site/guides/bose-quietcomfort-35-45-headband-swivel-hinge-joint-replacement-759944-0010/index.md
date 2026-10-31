@@ -19,7 +19,7 @@ is_commercial_allowed: true
 license: "CC BY 4.0"
 download_stl_url: "https://barebones3d.com/assets/stl/bose-quietcomfort-35-45-headband-swivel-hinge-joint-replacement-759944-0010.stl"
 checkout_api_url: "https://barebones3d.com/api/checkout/create"
-canonical_guide_url: "https://barebones3d.com/guides/bose-quietcomfort-35-45-headband-swivel-hinge-joint-replacement-759944-0010"
+canonical_guide_url: "https://barebones3d.com/guides/bose-quietcomfort-35-45-headband-swivel-hinge-joint-replacement-759944-0010/"
 ---
 
 # Bose QuietComfort 35 / 45 Headband Swivel Hinge Joint Replacement (OEM #759944-0010)

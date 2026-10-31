@@ -16,7 +16,7 @@ is_commercial_allowed: false
 license: "Public Domain"
 download_stl_url: "https://barebones3d.com/assets/stl/black-decker-trimmer-replacement-spool-cap-90530948.stl"
 checkout_api_url: null
-canonical_guide_url: "https://barebones3d.com/guides/black-decker-trimmer-replacement-spool-cap-90530948"
+canonical_guide_url: "https://barebones3d.com/guides/black-decker-trimmer-replacement-spool-cap-90530948/"
 ---
 
 # Black & Decker String Trimmer Replacement Spool Cap Cover (OEM #90530948)
